@@ -38,41 +38,38 @@
           <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-77-build-80">
+        <article class="release-entry" id="version-1-2-78-build-81">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.77</h2>
-            <p class="release-summary">Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.</p>
+            <h2>Version 1.2.78</h2>
+            <p class="release-summary">Cedar 1.2.78 adopts the latest full-screen television Settings layout and preserves hero artwork detail at the app&#39;s display resolution.</p>
             <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
-              <span>Version 1.2.77</span>
-              <span>Build 80</span>
+              <span>Version 1.2.78</span>
+              <span>Build 81</span>
               <time datetime="2026-09-07">September 7, 2026</time>
             </div>
             <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.77/Cedar-TV-1.2.77.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.77">GitHub release</a>
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.78/Cedar-TV-1.2.78.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.78">GitHub release</a>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.</p>
+            <p>Cedar 1.2.78 adopts the latest full-screen television Settings layout and preserves hero artwork detail at the app&#39;s display resolution.</p>
             <h3>What changed</h3>
             <ul>
-            <li>Next Up combines local completed-episode history with the selected tracking account, preferring local candidates and keeping active series in Continue Watching.</li>
-            <li>Episode discovery uses exact IMDb/TMDb series identities, reuses cached metadata, limits lookups to four at a time, and discards results after profile changes.</li>
-            <li>The furthest completed regular episode establishes progression. Unknown or future immediate successors do not cause a jump to a later episode, and stale partial progress before that point does not block local progression.</li>
-            <li>New Next Up branches are series-only. Keep Separate from Continue Watching is available in the native branch editor and survives profile transfer and branch editing.</li>
-            <li>Editing a branch preserves its portable query parameters.</li>
-            <li>Post-play recommendations use parent-series metadata for episodes and remain independent of whether the Related detail-page section is visible.</li>
-            <li>Player auto-hide no longer takes focus away from Next Episode or post-play recommendations. Back dismisses those overlays before leaving playback.</li>
-            <li>Retained the Settings, transport, audio-information, and signed OTA improvements from 1.2.76.</li>
+            <li>Settings now fills the screen, with controls on the left and contextual help on the right. The sidebar remains on the main destinations; Back from Settings returns Home.</li>
+            <li>Removed the automatic 720p hero limit on televisions with less physical memory.</li>
+            <li>Full-screen artwork uses the measured app surface up to 4K, while retaining bounded downloads, concurrent loads, and bitmap memory safety limits.</li>
+            <li>TMDb backdrop metadata retains original image URLs. Older cached smaller URLs upgrade when necessary to cover the displayed surface.</li>
+            <li>Synchronized the parity contract&#39;s tracking-authority title with the current Apple catalog. Full product parity certification remains pending complete behavioral evidence on both platforms.</li>
             </ul>
             <h3>Validation</h3>
             <ul>
-            <li>519 unit tests passed.</li>
-            <li>Eight instrumented tests passed on the connected Android TV, covering Settings, sidebar focus, playback controls, post-play focus, and metadata identity lookup.</li>
-            <li>Release signing, non-debuggable configuration, ZIP alignment, and native-library page alignment checks passed.</li>
-            <li>Dolby Digital Plus over HDMI ARC was verified during the 1.2.76 hardware session. Physical speaker mapping and acoustic sync still require listening confirmation.</li>
+            <li>520 unit tests passed; Android lint reported zero errors.</li>
+            <li>Parity contract validation passes on both repositories at revision 3; all 42 validator regression tests pass.</li>
+            <li>The connected TV exposes a 1920 × 1080 app surface. Full-screen image targets now preserve that resolution; a separate hardware decode test verifies 3840 × 2160 pixels.</li>
+            <li>All ten TV instrumented tests passed, including Settings geometry and focus, 4K decoding, all Settings destinations, post-play, playback controls, and sidebar behavior.</li>
             </ul>
           </div>
         </article>

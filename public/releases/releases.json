@@ -4,13 +4,13 @@
     {
       "id": "android-tv",
       "name": "Cedar for Android TV",
-      "version": "1.2.77",
-      "build": "80",
+      "version": "1.2.78",
+      "build": "81",
       "date": "2026-09-07",
       "status": "released",
-      "summary": "Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.",
+      "summary": "Cedar 1.2.78 adopts the latest full-screen television Settings layout and preserves hero artwork detail at the app's display resolution.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.77/Cedar-TV-1.2.77.apk"
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.78/Cedar-TV-1.2.78.apk"
     },
     {
       "id": "iphone",
