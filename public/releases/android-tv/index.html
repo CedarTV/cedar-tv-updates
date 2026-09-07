@@ -38,38 +38,38 @@
           <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-78-build-81">
+        <article class="release-entry" id="version-1-2-79-build-82">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.78</h2>
-            <p class="release-summary">Cedar 1.2.78 adopts the latest full-screen television Settings layout and preserves hero artwork detail at the app&#39;s display resolution.</p>
+            <h2>Version 1.2.79</h2>
+            <p class="release-summary">Cedar 1.2.79 adds MDBList account tracking with device authorization, profile-owned sessions, library synchronization, and optional scrobbling.</p>
             <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
-              <span>Version 1.2.78</span>
-              <span>Build 81</span>
+              <span>Version 1.2.79</span>
+              <span>Build 82</span>
               <time datetime="2026-09-07">September 7, 2026</time>
             </div>
             <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.78/Cedar-TV-1.2.78.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.78">GitHub release</a>
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.79/Cedar-TV-1.2.79.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.79">GitHub release</a>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>Cedar 1.2.78 adopts the latest full-screen television Settings layout and preserves hero artwork detail at the app&#39;s display resolution.</p>
+            <p>Cedar 1.2.79 adds MDBList account tracking with device authorization, profile-owned sessions, library synchronization, and optional scrobbling.</p>
             <h3>What changed</h3>
             <ul>
-            <li>Settings now fills the screen, with controls on the left and contextual help on the right. The sidebar remains on the main destinations; Back from Settings returns Home.</li>
-            <li>Removed the automatic 720p hero limit on televisions with less physical memory.</li>
-            <li>Full-screen artwork uses the measured app surface up to 4K, while retaining bounded downloads, concurrent loads, and bitmap memory safety limits.</li>
-            <li>TMDb backdrop metadata retains original image URLs. Older cached smaller URLs upgrade when necessary to cover the displayed surface.</li>
-            <li>Synchronized the parity contract&#39;s tracking-authority title with the current Apple catalog. Full product parity certification remains pending complete behavioral evidence on both platforms.</li>
+            <li>Connect MDBList through a short-lived device code in Accounts &amp; Sync. Connecting an account stays separate from choosing its Tracking Authority; select the connected service explicitly to enable activity synchronization.</li>
+            <li>Read MDBList watched history, playback progress, Next Up, watchlist, ratings, collection, statistics, and available calendar events.</li>
+            <li>Send watchlist and rating changes through the selected tracking authority. Completed playback can forward watched state when MDBList is active; optional scrobbling uses MDBList&#39;s episode payload format.</li>
+            <li>Refresh MDBList OAuth sessions with profile-scoped encrypted storage. Profile switches cancel pending authorization, and disconnect serializes with token refresh.</li>
+            <li>Detect rejected updates, repeated pagination cursors, and oversized snapshots; retain the previous cached library when a full refresh fails.</li>
+            <li>Preserve independent MDBList API-key ratings/watchlists, full-screen Settings, display-resolution hero artwork, and signed OTA updates.</li>
             </ul>
-            <h3>Validation</h3>
+            <h3>Qualification</h3>
             <ul>
-            <li>520 unit tests passed; Android lint reported zero errors.</li>
-            <li>Parity contract validation passes on both repositories at revision 3; all 42 validator regression tests pass.</li>
-            <li>The connected TV exposes a 1920 × 1080 app surface. Full-screen image targets now preserve that resolution; a separate hardware decode test verifies 3840 × 2160 pixels.</li>
-            <li>All ten TV instrumented tests passed, including Settings geometry and focus, 4K decoding, all Settings destinations, post-play, playback controls, and sidebar behavior.</li>
+            <li>535 unit tests passed, including 15 new MDBList transport/decoding tests. Android lint passed.</li>
+            <li>Personal-account approval and live account read/write round trips remain part of the parity certification work; requesting a device code alone does not certify those flows.</li>
+            <li>Twelve physical-TV tests passed, including native MDBList account controls and a live device-code request using Cedar’s configured client ID.</li>
             </ul>
           </div>
         </article>

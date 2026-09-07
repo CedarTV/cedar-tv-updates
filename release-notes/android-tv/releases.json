@@ -3,6 +3,15 @@
   "releases": [
     {
       "platform": "android-tv",
+      "version": "1.2.79",
+      "build": "82",
+      "date": "2026-09-07",
+      "status": "released",
+      "summary": "Cedar 1.2.79 adds MDBList account tracking with device authorization, profile-owned sessions, library synchronization, and optional scrobbling.",
+      "notes": "release-notes/android-tv/1.2.79.md"
+    },
+    {
+      "platform": "android-tv",
       "version": "1.2.78",
       "build": "81",
       "date": "2026-09-07",

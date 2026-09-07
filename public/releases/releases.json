@@ -4,13 +4,13 @@
     {
       "id": "android-tv",
       "name": "Cedar for Android TV",
-      "version": "1.2.78",
-      "build": "81",
+      "version": "1.2.79",
+      "build": "82",
       "date": "2026-09-07",
       "status": "released",
-      "summary": "Cedar 1.2.78 adopts the latest full-screen television Settings layout and preserves hero artwork detail at the app's display resolution.",
+      "summary": "Cedar 1.2.79 adds MDBList account tracking with device authorization, profile-owned sessions, library synchronization, and optional scrobbling.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.78/Cedar-TV-1.2.78.apk"
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.79/Cedar-TV-1.2.79.apk"
     },
     {
       "id": "iphone",
