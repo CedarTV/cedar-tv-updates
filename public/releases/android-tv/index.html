@@ -38,40 +38,41 @@
           <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-76-build-79">
+        <article class="release-entry" id="version-1-2-77-build-80">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.76</h2>
-            <p class="release-summary">Cedar 1.2.76 brings the current Apple TV Settings organization and post-play discovery to Android TV, while improving remote playback controls and preserving the compact sidebar.</p>
+            <h2>Version 1.2.77</h2>
+            <p class="release-summary">Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.</p>
             <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
-              <span>Version 1.2.76</span>
-              <span>Build 79</span>
+              <span>Version 1.2.77</span>
+              <span>Build 80</span>
               <time datetime="2026-09-07">September 7, 2026</time>
             </div>
             <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.76/Cedar-TV-1.2.76.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.76">GitHub release</a>
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.77/Cedar-TV-1.2.77.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.77">GitHub release</a>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>Cedar 1.2.76 brings the current Apple TV Settings organization and post-play discovery to Android TV, while improving remote playback controls and preserving the compact sidebar.</p>
+            <p>Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.</p>
             <h3>What changed</h3>
             <ul>
-            <li>Organized Settings into Personal, Sources, Services, Watching, and App, with General first and the current television destination names.</li>
-            <li>Separated add-on, Live TV, media-server, and WebDAV management and expanded the Settings control column.</li>
-            <li>Added post-play recommendations from available title metadata, with paged cards, Return to Player, a configurable movie trigger, and Next Episode priority.</li>
-            <li>Added transfer of post-play preferences from Apple Cedar profiles.</li>
-            <li>Fixed Back being consumed by hidden player controls instead of closing playback.</li>
-            <li>Paused the Next Episode countdown while playback is paused, a player menu is open, or Cedar is in the background.</li>
-            <li>Added source audio codec, channel count, and sample-rate information to Stream Information.</li>
-            <li>Preserved Cedar&#39;s existing app signer, signed update verification, profile storage, and Android navigation sidebar.</li>
+            <li>Next Up combines local completed-episode history with the selected tracking account, preferring local candidates and keeping active series in Continue Watching.</li>
+            <li>Episode discovery uses exact IMDb/TMDb series identities, reuses cached metadata, limits lookups to four at a time, and discards results after profile changes.</li>
+            <li>The furthest completed regular episode establishes progression. Unknown or future immediate successors do not cause a jump to a later episode, and stale partial progress before that point does not block local progression.</li>
+            <li>New Next Up branches are series-only. Keep Separate from Continue Watching is available in the native branch editor and survives profile transfer and branch editing.</li>
+            <li>Editing a branch preserves its portable query parameters.</li>
+            <li>Post-play recommendations use parent-series metadata for episodes and remain independent of whether the Related detail-page section is visible.</li>
+            <li>Player auto-hide no longer takes focus away from Next Episode or post-play recommendations. Back dismisses those overlays before leaving playback.</li>
+            <li>Retained the Settings, transport, audio-information, and signed OTA improvements from 1.2.76.</li>
             </ul>
-            <h3>Television validation</h3>
+            <h3>Validation</h3>
             <ul>
-            <li>All 513 Android unit tests passed.</li>
-            <li>The connected Smart TV Pro passed tests covering the 18 Settings destinations, post-play paging/return focus, repeated stop/replay, and controls reappearing after auto-hide.</li>
-            <li>A six-channel Dolby Digital Plus fixture produced active E-AC-3 output over HDMI ARC to the connected sound system. This confirms the digital output path; it does not independently verify the soundbar&#39;s physical speaker mapping or acoustic synchronization.</li>
+            <li>519 unit tests passed.</li>
+            <li>Eight instrumented tests passed on the connected Android TV, covering Settings, sidebar focus, playback controls, post-play focus, and metadata identity lookup.</li>
+            <li>Release signing, non-debuggable configuration, ZIP alignment, and native-library page alignment checks passed.</li>
+            <li>Dolby Digital Plus over HDMI ARC was verified during the 1.2.76 hardware session. Physical speaker mapping and acoustic sync still require listening confirmation.</li>
             </ul>
           </div>
         </article>

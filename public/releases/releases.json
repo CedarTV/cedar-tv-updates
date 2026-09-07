@@ -4,13 +4,13 @@
     {
       "id": "android-tv",
       "name": "Cedar for Android TV",
-      "version": "1.2.76",
-      "build": "79",
+      "version": "1.2.77",
+      "build": "80",
       "date": "2026-09-07",
       "status": "released",
-      "summary": "Cedar 1.2.76 brings the current Apple TV Settings organization and post-play discovery to Android TV, while improving remote playback controls and preserving the compact sidebar.",
+      "summary": "Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.76/Cedar-TV-1.2.76.apk"
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.77/Cedar-TV-1.2.77.apk"
     },
     {
       "id": "iphone",

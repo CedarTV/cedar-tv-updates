@@ -3,6 +3,15 @@
   "releases": [
     {
       "platform": "android-tv",
+      "version": "1.2.77",
+      "build": "80",
+      "date": "2026-09-07",
+      "status": "released",
+      "summary": "Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.",
+      "notes": "release-notes/android-tv/1.2.77.md"
+    },
+    {
+      "platform": "android-tv",
       "version": "1.2.76",
       "build": "79",
       "date": "2026-09-07",
