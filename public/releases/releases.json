@@ -4,13 +4,13 @@
     {
       "id": "android-tv",
       "name": "Cedar for Android TV",
-      "version": "1.2.81",
-      "build": "84",
+      "version": "1.2.82",
+      "build": "85",
       "date": "2026-09-07",
       "status": "released",
-      "summary": "Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.",
+      "summary": "Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.81/Cedar-TV-1.2.81.apk"
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.82/Cedar-TV-1.2.82.apk"
     },
     {
       "id": "iphone",

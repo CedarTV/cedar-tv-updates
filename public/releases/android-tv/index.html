@@ -38,38 +38,38 @@
           <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-81-build-84">
+        <article class="release-entry" id="version-1-2-82-build-85">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.81</h2>
-            <p class="release-summary">Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.</p>
+            <h2>Version 1.2.82</h2>
+            <p class="release-summary">Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.</p>
             <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
-              <span>Version 1.2.81</span>
-              <span>Build 84</span>
+              <span>Version 1.2.82</span>
+              <span>Build 85</span>
               <time datetime="2026-09-07">September 7, 2026</time>
             </div>
             <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.81/Cedar-TV-1.2.81.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.81">GitHub release</a>
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.82/Cedar-TV-1.2.82.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.82">GitHub release</a>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.</p>
+            <p>Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.</p>
             <h3>What changed</h3>
             <ul>
-            <li>Stop Fetching Category independently controls future ingestion. Existing channels remain cached until a successful playlist refresh.</li>
-            <li>Show All Categories, Hide All Categories, and Hide All and Stop Fetching match the current tvOS bulk actions. Renaming and ordering are retained.</li>
-            <li>Xtream refreshes skip excluded category stream requests. M3U and Stalker imports exclude matching live channels while retaining category definitions for editing.</li>
-            <li>Playlists stay selectable when every category is excluded. Re-enable fetching and refresh to restore their channels.</li>
-            <li>Apple-profile transfer and local profile copies preserve category refresh exclusions. Category saves capture the owning profile and handle storage failures.</li>
-            <li>Explicit MDBList API-key transport supports private account qualification; the normal viewer connection remains OAuth. Personal credentials and manifest links are not bundled.</li>
+            <li>Clean Up Names removes provider prefixes and technical clutter, preserves meaningful names, and displays the strongest resolution as a separate quality badge.</li>
+            <li>Category labels show country flags while preserving broad regions. Provider IDs and EPG matching remain intact.</li>
+            <li>Focus a channel for 450 ms to start a muted preview. Moving focus cancels stale requests; browsing does not add recent channels.</li>
+            <li>Selecting the preview restores audio and opens fullscreen using the same player and media item.</li>
+            <li>Live TV &amp; DVR settings include controls for name cleanup and focused previews. Cleaned names also appear in search and the live player.</li>
+            <li>Existing category refresh controls, hero image quality, branding, and the Android sidebar are preserved.</li>
             </ul>
             <h3>Qualification</h3>
             <ul>
-            <li>538 unit tests passed; Android lint passed.</li>
-            <li>Four targeted physical-TV tests passed: category controls, M3U cache/exclusion recovery, Xtream request exclusion, and manifest playback with a verified MDBList watched-state write and restoration.</li>
-            <li>Full live-guide parity remains open for name cleanup, automatic focused-channel previews, and bilateral guide behavior qualification. This release does not claim full parity certification.</li>
+            <li>541 unit tests and Android lint passed.</li>
+            <li>Eight targeted tests passed on the physical Android TV, covering cleanup settings, focus cancellation, no browsing recents, quality badges, player reuse, muted-to-fullscreen playback, and guide time alignment.</li>
+            <li>Full bilateral parity certification remains open; this release qualifies the listed live-guide behavior.</li>
             </ul>
           </div>
         </article>

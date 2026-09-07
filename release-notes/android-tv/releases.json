@@ -3,6 +3,15 @@
   "releases": [
     {
       "platform": "android-tv",
+      "version": "1.2.82",
+      "build": "85",
+      "date": "2026-09-07",
+      "status": "released",
+      "summary": "Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.",
+      "notes": "release-notes/android-tv/1.2.82.md"
+    },
+    {
+      "platform": "android-tv",
       "version": "1.2.81",
       "build": "84",
       "date": "2026-09-07",
