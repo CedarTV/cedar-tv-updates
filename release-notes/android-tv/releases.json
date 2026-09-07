@@ -3,6 +3,15 @@
   "releases": [
     {
       "platform": "android-tv",
+      "version": "1.2.76",
+      "build": "79",
+      "date": "2026-09-07",
+      "status": "released",
+      "summary": "Cedar 1.2.76 brings the current Apple TV Settings organization and post-play discovery to Android TV, while improving remote playback controls and preserving the compact sidebar.",
+      "notes": "release-notes/android-tv/1.2.76.md"
+    },
+    {
+      "platform": "android-tv",
       "version": "1.2.75",
       "build": "78",
       "date": "2026-08-31",

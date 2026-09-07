@@ -38,37 +38,40 @@
           <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-75-build-78">
+        <article class="release-entry" id="version-1-2-76-build-79">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.75</h2>
-            <p class="release-summary">Cedar 1.2.75 moves Android TV, Google TV, and Fire TV updates to the CedarTV release channel while preserving strict signed-update verification.</p>
+            <h2>Version 1.2.76</h2>
+            <p class="release-summary">Cedar 1.2.76 brings the current Apple TV Settings organization and post-play discovery to Android TV, while improving remote playback controls and preserving the compact sidebar.</p>
             <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
-              <span>Version 1.2.75</span>
-              <span>Build 78</span>
-              <time datetime="2026-08-31">August 31, 2026</time>
+              <span>Version 1.2.76</span>
+              <span>Build 79</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
             </div>
             <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.75/Cedar-TV-1.2.75.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.75">GitHub release</a>
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.76/Cedar-TV-1.2.76.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.76">GitHub release</a>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>Cedar 1.2.75 safely migrates the Android TV update channel to Cedar&#39;s new `CedarTV` GitHub namespace.</p>
+            <p>Cedar 1.2.76 brings the current Apple TV Settings organization and post-play discovery to Android TV, while improving remote playback controls and preserving the compact sidebar.</p>
             <h3>What changed</h3>
             <ul>
-            <li>Cedar now prefers the branded `cedartv.github.io` update and Cedar Link host.</li>
-            <li>The previous Pages address remains a temporary, exact-host fallback during the account cutover.</li>
-            <li>Manifest failover is limited to endpoint availability failures such as DNS, connection, timeout, or HTTP errors.</li>
-            <li>Signed-manifest, schema, package, URL-policy, and cryptographic verification failures still fail closed and never fall back.</li>
-            <li>Both transition hosts remain restricted to HTTPS on the existing bounded OTA allowlist.</li>
+            <li>Organized Settings into Personal, Sources, Services, Watching, and App, with General first and the current television destination names.</li>
+            <li>Separated add-on, Live TV, media-server, and WebDAV management and expanded the Settings control column.</li>
+            <li>Added post-play recommendations from available title metadata, with paged cards, Return to Player, a configurable movie trigger, and Next Episode priority.</li>
+            <li>Added transfer of post-play preferences from Apple Cedar profiles.</li>
+            <li>Fixed Back being consumed by hidden player controls instead of closing playback.</li>
+            <li>Paused the Next Episode countdown while playback is paused, a player menu is open, or Cedar is in the background.</li>
+            <li>Added source audio codec, channel count, and sample-rate information to Stream Information.</li>
+            <li>Preserved Cedar&#39;s existing app signer, signed update verification, profile storage, and Android navigation sidebar.</li>
             </ul>
-            <h3>Migration validation</h3>
+            <h3>Television validation</h3>
             <ul>
-            <li>The OTA unit suite covers fallback URL parsing, deduplication, and strict failure classification.</li>
-            <li>Cedar&#39;s permanent release signer and signed-manifest public key remain unchanged.</li>
-            <li>This bridge build was prepared before the GitHub username changed from `24gx4xx5jv-cloud` to `CedarTV`.</li>
+            <li>All 513 Android unit tests passed.</li>
+            <li>The connected Smart TV Pro passed tests covering the 18 Settings destinations, post-play paging/return focus, repeated stop/replay, and controls reappearing after auto-hide.</li>
+            <li>A six-channel Dolby Digital Plus fixture produced active E-AC-3 output over HDMI ARC to the connected sound system. This confirms the digital output path; it does not independently verify the soundbar&#39;s physical speaker mapping or acoustic synchronization.</li>
             </ul>
           </div>
         </article>

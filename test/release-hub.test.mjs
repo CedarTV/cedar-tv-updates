@@ -8,8 +8,12 @@ test("Android release source matches the signed update manifest", async () => {
   const source = JSON.parse(await readFile("release-notes/android-tv/releases.json", "utf8"));
   const manifest = JSON.parse(await readFile("public/update-v1.json", "utf8"));
   assert.equal(source.schemaVersion, 1);
-  assert.equal(source.releases.length, 1);
-  const release = source.releases[0];
+  assert.ok(source.releases.length >= 1);
+  const ordered = [...source.releases].sort((left, right) => Number(right.build) - Number(left.build));
+  assert.equal(new Set(ordered.map((item) => item.version)).size, ordered.length);
+  assert.equal(new Set(ordered.map((item) => item.build)).size, ordered.length);
+  for (const historical of ordered) await access(historical.notes);
+  const release = ordered[0];
   assert.equal(release.platform, "android-tv");
   assert.equal(release.version, manifest.versionName);
   assert.equal(release.build, String(manifest.versionCode));
