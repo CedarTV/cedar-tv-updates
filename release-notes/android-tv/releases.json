@@ -3,6 +3,15 @@
   "releases": [
     {
       "platform": "android-tv",
+      "version": "1.2.81",
+      "build": "84",
+      "date": "2026-09-07",
+      "status": "released",
+      "summary": "Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.",
+      "notes": "release-notes/android-tv/1.2.81.md"
+    },
+    {
+      "platform": "android-tv",
       "version": "1.2.80",
       "build": "83",
       "date": "2026-09-07",

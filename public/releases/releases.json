@@ -4,13 +4,13 @@
     {
       "id": "android-tv",
       "name": "Cedar for Android TV",
-      "version": "1.2.80",
-      "build": "83",
+      "version": "1.2.81",
+      "build": "84",
       "date": "2026-09-07",
       "status": "released",
-      "summary": "Cedar 1.2.80 matches the current Apple MDBList settings branding and advances live-account parity qualification while retaining full-screen Settings and display-resolution hero artwork.",
+      "summary": "Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.80/Cedar-TV-1.2.80.apk"
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.81/Cedar-TV-1.2.81.apk"
     },
     {
       "id": "iphone",

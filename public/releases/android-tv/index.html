@@ -38,36 +38,38 @@
           <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-80-build-83">
+        <article class="release-entry" id="version-1-2-81-build-84">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.80</h2>
-            <p class="release-summary">Cedar 1.2.80 matches the current Apple MDBList settings branding and advances live-account parity qualification while retaining full-screen Settings and display-resolution hero artwork.</p>
+            <h2>Version 1.2.81</h2>
+            <p class="release-summary">Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.</p>
             <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
-              <span>Version 1.2.80</span>
-              <span>Build 83</span>
+              <span>Version 1.2.81</span>
+              <span>Build 84</span>
               <time datetime="2026-09-07">September 7, 2026</time>
             </div>
             <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.80/Cedar-TV-1.2.80.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.80">GitHub release</a>
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.81/Cedar-TV-1.2.81.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.81">GitHub release</a>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>Cedar 1.2.80 matches the current Apple MDBList settings branding and advances live-account parity qualification while retaining full-screen Settings and display-resolution hero artwork.</p>
+            <p>Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.</p>
             <h3>What changed</h3>
             <ul>
-            <li>MDBList connection, status, and independent-watchlist rows now use the same compact brand mark and colors as current Cedar on Apple platforms.</li>
-            <li>Android continues to use Cedar’s tvOS MDBList application client ID. Personal test credentials are kept out of source, APKs, and published updates.</li>
-            <li>Hero backdrops retain original TMDb requests, up to 4K decoding for full-screen surfaces, and fitted transparent title artwork. No artwork-resolution policy was reduced.</li>
+            <li>Stop Fetching Category independently controls future ingestion. Existing channels remain cached until a successful playlist refresh.</li>
+            <li>Show All Categories, Hide All Categories, and Hide All and Stop Fetching match the current tvOS bulk actions. Renaming and ordering are retained.</li>
+            <li>Xtream refreshes skip excluded category stream requests. M3U and Stalker imports exclude matching live channels while retaining category definitions for editing.</li>
+            <li>Playlists stay selectable when every category is excluded. Re-enable fetching and refresh to restore their channels.</li>
+            <li>Apple-profile transfer and local profile copies preserve category refresh exclusions. Category saves capture the owning profile and handle storage failures.</li>
+            <li>Explicit MDBList API-key transport supports private account qualification; the normal viewer connection remains OAuth. Personal credentials and manifest links are not bundled.</li>
             </ul>
             <h3>Qualification</h3>
             <ul>
-            <li>535 unit tests passed and Android lint passed, including artwork-resolution and title-artwork regression coverage.</li>
-            <li>Eight authenticated MDBList read endpoints passed a read-only account smoke test. This does not certify OAuth approval, refresh, or account mutation round trips.</li>
-            <li>Full parity remains in progress, including durable offline tracking updates, manual watched-state controls, and cross-platform reconciliation.</li>
-            <li>Six targeted physical-TV tests passed, including live account reads, device-code registration, Settings flows, and a full 3840 × 2160 image decode.</li>
+            <li>538 unit tests passed; Android lint passed.</li>
+            <li>Four targeted physical-TV tests passed: category controls, M3U cache/exclusion recovery, Xtream request exclusion, and manifest playback with a verified MDBList watched-state write and restoration.</li>
+            <li>Full live-guide parity remains open for name cleanup, automatic focused-channel previews, and bilateral guide behavior qualification. This release does not claim full parity certification.</li>
             </ul>
           </div>
         </article>
