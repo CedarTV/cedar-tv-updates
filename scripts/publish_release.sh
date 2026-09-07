@@ -61,9 +61,6 @@ mkdir -p "$STAGING"
 trap 'rm -rf "$STAGING"' EXIT
 cp "$SOURCE_APK" "$STAGING/$ASSET_NAME"
 
-gh release create "$TAG" "$STAGING/$ASSET_NAME" \
-    --title "Cedar Android TV ${VERSION_NAME}" \
-    --notes-file "$RELEASE_NOTES"
 
 python3 "$ANDROID_ROOT/scripts/ota/make_release_manifest.py" \
     --apk "$SOURCE_APK" \
@@ -75,7 +72,43 @@ python3 "$ANDROID_ROOT/scripts/ota/make_release_manifest.py" \
     --apksigner "$APKSIGNER" \
     --expected-signer-sha256 "$EXPECTED_SIGNER_DIGEST"
 
-git add public/update-v1.json
+# Keep the public changelog and signed feed in the same deployment.
+python3 - "$REPOSITORY_ROOT" "$RELEASE_NOTES" <<'PYNOTES'
+import datetime, json, pathlib, sys
+root, notes = pathlib.Path(sys.argv[1]), pathlib.Path(sys.argv[2])
+manifest = json.loads((root / 'public/update-v1.json').read_text())
+version = manifest['versionName']
+if not __import__('re').fullmatch(r'\d+\.\d+\.\d+', version):
+    raise SystemExit('Public release versions must use three numeric components.')
+text = notes.read_text()
+summary = next((line.strip() for line in text.splitlines() if line.strip() and not line.startswith('#')), '')
+if not summary or len(summary) > 280:
+    raise SystemExit('Release notes need an opening summary of at most 280 characters.')
+path = root / 'release-notes/android-tv/releases.json'
+catalog = json.loads(path.read_text())
+if any(item['version'] == version for item in catalog['releases']):
+    raise SystemExit('This version already has public release notes.')
+notes_path = f'release-notes/android-tv/{version}.md'
+(root / notes_path).write_text(text)
+catalog['releases'].insert(0, dict(platform='android-tv', version=version,
+    build=str(manifest['versionCode']), date=datetime.datetime.now(datetime.timezone.utc).date().isoformat(),
+    status='released', summary=summary, notes=notes_path))
+path.write_text(json.dumps(catalog, indent=2) + '\n')
+PYNOTES
+node scripts/render_release_hub.mjs --write
+node scripts/render_site_footer.mjs --write
+node --test test/*.test.mjs
+node scripts/render_apple_releases.mjs --check
+node scripts/render_release_hub.mjs --check
+node scripts/render_site_footer.mjs --check
+node scripts/verify_public_site.mjs
+
+gh release create "$TAG" "$STAGING/$ASSET_NAME" \
+    --title "Cedar Android TV ${VERSION_NAME}" \
+    --notes-file "$RELEASE_NOTES"
+
+
+git add public/update-v1.json public/releases release-notes/android-tv
 git commit -m "Publish Cedar Android TV ${VERSION_NAME} (${VERSION_CODE})"
 git push origin main
 
