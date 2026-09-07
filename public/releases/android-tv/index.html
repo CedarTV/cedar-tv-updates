@@ -38,38 +38,38 @@
           <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-82-build-85">
+        <article class="release-entry" id="version-1-2-83-build-86">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.82</h2>
-            <p class="release-summary">Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.</p>
+            <h2>Version 1.2.83</h2>
+            <p class="release-summary">Cedar 1.2.83 makes device transfers and ongoing profile sync easier to follow.</p>
             <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
-              <span>Version 1.2.82</span>
-              <span>Build 85</span>
+              <span>Version 1.2.83</span>
+              <span>Build 86</span>
               <time datetime="2026-09-07">September 7, 2026</time>
             </div>
             <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.82/Cedar-TV-1.2.82.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.82">GitHub release</a>
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.83/Cedar-TV-1.2.83.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.83">GitHub release</a>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.</p>
+            <p>Cedar 1.2.83 makes device transfers and ongoing profile sync easier to follow.</p>
             <h3>What changed</h3>
             <ul>
-            <li>Clean Up Names removes provider prefixes and technical clutter, preserves meaningful names, and displays the strongest resolution as a separate quality badge.</li>
-            <li>Category labels show country flags while preserving broad regions. Provider IDs and EPG matching remain intact.</li>
-            <li>Focus a channel for 450 ms to start a muted preview. Moving focus cancels stale requests; browsing does not add recent channels.</li>
-            <li>Selecting the preview restores audio and opens fullscreen using the same player and media item.</li>
-            <li>Live TV &amp; DVR settings include controls for name cleanup and focused previews. Cleaned names also appear in search and the live player.</li>
-            <li>Existing category refresh controls, hero image quality, branding, and the Android sidebar are preserved.</li>
+            <li>Pair from Mac, iPhone, iPad, or Apple TV with updated nearby-device instructions.</li>
+            <li>Profile import shows its current stage and elapsed time, including when the profile is saved and ongoing sync is being linked.</li>
+            <li>Manual Cedar Link sync reports fetching, saving, and confirming stages, with elapsed time and a timeout/retry result.</li>
+            <li>Completion confirms when changes are saved on this television. A duplicate manual request cannot start another simultaneous sync.</li>
+            <li>Encrypted pairing receipts now separately report ongoing sync enrollment, so compatible Apple senders can distinguish a copied profile from a working link.</li>
             </ul>
             <h3>Qualification</h3>
             <ul>
             <li>541 unit tests and Android lint passed.</li>
-            <li>Eight targeted tests passed on the physical Android TV, covering cleanup settings, focus cancellation, no browsing recents, quality badges, player reuse, muted-to-fullscreen playback, and guide time alignment.</li>
-            <li>Full bilateral parity certification remains open; this release qualifies the listed live-guide behavior.</li>
+            <li>A current tvOS simulator sent a real profile to the physical Android TV: 83 items acknowledged in about 15 seconds.</li>
+            <li>Two subsequent production-relay updates changed and restored a detail-display preference on the Android TV. Each receiver import completed in under four seconds.</li>
+            <li>Full cross-platform certification remains open: physical macOS-to-Apple-TV iCloud propagation, deletion reconciliation, and broader data-domain coverage still require verification. Nearby transfer completion does not certify iCloud or catalogue/EPG refresh completion.</li>
             </ul>
           </div>
         </article>

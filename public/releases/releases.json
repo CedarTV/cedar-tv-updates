@@ -4,13 +4,13 @@
     {
       "id": "android-tv",
       "name": "Cedar for Android TV",
-      "version": "1.2.82",
-      "build": "85",
+      "version": "1.2.83",
+      "build": "86",
       "date": "2026-09-07",
       "status": "released",
-      "summary": "Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.",
+      "summary": "Cedar 1.2.83 makes device transfers and ongoing profile sync easier to follow.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.82/Cedar-TV-1.2.82.apk"
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.83/Cedar-TV-1.2.83.apk"
     },
     {
       "id": "iphone",
