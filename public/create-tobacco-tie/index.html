@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0c0e0d">
+    <meta name="description" content="Turn an add-on address into a Tobacco Tie with Cedar. A local design preview of a simpler way to bring your add-ons along.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>Create Tobacco Tie — Cedar</title>
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="tie.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script type="module" src="tie.mjs"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to creator</a>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/cedar-tv-updates/" aria-label="Cedar home"><img src="../assets/cedar-wordmark.png" alt="Cedar" width="858" height="301"></a>
+        <nav aria-label="Primary navigation"><a href="/cedar-tv-updates/">Explore Cedar <span aria-hidden="true">↗</span></a><a href="/cedar-tv-updates/support/">Support</a></nav>
+      </header>
+      <main id="main">
+        <div class="page-heading">
+          <div><p class="eyebrow">CEDAR / TOOLS</p><h1>Create <em>Tobacco Tie.</em></h1><p class="intro">Your add-on address, neatly tied into one code.</p></div>
+          <span class="preview-badge"><span aria-hidden="true"></span>Design preview</span>
+        </div>
+        <div class="creator">
+          <section class="input-panel" aria-labelledby="input-title">
+            <div class="section-label"><h2 id="input-title">Start with an address</h2></div>
+            <p class="section-description">Paste the address supplied by your add-on.</p>
+            <form id="tie-form" novalidate>
+              <label for="addon-url">Add-on address</label>
+              <div class="address-field"><textarea id="addon-url" name="addon-url" rows="3" placeholder="https://your-addon.com/manifest.json" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="address-hint address-error" maxlength="4096"></textarea><button class="clear-input" id="clear-input" type="button" aria-label="Clear address" hidden>×</button></div>
+              <div class="field-meta"><p id="address-hint">Use a complete HTTPS address.</p><button type="button" class="text-button" id="use-example">Try an example <span aria-hidden="true">↗</span></button></div>
+              <p id="address-error" class="field-error" role="alert" hidden></p>
+              <button class="create-button" id="create-tie" type="submit"><span>Create Tobacco Tie</span><span aria-hidden="true">→</span></button>
+            </form>
+            <div class="local-note"><span class="local-dot" aria-hidden="true"></span><p>Made right here in your browser.<br><span>Your address is not uploaded or stored.</span></p></div>
+          </section>
+          <section class="output-panel" aria-labelledby="output-title">
+            <div class="section-label"><h2 id="output-title">Your Tobacco Tie</h2></div>
+            <p class="section-description">Create a tie, then copy the code.</p>
+            <label class="code-label" for="tie-code">Code</label>
+            <textarea id="tie-code" readonly rows="5" placeholder="Your code will appear here." spellcheck="false" aria-describedby="prototype-note"></textarea>
+            <button class="copy-button" id="copy-tie" type="button" disabled>Copy Tobacco Tie <span aria-hidden="true">↗</span></button>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+            <p class="prototype-note" id="prototype-note">Preview format. Importing ties into Cedar comes next.</p>
+          </section>
+        </div>
+        <section class="how-it-works" aria-label="How it works">
+          <div><span>PASTE</span><p>Bring your add-on address.</p></div><div><span>CREATE</span><p>Make one copyable code.</p></div><div><span>COPY</span><p>Copy your Tobacco Tie.</p></div>
+        </section>
+        <details class="about-ties"><summary>What is a Tobacco Tie? <span aria-hidden="true">+</span></summary><div><p>A Tobacco Tie repackages an add-on address into a code. It is encoding, not encryption: someone with the code can recover the address.</p><p>This preview creates the code locally without connecting to the add-on. Creating a tie does not check that the add-on works or is compatible with Cedar. Only use sources you are authorized to access.</p></div></details>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+          <div class="site-footer-socials" aria-label="Cedar community">
+            <a class="site-footer-social" href="https://discord.gg/TFTx7j86v" aria-label="Join Cedar on Discord">
+              <img src="/cedar-tv-updates/assets/discord-symbol.svg" alt="" width="21" height="16" aria-hidden="true">
+            </a>
+          </div>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/link/">Cedar Link</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Create Tobacco Tie</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/issues">Report an issue</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
+              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+    </div>
+    <noscript><p class="noscript-note">Enable JavaScript to create a Tobacco Tie in your browser. Your address stays on this page.</p></noscript>
+  </body>
+</html>

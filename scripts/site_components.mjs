@@ -30,6 +30,7 @@ export function renderSiteFooter() {
           <section class="site-footer-group">
             <h2>Resources</h2>
             <ul>
+              <li><a href="${projectBasePath}/create-tobacco-tie/">Create Tobacco Tie</a></li>
               <li><a href="${projectBasePath}/support/">Support</a></li>
               <li><a href="${projectBasePath}/privacy/">Privacy</a></li>
               <li><a href="${projectBasePath}/accessibility/">Accessibility</a></li>
