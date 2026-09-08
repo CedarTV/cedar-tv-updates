@@ -1,26 +1,49 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { createHash } from 'node:crypto';
-import { createTie, validateAddress, PREFIX } from '../public/create-tobacco-tie/codec.mjs';
+import { createDecipheriv } from 'node:crypto';
+import { createTie, validateAddress, PREFIX, LINK_PREFIX } from '../public/create-tobacco-tie/codec.mjs';
 
-test('preview tie preserves configured URL data and has a valid checksum', async () => {
-  const address = 'https://example.com/a%2Fb/manifest.json?token=abc%2B123&name=caf%C3%A9';
-  const { code, host } = await createTie(address);
-  assert.equal(host, 'example.com');
+function decrypt(code) {
   assert.ok(code.startsWith(PREFIX));
-  const [payload, checksum] = code.slice(PREFIX.length).split('.');
-  const bytes = Buffer.from(payload, 'base64url');
-  assert.deepEqual(JSON.parse(bytes.toString('utf8')), { v: 1, kind: 'addon', url: address });
-  assert.equal(checksum, createHash('sha256').update(bytes).digest('hex').slice(0, 8));
+  const [key, raw] = code.slice(PREFIX.length).split('.').map(value => Buffer.from(value, 'base64url'));
+  assert.equal(key.length, 32);
+  const cipher = createDecipheriv('aes-256-gcm', key, raw.subarray(0, 12));
+  cipher.setAAD(Buffer.from(PREFIX));
+  cipher.setAuthTag(raw.subarray(-16));
+  return JSON.parse(Buffer.concat([cipher.update(raw.subarray(12, -16)), cipher.final()]).toString('utf8'));
+}
+test('browser encryption interoperates with independent AES-GCM and preserves configured URLs', async () => {
+  const address = 'https://example.com/a%2Fb/manifest.json?token=abc%2B123&name=caf%C3%A9';
+  const { code, link, host } = await createTie(address);
+  assert.equal(host, 'example.com');
+  assert.equal(link, LINK_PREFIX + code);
+  assert.deepEqual(decrypt(code), { v: 1, kind: 'addon', url: address });
+  assert.ok(!code.includes('example.com'));
 });
-test('preview rejects unsupported and malformed addresses', () => {
-  for (const address of ['', 'example.com/manifest.json', 'http://example.com', 'javascript:alert(1)', 'https://user:password@example.com', 'https://exam ple.com', 'https://example.com/\nmanifest.json', 'https://example.com/'+ 'x'.repeat(4096)]) {
+test('rejects unsupported and malformed addresses', () => {
+  for (const address of ['', 'example.com/manifest.json', 'http://example.com', 'javascript:alert(1)', 'https://user:password@example.com', 'https://exam ple.com', 'https://example.com/\nmanifest.json', 'https://example.com/#fragment', 'https://example.com/#', 'https://example.com/other.json', 'https://example.com/\\path', 'https://example.com/'+ 'x'.repeat(4096)]) {
     assert.throws(() => validateAddress(address));
   }
 });
-test('surrounding whitespace is trimmed without dropping query or fragment data', () => {
-  assert.equal(validateAddress('  https://example.com/path?a=b#section  ').address, 'https://example.com/path?a=b#section');
+test('normalizes base/configure addresses without rewriting encoded configuration', () => {
+  for (const value of ['https://example.com', 'https://example.com/configure', 'https://example.com/']) {
+    assert.equal(validateAddress(value).address, 'https://example.com/manifest.json');
+  }
+  assert.equal(validateAddress('  https://example.com/a%2Fb/configure?token=%2B  ').address, 'https://example.com/a%2Fb/manifest.json?token=%2B');
 });
-test('same address produces a stable preview code', async () => {
-  assert.deepEqual(await createTie('https://example.com/manifest.json'), await createTie('https://example.com/manifest.json'));
+test('every tie uses a fresh key and nonce', async () => {
+  const a = await createTie('https://example.com/manifest.json');
+  const b = await createTie('https://example.com/manifest.json');
+  assert.notEqual(a.code.split('.')[1], b.code.split('.')[1]);
+  assert.notEqual(a.code.split('.')[2].slice(0, 16), b.code.split('.')[2].slice(0, 16));
+  assert.deepEqual(decrypt(a.code), decrypt(b.code));
+});
+test('authentication rejects changed ciphertext and key', async () => {
+  const { code } = await createTie('https://example.com/manifest.json');
+  for (const index of [1, 2]) {
+    const parts = code.split('.');
+    const data = Buffer.from(parts[index], 'base64url'); data[0] ^= 1;
+    parts[index] = data.toString('base64url');
+    assert.throws(() => decrypt(parts.join('.')));
+  }
 });
