@@ -2,6 +2,42 @@
   "schemaVersion": 1,
   "releases": [
     {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Local playback preferences, clearer iCloud status, and household migration ordering improvements.",
+      "notes": "release-notes/apple/mac/1.0.0-8.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-8.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.",
+      "notes": "release-notes/apple/ipad/1.0.0-8.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.",
+      "notes": "release-notes/apple/iphone/1.0.0-8.md"
+    },
+    {
       "platform": "iphone",
       "version": "1.0.0",
       "build": "1",

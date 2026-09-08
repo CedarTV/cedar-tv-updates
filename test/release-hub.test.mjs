@@ -39,7 +39,9 @@ test("cross-platform release hub publishes version, build, and honest status for
 
   assert.equal(catalog.platforms.find((platform) => platform.id === "android-tv").status, "released");
   for (const platform of catalog.platforms.filter((item) => item.id !== "android-tv")) {
-    assert.equal(platform.status, "release-candidate");
+    const source = JSON.parse(await readFile("release-notes/apple/releases.json", "utf8"));
+    const latest = source.releases.filter((release) => release.platform === platform.id).sort((a, b) => Number(b.build) - Number(a.build))[0];
+    assert.equal(platform.status, latest.status);
   }
   assert.match(page, /Candidates stay labeled as candidates/);
 });

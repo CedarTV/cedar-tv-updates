@@ -39,6 +39,36 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-8">
+          <header>
+            <p class="eyebrow">iPad</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 8</span>
+              <time datetime="2026-09-08">September 8, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.</p>
+            <h3>What changed</h3>
+            <ul>
+            <li>New artwork-led remote layout, circular playback controls, contextual actions, and TV room naming.</li>
+            <li>Authenticated discovery filters dead entries and merges duplicate TV identities.</li>
+            <li>Seekable timeline with compatible TVs; older TVs retain a read-only timeline.</li>
+            <li>Hardware, installed-player, and touch-control preferences stay on each device. Languages and episode behavior remain shared.</li>
+            <li>Clearer iCloud sync errors and progress, plus corrected household migration ordering.</li>
+            </ul>
+            <h3>Testing notes</h3>
+            <ul>
+            <li>Check artwork loading and seeking during real playback; authenticated phone-to-TV connectivity was verified while idle.</li>
+            <li>Some existing Mac household libraries with records split across private/shared CloudKit zones still cannot export. This build does not automatically repair those libraries.</li>
+            </ul>
+            <p>This is a TestFlight build, not an App Store release.</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-1">
           <header>
             <p class="eyebrow">iPad</p>

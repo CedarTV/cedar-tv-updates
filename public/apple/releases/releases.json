@@ -24,12 +24,53 @@
   ],
   "releases": [
     {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Local playback preferences, clearer iCloud status, and household migration ordering improvements.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nLocal playback preferences, clearer iCloud status, and household migration ordering improvements.\n\n## What changed\n\n- Removed touch-only player guidance and unavailable settings search entries.\n- Hardware, installed-player, and touch-control preferences stay on each device. Languages and episode behavior remain shared.\n- Clearer iCloud sync errors and progress, plus corrected household migration ordering.\n\n## Testing notes\n\n- Check artwork loading and seeking during real playback; authenticated phone-to-TV connectivity was verified while idle.\n- Some existing Mac household libraries with records split across private/shared CloudKit zones still cannot export. This build does not automatically repair those libraries.\n\nThis is a TestFlight build, not an App Store release.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-8"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nFull-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.\n\n## What changed\n\n- Heroes always render full-screen, even when another device selects Card.\n- Removed touch-only settings and unavailable search results; external-player choices match installed TV apps.\n- Improved remote transport with authenticated artwork/status and seek support.\n- Hardware, installed-player, and touch-control preferences stay on each device. Languages and episode behavior remain shared.\n- Clearer iCloud sync errors and progress, plus corrected household migration ordering.\n\n## Testing notes\n\n- Check artwork loading and seeking during real playback; authenticated phone-to-TV connectivity was verified while idle.\n- Some existing Mac household libraries with records split across private/shared CloudKit zones still cannot export. This build does not automatically repair those libraries.\n\nThis is a TestFlight build, not an App Store release.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-8"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nA redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.\n\n## What changed\n\n- New artwork-led remote layout, circular playback controls, contextual actions, and TV room naming.\n- Authenticated discovery filters dead entries and merges duplicate TV identities.\n- Seekable timeline with compatible TVs; older TVs retain a read-only timeline.\n- Hardware, installed-player, and touch-control preferences stay on each device. Languages and episode behavior remain shared.\n- Clearer iCloud sync errors and progress, plus corrected household migration ordering.\n\n## Testing notes\n\n- Check artwork loading and seeking during real playback; authenticated phone-to-TV connectivity was verified while idle.\n- Some existing Mac household libraries with records split across private/shared CloudKit zones still cannot export. This build does not automatically repair those libraries.\n\nThis is a TestFlight build, not an App Store release.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-8"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nA redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.\n\n## What changed\n\n- New artwork-led remote layout, circular playback controls, contextual actions, and TV room naming.\n- Authenticated discovery filters dead entries and merges duplicate TV identities.\n- Seekable timeline with compatible TVs; older TVs retain a read-only timeline.\n- Hardware, installed-player, and touch-control preferences stay on each device. Languages and episode behavior remain shared.\n- Clearer iCloud sync errors and progress, plus corrected household migration ordering.\n\n## Testing notes\n\n- Check artwork loading and seeking during real playback; authenticated phone-to-TV connectivity was verified while idle.\n- Some existing Mac household libraries with records split across private/shared CloudKit zones still cannot export. This build does not automatically repair those libraries.\n\nThis is a TestFlight build, not an App Store release.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-8"
+    },
+    {
       "platform": "iphone",
       "version": "1.0.0",
       "build": "1",
       "date": "2026-08-30",
       "status": "release-candidate",
       "summary": "The first Cedar release candidate for iPhone brings authorized personal media, Live TV, downloads, and private sync into a focused mobile player.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\n## Highlights\n\n- Organize and play media from sources you own or are authorized to use.\n- Customize Home branches and shelves around favorites, recent titles, live channels, and provider collections.\n- Add M3U, Xtream-compatible, and XMLTV sources with clear handling for unencrypted endpoints.\n- Resume playback, choose audio and subtitle tracks, use Picture in Picture, and download supported media.\n\n## Private by design\n\n- Keep credentials in Keychain and library data local by default.\n- Optionally sync profiles through private iCloud data, Cedar Household, or end-to-end encrypted Cedar Link.\n- Use Cedar without advertising, cross-app tracking, or a required Cedar account.\n\n## Release status\n\nThis is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-1"
     },
     {
@@ -39,6 +80,7 @@
       "date": "2026-08-30",
       "status": "release-candidate",
       "summary": "The first Cedar release candidate for iPad pairs a spacious browsing experience with authorized sources, downloads, Live TV, and private sync.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\n## Highlights\n\n- Browse authorized personal media in a spacious interface designed for iPad.\n- Customize Home branches and shelves for favorites, recent titles, live channels, guide data, and provider collections.\n- Add M3U, Xtream-compatible, and XMLTV sources with clear handling for unencrypted endpoints.\n- Resume playback, choose audio and subtitle tracks, use Picture in Picture, and download supported media.\n\n## Private by design\n\n- Keep credentials in Keychain and library data local by default.\n- Optionally sync profiles through private iCloud data, Cedar Household, or end-to-end encrypted Cedar Link.\n- Use Cedar without advertising, cross-app tracking, or a required Cedar account.\n\n## Release status\n\nThis is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-1"
     },
     {
@@ -48,6 +90,7 @@
       "date": "2026-08-30",
       "status": "release-candidate",
       "summary": "The first Cedar release candidate for Apple TV delivers a remote-first Home experience, Live TV guide, local pairing, and focused playback.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\n## Highlights\n\n- Browse authorized personal media through a remote-first, ten-foot Home experience.\n- Customize branches and shelves for favorites, next plays, live channels, guide data, and provider collections.\n- Add M3U, Xtream-compatible, and XMLTV sources, then navigate a focused Live TV guide.\n- Resume playback, choose audio and subtitle tracks, and use controls designed for television focus.\n\n## Pair and sync\n\n- Pair Cedar devices over the local network.\n- Optionally sync profiles through private iCloud data, Cedar Household, or end-to-end encrypted Cedar Link.\n- Use Cedar without advertising, cross-app tracking, or a required Cedar account.\n\n## Release status\n\nThis is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-1"
     },
     {
@@ -57,6 +100,7 @@
       "date": "2026-08-30",
       "status": "release-candidate",
       "summary": "The first Cedar release candidate for Mac combines native file imports, authorized sources, Live TV, and private sync in a desktop player.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\n## Highlights\n\n- Organize and play authorized personal media in a native Mac app.\n- Import supported playlist and guide files through Finder, drag and drop, and sandboxed file access.\n- Customize Home branches and shelves for favorites, recent titles, live channels, guide data, and provider collections.\n- Resume playback, choose audio and subtitle tracks, use system media controls, and hand off to an external player where offered.\n\n## Private by design\n\n- Keep credentials in Keychain and library data local by default.\n- Optionally sync profiles through private iCloud data, Cedar Household, or end-to-end encrypted Cedar Link.\n- Use Cedar without advertising, cross-app tracking, or a required Cedar account.\n\n## Release status\n\nThis is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-1"
     }
   ]

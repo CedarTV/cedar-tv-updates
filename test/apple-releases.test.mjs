@@ -22,7 +22,7 @@ test("Apple release catalog covers every product with versioned source notes", a
     assert.match(release.date, /^\d{4}-\d{2}-\d{2}$/);
     assert.ok(["release-candidate", "testflight", "released"].includes(release.status));
     assert.ok(release.summary.length > 40 && release.summary.length <= 280);
-    assert.equal(release.notes, `release-notes/apple/${release.platform}/${release.version}.md`);
+    assert.ok([`release-notes/apple/${release.platform}/${release.version}.md`, `release-notes/apple/${release.platform}/${release.version}-${release.build}.md`].includes(release.notes));
     assert.ok(!identities.has(`${release.platform}:${release.version}:${release.build}`));
     identities.add(`${release.platform}:${release.version}:${release.build}`);
 
@@ -41,7 +41,9 @@ test("generated Apple changelogs are static, canonical, and machine readable", a
   const publicCatalog = JSON.parse(await readFile("public/apple/releases/releases.json", "utf8"));
   assert.equal(publicCatalog.schemaVersion, 1);
   assert.deepEqual(publicCatalog.platforms.map((platform) => platform.id), platformIDs);
-  assert.equal(publicCatalog.releases.length, 4);
+  const sourceCatalog = JSON.parse(await readFile("release-notes/apple/releases.json", "utf8"));
+  assert.equal(publicCatalog.releases.length, sourceCatalog.releases.length);
+  for (const release of publicCatalog.releases) assert.ok(release.notesMarkdown.startsWith("# Cedar for "));
 
   for (const platform of platformIDs) {
     const path = `public/apple/releases/${platform}/index.html`;
