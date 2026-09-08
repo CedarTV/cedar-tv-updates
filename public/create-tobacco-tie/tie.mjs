@@ -1,4 +1,4 @@
-import { createTie } from './codec.mjs';
+import { createTie } from './codec.mjs?v=2';
 const form = document.querySelector('#tie-form');
 const input = document.querySelector('#addon-url');
 const error = document.querySelector('#address-error');
