@@ -84,6 +84,13 @@ hashes and encrypted envelopes; it never receives a profile encryption key or pl
 data. See [`worker/README.md`](worker/README.md) for verification and deployment steps. The complete
 rollout and conflict policy is recorded in Cedar Android's `docs/CROSS_PLATFORM_SYNC.md`.
 
+## Personalize Cedar
+
+The homepage’s **Choose an avatar** and **Choose source badges** buttons open the matching
+Cedar Link selector. Pair this browser using the QR invitation in Cedar first, select the linked
+profile, choose artwork, and send changes. Keep the owner app open until it acknowledges them.
+The website does not apply changes to an unpaired app.
+
 ## Profile avatars and badge artwork
 
 The companion's recovered Xperience artwork is stored directly in Git and served by GitHub Pages:

@@ -93,6 +93,8 @@ const companionDirtySummary = document.querySelector("#companion-dirty-summary")
 const discardCompanionChangesButton = document.querySelector("#discard-companion-changes");
 const saveCompanionChangesButton = document.querySelector("#save-companion-changes");
 const hasInvitationFragment = window.location.hash.length > 1;
+const requestedArtwork = new URLSearchParams(window.location.search).get("artwork");
+let artworkShortcutOpened = false;
 
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const AVATAR_PATH_PATTERN = /^\/avatars\/[a-z0-9_-]+\/[a-z0-9_-]+\.webp$/i;
@@ -791,6 +793,12 @@ const renderCompanion = ({ preserveFocus = true } = {}) => {
     refreshLoadedArtworkControls();
     restoreCompanionFocus(focusToken);
     return;
+  }
+  if (!artworkShortcutOpened && ["avatars", "badges"].includes(requestedArtwork)) {
+    artworkShortcutOpened = true;
+    activateCompanionPanel("profile");
+    const library = requestedArtwork === "avatars" ? avatarLibrary : badgeLibrary;
+    library.open = true;
   }
   const profile = currentProfile;
   profileName.textContent = profile.name;
