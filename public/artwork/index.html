@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Browse Cedar avatars and source badge sets. Open your choice in Cedar, copy its URL, or apply it with Cedar Link.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Avatars &amp; source badges — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/artwork/">
+    <link rel="icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="artwork.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Cedar home"><img src="../assets/cedar-wordmark.png" alt="Cedar" width="858" height="301"></a>
+      <nav aria-label="Primary navigation"><a href="../link/">Cedar Link</a><a href="../">Back to Cedar</a></nav>
+    </header>
+    <main class="section-shell artwork-shell">
+      <div class="section-heading compact">
+        <p class="eyebrow"><span></span>Make Cedar yours</p>
+        <h1>Find your<br><em>finishing touch.</em></h1>
+        <p>Browse freely. Pick an avatar or source badge set, then open it in Cedar or copy its link. No pairing required to explore.</p>
+      </div>
+      <div class="gallery-controls">
+        <label>Show<select id="kind"><option value="avatars">Avatars</option><option value="badges">Source badge sets</option></select></label>
+        <label class="search">Search<input id="search" type="search" placeholder="Search names or collections" autocomplete="off"></label>
+      </div>
+      <p id="status" role="status">Loading artwork…</p>
+      <section id="selection" class="selection" aria-labelledby="selection-title" hidden>
+        <div id="preview" class="selection-preview"></div>
+        <div>
+          <p class="eyebrow">Your selection</p><h2 id="selection-title"></h2>
+          <div class="hero-actions">
+            <a id="open-cedar" class="button button-primary">Open in Cedar</a>
+            <button id="copy" class="button button-secondary" type="button">Copy URL</button>
+            <a id="cedar-link" class="button button-secondary">Use Cedar Link</a>
+          </div>
+          <p id="manual-help"></p>
+          <label>Selection URL<input id="selection-url" type="url" readonly spellcheck="false"></label>
+          <p id="copy-status" role="status"></p>
+          <p class="compatibility">Open in Cedar requires an Apple app build with artwork-link support. Older builds may open without filling the selection; use Copy URL instead. For another device, use Cedar Link and choose the same artwork there.</p>
+        </div>
+      </section>
+      <div id="gallery" class="artwork-grid"></div>
+      <button id="more" class="button button-secondary" type="button" hidden>Show more</button>
+      <noscript><p>Enable JavaScript to browse and preview the artwork. You can also use <a href="../link/">Cedar Link</a>.</p></noscript>
+    </main>
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+          <div class="site-footer-socials" aria-label="Cedar community">
+            <a class="site-footer-social" href="https://discord.gg/TFTx7j86v" aria-label="Join Cedar on Discord">
+              <img src="/cedar-tv-updates/assets/discord-symbol.svg" alt="" width="21" height="16" aria-hidden="true">
+            </a>
+          </div>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/link/">Cedar Link</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Create Tobacco Tie</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/issues">Report an issue</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
+              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+    <script type="module" src="artwork.js"></script>
+  </body>
+</html>

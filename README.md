@@ -86,10 +86,15 @@ rollout and conflict policy is recorded in Cedar Android's `docs/CROSS_PLATFORM_
 
 ## Personalize Cedar
 
-The homepage’s **Choose an avatar** and **Choose source badges** buttons open the matching
-Cedar Link selector. Pair this browser using the QR invitation in Cedar first, select the linked
-profile, choose artwork, and send changes. Keep the owner app open until it acknowledges them.
-The website does not apply changes to an unpaired app.
+The homepage’s **Choose an avatar** and **Choose source badges** buttons open the public
+`artwork/` gallery. Browsing and copying a selection URL require no pairing. Each selection offers:
+
+- **Open in Cedar**: `cedar://artwork/avatar?url=…` or `cedar://artwork/badges?url=…`.
+  Apple app builds with artwork-link support stage the choice for explicit confirmation after
+  startup/onboarding. This requires an updated app; existing released builds may ignore the route.
+- **Copy URL**: paste the image URL into the profile’s Custom Image editor, or the pack URL into
+  Settings → Source Badges → Pack URL. Clipboard failures leave a selectable text field.
+- **Use Cedar Link**: pair the browser and choose the same artwork for the linked profile.
 
 ## Profile avatars and badge artwork
 
