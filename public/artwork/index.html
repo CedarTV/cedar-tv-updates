@@ -26,11 +26,19 @@
       </div>
       <div class="gallery-controls">
         <label>Show<select id="kind"><option value="avatars">Avatars</option><option value="badges">Source badge sets</option></select></label>
+        <label id="category-control">Category<select id="category"><option value="">All categories</option></select></label>
+        <label id="sort-control">Sort by<select id="sort"><option value="featured">Original order</option><option value="category">Category</option><option value="name">Name A–Z</option></select></label>
         <label class="search">Search<input id="search" type="search" placeholder="Search names or collections" autocomplete="off"></label>
       </div>
       <p id="status" role="status">Loading artwork…</p>
       <section id="selection" class="selection" aria-labelledby="selection-title" hidden>
-        <div id="preview" class="selection-preview"></div>
+        <div>
+          <div id="preview" class="selection-preview"></div>
+          <details id="full-set" hidden>
+            <summary id="full-set-label">View full set</summary>
+            <div id="full-set-grid" class="full-set-grid"></div>
+          </details>
+        </div>
         <div>
           <p class="eyebrow">Your selection</p><h2 id="selection-title"></h2>
           <div class="hero-actions">

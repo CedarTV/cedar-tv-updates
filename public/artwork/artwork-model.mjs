@@ -15,3 +15,14 @@ export function matchingOptions(options, query) {
   const text = query.trim().toLowerCase();
   return options.filter(option => `${option.name || option.label} ${option.source || ""} ${option.category || ""} ${option.creator || ""} ${option.style || ""}`.toLowerCase().includes(text));
 }
+
+export const avatarCategory = option => option.category?.trim() || "Uncategorized";
+export function avatarCategories(options) {
+  return [...new Set(options.map(avatarCategory))].sort((a, b) => a.localeCompare(b));
+}
+export function avatarOptions(options, query, category = "", sort = "featured") {
+  const matches = matchingOptions(options, query).filter(option => !category || avatarCategory(option) === category);
+  if (sort === "category") matches.sort((a, b) => avatarCategory(a).localeCompare(avatarCategory(b)) || a.name.localeCompare(b.name));
+  if (sort === "name") matches.sort((a, b) => a.name.localeCompare(b.name));
+  return matches;
+}

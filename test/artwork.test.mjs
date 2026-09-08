@@ -26,3 +26,14 @@ test("gallery rejects outside URLs and filters names and collection metadata", (
   assert.deepEqual(matchingOptions(rows, "glass"), [rows[1]]);
   assert.deepEqual(matchingOptions(rows, "no match"), []);
 });
+
+test("avatar category filtering composes with search and sorting without changing catalog order", async () => {
+  const { avatarOptions, avatarCategories } = await import("../public/artwork/artwork-model.mjs");
+  const rows = [{ name: "Zed", category: "Marvel" }, { name: "Amy", category: null }, { name: "Ant", category: "Marvel" }];
+  assert.deepEqual(avatarCategories(rows), ["Marvel", "Uncategorized"]);
+  assert.deepEqual(avatarOptions(rows, "", "Marvel", "name").map(x => x.name), ["Ant", "Zed"]);
+  assert.deepEqual(avatarOptions(rows, "ant", "Marvel", "category"), [rows[2]]);
+  assert.deepEqual(avatarOptions(rows, "", "Uncategorized"), [rows[1]]);
+  assert.deepEqual(avatarOptions(rows, "", "", "category").map(x => x.name), ["Ant", "Zed", "Amy"]);
+  assert.deepEqual(rows.map(x => x.name), ["Zed", "Amy", "Ant"]);
+});
