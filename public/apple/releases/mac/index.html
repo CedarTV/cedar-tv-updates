@@ -39,6 +39,39 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-11">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 11</span>
+              <time datetime="2026-09-09">September 9, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.</p>
+            <h3>Improvements</h3>
+            <ul>
+            <li>Organized media-library folders can be the sole download destination, with movie/season naming and subtitle sidecars. Existing downloads and exports are preserved.</li>
+            <li>Reduced unnecessary iCloud writes and Home reloads when saved profile values have not changed.</li>
+            <li>Released obsolete database read snapshots to reduce checkpoint contention.</li>
+            <li>Overlapped Next Up metadata lookups and reduced unnecessary episode enrichment.</li>
+            <li>Improved artwork network-failure handling and repair diagnostics.</li>
+            </ul>
+            <h3>Please test</h3>
+            <ul>
+            <li>Select a profile, leave Home idle, then background and reopen Cedar. Check Home stability and sync status.</li>
+            <li>Verify Next Up episode selection and artwork.</li>
+            <li>Select an organized download destination, download a movie/episode with subtitles, relaunch, and reconnect an external folder. Confirm files are preserved and the chosen destination remains correct.</li>
+            <li>Check playback, source selection and settings on iPhone/iPad, Apple TV and Mac.</li>
+            </ul>
+            <h3>Known issue</h3>
+            <p>iCloud sync: iCloud exports can still be throttled and repeatedly retried by the system. These changes reduce new writes but do not claim to fix the existing CloudKit backlog or retry behavior. Please include device/OS and time of occurrence in feedback; do not send credentials or private media URLs.</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-10">
           <header>
             <p class="eyebrow">Mac</p>

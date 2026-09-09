@@ -26,6 +26,46 @@
     {
       "platform": "mac",
       "version": "1.0.0",
+      "build": "11",
+      "date": "2026-09-09",
+      "status": "testflight",
+      "summary": "Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nFewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.\n\n## Improvements\n- Organized media-library folders can be the sole download destination, with movie/season naming and subtitle sidecars. Existing downloads and exports are preserved.\n- Reduced unnecessary iCloud writes and Home reloads when saved profile values have not changed.\n- Released obsolete database read snapshots to reduce checkpoint contention.\n- Overlapped Next Up metadata lookups and reduced unnecessary episode enrichment.\n- Improved artwork network-failure handling and repair diagnostics.\n\n## Please test\n- Select a profile, leave Home idle, then background and reopen Cedar. Check Home stability and sync status.\n- Verify Next Up episode selection and artwork.\n- Select an organized download destination, download a movie/episode with subtitles, relaunch, and reconnect an external folder. Confirm files are preserved and the chosen destination remains correct.\n- Check playback, source selection and settings on iPhone/iPad, Apple TV and Mac.\n\n## Known issue\n\niCloud sync: iCloud exports can still be throttled and repeatedly retried by the system. These changes reduce new writes but do not claim to fix the existing CloudKit backlog or retry behavior. Please include device/OS and time of occurrence in feedback; do not send credentials or private media URLs.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-11"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "11",
+      "date": "2026-09-09",
+      "status": "testflight",
+      "summary": "Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nFewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.\n\n## Improvements\n- Organized media-library folders can be the sole download destination, with movie/season naming and subtitle sidecars. Existing downloads and exports are preserved.\n- Reduced unnecessary iCloud writes and Home reloads when saved profile values have not changed.\n- Released obsolete database read snapshots to reduce checkpoint contention.\n- Overlapped Next Up metadata lookups and reduced unnecessary episode enrichment.\n- Improved artwork network-failure handling and repair diagnostics.\n\n## Please test\n- Select a profile, leave Home idle, then background and reopen Cedar. Check Home stability and sync status.\n- Verify Next Up episode selection and artwork.\n- Select an organized download destination, download a movie/episode with subtitles, relaunch, and reconnect an external folder. Confirm files are preserved and the chosen destination remains correct.\n- Check playback, source selection and settings on iPhone/iPad, Apple TV and Mac.\n\n## Known issue\n\niCloud sync: iCloud exports can still be throttled and repeatedly retried by the system. These changes reduce new writes but do not claim to fix the existing CloudKit backlog or retry behavior. Please include device/OS and time of occurrence in feedback; do not send credentials or private media URLs.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-11"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "11",
+      "date": "2026-09-09",
+      "status": "testflight",
+      "summary": "Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nFewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.\n\n## Improvements\n- Organized media-library folders can be the sole download destination, with movie/season naming and subtitle sidecars. Existing downloads and exports are preserved.\n- Reduced unnecessary iCloud writes and Home reloads when saved profile values have not changed.\n- Released obsolete database read snapshots to reduce checkpoint contention.\n- Overlapped Next Up metadata lookups and reduced unnecessary episode enrichment.\n- Improved artwork network-failure handling and repair diagnostics.\n\n## Please test\n- Select a profile, leave Home idle, then background and reopen Cedar. Check Home stability and sync status.\n- Verify Next Up episode selection and artwork.\n- Select an organized download destination, download a movie/episode with subtitles, relaunch, and reconnect an external folder. Confirm files are preserved and the chosen destination remains correct.\n- Check playback, source selection and settings on iPhone/iPad, Apple TV and Mac.\n\n## Known issue\n\niCloud sync: iCloud exports can still be throttled and repeatedly retried by the system. These changes reduce new writes but do not claim to fix the existing CloudKit backlog or retry behavior. Please include device/OS and time of occurrence in feedback; do not send credentials or private media URLs.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-11"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "11",
+      "date": "2026-09-09",
+      "status": "testflight",
+      "summary": "Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nFewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics.\n\n## Improvements\n- Organized media-library folders can be the sole download destination, with movie/season naming and subtitle sidecars. Existing downloads and exports are preserved.\n- Reduced unnecessary iCloud writes and Home reloads when saved profile values have not changed.\n- Released obsolete database read snapshots to reduce checkpoint contention.\n- Overlapped Next Up metadata lookups and reduced unnecessary episode enrichment.\n- Improved artwork network-failure handling and repair diagnostics.\n\n## Please test\n- Select a profile, leave Home idle, then background and reopen Cedar. Check Home stability and sync status.\n- Verify Next Up episode selection and artwork.\n- Select an organized download destination, download a movie/episode with subtitles, relaunch, and reconnect an external folder. Confirm files are preserved and the chosen destination remains correct.\n- Check playback, source selection and settings on iPhone/iPad, Apple TV and Mac.\n\n## Known issue\n\niCloud sync: iCloud exports can still be throttled and repeatedly retried by the system. These changes reduce new writes but do not claim to fix the existing CloudKit backlog or retry behavior. Please include device/OS and time of occurrence in feedback; do not send credentials or private media URLs.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-11"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
       "build": "10",
       "date": "2026-09-08",
       "status": "testflight",
