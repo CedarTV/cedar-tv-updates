@@ -54,3 +54,16 @@ test("Android release page exposes the matching signed APK", async () => {
   assert.match(page, new RegExp(`Build ${manifest.versionCode}`));
   assert.match(page, /Released/);
 });
+
+
+test("Android page and downloadable archive include every recorded release", async () => {
+  const source = JSON.parse(await readFile("release-notes/android-tv/releases.json", "utf8"));
+  const page = await readFile("public/releases/android-tv/index.html", "utf8");
+  const archive = await readFile("public/releases/changelog-history.md", "utf8");
+  for (const release of source.releases) {
+    assert.ok(page.includes(`id="version-${release.version.replaceAll(".", "-")}-build-${release.build}"`));
+    assert.ok(archive.includes(`${release.version} · build ${release.build}`));
+  }
+  const apple = JSON.parse(await readFile("release-notes/apple/releases.json", "utf8"));
+  for (const release of apple.releases) assert.ok(archive.includes(`${release.version} · build ${release.build}`));
+});

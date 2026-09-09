@@ -11,13 +11,13 @@
       "notes": "release-notes/apple/mac/1.0.0-build-12.md"
     },
     {
-      "platform": "apple-tv",
+      "platform": "iphone",
       "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
       "status": "testflight",
-      "summary": "Clearer household sharing, bounded Home discovery and more efficient library, network and subtitle rendering work.",
-      "notes": "release-notes/apple/apple-tv/1.0.0-build-12.md"
+      "summary": "More responsive library and Home work, clearer Household & Sync, and improved Home background continuity.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-12.md"
     },
     {
       "platform": "ipad",
@@ -29,13 +29,13 @@
       "notes": "release-notes/apple/ipad/1.0.0-build-12.md"
     },
     {
-      "platform": "iphone",
+      "platform": "apple-tv",
       "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
       "status": "testflight",
-      "summary": "More responsive library and Home work, clearer Household & Sync, and improved Home background continuity.",
-      "notes": "release-notes/apple/iphone/1.0.0-build-12.md"
+      "summary": "Clearer household sharing, bounded Home discovery and more efficient library, network and subtitle rendering work.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-12.md"
     },
     {
       "platform": "mac",
@@ -119,15 +119,6 @@
       "notes": "release-notes/apple/mac/1.0.0-9.md"
     },
     {
-      "platform": "apple-tv",
-      "version": "1.0.0",
-      "build": "9",
-      "date": "2026-09-08",
-      "status": "testflight",
-      "summary": "A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.",
-      "notes": "release-notes/apple/apple-tv/1.0.0-9.md"
-    },
-    {
       "platform": "iphone",
       "version": "1.0.0",
       "build": "9",
@@ -146,6 +137,15 @@
       "notes": "release-notes/apple/ipad/1.0.0-9.md"
     },
     {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "9",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-9.md"
+    },
+    {
       "platform": "mac",
       "version": "1.0.0",
       "build": "8",
@@ -153,24 +153,6 @@
       "status": "testflight",
       "summary": "Local playback preferences, clearer iCloud status, and household migration ordering improvements.",
       "notes": "release-notes/apple/mac/1.0.0-8.md"
-    },
-    {
-      "platform": "apple-tv",
-      "version": "1.0.0",
-      "build": "8",
-      "date": "2026-09-08",
-      "status": "testflight",
-      "summary": "Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.",
-      "notes": "release-notes/apple/apple-tv/1.0.0-8.md"
-    },
-    {
-      "platform": "ipad",
-      "version": "1.0.0",
-      "build": "8",
-      "date": "2026-09-08",
-      "status": "testflight",
-      "summary": "A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.",
-      "notes": "release-notes/apple/ipad/1.0.0-8.md"
     },
     {
       "platform": "iphone",
@@ -182,10 +164,199 @@
       "notes": "release-notes/apple/iphone/1.0.0-8.md"
     },
     {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.",
+      "notes": "release-notes/apple/ipad/1.0.0-8.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "8",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-8.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "7",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Added direct artwork-gallery links that staged an avatar or badge pack in Cedar for explicit confirmation after startup or onboarding.",
+      "notes": "release-notes/apple/mac/1.0.0-build-7.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "7",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Added direct artwork-gallery links that staged an avatar or badge pack in Cedar for explicit confirmation after startup or onboarding.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-7.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "7",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Added direct artwork-gallery links that staged an avatar or badge pack in Cedar for explicit confirmation after startup or onboarding.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-7.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "7",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Kept Apple TV artwork setup available through copied URLs and Cedar Link. Direct website-to-app artwork opening applied to iPhone, iPad and Mac.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-7.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "6",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Corrected the installed Mac application name to Cedar, including the app bundle and executable. This addressed the TestFlight review rejection of Mac build 4; build 5 had retained the old name.",
+      "notes": "release-notes/apple/mac/1.0.0-build-6.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "5",
+      "date": "2026-09-08",
+      "status": "release-candidate",
+      "summary": "Blended hero backgrounds smoothly between titles and expanded Settings search with corrected destinations.",
+      "notes": "release-notes/apple/mac/1.0.0-build-5.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "5",
+      "date": "2026-09-08",
+      "status": "release-candidate",
+      "summary": "Blended hero backgrounds smoothly between titles and expanded Settings search with corrected destinations.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-5.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "5",
+      "date": "2026-09-08",
+      "status": "release-candidate",
+      "summary": "Blended hero backgrounds smoothly between titles and expanded Settings search with corrected destinations.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-5.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "5",
+      "date": "2026-09-08",
+      "status": "release-candidate",
+      "summary": "Blended hero backgrounds smoothly between titles and expanded Settings search with corrected destinations.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-5.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "4",
+      "date": "2026-09-08",
+      "status": "expired",
+      "summary": "Fixed watched episodes in Search \u2192 Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
+      "notes": "release-notes/apple/mac/1.0.0-build-4.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "4",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Fixed watched episodes in Search \u2192 Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-4.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "4",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Fixed watched episodes in Search \u2192 Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-4.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "4",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Fixed watched episodes in Search \u2192 Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-4.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "3",
+      "date": "2026-09-08",
+      "status": "release-candidate",
+      "summary": "Updated the interface and source terminology to Tobacco Ties while retaining compatible import formats.",
+      "notes": "release-notes/apple/mac/1.0.0-build-3.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "3",
+      "date": "2026-09-08",
+      "status": "release-candidate",
+      "summary": "Updated the interface and source terminology to Tobacco Ties while retaining compatible import formats.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-3.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "3",
+      "date": "2026-09-08",
+      "status": "release-candidate",
+      "summary": "Updated the interface and source terminology to Tobacco Ties while retaining compatible import formats.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-3.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "3",
+      "date": "2026-09-08",
+      "status": "release-candidate",
+      "summary": "Updated the interface and source terminology to Tobacco Ties while retaining compatible import formats.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-3.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "2",
+      "date": "2026-09-07",
+      "status": "release-candidate",
+      "summary": "Repaired Apple TV Top Shelf device capabilities and added the required wide images with a Cedar wordmark fallback. This replaced the build 1 upload that Apple rejected during processing.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-2.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "1",
+      "date": "2026-09-07",
+      "status": "release-candidate",
+      "summary": "The first Cedar release candidate for Mac combines native file imports, authorized sources, Live TV, and private sync in a desktop player.",
+      "notes": "release-notes/apple/mac/1.0.0.md"
+    },
+    {
       "platform": "iphone",
       "version": "1.0.0",
       "build": "1",
-      "date": "2026-08-30",
+      "date": "2026-09-07",
       "status": "release-candidate",
       "summary": "The first Cedar release candidate for iPhone brings authorized personal media, Live TV, downloads, and private sync into a focused mobile player.",
       "notes": "release-notes/apple/iphone/1.0.0.md"
@@ -194,7 +365,7 @@
       "platform": "ipad",
       "version": "1.0.0",
       "build": "1",
-      "date": "2026-08-30",
+      "date": "2026-09-07",
       "status": "release-candidate",
       "summary": "The first Cedar release candidate for iPad pairs a spacious browsing experience with authorized sources, downloads, Live TV, and private sync.",
       "notes": "release-notes/apple/ipad/1.0.0.md"
@@ -203,19 +374,10 @@
       "platform": "apple-tv",
       "version": "1.0.0",
       "build": "1",
-      "date": "2026-08-30",
-      "status": "release-candidate",
-      "summary": "The first Cedar release candidate for Apple TV delivers a remote-first Home experience, Live TV guide, local pairing, and focused playback.",
+      "date": "2026-09-07",
+      "status": "rejected",
+      "summary": "Initial Apple TV upload rejected during processing for Top Shelf capability and image requirements; corrected in build 2.",
       "notes": "release-notes/apple/apple-tv/1.0.0.md"
-    },
-    {
-      "platform": "mac",
-      "version": "1.0.0",
-      "build": "1",
-      "date": "2026-08-30",
-      "status": "release-candidate",
-      "summary": "The first Cedar release candidate for Mac combines native file imports, authorized sources, Live TV, and private sync in a desktop player.",
-      "notes": "release-notes/apple/mac/1.0.0.md"
     }
   ]
 }

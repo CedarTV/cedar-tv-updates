@@ -49,6 +49,8 @@ const statusLabels = new Map([
   ["release-candidate", "Release candidate"],
   ["testflight", "TestFlight"],
   ["released", "Released"],
+  ["rejected", "Rejected upload"],
+  ["expired", "Expired"],
 ]);
 
 function fail(message) {
@@ -241,6 +243,7 @@ const indexPage = pageShell({
           <p class="eyebrow">All platforms</p>
           <h1>One release view. Every Cedar platform.</h1>
           <p>See the current version, build number, availability status, and notes for Android TV, iPhone, iPad, Apple TV, and Mac.</p>
+          <p><a href="/cedar-tv-updates/releases/changelog-history.md">Download the complete recorded build history</a>. Android TV, Google TV and Fire TV share one release line. Skipped build numbers are not separate releases.</p>
         </header>
 
         <section class="release-grid" aria-label="Current Cedar releases">
@@ -260,6 +263,20 @@ if (androidRelease.notes !== `release-notes/android-tv/${androidRelease.version}
   fail(`Android notes path must be release-notes/android-tv/${androidRelease.version}.md`);
 }
 const androidNotes = renderMarkdown(await readFile(androidNotesPath, "utf8"), `${androidRelease.name} ${androidRelease.version}`);
+const androidHistory = [];
+for (const release of [...androidCatalog.releases].sort(compareReleases)) {
+  if (release.build === androidRelease.build) continue;
+  if (release.notes !== `release-notes/android-tv/${release.version}.md`) fail("Historical Android notes path must match version");
+  const notes = renderMarkdown(await readFile(resolve(repositoryRoot, release.notes), "utf8"), `Cedar for Android TV ${release.version}`);
+  androidHistory.push(`<article class="release-entry" id="version-${release.version.replaceAll(".", "-")}-build-${release.build}">
+    <header><h2>Version ${escapeHTML(release.version)}</h2>
+      <p class="release-summary">${escapeHTML(release.summary)}</p>
+      ${releaseMetadata(release)}
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v${escapeHTML(release.version)}">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body">${notes}</div>
+  </article>`);
+}
 const androidPage = pageShell({
   title: "Cedar for Android TV release notes",
   description: androidRelease.description,
@@ -269,7 +286,7 @@ const androidPage = pageShell({
         <header class="document-header release-header">
           <p class="eyebrow">Android TV changelog</p>
           <h1>Cedar for Android TV release notes.</h1>
-          <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
+          <p>Current and historical releases for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
         <article class="release-entry" id="version-${androidRelease.version.replaceAll(".", "-")}-build-${androidRelease.build}">
@@ -287,6 +304,7 @@ const androidPage = pageShell({
 ${androidNotes.split("\n").map((line) => `            ${line}`).join("\n")}
           </div>
         </article>
+        ${androidHistory.join("\n")}
       </main>`,
 });
 

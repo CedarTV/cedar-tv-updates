@@ -35,7 +35,7 @@
         <header class="document-header release-header">
           <p class="eyebrow">Android TV changelog</p>
           <h1>Cedar for Android TV release notes.</h1>
-          <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
+          <p>Current and historical releases for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
         <article class="release-entry" id="version-1-2-84-build-87">
@@ -86,6 +86,461 @@
             <p>Profile updates merge imported data; they are not exact deletion mirrors. Android subtitle startup/delivery and permanent changelog history still differ from Apple. Physical transfer/remote, sustained playback, accessibility and hardware performance checks remain. No overall FPS, battery or startup percentage gain is claimed.</p>
           </div>
         </article>
+        <article class="release-entry" id="version-1-2-83-build-86">
+    <header><h2>Version 1.2.83</h2>
+      <p class="release-summary">Cedar 1.2.83 makes device transfers and ongoing profile sync easier to follow.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.83</span>
+              <span>Build 86</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.83">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.83 makes device transfers and ongoing profile sync easier to follow.</p>
+<h3>What changed</h3>
+<ul>
+<li>Pair from Mac, iPhone, iPad, or Apple TV with updated nearby-device instructions.</li>
+<li>Profile import shows its current stage and elapsed time, including when the profile is saved and ongoing sync is being linked.</li>
+<li>Manual Cedar Link sync reports fetching, saving, and confirming stages, with elapsed time and a timeout/retry result.</li>
+<li>Completion confirms when changes are saved on this television. A duplicate manual request cannot start another simultaneous sync.</li>
+<li>Encrypted pairing receipts now separately report ongoing sync enrollment, so compatible Apple senders can distinguish a copied profile from a working link.</li>
+</ul>
+<h3>Qualification</h3>
+<ul>
+<li>541 unit tests and Android lint passed.</li>
+<li>A current tvOS simulator sent a real profile to the physical Android TV: 83 items acknowledged in about 15 seconds.</li>
+<li>Two subsequent production-relay updates changed and restored a detail-display preference on the Android TV. Each receiver import completed in under four seconds.</li>
+<li>Full cross-platform certification remains open: physical macOS-to-Apple-TV iCloud propagation, deletion reconciliation, and broader data-domain coverage still require verification. Nearby transfer completion does not certify iCloud or catalogue/EPG refresh completion.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-82-build-85">
+    <header><h2>Version 1.2.82</h2>
+      <p class="release-summary">Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.82</span>
+              <span>Build 85</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.82">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.82 brings current tvOS channel-name cleanup and automatic focused-channel previews to the Android live guide.</p>
+<h3>What changed</h3>
+<ul>
+<li>Clean Up Names removes provider prefixes and technical clutter, preserves meaningful names, and displays the strongest resolution as a separate quality badge.</li>
+<li>Category labels show country flags while preserving broad regions. Provider IDs and EPG matching remain intact.</li>
+<li>Focus a channel for 450 ms to start a muted preview. Moving focus cancels stale requests; browsing does not add recent channels.</li>
+<li>Selecting the preview restores audio and opens fullscreen using the same player and media item.</li>
+<li>Live TV &amp; DVR settings include controls for name cleanup and focused previews. Cleaned names also appear in search and the live player.</li>
+<li>Existing category refresh controls, hero image quality, branding, and the Android sidebar are preserved.</li>
+</ul>
+<h3>Qualification</h3>
+<ul>
+<li>541 unit tests and Android lint passed.</li>
+<li>Eight targeted tests passed on the physical Android TV, covering cleanup settings, focus cancellation, no browsing recents, quality badges, player reuse, muted-to-fullscreen playback, and guide time alignment.</li>
+<li>Full bilateral parity certification remains open; this release qualifies the listed live-guide behavior.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-81-build-84">
+    <header><h2>Version 1.2.81</h2>
+      <p class="release-summary">Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.81</span>
+              <span>Build 84</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.81">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.81 adds Live TV category refresh controls and bulk actions from current tvOS, preserving imported category preferences and making excluded playlists easy to restore.</p>
+<h3>What changed</h3>
+<ul>
+<li>Stop Fetching Category independently controls future ingestion. Existing channels remain cached until a successful playlist refresh.</li>
+<li>Show All Categories, Hide All Categories, and Hide All and Stop Fetching match the current tvOS bulk actions. Renaming and ordering are retained.</li>
+<li>Xtream refreshes skip excluded category stream requests. M3U and Stalker imports exclude matching live channels while retaining category definitions for editing.</li>
+<li>Playlists stay selectable when every category is excluded. Re-enable fetching and refresh to restore their channels.</li>
+<li>Apple-profile transfer and local profile copies preserve category refresh exclusions. Category saves capture the owning profile and handle storage failures.</li>
+<li>Explicit MDBList API-key transport supports private account qualification; the normal viewer connection remains OAuth. Personal credentials and manifest links are not bundled.</li>
+</ul>
+<h3>Qualification</h3>
+<ul>
+<li>538 unit tests passed; Android lint passed.</li>
+<li>Four targeted physical-TV tests passed: category controls, M3U cache/exclusion recovery, Xtream request exclusion, and manifest playback with a verified MDBList watched-state write and restoration.</li>
+<li>Full live-guide parity remains open for name cleanup, automatic focused-channel previews, and bilateral guide behavior qualification. This release does not claim full parity certification.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-80-build-83">
+    <header><h2>Version 1.2.80</h2>
+      <p class="release-summary">Cedar 1.2.80 matches the current Apple MDBList settings branding and advances live-account parity qualification while retaining full-screen Settings and display-resolution hero artwork.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.80</span>
+              <span>Build 83</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.80">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.80 matches the current Apple MDBList settings branding and advances live-account parity qualification while retaining full-screen Settings and display-resolution hero artwork.</p>
+<h3>What changed</h3>
+<ul>
+<li>MDBList connection, status, and independent-watchlist rows now use the same compact brand mark and colors as current Cedar on Apple platforms.</li>
+<li>Android continues to use Cedar’s tvOS MDBList application client ID. Personal test credentials are kept out of source, APKs, and published updates.</li>
+<li>Hero backdrops retain original TMDb requests, up to 4K decoding for full-screen surfaces, and fitted transparent title artwork. No artwork-resolution policy was reduced.</li>
+</ul>
+<h3>Qualification</h3>
+<ul>
+<li>535 unit tests passed and Android lint passed, including artwork-resolution and title-artwork regression coverage.</li>
+<li>Eight authenticated MDBList read endpoints passed a read-only account smoke test. This does not certify OAuth approval, refresh, or account mutation round trips.</li>
+<li>Full parity remains in progress, including durable offline tracking updates, manual watched-state controls, and cross-platform reconciliation.</li>
+<li>Six targeted physical-TV tests passed, including live account reads, device-code registration, Settings flows, and a full 3840 × 2160 image decode.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-79-build-82">
+    <header><h2>Version 1.2.79</h2>
+      <p class="release-summary">Cedar 1.2.79 adds MDBList account tracking with device authorization, profile-owned sessions, library synchronization, and optional scrobbling.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.79</span>
+              <span>Build 82</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.79">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.79 adds MDBList account tracking with device authorization, profile-owned sessions, library synchronization, and optional scrobbling.</p>
+<h3>What changed</h3>
+<ul>
+<li>Connect MDBList through a short-lived device code in Accounts &amp; Sync. Connecting an account stays separate from choosing its Tracking Authority; select the connected service explicitly to enable activity synchronization.</li>
+<li>Read MDBList watched history, playback progress, Next Up, watchlist, ratings, collection, statistics, and available calendar events.</li>
+<li>Send watchlist and rating changes through the selected tracking authority. Completed playback can forward watched state when MDBList is active; optional scrobbling uses MDBList&#39;s episode payload format.</li>
+<li>Refresh MDBList OAuth sessions with profile-scoped encrypted storage. Profile switches cancel pending authorization, and disconnect serializes with token refresh.</li>
+<li>Detect rejected updates, repeated pagination cursors, and oversized snapshots; retain the previous cached library when a full refresh fails.</li>
+<li>Preserve independent MDBList API-key ratings/watchlists, full-screen Settings, display-resolution hero artwork, and signed OTA updates.</li>
+</ul>
+<h3>Qualification</h3>
+<ul>
+<li>535 unit tests passed, including 15 new MDBList transport/decoding tests. Android lint passed.</li>
+<li>Personal-account approval and live account read/write round trips remain part of the parity certification work; requesting a device code alone does not certify those flows.</li>
+<li>Twelve physical-TV tests passed, including native MDBList account controls and a live device-code request using Cedar’s configured client ID.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-78-build-81">
+    <header><h2>Version 1.2.78</h2>
+      <p class="release-summary">Cedar 1.2.78 adopts the latest full-screen television Settings layout and preserves hero artwork detail at the app&#39;s display resolution.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.78</span>
+              <span>Build 81</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.78">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.78 adopts the latest full-screen television Settings layout and preserves hero artwork detail at the app&#39;s display resolution.</p>
+<h3>What changed</h3>
+<ul>
+<li>Settings now fills the screen, with controls on the left and contextual help on the right. The sidebar remains on the main destinations; Back from Settings returns Home.</li>
+<li>Removed the automatic 720p hero limit on televisions with less physical memory.</li>
+<li>Full-screen artwork uses the measured app surface up to 4K, while retaining bounded downloads, concurrent loads, and bitmap memory safety limits.</li>
+<li>TMDb backdrop metadata retains original image URLs. Older cached smaller URLs upgrade when necessary to cover the displayed surface.</li>
+<li>Synchronized the parity contract&#39;s tracking-authority title with the current Apple catalog. Full product parity certification remains pending complete behavioral evidence on both platforms.</li>
+</ul>
+<h3>Validation</h3>
+<ul>
+<li>520 unit tests passed; Android lint reported zero errors.</li>
+<li>Parity contract validation passes on both repositories at revision 3; all 42 validator regression tests pass.</li>
+<li>The connected TV exposes a 1920 × 1080 app surface. Full-screen image targets now preserve that resolution; a separate hardware decode test verifies 3840 × 2160 pixels.</li>
+<li>All ten TV instrumented tests passed, including Settings geometry and focus, 4K decoding, all Settings destinations, post-play, playback controls, and sidebar behavior.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-77-build-80">
+    <header><h2>Version 1.2.77</h2>
+      <p class="release-summary">Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.77</span>
+              <span>Build 80</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.77">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.77 extends television parity with local-history Next Up branches, bounded episode discovery, and steadier focus during post-play recommendations.</p>
+<h3>What changed</h3>
+<ul>
+<li>Next Up combines local completed-episode history with the selected tracking account, preferring local candidates and keeping active series in Continue Watching.</li>
+<li>Episode discovery uses exact IMDb/TMDb series identities, reuses cached metadata, limits lookups to four at a time, and discards results after profile changes.</li>
+<li>The furthest completed regular episode establishes progression. Unknown or future immediate successors do not cause a jump to a later episode, and stale partial progress before that point does not block local progression.</li>
+<li>New Next Up branches are series-only. Keep Separate from Continue Watching is available in the native branch editor and survives profile transfer and branch editing.</li>
+<li>Editing a branch preserves its portable query parameters.</li>
+<li>Post-play recommendations use parent-series metadata for episodes and remain independent of whether the Related detail-page section is visible.</li>
+<li>Player auto-hide no longer takes focus away from Next Episode or post-play recommendations. Back dismisses those overlays before leaving playback.</li>
+<li>Retained the Settings, transport, audio-information, and signed OTA improvements from 1.2.76.</li>
+</ul>
+<h3>Validation</h3>
+<ul>
+<li>519 unit tests passed.</li>
+<li>Eight instrumented tests passed on the connected Android TV, covering Settings, sidebar focus, playback controls, post-play focus, and metadata identity lookup.</li>
+<li>Release signing, non-debuggable configuration, ZIP alignment, and native-library page alignment checks passed.</li>
+<li>Dolby Digital Plus over HDMI ARC was verified during the 1.2.76 hardware session. Physical speaker mapping and acoustic sync still require listening confirmation.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-76-build-79">
+    <header><h2>Version 1.2.76</h2>
+      <p class="release-summary">Cedar 1.2.76 brings the current Apple TV Settings organization and post-play discovery to Android TV, while improving remote playback controls and preserving the compact sidebar.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.76</span>
+              <span>Build 79</span>
+              <time datetime="2026-09-07">September 7, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.76">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.76 brings the current Apple TV Settings organization and post-play discovery to Android TV, while improving remote playback controls and preserving the compact sidebar.</p>
+<h3>What changed</h3>
+<ul>
+<li>Organized Settings into Personal, Sources, Services, Watching, and App, with General first and the current television destination names.</li>
+<li>Separated add-on, Live TV, media-server, and WebDAV management and expanded the Settings control column.</li>
+<li>Added post-play recommendations from available title metadata, with paged cards, Return to Player, a configurable movie trigger, and Next Episode priority.</li>
+<li>Added transfer of post-play preferences from Apple Cedar profiles.</li>
+<li>Fixed Back being consumed by hidden player controls instead of closing playback.</li>
+<li>Paused the Next Episode countdown while playback is paused, a player menu is open, or Cedar is in the background.</li>
+<li>Added source audio codec, channel count, and sample-rate information to Stream Information.</li>
+<li>Preserved Cedar&#39;s existing app signer, signed update verification, profile storage, and Android navigation sidebar.</li>
+</ul>
+<h3>Television validation</h3>
+<ul>
+<li>All 513 Android unit tests passed.</li>
+<li>The connected Smart TV Pro passed tests covering the 18 Settings destinations, post-play paging/return focus, repeated stop/replay, and controls reappearing after auto-hide.</li>
+<li>A six-channel Dolby Digital Plus fixture produced active E-AC-3 output over HDMI ARC to the connected sound system. This confirms the digital output path; it does not independently verify the soundbar&#39;s physical speaker mapping or acoustic synchronization.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-75-build-78">
+    <header><h2>Version 1.2.75</h2>
+      <p class="release-summary">Cedar 1.2.75 moves Android TV, Google TV, and Fire TV updates to the CedarTV release channel while preserving strict signed-update verification.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.75</span>
+              <span>Build 78</span>
+              <time datetime="2026-08-31">August 31, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.75">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.75 safely migrates the Android TV update channel to Cedar&#39;s new `CedarTV` GitHub namespace.</p>
+<h3>What changed</h3>
+<ul>
+<li>Cedar now prefers the branded `cedartv.github.io` update and Cedar Link host.</li>
+<li>The previous Pages address remains a temporary, exact-host fallback during the account cutover.</li>
+<li>Manifest failover is limited to endpoint availability failures such as DNS, connection, timeout, or HTTP errors.</li>
+<li>Signed-manifest, schema, package, URL-policy, and cryptographic verification failures still fail closed and never fall back.</li>
+<li>Both transition hosts remain restricted to HTTPS on the existing bounded OTA allowlist.</li>
+</ul>
+<h3>Migration validation</h3>
+<ul>
+<li>The OTA unit suite covers fallback URL parsing, deduplication, and strict failure classification.</li>
+<li>Cedar&#39;s permanent release signer and signed-manifest public key remain unchanged.</li>
+<li>This bridge build was prepared before the GitHub username changed from `24gx4xx5jv-cloud` to `CedarTV`.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-74-build-77">
+    <header><h2>Version 1.2.74</h2>
+      <p class="release-summary">Cedar 1.2.74 completes the cache-only TorBox Instant path and hardens private credential provisioning on physical Fire TV devices.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.74</span>
+              <span>Build 77</span>
+              <time datetime="2026-08-31">August 31, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.74">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.74 completes the cache-only TorBox Instant path and hardens private credential provisioning on physical Fire TV devices.</p>
+<h3>What changed</h3>
+<ul>
+<li>TorBox API keys can be imported by themselves through Cedar&#39;s bounded private-setup bundle, without replacing or refreshing existing IPTV sources.</li>
+<li>Imported TorBox keys use the same encrypted, active-profile credential scope as Quick Setup and normal playback resolution.</li>
+<li>TorBox Instant checks unknown hashes before preparation and always uses TorBox&#39;s cache-only create option, so Cedar never starts an uncached download.</li>
+<li>Signed playback links are accepted only over HTTPS on TorBox&#39;s documented API/CDN domains. Wrong, duplicated, disguised, or off-domain credential parameters are rejected.</li>
+<li>Signed TorBox links stay transient and are never written to Cedar settings, reports, or source-selection memory; URL query values remain redacted from diagnostics.</li>
+<li>The private provisioning workflow now supports Fire OS versions that require matching app/test signatures, while the normal GitHub release pipeline refuses every debuggable APK.</li>
+</ul>
+<h3>Fire TV validation</h3>
+<ul>
+<li>Imported a TorBox-only setup bundle into Cedar&#39;s Android Keystore-backed vault on the connected AFTKM Fire TV Stick without clearing app data.</li>
+<li>Resolved a confirmed cached torrent through Cedar&#39;s device-side TorBox API flow, including file selection and signed URL generation, in 1.9 seconds.</li>
+<li>After explicit authorization, Cedar opened the TorBox CDN stream, rendered its first video frame, and sustained Media3 playback beyond five seconds; the bounded device test completed in 14.1 seconds.</li>
+<li>The disposable test package, plaintext setup/response files, temporary debuggable APKs, and temporary unsigned release output were removed before restoring the signed non-debuggable 1.2.74 build.</li>
+<li>The complete Android unit suite and the 1.2.74 release lint gate pass.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-73-build-76">
+    <header><h2>Version 1.2.73</h2>
+      <p class="release-summary">Cedar 1.2.73 hardens Live TV refreshes and cross-platform Cedar Link synchronization while reducing unnecessary video work in the embedded guide preview.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.73</span>
+              <span>Build 76</span>
+              <time datetime="2026-08-31">August 31, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.73">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.73 hardens Live TV refreshes and cross-platform Cedar Link synchronization while reducing unnecessary video work in the embedded guide preview.</p>
+<h3>What changed</h3>
+<ul>
+<li>The current guide remains visible while the same profile refreshes its IPTV playlist and XMLTV data, instead of replacing usable content with a loading state.</li>
+<li>Large IPTV and guide rebuilds are serialized to reduce peak memory and CPU contention on memory-constrained televisions.</li>
+<li>Cedar Link coalesces a relay backlog to the newest complete Apple profile snapshot, imports it once, and advances the relay cursor only after a successful transaction.</li>
+<li>Foreground and background Cedar Link syncs now share one process-wide coordinator, preventing duplicate concurrent profile imports.</li>
+<li>Importing an Apple profile no longer republishes the same profile back to Apple, removing the observed Apple-to-Android feedback loop while preserving heartbeat and remote-device messages.</li>
+<li>The embedded Live guide preview now requests an adaptive rendition no higher than 540p. Entering fullscreen immediately restores the viewer&#39;s configured quality ceiling on the same tuned player.</li>
+<li>Fixed-resolution IPTV streams remain at their supplied resolution; Cedar does not silently transcode or reduce their playback quality.</li>
+</ul>
+<h3>Fire TV validation</h3>
+<ul>
+<li>Installed and exercised on an AFTKM Fire TV Stick running Android 11 with approximately 1.7 GB RAM.</li>
+<li>Verified playlist and XMLTV retention, 4K HEVC live preview, fullscreen player reuse, playback source controls, and remote focus traversal.</li>
+<li>A fixed 3840 × 2160 HEVC test feed continued to play at its native resolution, as expected. Warm guide-navigation passes measured 49.2% and 54.3% janky frames versus the earlier 55–66% range, while guide-only warmed passes remained 11.7–12.5%.</li>
+<li>A staged Apple profile backlog produced one authenticated Android import with no echo publication or Cedar Link error.</li>
+</ul></div>
+  </article>
+<article class="release-entry" id="version-1-2-72-build-75">
+    <header><h2>Version 1.2.72</h2>
+      <p class="release-summary">Cedar 1.2.72 reduces expensive fullscreen hero work while rapidly traversing Home and Branch Group rows on memory-constrained televisions.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.72</span>
+              <span>Build 75</span>
+              <time datetime="2026-08-31">August 31, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.72">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.72 reduces expensive fullscreen hero work while rapidly traversing Home and Branch Group rows on memory-constrained televisions.</p>
+<h3>What changed</h3>
+<ul>
+<li>A deliberate single focus move keeps Cedar&#39;s existing hero response time.</li>
+<li>Repeated D-pad moves within a navigation burst receive an adaptive settle window, allowing superseded hero jobs to cancel before their fullscreen backdrop commits.</li>
+<li>The final focused item still receives the same full-screen backdrop without a fade or quality reduction.</li>
+<li>Detail metadata, availability, and trailer prefetch remain staged after the visible hero settles.</li>
+<li>No bitmap decoder or cache-size experiment that regressed physical Fire TV performance is included.</li>
+</ul>
+<h3>Fire TV validation</h3>
+<p>Two ordered A/B comparisons improved three-run median jank by 5.6% and 4.9%. A matched Perfetto pass improved jank from 22.81% to 18.41%, reduced app GC time by 9.0%, reduced texture-upload time by 15.5%, and lowered the worst measured UI frame from 39.54 ms to 29.00 ms. Late-session settled Graphics PSS fell 2.5%.</p>
+<p>Performance remained variable: the pooled six-run median did not improve because of one candidate outlier, and total bitmap decode time rose in the matched trace. Cedar therefore keeps the change narrowly scoped to rapid focus bursts and does not alter single-step navigation, artwork quality, or cache capacity.</p></div>
+  </article>
+<article class="release-entry" id="version-1-2-71-build-74">
+    <header><h2>Version 1.2.71</h2>
+      <p class="release-summary">Cedar 1.2.71 brings Android TV branch navigation in line with tvOS and reduces artwork work during aggressive remote navigation.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.71</span>
+              <span>Build 74</span>
+              <time datetime="2026-08-31">August 31, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.71">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar 1.2.71 brings Android TV branch navigation in line with tvOS and reduces artwork work during aggressive remote navigation.</p>
+<h3>What changed</h3>
+<ul>
+<li>Branch Groups now open as independent horizontal content rows, matching Cedar on tvOS.</li>
+<li>Removed the conflicting **Browse All** branch action and tab-style branch switching on television layouts.</li>
+<li>Added stable focus restoration and progressive skeleton loading while branch rows populate.</li>
+<li>Backdrops remain full-screen and cinematic without a fade overlay.</li>
+<li>Right-sized TMDB backdrops are requested and decoded for the surface that displays them.</li>
+<li>Memory-constrained TVs retain full-screen backdrops at up to 1280 x 720; capable devices retain the existing 1920 x 1080 ceiling.</li>
+<li>Artwork loading is limited to two concurrent jobs, uses a bounded decoded-bitmap cache, and avoids duplicate work for the same URL.</li>
+<li>Detail, availability, and trailer prefetch now waits for focus to settle instead of competing with rapid navigation.</li>
+<li>Explicit HTTP IPTV artwork and stream destinations remain supported, while HTTPS-to-HTTP redirects continue to be rejected.</li>
+</ul>
+<h3>Fire TV validation</h3>
+<p>On the connected Fire TV Stick, a three-run aggressive navigation pass on the final installed APK improved median janky frames from 18.02% to 16.14% (10.4% relative). Trace evidence showed 23% fewer bitmap decodes, 61% less total decode time, and an 85% reduction in the slowest bitmap decode. Results vary on cold installs while Android rebuilds runtime profiles and the device is under system memory pressure.</p>
+<p>Linked profiles continue to treat Apple/iCloud as the authority for portable Cedar settings. Android-only preferences such as TorBox Instant and device playback tuning remain local to the Android TV.</p></div>
+  </article>
+<article class="release-entry" id="version-1-2-60-build-63">
+    <header><h2>Version 1.2.60</h2>
+      <p class="release-summary">Cedar Android TV 1.2.60 completes Cedar&#39;s latest hardware-focused playback, performance, and television-parity pass.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.60</span>
+              <span>Build 63</span>
+              <time datetime="2026-08-31">August 31, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.60">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar Android TV 1.2.60 completes Cedar&#39;s latest hardware-focused playback, performance, and television-parity pass.</p>
+<ul>
+<li>Adds reliable playback for supported Dolby Vision Profile 7 Matroska titles on compatible Fire TV hardware by converting video to Profile 8.1 while preserving direct TrueHD Atmos 7.1 output when the device and HDMI path support it.</li>
+<li>Reduces hidden-player polling and tightens player, artwork, and memory lifecycles for smoother operation on constrained televisions.</li>
+<li>Adds device-memory-aware focus motion, keeps Home artwork as a clean full-screen backdrop, and removes the redundant Browse All action from Home branch headers.</li>
+<li>Expands native television controls for Home branches, manifest add-ons, source ranking, EPG source binding, person pages, Live search and numeric tuning, subtitle timing, content advisories, and Cedar Link import and sync.</li>
+<li>Adds optional TorBox Instant source preparation with cached-only, bounded behavior that never starts an uncached torrent download.</li>
+<li>Preserves Cedar&#39;s permanent Android signing identity and 16 KiB native-library compatibility across all four packaged ABIs.</li>
+</ul>
+<p>The Dolby Vision and TrueHD path was verified on physical Fire TV hardware with high-bitrate test titles. Availability still depends on the television, streaming device, receiver, source format, and licensed platform decoders.</p></div>
+  </article>
+<article class="release-entry" id="version-1-2-44-build-47">
+    <header><h2>Version 1.2.44</h2>
+      <p class="release-summary">Cedar Android TV 1.2.44 brings Cedar&#39;s newest browsing, source, playback, profile, and appearance improvements to Android TV.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.44</span>
+              <span>Build 47</span>
+              <time datetime="2026-08-29">August 29, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.44">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar Android TV 1.2.44 brings Cedar&#39;s newest browsing, source, playback, profile, and appearance improvements to Android TV.</p>
+<ul>
+<li>Adds Browse All to eligible Home rails, with sorting and paged results.</li>
+<li>Adds automatic source and guide refresh schedules, source health and last-updated details, and adjustable Xtream catch-up timing.</li>
+<li>Adds safe, selective local-profile configuration copying for sources, add-ons, API keys, Home branches, and preferences without copying personal activity or account sessions.</li>
+<li>Adds Dark, System, and Light appearances, optional HTTPS source badge packs, and focused-title detail prefetch controls.</li>
+<li>Improves cross-provider matching and playback fallback while preserving provider-specific authorization.</li>
+<li>Adds optional Anime Skip intro, recap, and outro segments.</li>
+<li>Hardens Cedar Link sync compatibility and adds privacy-preserving companion status plus short-lived remote controls for linked Android TVs.</li>
+<li>Improves initial D-pad focus handoff between the navigation rail and screen content.</li>
+<li>Preserves RTMP playback with an official-source rebuild that supports Android&#39;s 16 KB page-size requirement across all four packaged ABIs.</li>
+</ul>
+<p>The matching RTMP source and relinking kit, including provenance, checksums, build instructions, and license texts, is attached to this release.</p></div>
+  </article>
+<article class="release-entry" id="version-1-2-43-build-46">
+    <header><h2>Version 1.2.43</h2>
+      <p class="release-summary">Cedar Link is now available for production Android TV profile transfers and encrypted Apple-to-Android profile sync.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.43</span>
+              <span>Build 46</span>
+              <time datetime="2026-08-27">August 27, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.43">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Cedar Link is now available for production Android TV profile transfers and encrypted Apple-to-Android profile sync.</p>
+<ul>
+<li>Adds **Profiles &amp; Sharing → Link or Transfer Profile** and the matching Cedar device-pairing flow.</li>
+<li>Imports Cedar profiles from iPhone or iPad as one authenticated, transactional transfer, including compatible sources, settings, connected services, and protected credentials.</li>
+<li>Receives end-to-end encrypted profile updates through Cedar&#39;s ciphertext-only relay while keeping the television&#39;s last working local profile available during network failures.</li>
+<li>Supports bounded cross-platform compression for mature Apple profiles that exceed the original sync-document size, without increasing the relay&#39;s public request limits.</li>
+<li>Keeps small profile documents backward compatible and rejects oversized or malformed compressed payloads before import.</li>
+<li>Improves pairing, linked-profile status, manual resync, and failure messaging throughout Android TV settings.</li>
+</ul>
+<p>Existing installations signed with Cedar&#39;s permanent Android release key can update normally from inside Cedar. Development-signed installations still require one manual replacement before joining the production update channel.</p></div>
+  </article>
+<article class="release-entry" id="version-1-2-41-build-44">
+    <header><h2>Version 1.2.41</h2>
+      <p class="release-summary">Initial GitHub update-channel bridge for Cedar Android TV.</p>
+      <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.41</span>
+              <span>Build 44</span>
+              <time datetime="2026-08-26">August 26, 2026</time>
+            </div>
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.41">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Initial GitHub update-channel bridge for Cedar Android TV.</p>
+<ul>
+<li>Adds signed update manifests served by GitHub Pages.</li>
+<li>Adds versioned APK delivery through GitHub Releases.</li>
+<li>Allows only bounded HTTPS release redirects to Cedar&#39;s exact host allowlist.</li>
+<li>Keeps full manifest, APK hash, package, version, and Android signer verification before installation.</li>
+</ul>
+<p>This build uses Cedar&#39;s permanent Android release signer. Existing development-signed installations require one manual replacement; subsequent versions can update from inside Cedar.</p></div>
+  </article>
       </main>
 
       <footer class="site-footer">

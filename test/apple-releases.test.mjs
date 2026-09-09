@@ -20,7 +20,7 @@ test("Apple release catalog covers every product with versioned source notes", a
     assert.match(release.version, /^\d+\.\d+\.\d+$/);
     assert.match(release.build, /^[1-9]\d*$/);
     assert.match(release.date, /^\d{4}-\d{2}-\d{2}$/);
-    assert.ok(["release-candidate", "testflight", "released"].includes(release.status));
+    assert.ok(["release-candidate", "testflight", "released", "rejected", "expired"].includes(release.status));
     assert.ok(release.summary.length > 40 && release.summary.length <= 280);
     assert.ok([`release-notes/apple/${release.platform}/${release.version}.md`, `release-notes/apple/${release.platform}/${release.version}-${release.build}.md`, `release-notes/apple/${release.platform}/${release.version}-build-${release.build}.md`].includes(release.notes));
     assert.ok(!identities.has(`${release.platform}:${release.version}:${release.build}`));
@@ -56,4 +56,22 @@ test("generated Apple changelogs are static, canonical, and machine readable", a
     assert.doesNotMatch(page, /chatgpt\.site|\[(?:SUPPORT EMAIL|LEGAL HOLDER|OWNER REQUIRED)\]/i);
     assert.doesNotMatch(page, /<(?:script|iframe|form)\b/i);
   }
+});
+
+
+test("historical rejected and expired builds never appear as available TestFlight releases", async () => {
+  const catalog = JSON.parse(await readFile("public/apple/releases/releases.json", "utf8"));
+  const find = (platform, build) => catalog.releases.find(r => r.platform === platform && r.build === build);
+  assert.equal(find("apple-tv", "1").status, "rejected");
+  assert.equal(find("mac", "4").status, "expired");
+  assert.ok(find("apple-tv", "2"));
+  assert.ok(find("mac", "6"));
+  for (const platform of ["iphone", "ipad"]) {
+    assert.equal(find(platform, "2"), undefined);
+    assert.equal(find(platform, "6"), undefined);
+  }
+  const tv = await readFile("public/apple/releases/apple-tv/index.html", "utf8");
+  assert.match(tv, /Rejected upload/);
+  const mac = await readFile("public/apple/releases/mac/index.html", "utf8");
+  assert.match(mac, /Expired/);
 });

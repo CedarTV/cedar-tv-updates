@@ -90,6 +90,78 @@
       "status": "released",
       "summary": "Cedar 1.2.75 moves Android TV, Google TV, and Fire TV updates to the CedarTV release channel while preserving strict signed-update verification.",
       "notes": "release-notes/android-tv/1.2.75.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.2.74",
+      "build": "77",
+      "date": "2026-08-31",
+      "status": "released",
+      "summary": "Cedar 1.2.74 completes the cache-only TorBox Instant path and hardens private credential provisioning on physical Fire TV devices.",
+      "notes": "release-notes/android-tv/1.2.74.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.2.73",
+      "build": "76",
+      "date": "2026-08-31",
+      "status": "released",
+      "summary": "Cedar 1.2.73 hardens Live TV refreshes and cross-platform Cedar Link synchronization while reducing unnecessary video work in the embedded guide preview.",
+      "notes": "release-notes/android-tv/1.2.73.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.2.72",
+      "build": "75",
+      "date": "2026-08-31",
+      "status": "released",
+      "summary": "Cedar 1.2.72 reduces expensive fullscreen hero work while rapidly traversing Home and Branch Group rows on memory-constrained televisions.",
+      "notes": "release-notes/android-tv/1.2.72.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.2.71",
+      "build": "74",
+      "date": "2026-08-31",
+      "status": "released",
+      "summary": "Cedar 1.2.71 brings Android TV branch navigation in line with tvOS and reduces artwork work during aggressive remote navigation.",
+      "notes": "release-notes/android-tv/1.2.71.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.2.60",
+      "build": "63",
+      "date": "2026-08-31",
+      "status": "released",
+      "summary": "Cedar Android TV 1.2.60 completes Cedar's latest hardware-focused playback, performance, and television-parity pass.",
+      "notes": "release-notes/android-tv/1.2.60.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.2.44",
+      "build": "47",
+      "date": "2026-08-29",
+      "status": "released",
+      "summary": "Cedar Android TV 1.2.44 brings Cedar's newest browsing, source, playback, profile, and appearance improvements to Android TV.",
+      "notes": "release-notes/android-tv/1.2.44.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.2.43",
+      "build": "46",
+      "date": "2026-08-27",
+      "status": "released",
+      "summary": "Cedar Link is now available for production Android TV profile transfers and encrypted Apple-to-Android profile sync.",
+      "notes": "release-notes/android-tv/1.2.43.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.2.41",
+      "build": "44",
+      "date": "2026-08-26",
+      "status": "released",
+      "summary": "Initial GitHub update-channel bridge for Cedar Android TV.",
+      "notes": "release-notes/android-tv/1.2.41.md"
     }
   ]
 }

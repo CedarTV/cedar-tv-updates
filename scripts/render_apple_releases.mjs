@@ -41,6 +41,8 @@ const statusLabels = new Map([
   ["release-candidate", "Release candidate"],
   ["testflight", "TestFlight"],
   ["released", "Released"],
+  ["rejected", "Rejected upload"],
+  ["expired", "Expired"],
 ]);
 
 function fail(message) {
@@ -323,7 +325,7 @@ for (const [index, source] of sourceCatalog.releases.entries()) {
   const date = requireDate(source.date, `${label} date`);
   const status = requireText(source.status, `${label} status`, 40);
   if (!statusLabels.has(status)) {
-    fail(`${label} status must be release-candidate, testflight, or released`);
+    fail(`${label} status must be release-candidate, testflight, released, rejected, or expired`);
   }
   const summary = requireText(source.summary, `${label} summary`, 280);
   const expectedNotesPath = `release-notes/apple/${platform.id}/${version}.md`;
