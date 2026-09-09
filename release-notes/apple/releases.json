@@ -4,6 +4,42 @@
     {
       "platform": "mac",
       "version": "1.0.0",
+      "build": "13",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
+      "notes": "release-notes/apple/mac/1.0.0-build-13.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "13",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-13.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "13",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-13.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "13",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-13.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
       "status": "release-candidate",

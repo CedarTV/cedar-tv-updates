@@ -94,6 +94,14 @@ catalog['releases'].insert(0, dict(platform='android-tv', version=version,
     build=str(manifest['versionCode']), date=datetime.datetime.now(datetime.timezone.utc).date().isoformat(),
     status='released', summary=summary, notes=notes_path))
 path.write_text(json.dumps(catalog, indent=2) + '\n')
+history_path = root / 'public/releases/changelog-history.md'
+history = history_path.read_text()
+heading = '## Android TV / Google TV / Fire TV\n'
+if heading not in history:
+    raise SystemExit('The Android archive section is missing.')
+entry = f"\n### {version} · build {manifest['versionCode']} · {catalog['releases'][0]['date']} · released\n\n"
+entry += text.split('\n', 1)[1].replace('\n## ', '\n#### ') + '\n'
+history_path.write_text(history.replace(heading, heading + entry, 1))
 PYNOTES
 node scripts/render_release_hub.mjs --write
 node scripts/render_site_footer.mjs --write

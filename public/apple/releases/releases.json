@@ -26,6 +26,46 @@
     {
       "platform": "mac",
       "version": "1.0.0",
+      "build": "13",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 13 · September 9, 2026 · Release candidate; TestFlight availability is confirmed separately.\n\n## Changes\n\nNEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.\n\nARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.\n\nLAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.\n\n## Testing\n\nPLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation.\n\nKnown limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-13"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "13",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 13 · September 9, 2026 · Release candidate; TestFlight availability is confirmed separately.\n\n## Changes\n\nNEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.\n\nARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.\n\nLAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.\n\nAPPLE TV: A guide can be the first Home branch without waiting for poster artwork.\n\n## Testing\n\nPLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation with the remote.\n\nKnown limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-13"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "13",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 13 · September 9, 2026 · Release candidate; TestFlight availability is confirmed separately.\n\n## Changes\n\nNEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.\n\nARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.\n\nLAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.\n\nIPHONE/IPAD: Library, Downloads, Local Files, WebDAV and Media Servers now use compact centered navigation titles.\n\n## Testing\n\nPLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation.\n\nKnown limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-13"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "13",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 13 · September 9, 2026 · Release candidate; TestFlight availability is confirmed separately.\n\n## Changes\n\nNEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.\n\nARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.\n\nLAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.\n\nIPHONE/IPAD: Library, Downloads, Local Files, WebDAV and Media Servers now use compact centered navigation titles.\n\n## Testing\n\nPLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation.\n\nKnown limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-13"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
       "status": "release-candidate",
