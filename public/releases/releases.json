@@ -18,7 +18,7 @@
       "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "More responsive library and Home work, clearer Household & Sync, and improved Home background continuity.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
@@ -28,7 +28,7 @@
       "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Clearer household sharing, less repeated library and download work, and retained Home navigation state.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
@@ -38,7 +38,7 @@
       "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Clearer household sharing, bounded Home discovery and more efficient library, network and subtitle rendering work.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },

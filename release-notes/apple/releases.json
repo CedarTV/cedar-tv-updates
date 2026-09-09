@@ -15,7 +15,7 @@
       "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Clearer household sharing, bounded Home discovery and more efficient library, network and subtitle rendering work.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-12.md"
     },
@@ -24,7 +24,7 @@
       "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Clearer household sharing, less repeated library and download work, and retained Home navigation state.",
       "notes": "release-notes/apple/ipad/1.0.0-build-12.md"
     },
@@ -33,7 +33,7 @@
       "version": "1.0.0",
       "build": "12",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "More responsive library and Home work, clearer Household & Sync, and improved Home background continuity.",
       "notes": "release-notes/apple/iphone/1.0.0-build-12.md"
     },
