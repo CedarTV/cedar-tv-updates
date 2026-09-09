@@ -18,7 +18,7 @@
       "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
@@ -28,7 +28,7 @@
       "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
@@ -38,7 +38,7 @@
       "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },

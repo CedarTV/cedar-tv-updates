@@ -2,16 +2,16 @@
 
 Compiled September 9, 2026 from App Store Connect build records, saved Apple testing notes, GitHub Releases and signed Android manifest history.
 
-Coverage before the build-13 candidates below: 31 processed Apple binaries (universal iOS is shown separately for iPhone and iPad), one rejected Apple TV upload, and all 18 published Android releases. Android TV, Google TV and Android-based Fire TV share one release line. Unpublished Android version gaps and unused Apple platform/build combinations are not fabricated. Availability is a September 9 snapshot.
+Coverage: 34 processed Apple binaries (universal iOS is shown separately for iPhone and iPad), one rejected Apple TV upload, and all 19 published Android releases. Android TV, Google TV and Android-based Fire TV share one release line. Unpublished Android version gaps and unused Apple platform/build combinations are not fabricated. Availability is a September 9 snapshot.
 
 Apple build 2 was TV-only; build 6 was Mac-only. Mac build 4 is expired; Apple TV build 1 was rejected. Mac build 12 remains a candidate, while iPhone/iPad and Apple TV build 12 are in external TestFlight.
 
 ## iPhone
 
-### 1.0.0 · build 13 · 2026-09-09 · release-candidate
+### 1.0.0 · build 13 · 2026-09-09 · testflight
 
 
-Build 13 · September 9, 2026 · Release candidate; TestFlight availability is confirmed separately.
+Build 13 · September 9, 2026 · Available to external testers in TestFlight.
 
 #### Changes
 
@@ -222,10 +222,10 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
-### 1.0.0 · build 13 · 2026-09-09 · release-candidate
+### 1.0.0 · build 13 · 2026-09-09 · testflight
 
 
-Build 13 · September 9, 2026 · Release candidate; TestFlight availability is confirmed separately.
+Build 13 · September 9, 2026 · Available to external testers in TestFlight.
 
 #### Changes
 
@@ -435,10 +435,10 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
-### 1.0.0 · build 13 · 2026-09-09 · release-candidate
+### 1.0.0 · build 13 · 2026-09-09 · testflight
 
 
-Build 13 · September 9, 2026 · Release candidate; TestFlight availability is confirmed separately.
+Build 13 · September 9, 2026 · Available to external testers in TestFlight.
 
 #### Changes
 
@@ -660,7 +660,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 ### 1.0.0 · build 13 · 2026-09-09 · release-candidate
 
 
-Build 13 · September 9, 2026 · Release candidate; TestFlight availability is confirmed separately.
+Build 13 · September 9, 2026 · Uploaded to TestFlight and awaiting Apple beta review; not yet available to external testers.
 
 #### Changes
 
