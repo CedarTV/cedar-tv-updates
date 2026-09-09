@@ -38,55 +38,85 @@
           <p>Current and historical releases for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-84-build-87">
+        <article class="release-entry" id="version-1-2-85-build-88">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.84</h2>
-            <p class="release-summary">Manual profile updates, quicker clear-art publication, animated Home navigation and less repeated background work, preserving original artwork quality.</p>
+            <h2>Version 1.2.85</h2>
+            <p class="release-summary">Custom Home TV guides, bundled studio and streaming-service artwork, and refined poster corners across Android TV, Google TV and Android-based Fire TV.</p>
             <div class="release-metadata">
+              <span class="release-status release-status-released">Released</span>
+              <span>Version 1.2.85</span>
+              <span>Build 88</span>
+              <time datetime="2026-09-09">September 9, 2026</time>
+            </div>
+            <div class="apple-actions">
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.85/Cedar-TV-1.2.85.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.85">GitHub release</a>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Custom Home TV guides, bundled studio and streaming-service artwork, and refined poster corners across Android TV, Google TV and Android-based Fire TV.</p>
+            <p>Build 88 · September 9, 2026</p>
+            <h3>TV Guide branches</h3>
+            <ul>
+            <li>Add a TV Guide from Manage Branches → Add Branch → Quick Add. Choose Recently Played, Favorites or a saved Custom Lineup, then set a title, 1–12 visible rows and a 1, 2, 3, 6 or 12-hour window.</li>
+            <li>See All opens the larger guide with the same channel source. Recently Played follows viewing history, Favorites sorts by name and lineups preserve saved order while resolving available channel variants.</li>
+            <li>Home resolves only its configured rows; the full guide loads up to 500 channels. Hidden channels and disabled sources are excluded. The timeline refreshes while Home is open.</li>
+            <li>Current channels open fullscreen playback. Programs reuse catch-up, reminders and DVR actions where supported.</li>
+            <li>Empty guides stay visible and focus returns correctly after See All. Apple-imported guide settings are supported, including matching saved lineup IDs.</li>
+            </ul>
+            <h3>Artwork and layout</h3>
+            <ul>
+            <li>Bundled cards for 32 studios/organizations and 12 streaming services use the approved Apple artwork. Standard cards no longer fetch cover artwork from an API.</li>
+            <li>Streaming-service cards feature centered logos and smooth brand-colored backgrounds. Android TV packages only the large-screen assets.</li>
+            <li>Poster artwork and focus borders use consistent continuous corners inspired by the Apple presentation, including rating-strip edges.</li>
+            </ul>
+            <h3>Testing notes</h3>
+            <p>38 Home unit tests and two focused emulator UI tests passed during feature verification. The ordinary app creation flow saved guide source, rows and hours. Populated UI action tests used deterministic fixtures; real provider playback and broad hardware qualification are not certified. Previously documented limitations remain.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-2-84-build-87">
+    <header><h2>Version 1.2.84</h2>
+      <p class="release-summary">Manual profile updates, quicker clear-art publication, animated Home navigation and less repeated background work, preserving original artwork quality.</p>
+      <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
               <span>Version 1.2.84</span>
               <span>Build 87</span>
               <time datetime="2026-09-09">September 9, 2026</time>
             </div>
-            <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.84/Cedar-TV-1.2.84.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.84">GitHub release</a>
-            </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 87 · September 9, 2026</p>
-            <h3>Profiles and Apple compatibility</h3>
-            <ul>
-            <li>Profile copies stay independent. Receive a fresh transfer to update the current profile or create a new copy. Older linked profiles apply Apple configuration changes only when you choose Update Legacy Linked Profile Now.</li>
-            <li>Background remote/device communication and tracking-account sync remain separate from manual profile updates.</li>
-            <li>Imported profiles preserve this TV&#39;s player, quality limit, HDR, display matching, Dolby Vision handling, preview decoding and seek interval. Shared language and episode preferences still import.</li>
-            <li>New copies retain normal profile selection and parental checks. Failed imports clean up the new copy, and Cedar enforces its eight-profile limit.</li>
-            <li>Apple remotes can read playback artwork and seek supported on-demand Android playback. Legacy browser command names remain supported.</li>
-            </ul>
-            <h3>Artwork and navigation</h3>
-            <ul>
-            <li>Clear-art begins loading sooner: Cedar publishes primary artwork before optional metadata finishes and removes a second settle delay.</li>
-            <li>Visible hero/clear-art requests take priority over queued posters. Replacing an image at the same size reliably starts the new request.</li>
-            <li>Scrolling between Home branches now animates. Hero backgrounds and titles dissolve over 240 ms, retaining the outgoing background while new artwork loads.</li>
-            <li>Background refreshes retain the title being browsed. Imported collections retain their chosen covers.</li>
-            <li>Removed the retired Ratings Panel poster style while preserving ordinary scores and detail ratings.</li>
-            <li>Onboarding uses a stationary, edge-to-edge poster background tilted 12 degrees.</li>
-            <li>Original hero and clear-art quality, rendition and decode policies are preserved.</li>
-            </ul>
-            <h3>Performance and reliability</h3>
-            <ul>
-            <li>Source and guide refreshes update their affected data without unnecessarily restarting unrelated Home providers.</li>
-            <li>Search groups and Home feeds appear as results arrive. Home requests only the feeds required by enabled content.</li>
-            <li>Catalog identity work runs off the UI thread with stale-result protection. Disposable metadata caches and keyed work have bounded lifetimes.</li>
-            <li>Cancelled TMDb requests close their connections. Artwork writes avoid repeated full-directory scans.</li>
-            </ul>
-            <h3>Testing and known limitations</h3>
-            <p>The application passed 577 unit tests and 19 selected emulator regressions before packaging. Release packaging verifies the permanent signer, non-debuggable configuration, package/version, native ABI coverage and 16 KiB alignment. These checks do not certify every physical TV, codec or provider.</p>
-            <p>Profile updates merge imported data; they are not exact deletion mirrors. Android subtitle startup/delivery and permanent changelog history still differ from Apple. Physical transfer/remote, sustained playback, accessibility and hardware performance checks remain. No overall FPS, battery or startup percentage gain is claimed.</p>
-          </div>
-        </article>
-        <article class="release-entry" id="version-1-2-83-build-86">
+      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.84">Archived GitHub release</a>
+    </header>
+    <div class="release-notes-body"><p>Build 87 · September 9, 2026</p>
+<h3>Profiles and Apple compatibility</h3>
+<ul>
+<li>Profile copies stay independent. Receive a fresh transfer to update the current profile or create a new copy. Older linked profiles apply Apple configuration changes only when you choose Update Legacy Linked Profile Now.</li>
+<li>Background remote/device communication and tracking-account sync remain separate from manual profile updates.</li>
+<li>Imported profiles preserve this TV&#39;s player, quality limit, HDR, display matching, Dolby Vision handling, preview decoding and seek interval. Shared language and episode preferences still import.</li>
+<li>New copies retain normal profile selection and parental checks. Failed imports clean up the new copy, and Cedar enforces its eight-profile limit.</li>
+<li>Apple remotes can read playback artwork and seek supported on-demand Android playback. Legacy browser command names remain supported.</li>
+</ul>
+<h3>Artwork and navigation</h3>
+<ul>
+<li>Clear-art begins loading sooner: Cedar publishes primary artwork before optional metadata finishes and removes a second settle delay.</li>
+<li>Visible hero/clear-art requests take priority over queued posters. Replacing an image at the same size reliably starts the new request.</li>
+<li>Scrolling between Home branches now animates. Hero backgrounds and titles dissolve over 240 ms, retaining the outgoing background while new artwork loads.</li>
+<li>Background refreshes retain the title being browsed. Imported collections retain their chosen covers.</li>
+<li>Removed the retired Ratings Panel poster style while preserving ordinary scores and detail ratings.</li>
+<li>Onboarding uses a stationary, edge-to-edge poster background tilted 12 degrees.</li>
+<li>Original hero and clear-art quality, rendition and decode policies are preserved.</li>
+</ul>
+<h3>Performance and reliability</h3>
+<ul>
+<li>Source and guide refreshes update their affected data without unnecessarily restarting unrelated Home providers.</li>
+<li>Search groups and Home feeds appear as results arrive. Home requests only the feeds required by enabled content.</li>
+<li>Catalog identity work runs off the UI thread with stale-result protection. Disposable metadata caches and keyed work have bounded lifetimes.</li>
+<li>Cancelled TMDb requests close their connections. Artwork writes avoid repeated full-directory scans.</li>
+</ul>
+<h3>Testing and known limitations</h3>
+<p>The application passed 577 unit tests and 19 selected emulator regressions before packaging. Release packaging verifies the permanent signer, non-debuggable configuration, package/version, native ABI coverage and 16 KiB alignment. These checks do not certify every physical TV, codec or provider.</p>
+<p>Profile updates merge imported data; they are not exact deletion mirrors. Android subtitle startup/delivery and permanent changelog history still differ from Apple. Physical transfer/remote, sustained playback, accessibility and hardware performance checks remain. No overall FPS, battery or startup percentage gain is claimed.</p></div>
+  </article>
+<article class="release-entry" id="version-1-2-83-build-86">
     <header><h2>Version 1.2.83</h2>
       <p class="release-summary">Cedar 1.2.83 makes device transfers and ongoing profile sync easier to follow.</p>
       <div class="release-metadata">

@@ -4,13 +4,13 @@
     {
       "id": "android-tv",
       "name": "Cedar for Android TV",
-      "version": "1.2.84",
-      "build": "87",
+      "version": "1.2.85",
+      "build": "88",
       "date": "2026-09-09",
       "status": "released",
-      "summary": "Manual profile updates, quicker clear-art publication, animated Home navigation and less repeated background work, preserving original artwork quality.",
+      "summary": "Custom Home TV guides, bundled studio and streaming-service artwork, and refined poster corners across Android TV, Google TV and Android-based Fire TV.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.84/Cedar-TV-1.2.84.apk"
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.85/Cedar-TV-1.2.85.apk"
     },
     {
       "id": "iphone",

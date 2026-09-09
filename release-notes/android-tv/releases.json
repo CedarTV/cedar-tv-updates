@@ -3,6 +3,15 @@
   "releases": [
     {
       "platform": "android-tv",
+      "version": "1.2.85",
+      "build": "88",
+      "date": "2026-09-09",
+      "status": "released",
+      "summary": "Custom Home TV guides, bundled studio and streaming-service artwork, and refined poster corners across Android TV, Google TV and Android-based Fire TV.",
+      "notes": "release-notes/android-tv/1.2.85.md"
+    },
+    {
+      "platform": "android-tv",
       "version": "1.2.84",
       "build": "87",
       "date": "2026-09-09",
