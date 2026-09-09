@@ -39,6 +39,39 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-9">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Native Mac settings and playback menus, fewer Keychain prompts, and cleaner connection sheets.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 9</span>
+              <time datetime="2026-09-08">September 8, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Native Mac settings and playback menus, fewer Keychain prompts, and cleaner connection sheets.</p>
+            <h3>What changed</h3>
+            <ul>
+            <li>Onboarding posters are stationary, fill the window edges, and use a 12-degree angle.</li>
+            <li>Settings now use native grouped forms, switches, pop-up menus, and value rows while retaining custom previews and editors.</li>
+            <li>Playback options, audio, and subtitles use native menus. Controls stay visible while a menu is open.</li>
+            <li>Media-server connection rows no longer have an extra blue button background.</li>
+            <li>Source selection and download-location sheets have usable minimum dimensions.</li>
+            <li>New credentials use the data-protection Keychain. Accessible older credentials migrate without password dialogs; restricted older credentials may need reconnection.</li>
+            <li>Cleaned up add-on refresh and credential-sync compiler warnings while preserving legacy Keychain prompt suppression.</li>
+            </ul>
+            <h3>Testing notes</h3>
+            <ul>
+            <li>Existing Mac household libraries with records split across private/shared CloudKit zones are not automatically repaired.</li>
+            <li>Signed-app migration of restricted legacy Mac credentials still needs real-device validation.</li>
+            <li>Phone-remote artwork and seeking still need verification during real TV playback.</li>
+            </ul>
+            <p>This is a TestFlight build, not an App Store release.</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-8">
           <header>
             <p class="eyebrow">Mac</p>

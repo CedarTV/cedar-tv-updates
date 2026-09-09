@@ -26,6 +26,46 @@
     {
       "platform": "mac",
       "version": "1.0.0",
+      "build": "9",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "Native Mac settings and playback menus, fewer Keychain prompts, and cleaner connection sheets.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nNative Mac settings and playback menus, fewer Keychain prompts, and cleaner connection sheets.\n\n## What changed\n\n- Onboarding posters are stationary, fill the window edges, and use a 12-degree angle.\n- Settings now use native grouped forms, switches, pop-up menus, and value rows while retaining custom previews and editors.\n- Playback options, audio, and subtitles use native menus. Controls stay visible while a menu is open.\n- Media-server connection rows no longer have an extra blue button background.\n- Source selection and download-location sheets have usable minimum dimensions.\n- New credentials use the data-protection Keychain. Accessible older credentials migrate without password dialogs; restricted older credentials may need reconnection.\n- Cleaned up add-on refresh and credential-sync compiler warnings while preserving legacy Keychain prompt suppression.\n\n## Testing notes\n\n- Existing Mac household libraries with records split across private/shared CloudKit zones are not automatically repaired.\n- Signed-app migration of restricted legacy Mac credentials still needs real-device validation.\n- Phone-remote artwork and seeking still need verification during real TV playback.\n\nThis is a TestFlight build, not an App Store release.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-9"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "9",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nA stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.\n\n## What changed\n\n- Onboarding posters are stationary, fill the window edges, and use a 12-degree angle.\n\n## Testing notes\n\n- Existing Mac household libraries with records split across private/shared CloudKit zones are not automatically repaired.\n- Signed-app migration of restricted legacy Mac credentials still needs real-device validation.\n- Phone-remote artwork and seeking still need verification during real TV playback.\n\nThis is a TestFlight build, not an App Store release.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-9"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "9",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nA stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.\n\n## What changed\n\n- Onboarding posters are stationary, fill the window edges, and use a 12-degree angle.\n\n## Testing notes\n\n- Existing Mac household libraries with records split across private/shared CloudKit zones are not automatically repaired.\n- Signed-app migration of restricted legacy Mac credentials still needs real-device validation.\n- Phone-remote artwork and seeking still need verification during real TV playback.\n\nThis is a TestFlight build, not an App Store release.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-9"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "9",
+      "date": "2026-09-08",
+      "status": "testflight",
+      "summary": "A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nA stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.\n\n## What changed\n\n- Onboarding posters are stationary, fill the window edges, and use a 12-degree angle.\n\n## Testing notes\n\n- Existing Mac household libraries with records split across private/shared CloudKit zones are not automatically repaired.\n- Signed-app migration of restricted legacy Mac credentials still needs real-device validation.\n- Phone-remote artwork and seeking still need verification during real TV playback.\n\nThis is a TestFlight build, not an App Store release.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-9"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
       "build": "8",
       "date": "2026-09-08",
       "status": "testflight",

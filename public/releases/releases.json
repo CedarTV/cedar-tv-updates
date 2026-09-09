@@ -16,40 +16,40 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "8",
+      "build": "9",
       "date": "2026-09-08",
       "status": "testflight",
-      "summary": "A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.",
+      "summary": "A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "8",
+      "build": "9",
       "date": "2026-09-08",
       "status": "testflight",
-      "summary": "A redesigned Cedar Remote with larger controls, TV naming, a playback timeline, and reliable discovery.",
+      "summary": "A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
       "id": "apple-tv",
       "name": "Cedar for Apple TV",
       "version": "1.0.0",
-      "build": "8",
+      "build": "9",
       "date": "2026-09-08",
       "status": "testflight",
-      "summary": "Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.",
+      "summary": "A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
       "id": "mac",
       "name": "Cedar for Mac",
       "version": "1.0.0",
-      "build": "8",
+      "build": "9",
       "date": "2026-09-08",
       "status": "testflight",
-      "summary": "Local playback preferences, clearer iCloud status, and household migration ordering improvements.",
+      "summary": "Native Mac settings and playback menus, fewer Keychain prompts, and cleaner connection sheets.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]
