@@ -4,9 +4,45 @@
     {
       "platform": "mac",
       "version": "1.0.0",
+      "build": "12",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Less repeated library/download work, quieter idle DVR scheduling and clearer household discovery.",
+      "notes": "release-notes/apple/mac/1.0.0-build-12.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "12",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Clearer household sharing, bounded Home discovery and more efficient library, network and subtitle rendering work.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-12.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "12",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "Clearer household sharing, less repeated library and download work, and retained Home navigation state.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-12.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "12",
+      "date": "2026-09-09",
+      "status": "release-candidate",
+      "summary": "More responsive library and Home work, clearer Household & Sync, and improved Home background continuity.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-12.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
       "build": "11",
       "date": "2026-09-09",
-      "status": "testflight",
+      "status": "release-candidate",
       "summary": "Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.",
       "notes": "release-notes/apple/mac/1.0.0-11.md"
     },
@@ -15,7 +51,7 @@
       "version": "1.0.0",
       "build": "11",
       "date": "2026-09-09",
-      "status": "testflight",
+      "status": "release-candidate",
       "summary": "Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.",
       "notes": "release-notes/apple/iphone/1.0.0-11.md"
     },
@@ -24,7 +60,7 @@
       "version": "1.0.0",
       "build": "11",
       "date": "2026-09-09",
-      "status": "testflight",
+      "status": "release-candidate",
       "summary": "Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics. Organized download destinations preserve existing files.",
       "notes": "release-notes/apple/ipad/1.0.0-11.md"
     },
@@ -33,7 +69,7 @@
       "version": "1.0.0",
       "build": "11",
       "date": "2026-09-09",
-      "status": "testflight",
+      "status": "release-candidate",
       "summary": "Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics.",
       "notes": "release-notes/apple/apple-tv/1.0.0-11.md"
     },

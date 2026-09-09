@@ -22,7 +22,7 @@ test("Apple release catalog covers every product with versioned source notes", a
     assert.match(release.date, /^\d{4}-\d{2}-\d{2}$/);
     assert.ok(["release-candidate", "testflight", "released"].includes(release.status));
     assert.ok(release.summary.length > 40 && release.summary.length <= 280);
-    assert.ok([`release-notes/apple/${release.platform}/${release.version}.md`, `release-notes/apple/${release.platform}/${release.version}-${release.build}.md`].includes(release.notes));
+    assert.ok([`release-notes/apple/${release.platform}/${release.version}.md`, `release-notes/apple/${release.platform}/${release.version}-${release.build}.md`, `release-notes/apple/${release.platform}/${release.version}-build-${release.build}.md`].includes(release.notes));
     assert.ok(!identities.has(`${release.platform}:${release.version}:${release.build}`));
     identities.add(`${release.platform}:${release.version}:${release.build}`);
 

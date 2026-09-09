@@ -38,39 +38,52 @@
           <p>Current signed builds for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
 
-        <article class="release-entry" id="version-1-2-83-build-86">
+        <article class="release-entry" id="version-1-2-84-build-87">
           <header>
             <p class="eyebrow">Android TV</p>
-            <h2>Version 1.2.83</h2>
-            <p class="release-summary">Cedar 1.2.83 makes device transfers and ongoing profile sync easier to follow.</p>
+            <h2>Version 1.2.84</h2>
+            <p class="release-summary">Manual profile updates, quicker clear-art publication, animated Home navigation and less repeated background work, preserving original artwork quality.</p>
             <div class="release-metadata">
               <span class="release-status release-status-released">Released</span>
-              <span>Version 1.2.83</span>
-              <span>Build 86</span>
-              <time datetime="2026-09-07">September 7, 2026</time>
+              <span>Version 1.2.84</span>
+              <span>Build 87</span>
+              <time datetime="2026-09-09">September 9, 2026</time>
             </div>
             <div class="apple-actions">
-              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.83/Cedar-TV-1.2.83.apk">Download signed APK</a>
-              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.83">GitHub release</a>
+              <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.84/Cedar-TV-1.2.84.apk">Download signed APK</a>
+              <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v1.2.84">GitHub release</a>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>Cedar 1.2.83 makes device transfers and ongoing profile sync easier to follow.</p>
-            <h3>What changed</h3>
+            <p>Build 87 · September 9, 2026</p>
+            <h3>Profiles and Apple compatibility</h3>
             <ul>
-            <li>Pair from Mac, iPhone, iPad, or Apple TV with updated nearby-device instructions.</li>
-            <li>Profile import shows its current stage and elapsed time, including when the profile is saved and ongoing sync is being linked.</li>
-            <li>Manual Cedar Link sync reports fetching, saving, and confirming stages, with elapsed time and a timeout/retry result.</li>
-            <li>Completion confirms when changes are saved on this television. A duplicate manual request cannot start another simultaneous sync.</li>
-            <li>Encrypted pairing receipts now separately report ongoing sync enrollment, so compatible Apple senders can distinguish a copied profile from a working link.</li>
+            <li>Profile copies stay independent. Receive a fresh transfer to update the current profile or create a new copy. Older linked profiles apply Apple configuration changes only when you choose Update Legacy Linked Profile Now.</li>
+            <li>Background remote/device communication and tracking-account sync remain separate from manual profile updates.</li>
+            <li>Imported profiles preserve this TV&#39;s player, quality limit, HDR, display matching, Dolby Vision handling, preview decoding and seek interval. Shared language and episode preferences still import.</li>
+            <li>New copies retain normal profile selection and parental checks. Failed imports clean up the new copy, and Cedar enforces its eight-profile limit.</li>
+            <li>Apple remotes can read playback artwork and seek supported on-demand Android playback. Legacy browser command names remain supported.</li>
             </ul>
-            <h3>Qualification</h3>
+            <h3>Artwork and navigation</h3>
             <ul>
-            <li>541 unit tests and Android lint passed.</li>
-            <li>A current tvOS simulator sent a real profile to the physical Android TV: 83 items acknowledged in about 15 seconds.</li>
-            <li>Two subsequent production-relay updates changed and restored a detail-display preference on the Android TV. Each receiver import completed in under four seconds.</li>
-            <li>Full cross-platform certification remains open: physical macOS-to-Apple-TV iCloud propagation, deletion reconciliation, and broader data-domain coverage still require verification. Nearby transfer completion does not certify iCloud or catalogue/EPG refresh completion.</li>
+            <li>Clear-art begins loading sooner: Cedar publishes primary artwork before optional metadata finishes and removes a second settle delay.</li>
+            <li>Visible hero/clear-art requests take priority over queued posters. Replacing an image at the same size reliably starts the new request.</li>
+            <li>Scrolling between Home branches now animates. Hero backgrounds and titles dissolve over 240 ms, retaining the outgoing background while new artwork loads.</li>
+            <li>Background refreshes retain the title being browsed. Imported collections retain their chosen covers.</li>
+            <li>Removed the retired Ratings Panel poster style while preserving ordinary scores and detail ratings.</li>
+            <li>Onboarding uses a stationary, edge-to-edge poster background tilted 12 degrees.</li>
+            <li>Original hero and clear-art quality, rendition and decode policies are preserved.</li>
             </ul>
+            <h3>Performance and reliability</h3>
+            <ul>
+            <li>Source and guide refreshes update their affected data without unnecessarily restarting unrelated Home providers.</li>
+            <li>Search groups and Home feeds appear as results arrive. Home requests only the feeds required by enabled content.</li>
+            <li>Catalog identity work runs off the UI thread with stale-result protection. Disposable metadata caches and keyed work have bounded lifetimes.</li>
+            <li>Cancelled TMDb requests close their connections. Artwork writes avoid repeated full-directory scans.</li>
+            </ul>
+            <h3>Testing and known limitations</h3>
+            <p>The application passed 577 unit tests and 19 selected emulator regressions before packaging. Release packaging verifies the permanent signer, non-debuggable configuration, package/version, native ABI coverage and 16 KiB alignment. These checks do not certify every physical TV, codec or provider.</p>
+            <p>Profile updates merge imported data; they are not exact deletion mirrors. Android subtitle startup/delivery and permanent changelog history still differ from Apple. Physical transfer/remote, sustained playback, accessibility and hardware performance checks remain. No overall FPS, battery or startup percentage gain is claimed.</p>
           </div>
         </article>
       </main>

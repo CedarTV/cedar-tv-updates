@@ -328,8 +328,9 @@ for (const [index, source] of sourceCatalog.releases.entries()) {
   const summary = requireText(source.summary, `${label} summary`, 280);
   const expectedNotesPath = `release-notes/apple/${platform.id}/${version}.md`;
   const buildNotesPath = `release-notes/apple/${platform.id}/${version}-${build}.md`;
-  if (source.notes !== expectedNotesPath && source.notes !== buildNotesPath) {
-    fail(`${label} notes path must be ${expectedNotesPath}`);
+  const explicitBuildNotesPath = `release-notes/apple/${platform.id}/${version}-build-${build}.md`;
+  if (![expectedNotesPath, buildNotesPath, explicitBuildNotesPath].includes(source.notes)) {
+    fail(`${label} notes path must match its platform, version and build`);
   }
   const identity = `${platform.id}:${version}:${build}`;
   if (seen.has(identity)) {

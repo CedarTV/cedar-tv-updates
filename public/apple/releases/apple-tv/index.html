@@ -39,13 +39,50 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-12">
+          <header>
+            <p class="eyebrow">Apple TV</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Clearer household sharing, bounded Home discovery and more efficient library, network and subtitle rendering work.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-release-candidate">Release candidate</span>
+              <span>Version 1.0.0</span>
+              <span>Build 12</span>
+              <time datetime="2026-09-09">September 9, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 12 · September 9, 2026 · Beta release candidate</p>
+            <h3>Changes since build 11</h3>
+            <ul>
+            <li>Household &amp; Sync brings Apple household sharing, invitations, status and device controls together. Household discovery refreshes as iCloud imports arrive and shows initial download progress.</li>
+            <li>Replaying unchanged household profiles no longer creates new journal mutations. Copying a profile to Android is a one-time transfer and does not establish ongoing relay sync; existing links remain available under Advanced Transfers &amp; Links.</li>
+            <li>Connected libraries share in-flight refreshes, briefly reuse successful snapshots and refresh individual servers explicitly. Library badges and ordering reuse a prepared index.</li>
+            <li>Home bounds concurrent discovery work and updates affected add-on shelves without restarting unrelated shelves.</li>
+            <li>Metadata and service caches do less maintenance on each hit, have bounded disposable entries and coalesce purgeable writes.</li>
+            <li>Network responses are assembled in chunks; oversized downloads stop during transfer. Immediate playlist import reuses its validated download and batches category registration.</li>
+            <li>Catalog ordering and expired-guide cleanup use additional database indexes. Existing catalog contents and query behavior are retained.</li>
+            <li>Bitmap subtitles reuse unchanged layers, and diagnostics reuse their redaction patterns. Original hero and clear-art quality is preserved.</li>
+            </ul>
+            <h3>Apple TV details</h3>
+            <ul>
+            <li>Fullscreen hero artwork and existing native focus motion retain their original quality and presentation.</li>
+            <li>Connected-library and Home refreshes avoid repeated work while retaining current shelves and titles.</li>
+            </ul>
+            <h3>What to test</h3>
+            <p>Check Siri Remote sidebar, branch/episode/source selection, Menu return, cold household discovery, long playback, bitmap subtitles and iPhone remote seeking. Also test profile switching, offline/error recovery, media-server refreshes and one-time Android copies.</p>
+            <h3>Known limitations</h3>
+            <p>Existing CloudKit export backlogs/private-shared zone problems are not automatically repaired. Production-cloud convergence, sustained physical-device media/output compatibility and large-library performance still need validation. Some Apple translations and wider TV/iPad UI test coverage remain incomplete. The mobile hero follow-up fixes require fresh physical visual confirmation. No overall FPS, battery or startup percentage improvement is claimed.</p>
+            <p>Apple controls beta processing and external review. This candidate is not an App Store release; availability is recorded separately from upload completion.</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-11">
           <header>
             <p class="eyebrow">Apple TV</p>
             <h2>Version 1.0.0</h2>
             <p class="release-summary">Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics.</p>
             <div class="release-metadata">
-              <span class="release-status release-status-testflight">TestFlight</span>
+              <span class="release-status release-status-release-candidate">Release candidate</span>
               <span>Version 1.0.0</span>
               <span>Build 11</span>
               <time datetime="2026-09-09">September 9, 2026</time>
