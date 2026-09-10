@@ -6,7 +6,7 @@
       "version": "1.0.0",
       "build": "14",
       "date": "2026-09-10",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Subtitle selection and timing fixes, live guide and channel swipes, compact Liquid Glass player feedback, correct collection artwork/order, and improved profile setup.",
       "notes": "release-notes/apple/iphone/1.0.0-build-14.md"
     },
@@ -15,7 +15,7 @@
       "version": "1.0.0",
       "build": "14",
       "date": "2026-09-10",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Subtitle selection and timing fixes, live guide and channel swipes, compact Liquid Glass player feedback, correct collection artwork/order, and improved profile setup.",
       "notes": "release-notes/apple/ipad/1.0.0-build-14.md"
     },
@@ -24,7 +24,7 @@
       "version": "1.0.0",
       "build": "14",
       "date": "2026-09-10",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Subtitle selection and timing fixes, a full-height in-player guide, improved remote guide focus and changelog reading, correct collection artwork/order, and profile setup.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-14.md"
     },
@@ -42,7 +42,7 @@
       "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
       "notes": "release-notes/apple/mac/1.0.0-build-13.md"
     },

@@ -18,7 +18,7 @@
       "version": "1.0.0",
       "build": "14",
       "date": "2026-09-10",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Subtitle selection and timing fixes, live guide and channel swipes, compact Liquid Glass player feedback, correct collection artwork/order, and improved profile setup.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
@@ -28,7 +28,7 @@
       "version": "1.0.0",
       "build": "14",
       "date": "2026-09-10",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Subtitle selection and timing fixes, live guide and channel swipes, compact Liquid Glass player feedback, correct collection artwork/order, and improved profile setup.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
@@ -38,7 +38,7 @@
       "version": "1.0.0",
       "build": "14",
       "date": "2026-09-10",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Subtitle selection and timing fixes, a full-height in-player guide, improved remote guide focus and changelog reading, correct collection artwork/order, and profile setup.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
