@@ -1274,3 +1274,159 @@ Initial GitHub update-channel bridge for Cedar Android TV.
 - Keeps full manifest, APK hash, package, version, and Android signer verification before installation.
 
 This build uses Cedar's permanent Android release signer. Existing development-signed installations require one manual replacement; subsequent versions can update from inside Cedar.
+
+## Apple 1.0.0 · build 14 — September 10, 2026
+
+Release candidate. See the individual platform pages for confirmed TestFlight availability.
+
+### Cedar for iPhone 1.0.0
+
+Build 14 · September 10, 2026 · Release candidate; upload and Apple processing are in progress.
+
+## Subtitles and playback
+
+- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
+- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
+- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
+- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
+- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
+- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
+
+## Details and ratings
+
+- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
+- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
+- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
+
+## Profiles and setup
+
+- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
+- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
+- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
+
+## iPhone and iPad
+
+- Fixed previous/next live-channel edge swipes competing with other player gestures. Short pulls cancel, and control lock blocks channel changes while keeping Unlock accessible.
+- Double taps now show a curved translucent edge panel with the configured seek interval.
+- Brightness and device volume use compact vertical Liquid Glass level bars, with solid fallbacks for Reduce Transparency. Feedback clears after release or interrupted gestures; the volume display follows acknowledged device output.
+- Improved source-panel contrast over video, including the Playing row.
+- Reduced the Watching Now banner's usual height from 92 to 64 points while allowing it to grow for episode text and accessibility sizes.
+
+## Please test
+
+Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
+
+Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
+
+### Cedar for iPad 1.0.0
+
+Build 14 · September 10, 2026 · Release candidate; upload and Apple processing are in progress.
+
+## Subtitles and playback
+
+- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
+- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
+- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
+- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
+- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
+- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
+
+## Details and ratings
+
+- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
+- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
+- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
+
+## Profiles and setup
+
+- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
+- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
+- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
+
+## iPhone and iPad
+
+- Fixed previous/next live-channel edge swipes competing with other player gestures. Short pulls cancel, and control lock blocks channel changes while keeping Unlock accessible.
+- Double taps now show a curved translucent edge panel with the configured seek interval.
+- Brightness and device volume use compact vertical Liquid Glass level bars, with solid fallbacks for Reduce Transparency. Feedback clears after release or interrupted gestures; the volume display follows acknowledged device output.
+- Improved source-panel contrast over video, including the Playing row.
+- Reduced the Watching Now banner's usual height from 92 to 64 points while allowing it to grow for episode text and accessibility sizes.
+
+## Please test
+
+Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
+
+Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
+
+### Cedar for Apple TV 1.0.0
+
+Build 14 · September 10, 2026 · Release candidate; upload and Apple processing are in progress.
+
+## Subtitles and playback
+
+- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
+- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
+- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
+- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
+- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
+- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
+
+## Details and ratings
+
+- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
+- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
+- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
+
+## Profiles and setup
+
+- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
+- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
+- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
+
+## Apple TV
+
+- The changelog opens in a full-screen reader with larger text, individually focusable reading blocks, and a fixed Done action. Back returns to the previous screen.
+- Fixed guide focus discovery so Right can reach later programmes and reveal them while the pinned channel rail stays clear.
+- The in-player guide supports remote timeline browsing, pinned guide shortcuts and Menu/Back return to the same playback session.
+
+## Please test
+
+Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
+
+Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
+
+### Cedar for Mac 1.0.0
+
+Build 14 · September 10, 2026 · Release candidate; upload and Apple processing are in progress.
+
+## Subtitles and playback
+
+- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
+- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
+- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
+- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
+- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
+- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
+
+## Details and ratings
+
+- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
+- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
+- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
+
+## Profiles and setup
+
+- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
+- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
+- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
+
+## Mac
+
+- Improved source-panel contrast over video, including the Playing row.
+- Added the missing push entitlement for CloudKit delivery and fixed household reconciliation failing on protected legacy Keychain entries without changing their permissions.
+- Sync-status rows expose separate, current accessibility values instead of one combined stale reading.
+
+## Please test
+
+Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
+
+Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.

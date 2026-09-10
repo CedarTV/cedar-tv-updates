@@ -39,6 +39,54 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-14">
+          <header>
+            <p class="eyebrow">iPad</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Subtitle selection and timing fixes, live guide and channel swipes, compact Liquid Glass player feedback, correct collection artwork/order, and improved profile setup.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-release-candidate">Release candidate</span>
+              <span>Version 1.0.0</span>
+              <span>Build 14</span>
+              <time datetime="2026-09-10">September 10, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 14 · September 10, 2026 · Release candidate; upload and Apple processing are in progress.</p>
+            <h3>Subtitles and playback</h3>
+            <ul>
+            <li>Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.</li>
+            <li>Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.</li>
+            <li>Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.</li>
+            <li>Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.</li>
+            <li>Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.</li>
+            <li>Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.</li>
+            </ul>
+            <h3>Details and ratings</h3>
+            <ul>
+            <li>Fixed collection navigation retaining another movie&#39;s clearart title. Artwork results now belong to the selected movie and load request.</li>
+            <li>Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.</li>
+            <li>Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.</li>
+            </ul>
+            <h3>Profiles and setup</h3>
+            <ul>
+            <li>Add and manage profiles from Who&#39;s Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.</li>
+            <li>Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.</li>
+            <li>Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.</li>
+            </ul>
+            <h3>iPhone and iPad</h3>
+            <ul>
+            <li>Fixed previous/next live-channel edge swipes competing with other player gestures. Short pulls cancel, and control lock blocks channel changes while keeping Unlock accessible.</li>
+            <li>Double taps now show a curved translucent edge panel with the configured seek interval.</li>
+            <li>Brightness and device volume use compact vertical Liquid Glass level bars, with solid fallbacks for Reduce Transparency. Feedback clears after release or interrupted gestures; the volume display follows acknowledged device output.</li>
+            <li>Improved source-panel contrast over video, including the Playing row.</li>
+            <li>Reduced the Watching Now banner&#39;s usual height from 92 to 64 points while allowing it to grow for episode text and accessibility sizes.</li>
+            </ul>
+            <h3>Please test</h3>
+            <p>Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.</p>
+            <p>Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-13">
           <header>
             <p class="eyebrow">iPad</p>

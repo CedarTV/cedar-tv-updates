@@ -2,6 +2,42 @@
   "schemaVersion": 1,
   "releases": [
     {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "14",
+      "date": "2026-09-10",
+      "status": "release-candidate",
+      "summary": "Subtitle selection and timing fixes, live guide and channel swipes, compact Liquid Glass player feedback, correct collection artwork/order, and improved profile setup.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-14.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "14",
+      "date": "2026-09-10",
+      "status": "release-candidate",
+      "summary": "Subtitle selection and timing fixes, live guide and channel swipes, compact Liquid Glass player feedback, correct collection artwork/order, and improved profile setup.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-14.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "14",
+      "date": "2026-09-10",
+      "status": "release-candidate",
+      "summary": "Subtitle selection and timing fixes, a full-height in-player guide, improved remote guide focus and changelog reading, correct collection artwork/order, and profile setup.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-14.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "14",
+      "date": "2026-09-10",
+      "status": "release-candidate",
+      "summary": "Subtitle selection and timing fixes, an in-player guide, clearer source selection, correct collection artwork/order, profile setup, and household/Keychain accessibility fixes.",
+      "notes": "release-notes/apple/mac/1.0.0-build-14.md"
+    },
+    {
       "platform": "mac",
       "version": "1.0.0",
       "build": "13",
