@@ -1277,7 +1277,7 @@ This build uses Cedar's permanent Android release signer. Existing development-s
 
 ## Apple 1.0.0 · build 14 — September 10, 2026
 
-Available in external TestFlight for iPhone, iPad and Apple TV. The native Mac build is uploaded and awaits Apple beta review.
+Available in external TestFlight for iPhone, iPad, Apple TV and native Apple silicon Mac.
 
 ### Cedar for iPhone 1.0.0
 
@@ -1396,7 +1396,7 @@ Subtitle releases from different cuts can still require another release; fixed-o
 
 ### Cedar for Mac 1.0.0
 
-Build 14 · September 10, 2026 · Uploaded to TestFlight and awaiting Apple beta review; build 14 is not yet available to external testers.
+Build 14 · September 10, 2026 · Available to external testers on TestFlight.
 
 ## Subtitles and playback
 

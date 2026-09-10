@@ -48,7 +48,7 @@
       "version": "1.0.0",
       "build": "14",
       "date": "2026-09-10",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Subtitle selection and timing fixes, an in-player guide, clearer source selection, correct collection artwork/order, profile setup, and household/Keychain accessibility fixes.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
