@@ -24,6 +24,26 @@
   ],
   "releases": [
     {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "25",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 25 · 2026-09-13 · Internal TestFlight build.\n\n## Poster Style Lab\n\nCompare Classic, Cinema, Critic, Ledger and Gallery using real movie and series metadata from TMDB. Preview Inception and Breaking Bad with their returned titles, years, ratings and artwork.\n\nTry title placement above, below or over the artwork, with left, centred or right alignment. Toggle ratings, years, depth and missing artwork. Metadata loading failures include a retry option.\n\nOpen Settings → Detail Page Display → Poster Card Style → Poster Style Lab. Changes stay in the preview and reset when you leave.\n\nThis build is for internal testers only. External testers remain on build 24. Visual and on-device verification of the lab is pending.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-25"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "25",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 25 · 2026-09-13 · Internal TestFlight build.\n\n## Poster Style Lab\n\nCompare Classic, Cinema, Critic, Ledger and Gallery using real movie and series metadata from TMDB. Preview Inception and Breaking Bad with their returned titles, years, ratings and artwork.\n\nTry title placement above, below or over the artwork, with left, centred or right alignment. Toggle ratings, years, depth and missing artwork. Metadata loading failures include a retry option.\n\nOpen Settings → Detail Page Display → Poster Card Style → Poster Style Lab. Changes stay in the preview and reset when you leave.\n\nThis build is for internal testers only. External testers remain on build 24. Visual and on-device verification of the lab is pending.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-25"
+    },
+    {
       "platform": "mac",
       "version": "1.0.0",
       "build": "24",

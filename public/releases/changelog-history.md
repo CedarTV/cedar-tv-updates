@@ -4,6 +4,20 @@ Compiled September 13, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 25 · 2026-09-13 · Internal TestFlight
+
+Build 25 · 2026-09-13 · Internal TestFlight build.
+
+#### Poster Style Lab
+
+Compare Classic, Cinema, Critic, Ledger and Gallery using real movie and series metadata from TMDB. Preview Inception and Breaking Bad with their returned titles, years, ratings and artwork.
+
+Try title placement above, below or over the artwork, with left, centred or right alignment. Toggle ratings, years, depth and missing artwork. Metadata loading failures include a retry option.
+
+Open Settings → Detail Page Display → Poster Card Style → Poster Style Lab. Changes stay in the preview and reset when you leave.
+
+This build is for internal testers only. External testers remain on build 24. Visual and on-device verification of the lab is pending.
+
 ### 1.0.0 · build 24 · 2026-09-13 · testflight
 
 
@@ -376,6 +390,20 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 25 · 2026-09-13 · Internal TestFlight
+
+Build 25 · 2026-09-13 · Internal TestFlight build.
+
+#### Poster Style Lab
+
+Compare Classic, Cinema, Critic, Ledger and Gallery using real movie and series metadata from TMDB. Preview Inception and Breaking Bad with their returned titles, years, ratings and artwork.
+
+Try title placement above, below or over the artwork, with left, centred or right alignment. Toggle ratings, years, depth and missing artwork. Metadata loading failures include a retry option.
+
+Open Settings → Detail Page Display → Poster Card Style → Poster Style Lab. Changes stay in the preview and reset when you leave.
+
+This build is for internal testers only. External testers remain on build 24. Visual and on-device verification of the lab is pending.
 
 ### 1.0.0 · build 24 · 2026-09-13 · testflight
 

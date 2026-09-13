@@ -16,20 +16,20 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "24",
+      "build": "25",
       "date": "2026-09-13",
       "status": "testflight",
-      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "24",
+      "build": "25",
       "date": "2026-09-13",
       "status": "testflight",
-      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {

@@ -2,6 +2,24 @@
   "schemaVersion": 1,
   "releases": [
     {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "25",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-25.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "25",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-25.md"
+    },
+    {
       "platform": "mac",
       "version": "1.0.0",
       "build": "24",
