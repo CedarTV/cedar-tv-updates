@@ -18,7 +18,7 @@
       "version": "1.0.0",
       "build": "24",
       "date": "2026-09-13",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
@@ -28,7 +28,7 @@
       "version": "1.0.0",
       "build": "24",
       "date": "2026-09-13",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
@@ -38,7 +38,7 @@
       "version": "1.0.0",
       "build": "24",
       "date": "2026-09-13",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
@@ -48,7 +48,7 @@
       "version": "1.0.0",
       "build": "24",
       "date": "2026-09-13",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }

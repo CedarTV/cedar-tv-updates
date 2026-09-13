@@ -1,13 +1,13 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled September 13, 2026. Historical entries preserve release scope and availability notes; build 24 is a candidate until Apple confirms external testing. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled September 13, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## iPhone
 
-### 1.0.0 · build 24 · 2026-09-13 · release-candidate
+### 1.0.0 · build 24 · 2026-09-13 · testflight
 
 
-Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.
+Build 24 · September 13, 2026 · Available to external TestFlight testers.
 
 #### Settings
 
@@ -377,10 +377,10 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
-### 1.0.0 · build 24 · 2026-09-13 · release-candidate
+### 1.0.0 · build 24 · 2026-09-13 · testflight
 
 
-Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.
+Build 24 · September 13, 2026 · Available to external TestFlight testers.
 
 #### Settings
 
@@ -749,10 +749,10 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
-### 1.0.0 · build 24 · 2026-09-13 · release-candidate
+### 1.0.0 · build 24 · 2026-09-13 · testflight
 
 
-Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.
+Build 24 · September 13, 2026 · Available to external TestFlight testers.
 
 #### Settings
 
@@ -1124,10 +1124,10 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
-### 1.0.0 · build 24 · 2026-09-13 · release-candidate
+### 1.0.0 · build 24 · 2026-09-13 · testflight
 
 
-Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.
+Build 24 · September 13, 2026 · Available to external TestFlight testers.
 
 #### Settings
 

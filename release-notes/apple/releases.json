@@ -6,7 +6,7 @@
       "version": "1.0.0",
       "build": "24",
       "date": "2026-09-13",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
       "notes": "release-notes/apple/mac/1.0.0-build-24.md"
     },
@@ -15,7 +15,7 @@
       "version": "1.0.0",
       "build": "24",
       "date": "2026-09-13",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
       "notes": "release-notes/apple/iphone/1.0.0-build-24.md"
     },
@@ -24,7 +24,7 @@
       "version": "1.0.0",
       "build": "24",
       "date": "2026-09-13",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
       "notes": "release-notes/apple/ipad/1.0.0-build-24.md"
     },
@@ -33,7 +33,7 @@
       "version": "1.0.0",
       "build": "24",
       "date": "2026-09-13",
-      "status": "release-candidate",
+      "status": "testflight",
       "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-24.md"
     },
