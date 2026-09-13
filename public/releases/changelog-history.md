@@ -1,12 +1,168 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled September 9, 2026 from App Store Connect build records, saved Apple testing notes, GitHub Releases and signed Android manifest history.
-
-Coverage: 34 processed Apple binaries (universal iOS is shown separately for iPhone and iPad), one rejected Apple TV upload, and all 19 published Android releases. Android TV, Google TV and Android-based Fire TV share one release line. Unpublished Android version gaps and unused Apple platform/build combinations are not fabricated. Availability is a September 9 snapshot.
-
-Apple build 2 was TV-only; build 6 was Mac-only. Mac build 4 is expired; Apple TV build 1 was rejected. Mac build 12 remains a candidate, while iPhone/iPad and Apple TV build 12 are in external TestFlight.
+Compiled September 13, 2026. Historical entries preserve release scope and availability notes; build 24 is a candidate until Apple confirms external testing. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## iPhone
+
+### 1.0.0 · build 24 · 2026-09-13 · release-candidate
+
+
+Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.
+
+#### Settings
+
+- Combined detail-page and episode display options.
+- Moved Content Titles to Home Screen & Branches.
+- Joined tracking, watchlist and favorite preferences with Connected Services.
+- Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.
+- Put metadata language, source preference, enrichment and poster options directly on Metadata & Artwork. Advanced field routing and rating icons remain separate.
+
+#### Browsing and playback
+
+- Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.
+- Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.
+- System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.
+- Improved source-loading progress and buffered VOD timeline feedback.
+- Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.
+
+#### iPhone and iPad
+
+- Includes detail-page spacing, compact action layout, episode artwork/layout and haptic refinements.
+- On-device transcription uses the selected audio track and language where the feature is available, with cancellation and separate track caches.
+
+#### Please test
+
+Check settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.
+
+### 1.0.0 · build 23 · 2026-09-13 · testflight
+
+
+Build 23 · 2026-09-13 · Internal TestFlight build.
+
+#### Settings organization and credential consistency
+
+Combined episode options with Detail Page Display. Moved Content Titles to Home Screen & Branches. Joined tracking and list preferences with Connected Services. Metadata & Artwork exposes preferences directly, with only advanced editors nested. Metadata and artwork credential pages share a consistent status, credential, documentation and removal layout. Existing preference values and scopes are preserved.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 22 · 2026-09-13 · testflight
+
+
+Build 22 · 2026-09-13 · Internal TestFlight build.
+
+#### Home loading and artwork refinement
+
+Improved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 21 · 2026-09-12 · testflight
+
+
+Build 21 · 2026-09-12 · Internal TestFlight build.
+
+#### Mac startup and shared regression update
+
+Internal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 20 · 2026-09-12 · testflight
+
+
+Build 20 · 2026-09-12 · Internal TestFlight build.
+
+#### Poster calendar and live guide refinements
+
+Added poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 18 · 2026-09-12 · testflight
+
+
+Build 18 · 2026-09-12 · Internal TestFlight build.
+
+#### Home browsing and poster focus
+
+Internal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 17 · 2026-09-12 · testflight
+
+
+Build 17 · 2026-09-12 · Internal TestFlight build.
+
+#### Source-based Library branches
+
+Library presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 16 · 2026-09-12 · testflight
+
+
+Build 16 · 2026-09-12 · Internal TestFlight build.
+
+#### Guided Plex sign-in and Library customization
+
+Added guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.
+
+Library customization opens in a dedicated sheet; Cancel discards edits and Done saves them.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 15 · 2026-09-12 · testflight
+
+
+Build 15 · 2026-09-12 · Internal TestFlight build.
+
+#### Internal regression snapshot
+
+Internal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 14 · 2026-09-10 · testflight
+
+
+Build 14 · September 10, 2026 · Available to external testers on TestFlight.
+
+#### Subtitles and playback
+
+- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
+- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
+- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
+- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
+- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
+- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
+
+#### Details and ratings
+
+- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
+- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
+- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
+
+#### Profiles and setup
+
+- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
+- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
+- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
+
+#### iPhone and iPad
+
+- Fixed previous/next live-channel edge swipes competing with other player gestures. Short pulls cancel, and control lock blocks channel changes while keeping Unlock accessible.
+- Double taps now show a curved translucent edge panel with the configured seek interval.
+- Brightness and device volume use compact vertical Liquid Glass level bars, with solid fallbacks for Reduce Transparency. Feedback clears after release or interrupted gestures; the volume display follows acknowledged device output.
+- Improved source-panel contrast over video, including the Playing row.
+- Reduced the Watching Now banner's usual height from 92 to 64 points while allowing it to grow for episode text and accessibility sizes.
+
+#### Please test
+
+Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
+
+Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
 
 ### 1.0.0 · build 13 · 2026-09-09 · testflight
 
@@ -28,7 +184,6 @@ IPHONE/IPAD: Library, Downloads, Local Files, WebDAV and Media Servers now use c
 PLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation.
 
 Known limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.
-
 
 ### 1.0.0 · build 12 · 2026-09-09 · testflight
 
@@ -222,6 +377,166 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 24 · 2026-09-13 · release-candidate
+
+
+Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.
+
+#### Settings
+
+- Combined detail-page and episode display options.
+- Moved Content Titles to Home Screen & Branches.
+- Joined tracking, watchlist and favorite preferences with Connected Services.
+- Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.
+- Put metadata language, source preference, enrichment and poster options directly on Metadata & Artwork. Advanced field routing and rating icons remain separate.
+
+#### Browsing and playback
+
+- Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.
+- Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.
+- System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.
+- Improved source-loading progress and buffered VOD timeline feedback.
+- Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.
+
+#### iPhone and iPad
+
+- Includes detail-page spacing, compact action layout, episode artwork/layout and haptic refinements.
+- On-device transcription uses the selected audio track and language where the feature is available, with cancellation and separate track caches.
+
+#### Please test
+
+Check settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.
+
+### 1.0.0 · build 23 · 2026-09-13 · testflight
+
+
+Build 23 · 2026-09-13 · Internal TestFlight build.
+
+#### Settings organization and credential consistency
+
+Combined episode options with Detail Page Display. Moved Content Titles to Home Screen & Branches. Joined tracking and list preferences with Connected Services. Metadata & Artwork exposes preferences directly, with only advanced editors nested. Metadata and artwork credential pages share a consistent status, credential, documentation and removal layout. Existing preference values and scopes are preserved.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 22 · 2026-09-13 · testflight
+
+
+Build 22 · 2026-09-13 · Internal TestFlight build.
+
+#### Home loading and artwork refinement
+
+Improved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 21 · 2026-09-12 · testflight
+
+
+Build 21 · 2026-09-12 · Internal TestFlight build.
+
+#### Mac startup and shared regression update
+
+Internal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 20 · 2026-09-12 · testflight
+
+
+Build 20 · 2026-09-12 · Internal TestFlight build.
+
+#### Poster calendar and live guide refinements
+
+Added poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 18 · 2026-09-12 · testflight
+
+
+Build 18 · 2026-09-12 · Internal TestFlight build.
+
+#### Home browsing and poster focus
+
+Internal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 17 · 2026-09-12 · testflight
+
+
+Build 17 · 2026-09-12 · Internal TestFlight build.
+
+#### Source-based Library branches
+
+Library presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 16 · 2026-09-12 · testflight
+
+
+Build 16 · 2026-09-12 · Internal TestFlight build.
+
+#### Guided Plex sign-in and Library customization
+
+Added guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.
+
+Library customization opens in a dedicated sheet; Cancel discards edits and Done saves them.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 15 · 2026-09-12 · testflight
+
+
+Build 15 · 2026-09-12 · Internal TestFlight build.
+
+#### Internal regression snapshot
+
+Internal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 14 · 2026-09-10 · testflight
+
+
+Build 14 · September 10, 2026 · Available to external testers on TestFlight.
+
+#### Subtitles and playback
+
+- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
+- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
+- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
+- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
+- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
+- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
+
+#### Details and ratings
+
+- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
+- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
+- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
+
+#### Profiles and setup
+
+- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
+- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
+- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
+
+#### iPhone and iPad
+
+- Fixed previous/next live-channel edge swipes competing with other player gestures. Short pulls cancel, and control lock blocks channel changes while keeping Unlock accessible.
+- Double taps now show a curved translucent edge panel with the configured seek interval.
+- Brightness and device volume use compact vertical Liquid Glass level bars, with solid fallbacks for Reduce Transparency. Feedback clears after release or interrupted gestures; the volume display follows acknowledged device output.
+- Improved source-panel contrast over video, including the Playing row.
+- Reduced the Watching Now banner's usual height from 92 to 64 points while allowing it to grow for episode text and accessibility sizes.
+
+#### Please test
+
+Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
+
+Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
+
 ### 1.0.0 · build 13 · 2026-09-09 · testflight
 
 
@@ -242,7 +557,6 @@ IPHONE/IPAD: Library, Downloads, Local Files, WebDAV and Media Servers now use c
 PLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation.
 
 Known limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.
-
 
 ### 1.0.0 · build 12 · 2026-09-09 · testflight
 
@@ -435,6 +749,160 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 24 · 2026-09-13 · release-candidate
+
+
+Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.
+
+#### Settings
+
+- Combined detail-page and episode display options.
+- Moved Content Titles to Home Screen & Branches.
+- Joined tracking, watchlist and favorite preferences with Connected Services.
+- Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.
+- Put metadata language, source preference, enrichment and poster options directly on Metadata & Artwork. Advanced field routing and rating icons remain separate.
+
+#### Browsing and playback
+
+- Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.
+- Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.
+- System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.
+- Improved source-loading progress and buffered VOD timeline feedback.
+- Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.
+
+#### Apple TV
+
+- Hero metadata and backdrop switch as a coherent presentation. Neighbour preparation starts sooner; missing artwork resolves before a final fallback is committed.
+- Repeated cached poster navigation is faster. Physical testing showed many prepared commits under 50 ms, but uncached provider requests can still take longer; these are application timings, not frame-by-frame measurements.
+- View All appears at branch ends and follows poster focus styling.
+
+#### Please test
+
+Check settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.
+
+### 1.0.0 · build 22 · 2026-09-13 · testflight
+
+
+Build 22 · 2026-09-13 · Internal TestFlight build.
+
+#### Home loading and artwork refinement
+
+Improved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.
+
+Core metadata and the decoded backdrop are committed together. Immediate neighbouring heroes are preloaded with bounded work. View All is shown only at branch ends. Cold metadata requests can still delay presentation.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 21 · 2026-09-12 · testflight
+
+
+Build 21 · 2026-09-12 · Internal TestFlight build.
+
+#### Mac startup and shared regression update
+
+Internal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 20 · 2026-09-12 · testflight
+
+
+Build 20 · 2026-09-12 · Internal TestFlight build.
+
+#### Poster calendar and live guide refinements
+
+Added poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 18 · 2026-09-12 · testflight
+
+
+Build 18 · 2026-09-12 · Internal TestFlight build.
+
+#### Home browsing and poster focus
+
+Internal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.
+
+View all received the same poster focus, lift and Depth Effect treatment as nearby content. This build offered controls at both branch ends; build 22 later changed them to trailing-only.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 17 · 2026-09-12 · testflight
+
+
+Build 17 · 2026-09-12 · Internal TestFlight build.
+
+#### Source-based Library branches
+
+Library presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.
+
+Siri Remote navigation supports Library actions, source headings, horizontal title rows, full catalogs and Menu return.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 16 · 2026-09-12 · testflight
+
+
+Build 16 · 2026-09-12 · Internal TestFlight build.
+
+#### Guided Plex sign-in and Library customization
+
+Added guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.
+
+Plex uses a browser approval code at plex.tv/link, followed by server selection.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 15 · 2026-09-12 · testflight
+
+
+Build 15 · 2026-09-12 · Internal TestFlight build.
+
+#### Internal regression snapshot
+
+Internal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 14 · 2026-09-10 · testflight
+
+
+Build 14 · September 10, 2026 · Available to external testers on TestFlight.
+
+#### Subtitles and playback
+
+- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
+- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
+- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
+- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
+- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
+- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
+
+#### Details and ratings
+
+- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
+- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
+- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
+
+#### Profiles and setup
+
+- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
+- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
+- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
+
+#### Apple TV
+
+- The changelog opens in a full-screen reader with larger text, individually focusable reading blocks, and a fixed Done action. Back returns to the previous screen.
+- Fixed guide focus discovery so Right can reach later programmes and reveal them while the pinned channel rail stays clear.
+- The in-player guide supports remote timeline browsing, pinned guide shortcuts and Menu/Back return to the same playback session.
+
+#### Please test
+
+Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
+
+Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
+
 ### 1.0.0 · build 13 · 2026-09-09 · testflight
 
 
@@ -455,7 +923,6 @@ APPLE TV: A guide can be the first Home branch without waiting for poster artwor
 PLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation with the remote.
 
 Known limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.
-
 
 ### 1.0.0 · build 12 · 2026-09-09 · testflight
 
@@ -657,10 +1124,172 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
-### 1.0.0 · build 13 · 2026-09-09 · release-candidate
+### 1.0.0 · build 24 · 2026-09-13 · release-candidate
 
 
-Build 13 · September 9, 2026 · Uploaded to TestFlight and awaiting Apple beta review; not yet available to external testers.
+Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.
+
+#### Settings
+
+- Combined detail-page and episode display options.
+- Moved Content Titles to Home Screen & Branches.
+- Joined tracking, watchlist and favorite preferences with Connected Services.
+- Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.
+- Put metadata language, source preference, enrichment and poster options directly on Metadata & Artwork. Advanced field routing and rating icons remain separate.
+
+#### Browsing and playback
+
+- Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.
+- Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.
+- System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.
+- Improved source-loading progress and buffered VOD timeline feedback.
+- Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.
+
+#### Mac
+
+- Includes batched household credential reads for profile startup, cached Home presentation, native detail controls and player refinements.
+- Left/Right keys switch live channels when the player is active; guide navigation and Option-arrow seeking retain their own behavior.
+
+#### Please test
+
+Check settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.
+
+### 1.0.0 · build 22 · 2026-09-13 · testflight
+
+
+Build 22 · 2026-09-13 · Internal TestFlight build.
+
+#### Home loading and artwork refinement
+
+Improved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 21 · 2026-09-12 · testflight
+
+
+Build 21 · 2026-09-12 · Internal TestFlight build.
+
+#### Mac startup and shared regression update
+
+Internal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.
+
+Profile startup batches household credential reads and removes a redundant routing count query. This requires no schema migration. Also includes Mac player, Hero picker and Liquid Glass refinements.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 20 · 2026-09-12 · testflight
+
+
+Build 20 · 2026-09-12 · Internal TestFlight build.
+
+#### Poster calendar and live guide refinements
+
+Added poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.
+
+Left/Right keys switch live channels in windowed and fullscreen playback, without retuning while browsing the guide or player panels. Option-arrow seeking remains unchanged.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 19 · 2026-09-12 · testflight
+
+
+Build 19 · 2026-09-12 · Internal TestFlight build.
+
+#### Faster cached Home on Mac
+
+Cached Home content remains visible during refresh. Hero enrichment no longer blocks the first display, and profile changes keep cached content isolated. The first completed load seeds the Home cache.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 18 · 2026-09-12 · testflight
+
+
+Build 18 · 2026-09-12 · Internal TestFlight build.
+
+#### Home browsing and poster focus
+
+Internal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 17 · 2026-09-12 · testflight
+
+
+Build 17 · 2026-09-12 · Internal TestFlight build.
+
+#### Source-based Library branches
+
+Library presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.
+
+Home, Library, Live and Search have visible navigation labels and one Settings action. Destination-specific menus and search controls leave the toolbar when switching away.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 16 · 2026-09-12 · testflight
+
+
+Build 16 · 2026-09-12 · Internal TestFlight build.
+
+#### Guided Plex sign-in and Library customization
+
+Added guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 15 · 2026-09-12 · testflight
+
+
+Build 15 · 2026-09-12 · Internal TestFlight build.
+
+#### Internal regression snapshot
+
+Internal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.
+
+This historical entry records the internal build; it does not imply that this build was distributed externally.
+
+### 1.0.0 · build 14 · 2026-09-10 · testflight
+
+
+Build 14 · September 10, 2026 · Available to external testers on TestFlight.
+
+#### Subtitles and playback
+
+- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
+- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
+- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
+- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
+- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
+- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
+
+#### Details and ratings
+
+- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
+- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
+- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
+
+#### Profiles and setup
+
+- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
+- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
+- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
+
+#### Mac
+
+- Improved source-panel contrast over video, including the Playing row.
+- Added the missing push entitlement for CloudKit delivery and fixed household reconciliation failing on protected legacy Keychain entries without changing their permissions.
+- Sync-status rows expose separate, current accessibility values instead of one combined stale reading.
+
+#### Please test
+
+Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
+
+Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
+
+### 1.0.0 · build 13 · 2026-09-09 · testflight
+
+
+Build 13 · September 9, 2026 · Available to external testers on TestFlight. Availability verified September 10, 2026.
 
 #### Changes
 
@@ -675,7 +1304,6 @@ LAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching 
 PLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation.
 
 Known limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.
-
 
 ### 1.0.0 · build 12 · 2026-09-09 · release-candidate
 
@@ -885,7 +1513,7 @@ Processed successfully. External TestFlight availability is not confirmed for th
 
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
-## Android TV / Google TV / Fire TV
+## Android TV, Google TV and Fire TV
 
 ### 1.2.85 · build 88 · 2026-09-09 · released
 
@@ -911,7 +1539,6 @@ Build 88 · September 9, 2026
 #### Testing notes
 
 38 Home unit tests and two focused emulator UI tests passed during feature verification. The ordinary app creation flow saved guide source, rows and hours. Populated UI action tests used deterministic fixtures; real provider playback and broad hardware qualification are not certified. Previously documented limitations remain.
-
 
 ### 1.2.84 · build 87 · 2026-09-09 · released
 
@@ -1275,158 +1902,3 @@ Initial GitHub update-channel bridge for Cedar Android TV.
 
 This build uses Cedar's permanent Android release signer. Existing development-signed installations require one manual replacement; subsequent versions can update from inside Cedar.
 
-## Apple 1.0.0 · build 14 — September 10, 2026
-
-Available in external TestFlight for iPhone, iPad, Apple TV and native Apple silicon Mac.
-
-### Cedar for iPhone 1.0.0
-
-Build 14 · September 10, 2026 · Available to external testers on TestFlight.
-
-## Subtitles and playback
-
-- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
-- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
-- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
-- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
-- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
-- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
-
-## Details and ratings
-
-- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
-- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
-- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
-
-## Profiles and setup
-
-- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
-- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
-- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
-
-## iPhone and iPad
-
-- Fixed previous/next live-channel edge swipes competing with other player gestures. Short pulls cancel, and control lock blocks channel changes while keeping Unlock accessible.
-- Double taps now show a curved translucent edge panel with the configured seek interval.
-- Brightness and device volume use compact vertical Liquid Glass level bars, with solid fallbacks for Reduce Transparency. Feedback clears after release or interrupted gestures; the volume display follows acknowledged device output.
-- Improved source-panel contrast over video, including the Playing row.
-- Reduced the Watching Now banner's usual height from 92 to 64 points while allowing it to grow for episode text and accessibility sizes.
-
-## Please test
-
-Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
-
-Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
-
-### Cedar for iPad 1.0.0
-
-Build 14 · September 10, 2026 · Available to external testers on TestFlight.
-
-## Subtitles and playback
-
-- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
-- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
-- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
-- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
-- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
-- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
-
-## Details and ratings
-
-- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
-- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
-- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
-
-## Profiles and setup
-
-- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
-- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
-- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
-
-## iPhone and iPad
-
-- Fixed previous/next live-channel edge swipes competing with other player gestures. Short pulls cancel, and control lock blocks channel changes while keeping Unlock accessible.
-- Double taps now show a curved translucent edge panel with the configured seek interval.
-- Brightness and device volume use compact vertical Liquid Glass level bars, with solid fallbacks for Reduce Transparency. Feedback clears after release or interrupted gestures; the volume display follows acknowledged device output.
-- Improved source-panel contrast over video, including the Playing row.
-- Reduced the Watching Now banner's usual height from 92 to 64 points while allowing it to grow for episode text and accessibility sizes.
-
-## Please test
-
-Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
-
-Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
-
-### Cedar for Apple TV 1.0.0
-
-Build 14 · September 10, 2026 · Available to external testers on TestFlight.
-
-## Subtitles and playback
-
-- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
-- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
-- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
-- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
-- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
-- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
-
-## Details and ratings
-
-- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
-- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
-- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
-
-## Profiles and setup
-
-- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
-- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
-- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
-
-## Apple TV
-
-- The changelog opens in a full-screen reader with larger text, individually focusable reading blocks, and a fixed Done action. Back returns to the previous screen.
-- Fixed guide focus discovery so Right can reach later programmes and reveal them while the pinned channel rail stays clear.
-- The in-player guide supports remote timeline browsing, pinned guide shortcuts and Menu/Back return to the same playback session.
-
-## Please test
-
-Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
-
-Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.
-
-### Cedar for Mac 1.0.0
-
-Build 14 · September 10, 2026 · Available to external testers on TestFlight.
-
-## Subtitles and playback
-
-- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.
-- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.
-- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.
-- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.
-- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.
-- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.
-
-## Details and ratings
-
-- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.
-- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.
-- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.
-
-## Profiles and setup
-
-- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.
-- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.
-- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.
-
-## Mac
-
-- Improved source-panel contrast over video, including the Playing row.
-- Added the missing push entitlement for CloudKit delivery and fixed household reconciliation failing on protected legacy Keychain entries without changing their permissions.
-- Sync-status rows expose separate, current accessibility values instead of one combined stale reading.
-
-## Please test
-
-Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.
-
-Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.

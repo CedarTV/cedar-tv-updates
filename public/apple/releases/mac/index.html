@@ -39,6 +39,200 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-24">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-release-candidate">Release candidate</span>
+              <span>Version 1.0.0</span>
+              <span>Build 24</span>
+              <time datetime="2026-09-13">September 13, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.</p>
+            <h3>Settings</h3>
+            <ul>
+            <li>Combined detail-page and episode display options.</li>
+            <li>Moved Content Titles to Home Screen &amp; Branches.</li>
+            <li>Joined tracking, watchlist and favorite preferences with Connected Services.</li>
+            <li>Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.</li>
+            <li>Put metadata language, source preference, enrichment and poster options directly on Metadata &amp; Artwork. Advanced field routing and rating icons remain separate.</li>
+            </ul>
+            <h3>Browsing and playback</h3>
+            <ul>
+            <li>Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.</li>
+            <li>Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.</li>
+            <li>System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.</li>
+            <li>Improved source-loading progress and buffered VOD timeline feedback.</li>
+            <li>Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.</li>
+            </ul>
+            <h3>Mac</h3>
+            <ul>
+            <li>Includes batched household credential reads for profile startup, cached Home presentation, native detail controls and player refinements.</li>
+            <li>Left/Right keys switch live channels when the player is active; guide navigation and Option-arrow seeking retain their own behavior.</li>
+            </ul>
+            <h3>Please test</h3>
+            <p>Check settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-22">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 22</span>
+              <time datetime="2026-09-13">September 13, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 22 · 2026-09-13 · Internal TestFlight build.</p>
+            <h3>Home loading and artwork refinement</h3>
+            <p>Improved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.</p>
+            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-21">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Mac startup and shared regression update.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 21</span>
+              <time datetime="2026-09-12">September 12, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 21 · 2026-09-12 · Internal TestFlight build.</p>
+            <h3>Mac startup and shared regression update</h3>
+            <p>Internal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.</p>
+            <p>Profile startup batches household credential reads and removes a redundant routing count query. This requires no schema migration. Also includes Mac player, Hero picker and Liquid Glass refinements.</p>
+            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-20">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Poster calendar and live guide refinements.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 20</span>
+              <time datetime="2026-09-12">September 12, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 20 · 2026-09-12 · Internal TestFlight build.</p>
+            <h3>Poster calendar and live guide refinements</h3>
+            <p>Added poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.</p>
+            <p>Left/Right keys switch live channels in windowed and fullscreen playback, without retuning while browsing the guide or player panels. Option-arrow seeking remains unchanged.</p>
+            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-19">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Faster cached Home on Mac. Internal update with platform-specific browsing and playback checks.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 19</span>
+              <time datetime="2026-09-12">September 12, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 19 · 2026-09-12 · Internal TestFlight build.</p>
+            <h3>Faster cached Home on Mac</h3>
+            <p>Cached Home content remains visible during refresh. Hero enrichment no longer blocks the first display, and profile changes keep cached content isolated. The first completed load seeds the Home cache.</p>
+            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-18">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 18</span>
+              <time datetime="2026-09-12">September 12, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 18 · 2026-09-12 · Internal TestFlight build.</p>
+            <h3>Home browsing and poster focus</h3>
+            <p>Internal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.</p>
+            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-17">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Source-based Library branches. Internal update with platform-specific browsing and playback checks.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 17</span>
+              <time datetime="2026-09-12">September 12, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 17 · 2026-09-12 · Internal TestFlight build.</p>
+            <h3>Source-based Library branches</h3>
+            <p>Library presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.</p>
+            <p>Home, Library, Live and Search have visible navigation labels and one Settings action. Destination-specific menus and search controls leave the toolbar when switching away.</p>
+            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-16">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Guided Plex sign-in and Library customization.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 16</span>
+              <time datetime="2026-09-12">September 12, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 16 · 2026-09-12 · Internal TestFlight build.</p>
+            <h3>Guided Plex sign-in and Library customization</h3>
+            <p>Added guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.</p>
+            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-15">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Internal regression snapshot. Internal update with platform-specific browsing and playback checks.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 15</span>
+              <time datetime="2026-09-12">September 12, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 15 · 2026-09-12 · Internal TestFlight build.</p>
+            <h3>Internal regression snapshot</h3>
+            <p>Internal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.</p>
+            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-14">
           <header>
             <p class="eyebrow">Mac</p>

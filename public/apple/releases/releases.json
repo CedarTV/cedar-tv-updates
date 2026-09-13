@@ -24,6 +24,366 @@
   ],
   "releases": [
     {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "24",
+      "date": "2026-09-13",
+      "status": "release-candidate",
+      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.\n\n## Settings\n\n- Combined detail-page and episode display options.\n- Moved Content Titles to Home Screen & Branches.\n- Joined tracking, watchlist and favorite preferences with Connected Services.\n- Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.\n- Put metadata language, source preference, enrichment and poster options directly on Metadata & Artwork. Advanced field routing and rating icons remain separate.\n\n## Browsing and playback\n\n- Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.\n- Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.\n- System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.\n- Improved source-loading progress and buffered VOD timeline feedback.\n- Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.\n\n## Mac\n\n- Includes batched household credential reads for profile startup, cached Home presentation, native detail controls and player refinements.\n- Left/Right keys switch live channels when the player is active; guide navigation and Option-arrow seeking retain their own behavior.\n\n## Please test\n\nCheck settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-24"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "24",
+      "date": "2026-09-13",
+      "status": "release-candidate",
+      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.\n\n## Settings\n\n- Combined detail-page and episode display options.\n- Moved Content Titles to Home Screen & Branches.\n- Joined tracking, watchlist and favorite preferences with Connected Services.\n- Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.\n- Put metadata language, source preference, enrichment and poster options directly on Metadata & Artwork. Advanced field routing and rating icons remain separate.\n\n## Browsing and playback\n\n- Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.\n- Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.\n- System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.\n- Improved source-loading progress and buffered VOD timeline feedback.\n- Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.\n\n## iPhone and iPad\n\n- Includes detail-page spacing, compact action layout, episode artwork/layout and haptic refinements.\n- On-device transcription uses the selected audio track and language where the feature is available, with cancellation and separate track caches.\n\n## Please test\n\nCheck settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-24"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "24",
+      "date": "2026-09-13",
+      "status": "release-candidate",
+      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.\n\n## Settings\n\n- Combined detail-page and episode display options.\n- Moved Content Titles to Home Screen & Branches.\n- Joined tracking, watchlist and favorite preferences with Connected Services.\n- Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.\n- Put metadata language, source preference, enrichment and poster options directly on Metadata & Artwork. Advanced field routing and rating icons remain separate.\n\n## Browsing and playback\n\n- Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.\n- Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.\n- System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.\n- Improved source-loading progress and buffered VOD timeline feedback.\n- Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.\n\n## iPhone and iPad\n\n- Includes detail-page spacing, compact action layout, episode artwork/layout and haptic refinements.\n- On-device transcription uses the selected audio track and language where the feature is available, with cancellation and separate track caches.\n\n## Please test\n\nCheck settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-24"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "24",
+      "date": "2026-09-13",
+      "status": "release-candidate",
+      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 24 · September 13, 2026 · External TestFlight release candidate; availability awaits Apple processing and beta review.\n\n## Settings\n\n- Combined detail-page and episode display options.\n- Moved Content Titles to Home Screen & Branches.\n- Joined tracking, watchlist and favorite preferences with Connected Services.\n- Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.\n- Put metadata language, source preference, enrichment and poster options directly on Metadata & Artwork. Advanced field routing and rating icons remain separate.\n\n## Browsing and playback\n\n- Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.\n- Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.\n- System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.\n- Improved source-loading progress and buffered VOD timeline feedback.\n- Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.\n\n## Apple TV\n\n- Hero metadata and backdrop switch as a coherent presentation. Neighbour preparation starts sooner; missing artwork resolves before a final fallback is committed.\n- Repeated cached poster navigation is faster. Physical testing showed many prepared commits under 50 ms, but uncached provider requests can still take longer; these are application timings, not frame-by-frame measurements.\n- View All appears at branch ends and follows poster focus styling.\n\n## Please test\n\nCheck settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-24"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "23",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Settings organization and credential consistency.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 23 · 2026-09-13 · Internal TestFlight build.\n\n## Settings organization and credential consistency\n\nCombined episode options with Detail Page Display. Moved Content Titles to Home Screen & Branches. Joined tracking and list preferences with Connected Services. Metadata & Artwork exposes preferences directly, with only advanced editors nested. Metadata and artwork credential pages share a consistent status, credential, documentation and removal layout. Existing preference values and scopes are preserved.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-23"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "23",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Settings organization and credential consistency.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 23 · 2026-09-13 · Internal TestFlight build.\n\n## Settings organization and credential consistency\n\nCombined episode options with Detail Page Display. Moved Content Titles to Home Screen & Branches. Joined tracking and list preferences with Connected Services. Metadata & Artwork exposes preferences directly, with only advanced editors nested. Metadata and artwork credential pages share a consistent status, credential, documentation and removal layout. Existing preference values and scopes are preserved.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-23"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "22",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 22 · 2026-09-13 · Internal TestFlight build.\n\n## Home loading and artwork refinement\n\nImproved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-22"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "22",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 22 · 2026-09-13 · Internal TestFlight build.\n\n## Home loading and artwork refinement\n\nImproved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-22"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "22",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 22 · 2026-09-13 · Internal TestFlight build.\n\n## Home loading and artwork refinement\n\nImproved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-22"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "22",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 22 · 2026-09-13 · Internal TestFlight build.\n\n## Home loading and artwork refinement\n\nImproved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.\n\nCore metadata and the decoded backdrop are committed together. Immediate neighbouring heroes are preloaded with bounded work. View All is shown only at branch ends. Cold metadata requests can still delay presentation.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-22"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "21",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Mac startup and shared regression update.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 21 · 2026-09-12 · Internal TestFlight build.\n\n## Mac startup and shared regression update\n\nInternal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.\n\nProfile startup batches household credential reads and removes a redundant routing count query. This requires no schema migration. Also includes Mac player, Hero picker and Liquid Glass refinements.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-21"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "21",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Mac startup and shared regression update.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 21 · 2026-09-12 · Internal TestFlight build.\n\n## Mac startup and shared regression update\n\nInternal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-21"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "21",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Mac startup and shared regression update.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 21 · 2026-09-12 · Internal TestFlight build.\n\n## Mac startup and shared regression update\n\nInternal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-21"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "21",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Mac startup and shared regression update.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 21 · 2026-09-12 · Internal TestFlight build.\n\n## Mac startup and shared regression update\n\nInternal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-21"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "20",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Poster calendar and live guide refinements.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 20 · 2026-09-12 · Internal TestFlight build.\n\n## Poster calendar and live guide refinements\n\nAdded poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.\n\nLeft/Right keys switch live channels in windowed and fullscreen playback, without retuning while browsing the guide or player panels. Option-arrow seeking remains unchanged.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-20"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "20",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Poster calendar and live guide refinements.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 20 · 2026-09-12 · Internal TestFlight build.\n\n## Poster calendar and live guide refinements\n\nAdded poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-20"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "20",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Poster calendar and live guide refinements.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 20 · 2026-09-12 · Internal TestFlight build.\n\n## Poster calendar and live guide refinements\n\nAdded poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-20"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "20",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Poster calendar and live guide refinements.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 20 · 2026-09-12 · Internal TestFlight build.\n\n## Poster calendar and live guide refinements\n\nAdded poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-20"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "19",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Faster cached Home on Mac. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 19 · 2026-09-12 · Internal TestFlight build.\n\n## Faster cached Home on Mac\n\nCached Home content remains visible during refresh. Hero enrichment no longer blocks the first display, and profile changes keep cached content isolated. The first completed load seeds the Home cache.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-19"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "18",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 18 · 2026-09-12 · Internal TestFlight build.\n\n## Home browsing and poster focus\n\nInternal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-18"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "18",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 18 · 2026-09-12 · Internal TestFlight build.\n\n## Home browsing and poster focus\n\nInternal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-18"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "18",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 18 · 2026-09-12 · Internal TestFlight build.\n\n## Home browsing and poster focus\n\nInternal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-18"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "18",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 18 · 2026-09-12 · Internal TestFlight build.\n\n## Home browsing and poster focus\n\nInternal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.\n\nView all received the same poster focus, lift and Depth Effect treatment as nearby content. This build offered controls at both branch ends; build 22 later changed them to trailing-only.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-18"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "17",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Source-based Library branches. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 17 · 2026-09-12 · Internal TestFlight build.\n\n## Source-based Library branches\n\nLibrary presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.\n\nHome, Library, Live and Search have visible navigation labels and one Settings action. Destination-specific menus and search controls leave the toolbar when switching away.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-17"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "17",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Source-based Library branches. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 17 · 2026-09-12 · Internal TestFlight build.\n\n## Source-based Library branches\n\nLibrary presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-17"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "17",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Source-based Library branches. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 17 · 2026-09-12 · Internal TestFlight build.\n\n## Source-based Library branches\n\nLibrary presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-17"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "17",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Source-based Library branches. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 17 · 2026-09-12 · Internal TestFlight build.\n\n## Source-based Library branches\n\nLibrary presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.\n\nSiri Remote navigation supports Library actions, source headings, horizontal title rows, full catalogs and Menu return.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-17"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "16",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Guided Plex sign-in and Library customization.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 16 · 2026-09-12 · Internal TestFlight build.\n\n## Guided Plex sign-in and Library customization\n\nAdded guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-16"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "16",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Guided Plex sign-in and Library customization.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 16 · 2026-09-12 · Internal TestFlight build.\n\n## Guided Plex sign-in and Library customization\n\nAdded guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.\n\nLibrary customization opens in a dedicated sheet; Cancel discards edits and Done saves them.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-16"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "16",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Guided Plex sign-in and Library customization.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 16 · 2026-09-12 · Internal TestFlight build.\n\n## Guided Plex sign-in and Library customization\n\nAdded guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.\n\nLibrary customization opens in a dedicated sheet; Cancel discards edits and Done saves them.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-16"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "16",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Guided Plex sign-in and Library customization.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 16 · 2026-09-12 · Internal TestFlight build.\n\n## Guided Plex sign-in and Library customization\n\nAdded guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.\n\nPlex uses a browser approval code at plex.tv/link, followed by server selection.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-16"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "15",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Internal regression snapshot. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 15 · 2026-09-12 · Internal TestFlight build.\n\n## Internal regression snapshot\n\nInternal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-15"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "15",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Internal regression snapshot. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 15 · 2026-09-12 · Internal TestFlight build.\n\n## Internal regression snapshot\n\nInternal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-15"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "15",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Internal regression snapshot. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 15 · 2026-09-12 · Internal TestFlight build.\n\n## Internal regression snapshot\n\nInternal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-15"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "15",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Internal regression snapshot. Internal update with platform-specific browsing and playback checks.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 15 · 2026-09-12 · Internal TestFlight build.\n\n## Internal regression snapshot\n\nInternal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.\n\nThis historical entry records the internal build; it does not imply that this build was distributed externally.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-15"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "14",
+      "date": "2026-09-10",
+      "status": "testflight",
+      "summary": "Subtitle selection and timing fixes, an in-player guide, clearer source selection, correct collection artwork/order, profile setup, and household/Keychain accessibility fixes.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 14 · September 10, 2026 · Available to external testers on TestFlight.\n\n## Subtitles and playback\n\n- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.\n- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.\n- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.\n- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.\n- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.\n- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.\n\n## Details and ratings\n\n- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.\n- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.\n- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.\n\n## Profiles and setup\n\n- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.\n- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.\n- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.\n\n## Mac\n\n- Improved source-panel contrast over video, including the Playing row.\n- Added the missing push entitlement for CloudKit delivery and fixed household reconciliation failing on protected legacy Keychain entries without changing their permissions.\n- Sync-status rows expose separate, current accessibility values instead of one combined stale reading.\n\n## Please test\n\nTest add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.\n\nSubtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-14"
+    },
+    {
       "platform": "iphone",
       "version": "1.0.0",
       "build": "14",
@@ -56,16 +416,6 @@
     {
       "platform": "mac",
       "version": "1.0.0",
-      "build": "14",
-      "date": "2026-09-10",
-      "status": "testflight",
-      "summary": "Subtitle selection and timing fixes, an in-player guide, clearer source selection, correct collection artwork/order, profile setup, and household/Keychain accessibility fixes.",
-      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 14 · September 10, 2026 · Available to external testers on TestFlight.\n\n## Subtitles and playback\n\n- Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.\n- Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.\n- Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.\n- Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.\n- Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.\n- Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.\n\n## Details and ratings\n\n- Fixed collection navigation retaining another movie's clearart title. Artwork results now belong to the selected movie and load request.\n- Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.\n- Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.\n\n## Profiles and setup\n\n- Add and manage profiles from Who's Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.\n- Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.\n- Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.\n\n## Mac\n\n- Improved source-panel contrast over video, including the Playing row.\n- Added the missing push entitlement for CloudKit delivery and fixed household reconciliation failing on protected legacy Keychain entries without changing their permissions.\n- Sync-status rows expose separate, current accessibility values instead of one combined stale reading.\n\n## Please test\n\nTest add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.\n\nSubtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.\n",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-14"
-    },
-    {
-      "platform": "mac",
-      "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
       "status": "testflight",
@@ -74,14 +424,14 @@
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-13"
     },
     {
-      "platform": "apple-tv",
+      "platform": "iphone",
       "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
       "status": "testflight",
-      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
-      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 13 · September 9, 2026 · Available to external testers in TestFlight.\n\n## Changes\n\nNEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.\n\nARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.\n\nLAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.\n\nAPPLE TV: A guide can be the first Home branch without waiting for poster artwork.\n\n## Testing\n\nPLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation with the remote.\n\nKnown limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.\n",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-13"
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 13 · September 9, 2026 · Available to external testers in TestFlight.\n\n## Changes\n\nNEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.\n\nARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.\n\nLAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.\n\nIPHONE/IPAD: Library, Downloads, Local Files, WebDAV and Media Servers now use compact centered navigation titles.\n\n## Testing\n\nPLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation.\n\nKnown limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-13"
     },
     {
       "platform": "ipad",
@@ -94,14 +444,14 @@
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-13"
     },
     {
-      "platform": "iphone",
+      "platform": "apple-tv",
       "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
       "status": "testflight",
-      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
-      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 13 · September 9, 2026 · Available to external testers in TestFlight.\n\n## Changes\n\nNEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.\n\nARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.\n\nLAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.\n\nIPHONE/IPAD: Library, Downloads, Local Files, WebDAV and Media Servers now use compact centered navigation titles.\n\n## Testing\n\nPLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation.\n\nKnown limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.\n",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-13"
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 13 · September 9, 2026 · Available to external testers in TestFlight.\n\n## Changes\n\nNEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.\n\nARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.\n\nLAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.\n\nAPPLE TV: A guide can be the first Home branch without waiting for poster artwork.\n\n## Testing\n\nPLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation with the remote.\n\nKnown limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-13"
     },
     {
       "platform": "mac",

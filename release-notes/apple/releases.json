@@ -2,6 +2,330 @@
   "schemaVersion": 1,
   "releases": [
     {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "24",
+      "date": "2026-09-13",
+      "status": "release-candidate",
+      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "notes": "release-notes/apple/mac/1.0.0-build-24.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "24",
+      "date": "2026-09-13",
+      "status": "release-candidate",
+      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-24.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "24",
+      "date": "2026-09-13",
+      "status": "release-candidate",
+      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-24.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "24",
+      "date": "2026-09-13",
+      "status": "release-candidate",
+      "summary": "Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-24.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "23",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Settings organization and credential consistency.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-23.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "23",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Settings organization and credential consistency.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-23.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "22",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/mac/1.0.0-build-22.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "22",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-22.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "22",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-22.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "22",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-22.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "21",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Mac startup and shared regression update.",
+      "notes": "release-notes/apple/mac/1.0.0-build-21.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "21",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Mac startup and shared regression update.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-21.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "21",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Mac startup and shared regression update.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-21.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "21",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Mac startup and shared regression update.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-21.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "20",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Poster calendar and live guide refinements.",
+      "notes": "release-notes/apple/mac/1.0.0-build-20.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "20",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Poster calendar and live guide refinements.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-20.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "20",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Poster calendar and live guide refinements.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-20.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "20",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Poster calendar and live guide refinements.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-20.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "19",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Faster cached Home on Mac. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/mac/1.0.0-build-19.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "18",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/mac/1.0.0-build-18.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "18",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-18.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "18",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-18.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "18",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-18.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "17",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Source-based Library branches. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/mac/1.0.0-build-17.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "17",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Source-based Library branches. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-17.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "17",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Source-based Library branches. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-17.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "17",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Source-based Library branches. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-17.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "16",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Guided Plex sign-in and Library customization.",
+      "notes": "release-notes/apple/mac/1.0.0-build-16.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "16",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Guided Plex sign-in and Library customization.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-16.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "16",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Guided Plex sign-in and Library customization.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-16.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "16",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Guided Plex sign-in and Library customization.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-16.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "15",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Internal regression snapshot. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/mac/1.0.0-build-15.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "15",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Internal regression snapshot. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-15.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "15",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Internal regression snapshot. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-15.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "15",
+      "date": "2026-09-12",
+      "status": "testflight",
+      "summary": "Internal regression snapshot. Internal update with platform-specific browsing and playback checks.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-15.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "14",
+      "date": "2026-09-10",
+      "status": "testflight",
+      "summary": "Subtitle selection and timing fixes, an in-player guide, clearer source selection, correct collection artwork/order, profile setup, and household/Keychain accessibility fixes.",
+      "notes": "release-notes/apple/mac/1.0.0-build-14.md"
+    },
+    {
       "platform": "iphone",
       "version": "1.0.0",
       "build": "14",
@@ -31,15 +355,6 @@
     {
       "platform": "mac",
       "version": "1.0.0",
-      "build": "14",
-      "date": "2026-09-10",
-      "status": "testflight",
-      "summary": "Subtitle selection and timing fixes, an in-player guide, clearer source selection, correct collection artwork/order, profile setup, and household/Keychain accessibility fixes.",
-      "notes": "release-notes/apple/mac/1.0.0-build-14.md"
-    },
-    {
-      "platform": "mac",
-      "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
       "status": "testflight",
@@ -47,13 +362,13 @@
       "notes": "release-notes/apple/mac/1.0.0-build-13.md"
     },
     {
-      "platform": "apple-tv",
+      "platform": "iphone",
       "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
       "status": "testflight",
-      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
-      "notes": "release-notes/apple/apple-tv/1.0.0-build-13.md"
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-13.md"
     },
     {
       "platform": "ipad",
@@ -65,13 +380,13 @@
       "notes": "release-notes/apple/ipad/1.0.0-build-13.md"
     },
     {
-      "platform": "iphone",
+      "platform": "apple-tv",
       "version": "1.0.0",
       "build": "13",
       "date": "2026-09-09",
       "status": "testflight",
-      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing, with compact centered Library titles.",
-      "notes": "release-notes/apple/iphone/1.0.0-build-13.md"
+      "summary": "Custom Home TV guides, bundled brand artwork and more consistent poster spacing.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-13.md"
     },
     {
       "platform": "mac",
