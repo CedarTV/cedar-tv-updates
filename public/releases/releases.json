@@ -48,8 +48,8 @@
       "version": "1.0.0",
       "build": "28",
       "date": "2026-09-14",
-      "status": "release-candidate",
-      "summary": "Uploaded and submitted for external TestFlight beta review. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

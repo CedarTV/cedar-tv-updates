@@ -1305,7 +1305,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 Build 28 · September 14, 2026 · External TestFlight rollout.
 
-Uploaded and submitted for external TestFlight beta review. Not yet available to external testers.
+Available to Cedar External testers.
 
 #### Changes
 
