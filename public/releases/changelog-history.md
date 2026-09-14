@@ -8,7 +8,7 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 Build 28 · September 14, 2026 · External TestFlight rollout.
 
-Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.
+Available to Cedar External testers.
 
 #### Changes
 
@@ -458,7 +458,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 Build 28 · September 14, 2026 · External TestFlight rollout.
 
-Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.
+Available to Cedar External testers.
 
 #### Changes
 
@@ -907,7 +907,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 Build 28 · September 14, 2026 · External TestFlight rollout.
 
-Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.
+Available to Cedar External testers.
 
 #### Changes
 
@@ -1305,7 +1305,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 Build 28 · September 14, 2026 · External TestFlight rollout.
 
-Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.
+Uploaded and submitted for external TestFlight beta review. Not yet available to external testers.
 
 #### Changes
 

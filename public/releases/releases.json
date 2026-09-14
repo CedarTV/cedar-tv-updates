@@ -18,8 +18,8 @@
       "version": "1.0.0",
       "build": "28",
       "date": "2026-09-14",
-      "status": "release-candidate",
-      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
@@ -28,8 +28,8 @@
       "version": "1.0.0",
       "build": "28",
       "date": "2026-09-14",
-      "status": "release-candidate",
-      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
@@ -38,8 +38,8 @@
       "version": "1.0.0",
       "build": "28",
       "date": "2026-09-14",
-      "status": "release-candidate",
-      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
@@ -49,7 +49,7 @@
       "build": "28",
       "date": "2026-09-14",
       "status": "release-candidate",
-      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
+      "summary": "Uploaded and submitted for external TestFlight beta review. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

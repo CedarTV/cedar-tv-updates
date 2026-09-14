@@ -7,7 +7,7 @@
       "build": "28",
       "date": "2026-09-14",
       "status": "release-candidate",
-      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
+      "summary": "Uploaded and submitted for external TestFlight beta review. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
       "notes": "release-notes/apple/mac/1.0.0-build-28.md"
     },
     {
@@ -15,8 +15,8 @@
       "version": "1.0.0",
       "build": "28",
       "date": "2026-09-14",
-      "status": "release-candidate",
-      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
       "notes": "release-notes/apple/iphone/1.0.0-build-28.md"
     },
     {
@@ -24,8 +24,8 @@
       "version": "1.0.0",
       "build": "28",
       "date": "2026-09-14",
-      "status": "release-candidate",
-      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
       "notes": "release-notes/apple/ipad/1.0.0-build-28.md"
     },
     {
@@ -33,8 +33,8 @@
       "version": "1.0.0",
       "build": "28",
       "date": "2026-09-14",
-      "status": "release-candidate",
-      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-28.md"
     },
     {
