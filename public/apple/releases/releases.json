@@ -24,6 +24,66 @@
   ],
   "releases": [
     {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "28",
+      "date": "2026-09-14",
+      "status": "release-candidate",
+      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 28 · September 14, 2026 · External TestFlight rollout.\n\nUploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.\n\n## Changes\n\nReconciles changes since external build 24.\n\n- Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.\n- Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.\n- Simpler Library section setup, media-server connections and consistent settings navigation actions.\n- Mac-specific navigation layout and previews, with native desktop settings conventions.\n- Canonical media links open directly in the configured navigation workspace. Media sharing supplies title/year and poster metadata where supported by the native share service.\n- Explicit episode selections survive account progress refreshes.\n\nPlease test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On Mac, also test window resizing, navigation customization and keyboard controls.\n\n\n[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-28"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "28",
+      "date": "2026-09-14",
+      "status": "release-candidate",
+      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 28 · September 14, 2026 · External TestFlight rollout.\n\nUploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.\n\n## Changes\n\nReconciles changes since external build 24.\n\n- Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.\n- Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.\n- Simpler Library section setup, media-server connections and consistent settings navigation actions.\n- Native iPhone Settings sheet with child navigation, Close/swipe dismissal and protected Save/Cancel editors; iPad retains its wider platform layout.\n- Artwork-first Home Screen widgets with native spacing, fitted posters/episode thumbnails, adaptive captions and profile-aware cached content.\n- Exact widget links open content directly instead of Search; Continue Watching links retain episode coordinates. Media sharing includes poster/title previews and a readable message.\n- Native navigation titles and per-platform navigation previews.\n\nPlease test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On iPhone/iPad, also test widget sizing, larger text, tap/open/force-quit retention, direct episode links and Settings dismissal.\n\n\n[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-28"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "28",
+      "date": "2026-09-14",
+      "status": "release-candidate",
+      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements, artwork-first widgets and direct content links.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 28 · September 14, 2026 · External TestFlight rollout.\n\nUploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.\n\n## Changes\n\nReconciles changes since external build 24.\n\n- Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.\n- Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.\n- Simpler Library section setup, media-server connections and consistent settings navigation actions.\n- iPad retains its wider platform layout and native settings navigation; the new bottom-up Settings sheet is specific to iPhone.\n- Artwork-first Home Screen widgets with native spacing, fitted posters/episode thumbnails, adaptive captions and profile-aware cached content.\n- Exact widget links open content directly instead of Search; Continue Watching links retain episode coordinates. Media sharing includes poster/title previews and a readable message.\n- Native navigation titles and per-platform navigation previews.\n\nPlease test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On iPhone/iPad, also test widget sizing, larger text, tap/open/force-quit retention, direct episode links and Settings dismissal.\n\n\n[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-28"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "28",
+      "date": "2026-09-14",
+      "status": "release-candidate",
+      "summary": "Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers. Platform branches, poster controls, Library/settings refinements.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 28 · September 14, 2026 · External TestFlight rollout.\n\nUploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.\n\n## Changes\n\nReconciles changes since external build 24.\n\n- Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.\n- Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.\n- Simpler Library section setup, media-server connections and consistent settings navigation actions.\n- Apple TV-specific Home branches and navigation settings. Featured Home artwork follows branches; the separate Hero option is removed for Apple TV.\n- Native TV settings/focus conventions retained, with shared poster/rating refinements.\n- Episode-aware deep links preserve explicit season/episode selection through the existing playback flow.\n\nPlease test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On Apple TV, also test remote focus, Back navigation, branch-driven featured artwork and Top Shelf.\n\n\n[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-28"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "27",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad build: native widget spacing and fitted artwork, adaptive captions, and stable native navigation titles.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 27 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.\n\nVerified available to the Internal build group. This historical build was not distributed externally.\n\n## Widget layout and navigation\n\n- Adopted native widget margins and artwork-first layouts with properly fitted posters and episode thumbnails.\n- Added adaptive captions/actions and larger-text layouts across widget sizes.\n- Replaced forced page-title positioning with native navigation titles.\n- Removed the dedicated Hero option from the Apple TV branch editor on iPhone/iPad.\n\nSettings sheets, direct widget navigation and improved sharing arrived in build 28, not build 27.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-27"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "27",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad build: native widget spacing and fitted artwork, adaptive captions, and stable native navigation titles.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 27 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.\n\nVerified available to the Internal build group. This historical build was not distributed externally.\n\n## Widget layout and navigation\n\n- Adopted native widget margins and artwork-first layouts with properly fitted posters and episode thumbnails.\n- Added adaptive captions/actions and larger-text layouts across widget sizes.\n- Replaced forced page-title positioning with native navigation titles.\n- Removed the dedicated Hero option from the Apple TV branch editor on iPhone/iPad.\n\nSettings sheets, direct widget navigation and improved sharing arrived in build 28, not build 27.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-27"
+    },
+    {
       "platform": "iphone",
       "version": "1.0.0",
       "build": "26",
@@ -44,16 +104,6 @@
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-26"
     },
     {
-      "platform": "ipad",
-      "version": "1.0.0",
-      "build": "25",
-      "date": "2026-09-13",
-      "status": "testflight",
-      "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
-      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 25 · 2026-09-13 · Internal TestFlight build.\n\n## Poster Style Lab\n\nCompare Classic, Cinema, Critic, Ledger and Gallery using real movie and series metadata from TMDB. Preview Inception and Breaking Bad with their returned titles, years, ratings and artwork.\n\nTry title placement above, below or over the artwork, with left, centred or right alignment. Toggle ratings, years, depth and missing artwork. Metadata loading failures include a retry option.\n\nOpen Settings → Detail Page Display → Poster Card Style → Poster Style Lab. Changes stay in the preview and reset when you leave.\n\nThis build is for internal testers only. External testers remain on build 24. Visual and on-device verification of the lab is pending.\n",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-25"
-    },
-    {
       "platform": "iphone",
       "version": "1.0.0",
       "build": "25",
@@ -62,6 +112,16 @@
       "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
       "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 25 · 2026-09-13 · Internal TestFlight build.\n\n## Poster Style Lab\n\nCompare Classic, Cinema, Critic, Ledger and Gallery using real movie and series metadata from TMDB. Preview Inception and Breaking Bad with their returned titles, years, ratings and artwork.\n\nTry title placement above, below or over the artwork, with left, centred or right alignment. Toggle ratings, years, depth and missing artwork. Metadata loading failures include a retry option.\n\nOpen Settings → Detail Page Display → Poster Card Style → Poster Style Lab. Changes stay in the preview and reset when you leave.\n\nThis build is for internal testers only. External testers remain on build 24. Visual and on-device verification of the lab is pending.\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-25"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "25",
+      "date": "2026-09-13",
+      "status": "testflight",
+      "summary": "Internal-only Poster Style Lab: movie and series metadata, five looks, and adjustable title placement and alignment.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 25 · 2026-09-13 · Internal TestFlight build.\n\n## Poster Style Lab\n\nCompare Classic, Cinema, Critic, Ledger and Gallery using real movie and series metadata from TMDB. Preview Inception and Breaking Bad with their returned titles, years, ratings and artwork.\n\nTry title placement above, below or over the artwork, with left, centred or right alignment. Toggle ratings, years, depth and missing artwork. Metadata loading failures include a retry option.\n\nOpen Settings → Detail Page Display → Poster Card Style → Poster Style Lab. Changes stay in the preview and reset when you leave.\n\nThis build is for internal testers only. External testers remain on build 24. Visual and on-device verification of the lab is pending.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-25"
     },
     {
       "platform": "mac",

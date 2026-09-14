@@ -4,6 +4,46 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 28 · 2026-09-14
+
+Build 28 · September 14, 2026 · External TestFlight rollout.
+
+Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.
+
+#### Changes
+
+Reconciles changes since external build 24.
+
+- Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.
+- Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.
+- Simpler Library section setup, media-server connections and consistent settings navigation actions.
+- Native iPhone Settings sheet with child navigation, Close/swipe dismissal and protected Save/Cancel editors; iPad retains its wider platform layout.
+- Artwork-first Home Screen widgets with native spacing, fitted posters/episode thumbnails, adaptive captions and profile-aware cached content.
+- Exact widget links open content directly instead of Search; Continue Watching links retain episode coordinates. Media sharing includes poster/title previews and a readable message.
+- Native navigation titles and per-platform navigation previews.
+
+Please test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On iPhone/iPad, also test widget sizing, larger text, tap/open/force-quit retention, direct episode links and Settings dismissal.
+
+
+[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.
+
+
+### 1.0.0 · build 27 · 2026-09-14
+
+Build 27 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.
+
+Verified available to the Internal build group. This historical build was not distributed externally.
+
+#### Widget layout and navigation
+
+- Adopted native widget margins and artwork-first layouts with properly fitted posters and episode thumbnails.
+- Added adaptive captions/actions and larger-text layouts across widget sizes.
+- Replaced forced page-title positioning with native navigation titles.
+- Removed the dedicated Hero option from the Apple TV branch editor on iPhone/iPad.
+
+Settings sheets, direct widget navigation and improved sharing arrived in build 28, not build 27.
+
+
 ### 1.0.0 · build 26 · 2026-09-14 · Internal TestFlight
 
 Build 26 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.
@@ -414,6 +454,46 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 28 · 2026-09-14
+
+Build 28 · September 14, 2026 · External TestFlight rollout.
+
+Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.
+
+#### Changes
+
+Reconciles changes since external build 24.
+
+- Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.
+- Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.
+- Simpler Library section setup, media-server connections and consistent settings navigation actions.
+- iPad retains its wider platform layout and native settings navigation; the new bottom-up Settings sheet is specific to iPhone.
+- Artwork-first Home Screen widgets with native spacing, fitted posters/episode thumbnails, adaptive captions and profile-aware cached content.
+- Exact widget links open content directly instead of Search; Continue Watching links retain episode coordinates. Media sharing includes poster/title previews and a readable message.
+- Native navigation titles and per-platform navigation previews.
+
+Please test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On iPhone/iPad, also test widget sizing, larger text, tap/open/force-quit retention, direct episode links and Settings dismissal.
+
+
+[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.
+
+
+### 1.0.0 · build 27 · 2026-09-14
+
+Build 27 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.
+
+Verified available to the Internal build group. This historical build was not distributed externally.
+
+#### Widget layout and navigation
+
+- Adopted native widget margins and artwork-first layouts with properly fitted posters and episode thumbnails.
+- Added adaptive captions/actions and larger-text layouts across widget sizes.
+- Replaced forced page-title positioning with native navigation titles.
+- Removed the dedicated Hero option from the Apple TV branch editor on iPhone/iPad.
+
+Settings sheets, direct widget navigation and improved sharing arrived in build 28, not build 27.
+
+
 ### 1.0.0 · build 26 · 2026-09-14 · Internal TestFlight
 
 Build 26 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.
@@ -823,6 +903,29 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 28 · 2026-09-14
+
+Build 28 · September 14, 2026 · External TestFlight rollout.
+
+Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.
+
+#### Changes
+
+Reconciles changes since external build 24.
+
+- Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.
+- Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.
+- Simpler Library section setup, media-server connections and consistent settings navigation actions.
+- Apple TV-specific Home branches and navigation settings. Featured Home artwork follows branches; the separate Hero option is removed for Apple TV.
+- Native TV settings/focus conventions retained, with shared poster/rating refinements.
+- Episode-aware deep links preserve explicit season/episode selection through the existing playback flow.
+
+Please test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On Apple TV, also test remote focus, Back navigation, branch-driven featured artwork and Top Shelf.
+
+
+[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.
+
+
 ### 1.0.0 · build 24 · 2026-09-13 · testflight
 
 
@@ -1197,6 +1300,29 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 28 · 2026-09-14
+
+Build 28 · September 14, 2026 · External TestFlight rollout.
+
+Uploaded to App Store Connect and processing for external TestFlight. Not yet available to external testers.
+
+#### Changes
+
+Reconciles changes since external build 24.
+
+- Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.
+- Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.
+- Simpler Library section setup, media-server connections and consistent settings navigation actions.
+- Mac-specific navigation layout and previews, with native desktop settings conventions.
+- Canonical media links open directly in the configured navigation workspace. Media sharing supplies title/year and poster metadata where supported by the native share service.
+- Explicit episode selections survive account progress refreshes.
+
+Please test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On Mac, also test window resizing, navigation customization and keyboard controls.
+
+
+[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.
+
 
 ### 1.0.0 · build 24 · 2026-09-13 · testflight
 
