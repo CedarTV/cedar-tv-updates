@@ -855,6 +855,46 @@
       "status": "rejected",
       "summary": "Initial Apple TV upload rejected during processing for Top Shelf capability and image requirements; corrected in build 2.",
       "notes": "release-notes/apple/apple-tv/1.0.0.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "29",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "audience": "internal",
+      "summary": "Internal-only TestFlight: AetherEngine 6.86.0, FFmpegBuild 3.3.0 and Kingfisher 8.12.0. External testers remain on build 28.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-29.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "29",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "audience": "internal",
+      "summary": "Internal-only TestFlight: AetherEngine 6.86.0, FFmpegBuild 3.3.0 and Kingfisher 8.12.0. External testers remain on build 28.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-29.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "29",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "audience": "internal",
+      "summary": "Internal-only TestFlight: AetherEngine 6.86.0, FFmpegBuild 3.3.0 and Kingfisher 8.12.0. External testers remain on build 28.",
+      "notes": "release-notes/apple/mac/1.0.0-build-29.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "29",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "audience": "internal",
+      "summary": "Internal-only TestFlight: AetherEngine 6.86.0, FFmpegBuild 3.3.0 and Kingfisher 8.12.0. External testers remain on build 28.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-29.md"
     }
   ]
 }

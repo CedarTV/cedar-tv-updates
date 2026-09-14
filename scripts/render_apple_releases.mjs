@@ -231,7 +231,7 @@ function releaseMetadata(release) {
 
 function renderIndex(releases) {
   const cards = platforms.map((platform) => {
-    const latest = releases.filter((release) => release.platform === platform.id).sort(compareReleases)[0];
+    const latest = releases.filter((release) => release.platform === platform.id && release.audience !== "internal").sort(compareReleases)[0];
     return `          <article class="release-card">
             <p class="eyebrow">${escapeHTML(platform.shortName)}</p>
             <h2>${escapeHTML(platform.name)}</h2>
@@ -348,6 +348,7 @@ for (const [index, source] of sourceCatalog.releases.entries()) {
     date,
     status,
     summary,
+    audience: source.audience,
     notesMarkdown: markdown,
     notesHTML: renderMarkdown(markdown, expectedTitle),
   });

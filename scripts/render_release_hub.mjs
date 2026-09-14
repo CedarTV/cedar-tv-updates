@@ -212,7 +212,7 @@ const currentReleases = [];
 for (const platform of platformDefinitions) {
   const catalog = platform.id === "android-tv" ? androidCatalog : appleCatalog;
   const matches = catalog.releases
-    .filter((release) => release.platform === platform.id)
+    .filter((release) => release.platform === platform.id && release.audience !== "internal")
     .map((release, index) => validateRelease(release, platform.id, `${platform.name} release ${index + 1}`))
     .sort(compareReleases);
   if (matches.length === 0) fail(`${platform.name} needs at least one release`);

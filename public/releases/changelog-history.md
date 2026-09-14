@@ -4,6 +4,21 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 29 · 2026-09-14
+
+Available to internal TestFlight testers only on iPhone, iPad, Mac and Apple TV. External testers remain on build 28.
+
+#### Changes
+
+- Updated AetherEngine to 6.86.0, retaining Cedar's custom playback, subtitle and PiP integration.
+- Updated FFmpegBuild to 3.3.0, with framework debug symbols for better playback crash diagnostics. FFmpeg remains 8.1.2.
+- Updated Kingfisher to 8.12.0 for image lifecycle and download-priority fixes.
+
+#### Testing
+
+Apple Debug and Release builds passed, along with automated playback bridge, artwork and focused engine regression tests. Please test seeking/resume, live pause and return to live, subtitle delay, audio switching, supported HDR/Dolby Vision/Atmos equipment, PiP where available, and poster loading while scrolling. Physical-device coverage remains the purpose of this internal build.
+
+
 ### 1.0.0 · build 28 · 2026-09-14
 
 Build 28 · September 14, 2026 · External TestFlight rollout.
@@ -454,6 +469,21 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 29 · 2026-09-14
+
+Available to internal TestFlight testers only on iPhone, iPad, Mac and Apple TV. External testers remain on build 28.
+
+#### Changes
+
+- Updated AetherEngine to 6.86.0, retaining Cedar's custom playback, subtitle and PiP integration.
+- Updated FFmpegBuild to 3.3.0, with framework debug symbols for better playback crash diagnostics. FFmpeg remains 8.1.2.
+- Updated Kingfisher to 8.12.0 for image lifecycle and download-priority fixes.
+
+#### Testing
+
+Apple Debug and Release builds passed, along with automated playback bridge, artwork and focused engine regression tests. Please test seeking/resume, live pause and return to live, subtitle delay, audio switching, supported HDR/Dolby Vision/Atmos equipment, PiP where available, and poster loading while scrolling. Physical-device coverage remains the purpose of this internal build.
+
+
 ### 1.0.0 · build 28 · 2026-09-14
 
 Build 28 · September 14, 2026 · External TestFlight rollout.
@@ -903,6 +933,21 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 29 · 2026-09-14
+
+Available to internal TestFlight testers only on iPhone, iPad, Mac and Apple TV. External testers remain on build 28.
+
+#### Changes
+
+- Updated AetherEngine to 6.86.0, retaining Cedar's custom playback, subtitle and PiP integration.
+- Updated FFmpegBuild to 3.3.0, with framework debug symbols for better playback crash diagnostics. FFmpeg remains 8.1.2.
+- Updated Kingfisher to 8.12.0 for image lifecycle and download-priority fixes.
+
+#### Testing
+
+Apple Debug and Release builds passed, along with automated playback bridge, artwork and focused engine regression tests. Please test seeking/resume, live pause and return to live, subtitle delay, audio switching, supported HDR/Dolby Vision/Atmos equipment, PiP where available, and poster loading while scrolling. Physical-device coverage remains the purpose of this internal build.
+
+
 ### 1.0.0 · build 28 · 2026-09-14
 
 Build 28 · September 14, 2026 · External TestFlight rollout.
@@ -1300,6 +1345,21 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 29 · 2026-09-14
+
+Available to internal TestFlight testers only on iPhone, iPad, Mac and Apple TV. External testers remain on build 28.
+
+#### Changes
+
+- Updated AetherEngine to 6.86.0, retaining Cedar's custom playback, subtitle and PiP integration.
+- Updated FFmpegBuild to 3.3.0, with framework debug symbols for better playback crash diagnostics. FFmpeg remains 8.1.2.
+- Updated Kingfisher to 8.12.0 for image lifecycle and download-priority fixes.
+
+#### Testing
+
+Apple Debug and Release builds passed, along with automated playback bridge, artwork and focused engine regression tests. Please test seeking/resume, live pause and return to live, subtitle delay, audio switching, supported HDR/Dolby Vision/Atmos equipment, PiP where available, and poster loading while scrolling. Physical-device coverage remains the purpose of this internal build.
+
 
 ### 1.0.0 · build 28 · 2026-09-14
 
