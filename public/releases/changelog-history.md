@@ -1,8 +1,31 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled September 13, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled September 14, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## iPhone
+
+### 1.0.0 · build 26 · 2026-09-14 · Internal TestFlight
+
+Build 26 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.
+
+Available to existing Internal build testers. This is not an external TestFlight or App Store release. External Apple testers remain on build 24; this publication does not change Apple TV, Mac, or Android availability.
+
+#### Home and poster controls
+
+- Edit Home branches by platform, with shared All Platforms editing and separate order, visibility, and appearance choices. New branches are added at the bottom of the selected platform lists.
+- Refined poster title visibility, depth previews, company and branch-group artwork, Critic rating-source selection, and service icons.
+- Expanded poster style and title-position controls while preserving full poster proportions.
+
+#### Widgets, navigation, and Library
+
+- Added Home Screen widgets with Cedar branding, cached movie/episode artwork, content links, progress, and watchlist Shuffle.
+- Retain widget content across opening and closing Cedar while respecting profile privacy.
+- Added platform navigation previews and simplified Library/media-server setup, with more consistent Back, Cancel, and Save actions and updated page-title presentation.
+
+#### Internal testing focus
+
+Please check platform branch changes, poster titles and ratings, crowded navigation bars, and media-server setup. Widget sizing, artwork, tap/open/close behaviour, Shuffle, and profile privacy still need physical-device testing. Include your device, OS, profile/platform, and reproduction steps in reports.
+
 
 ### 1.0.0 · build 25 · 2026-09-13 · Internal TestFlight
 
@@ -390,6 +413,29 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 26 · 2026-09-14 · Internal TestFlight
+
+Build 26 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.
+
+Available to existing Internal build testers. This is not an external TestFlight or App Store release. External Apple testers remain on build 24; this publication does not change Apple TV, Mac, or Android availability.
+
+#### Home and poster controls
+
+- Edit Home branches by platform, with shared All Platforms editing and separate order, visibility, and appearance choices. New branches are added at the bottom of the selected platform lists.
+- Refined poster title visibility, depth previews, company and branch-group artwork, Critic rating-source selection, and service icons.
+- Expanded poster style and title-position controls while preserving full poster proportions.
+
+#### Widgets, navigation, and Library
+
+- Added Home Screen widgets with Cedar branding, cached movie/episode artwork, content links, progress, and watchlist Shuffle.
+- Retain widget content across opening and closing Cedar while respecting profile privacy.
+- Added platform navigation previews and simplified Library/media-server setup, with more consistent Back, Cancel, and Save actions and updated page-title presentation.
+
+#### Internal testing focus
+
+Please check platform branch changes, poster titles and ratings, crowded navigation bars, and media-server setup. Widget sizing, artwork, tap/open/close behaviour, Shuffle, and profile privacy still need physical-device testing. Include your device, OS, profile/platform, and reproduction steps in reports.
+
 
 ### 1.0.0 · build 25 · 2026-09-13 · Internal TestFlight
 

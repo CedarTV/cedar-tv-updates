@@ -2,6 +2,24 @@
   "schemaVersion": 1,
   "releases": [
     {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "26",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad beta: per-platform Home branches, poster controls, Home Screen widgets, and simpler navigation and Library settings.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-26.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "26",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad beta: per-platform Home branches, poster controls, Home Screen widgets, and simpler navigation and Library settings.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-26.md"
+    },
+    {
       "platform": "ipad",
       "version": "1.0.0",
       "build": "25",

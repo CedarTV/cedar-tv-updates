@@ -24,6 +24,26 @@
   ],
   "releases": [
     {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "26",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad beta: per-platform Home branches, poster controls, Home Screen widgets, and simpler navigation and Library settings.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 26 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.\n\nAvailable to existing Internal build testers. This is not an external TestFlight or App Store release. External Apple testers remain on build 24; this publication does not change Apple TV, Mac, or Android availability.\n\n## Home and poster controls\n\n- Edit Home branches by platform, with shared All Platforms editing and separate order, visibility, and appearance choices. New branches are added at the bottom of the selected platform lists.\n- Refined poster title visibility, depth previews, company and branch-group artwork, Critic rating-source selection, and service icons.\n- Expanded poster style and title-position controls while preserving full poster proportions.\n\n## Widgets, navigation, and Library\n\n- Added Home Screen widgets with Cedar branding, cached movie/episode artwork, content links, progress, and watchlist Shuffle.\n- Retain widget content across opening and closing Cedar while respecting profile privacy.\n- Added platform navigation previews and simplified Library/media-server setup, with more consistent Back, Cancel, and Save actions and updated page-title presentation.\n\n## Internal testing focus\n\nPlease check platform branch changes, poster titles and ratings, crowded navigation bars, and media-server setup. Widget sizing, artwork, tap/open/close behaviour, Shuffle, and profile privacy still need physical-device testing. Include your device, OS, profile/platform, and reproduction steps in reports.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-26"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "26",
+      "date": "2026-09-14",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad beta: per-platform Home branches, poster controls, Home Screen widgets, and simpler navigation and Library settings.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 26 · September 14, 2026 · Internal TestFlight, iPhone/iPad only.\n\nAvailable to existing Internal build testers. This is not an external TestFlight or App Store release. External Apple testers remain on build 24; this publication does not change Apple TV, Mac, or Android availability.\n\n## Home and poster controls\n\n- Edit Home branches by platform, with shared All Platforms editing and separate order, visibility, and appearance choices. New branches are added at the bottom of the selected platform lists.\n- Refined poster title visibility, depth previews, company and branch-group artwork, Critic rating-source selection, and service icons.\n- Expanded poster style and title-position controls while preserving full poster proportions.\n\n## Widgets, navigation, and Library\n\n- Added Home Screen widgets with Cedar branding, cached movie/episode artwork, content links, progress, and watchlist Shuffle.\n- Retain widget content across opening and closing Cedar while respecting profile privacy.\n- Added platform navigation previews and simplified Library/media-server setup, with more consistent Back, Cancel, and Save actions and updated page-title presentation.\n\n## Internal testing focus\n\nPlease check platform branch changes, poster titles and ratings, crowded navigation bars, and media-server setup. Widget sizing, artwork, tap/open/close behaviour, Shuffle, and profile privacy still need physical-device testing. Include your device, OS, profile/platform, and reproduction steps in reports.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-26"
+    },
+    {
       "platform": "ipad",
       "version": "1.0.0",
       "build": "25",
