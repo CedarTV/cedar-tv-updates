@@ -1,0 +1,79 @@
+/* Shared navigation and semantic colors, loaded after each page's styles. */
+:root { --control-bg: #171a1f; --on-accent: #172016; }
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f4f1eb;
+  --surface: #fffdf9;
+  --surface-raised: #e9e6df;
+  --control-bg: #fffdf9;
+  --line: #cecac1;
+  --text: #20251f;
+  --muted: #596055;
+  --cedar: #39552d;
+  --cedar-bright: #29451e;
+  --warm: #8e4b24;
+  --on-accent: #ffffff;
+}
+:root[data-theme="dark"] { color-scheme: dark; }
+.cedar-header {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px;
+  position: relative; z-index: 10; width: min(1320px, calc(100% - 64px));
+  margin: 0 auto; padding: 22px 0; border-bottom: 1px solid var(--line);
+  color: var(--text); font: 500 14px/1.4 Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.site-frame > .cedar-header, .page-shell > .cedar-header { width: 100%; }
+.cedar-brand { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--text); text-decoration: none; font-size: 20px; font-weight: 750; }
+.cedar-brand img { display: block; width: 36px; height: 36px; border-radius: 10px; }
+.cedar-header .cedar-nav { display: flex; flex: 1; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 4px 18px; }
+.cedar-header .cedar-nav a { display: inline-flex; align-items: center; min-height: 44px; color: var(--muted); text-decoration: none; font-size: 14px; white-space: nowrap; }
+.cedar-header .cedar-nav a:hover, .cedar-header .cedar-nav a[aria-current] { color: var(--text); text-decoration: underline; text-underline-offset: 5px; }
+.cedar-header .cedar-nav .cedar-download { padding: 0 14px; border: 1px solid var(--line); border-radius: 24px; color: var(--text); }
+.cedar-theme { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--muted); font-size: 12px; }
+.cedar-theme select { min-height: 44px; width: auto; padding: 8px 10px; border: 1px solid var(--line); border-radius: 12px; background: var(--control-bg); color: var(--text); font: inherit; cursor: pointer; }
+.cedar-header :focus-visible { outline: 3px solid var(--cedar); outline-offset: 4px; }
+.site-footer-intro > p, .site-footer-group a, .site-footer-meta { color: var(--muted); }
+.site-footer-group h2 { color: var(--text); }
+.hero { min-height: calc(100svh - 90px); padding-top: 72px; }
+@media (max-width: 1100px) {
+  .cedar-header .cedar-nav { order: 3; flex-basis: 100%; justify-content: flex-start; }
+  .cedar-theme { margin-left: auto; }
+}
+@media (max-width: 680px) {
+  .cedar-header { width: calc(100% - 36px); padding: 16px 0; gap: 12px; }
+  .cedar-header .cedar-nav { gap: 2px 16px; }
+  .cedar-header .cedar-nav a { font-size: 13px; }
+  .hero { padding-top: 44px; }
+}
+/* Light surfaces keep original screenshots and media artwork untouched. */
+[data-theme="light"] .button-primary, [data-theme="light"] .inline-action { color: var(--bg); }
+[data-theme="light"] .button-primary:hover { color: #fff; }
+[data-theme="light"] :is(.compatibility, .proof-strip, .proof-strip span, .platform-release, .caption-number, .feature-index, .release-meta, .install-note) { color: var(--muted); }
+[data-theme="light"] :is(.orbit-tv, .orbit-profile, .release-card) { background: var(--surface); }
+[data-theme="light"] .release-status-testflight { color: #334d88; }
+[data-theme="light"] .release-card :is(p, time), [data-theme="light"] .release-metadata { color: var(--muted); }
+[data-theme="light"] .site-footer-social { background: #e3e5ed; }
+[data-theme="light"] .artwork-shell :is(input, select, .artwork-choice) { color: var(--text); background: var(--surface); border-color: var(--line); }
+[data-theme="light"] .artwork-choice[aria-pressed="true"], [data-theme="light"] .selection { background: #e3eadc; border-color: var(--cedar); }
+[data-theme="light"] :is(.artwork-choice small, .full-set-grid figcaption) { color: var(--muted); }
+[data-theme="light"] #full-set summary { color: var(--cedar); }
+[data-theme="light"] .creator { background: var(--surface); }
+[data-theme="light"] :is(#addon-url, #tie-code) { background: var(--bg); border-color: var(--line); color: var(--text); }
+[data-theme="light"] .create-button { color: #fff; }
+[data-theme="light"] .create-button:hover { background: #29451e; }
+[data-theme="light"] :is(.preview-badge, .clear-input, .field-meta p, .local-note p, .local-note p span, .prototype-note, .how-it-works span, .how-it-works p, .about-ties summary, .about-ties p, .copy-button:disabled) { color: var(--muted); }
+[data-theme="light"] :is(#addon-url, #tie-code)::placeholder { color: var(--muted); }
+[data-theme="light"] .field-error { color: #a12c23; }
+[data-theme="light"] .link-page { --link-copy-color: #414c3a; --link-panel-color: #fffdf9; --link-muted: #596055; --link-muted-strong: #414c3a; --link-control-border: #7e8877; }
+[data-theme="light"] :is(.link-card, .profile-stats div, .toggle-list label, .branch-row, .device-row, .remote-state, .companion-savebar, .companion-tabs, .library-more) { background: var(--surface); }
+[data-theme="light"] :is(.link-card, .companion-savebar) { box-shadow: 0 20px 60px rgb(30 40 20 / 10%); }
+[data-theme="light"] .link-page :is(input:not([type="checkbox"]), select, textarea, .icon-button, .remote-controls button) { background: var(--control-bg); color: var(--text); border-color: var(--link-control-border); }
+[data-theme="light"] .link-page :is(.profile-stats strong, .companion-form h3, .toggle-list strong, .device-row strong, .editor-heading h3, .companion-savebar-copy strong) { color: var(--text); }
+[data-theme="light"] .companion-tabs button[aria-selected="true"], [data-theme="light"] .remote-controls .remote-primary { background: #e3eadc; color: #29451e; }
+[data-theme="light"] :is(.sync-message.is-success, .sync-message.is-pending) { color: #4b562f; }
+[data-theme="light"] :is(.sync-message.is-error, .danger-button, .device-row .danger-button) { color: #a12c23; }
+[data-theme="light"] .release-entry, [data-theme="light"] .privacy-points p { background: var(--surface); }
+[data-theme="light"] .privacy-points p { color: var(--text); }
+[data-theme="light"] .link-page :is(.branch-grab, .branch-enabled, .profile-editor p, .library-selection, .companion-savebar-copy p) { color: var(--muted); }
+[data-theme="light"] .link-noscript { color: #a12c23; }
+[data-theme="light"] .link-button[data-complete="true"] { background: #39552d; color: #fff; }
+[data-theme="light"] .inline-action:hover { color: #fff; }

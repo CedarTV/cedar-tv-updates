@@ -1,7 +1,7 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { footerStylesheet, renderSiteFooter } from "./site_components.mjs";
+import { footerStylesheet, renderSiteFooter, renderSiteHeader, themeAssets } from "./site_components.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = resolve(repositoryRoot, "public");
@@ -29,6 +29,10 @@ function renderPage(source, relativePath) {
   let output = source.replace(footerMatches[0], renderSiteFooter());
   if (!output.includes(footerStylesheet.trim())) {
     output = output.replace("  </head>", `${footerStylesheet}\n  </head>`);
+  }
+  output = output.replace(/^[ \t]*<header class="(?:site-header[^"\n]*|policy-header|topbar|cedar-header)">[\s\S]*?<\/header>/m, renderSiteHeader());
+  if (!output.includes(themeAssets.trim())) {
+    output = output.replace("  </head>", `${themeAssets}\n  </head>`);
   }
   return output;
 }

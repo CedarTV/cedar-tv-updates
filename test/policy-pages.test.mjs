@@ -13,7 +13,7 @@ test("Apple policy pages are static, public, and scoped to the GitHub Pages proj
     assert.match(source, /href="\/cedar-tv-updates\/support\/"/);
     assert.match(source, /href="\/cedar-tv-updates\/privacy\/"/);
     assert.doesNotMatch(source, /chatgpt\.site|\[(?:SUPPORT EMAIL|LEGAL HOLDER|OWNER REQUIRED)\]/i);
-    assert.doesNotMatch(source, /<(?:script|iframe|form)\b/i);
+    assert.doesNotMatch(source.replace('<script src="/cedar-tv-updates/theme.js"></script>', ""), /<(?:script|iframe|form)\b/i);
   }
 });
 

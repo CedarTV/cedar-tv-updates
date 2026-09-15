@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { footerStylesheet, renderSiteFooter } from "./site_components.mjs";
+import { footerStylesheet, renderSiteFooter, renderSiteHeader, themeAssets } from "./site_components.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const sourceCatalogPath = resolve(repositoryRoot, "release-notes/apple/releases.json");
@@ -168,20 +168,6 @@ function renderMarkdown(markdown, expectedTitle) {
   return output.join("\n");
 }
 
-function navigation(current) {
-  const items = [
-    ["apple", "Apple apps", `${projectBasePath}/apple/`],
-    ["releases", "Release notes", `${projectBasePath}/apple/releases/`],
-    ["support", "Support", `${projectBasePath}/support/`],
-    ["privacy", "Privacy", `${projectBasePath}/privacy/`],
-    ["cedar-link", "Cedar Link", `${projectBasePath}/cedar-link/`],
-  ];
-  return items.map(([id, label, href]) => {
-    const currentAttribute = id === current ? ' aria-current="page"' : "";
-    return `<a href="${href}"${currentAttribute}>${label}</a>`;
-  }).join("\n          ");
-}
-
 function pageShell({ title, description, canonical, body }) {
   return `<!doctype html>
 <html lang="en">
@@ -198,18 +184,11 @@ function pageShell({ title, description, canonical, body }) {
     <link rel="apple-touch-icon" href="${projectBasePath}/assets/cedar-app-icon.png">
     <link rel="stylesheet" href="${projectBasePath}/policy.css">
 ${footerStylesheet}
+${themeAssets}
   </head>
   <body>
     <div class="site-frame">
-      <header class="policy-header">
-        <a class="site-brand" href="${projectBasePath}/" aria-label="Cedar home">
-          <img src="${projectBasePath}/assets/cedar-app-icon.png" alt="" width="34" height="34" aria-hidden="true">
-          <span>Cedar</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          ${navigation("releases")}
-        </nav>
-      </header>
+${renderSiteHeader()}
 
 ${body}
 

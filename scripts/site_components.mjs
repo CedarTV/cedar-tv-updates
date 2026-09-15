@@ -41,6 +41,7 @@ export function renderSiteFooter() {
             <h2>Community</h2>
             <ul>
               <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
               <li><a href="https://github.com/CedarTV/cedar-tv-updates/issues">Report an issue</a></li>
               <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
               <li><a href="${projectBasePath}/update-v1.json">Android manifest</a></li>
@@ -53,4 +54,32 @@ export function renderSiteFooter() {
           <span>Cedar does not provide, host, or sell media content.</span>
         </p>
       </footer>`;
+}
+
+export const themeAssets = `    <script src="${projectBasePath}/theme.js"></script>
+    <link rel="stylesheet" href="${projectBasePath}/site-shell.css">`;
+
+export function renderSiteHeader() {
+  return `      <header class="cedar-header">
+        <a class="cedar-brand" href="${projectBasePath}/" aria-label="Cedar home">
+          <img src="${projectBasePath}/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <nav class="cedar-nav" aria-label="Primary navigation">
+          <a href="${projectBasePath}/#platforms">Platforms</a>
+          <a href="${projectBasePath}/apple/">Apple apps</a>
+          <a href="${projectBasePath}/releases/">What’s new</a>
+          <a href="${projectBasePath}/artwork/">Artwork</a>
+          <a href="${projectBasePath}/link/">Cedar Link</a>
+          <a href="${projectBasePath}/support/">Support</a>
+          <a class="cedar-download" href="${projectBasePath}/#download">Get Cedar</a>
+        </nav>
+        <label class="cedar-theme">Theme
+          <select aria-label="Color theme" data-theme-select>
+            <option value="system">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </label>
+      </header>`;
 }

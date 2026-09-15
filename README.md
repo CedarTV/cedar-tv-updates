@@ -111,3 +111,24 @@ Run `node scripts/import-xperience-assets.mjs` to verify the local copies and re
 ## Release order
 
 Run `scripts/publish_release.sh` from a clean `main` checkout. It publishes the signed APK first and commits the signed manifest last. This prevents devices from seeing a manifest whose APK is not yet available.
+
+## Shared website navigation and themes
+
+All 17 public pages use `scripts/site_components.mjs` for the primary header and footer.
+After changing shared navigation or community links, run:
+
+```sh
+node scripts/render_apple_releases.mjs
+node scripts/render_release_hub.mjs
+node scripts/render_site_footer.mjs --write
+```
+
+`public/site-shell.css` supplies shared navigation and light-theme colors.
+`public/theme.js` follows the device color scheme by default and saves an explicit
+Light, Dark, or System choice under `cedar-color-theme` in browser storage. It also
+works when browser storage is unavailable. Screenshots and media artwork retain
+their original colors. The theme script runs before the page renders and does not
+make network requests or access Cedar Link credentials.
+
+Run `node --test test/*.test.mjs`, each renderer with `--check`, and
+`node scripts/verify_public_site.mjs` before publishing.

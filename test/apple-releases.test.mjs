@@ -36,7 +36,7 @@ test("generated Apple changelogs are static, canonical, and machine readable", a
   const overview = await readFile("public/apple/releases/index.html", "utf8");
   assert.match(overview, /https:\/\/cedartv\.github\.io\/cedar-tv-updates\/apple\/releases\//);
   assert.match(overview, /Release candidates and TestFlight builds are labeled separately/);
-  assert.doesNotMatch(overview, /<(?:script|iframe|form)\b/i);
+  assert.doesNotMatch(overview.replace('<script src="/cedar-tv-updates/theme.js"></script>', ""), /<(?:script|iframe|form)\b/i);
 
   const publicCatalog = JSON.parse(await readFile("public/apple/releases/releases.json", "utf8"));
   assert.equal(publicCatalog.schemaVersion, 1);
@@ -54,7 +54,7 @@ test("generated Apple changelogs are static, canonical, and machine readable", a
     assert.match(page, /Build 1/);
     assert.match(page, /Release candidate/);
     assert.doesNotMatch(page, /chatgpt\.site|\[(?:SUPPORT EMAIL|LEGAL HOLDER|OWNER REQUIRED)\]/i);
-    assert.doesNotMatch(page, /<(?:script|iframe|form)\b/i);
+    assert.doesNotMatch(page.replace('<script src="/cedar-tv-updates/theme.js"></script>', ""), /<(?:script|iframe|form)\b/i);
   }
 });
 

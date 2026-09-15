@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { footerStylesheet, projectBasePath, renderSiteFooter } from "./site_components.mjs";
+import { footerStylesheet, projectBasePath, renderSiteFooter, renderSiteHeader, themeAssets } from "./site_components.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = resolve(repositoryRoot, "public/releases");
@@ -155,16 +155,6 @@ function renderMarkdown(markdown, expectedTitle) {
   return output.join("\n");
 }
 
-function navigation() {
-  return [
-    ["Apple apps", `${projectBasePath}/apple/`],
-    ["Release notes", `${projectBasePath}/releases/`],
-    ["Support", `${projectBasePath}/support/`],
-    ["Privacy", `${projectBasePath}/privacy/`],
-    ["Cedar Link", `${projectBasePath}/cedar-link/`],
-  ].map(([label, href]) => `<a href="${href}"${label === "Release notes" ? ' aria-current="page"' : ""}>${label}</a>`).join("\n          ");
-}
-
 function pageShell({ title, description, canonical, body }) {
   return `<!doctype html>
 <html lang="en">
@@ -181,18 +171,11 @@ function pageShell({ title, description, canonical, body }) {
     <link rel="apple-touch-icon" href="${projectBasePath}/assets/cedar-app-icon.png">
     <link rel="stylesheet" href="${projectBasePath}/policy.css">
 ${footerStylesheet}
+${themeAssets}
   </head>
   <body>
     <div class="site-frame">
-      <header class="policy-header">
-        <a class="site-brand" href="${projectBasePath}/" aria-label="Cedar home">
-          <img src="${projectBasePath}/assets/cedar-app-icon.png" alt="" width="34" height="34" aria-hidden="true">
-          <span>Cedar</span>
-        </a>
-        <nav aria-label="Primary navigation">
-          ${navigation()}
-        </nav>
-      </header>
+${renderSiteHeader()}
 
 ${body}
 

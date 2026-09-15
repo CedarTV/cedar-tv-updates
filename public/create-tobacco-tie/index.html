@@ -13,13 +13,33 @@
     <link rel="stylesheet" href="tie.css">
     <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
     <script type="module" src="tie.mjs?v=2"></script>
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to creator</a>
     <div class="page-shell">
-      <header class="topbar">
-        <a class="brand" href="/cedar-tv-updates/" aria-label="Cedar home"><img src="../assets/cedar-wordmark.png" alt="Cedar" width="858" height="301"></a>
-        <nav aria-label="Primary navigation"><a href="/cedar-tv-updates/">Explore Cedar <span aria-hidden="true">↗</span></a><a href="/cedar-tv-updates/support/">Support</a></nav>
+      <header class="cedar-header">
+        <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <nav class="cedar-nav" aria-label="Primary navigation">
+          <a href="/cedar-tv-updates/#platforms">Platforms</a>
+          <a href="/cedar-tv-updates/apple/">Apple apps</a>
+          <a href="/cedar-tv-updates/releases/">What’s new</a>
+          <a href="/cedar-tv-updates/artwork/">Artwork</a>
+          <a href="/cedar-tv-updates/link/">Cedar Link</a>
+          <a href="/cedar-tv-updates/support/">Support</a>
+          <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+        </nav>
+        <label class="cedar-theme">Theme
+          <select aria-label="Color theme" data-theme-select>
+            <option value="system">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </label>
       </header>
       <main id="main">
         <div class="page-heading">
@@ -93,6 +113,7 @@
             <h2>Community</h2>
             <ul>
               <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
               <li><a href="https://github.com/CedarTV/cedar-tv-updates/issues">Report an issue</a></li>
               <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
               <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
