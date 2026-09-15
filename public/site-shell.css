@@ -1,11 +1,12 @@
 /* Shared navigation and semantic colors, loaded after each page's styles. */
-:root { --control-bg: #171a1f; --on-accent: #172016; }
+:root { --control-bg: #171a1f; --control-border: #858e7e; --on-accent: #172016; }
 :root[data-theme="light"] {
   color-scheme: light;
   --bg: #f4f1eb;
   --surface: #fffdf9;
   --surface-raised: #e9e6df;
   --control-bg: #fffdf9;
+  --control-border: #737d6c;
   --line: #cecac1;
   --text: #20251f;
   --muted: #596055;
@@ -51,13 +52,12 @@
 [data-theme="light"] :is(.orbit-tv, .orbit-profile, .release-card) { background: var(--surface); }
 [data-theme="light"] .release-status-testflight { color: #334d88; }
 [data-theme="light"] .release-card :is(p, time), [data-theme="light"] .release-metadata { color: var(--muted); }
-[data-theme="light"] .site-footer-social { background: #e3e5ed; }
-[data-theme="light"] .artwork-shell :is(input, select, .artwork-choice) { color: var(--text); background: var(--surface); border-color: var(--line); }
+[data-theme="light"] .artwork-shell :is(input, select, .artwork-choice) { color: var(--text); background: var(--surface); border-color: var(--control-border); }
 [data-theme="light"] .artwork-choice[aria-pressed="true"], [data-theme="light"] .selection { background: #e3eadc; border-color: var(--cedar); }
 [data-theme="light"] :is(.artwork-choice small, .full-set-grid figcaption) { color: var(--muted); }
 [data-theme="light"] #full-set summary { color: var(--cedar); }
 [data-theme="light"] .creator { background: var(--surface); }
-[data-theme="light"] :is(#addon-url, #tie-code) { background: var(--bg); border-color: var(--line); color: var(--text); }
+[data-theme="light"] :is(#addon-url, #tie-code) { background: var(--bg); border-color: var(--control-border); color: var(--text); }
 [data-theme="light"] .create-button { color: #fff; }
 [data-theme="light"] .create-button:hover { background: #29451e; }
 [data-theme="light"] :is(.preview-badge, .clear-input, .field-meta p, .local-note p, .local-note p span, .prototype-note, .how-it-works span, .how-it-works p, .about-ties summary, .about-ties p, .copy-button:disabled) { color: var(--muted); }
@@ -77,3 +77,19 @@
 [data-theme="light"] .link-noscript { color: #a12c23; }
 [data-theme="light"] .link-button[data-complete="true"] { background: #39552d; color: #fff; }
 [data-theme="light"] .inline-action:hover { color: #fff; }
+
+/* Readable secondary copy and distinguishable controls in either theme. */
+:is(.compatibility, .proof-strip p, .proof-strip span, .platform-release, .caption-number, .feature-index, .release-meta, .install-note) { color: var(--muted); }
+.cedar-theme select, .cedar-header .cedar-nav .cedar-download,
+.button-secondary, .artwork-shell :is(input, select, .artwork-choice),
+#addon-url, #tie-code, .copy-button { border-color: var(--control-border); }
+:root .artwork-shell :focus-visible, :root #addon-url:focus,
+:root :is(input, select, textarea, button, a, summary):focus-visible {
+  outline: 3px solid var(--cedar); outline-offset: 4px;
+}
+:root :is(input, textarea)::placeholder { color: var(--muted); opacity: 1; }
+[data-theme="light"] .download-card { background: var(--surface); border-color: var(--line); }
+[data-theme="light"] .skip-link { color: var(--on-accent); }
+[data-theme="light"] .about-ties summary span { color: var(--muted); }
+[data-theme="light"] .noscript-note { color: #a12c23; }
+[data-theme="light"] :is(.button-secondary, .platform-card):hover { border-color: var(--cedar); }

@@ -23,8 +23,8 @@ test("every public page uses the shared Cedar footer", async () => {
     assert.equal((source.match(/<footer\b/g) ?? []).length, 1, `${page} should have one footer`);
     assert.equal((source.match(/class="site-footer"/g) ?? []).length, 1, `${page} should use the shared footer`);
     assert.match(source, /href="\/cedar-tv-updates\/footer\.css"/);
-    assert.match(source, /href="https:\/\/discord\.gg\/TFTx7j86v" aria-label="Join Cedar on Discord"/);
-    assert.match(source, /src="\/cedar-tv-updates\/assets\/discord-symbol\.svg"/);
+    assert.match(source, /<li><a href="https:\/\/discord\.gg\/TFTx7j86v">Discord<\/a><\/li>/);
+    assert.doesNotMatch(source, /discord-symbol|site-footer-social/);
     assert.match(source, /href="\/cedar-tv-updates\/releases\/"/);
     assert.match(source, /href="\/cedar-tv-updates\/accessibility\/"/);
   }
@@ -32,7 +32,7 @@ test("every public page uses the shared Cedar footer", async () => {
 
 test("shared footer styles keep interactive states bounded and accessible", async () => {
   const source = await readFile("public/footer.css", "utf8");
-  assert.match(source, /width: 44px;\n  height: 44px;/);
+  assert.match(source, /min-height: 28px;/);
   assert.match(source, /@media \(hover: hover\) and \(pointer: fine\)/);
   assert.match(source, /@media \(prefers-reduced-motion: reduce\)/);
 });
