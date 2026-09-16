@@ -4,6 +4,24 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 39 · 2026-09-16 · release-candidate
+
+Build 39 · 2026-09-16 · Prepared for External TestFlight; upload and Apple processing/review pending. Not yet confirmed available.
+
+#### Changes since build 38
+
+- Series completion distinguishes Caught Up on ongoing shows from completed checkmarks on ended shows; partially watched series no longer appear complete.
+- Global completion styles also apply to detail episode selectors and the in-player episode browser.
+- Playback hides app navigation controls consistently across entry points.
+- Copy Profile identifies duplicate source IDs, credential references, settings keys, branches or shelves instead of a misleading encryption error.
+- Channel-swipe transitions close when the next channel starts loading; guide selections do not trigger the swipe animation.
+- Improved recovery when live streams deliver no initial data and reduced unnecessary startup waiting for qualifying HEVC streams.
+
+Copy Profile diagnostics identify the failing check; they do not automatically repair duplicate profile data.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
+
 ### 1.0.0 · build 38 · 2026-09-16
 
 Build 38 · 2026-09-16 · Released to External TestFlight on iPhone.
@@ -579,6 +597,24 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 39 · 2026-09-16 · release-candidate
+
+Build 39 · 2026-09-16 · Prepared for External TestFlight; upload and Apple processing/review pending. Not yet confirmed available.
+
+#### Changes since build 38
+
+- Series completion distinguishes Caught Up on ongoing shows from completed checkmarks on ended shows; partially watched series no longer appear complete.
+- Global completion styles also apply to detail episode selectors and the in-player episode browser.
+- Playback hides app navigation controls consistently across entry points.
+- Copy Profile identifies duplicate source IDs, credential references, settings keys, branches or shelves instead of a misleading encryption error.
+- Channel-swipe transitions close when the next channel starts loading; guide selections do not trigger the swipe animation.
+- Improved recovery when live streams deliver no initial data and reduced unnecessary startup waiting for qualifying HEVC streams.
+
+Copy Profile diagnostics identify the failing check; they do not automatically repair duplicate profile data.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
+
 ### 1.0.0 · build 38 · 2026-09-16
 
 Build 38 · 2026-09-16 · Released to External TestFlight on iPad.
@@ -1153,6 +1189,30 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 39 · 2026-09-16 · release-candidate
+
+Build 39 · 2026-09-16 · Prepared for External TestFlight; upload and Apple processing/review pending. Not yet confirmed available.
+
+#### Changes since build 38
+
+- Series completion distinguishes Caught Up on ongoing shows from completed checkmarks on ended shows; partially watched series no longer appear complete.
+- Global completion styles also apply to detail episode selectors and the in-player episode browser.
+- Playback hides app navigation controls consistently across entry points.
+- Copy Profile identifies duplicate source IDs, credential references, settings keys, branches or shelves instead of a misleading encryption error.
+- Detailed Home keeps focused branches and titles visible while navigating down and back up, and restores the hero at the top.
+- Feature branches show two larger cards across on Apple TV; other platforms keep their existing sizing.
+- Fixed upward Critic-row navigation and improved spacing beneath focused portrait artwork.
+- View All appears only above eight items. Landscape titles default to visible while saved preferences are respected.
+- Centered and enlarged Movies / TV Shows / Live TV tabs, simplified filter focus styling, and made Sort reachable with the remote.
+- Widened Critic columns to keep release years on one line.
+- Collection heroes show only their title or original-colour logo; corrected logos being reused across branch groups.
+- Player controls initially prefer the timeline; Back dismisses audio/subtitle controls before leaving playback.
+
+Copy Profile diagnostics identify the failing check; they do not automatically repair duplicate profile data.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
+
 ### 1.0.0 · build 38 · 2026-09-16
 
 Build 38 · 2026-09-16 · Released to External TestFlight on Apple TV.
@@ -1640,6 +1700,23 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 39 · 2026-09-16 · release-candidate
+
+Build 39 · 2026-09-16 · Prepared for External TestFlight; upload and Apple processing/review pending. Not yet confirmed available.
+
+#### Changes since build 38
+
+- Series completion distinguishes Caught Up on ongoing shows from completed checkmarks on ended shows; partially watched series no longer appear complete.
+- Global completion styles also apply to detail episode selectors and the in-player episode browser.
+- Playback hides app navigation controls consistently across entry points.
+- Copy Profile identifies duplicate source IDs, credential references, settings keys, branches or shelves instead of a misleading encryption error.
+- Improved recovery when live streams deliver no initial data and reduced unnecessary startup waiting for qualifying HEVC streams.
+
+Copy Profile diagnostics identify the failing check; they do not automatically repair duplicate profile data.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 
 ### 1.0.0 · build 38 · 2026-09-16
 

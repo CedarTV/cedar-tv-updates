@@ -2,6 +2,42 @@
   "schemaVersion": 1,
   "releases": [
     {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "39",
+      "date": "2026-09-16",
+      "status": "release-candidate",
+      "summary": "External TestFlight preparation; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-39.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "39",
+      "date": "2026-09-16",
+      "status": "release-candidate",
+      "summary": "External TestFlight preparation; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-39.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "39",
+      "date": "2026-09-16",
+      "status": "release-candidate",
+      "summary": "External TestFlight preparation; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics. Home navigation and artwork improvements.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-39.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "39",
+      "date": "2026-09-16",
+      "status": "release-candidate",
+      "summary": "External TestFlight preparation; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
+      "notes": "release-notes/apple/mac/1.0.0-build-39.md"
+    },
+    {
       "platform": "mac",
       "version": "1.0.0",
       "build": "28",
