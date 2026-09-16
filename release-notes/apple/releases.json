@@ -1005,6 +1005,96 @@
       "status": "testflight",
       "summary": "Internal-only iPhone/iPad build: Branch Group browsing settings, Connected List spacing and matching folder previews.",
       "notes": "release-notes/apple/ipad/1.0.0-build-33.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "38",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-38.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "38",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-38.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "38",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.",
+      "notes": "release-notes/apple/mac/1.0.0-build-38.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "38",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-38.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "35",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Aligned poster captions and reserved title space consistently.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-35.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "35",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Aligned poster captions and reserved title space consistently.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-35.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "36",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Unified Home poster rendering in Library and branch grids.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-36.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "36",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Unified Home poster rendering in Library and branch grids.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-36.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "37",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Added Cedar Overlays with Default, Liquid Glass and Off styles, viewing progress and completion controls.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-37.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "37",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Added Cedar Overlays with Default, Liquid Glass and Off styles, viewing progress and completion controls.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-37.md"
     }
   ]
 }

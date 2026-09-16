@@ -4,6 +4,59 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 38 · 2026-09-16
+
+Build 38 · 2026-09-16 · Released to External TestFlight on iPhone.
+
+#### Changes since external build 34
+
+- Added global Cedar Overlays in Settings → Posters & Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.
+- Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.
+- Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.
+- Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.
+- Connected lists now show one card per series instead of repeating individual episodes.
+- Feature-style artwork waits for the selected image instead of briefly showing another backdrop.
+- Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.
+- Improved initial Search content loading and restored bundled rating icons on Critic cards.
+- Feature branches fit one full-width card, and group-folder poster rows respect the three-poster layout.
+- Fixed navigation reorder persistence and detail artwork with Reduce Transparency enabled.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
+### 1.0.0 · build 37 · 2026-09-16
+
+Build 37 · 2026-09-16 · Released to Internal TestFlight on iPhone. Available to invited internal testers only.
+
+#### Changes
+
+- Added Cedar Overlays with Default, Liquid Glass and Off styles, viewing progress and completion controls.
+- Added grouped overlay settings and Inception portrait/landscape previews.
+- Unified branch presentation and watched markers across Home, Library and collection destinations.
+- Improved episode watched-state lookup, mixed Favorites and batched collection loading.
+
+### 1.0.0 · build 36 · 2026-09-16
+
+Build 36 · 2026-09-16 · Released to Internal TestFlight on iPhone. Available to invited internal testers only.
+
+#### Changes
+
+- Unified Home poster rendering in Library and branch grids.
+- Improved card sizing, artwork effects and centered channel logos.
+- Fixed bundled Critic rating-icon lookup.
+
+### 1.0.0 · build 35 · 2026-09-16
+
+Build 35 · 2026-09-16 · Released to Internal TestFlight on iPhone. Available to invited internal testers only.
+
+#### Changes
+
+- Aligned poster captions and reserved title space consistently.
+- Fixed navigation reorder persistence and detail hero appearance with Reduce Transparency.
+- Added movie, series and Live TV Favorites, with channel-logo fitting.
+- Normalized connected-list episodes into series cards and improved Feature artwork loading.
+- Improved remembered-release source badges, source-picker readability and initial Search content loading.
+
+
 ### 1.0.0 · build 34 · 2026-09-15
 
 Build 34 · 2026-09-15 · Released to External TestFlight on iPhone.
@@ -526,6 +579,59 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 38 · 2026-09-16
+
+Build 38 · 2026-09-16 · Released to External TestFlight on iPad.
+
+#### Changes since external build 34
+
+- Added global Cedar Overlays in Settings → Posters & Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.
+- Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.
+- Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.
+- Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.
+- Connected lists now show one card per series instead of repeating individual episodes.
+- Feature-style artwork waits for the selected image instead of briefly showing another backdrop.
+- Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.
+- Improved initial Search content loading and restored bundled rating icons on Critic cards.
+- Feature branches fit one full-width card, and group-folder poster rows respect the three-poster layout.
+- Fixed navigation reorder persistence and detail artwork with Reduce Transparency enabled.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
+### 1.0.0 · build 37 · 2026-09-16
+
+Build 37 · 2026-09-16 · Released to Internal TestFlight on iPad. Available to invited internal testers only.
+
+#### Changes
+
+- Added Cedar Overlays with Default, Liquid Glass and Off styles, viewing progress and completion controls.
+- Added grouped overlay settings and Inception portrait/landscape previews.
+- Unified branch presentation and watched markers across Home, Library and collection destinations.
+- Improved episode watched-state lookup, mixed Favorites and batched collection loading.
+
+### 1.0.0 · build 36 · 2026-09-16
+
+Build 36 · 2026-09-16 · Released to Internal TestFlight on iPad. Available to invited internal testers only.
+
+#### Changes
+
+- Unified Home poster rendering in Library and branch grids.
+- Improved card sizing, artwork effects and centered channel logos.
+- Fixed bundled Critic rating-icon lookup.
+
+### 1.0.0 · build 35 · 2026-09-16
+
+Build 35 · 2026-09-16 · Released to Internal TestFlight on iPad. Available to invited internal testers only.
+
+#### Changes
+
+- Aligned poster captions and reserved title space consistently.
+- Fixed navigation reorder persistence and detail hero appearance with Reduce Transparency.
+- Added movie, series and Live TV Favorites, with channel-logo fitting.
+- Normalized connected-list episodes into series cards and improved Feature artwork loading.
+- Improved remembered-release source badges, source-picker readability and initial Search content loading.
+
+
 ### 1.0.0 · build 34 · 2026-09-15
 
 Build 34 · 2026-09-15 · Released to External TestFlight on iPad.
@@ -1047,6 +1153,25 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 38 · 2026-09-16
+
+Build 38 · 2026-09-16 · Released to External TestFlight on Apple TV.
+
+#### Changes since external build 34
+
+- Added global Cedar Overlays in Settings → Posters & Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.
+- Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.
+- Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.
+- Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.
+- Connected lists now show one card per series instead of repeating individual episodes.
+- Feature-style artwork waits for the selected image instead of briefly showing another backdrop.
+- Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.
+- Improved initial Search content loading and restored bundled rating icons on Critic cards.
+- Improved full-bleed Home branch rendering so focused posters are not cut off at the bottom.
+- Hero titles wait for clear-art artwork before falling back to plain text.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 34 · 2026-09-15
 
 Build 34 · 2026-09-15 · Released to External TestFlight on Apple TV.
@@ -1515,6 +1640,24 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 38 · 2026-09-16
+
+Build 38 · 2026-09-16 · Released to External TestFlight on Mac.
+
+#### Changes since external build 34
+
+- Added global Cedar Overlays in Settings → Posters & Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.
+- Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.
+- Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.
+- Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.
+- Connected lists now show one card per series instead of repeating individual episodes.
+- Feature-style artwork waits for the selected image instead of briefly showing another backdrop.
+- Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.
+- Improved initial Search content loading and restored bundled rating icons on Critic cards.
+- Fixed navigation reorder persistence and detail artwork with Reduce Transparency enabled.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
 
 ### 1.0.0 · build 34 · 2026-09-15
 

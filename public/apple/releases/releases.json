@@ -26,6 +26,106 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "38",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 38 · 2026-09-16 · Released to External TestFlight on iPhone.\n\n## Changes since external build 34\n\n- Added global Cedar Overlays in Settings → Posters & Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.\n- Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.\n- Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.\n- Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.\n- Connected lists now show one card per series instead of repeating individual episodes.\n- Feature-style artwork waits for the selected image instead of briefly showing another backdrop.\n- Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.\n- Improved initial Search content loading and restored bundled rating icons on Critic cards.\n- Feature branches fit one full-width card, and group-folder poster rows respect the three-poster layout.\n- Fixed navigation reorder persistence and detail artwork with Reduce Transparency enabled.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-38"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "38",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 38 · 2026-09-16 · Released to External TestFlight on iPad.\n\n## Changes since external build 34\n\n- Added global Cedar Overlays in Settings → Posters & Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.\n- Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.\n- Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.\n- Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.\n- Connected lists now show one card per series instead of repeating individual episodes.\n- Feature-style artwork waits for the selected image instead of briefly showing another backdrop.\n- Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.\n- Improved initial Search content loading and restored bundled rating icons on Critic cards.\n- Feature branches fit one full-width card, and group-folder poster rows respect the three-poster layout.\n- Fixed navigation reorder persistence and detail artwork with Reduce Transparency enabled.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-38"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "38",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 38 · 2026-09-16 · Released to External TestFlight on Mac.\n\n## Changes since external build 34\n\n- Added global Cedar Overlays in Settings → Posters & Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.\n- Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.\n- Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.\n- Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.\n- Connected lists now show one card per series instead of repeating individual episodes.\n- Feature-style artwork waits for the selected image instead of briefly showing another backdrop.\n- Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.\n- Improved initial Search content loading and restored bundled rating icons on Critic cards.\n- Fixed navigation reorder persistence and detail artwork with Reduce Transparency enabled.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-38"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "38",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 38 · 2026-09-16 · Released to External TestFlight on Apple TV.\n\n## Changes since external build 34\n\n- Added global Cedar Overlays in Settings → Posters & Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.\n- Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.\n- Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.\n- Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.\n- Connected lists now show one card per series instead of repeating individual episodes.\n- Feature-style artwork waits for the selected image instead of briefly showing another backdrop.\n- Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.\n- Improved initial Search content loading and restored bundled rating icons on Critic cards.\n- Improved full-bleed Home branch rendering so focused posters are not cut off at the bottom.\n- Hero titles wait for clear-art artwork before falling back to plain text.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-38"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "37",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Added Cedar Overlays with Default, Liquid Glass and Off styles, viewing progress and completion controls.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 37 · 2026-09-16 · Released to Internal TestFlight on iPhone. Available to invited internal testers only.\n\n## Changes\n\n- Added Cedar Overlays with Default, Liquid Glass and Off styles, viewing progress and completion controls.\n- Added grouped overlay settings and Inception portrait/landscape previews.\n- Unified branch presentation and watched markers across Home, Library and collection destinations.\n- Improved episode watched-state lookup, mixed Favorites and batched collection loading.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-37"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "37",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Added Cedar Overlays with Default, Liquid Glass and Off styles, viewing progress and completion controls.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 37 · 2026-09-16 · Released to Internal TestFlight on iPad. Available to invited internal testers only.\n\n## Changes\n\n- Added Cedar Overlays with Default, Liquid Glass and Off styles, viewing progress and completion controls.\n- Added grouped overlay settings and Inception portrait/landscape previews.\n- Unified branch presentation and watched markers across Home, Library and collection destinations.\n- Improved episode watched-state lookup, mixed Favorites and batched collection loading.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-37"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "36",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Unified Home poster rendering in Library and branch grids.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 36 · 2026-09-16 · Released to Internal TestFlight on iPhone. Available to invited internal testers only.\n\n## Changes\n\n- Unified Home poster rendering in Library and branch grids.\n- Improved card sizing, artwork effects and centered channel logos.\n- Fixed bundled Critic rating-icon lookup.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-36"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "36",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Unified Home poster rendering in Library and branch grids.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 36 · 2026-09-16 · Released to Internal TestFlight on iPad. Available to invited internal testers only.\n\n## Changes\n\n- Unified Home poster rendering in Library and branch grids.\n- Improved card sizing, artwork effects and centered channel logos.\n- Fixed bundled Critic rating-icon lookup.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-36"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "35",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Aligned poster captions and reserved title space consistently.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 35 · 2026-09-16 · Released to Internal TestFlight on iPhone. Available to invited internal testers only.\n\n## Changes\n\n- Aligned poster captions and reserved title space consistently.\n- Fixed navigation reorder persistence and detail hero appearance with Reduce Transparency.\n- Added movie, series and Live TV Favorites, with channel-logo fitting.\n- Normalized connected-list episodes into series cards and improved Feature artwork loading.\n- Improved remembered-release source badges, source-picker readability and initial Search content loading.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-35"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "35",
+      "date": "2026-09-16",
+      "status": "testflight",
+      "summary": "Internal TestFlight on iPhone/iPad only. Aligned poster captions and reserved title space consistently.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 35 · 2026-09-16 · Released to Internal TestFlight on iPad. Available to invited internal testers only.\n\n## Changes\n\n- Aligned poster captions and reserved title space consistently.\n- Fixed navigation reorder persistence and detail hero appearance with Reduce Transparency.\n- Added movie, series and Live TV Favorites, with channel-logo fitting.\n- Normalized connected-list episodes into series cards and improved Feature artwork loading.\n- Improved remembered-release source badges, source-picker readability and initial Search content loading.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-35"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "34",
       "date": "2026-09-15",
       "status": "testflight",
