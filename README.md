@@ -132,3 +132,13 @@ make network requests or access Cedar Link credentials.
 
 Run `node --test test/*.test.mjs`, each renderer with `--check`, and
 `node scripts/verify_public_site.mjs` before publishing.
+
+## Cedar Studio preview
+
+`public/customize/` is the unlinked Home builder at <https://cedartv.github.io/cedar-tv-updates/customize/>. It follows Cedar's Branch / Branch Group distinction, with title rows, a Home preview, a quick editor, source selection and filters, group device layouts, and local draft persistence. No emoji controls are used.
+
+Import accepts external collection arrays, collection envelopes, Nuvio profile exports, and Studio v1/v2 drafts, through files, pasted JSON or public HTTPS URLs (10 MB maximum). A review precedes append, replace or add-missing. Kaptain's public v0.92 collection can be loaded through the import dialog; its JSON and artwork remain hosted by their original authors. The editor identifies unsupported sources and exports only compatible enabled content. Native Cedar share exports are not restorable collection backups and are rejected with an explanation.
+
+Export uses the existing CedarCore ExternalCollectionImporter profile format: direct Branches become `home_rows`, Branch Groups become `collections`, and `home_order` preserves their combined order. Direct Branches use the importer's poster presentation; group appearances use `cedarLayout`. The current importer does not preserve direct-list sort/filter customization; the export review identifies this limitation. The browser never sends a collection to a paired device.
+
+Verify with `node --test test/studio.test.mjs` and `node scripts/verify_studio_browser.cjs` (Playwright and Chrome required). Set `CEDAR_STUDIO_URL` to a served project root or the live Pages root, and `CEDAR_STUDIO_ARTIFACTS` to a disposable directory under the parent workspace's `tmp` symlink.
