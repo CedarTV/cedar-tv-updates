@@ -4,6 +4,14 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 32 · 2026-09-15
+
+Released to Internal TestFlight on iPhone and iPad; invited internal testers only.
+
+- Fixed Trakt and MDBList list previews and saved Home branches failing to load.
+- Removed the duplicate back arrow in Connected Lists.
+
+
 ### 1.0.0 · build 29 · 2026-09-14
 
 Available to internal TestFlight testers only on iPhone, iPad, Mac and Apple TV. External testers remain on build 28.
@@ -468,6 +476,14 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 32 · 2026-09-15
+
+Released to Internal TestFlight on iPhone and iPad; invited internal testers only.
+
+- Fixed Trakt and MDBList list previews and saved Home branches failing to load.
+- Removed the duplicate back arrow in Connected Lists.
+
 
 ### 1.0.0 · build 29 · 2026-09-14
 

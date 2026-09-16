@@ -26,6 +26,28 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "32",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Internal TestFlight only: fixed Trakt and MDBList previews and saved Home branches, and removed the duplicate Connected Lists back arrow.",
+      "audience": "internal",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 32 · September 15, 2026 · Released to Internal TestFlight on iPhone and iPad.\n\nAvailable to invited internal testers only.\n\n## Fixes\n\n- Fixed Trakt and MDBList list previews and saved Home branches failing to load.\n- Removed the duplicate back arrow in Connected Lists.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-32"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "32",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Internal TestFlight only: fixed Trakt and MDBList previews and saved Home branches, and removed the duplicate Connected Lists back arrow.",
+      "audience": "internal",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 32 · September 15, 2026 · Released to Internal TestFlight on iPhone and iPad.\n\nAvailable to invited internal testers only.\n\n## Fixes\n\n- Fixed Trakt and MDBList list previews and saved Home branches failing to load.\n- Removed the duplicate back arrow in Connected Lists.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-32"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "29",
       "date": "2026-09-14",
       "status": "testflight",

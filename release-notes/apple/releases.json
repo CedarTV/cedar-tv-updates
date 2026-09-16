@@ -895,6 +895,26 @@
       "audience": "internal",
       "summary": "Internal-only TestFlight: AetherEngine 6.86.0, FFmpegBuild 3.3.0 and Kingfisher 8.12.0. External testers remain on build 28.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-29.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "32",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "audience": "internal",
+      "summary": "Internal TestFlight only: fixed Trakt and MDBList previews and saved Home branches, and removed the duplicate Connected Lists back arrow.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-32.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "32",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "audience": "internal",
+      "summary": "Internal TestFlight only: fixed Trakt and MDBList previews and saved Home branches, and removed the duplicate Connected Lists back arrow.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-32.md"
     }
   ]
 }
