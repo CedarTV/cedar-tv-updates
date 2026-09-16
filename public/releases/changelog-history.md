@@ -4,9 +4,9 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
-### 1.0.0 · build 39 · 2026-09-16 · release-candidate
+### 1.0.0 · build 39 · 2026-09-16 · testflight
 
-Build 39 · 2026-09-16 · Uploaded for External TestFlight; Apple processing/review pending. Not yet confirmed available.
+Build 39 · 2026-09-16 · Released to External TestFlight.
 
 #### Changes since build 38
 
@@ -597,9 +597,9 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
-### 1.0.0 · build 39 · 2026-09-16 · release-candidate
+### 1.0.0 · build 39 · 2026-09-16 · testflight
 
-Build 39 · 2026-09-16 · Uploaded for External TestFlight; Apple processing/review pending. Not yet confirmed available.
+Build 39 · 2026-09-16 · Released to External TestFlight.
 
 #### Changes since build 38
 
@@ -1189,9 +1189,9 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
-### 1.0.0 · build 39 · 2026-09-16 · release-candidate
+### 1.0.0 · build 39 · 2026-09-16 · testflight
 
-Build 39 · 2026-09-16 · Uploaded for External TestFlight; Apple processing/review pending. Not yet confirmed available.
+Build 39 · 2026-09-16 · Released to External TestFlight.
 
 #### Changes since build 38
 
@@ -1703,7 +1703,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ### 1.0.0 · build 39 · 2026-09-16 · release-candidate
 
-Build 39 · 2026-09-16 · Uploaded for External TestFlight; Apple processing/review pending. Not yet confirmed available.
+Build 39 · 2026-09-16 · Submitted for External TestFlight; awaiting Apple beta review. Not yet available to external testers.
 
 #### Changes since build 38
 
