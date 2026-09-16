@@ -7,7 +7,7 @@
       "build": "39",
       "date": "2026-09-16",
       "status": "release-candidate",
-      "summary": "External TestFlight preparation; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
+      "summary": "Uploaded for External TestFlight; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
       "notes": "release-notes/apple/iphone/1.0.0-build-39.md"
     },
     {
@@ -16,7 +16,7 @@
       "build": "39",
       "date": "2026-09-16",
       "status": "release-candidate",
-      "summary": "External TestFlight preparation; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
+      "summary": "Uploaded for External TestFlight; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
       "notes": "release-notes/apple/ipad/1.0.0-build-39.md"
     },
     {
@@ -25,7 +25,7 @@
       "build": "39",
       "date": "2026-09-16",
       "status": "release-candidate",
-      "summary": "External TestFlight preparation; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics. Home navigation and artwork improvements.",
+      "summary": "Uploaded for External TestFlight; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics. Home navigation and artwork improvements.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-39.md"
     },
     {
@@ -34,7 +34,7 @@
       "build": "39",
       "date": "2026-09-16",
       "status": "release-candidate",
-      "summary": "External TestFlight preparation; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
+      "summary": "Uploaded for External TestFlight; Apple processing/review pending. Completion overlays, playback and profile-copy diagnostics.",
       "notes": "release-notes/apple/mac/1.0.0-build-39.md"
     },
     {

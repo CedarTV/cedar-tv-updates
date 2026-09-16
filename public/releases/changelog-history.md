@@ -6,7 +6,7 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 ### 1.0.0 · build 39 · 2026-09-16 · release-candidate
 
-Build 39 · 2026-09-16 · Prepared for External TestFlight; upload and Apple processing/review pending. Not yet confirmed available.
+Build 39 · 2026-09-16 · Uploaded for External TestFlight; Apple processing/review pending. Not yet confirmed available.
 
 #### Changes since build 38
 
@@ -599,7 +599,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ### 1.0.0 · build 39 · 2026-09-16 · release-candidate
 
-Build 39 · 2026-09-16 · Prepared for External TestFlight; upload and Apple processing/review pending. Not yet confirmed available.
+Build 39 · 2026-09-16 · Uploaded for External TestFlight; Apple processing/review pending. Not yet confirmed available.
 
 #### Changes since build 38
 
@@ -1191,7 +1191,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ### 1.0.0 · build 39 · 2026-09-16 · release-candidate
 
-Build 39 · 2026-09-16 · Prepared for External TestFlight; upload and Apple processing/review pending. Not yet confirmed available.
+Build 39 · 2026-09-16 · Uploaded for External TestFlight; Apple processing/review pending. Not yet confirmed available.
 
 #### Changes since build 38
 
@@ -1703,7 +1703,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ### 1.0.0 · build 39 · 2026-09-16 · release-candidate
 
-Build 39 · 2026-09-16 · Prepared for External TestFlight; upload and Apple processing/review pending. Not yet confirmed available.
+Build 39 · 2026-09-16 · Uploaded for External TestFlight; Apple processing/review pending. Not yet confirmed available.
 
 #### Changes since build 38
 
