@@ -4,6 +4,55 @@ Compiled September 14, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 34 · 2026-09-15
+
+Build 34 · 2026-09-15 · Released to External TestFlight on iPhone.
+
+#### Changes since external build 31
+
+- Fixed Trakt and MDBList list previews and saved Home branches failing to load.
+- Removed the duplicate back arrow when browsing Connected Lists.
+- Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.
+- Improved spacing for Connected List account, title and help text in branch editing.
+- Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).
+
+### 1.0.0 · build 33 · 2026-09-15
+
+Build 33 · 2026-09-15 · Released to Internal TestFlight on iPhone and iPad. Available to invited internal testers only.
+
+#### Improvements
+
+- All Platforms folder browsing settings now apply throughout a Branch Group while preserving individual overrides.
+- Improved Connected List title, account and help spacing.
+- Folder previews match Home artwork, tile shapes and title visibility, including bundled and custom artwork.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/)
+
+Internal testers can install from their existing TestFlight invitation.
+
+### 1.0.0 · build 31 · 2026-09-15
+
+Build 31 · 2026-09-15 · Released to External TestFlight on iPhone.
+
+#### Changes since external build 28
+
+- Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.
+- Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.
+- Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.
+- Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.
+- Improve profile-scoped media-server login restoration and separation between profiles.
+- Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.
+- Update playback and artwork dependencies.
+
+#### Household tracking upgrade
+
+Update household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).
+
+
 ### 1.0.0 · build 32 · 2026-09-15
 
 Released to Internal TestFlight on iPhone and iPad; invited internal testers only.
@@ -477,6 +526,55 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 34 · 2026-09-15
+
+Build 34 · 2026-09-15 · Released to External TestFlight on iPad.
+
+#### Changes since external build 31
+
+- Fixed Trakt and MDBList list previews and saved Home branches failing to load.
+- Removed the duplicate back arrow when browsing Connected Lists.
+- Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.
+- Improved spacing for Connected List account, title and help text in branch editing.
+- Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).
+
+### 1.0.0 · build 33 · 2026-09-15
+
+Build 33 · 2026-09-15 · Released to Internal TestFlight on iPhone and iPad. Available to invited internal testers only.
+
+#### Improvements
+
+- All Platforms folder browsing settings now apply throughout a Branch Group while preserving individual overrides.
+- Improved Connected List title, account and help spacing.
+- Folder previews match Home artwork, tile shapes and title visibility, including bundled and custom artwork.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/)
+
+Internal testers can install from their existing TestFlight invitation.
+
+### 1.0.0 · build 31 · 2026-09-15
+
+Build 31 · 2026-09-15 · Released to External TestFlight on iPad.
+
+#### Changes since external build 28
+
+- Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.
+- Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.
+- Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.
+- Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.
+- Improve profile-scoped media-server login restoration and separation between profiles.
+- Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.
+- Update playback and artwork dependencies.
+
+#### Household tracking upgrade
+
+Update household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).
+
+
 ### 1.0.0 · build 32 · 2026-09-15
 
 Released to Internal TestFlight on iPhone and iPad; invited internal testers only.
@@ -949,6 +1047,62 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 34 · 2026-09-15
+
+Build 34 · 2026-09-15 · Released to External TestFlight on Apple TV.
+
+#### Changes since external build 31
+
+- Fixed Trakt and MDBList list previews and saved Home branches failing to load.
+- Removed the duplicate back arrow when browsing Connected Lists.
+- Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.
+- Improved spacing for Connected List account, title and help text in branch editing.
+- Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.
+
+#### Apple TV Home and Live
+
+- Show Home hero content sooner after installing an update, without waiting for every remote branch to finish refreshing.
+- Improve scrolling through Detailed Home and Live categories.
+- Keep the Detailed hero carousel bounded: Left from the first hero reaches the sidebar.
+- Extend Live guide artwork and cells to the right and bottom edges while keeping controls inside the safe area.
+- Keep the Cinematic hero stationary when moving between poster and landscape branches, with consistent Home/detail alignment.
+- Fix vertical bouncing during horizontal navigation and improve returning to the first Continue Watching item.
+- Preserve native poster parallax while keeping branch paging stable.
+- Keep streaming-service, studio and other Branch Group rows aligned when their hero artwork appears.
+- Match group View All cards to landscape, square or portrait rows and improve spacing between group cards.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).
+
+### 1.0.0 · build 31 · 2026-09-15
+
+Build 31 · 2026-09-15 · Released to External TestFlight on Apple TV.
+
+#### Changes since external build 28
+
+- Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.
+- Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.
+- Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.
+- Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.
+- Improve profile-scoped media-server login restoration and separation between profiles.
+- Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.
+- Update playback and artwork dependencies.
+
+#### Apple TV
+
+- Choose between Cinematic Home and the new Detailed Home layout.
+- Detailed offers a separately configured hero carousel with manual browsing, shared hero metadata styling, and a blurred background as you move down into branches.
+- Keep Left/Right focused on browsing the hero carousel; Back still opens the sidebar.
+- Improve safe-area handling, horizontal full-bleed branches, focus clearance, and spacing between hero details and branch titles.
+- Align Home and detail heroes, give detail sections a consistent starting position, and align Settings pages and submenus.
+- Improve folder-card focus, add poster-grid hero artwork for supported groups, clarify seek indicators, and move refresh status to the bottom of the screen.
+
+#### Household tracking upgrade
+
+Update household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).
+
+
 ### 1.0.0 · build 29 · 2026-09-14
 
 Available to internal TestFlight testers only on iPhone, iPad, Mac and Apple TV. External testers remain on build 28.
@@ -1361,6 +1515,41 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 34 · 2026-09-15
+
+Build 34 · 2026-09-15 · Released to External TestFlight on Mac.
+
+#### Changes since external build 31
+
+- Fixed Trakt and MDBList list previews and saved Home branches failing to load.
+- Removed the duplicate back arrow when browsing Connected Lists.
+- Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.
+- Improved spacing for Connected List account, title and help text in branch editing.
+- Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).
+
+### 1.0.0 · build 31 · 2026-09-15
+
+Build 31 · 2026-09-15 · Released to External TestFlight on Mac.
+
+#### Changes since external build 28
+
+- Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.
+- Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.
+- Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.
+- Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.
+- Improve profile-scoped media-server login restoration and separation between profiles.
+- Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.
+- Update playback and artwork dependencies.
+
+#### Household tracking upgrade
+
+Update household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.
+
+[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).
+
 
 ### 1.0.0 · build 29 · 2026-09-14
 

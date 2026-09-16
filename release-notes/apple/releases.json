@@ -915,6 +915,96 @@
       "audience": "internal",
       "summary": "Internal TestFlight only: fixed Trakt and MDBList previews and saved Home branches, and removed the duplicate Connected Lists back arrow.",
       "notes": "release-notes/apple/ipad/1.0.0-build-32.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "31",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-31.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "31",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-31.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "31",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.",
+      "notes": "release-notes/apple/mac/1.0.0-build-31.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "31",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-31.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "34",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected list and folder improvements.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-34.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "34",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected list and folder improvements.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-34.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "34",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected list and folder improvements.",
+      "notes": "release-notes/apple/mac/1.0.0-build-34.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "34",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected list and folder improvements; faster Home loading, smoother scrolling and stable branch alignment on Apple TV.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-34.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "33",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad build: Branch Group browsing settings, Connected List spacing and matching folder previews.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-33.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "33",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad build: Branch Group browsing settings, Connected List spacing and matching folder previews.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-33.md"
     }
   ]
 }

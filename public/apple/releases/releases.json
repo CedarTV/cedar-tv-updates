@@ -26,6 +26,66 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "34",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected list and folder improvements.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 34 · 2026-09-15 · Released to External TestFlight on iPhone.\n\n## Changes since external build 31\n\n- Fixed Trakt and MDBList list previews and saved Home branches failing to load.\n- Removed the duplicate back arrow when browsing Connected Lists.\n- Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.\n- Improved spacing for Connected List account, title and help text in branch editing.\n- Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-34"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "34",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected list and folder improvements.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 34 · 2026-09-15 · Released to External TestFlight on iPad.\n\n## Changes since external build 31\n\n- Fixed Trakt and MDBList list previews and saved Home branches failing to load.\n- Removed the duplicate back arrow when browsing Connected Lists.\n- Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.\n- Improved spacing for Connected List account, title and help text in branch editing.\n- Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-34"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "34",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected list and folder improvements.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 34 · 2026-09-15 · Released to External TestFlight on Mac.\n\n## Changes since external build 31\n\n- Fixed Trakt and MDBList list previews and saved Home branches failing to load.\n- Removed the duplicate back arrow when browsing Connected Lists.\n- Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.\n- Improved spacing for Connected List account, title and help text in branch editing.\n- Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-34"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "34",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected list and folder improvements; faster Home loading, smoother scrolling and stable branch alignment on Apple TV.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 34 · 2026-09-15 · Released to External TestFlight on Apple TV.\n\n## Changes since external build 31\n\n- Fixed Trakt and MDBList list previews and saved Home branches failing to load.\n- Removed the duplicate back arrow when browsing Connected Lists.\n- Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.\n- Improved spacing for Connected List account, title and help text in branch editing.\n- Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.\n\n## Apple TV Home and Live\n\n- Show Home hero content sooner after installing an update, without waiting for every remote branch to finish refreshing.\n- Improve scrolling through Detailed Home and Live categories.\n- Keep the Detailed hero carousel bounded: Left from the first hero reaches the sidebar.\n- Extend Live guide artwork and cells to the right and bottom edges while keeping controls inside the safe area.\n- Keep the Cinematic hero stationary when moving between poster and landscape branches, with consistent Home/detail alignment.\n- Fix vertical bouncing during horizontal navigation and improve returning to the first Continue Watching item.\n- Preserve native poster parallax while keeping branch paging stable.\n- Keep streaming-service, studio and other Branch Group rows aligned when their hero artwork appears.\n- Match group View All cards to landscape, square or portrait rows and improve spacing between group cards.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-34"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "33",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad build: Branch Group browsing settings, Connected List spacing and matching folder previews.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 33 · 2026-09-15 · Released to Internal TestFlight on iPhone and iPad. Available to invited internal testers only.\n\n## Improvements\n\n- All Platforms folder browsing settings now apply throughout a Branch Group while preserving individual overrides.\n- Improved Connected List title, account and help spacing.\n- Folder previews match Home artwork, tile shapes and title visibility, including bundled and custom artwork.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/)\n\nInternal testers can install from their existing TestFlight invitation.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-33"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "33",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Internal-only iPhone/iPad build: Branch Group browsing settings, Connected List spacing and matching folder previews.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 33 · 2026-09-15 · Released to Internal TestFlight on iPhone and iPad. Available to invited internal testers only.\n\n## Improvements\n\n- All Platforms folder browsing settings now apply throughout a Branch Group while preserving individual overrides.\n- Improved Connected List title, account and help spacing.\n- Folder previews match Home artwork, tile shapes and title visibility, including bundled and custom artwork.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/)\n\nInternal testers can install from their existing TestFlight invitation.\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-33"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "32",
       "date": "2026-09-15",
       "status": "testflight",
@@ -44,6 +104,46 @@
       "audience": "internal",
       "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 32 · September 15, 2026 · Released to Internal TestFlight on iPhone and iPad.\n\nAvailable to invited internal testers only.\n\n## Fixes\n\n- Fixed Trakt and MDBList list previews and saved Home branches failing to load.\n- Removed the duplicate back arrow in Connected Lists.\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-32"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
+      "build": "31",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 31 · 2026-09-15 · Released to External TestFlight on iPhone.\n\n## Changes since external build 28\n\n- Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.\n- Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.\n- Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.\n- Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.\n- Improve profile-scoped media-server login restoration and separation between profiles.\n- Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.\n- Update playback and artwork dependencies.\n\n## Household tracking upgrade\n\nUpdate household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-31"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "31",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 31 · 2026-09-15 · Released to External TestFlight on iPad.\n\n## Changes since external build 28\n\n- Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.\n- Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.\n- Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.\n- Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.\n- Improve profile-scoped media-server login restoration and separation between profiles.\n- Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.\n- Update playback and artwork dependencies.\n\n## Household tracking upgrade\n\nUpdate household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-31"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "31",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 31 · 2026-09-15 · Released to External TestFlight on Mac.\n\n## Changes since external build 28\n\n- Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.\n- Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.\n- Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.\n- Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.\n- Improve profile-scoped media-server login restoration and separation between profiles.\n- Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.\n- Update playback and artwork dependencies.\n\n## Household tracking upgrade\n\nUpdate household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-31"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "31",
+      "date": "2026-09-15",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 31 · 2026-09-15 · Released to External TestFlight on Apple TV.\n\n## Changes since external build 28\n\n- Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.\n- Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.\n- Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.\n- Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.\n- Improve profile-scoped media-server login restoration and separation between profiles.\n- Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.\n- Update playback and artwork dependencies.\n\n## Apple TV\n\n- Choose between Cinematic Home and the new Detailed Home layout.\n- Detailed offers a separately configured hero carousel with manual browsing, shared hero metadata styling, and a blurred background as you move down into branches.\n- Keep Left/Right focused on browsing the hero carousel; Back still opens the sidebar.\n- Improve safe-area handling, horizontal full-bleed branches, focus clearance, and spacing between hero details and branch titles.\n- Align Home and detail heroes, give detail sections a consistent starting position, and align Settings pages and submenus.\n- Improve folder-card focus, add poster-grid hero artwork for supported groups, clarify seek indicators, and move refresh status to the bottom of the screen.\n\n## Household tracking upgrade\n\nUpdate household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-31"
     },
     {
       "platform": "iphone",
