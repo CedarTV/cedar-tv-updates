@@ -48,8 +48,8 @@
       "version": "1.0.0",
       "build": "39",
       "date": "2026-09-16",
-      "status": "release-candidate",
-      "summary": "Submitted for External TestFlight; awaiting Apple beta review. Completion overlays, playback and profile-copy diagnostics.",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Completion overlays, playback and profile-copy diagnostics.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

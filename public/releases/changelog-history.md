@@ -1701,9 +1701,9 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
-### 1.0.0 · build 39 · 2026-09-16 · release-candidate
+### 1.0.0 · build 39 · 2026-09-16 · testflight
 
-Build 39 · 2026-09-16 · Submitted for External TestFlight; awaiting Apple beta review. Not yet available to external testers.
+Build 39 · 2026-09-16 · Released to External TestFlight.
 
 #### Changes since build 38
 

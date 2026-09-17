@@ -58,9 +58,9 @@
       "version": "1.0.0",
       "build": "39",
       "date": "2026-09-16",
-      "status": "release-candidate",
-      "summary": "Submitted for External TestFlight; awaiting Apple beta review. Completion overlays, playback and profile-copy diagnostics.",
-      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 39 · 2026-09-16 · Submitted for External TestFlight; awaiting Apple beta review. Not yet available to external testers.\n\n## Changes since build 38\n\n- Series completion distinguishes Caught Up on ongoing shows from completed checkmarks on ended shows; partially watched series no longer appear complete.\n- Global completion styles also apply to detail episode selectors and the in-player episode browser.\n- Playback hides app navigation controls consistently across entry points.\n- Copy Profile identifies duplicate source IDs, credential references, settings keys, branches or shelves instead of a misleading encryption error.\n- Improved recovery when live streams deliver no initial data and reduced unnecessary startup waiting for qualifying HEVC streams.\n\nCopy Profile diagnostics identify the failing check; they do not automatically repair duplicate profile data.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "status": "testflight",
+      "summary": "Available to Cedar External testers. Completion overlays, playback and profile-copy diagnostics.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 39 · 2026-09-16 · Released to External TestFlight.\n\n## Changes since build 38\n\n- Series completion distinguishes Caught Up on ongoing shows from completed checkmarks on ended shows; partially watched series no longer appear complete.\n- Global completion styles also apply to detail episode selectors and the in-player episode browser.\n- Playback hides app navigation controls consistently across entry points.\n- Copy Profile identifies duplicate source IDs, credential references, settings keys, branches or shelves instead of a misleading encryption error.\n- Improved recovery when live streams deliver no initial data and reduced unnecessary startup waiting for qualifying HEVC streams.\n\nCopy Profile diagnostics identify the failing check; they do not automatically repair duplicate profile data.\n\n[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-39"
     },
     {
