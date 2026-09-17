@@ -1765,7 +1765,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ### 1.0.0 · build 41 · 2026-09-17
 
-Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available.
+Released to External TestFlight.
 
 - Mac Home now uses the same core-first hero loading path as iPhone and iPad.
 - Disabled hero ratings and trailers no longer trigger optional loading; title artwork resolves before text fallback.

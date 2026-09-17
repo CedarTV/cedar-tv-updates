@@ -48,8 +48,8 @@
       "version": "1.0.0",
       "build": "41",
       "date": "2026-09-17",
-      "status": "release-candidate",
-      "summary": "Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available. Hero title artwork improvements.",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Hero title artwork improvements.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

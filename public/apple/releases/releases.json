@@ -58,9 +58,9 @@
       "version": "1.0.0",
       "build": "41",
       "date": "2026-09-17",
-      "status": "release-candidate",
-      "summary": "Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available. Hero title artwork improvements.",
-      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 41 · September 17, 2026 · Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available.\n\n## Changes since build 40\n\n- Mac Home now uses the same core-first hero loading path as iPhone and iPad.\n- Disabled hero ratings and trailers no longer trigger optional loading; title artwork resolves before text fallback.\n- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.\n- Updated cached hero metadata so previously missing logos can be resolved again.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Hero title artwork improvements.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 41 · September 17, 2026 · Released to External TestFlight.\n\n## Changes since build 40\n\n- Mac Home now uses the same core-first hero loading path as iPhone and iPad.\n- Disabled hero ratings and trailers no longer trigger optional loading; title artwork resolves before text fallback.\n- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.\n- Updated cached hero metadata so previously missing logos can be resolved again.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-41"
     },
     {
