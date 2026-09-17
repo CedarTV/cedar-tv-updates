@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "40",
+      "date": "2026-09-17",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Streaming catalogues, artwork and playback improvements.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-40.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "40",
+      "date": "2026-09-17",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Streaming catalogues, artwork and playback improvements.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-40.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "40",
+      "date": "2026-09-17",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Streaming catalogues, artwork and Home navigation improvements.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-40.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "40",
+      "date": "2026-09-17",
+      "status": "release-candidate",
+      "summary": "Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available. Streaming catalogues, artwork and optional landscape enhancements.",
+      "notes": "release-notes/apple/mac/1.0.0-build-40.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "39",
       "date": "2026-09-16",
       "status": "testflight",

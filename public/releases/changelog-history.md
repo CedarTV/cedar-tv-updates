@@ -1,8 +1,19 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled September 14, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled September 17, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## iPhone
+
+### 1.0.0 · build 40 · 2026-09-17
+
+Released to External TestFlight.
+
+- Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.
+- Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.
+- Artwork titles wait for the enriched image before falling back to text, avoiding plain-text-to-logo swaps.
+- Added an optional Enhanced Landscape Artwork setting under Better Posters, with available metadata and remaining-episode labels. It is off by default.
+- Restored the in-player volume indicator when adjusting volume with the hardware buttons.
+- Improved Picture in Picture handoff to preserve playing or paused intent and prevent unintended pauses when entering PiP.
 
 ### 1.0.0 · build 39 · 2026-09-16 · testflight
 
@@ -597,6 +608,17 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 40 · 2026-09-17
+
+Released to External TestFlight.
+
+- Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.
+- Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.
+- Artwork titles wait for the enriched image before falling back to text, avoiding plain-text-to-logo swaps.
+- Added an optional Enhanced Landscape Artwork setting under Better Posters, with available metadata and remaining-episode labels. It is off by default.
+- Restored the in-player volume indicator when adjusting volume with the hardware buttons.
+- Improved Picture in Picture handoff to preserve playing or paused intent and prevent unintended pauses when entering PiP.
+
 ### 1.0.0 · build 39 · 2026-09-16 · testflight
 
 Build 39 · 2026-09-16 · Released to External TestFlight.
@@ -1189,6 +1211,19 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 40 · 2026-09-17
+
+Released to External TestFlight.
+
+- Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.
+- Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.
+- Artwork titles wait for the enriched image before falling back to text, avoiding plain-text-to-logo swaps.
+- Added an optional Enhanced Landscape Artwork setting under Better Posters, with available metadata and remaining-episode labels. It is off by default.
+- Reduced Home navigation overhead and replaced heavy poster focus effects with a lighter outline and lift while retaining remote directional navigation.
+- Aligned custom collection hero titles with media titles, improved logo contrast and removed the extra collection hero shading.
+- Made Feature cards fit Cinematic Home, with the same focus treatment as other posters. Detailed Home retains its larger two-card layout.
+- Tightened poster caption spacing after removing the previous parallax effect.
+
 ### 1.0.0 · build 39 · 2026-09-16 · testflight
 
 Build 39 · 2026-09-16 · Released to External TestFlight.
@@ -1700,6 +1735,15 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 40 · 2026-09-17
+
+Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available.
+
+- Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.
+- Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.
+- Artwork titles wait for the enriched image before falling back to text, avoiding plain-text-to-logo swaps.
+- Added an optional Enhanced Landscape Artwork setting under Better Posters, with available metadata and remaining-episode labels. It is off by default.
 
 ### 1.0.0 · build 39 · 2026-09-16 · testflight
 
