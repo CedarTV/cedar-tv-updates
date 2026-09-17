@@ -6,7 +6,7 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 ### 1.0.0 · build 41 · 2026-09-17
 
-Prepared for External TestFlight; submission pending. Not yet available.
+Released to External TestFlight.
 
 - Home hero information now reveals together, with artwork and essential metadata loading ahead of optional extras.
 - Home startup respects disabled ratings and trailer options, avoiding those extra requests.
@@ -620,7 +620,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ### 1.0.0 · build 41 · 2026-09-17
 
-Prepared for External TestFlight; submission pending. Not yet available.
+Released to External TestFlight.
 
 - Home hero information now reveals together, with artwork and essential metadata loading ahead of optional extras.
 - Home startup respects disabled ratings and trailer options, avoiding those extra requests.
@@ -1233,7 +1233,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ### 1.0.0 · build 41 · 2026-09-17
 
-Prepared for External TestFlight; submission pending. Not yet available.
+Released to External TestFlight.
 
 - Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.
 - Updated cached hero metadata so previously missing logos can be resolved again.
@@ -1765,7 +1765,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ### 1.0.0 · build 41 · 2026-09-17
 
-Prepared for External TestFlight; submission pending. Not yet available.
+Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available.
 
 - Mac Home now uses the same core-first hero loading path as iPhone and iPad.
 - Disabled hero ratings and trailers no longer trigger optional loading; title artwork resolves before text fallback.
