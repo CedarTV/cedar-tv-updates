@@ -4,6 +4,16 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 41 · 2026-09-17
+
+Prepared for External TestFlight; submission pending. Not yet available.
+
+- Home hero information now reveals together, with artwork and essential metadata loading ahead of optional extras.
+- Home startup respects disabled ratings and trailer options, avoiding those extra requests.
+- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.
+- Updated cached hero metadata so previously missing logos can be resolved again.
+- Removed custom volume and brightness swipe controls and their settings. Hardware volume buttons use the native iOS volume indicator; double-tap seeking and temporary 2× playback remain.
+
 ### 1.0.0 · build 40 · 2026-09-17
 
 Released to External TestFlight.
@@ -608,6 +618,16 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 41 · 2026-09-17
+
+Prepared for External TestFlight; submission pending. Not yet available.
+
+- Home hero information now reveals together, with artwork and essential metadata loading ahead of optional extras.
+- Home startup respects disabled ratings and trailer options, avoiding those extra requests.
+- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.
+- Updated cached hero metadata so previously missing logos can be resolved again.
+- Removed custom volume and brightness swipe controls and their settings. Hardware volume buttons use the native iOS volume indicator; double-tap seeking and temporary 2× playback remain.
+
 ### 1.0.0 · build 40 · 2026-09-17
 
 Released to External TestFlight.
@@ -1211,6 +1231,13 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 41 · 2026-09-17
+
+Prepared for External TestFlight; submission pending. Not yet available.
+
+- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.
+- Updated cached hero metadata so previously missing logos can be resolved again.
+
 ### 1.0.0 · build 40 · 2026-09-17
 
 Released to External TestFlight.
@@ -1736,9 +1763,18 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
+### 1.0.0 · build 41 · 2026-09-17
+
+Prepared for External TestFlight; submission pending. Not yet available.
+
+- Mac Home now uses the same core-first hero loading path as iPhone and iPad.
+- Disabled hero ratings and trailers no longer trigger optional loading; title artwork resolves before text fallback.
+- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.
+- Updated cached hero metadata so previously missing logos can be resolved again.
+
 ### 1.0.0 · build 40 · 2026-09-17
 
-Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available.
+Released to External TestFlight.
 
 - Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.
 - Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.

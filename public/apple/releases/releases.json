@@ -26,6 +26,46 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "41",
+      "date": "2026-09-17",
+      "status": "release-candidate",
+      "summary": "Prepared for External TestFlight; submission pending. Not yet available. Hero title artwork improvements.",
+      "notesMarkdown": "# Cedar for iPhone 1.0.0\n\nBuild 41 · September 17, 2026 · Prepared for External TestFlight; submission pending. Not yet available.\n\n## Changes since build 40\n\n- Home hero information now reveals together, with artwork and essential metadata loading ahead of optional extras.\n- Home startup respects disabled ratings and trailer options, avoiding those extra requests.\n- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.\n- Updated cached hero metadata so previously missing logos can be resolved again.\n- Removed custom volume and brightness swipe controls and their settings. Hardware volume buttons use the native iOS volume indicator; double-tap seeking and temporary 2× playback remain.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-41"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "41",
+      "date": "2026-09-17",
+      "status": "release-candidate",
+      "summary": "Prepared for External TestFlight; submission pending. Not yet available. Hero title artwork improvements.",
+      "notesMarkdown": "# Cedar for iPad 1.0.0\n\nBuild 41 · September 17, 2026 · Prepared for External TestFlight; submission pending. Not yet available.\n\n## Changes since build 40\n\n- Home hero information now reveals together, with artwork and essential metadata loading ahead of optional extras.\n- Home startup respects disabled ratings and trailer options, avoiding those extra requests.\n- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.\n- Updated cached hero metadata so previously missing logos can be resolved again.\n- Removed custom volume and brightness swipe controls and their settings. Hardware volume buttons use the native iOS volume indicator; double-tap seeking and temporary 2× playback remain.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-41"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "41",
+      "date": "2026-09-17",
+      "status": "release-candidate",
+      "summary": "Prepared for External TestFlight; submission pending. Not yet available. Hero title artwork improvements.",
+      "notesMarkdown": "# Cedar for Apple TV 1.0.0\n\nBuild 41 · September 17, 2026 · Prepared for External TestFlight; submission pending. Not yet available.\n\n## Changes since build 40\n\n- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.\n- Updated cached hero metadata so previously missing logos can be resolved again.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-41"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "41",
+      "date": "2026-09-17",
+      "status": "release-candidate",
+      "summary": "Prepared for External TestFlight; submission pending. Not yet available. Hero title artwork improvements.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 41 · September 17, 2026 · Prepared for External TestFlight; submission pending. Not yet available.\n\n## Changes since build 40\n\n- Mac Home now uses the same core-first hero loading path as iPhone and iPad.\n- Disabled hero ratings and trailers no longer trigger optional loading; title artwork resolves before text fallback.\n- Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.\n- Updated cached hero metadata so previously missing logos can be resolved again.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-41"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "40",
       "date": "2026-09-17",
       "status": "testflight",
@@ -58,9 +98,9 @@
       "version": "1.0.0",
       "build": "40",
       "date": "2026-09-17",
-      "status": "release-candidate",
-      "summary": "Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available. Streaming catalogues, artwork and optional landscape enhancements.",
-      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 40 · September 17, 2026 · Uploaded for External TestFlight; Apple processing or beta review pending. Not yet confirmed available.\n\n## Changes since build 39\n\n- Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.\n- Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.\n- Artwork titles wait for the enriched image before falling back to text, avoiding plain-text-to-logo swaps.\n- Added an optional Enhanced Landscape Artwork setting under Better Posters, with available metadata and remaining-episode labels. It is off by default.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Streaming catalogues, artwork and optional landscape enhancements.",
+      "notesMarkdown": "# Cedar for Mac 1.0.0\n\nBuild 40 · September 17, 2026 · Released to External TestFlight.\n\n## Changes since build 39\n\n- Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.\n- Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.\n- Artwork titles wait for the enriched image before falling back to text, avoiding plain-text-to-logo swaps.\n- Added an optional Enhanced Landscape Artwork setting under Better Posters, with available metadata and remaining-episode labels. It is off by default.\n\n[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)\n",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-40"
     },
     {
