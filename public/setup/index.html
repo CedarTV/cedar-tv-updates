@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://cedar-sync-relay.cedar-sync-relay.workers.dev; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Privately configure Cedar on Android TV from your phone or computer.">
+<title>Set up your TV — Cedar</title><link rel="stylesheet" href="setup.css">
+<link rel="icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+<body>
+      <header class="cedar-header">
+        <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <nav class="cedar-nav" aria-label="Primary navigation">
+          <a href="/cedar-tv-updates/#platforms">Platforms</a>
+          <a href="/cedar-tv-updates/apple/">Apple apps</a>
+          <a href="/cedar-tv-updates/releases/">What’s new</a>
+          <a href="/cedar-tv-updates/artwork/">Artwork</a>
+          <a href="/cedar-tv-updates/link/">Cedar Link</a>
+          <a href="/cedar-tv-updates/support/">Support</a>
+          <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+        </nav>
+        <label class="cedar-theme">Theme
+          <select aria-label="Color theme" data-theme-select>
+            <option value="system">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </label>
+      </header>
+<main>
+<section id="welcome" class="welcome"><p class="eyebrow">A little less remote control.</p><h1>Your TV.<br>Your settings.<br>From here.</h1><p>Open <strong>Quick Setup → Open Browser Setup</strong> on your Android TV, then scan its QR code. Edit this TV’s settings, add sources, and arrange Home from your phone or computer.</p><button id="connect" disabled>Connect to TV</button><p class="muted">Requires an Android build with Browser Setup. Keep the TV on its setup screen. Scan within five minutes; connected access ends after 30 minutes or when you close setup. Setup data is kept in memory and is cleared when you leave this page.</p></section>
+<p id="status" role="status" aria-live="polite">Waiting for your TV invitation.</p>
+<section id="editor" hidden>
+<div class="titlebar"><div><p class="eyebrow">Connected to your television</p><h1 id="profile-title">Cedar</h1></div><button id="disconnect" class="secondary">Disconnect</button></div>
+<div class="toolbar"><label class="search"><span>Find a setting</span><input id="search" type="search" placeholder="Search settings…"></label><label><span>Section</span><select id="section"></select></label></div>
+<p id="conflict" class="notice" hidden>Settings changed on the TV. Review the latest values before sending your edits. <button id="reload" class="secondary">Discard drafts and reload</button></p>
+<div id="settings"></div>
+<section id="profile-panel" class="card" hidden><h2>Profile name</h2><form id="rename-form"><label><span>Name</span><input id="profile-name" maxlength="128" required autocomplete="off"></label><button>Save profile name</button></form></section>
+<section id="sources-panel" hidden><div class="card"><h2>Your sources</h2><p>Enable or pause existing sources. Provider credentials stay on your TV.</p><div id="source-list"></div></div><form id="source-form" class="card"><h2>Add a source</h2><div class="fields"><label><span>Source type</span><select id="source-kind"></select></label><label><span>Name</span><input id="source-name" maxlength="128" required autocomplete="off"></label><label class="wide"><span>Server, playlist, or manifest URL</span><input id="source-endpoint" type="url" required autocomplete="off" placeholder="https://"></label><label><span>Username (MAC address for Stalker)</span><input id="source-username" autocomplete="off"></label><label><span>Password, Plex token, or Seerr API key</span><input id="source-password" type="password" autocomplete="new-password"></label></div><button>Add to TV</button><p class="muted">Saved credentials are encrypted. The TV refreshes new sources after saving; provider availability is shown on the TV.</p></form></section>
+<section id="api-panel" class="card" hidden><h2>API credentials</h2><p>Set or replace a credential without typing on the television. Existing values are never sent to this browser.</p><form id="api-form"><label><span>Service</span><select id="api-id"></select></label><label><span>API key or application credential</span><input id="api-value" type="password" autocomplete="new-password" required maxlength="8192"></label><button>Save securely on TV</button></form></section>
+<section id="home-panel" hidden><div class="card"><h2>Custom Home branches</h2><p>Arrange, rename, and style your branches. Built-in Home rows and Hero options are in Home Screen &amp; Branches.</p><div id="branches"></div><button id="add-branch" class="secondary">Add branch</button><button id="save-branches">Save Home to TV</button></div><details class="card"><summary>Advanced Home configuration</summary><p>All query, filter, folder, and layout fields are preserved. Edit the full branch document here when you need additional controls.</p><label><span>Home configuration</span><textarea id="branches-json" rows="14" spellcheck="false"></textarea></label><button id="save-home-json">Apply Home configuration</button></details></section>
+<section id="import-panel" class="card" hidden><h2>Import setup or collections</h2><p>Paste a Cedar setup document, a provider setup block, or a Nuvio/Studio collection export. Your browser encrypts it before sending.</p><form id="import-form"><label><span>Setup document</span><textarea id="import-text" required rows="12" spellcheck="false" autocomplete="off"></textarea></label><button>Import on TV</button></form></section>
+<div id="savebar" hidden><span id="dirty-count"></span><button id="save">Push changes to TV</button><button id="discard" class="secondary">Discard</button></div>
+<button id="retry" hidden>Retry encrypted delivery</button>
+</section>
+</main>
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/link/">Cedar Link</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Create Tobacco Tie</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/issues">Report an issue</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
+              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+<script type="module" src="setup.mjs"></script>
+</body></html>

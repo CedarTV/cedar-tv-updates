@@ -39,6 +39,8 @@ jobs:
           node-version: 24
       - name: Verify Cedar Link assets and configuration
         run: |
+          node --check public/setup/setup.mjs
+          node --check public/setup/model.mjs
           node --check public/link/link.js
           node --check public/link/cedar-sync.mjs
           node --check public/link/companion-ui.mjs
