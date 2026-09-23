@@ -1,9 +1,11 @@
+import { createChannelEditor } from './channels.mjs';
 import { parseInvitation, makeCredentials, request, claim, decodeSnapshot, commandEnvelope, editableRows } from './model.mjs';
 const $ = id => document.getElementById(id);
 const node = (tag, text, className) => { const element = document.createElement(tag); if (text != null) element.textContent = text; if (className) element.className = className; return element; };
 const drafts = new Map();
 let invitation, credentials, snapshot, cursor = 0, sequence = 0, pending, polling, sending = false, conflict = false, branchDraft, branchJsonDraft, homeDirty = false;
 function status(message) { $('status').textContent = message; }
+const channelEditor = createChannelEditor({ perform, status, configuration: () => snapshot?.configuration, busy: () => sending || Boolean(pending), dirtyState });
 const fragment = location.hash;
 history.replaceState(null, '', location.pathname + location.search);
 try { if (fragment) { invitation = parseInvitation(fragment); $('connect').disabled = false; status('Your TV is ready. Connect to open its settings.'); } }
@@ -25,7 +27,7 @@ function setBusy(value) {
 function adopt(next) {
   if (snapshot && snapshot.profileID !== next.profileID) throw new Error('The TV profile changed. Start a fresh session.');
   const isOwnReceipt = pending && next.receipt?.requestID === pending.requestID;
-  if (snapshot && next.revision !== snapshot.revision && (drafts.size || homeDirty) && !isOwnReceipt) conflict = true;
+  if (snapshot && next.revision !== snapshot.revision && (drafts.size || homeDirty || channelEditor.dirty()) && !isOwnReceipt) conflict = true;
   snapshot = next;
   $('profile-title').textContent = next.configuration.profileName;
   if (!branchDraft || (!homeDirty && !sending)) branchDraft = structuredClone(next.configuration.branches);
@@ -34,7 +36,7 @@ function adopt(next) {
     if (next.receipt.status === 'applied') operation.resolve(next);
     else { conflict = true; operation.reject(new Error(next.receipt.message)); }
   }
-  if (!sending && !drafts.size && !homeDirty) render();
+  if (!sending && !drafts.size && !homeDirty && !channelEditor.dirty()) render();
   dirtyState();
 }
 async function consume(entries) {
@@ -67,11 +69,11 @@ $('connect').addEventListener('click', async () => {
     $('welcome').hidden = true; $('editor').hidden = false;
     const selector = $('section');
     for (const page of snapshot.configuration.pages) option(selector, page.id, page.title);
-    for (const [id, title] of [['profile-editor', 'Profile name'], ['sources-editor', 'Manage sources'], ['api-editor', 'API credentials'], ['home-editor', 'Custom Home branches'], ['import-editor', 'Import setup / collections']]) option(selector, id, title);
+    for (const [id, title] of [['profile-editor', 'Profile name'], ['sources-editor', 'Manage sources'], ['api-editor', 'API credentials'], ['home-editor', 'Custom Home branches'], ...(snapshot.configuration.customChannels ? [['channels-editor', 'My Channels']] : []), ['import-editor', 'Import setup / collections']]) option(selector, id, title);
     render(); status('Connected. Choose a section or search the complete settings menu.'); poll();
   } catch (error) { status(error.message); $('connect').disabled = false; }
 });
-const browserDestinations = {'open-branch-manager':'home-editor','open-quick-setup':'import-editor','profiles-rename-phone':'profile-editor','manage-addons':'sources-editor','manage-media-servers':'sources-editor','manage-webdav':'sources-editor','manage-live-sources':'sources-editor','open-source-manager':'sources-editor','source-torbox-configure':'api-editor','metadata-rpdb-add':'api-editor'};
+const browserDestinations = {'my-channels':'channels-editor','open-branch-manager':'home-editor','open-quick-setup':'import-editor','profiles-rename-phone':'profile-editor','manage-addons':'sources-editor','manage-media-servers':'sources-editor','manage-webdav':'sources-editor','manage-live-sources':'sources-editor','open-source-manager':'sources-editor','source-torbox-configure':'api-editor','metadata-rpdb-add':'api-editor'};
 function settingRow(item) {
   const row = node('div', null, 'row'), description = node('div');
   description.append(node('h3', item.title), node('p', item.subtitle)); row.append(description);
@@ -100,7 +102,7 @@ function render() {
     const card = node('section', null, 'card'); card.append(node('h2', search ? `${page.title} · ${group.title}` : group.title), node('p', group.explanation));
     items.forEach(item => card.append(settingRow(item))); $('settings').append(card);
   }
-  for (const id of ['profile', 'sources', 'api', 'home', 'import']) $(id + '-panel').hidden = search || selection !== id + '-editor';
+  for (const id of ['profile', 'sources', 'api', 'home', 'channels', 'import']) $(id + '-panel').hidden = search || selection !== id + '-editor';
   if (selection === 'profile-editor') $('profile-name').value = snapshot.configuration.profileName;
   if (selection === 'sources-editor') {
     $('source-list').replaceChildren();
@@ -113,6 +115,7 @@ function render() {
   }
   if (selection === 'api-editor' && !$('api-id').options.length) snapshot.configuration.apiKeys.forEach(value => option($('api-id'), value));
   if (selection === 'home-editor') renderBranches();
+  if (selection === 'channels-editor') channelEditor.render();
   dirtyState();
 }
 function markHomeDirty() { homeDirty = true; branchJsonDraft = null; $('branches-json').value = JSON.stringify(branchDraft, null, 2); }
@@ -157,7 +160,9 @@ async function perform(operation, payload) {
   try {
     await transmit(operation, payload);
     if (operation === 'branches') { homeDirty = false; branchJsonDraft = null; branchDraft = structuredClone(snapshot.configuration.branches); }
-    status('Saved on your TV.');
+    if (operation.startsWith('channel-')) channelEditor.applied(operation);
+    status(operation === 'channel-search' ? 'Search complete. Choose a title to add.' : 'Saved on your TV.');
+    return true;
   }
   catch (error) { status(error.message); }
   finally { setBusy(false); if (snapshot) render(); }
@@ -176,7 +181,7 @@ $('retry').addEventListener('click', async () => {
   try { await request(credentials, '/changes', { method: 'POST', body: pending.envelope }); $('retry').hidden = true; status('Delivery retried. Waiting for confirmation from the TV…'); }
   catch (error) { status(error.message); }
 });
-function discard() { if (!snapshot) return; drafts.clear(); conflict = false; homeDirty = false; branchJsonDraft = null; branchDraft = structuredClone(snapshot.configuration.branches); render(); }
+function discard() { if (!snapshot) return; channelEditor.discard(); drafts.clear(); conflict = false; homeDirty = false; branchJsonDraft = null; branchDraft = structuredClone(snapshot.configuration.branches); render(); }
 $('discard').addEventListener('click', discard); $('reload').addEventListener('click', discard);
 $('search').addEventListener('input', render); $('section').addEventListener('change', render);
 $('rename-form').addEventListener('submit', event => { event.preventDefault(); perform('rename', { name: $('profile-name').value }); });
@@ -194,9 +199,9 @@ $('save-home-json').addEventListener('click', () => { try { const branches = JSO
 $('disconnect').addEventListener('click', async () => {
   const active = credentials; credentials = null; clearTimeout(polling); pending?.reject(new Error('Browser disconnected. Check the TV for the last edit’s status.')); pending = null;
   $('editor').hidden = true; $('welcome').hidden = false; $('connect').disabled = true;
-  drafts.clear(); snapshot = null; branchDraft = null; branchJsonDraft = null; homeDirty = false; document.querySelectorAll('input,textarea').forEach(input => input.value = '');
+  channelEditor.clear(); drafts.clear(); snapshot = null; branchDraft = null; branchJsonDraft = null; homeDirty = false; document.querySelectorAll('input,textarea').forEach(input => input.value = '');
   try { if (active) await request(active, `/devices/${active.deviceID}`, { method: 'DELETE' }); }
   catch { /* Ending the TV session also revokes this ephemeral browser identity. */ }
   status('Disconnected. Close Browser Setup on the TV to end the session.');
 });
-window.addEventListener('beforeunload', event => { if (drafts.size || homeDirty || pending) { event.preventDefault(); event.returnValue = ''; } });
+window.addEventListener('beforeunload', event => { if (drafts.size || homeDirty || channelEditor.dirty() || pending) { event.preventDefault(); event.returnValue = ''; } });
