@@ -10,7 +10,7 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 ### 1.0.0 · build 43 · 2026-09-23
 
-Uploaded for External TestFlight; Apple processing or submission checks pending. Not yet confirmed available.
+Released to External TestFlight.
 
 - Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.
 - Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.
@@ -638,7 +638,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ### 1.0.0 · build 43 · 2026-09-23
 
-Uploaded for External TestFlight; Apple processing or submission checks pending. Not yet confirmed available.
+Released to External TestFlight.
 
 - Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.
 - Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.
@@ -1807,7 +1807,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ### 1.0.0 · build 43 · 2026-09-23
 
-Prepared for External TestFlight; submission pending. Not yet available.
+Submitted for External TestFlight; Apple beta review pending. Not yet available to external testers.
 
 - Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.
 - Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.
