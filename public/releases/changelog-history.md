@@ -2,7 +2,25 @@
 
 Compiled September 17, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
+## September 23, 2026 roundup
+
+[Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
+
 ## iPhone
+
+### 1.0.0 · build 43 · 2026-09-23
+
+Prepared for External TestFlight; submission pending. Not yet available.
+
+- Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.
+- Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.
+- My Channels: build a personal channel from movies and series, choose All Episodes, Next Unwatched or Latest Episodes, preview the schedule and adjust estimated runtimes. New channels keep story order by default.
+- My Channels guides and playback share the same persistent schedule. Join the current programme, play from the beginning, or return to the live channel; refreshes preserve the programme already on air.
+- Sports Bar, My Channels, Quick Actions, and the new post-play, skip-timing and content-warning options are experimental. Coverage and behavior may vary by source, title and device; some things may still need adjusting.
+
+### 1.0.0 · build 42 · 2026-09-17
+
+Released to Internal TestFlight only. Downloaded-playback resume, cancellation and built-in local-file playback improvements.
 
 ### 1.0.0 · build 41 · 2026-09-17
 
@@ -618,6 +636,20 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 43 · 2026-09-23
+
+Prepared for External TestFlight; submission pending. Not yet available.
+
+- Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.
+- Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.
+- My Channels: build a personal channel from movies and series, choose All Episodes, Next Unwatched or Latest Episodes, preview the schedule and adjust estimated runtimes. New channels keep story order by default.
+- My Channels guides and playback share the same persistent schedule. Join the current programme, play from the beginning, or return to the live channel; refreshes preserve the programme already on air.
+- Sports Bar, My Channels, Quick Actions, and the new post-play, skip-timing and content-warning options are experimental. Coverage and behavior may vary by source, title and device; some things may still need adjusting.
+
+### 1.0.0 · build 42 · 2026-09-17
+
+Released to Internal TestFlight only. Downloaded-playback resume, cancellation and built-in local-file playback improvements.
+
 ### 1.0.0 · build 41 · 2026-09-17
 
 Released to External TestFlight.
@@ -1231,6 +1263,16 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 43 · 2026-09-23
+
+Prepared for External TestFlight; submission pending. Not yet available.
+
+- Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.
+- Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.
+- My Channels: build a personal channel from movies and series, choose All Episodes, Next Unwatched or Latest Episodes, preview the schedule and adjust estimated runtimes. New channels keep story order by default.
+- My Channels guides and playback share the same persistent schedule. Join the current programme, play from the beginning, or return to the live channel; refreshes preserve the programme already on air.
+- Sports Bar, My Channels, Quick Actions, and the new post-play, skip-timing and content-warning options are experimental. Coverage and behavior may vary by source, title and device; some things may still need adjusting.
+
 ### 1.0.0 · build 41 · 2026-09-17
 
 Released to External TestFlight.
@@ -1762,6 +1804,16 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 43 · 2026-09-23
+
+Prepared for External TestFlight; submission pending. Not yet available.
+
+- Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.
+- Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.
+- My Channels: build a personal channel from movies and series, choose All Episodes, Next Unwatched or Latest Episodes, preview the schedule and adjust estimated runtimes. New channels keep story order by default.
+- My Channels guides and playback share the same persistent schedule. Join the current programme, play from the beginning, or return to the live channel; refreshes preserve the programme already on air.
+- Sports Bar, My Channels, Quick Actions, and the new post-play, skip-timing and content-warning options are experimental. Coverage and behavior may vary by source, title and device; some things may still need adjusting.
 
 ### 1.0.0 · build 41 · 2026-09-17
 

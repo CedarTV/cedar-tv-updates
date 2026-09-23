@@ -50,6 +50,78 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-43">
+          <header>
+            <p class="eyebrow">iPad</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Prepared for External TestFlight; submission pending. Not yet available. Sports Bar, Quick Actions, My Channels and critical reliability fixes. Experimental features may need adjustment.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-release-candidate">Release candidate</span>
+              <span>Version 1.0.0</span>
+              <span>Build 43</span>
+              <time datetime="2026-09-23">September 23, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 43 · September 23, 2026 · Prepared for External TestFlight; submission pending. Not yet available.</p>
+            <h3>Highlights since external build 41</h3>
+            <ul>
+            <li>Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.</li>
+            <li>Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.</li>
+            <li>My Channels: build a personal channel from movies and series, choose All Episodes, Next Unwatched or Latest Episodes, preview the schedule and adjust estimated runtimes. New channels keep story order by default.</li>
+            <li>My Channels guides and playback share the same persistent schedule. Join the current programme, play from the beginning, or return to the live channel; refreshes preserve the programme already on air.</li>
+            <li>Experimental playback options add selectable post-play recommendations, movie skip timestamps where available, and optional timed content warnings. Warning notices do not automatically skip or mute playback.</li>
+            <li>Clear-art titles recover from oversized images and unsupported SVG artwork, including titles whose logo was previously missing.</li>
+            <li>Improved connected-list browsing, detail presentation and expanded synopsis sheets, with updated French, German and Spanish interface coverage.</li>
+            <li>Updated the playback engine and media libraries while retaining Cedar playback integrations.</li>
+            <li>Downloaded playback asks Resume or Start from Beginning before opening the player and uses Cedar&#39;s built-in player for private local files.</li>
+            </ul>
+            <h3>Critical fixes</h3>
+            <ul>
+            <li>Parental controls now cover additional direct, offline and custom-channel playback routes, source management and Multiview. Unrated, genre and Live TV restrictions are enforced more consistently.</li>
+            <li>Delayed account errors from an old login or profile no longer clear a newer connection.</li>
+            <li>Download retention and transfer rules follow the profile that owns each download. Interrupted downloads can recover; completed files from removed profiles remain manageable under Downloads / Removed Profiles.</li>
+            <li>Recording failures are reported more accurately: missing segments are retried, empty or prematurely ended recordings are not reported as complete, and supported extensionless HLS streams are recognized.</li>
+            <li>Explore continues through filtered pages and preserves the failed page for retry, reducing prematurely empty discovery results.</li>
+            </ul>
+            <h3>Experimental features</h3>
+            <p>Sports Bar, My Channels, Quick Actions, and the new post-play, skip-timing and content-warning options are experimental. Coverage and behavior may vary by source, title and device; some things may still need adjusting.</p>
+            <p>Sports coverage and statistics depend on the competition. A matching channel requires your own connected source and guide data. Timed warnings and skip markers are not available for every title.</p>
+            <h3>Android parity roundup — development only</h3>
+            <ul>
+            <li>The public Android TV / Google TV / Android-based Fire TV release remains 1.2.85 (88). No new Android APK or OTA update is being announced with this roundup.</li>
+            <li>Local parity candidates 89–91 brought progressive subtitle delivery and timing controls, the in-player guide, same-station alternatives, collection release ordering, offline changelog history, poster controls and connected Trakt/MDBList branches.</li>
+            <li>Current development adds Cinematic and Detailed Home, an independent hero carousel, updated detail layouts and backdrops, primary/secondary hero sources, combination modes, title limits, metadata and ratings controls.</li>
+            <li>Sports Bar is implemented in local Android development. Profile-copy fixes improve source and credential isolation, cancellation and rollback, and preserve saved Home branches.</li>
+            <li>Phone/computer browser setup is published at the Cedar setup page for compatible development builds, including source entry and Home configuration. SVG title artwork now requests a compatible image rendition.</li>
+            <li>My Channels and the remaining Home, poster, playback and cross-platform acceptance work are still being implemented or verified. Full Apple/Android parity is not complete. Physical-device and provider playback qualification remain pending.</li>
+            <li>These development features are experimental and may still need adjusting. They are not a promise that every Apple feature is already available in the public Android build.</li>
+            </ul>
+            <p>Full build roundup: https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html</p>
+            <p>Join TestFlight: https://testflight.apple.com/join/4A7sZ4q2</p>
+          </div>
+        </article>
+        <article class="release-entry" id="version-1-0-0-build-42">
+          <header>
+            <p class="eyebrow">iPad</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Released to Internal TestFlight only. Downloaded-playback resume and local-file player improvements.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 42</span>
+              <time datetime="2026-09-17">September 17, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 42 · September 17, 2026 · Released to Internal TestFlight only.</p>
+            <h3>Downloaded playback</h3>
+            <ul>
+            <li>Improved downloaded-playback resume decisions, cancellation and use of the built-in player for private local files.</li>
+            </ul>
+            <p>This quick-test build was not eligible for external TestFlight. The broader changes since external build 41 are recorded separately in build 43.</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-41">
           <header>
             <p class="eyebrow">iPad</p>

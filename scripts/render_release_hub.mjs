@@ -226,6 +226,7 @@ const indexPage = pageShell({
           <p class="eyebrow">All platforms</p>
           <h1>One release view. Every Cedar platform.</h1>
           <p>See the current version, build number, availability status, and notes for Android TV, iPhone, iPad, Apple TV, and Mac.</p>
+          <p><a href="/cedar-tv-updates/releases/roundup-2026-09-23.html">September 23 roundup: new features, critical fixes and Android parity progress</a>.</p>
           <p><a href="/cedar-tv-updates/releases/changelog-history.md">Download the complete recorded build history</a>. Android TV, Google TV and Fire TV share one release line. Skipped build numbers are not separate releases.</p>
         </header>
 
