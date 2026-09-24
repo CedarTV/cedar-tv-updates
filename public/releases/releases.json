@@ -18,8 +18,8 @@
       "version": "1.0.0",
       "build": "47",
       "date": "2026-09-24",
-      "status": "release-candidate",
-      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
@@ -28,8 +28,8 @@
       "version": "1.0.0",
       "build": "47",
       "date": "2026-09-24",
-      "status": "release-candidate",
-      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
@@ -38,8 +38,8 @@
       "version": "1.0.0",
       "build": "47",
       "date": "2026-09-24",
-      "status": "release-candidate",
-      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
