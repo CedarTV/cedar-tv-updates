@@ -34,7 +34,7 @@
       "build": "44",
       "date": "2026-09-24",
       "status": "release-candidate",
-      "summary": "Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
+      "summary": "Submitted for External TestFlight; Apple beta review pending. Not yet available to external testers. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
       "notes": "release-notes/apple/mac/1.0.0-build-44.md"
     },
     {

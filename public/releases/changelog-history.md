@@ -1935,7 +1935,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ### 1.0.0 · build 44 · 2026-09-24
 
-Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.
+Build 44 · September 24, 2026 · Submitted for External TestFlight; Apple beta review pending. Not yet available to external testers.
 
 #### Servers and tracking
 
