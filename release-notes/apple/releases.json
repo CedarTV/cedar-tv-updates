@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "47",
+      "date": "2026-09-24",
+      "status": "release-candidate",
+      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-47.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "47",
+      "date": "2026-09-24",
+      "status": "release-candidate",
+      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-47.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "47",
+      "date": "2026-09-24",
+      "status": "release-candidate",
+      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-47.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "47",
+      "date": "2026-09-24",
+      "status": "release-candidate",
+      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "notes": "release-notes/apple/mac/1.0.0-build-47.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "44",
       "date": "2026-09-24",
       "status": "testflight",
