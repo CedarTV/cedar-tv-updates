@@ -12,7 +12,7 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 Build 47 · September 24, 2026 · Released to External TestFlight.
 
-## Improvements
+#### Improvements
 
 - Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.
 - Library collection labels follow the selected interface language more consistently.
@@ -27,24 +27,6 @@ Build 47 · September 24, 2026 · Released to External TestFlight.
 Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.
 
 [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
-
-
-## Improvements
-
-- Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.
-- Library collection labels follow the selected interface language more consistently.
-- Live TV channel pages bring programme information, upcoming schedules, favourites, alternate sources, reminders, recording and supported catch-up together. Watch Live always opens the current broadcast.
-- Continue Watching retains progress when switching watchlist providers and handles temporary tracking connection failures more reliably.
-- Mark as Unwatched clears old resume progress for the selected movie, episode, season or show without clearing unrelated progress.
-- Cards show active rewatch progress without a conflicting completion checkmark or Caught Up label.
-- Hero ratings retain existing provider scores during partial metadata refreshes and can reuse recently cached scores when a refresh fails. Ratings can update after the rest of the details appear.
-- Home and Detail rating controls include nearby MDBList setup, simpler visibility controls and provider filters. Enabling ratings refreshes visible metadata without restarting Cedar.
-- Browse channel schedules in Agenda or Timeline, change days, zoom the timeline and return to Now.
-
-Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.
-
-[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
-
 
 ### 1.0.0 · build 44 · 2026-09-24
 
@@ -722,7 +704,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 Build 47 · September 24, 2026 · Released to External TestFlight.
 
-## Improvements
+#### Improvements
 
 - Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.
 - Library collection labels follow the selected interface language more consistently.
@@ -737,24 +719,6 @@ Build 47 · September 24, 2026 · Released to External TestFlight.
 Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.
 
 [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
-
-
-## Improvements
-
-- Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.
-- Library collection labels follow the selected interface language more consistently.
-- Live TV channel pages bring programme information, upcoming schedules, favourites, alternate sources, reminders, recording and supported catch-up together. Watch Live always opens the current broadcast.
-- Continue Watching retains progress when switching watchlist providers and handles temporary tracking connection failures more reliably.
-- Mark as Unwatched clears old resume progress for the selected movie, episode, season or show without clearing unrelated progress.
-- Cards show active rewatch progress without a conflicting completion checkmark or Caught Up label.
-- Hero ratings retain existing provider scores during partial metadata refreshes and can reuse recently cached scores when a refresh fails. Ratings can update after the rest of the details appear.
-- Home and Detail rating controls include nearby MDBList setup, simpler visibility controls and provider filters. Enabling ratings refreshes visible metadata without restarting Cedar.
-- Browse channel schedules in Agenda or Timeline, change days, zoom the timeline and return to Now.
-
-Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.
-
-[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
-
 
 ### 1.0.0 · build 44 · 2026-09-24
 
@@ -1431,7 +1395,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 Build 47 · September 24, 2026 · Released to External TestFlight.
 
-## Improvements
+#### Improvements
 
 - Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.
 - Library collection labels follow the selected interface language more consistently.
@@ -1446,24 +1410,6 @@ Build 47 · September 24, 2026 · Released to External TestFlight.
 Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.
 
 [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
-
-
-## Improvements
-
-- Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.
-- Library collection labels follow the selected interface language more consistently.
-- Live TV channel pages bring programme information, upcoming schedules, favourites, alternate sources, reminders, recording and supported catch-up together. Watch Live always opens the current broadcast.
-- Continue Watching retains progress when switching watchlist providers and handles temporary tracking connection failures more reliably.
-- Mark as Unwatched clears old resume progress for the selected movie, episode, season or show without clearing unrelated progress.
-- Cards show active rewatch progress without a conflicting completion checkmark or Caught Up label.
-- Hero ratings retain existing provider scores during partial metadata refreshes and can reuse recently cached scores when a refresh fails. Ratings can update after the rest of the details appear.
-- Home and Detail rating controls include nearby MDBList setup, simpler visibility controls and provider filters. Enabling ratings refreshes visible metadata without restarting Cedar.
-- Channel details open full screen with a right-hand programme guide, expandable programme information and remote-friendly focus. Watch Live opens full-screen playback; Back returns through the programme reader and guide.
-
-Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.
-
-[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
-
 
 ### 1.0.0 · build 44 · 2026-09-24
 
@@ -2051,7 +1997,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 Build 47 · September 24, 2026 · External TestFlight rollout in progress; not yet available to external testers.
 
-## Improvements
+#### Improvements
 
 - Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.
 - Library collection labels follow the selected interface language more consistently.
@@ -2066,24 +2012,6 @@ Build 47 · September 24, 2026 · External TestFlight rollout in progress; not y
 Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.
 
 [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
-
-
-## Improvements
-
-- Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.
-- Library collection labels follow the selected interface language more consistently.
-- Live TV channel pages bring programme information, upcoming schedules, favourites, alternate sources, reminders, recording and supported catch-up together. Watch Live always opens the current broadcast.
-- Continue Watching retains progress when switching watchlist providers and handles temporary tracking connection failures more reliably.
-- Mark as Unwatched clears old resume progress for the selected movie, episode, season or show without clearing unrelated progress.
-- Cards show active rewatch progress without a conflicting completion checkmark or Caught Up label.
-- Hero ratings retain existing provider scores during partial metadata refreshes and can reuse recently cached scores when a refresh fails. Ratings can update after the rest of the details appear.
-- Home and Detail rating controls include nearby MDBList setup, simpler visibility controls and provider filters. Enabling ratings refreshes visible metadata without restarting Cedar.
-- Browse channel schedules and programme actions alongside the refreshed ratings and artwork-language controls.
-
-Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.
-
-[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
-
 
 ### 1.0.0 · build 44 · 2026-09-24
 
