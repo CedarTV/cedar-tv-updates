@@ -10,7 +10,7 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 ### 1.0.0 · build 44 · 2026-09-24
 
-Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.
+Build 44 · September 24, 2026 · Released to External TestFlight.
 
 #### Servers and tracking
 
@@ -682,7 +682,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ### 1.0.0 · build 44 · 2026-09-24
 
-Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.
+Build 44 · September 24, 2026 · Released to External TestFlight.
 
 #### Servers and tracking
 
@@ -1353,7 +1353,7 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ### 1.0.0 · build 44 · 2026-09-24
 
-Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.
+Build 44 · September 24, 2026 · Released to External TestFlight.
 
 #### Servers and tracking
 
@@ -1935,7 +1935,7 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ### 1.0.0 · build 44 · 2026-09-24
 
-Build 44 · September 24, 2026 · Prepared for External TestFlight; upload and review pending. Not yet available.
+Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.
 
 #### Servers and tracking
 

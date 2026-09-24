@@ -18,8 +18,8 @@
       "version": "1.0.0",
       "build": "44",
       "date": "2026-09-24",
-      "status": "release-candidate",
-      "summary": "Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
@@ -28,8 +28,8 @@
       "version": "1.0.0",
       "build": "44",
       "date": "2026-09-24",
-      "status": "release-candidate",
-      "summary": "Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
@@ -38,8 +38,8 @@
       "version": "1.0.0",
       "build": "44",
       "date": "2026-09-24",
-      "status": "release-candidate",
-      "summary": "Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
@@ -49,7 +49,7 @@
       "build": "44",
       "date": "2026-09-24",
       "status": "release-candidate",
-      "summary": "Prepared for External TestFlight; upload and review pending. Not yet available. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
+      "summary": "Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]
