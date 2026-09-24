@@ -50,6 +50,59 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-44">
+          <header>
+            <p class="eyebrow">iPad</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-release-candidate">Release candidate</span>
+              <span>Version 1.0.0</span>
+              <span>Build 44</span>
+              <time datetime="2026-09-24">September 24, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.</p>
+            <h3>Servers and tracking</h3>
+            <ul>
+            <li>Plex, Jellyfin and Emby now synchronize resume positions and watched state, including manual watched changes and offline playback. Failed updates are saved for retry, and newer local progress is protected from older server data.</li>
+            <li>Choose Original, 1080p, 720p or 480p playback quality and change quality during playback. Supported server conversions include audio and subtitle choices; availability depends on your server and account permissions.</li>
+            <li>Jellyfin/Emby connections can browse servers that require separate catalogs, find matching titles on demand and offer distinct playable versions. Version selection retains your chosen file and filters explicit title-year or episode mismatches.</li>
+            <li>Test a source with a bounded streaming speed check. Server library shelves and version handling are more consistent.</li>
+            <li>Trakt and MDBList use activity changes to avoid redundant library refreshes. MDBList removal tracking and recovery handle older saved cursors, and Up Next continues beyond its former 100-show limit.</li>
+            <li>Simkl adds OAuth V2 QR/device sign-in for new connections, premium custom-list browsing and statistics on request. Existing saved legacy connections keep their credentials, and unmatched anime can retain native Simkl/MAL identifiers.</li>
+            <li>Trakt adds recommended and favorite list sources, hidden/dropped shows with restore controls, and movie, streaming-release and premiere calendar entries. MDBList adds official, recommended and external lists, popular catalogs and direct provider links where your account supports them.</li>
+            </ul>
+            <h3>Live TV and personal channels</h3>
+            <ul>
+            <li>Choose a local live-rewind window up to 60 minutes and a storage allowance. Available rewind depends on the stream, free storage, and device power/thermal conditions.</li>
+            <li>DVR recurring rules are evaluated by the Home service without keeping the guide open. Recording conflicts use the configured concurrent-recording capacity.</li>
+            <li>Search channel results now include the currently airing program, guide timing and provider label, with a clear fallback when no event is scheduled.</li>
+            <li>My Channels uses whole-title setup, editable automatic builder rules and simpler Channel Options. Channels open the normal player directly, with Retry and Open Guide available if a source fails.</li>
+            <li>Custom-channel schedules reuse cached series metadata and load upcoming episodes incrementally instead of expanding an entire series up front.</li>
+            </ul>
+            <h3>Playback and navigation</h3>
+            <ul>
+            <li>The in-player guide has its own top-row button. Playback Options adds an optional Stats for Nerds overlay with the playback, network and device measurements available from the current player.</li>
+            <li>Initial rating/content advisories use clearer category rows and corner shading, wait for controls to fade, and preserve readable accessibility presentation. Playback statistics wait until the advisory clears.</li>
+            <li>Switching profiles preserves saved navigation layouts and opening destinations, including Sports Bar, instead of replacing them with defaults.</li>
+            <li>Refined Quick Actions tiles and Library collection-picker icons, with accessible transparency and motion fallbacks.</li>
+            </ul>
+            <h3>Offline downloads</h3>
+            <ul>
+            <li>Download quality can use an existing smaller server copy or request a supported conversion. Converted videos are saved as complete offline files, with storage checks, preferred track selection, retry and cleanup.</li>
+            <li>Keep Cedar open while a server conversion downloads. Paused conversions restart from the beginning; ordinary direct-file downloads keep their existing background behavior.</li>
+            </ul>
+            <h3>iPad improvements</h3>
+            <ul>
+            <li>Home can restore its completed first hero presentation from a matching cache, show readable title fallback when artwork is delayed, and avoid swapping a displayed logo during refresh.</li>
+            </ul>
+            <h3>Availability and limits</h3>
+            <p>Server conversion, premium lists and direct provider links depend on the connected service and account. Native Simkl/MAL IDs preserve unmatched anime; they do not supply a playable metadata match. My Channels, Sports Bar and the newer experimental playback features may still need adjustment. Commercial skipping uses imported markers; automatic commercial detection is not included. Manual Skip Commercial is available for recordings with markers imported on the Mac DVR host.</p>
+            <p>[All release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-43">
           <header>
             <p class="eyebrow">iPad</p>

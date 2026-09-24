@@ -8,6 +8,50 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 44 · 2026-09-24
+
+Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.
+
+#### Servers and tracking
+
+- Plex, Jellyfin and Emby now synchronize resume positions and watched state, including manual watched changes and offline playback. Failed updates are saved for retry, and newer local progress is protected from older server data.
+- Choose Original, 1080p, 720p or 480p playback quality and change quality during playback. Supported server conversions include audio and subtitle choices; availability depends on your server and account permissions.
+- Jellyfin/Emby connections can browse servers that require separate catalogs, find matching titles on demand and offer distinct playable versions. Version selection retains your chosen file and filters explicit title-year or episode mismatches.
+- Test a source with a bounded streaming speed check. Server library shelves and version handling are more consistent.
+- Trakt and MDBList use activity changes to avoid redundant library refreshes. MDBList removal tracking and recovery handle older saved cursors, and Up Next continues beyond its former 100-show limit.
+- Simkl adds OAuth V2 QR/device sign-in for new connections, premium custom-list browsing and statistics on request. Existing saved legacy connections keep their credentials, and unmatched anime can retain native Simkl/MAL identifiers.
+- Trakt adds recommended and favorite list sources, hidden/dropped shows with restore controls, and movie, streaming-release and premiere calendar entries. MDBList adds official, recommended and external lists, popular catalogs and direct provider links where your account supports them.
+
+#### Live TV and personal channels
+
+- Choose a local live-rewind window up to 60 minutes and a storage allowance. Available rewind depends on the stream, free storage, and device power/thermal conditions.
+- DVR recurring rules are evaluated by the Home service without keeping the guide open. Recording conflicts use the configured concurrent-recording capacity.
+- Search channel results now include the currently airing program, guide timing and provider label, with a clear fallback when no event is scheduled.
+- My Channels uses whole-title setup, editable automatic builder rules and simpler Channel Options. Channels open the normal player directly, with Retry and Open Guide available if a source fails.
+- Custom-channel schedules reuse cached series metadata and load upcoming episodes incrementally instead of expanding an entire series up front.
+
+#### Playback and navigation
+
+- The in-player guide has its own top-row button. Playback Options adds an optional Stats for Nerds overlay with the playback, network and device measurements available from the current player.
+- Initial rating/content advisories use clearer category rows and corner shading, wait for controls to fade, and preserve readable accessibility presentation. Playback statistics wait until the advisory clears.
+- Switching profiles preserves saved navigation layouts and opening destinations, including Sports Bar, instead of replacing them with defaults.
+- Refined Quick Actions tiles and Library collection-picker icons, with accessible transparency and motion fallbacks.
+
+#### Offline downloads
+
+- Download quality can use an existing smaller server copy or request a supported conversion. Converted videos are saved as complete offline files, with storage checks, preferred track selection, retry and cleanup.
+- Keep Cedar open while a server conversion downloads. Paused conversions restart from the beginning; ordinary direct-file downloads keep their existing background behavior.
+
+#### iPhone improvements
+
+- Home can restore its completed first hero presentation from a matching cache, show readable title fallback when artwork is delayed, and avoid swapping a displayed logo during refresh.
+
+#### Availability and limits
+
+Server conversion, premium lists and direct provider links depend on the connected service and account. Native Simkl/MAL IDs preserve unmatched anime; they do not supply a playable metadata match. My Channels, Sports Bar and the newer experimental playback features may still need adjustment. Commercial skipping uses imported markers; automatic commercial detection is not included. Manual Skip Commercial is available for recordings with markers imported on the Mac DVR host.
+
+[All release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 43 · 2026-09-23
 
 Released to External TestFlight.
@@ -636,6 +680,50 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 44 · 2026-09-24
+
+Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.
+
+#### Servers and tracking
+
+- Plex, Jellyfin and Emby now synchronize resume positions and watched state, including manual watched changes and offline playback. Failed updates are saved for retry, and newer local progress is protected from older server data.
+- Choose Original, 1080p, 720p or 480p playback quality and change quality during playback. Supported server conversions include audio and subtitle choices; availability depends on your server and account permissions.
+- Jellyfin/Emby connections can browse servers that require separate catalogs, find matching titles on demand and offer distinct playable versions. Version selection retains your chosen file and filters explicit title-year or episode mismatches.
+- Test a source with a bounded streaming speed check. Server library shelves and version handling are more consistent.
+- Trakt and MDBList use activity changes to avoid redundant library refreshes. MDBList removal tracking and recovery handle older saved cursors, and Up Next continues beyond its former 100-show limit.
+- Simkl adds OAuth V2 QR/device sign-in for new connections, premium custom-list browsing and statistics on request. Existing saved legacy connections keep their credentials, and unmatched anime can retain native Simkl/MAL identifiers.
+- Trakt adds recommended and favorite list sources, hidden/dropped shows with restore controls, and movie, streaming-release and premiere calendar entries. MDBList adds official, recommended and external lists, popular catalogs and direct provider links where your account supports them.
+
+#### Live TV and personal channels
+
+- Choose a local live-rewind window up to 60 minutes and a storage allowance. Available rewind depends on the stream, free storage, and device power/thermal conditions.
+- DVR recurring rules are evaluated by the Home service without keeping the guide open. Recording conflicts use the configured concurrent-recording capacity.
+- Search channel results now include the currently airing program, guide timing and provider label, with a clear fallback when no event is scheduled.
+- My Channels uses whole-title setup, editable automatic builder rules and simpler Channel Options. Channels open the normal player directly, with Retry and Open Guide available if a source fails.
+- Custom-channel schedules reuse cached series metadata and load upcoming episodes incrementally instead of expanding an entire series up front.
+
+#### Playback and navigation
+
+- The in-player guide has its own top-row button. Playback Options adds an optional Stats for Nerds overlay with the playback, network and device measurements available from the current player.
+- Initial rating/content advisories use clearer category rows and corner shading, wait for controls to fade, and preserve readable accessibility presentation. Playback statistics wait until the advisory clears.
+- Switching profiles preserves saved navigation layouts and opening destinations, including Sports Bar, instead of replacing them with defaults.
+- Refined Quick Actions tiles and Library collection-picker icons, with accessible transparency and motion fallbacks.
+
+#### Offline downloads
+
+- Download quality can use an existing smaller server copy or request a supported conversion. Converted videos are saved as complete offline files, with storage checks, preferred track selection, retry and cleanup.
+- Keep Cedar open while a server conversion downloads. Paused conversions restart from the beginning; ordinary direct-file downloads keep their existing background behavior.
+
+#### iPad improvements
+
+- Home can restore its completed first hero presentation from a matching cache, show readable title fallback when artwork is delayed, and avoid swapping a displayed logo during refresh.
+
+#### Availability and limits
+
+Server conversion, premium lists and direct provider links depend on the connected service and account. Native Simkl/MAL IDs preserve unmatched anime; they do not supply a playable metadata match. My Channels, Sports Bar and the newer experimental playback features may still need adjustment. Commercial skipping uses imported markers; automatic commercial detection is not included. Manual Skip Commercial is available for recordings with markers imported on the Mac DVR host.
+
+[All release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 43 · 2026-09-23
 
 Released to External TestFlight.
@@ -1263,6 +1351,46 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 44 · 2026-09-24
+
+Build 44 · September 24, 2026 · Uploaded for External TestFlight; processing or distribution checks pending. Not yet confirmed available.
+
+#### Servers and tracking
+
+- Plex, Jellyfin and Emby now synchronize resume positions and watched state, including manual watched changes and offline playback. Failed updates are saved for retry, and newer local progress is protected from older server data.
+- Choose Original, 1080p, 720p or 480p playback quality and change quality during playback. Supported server conversions include audio and subtitle choices; availability depends on your server and account permissions.
+- Jellyfin/Emby connections can browse servers that require separate catalogs, find matching titles on demand and offer distinct playable versions. Version selection retains your chosen file and filters explicit title-year or episode mismatches.
+- Test a source with a bounded streaming speed check. Server library shelves and version handling are more consistent.
+- Trakt and MDBList use activity changes to avoid redundant library refreshes. MDBList removal tracking and recovery handle older saved cursors, and Up Next continues beyond its former 100-show limit.
+- Simkl adds OAuth V2 QR/device sign-in for new connections, premium custom-list browsing and statistics on request. Existing saved legacy connections keep their credentials, and unmatched anime can retain native Simkl/MAL identifiers.
+- Trakt adds recommended and favorite list sources, hidden/dropped shows with restore controls, and movie, streaming-release and premiere calendar entries. MDBList adds official, recommended and external lists, popular catalogs and direct provider links where your account supports them.
+
+#### Live TV and personal channels
+
+- Choose a local live-rewind window up to 60 minutes and a storage allowance. Available rewind depends on the stream, free storage, and device power/thermal conditions.
+- DVR recurring rules are evaluated by the Home service without keeping the guide open. Recording conflicts use the configured concurrent-recording capacity.
+- Search channel results now include the currently airing program, guide timing and provider label, with a clear fallback when no event is scheduled.
+- My Channels uses whole-title setup, editable automatic builder rules and simpler Channel Options. Channels open the normal player directly, with Retry and Open Guide available if a source fails.
+- Custom-channel schedules reuse cached series metadata and load upcoming episodes incrementally instead of expanding an entire series up front.
+
+#### Playback and navigation
+
+- The in-player guide has its own top-row button. Playback Options adds an optional Stats for Nerds overlay with the playback, network and device measurements available from the current player.
+- Initial rating/content advisories use clearer category rows and corner shading, wait for controls to fade, and preserve readable accessibility presentation. Playback statistics wait until the advisory clears.
+- Switching profiles preserves saved navigation layouts and opening destinations, including Sports Bar, instead of replacing them with defaults.
+- Refined Quick Actions tiles and Library collection-picker icons, with accessible transparency and motion fallbacks.
+
+#### Apple TV improvements
+
+- Watch Live from a guide program opens full-screen playback after dismissing the program popup.
+- Home cards and captions stay inside the safe scrolling area. Settings has a compact centered heading and more list space; browse pages keep centered fixed headers, and profile selection uses circular focus treatment.
+
+#### Availability and limits
+
+Server conversion, premium lists and direct provider links depend on the connected service and account. Native Simkl/MAL IDs preserve unmatched anime; they do not supply a playable metadata match. My Channels, Sports Bar and the newer experimental playback features may still need adjustment. Commercial skipping uses imported markers; automatic commercial detection is not included. Manual Skip Commercial is available for recordings with markers imported on the Mac DVR host.
+
+[All release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 43 · 2026-09-23
 
 Released to External TestFlight.
@@ -1805,9 +1933,53 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
+### 1.0.0 · build 44 · 2026-09-24
+
+Build 44 · September 24, 2026 · Prepared for External TestFlight; upload and review pending. Not yet available.
+
+#### Servers and tracking
+
+- Plex, Jellyfin and Emby now synchronize resume positions and watched state, including manual watched changes and offline playback. Failed updates are saved for retry, and newer local progress is protected from older server data.
+- Choose Original, 1080p, 720p or 480p playback quality and change quality during playback. Supported server conversions include audio and subtitle choices; availability depends on your server and account permissions.
+- Jellyfin/Emby connections can browse servers that require separate catalogs, find matching titles on demand and offer distinct playable versions. Version selection retains your chosen file and filters explicit title-year or episode mismatches.
+- Test a source with a bounded streaming speed check. Server library shelves and version handling are more consistent.
+- Trakt and MDBList use activity changes to avoid redundant library refreshes. MDBList removal tracking and recovery handle older saved cursors, and Up Next continues beyond its former 100-show limit.
+- Simkl adds OAuth V2 QR/device sign-in for new connections, premium custom-list browsing and statistics on request. Existing saved legacy connections keep their credentials, and unmatched anime can retain native Simkl/MAL identifiers.
+- Trakt adds recommended and favorite list sources, hidden/dropped shows with restore controls, and movie, streaming-release and premiere calendar entries. MDBList adds official, recommended and external lists, popular catalogs and direct provider links where your account supports them.
+
+#### Live TV and personal channels
+
+- Choose a local live-rewind window up to 60 minutes and a storage allowance. Available rewind depends on the stream, free storage, and device power/thermal conditions.
+- DVR recurring rules are evaluated by the Home service without keeping the guide open. Recording conflicts use the configured concurrent-recording capacity.
+- Search channel results now include the currently airing program, guide timing and provider label, with a clear fallback when no event is scheduled.
+- My Channels uses whole-title setup, editable automatic builder rules and simpler Channel Options. Channels open the normal player directly, with Retry and Open Guide available if a source fails.
+- Custom-channel schedules reuse cached series metadata and load upcoming episodes incrementally instead of expanding an entire series up front.
+
+#### Playback and navigation
+
+- The in-player guide has its own top-row button. Playback Options adds an optional Stats for Nerds overlay with the playback, network and device measurements available from the current player.
+- Initial rating/content advisories use clearer category rows and corner shading, wait for controls to fade, and preserve readable accessibility presentation. Playback statistics wait until the advisory clears.
+- Switching profiles preserves saved navigation layouts and opening destinations, including Sports Bar, instead of replacing them with defaults.
+- Refined Quick Actions tiles and Library collection-picker icons, with accessible transparency and motion fallbacks.
+
+#### Offline downloads
+
+- Download quality can use an existing smaller server copy or request a supported conversion. Converted videos are saved as complete offline files, with storage checks, preferred track selection, retry and cleanup.
+- Keep Cedar open while a server conversion downloads. Paused conversions restart from the beginning; ordinary direct-file downloads keep their existing background behavior.
+
+#### Mac improvements
+
+- Import EDL or JSON commercial markers from a recording’s menu on the Mac DVR host. Marked recordings offer manual Skip Commercial during playback on connected Cedar clients.
+
+#### Availability and limits
+
+Server conversion, premium lists and direct provider links depend on the connected service and account. Native Simkl/MAL IDs preserve unmatched anime; they do not supply a playable metadata match. My Channels, Sports Bar and the newer experimental playback features may still need adjustment. Commercial skipping uses imported markers; automatic commercial detection is not included.
+
+[All release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 43 · 2026-09-23
 
-Submitted for External TestFlight; Apple beta review pending. Not yet available to external testers.
+Released to External TestFlight.
 
 - Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.
 - Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.
