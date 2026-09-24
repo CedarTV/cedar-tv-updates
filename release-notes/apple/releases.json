@@ -34,7 +34,7 @@
       "build": "47",
       "date": "2026-09-24",
       "status": "release-candidate",
-      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "summary": "Submitted for External TestFlight; Apple beta review pending. Not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
       "notes": "release-notes/apple/mac/1.0.0-build-47.md"
     },
     {

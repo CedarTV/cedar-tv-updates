@@ -49,7 +49,7 @@
       "build": "47",
       "date": "2026-09-24",
       "status": "release-candidate",
-      "summary": "External TestFlight rollout in progress; not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
+      "summary": "Submitted for External TestFlight; Apple beta review pending. Not yet available to external testers. Artwork language, channel pages, watch-progress fixes and more reliable ratings.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]
