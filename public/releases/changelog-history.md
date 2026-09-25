@@ -8,6 +8,27 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 49 · 2026-09-25
+
+Build 49 · September 25, 2026 · Released to External TestFlight.
+
+#### Improvements
+
+- Marking a title as watched removes its matching Continue Watching entry and old resume progress more reliably, including after a refresh or restart. Other episodes and later rewatches keep their progress.
+- Cast, trailers, reviews and collection contents load as their sections come into view. Loaded sections stay available when returning from a person page.
+- Live setup offers clear actions to add a Live TV source or create a custom channel, while keeping existing custom channels and saved Live collections accessible.
+- Secondary controls over artwork and video use clear glass on supported systems, with a more opaque treatment when Reduce Transparency is enabled.
+- The Live guide keeps its time axis above the channel list so the first channel rows remain visible.
+- Download cards show queued, paused, active and failed transfers alongside completed downloads, with progress percentages when available. Open an unfinished card to manage its transfer.
+- Completion and failure messages identify the downloaded title or episode. Movie download buttons also show progress.
+- Portrait download cards use posters instead of episode stills or backdrops, while landscape episode cards retain episode artwork.
+- Deleting downloads asks for confirmation, and download feedback stays within the active profile.
+- Share and Choose Artwork are grouped in the detail page’s native More menu.
+- Rating-service settings use more compact spacing, and the Live page background extends behind the tab bar.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
+
 ### 1.0.0 · build 47 · 2026-09-24
 
 Build 47 · September 24, 2026 · Released to External TestFlight.
@@ -700,6 +721,27 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 49 · 2026-09-25
+
+Build 49 · September 25, 2026 · Released to External TestFlight.
+
+#### Improvements
+
+- Marking a title as watched removes its matching Continue Watching entry and old resume progress more reliably, including after a refresh or restart. Other episodes and later rewatches keep their progress.
+- Cast, trailers, reviews and collection contents load as their sections come into view. Loaded sections stay available when returning from a person page.
+- Live setup offers clear actions to add a Live TV source or create a custom channel, while keeping existing custom channels and saved Live collections accessible.
+- Secondary controls over artwork and video use clear glass on supported systems, with a more opaque treatment when Reduce Transparency is enabled.
+- The Live guide keeps its time axis above the channel list so the first channel rows remain visible.
+- Download cards show queued, paused, active and failed transfers alongside completed downloads, with progress percentages when available. Open an unfinished card to manage its transfer.
+- Completion and failure messages identify the downloaded title or episode. Movie download buttons also show progress.
+- Portrait download cards use posters instead of episode stills or backdrops, while landscape episode cards retain episode artwork.
+- Deleting downloads asks for confirmation, and download feedback stays within the active profile.
+- Share and Choose Artwork are grouped in the detail page’s native More menu.
+- Rating-service settings use more compact spacing.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
+
 ### 1.0.0 · build 47 · 2026-09-24
 
 Build 47 · September 24, 2026 · Released to External TestFlight.
@@ -1391,6 +1433,21 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 49 · 2026-09-25
+
+Build 49 · September 25, 2026 · Released to External TestFlight.
+
+#### Improvements
+
+- Marking a title as watched removes its matching Continue Watching entry and old resume progress more reliably, including after a refresh or restart. Other episodes and later rewatches keep their progress.
+- Cast, trailers, reviews and collection contents load as their sections come into view. Loaded sections stay available when returning from a person page.
+- Live setup offers clear actions to add a Live TV source or create a custom channel, while keeping existing custom channels and saved Live collections accessible.
+- Secondary controls over artwork and video use clear glass on supported systems, with a more opaque treatment when Reduce Transparency is enabled.
+- The Live guide keeps its time axis above the channel list so the first channel rows remain visible.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
+
 ### 1.0.0 · build 47 · 2026-09-24
 
 Build 47 · September 24, 2026 · Released to External TestFlight.
@@ -1992,6 +2049,26 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 49 · 2026-09-25
+
+Build 49 · September 25, 2026 · Released to External TestFlight.
+
+#### Improvements
+
+- Marking a title as watched removes its matching Continue Watching entry and old resume progress more reliably, including after a refresh or restart. Other episodes and later rewatches keep their progress.
+- Cast, trailers, reviews and collection contents load as their sections come into view. Loaded sections stay available when returning from a person page.
+- Live setup offers clear actions to add a Live TV source or create a custom channel, while keeping existing custom channels and saved Live collections accessible.
+- Secondary controls over artwork and video use clear glass on supported systems, with a more opaque treatment when Reduce Transparency is enabled.
+- The Live guide keeps its time axis above the channel list so the first channel rows remain visible.
+- Download cards show queued, paused, active and failed transfers alongside completed downloads, with progress percentages when available. Open an unfinished card to manage its transfer.
+- Completion and failure messages identify the downloaded title or episode. Movie download buttons also show progress.
+- Portrait download cards use posters instead of episode stills or backdrops, while landscape episode cards retain episode artwork.
+- Deleting downloads asks for confirmation, and download feedback stays within the active profile.
+- Share and Choose Artwork are grouped in the detail page’s native More menu, with standard Mac toolbar controls.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 
 ### 1.0.0 · build 47 · 2026-09-24
 

@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "49",
+      "date": "2026-09-25",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Continue Watching fixes, on-demand detail sections and clearer Live setup. Download progress, feedback and poster improvements.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-49.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "49",
+      "date": "2026-09-25",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Continue Watching fixes, on-demand detail sections and clearer Live setup. Download progress, feedback and poster improvements.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-49.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "49",
+      "date": "2026-09-25",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Continue Watching fixes, on-demand detail sections and clearer Live setup.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-49.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "49",
+      "date": "2026-09-25",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Continue Watching fixes, on-demand detail sections and clearer Live setup. Download progress, feedback and poster improvements.",
+      "notes": "release-notes/apple/mac/1.0.0-build-49.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "47",
       "date": "2026-09-24",
       "status": "testflight",
