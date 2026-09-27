@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createDecipheriv } from 'node:crypto';
-import { createTie, validateAddress, PREFIX, LINK_PREFIX } from '../public/create-tobacco-tie/codec.mjs';
+import { createTie, validateAddress, PREFIX, LINK_PREFIX, USERNAME_PREFIX, PASSWORD_PREFIX, SERVER_URL } from '../public/create-tobacco-tie/codec.mjs';
 
 function decrypt(code) {
   assert.ok(code.startsWith(PREFIX));
@@ -46,4 +46,33 @@ test('authentication rejects changed ciphertext and key', async () => {
     parts[index] = data.toString('base64url');
     assert.throws(() => decrypt(parts.join('.')));
   }
+});
+
+test('username and password recover the manifest and preserve the legacy code', async () => {
+  const address = 'https://example.com/a%2Fb/manifest.json?token=abc%2B123&name=caf%C3%A9';
+  const { username, password, code, server } = await createTie(address);
+  assert.ok(username.startsWith(USERNAME_PREFIX));
+  assert.ok(password.startsWith(PASSWORD_PREFIX));
+  assert.equal(server, SERVER_URL);
+  assert.equal(code, PREFIX + password.slice(PASSWORD_PREFIX.length) + '.' + username.slice(USERNAME_PREFIX.length));
+  assert.deepEqual(decrypt(code), { v: 1, kind: 'addon', url: address });
+  assert.ok(!username.includes('example.com'));
+  assert.ok(!password.includes('example.com'));
+  assert.equal(Buffer.from(password.slice(PASSWORD_PREFIX.length), 'base64url').length, 32);
+});
+
+test('credentials from different generations cannot be mixed', async () => {
+  const first = await createTie('https://example.com/manifest.json');
+  const second = await createTie('https://example.com/manifest.json');
+  const mixed = PREFIX + second.password.slice(PASSWORD_PREFIX.length) + '.' + first.username.slice(USERNAME_PREFIX.length);
+  assert.throws(() => decrypt(mixed));
+});
+
+test('maximum-size addresses fit the native credential input limit', async () => {
+  const suffix = '/manifest.json';
+  const prefix = 'https://example.com/';
+  const address = prefix + 'x'.repeat(4096 - prefix.length - suffix.length) + suffix;
+  const result = await createTie(address);
+  assert.ok(result.username.length + result.password.length <= 8192);
+  assert.equal(decrypt(result.code).url, address);
 });

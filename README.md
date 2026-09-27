@@ -168,3 +168,12 @@ Import accepts external collection arrays, collection envelopes, Nuvio profile e
 Export uses the existing CedarCore ExternalCollectionImporter profile format: direct Branches become `home_rows`, Branch Groups become `collections`, and `home_order` preserves their combined order. Direct Branches use the importer's poster presentation; group appearances use `cedarLayout`. The current importer does not preserve direct-list sort/filter customization; the export review identifies this limitation. The browser never sends a collection to a paired device.
 
 Verify with `node --test test/studio.test.mjs` and `node scripts/verify_studio_browser.cjs` (Playwright and Chrome required). Set `CEDAR_STUDIO_URL` to a served project root or the live Pages root, and `CEDAR_STUDIO_ARTIFACTS` to a disposable directory under the parent workspace's `tmp` symlink.
+
+## Tobacco Ties
+
+`public/create-tobacco-tie/` generates a portable username and password locally in the browser.
+In Tobacco Tie settings, enter the displayed server URL yourself and paste both credentials.
+Cedar checks that server without sending the credentials, then decodes and installs the source.
+Legacy codes and `cedar://tie/` links remain available for older apps and through the code import option.
+Anyone holding both credentials or a complete code can install the tie; keep configured ties private. See
+[`docs/tobacco-tie-format.md`](docs/tobacco-tie-format.md) for the versioned format and verification.

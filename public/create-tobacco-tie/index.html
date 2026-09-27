@@ -4,15 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0c0e0d">
-    <meta name="description" content="Turn an add-on address into a Tobacco Tie with Cedar. Create an encrypted code to import into Cedar.">
+    <meta name="description" content="Turn an add-on address into a Tobacco Tie with Cedar. Create a username and password to import into Cedar.">
     <meta name="robots" content="noindex,nofollow">
     <meta name="referrer" content="no-referrer">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
     <title>Create Tobacco Tie — Cedar</title>
     <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
-    <link rel="stylesheet" href="tie.css">
+    <link rel="stylesheet" href="tie.css?v=3">
     <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
-    <script type="module" src="tie.mjs?v=2"></script>
+    <script type="module" src="tie.mjs?v=3"></script>
     <script src="/cedar-tv-updates/theme.js"></script>
     <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
   </head>
@@ -43,8 +43,8 @@
       </header>
       <main id="main">
         <div class="page-heading">
-          <div><p class="eyebrow">CEDAR / TOOLS</p><h1>Create <em>Tobacco Tie.</em></h1><p class="intro">Your add-on address, neatly tied into one code.</p></div>
-          <span class="preview-badge"><span aria-hidden="true"></span>Encrypted code</span>
+          <div><p class="eyebrow">CEDAR / TOOLS</p><h1>Create <em>Tobacco Tie.</em></h1><p class="intro">Your add-on address, tied into a username and password.</p></div>
+          <span class="preview-badge"><span aria-hidden="true"></span>Created privately</span>
         </div>
         <div class="creator">
           <section class="input-panel" aria-labelledby="input-title">
@@ -61,19 +61,32 @@
           </section>
           <section class="output-panel" aria-labelledby="output-title">
             <div class="section-label"><h2 id="output-title">Your Tobacco Tie</h2></div>
-            <p class="section-description">Create a tie, then copy the code.</p>
-            <label class="code-label" for="tie-code">Code</label>
-            <textarea id="tie-code" readonly rows="5" placeholder="Your code will appear here." spellcheck="false" aria-describedby="prototype-note"></textarea>
-            <a id="open-cedar" hidden>Open in Cedar ↗</a>
-            <button class="copy-button" id="copy-tie" type="button" disabled>Copy Tobacco Tie <span aria-hidden="true">↗</span></button>
+            <p class="section-description">Enter these three values in Cedar’s Tobacco Tie settings.</p>
+            <label class="code-label" for="tie-server">Server URL</label>
+            <textarea class="credential-output" id="tie-server" readonly rows="2" spellcheck="false" autocomplete="off" aria-describedby="prototype-note"></textarea>
+            <button class="copy-button" id="copy-server" type="button" disabled>Copy server URL</button>
+            <label class="code-label credential-label" for="tie-username">Username</label>
+            <textarea class="credential-output" id="tie-username" readonly rows="4" placeholder="Your username will appear here." spellcheck="false" autocomplete="off" aria-describedby="prototype-note"></textarea>
+            <button class="copy-button" id="copy-username" type="button" disabled>Copy username</button>
+            <label class="code-label credential-label" for="tie-password">Password</label>
+            <textarea class="credential-output" id="tie-password" readonly rows="2" placeholder="Your password will appear here." spellcheck="false" autocomplete="off" aria-describedby="prototype-note"></textarea>
+            <button class="copy-button" id="copy-password" type="button" disabled>Copy password</button>
             <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
-            <p class="prototype-note" id="prototype-note">Paste this code into Settings → Sources → Tobacco Ties in a compatible Cedar app.</p>
+            <p class="prototype-note" id="prototype-note">In Settings → Sources → Tobacco Ties, enter the server URL yourself, then paste the username and password from the same tie. Select Install.</p>
+            <details class="legacy-output">
+              <summary>Using an older Cedar app?</summary>
+              <p class="prototype-note">Use the complete code or open it in Cedar. Current apps also accept it with “Use a code or link”.</p>
+              <label class="code-label credential-label" for="tie-code">Code</label>
+              <textarea class="credential-output" id="tie-code" readonly rows="4" placeholder="Your compatible code will appear here." spellcheck="false" autocomplete="off"></textarea>
+              <button class="copy-button" id="copy-tie" type="button" disabled>Copy Tobacco Tie</button>
+              <a id="open-cedar" hidden>Open code in Cedar ↗</a>
+            </details>
           </section>
         </div>
         <section class="how-it-works" aria-label="How it works">
-          <div><span>PASTE</span><p>Bring your add-on address.</p></div><div><span>CREATE</span><p>Make one copyable code.</p></div><div><span>COPY</span><p>Copy your Tobacco Tie.</p></div>
+          <div><span>PASTE</span><p>Bring your add-on address.</p></div><div><span>CREATE</span><p>Generate a username and password.</p></div><div><span>COPY</span><p>Enter all three values in Cedar.</p></div>
         </section>
-        <details class="about-ties"><summary>What is a Tobacco Tie? <span aria-hidden="true">+</span></summary><div><p>A Tobacco Tie encrypts an add-on address into a portable code. The code includes its key: anyone with the complete tie can recover the address and install it. Keep ties private when they contain account access.</p><p>Cedar creates the code locally without connecting to the add-on. Creating a tie does not check that the add-on works or is compatible with Cedar. Only use sources you are authorized to access.</p></div></details>
+        <details class="about-ties"><summary>What is a Tobacco Tie? <span aria-hidden="true">+</span></summary><div><p>A Tobacco Tie turns an add-on address into a portable username and password. These are generated import values, so you do not need a Cedar account. Anyone with both can install the tie. Keep them private when they contain account access.</p><p>Cedar creates both values locally without connecting to the add-on. In the app, the server URL is used for a connection check; your username and password stay on your device while Cedar decodes the tie. Creating a tie does not check that the add-on works or is compatible with Cedar. Only use sources you are authorized to access.</p></div></details>
       </main>
       <footer class="site-footer">
         <div class="site-footer-intro">

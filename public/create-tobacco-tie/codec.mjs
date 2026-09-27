@@ -2,6 +2,9 @@
 // AES-256-GCM, 12-byte nonce, 16-byte tag, UTF-8 prefix as authenticated data.
 export const PREFIX = 'cedar-tie1.';
 export const LINK_PREFIX = 'cedar://tie/';
+export const USERNAME_PREFIX = 'cedar-user1.';
+export const PASSWORD_PREFIX = 'cedar-pass1.';
+export const SERVER_URL = 'https://cedartv.github.io/cedar-tv-updates/';
 const encoder = new TextEncoder();
 function base64url(bytes) {
   return btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '');
@@ -36,7 +39,9 @@ export async function createTie(value) {
     { name: 'AES-GCM', iv: nonce, additionalData: encoder.encode(PREFIX), tagLength: 128 }, key, bytes));
   const combined = new Uint8Array(nonce.length + encrypted.length);
   combined.set(nonce); combined.set(encrypted, nonce.length);
-  const code = `${PREFIX}${base64url(keyBytes)}.${base64url(combined)}`;
+  const password = `${PASSWORD_PREFIX}${base64url(keyBytes)}`;
+  const username = `${USERNAME_PREFIX}${base64url(combined)}`;
+  const code = `${PREFIX}${password.slice(PASSWORD_PREFIX.length)}.${username.slice(USERNAME_PREFIX.length)}`;
   keyBytes.fill(0);
-  return { code, link: `${LINK_PREFIX}${code}`, host };
+  return { username, password, server: SERVER_URL, code, link: `${LINK_PREFIX}${code}`, host };
 }
