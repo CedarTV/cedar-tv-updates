@@ -172,5 +172,25 @@
       "summary": "Initial GitHub update-channel bridge for Cedar Android TV.",
       "notes": "release-notes/android-tv/1.2.41.md"
     }
+  ],
+  "previews": [
+    {
+      "platform": "android-tv",
+      "version": "1.3.0-preview.5",
+      "build": "5",
+      "date": "2026-09-28",
+      "status": "preview",
+      "summary": "Redesigned Home heroes and detail screens, expanded media-server controls, and more Home, Leaves, source and subtitle options.",
+      "notes": "release-notes/android-tv/1.3.0-preview.5.md"
+    },
+    {
+      "platform": "android-tv",
+      "version": "1.3.0-preview.4",
+      "build": "4",
+      "date": "2026-09-28",
+      "status": "preview",
+      "summary": "Browser setup, Apple profile copying, updated Home and playback controls, and in-app updates for Cedar Preview.",
+      "notes": "release-notes/android-tv/1.3.0-preview.4.md"
+    }
   ]
 }

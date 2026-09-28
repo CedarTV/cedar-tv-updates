@@ -55,6 +55,39 @@ test("Android release page exposes the matching signed APK", async () => {
   assert.match(page, /Released/);
 });
 
+test("public Android previews keep their own current download and preserve stable releases", async () => {
+  const source = JSON.parse(await readFile("release-notes/android-tv/releases.json", "utf8"));
+  const catalog = JSON.parse(await readFile("public/releases/releases.json", "utf8"));
+  const stable = JSON.parse(await readFile("public/update-v1.json", "utf8"));
+  const preview = JSON.parse(await readFile("public/android-preview/update-v1.json", "utf8"));
+  const page = await readFile("public/releases/android-tv/index.html", "utf8");
+  const hub = await readFile("public/releases/index.html", "utf8");
+  const archive = await readFile("public/releases/changelog-history.md", "utf8");
+
+  assert.equal(catalog.platforms.find((item) => item.id === "android-tv").version, stable.versionName);
+  assert.equal(catalog.platforms.find((item) => item.id === "android-tv").downloadURL, stable.apkUrl);
+  assert.equal(catalog.previews.length, 1);
+  assert.equal(catalog.previews[0].version, preview.versionName);
+  assert.equal(catalog.previews[0].build, String(preview.versionCode));
+  assert.equal(catalog.previews[0].downloadURL, preview.apkUrl);
+  assert.equal(catalog.previews[0].status, "preview");
+  assert.ok(hub.includes(catalog.previews[0].notesURL));
+  assert.ok(page.includes('id="android-preview"'));
+  assert.match(page, /Current preview/);
+  assert.match(page, /Earlier preview/);
+  assert.match(page, /Android TV stable release/);
+  assert.ok(page.indexOf(`id="version-${preview.versionName.replaceAll(".", "-")}-build-${preview.versionCode}"`)
+    < page.indexOf('id="version-1-3-0-preview-4-build-4"'));
+
+  for (const release of source.previews) {
+    assert.equal(release.status, "preview");
+    assert.ok(page.includes(`id="version-${release.version.replaceAll(".", "-")}-build-${release.build}"`));
+    assert.ok(page.includes(`releases/tag/android-preview-${release.version}`));
+    assert.ok(archive.includes(`${release.version} · build ${release.build}`));
+    await access(release.notes);
+  }
+});
+
 
 test("Android page and downloadable archive include every recorded release", async () => {
   const source = JSON.parse(await readFile("release-notes/android-tv/releases.json", "utf8"));

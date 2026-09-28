@@ -2661,6 +2661,37 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Android TV, Google TV and Fire TV
 
+### 1.3.0-preview.5 · build 5 · 2026-09-28 · public preview
+
+September 28, 2026 · Released as a public preview for Android TV.
+
+- Redesigned Cinematic and Detailed Home heroes, with clearer title artwork, ratings and navigation.
+- Updated movie and series detail screens, playback actions, season selection and episode layouts.
+- Expanded Plex and Jellyfin sign-in, source settings, quality selection and playback progress support.
+- More Home and Leaves customization, Hero controls, poster overlays and viewing actions.
+- Improved Tobacco Tie imports and list management, source switching and subtitle timing controls.
+
+Install this update from Software Update in Cedar Preview. Preview remains a separate app from the original Cedar release; existing Preview profiles and settings are retained during an update.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-preview-5-build-5) · [Install Cedar Preview](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.5/Cedar-Preview-1.3.0-preview.5.apk)
+
+### 1.3.0-preview.4 · build 4 · 2026-09-28 · public preview
+
+September 28, 2026 · Released as a public preview for Android TV.
+
+- Configure your TV from a phone or computer with encrypted browser setup.
+- Copy a profile from Cedar on an Apple device.
+- Updated Home layouts, detail options, My Channels and playback controls.
+- Fixes browser setup on a fresh Android installation.
+- Enabled in-app update checks for Cedar Preview.
+
+This preview installs alongside the original Cedar app. Existing Cedar installations are not automatically migrated; use Receive Profile Copy in Cedar Preview to copy your profile from an Apple device.
+
+Preview 4 is an earlier preview. Preview 5 was released later on September 28 and is available through Software Update.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-preview-4-build-4) · [Install Cedar Preview](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.4/Cedar-Preview-1.3.0-preview.4.apk)
+
+
 ### 1.2.85 · build 88 · 2026-09-09 · released
 
 

@@ -49,6 +49,7 @@ const statusLabels = new Map([
   ["release-candidate", "Release candidate"],
   ["testflight", "TestFlight"],
   ["released", "Released"],
+  ["preview", "Public preview"],
   ["rejected", "Rejected upload"],
   ["expired", "Expired"],
 ]);
@@ -80,7 +81,10 @@ function validateRelease(source, expectedPlatform, label) {
   const date = requireText(source.date, `${label} date`, 10);
   const status = requireText(source.status, `${label} status`, 40);
   const summary = requireText(source.summary, `${label} summary`, 280);
-  if (!/^\d+\.\d+\.\d+$/.test(version)) fail(`${label} version must use three numeric components`);
+  const versionPattern = expectedPlatform === "android-tv" && status === "preview"
+    ? /^\d+\.\d+\.\d+-preview\.[1-9]\d*$/
+    : /^\d+\.\d+\.\d+$/;
+  if (!versionPattern.test(version)) fail(`${label} version must match its release channel`);
   if (!/^[1-9]\d*$/.test(build)) fail(`${label} build must be a positive integer string`);
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || Number.isNaN(new Date(`${date}T00:00:00Z`).valueOf())) {
     fail(`${label} date must be a real YYYY-MM-DD date`);
@@ -209,6 +213,39 @@ if (updateManifest.versionName !== androidRelease.version || String(updateManife
 const expectedAPKURL = `https://github.com/CedarTV/cedar-tv-updates/releases/download/v${androidRelease.version}/Cedar-TV-${androidRelease.version}.apk`;
 if (updateManifest.apkUrl !== expectedAPKURL) fail("Android release APK URL does not match the current version");
 
+const androidPreviews = (androidCatalog.previews ?? [])
+  .map((release, index) => validateRelease(release, "android-tv", `Android preview ${index + 1}`))
+  .sort(compareReleases);
+for (const preview of androidPreviews) {
+  if (preview.status !== "preview") fail("Android previews must be labeled as public previews");
+  if (preview.notes !== `release-notes/android-tv/${preview.version}.md`) fail("Android preview notes path must match version");
+}
+if (new Set(androidPreviews.map((release) => release.version)).size !== androidPreviews.length
+  || new Set(androidPreviews.map((release) => release.build)).size !== androidPreviews.length) {
+  fail("Android preview versions and builds must be unique within the preview channel");
+}
+const previewReleaseURL = (release) => `https://github.com/CedarTV/cedar-tv-updates/releases/tag/android-preview-${release.version}`;
+const previewAPKURL = (release) => `https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-${release.version}/Cedar-Preview-${release.version}.apk`;
+const previewNotesURL = (release) => `${publicBaseURL}/android-tv/#version-${release.version.replaceAll(".", "-")}-build-${release.build}`;
+const currentPreview = androidPreviews[0];
+if (currentPreview) {
+  const previewManifest = JSON.parse(await readFile(resolve(repositoryRoot, "public/android-preview/update-v1.json"), "utf8"));
+  if (previewManifest.packageName !== "app.cedar.android.tv"
+    || previewManifest.versionName !== currentPreview.version
+    || String(previewManifest.versionCode) !== currentPreview.build
+    || previewManifest.apkUrl !== previewAPKURL(currentPreview)) {
+    fail("Android preview catalog must match the separate signed preview update manifest");
+  }
+}
+const previewCallout = currentPreview ? `
+        <section class="policy-callout" aria-labelledby="android-preview-title">
+          <p class="eyebrow">Android TV public preview</p>
+          <h2 id="android-preview-title">Cedar Preview ${escapeHTML(currentPreview.version)}</h2>
+          <p>${escapeHTML(currentPreview.summary)}</p>
+          <p>Cedar Preview installs alongside the original Cedar app and has its own in-app updates.</p>
+          <a class="inline-document-link" href="${previewNotesURL(currentPreview)}">Preview notes and installation</a>
+        </section>` : "";
+
 const cards = currentReleases.map((release) => `          <article class="release-card">
             <p class="eyebrow">${escapeHTML(release.shortName)}</p>
             <h2>${escapeHTML(release.name)}</h2>
@@ -227,12 +264,13 @@ const indexPage = pageShell({
           <h1>One release view. Every Cedar platform.</h1>
           <p>See the current version, build number, availability status, and notes for Android TV, iPhone, iPad, Apple TV, and Mac.</p>
           <p><a href="/cedar-tv-updates/releases/roundup-2026-09-23.html">September 23 roundup: new features, critical fixes and Android parity progress</a>.</p>
-          <p><a href="/cedar-tv-updates/releases/changelog-history.md">Download the complete recorded build history</a>. Android TV, Google TV and Fire TV share one release line. Skipped build numbers are not separate releases.</p>
+          <p><a href="/cedar-tv-updates/releases/changelog-history.md">Download the complete recorded build history</a>. Android TV, Google TV and Fire TV share the stable release line. Cedar Preview is listed separately. Skipped build numbers are not separate releases.</p>
         </header>
 
         <section class="release-grid" aria-label="Current Cedar releases">
 ${cards}
         </section>
+${previewCallout}
 
         <section class="policy-callout compact-callout" aria-labelledby="release-status-title">
           <p class="eyebrow">Clear status</p>
@@ -247,6 +285,30 @@ if (androidRelease.notes !== `release-notes/android-tv/${androidRelease.version}
   fail(`Android notes path must be release-notes/android-tv/${androidRelease.version}.md`);
 }
 const androidNotes = renderMarkdown(await readFile(androidNotesPath, "utf8"), `${androidRelease.name} ${androidRelease.version}`);
+const previewEntries = [];
+for (const release of androidPreviews) {
+  const notes = renderMarkdown(await readFile(resolve(repositoryRoot, release.notes), "utf8"), `Cedar Android TV ${release.version} · build ${release.build}`);
+  previewEntries.push(`<article class="release-entry" id="version-${release.version.replaceAll(".", "-")}-build-${release.build}">
+    <header>
+      <p class="eyebrow">${release === currentPreview ? "Current preview" : "Earlier preview"}</p>
+      <h2>Cedar Android TV ${escapeHTML(release.version)} · build ${release.build}</h2>
+      <p class="release-summary">${escapeHTML(release.summary)}</p>
+      ${releaseMetadata(release)}
+      <div class="apple-actions">
+        <a class="inline-action" href="${previewAPKURL(release)}">Download Preview ${escapeHTML(release.version)}</a>
+        <a class="secondary-action" href="${previewReleaseURL(release)}">GitHub release notes</a>
+        <a class="secondary-action" href="${projectBasePath}/setup/">Browser setup</a>
+      </div>
+    </header>
+    <div class="release-notes-body">${notes}</div>
+  </article>`);
+}
+const previewSection = previewEntries.length ? `
+        <section id="android-preview" aria-labelledby="preview-heading">
+          <h2 id="preview-heading">Cedar Preview for Android TV</h2>
+          <p>Public previews install alongside the original Cedar app. Existing Cedar Preview users can update from Settings → About Cedar → Software Update. The original Cedar stable release remains available below.</p>
+          ${previewEntries.join("\n")}
+        </section>` : "";
 const androidHistory = [];
 for (const release of [...androidCatalog.releases].sort(compareReleases)) {
   if (release.build === androidRelease.build) continue;
@@ -272,10 +334,11 @@ const androidPage = pageShell({
           <h1>Cedar for Android TV release notes.</h1>
           <p>Current and historical releases for Android TV, Google TV, and Fire TV, with their matching build numbers and notes.</p>
         </header>
+${previewSection}
 
         <article class="release-entry" id="version-${androidRelease.version.replaceAll(".", "-")}-build-${androidRelease.build}">
           <header>
-            <p class="eyebrow">Android TV</p>
+            <p class="eyebrow">Android TV stable release</p>
             <h2>Version ${escapeHTML(androidRelease.version)}</h2>
             <p class="release-summary">${escapeHTML(androidRelease.summary)}</p>
             ${releaseMetadata(androidRelease)}
@@ -294,6 +357,18 @@ ${androidNotes.split("\n").map((line) => `            ${line}`).join("\n")}
 
 const publicCatalog = {
   schemaVersion: 1,
+  previews: currentPreview ? [{
+    id: "android-tv-preview",
+    platform: "android-tv",
+    name: "Cedar Preview for Android TV",
+    version: currentPreview.version,
+    build: currentPreview.build,
+    date: currentPreview.date,
+    status: currentPreview.status,
+    summary: currentPreview.summary,
+    notesURL: previewNotesURL(currentPreview),
+    downloadURL: previewAPKURL(currentPreview),
+  }] : [],
   platforms: currentReleases.map((release) => ({
     id: release.id,
     name: release.name,
