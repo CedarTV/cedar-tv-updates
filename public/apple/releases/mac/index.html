@@ -50,6 +50,49 @@
         </header>
 
         <div class="release-stack">
+        <article class="release-entry" id="version-1-0-0-build-53">
+          <header>
+            <p class="eyebrow">Mac</p>
+            <h2>Version 1.0.0</h2>
+            <p class="release-summary">Released to External TestFlight. Source limits and episode matching, Live TV and connected-library updates. Experimental Poster Studio, AI Search and optional integrations; known limitations remain.</p>
+            <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 53</span>
+              <time datetime="2026-09-29">September 29, 2026</time>
+            </div>
+          </header>
+          <div class="release-notes-body">
+            <p>Build 53 · September 29, 2026 · Released to External TestFlight.</p>
+            <h3>Highlights</h3>
+            <ul>
+            <li>Source selection: share a total result limit across providers or set a separate limit for each source. Maximum playback quality is respected, and episode lookup has additional fallbacks for empty responses and alternate season numbering.</li>
+            <li>Home and details: improved artwork loading and detail presentation, actor and studio discovery, and an optional Scheduled Recordings shelf with programme times and recording status.</li>
+            <li>Connected libraries: Sign In Again renews Plex, Emby or Jellyfin credentials while preserving the saved server and library settings.</li>
+            <li>Live TV: separate priorities for programme guides and channel logos, optional provider-guide backfill, programme search, and improved HLS recognition and playback recovery.</li>
+            <li>Tobacco Tie metadata: improved provider ordering and fallback for title information, artwork and episodes.</li>
+            </ul>
+            <h3>Platform changes</h3>
+            <ul>
+            <li>Home DVR adds a menu-bar recording indicator and controls, Library recordings, and optional pairing through the same Apple Account and iCloud Keychain. Cedar must remain running to record.</li>
+            <li>Download size and resolution limits, storage controls and browsing refinements; updates to offline playback and watch-progress synchronization.</li>
+            </ul>
+            <h3>Experimental and still in progress</h3>
+            <ul>
+            <li>Cedar Posters and Poster Studio are experimental and still in progress. Opt in under Settings → Posters &amp; Cards → Enhanced Posters → Cedar (Experimental) → On This Device. Edit portrait and landscape designs, ratings, labels, badges, title-specific styles and progress overlays with a live preview. Studio is off by default; turn it off to restore the previous native appearance.</li>
+            <li>AI Search is experimental: describe a movie or show using your own Gemini API key. Requests use your Google quota or billing plan, and results may need refinement.</li>
+            <li>TOP Posters, SubDL, SubSource, a configured Wyzie backend and PublicMetaDB activity/skip-marker integrations are optional and still being refined. Availability depends on your connections, provider coverage and plan.</li>
+            <li>Home DVR, Play on TV, Sports Bar, My Channels, Quick Actions and post-play/skip/content-warning options remain in progress. Provider coverage and behavior vary by title, device and network.</li>
+            </ul>
+            <h3>Known issues</h3>
+            <ul>
+            <li>DVR: pausing or deleting a recurring rule may leave already scheduled recordings in place. Check and remove unwanted individual schedules as well. If a DVR save fails, check the schedule again before relying on it.</li>
+            <li>Artwork may occasionally remain blank after quickly leaving and returning to a card. Reopen the view to retry.</li>
+            <li>Some newer controls and help text still fall back to English. Additional translation and device testing remain in progress.</li>
+            </ul>
+            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
+          </div>
+        </article>
         <article class="release-entry" id="version-1-0-0-build-49">
           <header>
             <p class="eyebrow">Mac</p>

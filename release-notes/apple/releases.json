@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "53",
+      "date": "2026-09-29",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Source limits and episode matching, Live TV and connected-library updates. Experimental Poster Studio, AI Search and optional integrations; known limitations remain.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-53.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "53",
+      "date": "2026-09-29",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Source limits and episode matching, Live TV and connected-library updates. Experimental Poster Studio, AI Search and optional integrations; known limitations remain.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-53.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "53",
+      "date": "2026-09-29",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Source limits and episode matching, Live TV and connected-library updates. Experimental Poster Studio, AI Search and optional integrations; known limitations remain.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-53.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "53",
+      "date": "2026-09-29",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Source limits and episode matching, Live TV and connected-library updates. Experimental Poster Studio, AI Search and optional integrations; known limitations remain.",
+      "notes": "release-notes/apple/mac/1.0.0-build-53.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "49",
       "date": "2026-09-25",
       "status": "testflight",
