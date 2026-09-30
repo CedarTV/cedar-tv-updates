@@ -22,7 +22,9 @@ test("privacy policy identifies collection, use, retention, deletion, and contac
   for (const phrase of [
     "Data on your device",
     "Services you connect",
-    "App Store privacy disclosures",
+    "YouTube trailers",
+    "Optional AI search",
+    "Payments",
     "Cedar Link retention and deletion",
     "Your choices and contact",
   ]) {
