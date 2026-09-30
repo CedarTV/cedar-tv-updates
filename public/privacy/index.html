@@ -71,11 +71,12 @@
           </section>
           <section>
             <h2>YouTube trailers</h2>
-            <p>Trailers play only after you choose one. On iPhone, iPad, and Mac, Cedar loads an embedded YouTube player; on Apple TV, it opens YouTube externally. The embedded player connects directly to Google/YouTube, may use cookies and collect device, network, and viewing information, and may show advertising under Google&#x27;s policies. <a href="https://policies.google.com/privacy">Google privacy policy</a>.</p>
+            <p>These consent controls are being prepared for the App Store release; earlier TestFlight builds may not include them yet.</p>
+            <p>On iPhone, iPad, and Mac, selected trailers use YouTube’s embedded player. Google receives identifiers, IP-derived approximate location, viewing and advertising interactions, and technical usage data for playback, personalization, analytics, and advertising. The App Store launch implementation asks before loading each session, uses temporary web storage, and disables autoplay. iPhone and iPad also require Apple tracking permission; if declined, the user can open YouTube externally. Embedded YouTube is unavailable in Kids profiles. Closing the player ends the local session but does not delete information already held by Google. Apple TV opens YouTube externally. Using the player is subject to YouTube’s terms: <a href="https://www.youtube.com/t/terms">https://www.youtube.com/t/terms</a> and Google’s privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
           </section>
           <section>
             <h2>Optional AI search</h2>
-            <p>If you enable AI search with your own Google Gemini API key, Cedar sends the search text you submit directly to Google to generate recommendations. The key is stored in Keychain and is sent to Google to authenticate requests. Cedar does not append provider credentials or your viewing history to the search prompt. Google&#x27;s retention and use of prompts and responses depend on your API service plan and region; unpaid services may use them to improve Google products. Do not include sensitive information in prompts. <a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>.</p>
+            <p>AI Search uses your own Gemini API key. Google receives the key, your network information, and descriptions you submit; Cedar does not append media-source credentials or viewing history. Google currently retains prompts and responses for 55 days for abuse monitoring. Unpaid requests may receive human review and support product or model improvement. Paid service data terms differ. Do not enter sensitive information. The App Store launch implementation requires a device-local privacy choice for each profile before validation or search, an adult acknowledgement, and confirmation of Google’s regional and billing requirements. Kids profiles cannot use AI Search. Turn off data sharing and save in Gemini settings, or remove the connection, to stop future requests. These acknowledgements do not verify age, location, or billing. Gemini terms: <a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a> ; retention: <a href="https://ai.google.dev/gemini-api/docs/usage-policies">https://ai.google.dev/gemini-api/docs/usage-policies</a> ; supported regions: <a href="https://ai.google.dev/gemini-api/docs/available-regions">https://ai.google.dev/gemini-api/docs/available-regions</a></p>
           </section>
           <section>
             <h2>Payments</h2>
@@ -83,11 +84,11 @@
           </section>
           <section>
             <h2>Diagnostics</h2>
-            <p>Cedar does not automatically send diagnostics to a Cedar server. Optional reports are redacted, remain on the device, and leave it only when you explicitly export and share one. Apple may process App Store and device diagnostics according to your Apple privacy settings and Apple’s policies.</p>
+            <p>Cedar does not automatically upload native app diagnostics to a Cedar server. Optional local reports leave the device only when you export and share them. Google services can retain performance and technical diagnostic information associated with their requests for operation, security, and analytics. Apple diagnostics follow your Apple settings and policies.</p>
           </section>
           <section>
             <h2>Tracking and advertising</h2>
-            <p>Cedar operates no advertising network or developer analytics service and does not sell personal information or provide it to data brokers. Third-party services have their own data practices. In particular, the embedded YouTube player may use cookies, personalize content, and show advertising under Google&#x27;s policies.</p>
+            <p>Cedar operates no advertising network and does not sell personal information. The embedded YouTube service can use identifiers, approximate location, and video or advertising interactions across apps and websites for advertising and measurement. Cedar therefore discloses third-party tracking. The App Store launch version loads the player only after session consent and, on iPhone and iPad, Apple tracking authorization. Gemini search text is disclosed for functionality, analytics, and other purposes such as unpaid model development, not as advertising data.</p>
           </section>
           <section>
             <h2>Permissions</h2>
@@ -102,7 +103,7 @@
             <p>Cedar is not directed to children under 13. The media visible in Cedar is determined by sources the user configures. Cedar provides no movies, shows, channels, playlists, add-ons, media-provider subscriptions, or provider credentials.</p>
           </section>
           <section>
-            <h2>Your choices and contact</h2>
+            <h2 id="privacy-choices">Your choices and contact</h2>
             <p>You can disconnect services, remove sources and profiles, disable optional sync features, revoke linked devices, export or delete local data, or delete the app. Cedar operates no user-account database, so there is no Cedar account to export or delete. Use the public support page for privacy questions and contact options.</p>
             <a class="inline-document-link" href="/cedar-tv-updates/support/">Contact Cedar support</a>
           </section>
