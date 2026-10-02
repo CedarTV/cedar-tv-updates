@@ -306,7 +306,7 @@ for (const release of androidPreviews) {
 const previewSection = previewEntries.length ? `
         <section id="android-preview" aria-labelledby="preview-heading">
           <h2 id="preview-heading">Cedar Preview for Android TV</h2>
-          <p>Public previews install alongside the original Cedar app. Existing Cedar Preview users can update from Settings → About Cedar → Software Update. The original Cedar stable release remains available below.</p>
+          <p>Public previews install alongside the original Cedar app. Existing Cedar Preview users can update from Settings → Software Update. The original Cedar stable release remains available below.</p>
           ${previewEntries.join("\n")}
         </section>` : "";
 const androidHistory = [];

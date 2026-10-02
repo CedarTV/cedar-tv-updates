@@ -5,13 +5,13 @@
       "id": "android-tv-preview",
       "platform": "android-tv",
       "name": "Cedar Preview for Android TV",
-      "version": "1.3.0-preview.5",
-      "build": "5",
-      "date": "2026-09-28",
+      "version": "1.3.0-preview.6",
+      "build": "6",
+      "date": "2026-10-02",
       "status": "preview",
-      "summary": "Redesigned Home heroes and detail screens, expanded media-server controls, and more Home, Leaves, source and subtitle options.",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-preview-5-build-5",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.5/Cedar-Preview-1.3.0-preview.5.apk"
+      "summary": "WeTrakr, PunchPlay and anime tracking, refreshed player and settings, teletext subtitles, Seerr account sign-in, and channel lineup creation and ordering.",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-preview-6-build-6",
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.6/Cedar-Preview-1.3.0-preview.6.apk"
     }
   ],
   "platforms": [

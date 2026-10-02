@@ -2792,6 +2792,21 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Android TV, Google TV and Fire TV
 
+### 1.3.0-preview.6 · build 6 · 2026-10-02 · public preview
+
+October 2, 2026 · Public Preview for Android TV and Google TV.
+
+- Connect WeTrakr and PunchPlay with device-code sign-in and optional playback updates.
+- Connect MyAnimeList and AniList to manage anime lists, scores and statuses, and track progress using confirmed title and episode matches.
+- Updated player controls, subtitle and audio menus, chapter and episode navigation, episode stream selection and watch-prefix actions, settings pages, Home layouts, artwork customization, and profile setup bring the Android TV interface closer to Cedar on Apple TV.
+- Added teletext subtitles for transport streams and HLS, including automatic or manual page selection, plus more precise episode matching in subtitle archives.
+- Sign in to Seerr with a Seerr, Jellyfin, Emby or Plex account, or an API key.
+- Add channels directly to named lineups, group backup feeds, and reorder lineups and channels.
+
+Update from Settings → Software Update in Cedar Preview, or install the APK over the existing Preview app. The legacy Cedar Android app uses a separate package and does not receive this Preview update.
+
+[Install Cedar Preview](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.6/Cedar-Preview-1.3.0-preview.6.apk) · [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/android-tv/) · [Teletext decoder source](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.6/Cedar-Teletext-Source-1.3.0-preview.6.tar.gz)
+
 ### 1.3.0-preview.5 · build 5 · 2026-09-28 · public preview
 
 September 28, 2026 · Released as a public preview for Android TV.
