@@ -27,7 +27,9 @@ test("Apple release catalog covers every product with versioned source notes", a
     identities.add(`${release.platform}:${release.version}:${release.build}`);
 
     const markdown = await readFile(release.notes, "utf8");
-    assert.ok(markdown.startsWith(`# ${platformNames.get(release.platform)} ${release.version}\n`));
+    const platformName = platformNames.get(release.platform);
+    assert.ok(markdown.startsWith(`# ${platformName} ${release.version}\n`)
+      || markdown.startsWith(`# ${platformName.replace("Cedar for ", "Cedar ")} ${release.version} · build ${release.build}\n`));
     assert.doesNotMatch(markdown, /<(?:script|iframe|form)\b/i);
   }
 });
@@ -43,7 +45,11 @@ test("generated Apple changelogs are static, canonical, and machine readable", a
   assert.deepEqual(publicCatalog.platforms.map((platform) => platform.id), platformIDs);
   const sourceCatalog = JSON.parse(await readFile("release-notes/apple/releases.json", "utf8"));
   assert.equal(publicCatalog.releases.length, sourceCatalog.releases.length);
-  for (const release of publicCatalog.releases) assert.ok(release.notesMarkdown.startsWith("# Cedar for "));
+  for (const release of publicCatalog.releases) {
+    const platformName = platformNames.get(release.platform);
+    assert.ok(release.notesMarkdown.startsWith(`# ${platformName} ${release.version}\n`)
+      || release.notesMarkdown.startsWith(`# ${platformName.replace("Cedar for ", "Cedar ")} ${release.version} · build ${release.build}\n`));
+  }
 
   for (const platform of platformIDs) {
     const path = `public/apple/releases/${platform}/index.html`;

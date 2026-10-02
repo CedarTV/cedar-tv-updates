@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "60",
+      "date": "2026-10-02",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Richer channel programme details, stable portrait artwork, branded folders, playback/subtitle improvements and platform refinements. Some account integrations and playback extras remain in progress.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-60.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "60",
+      "date": "2026-10-02",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Richer channel programme details, stable portrait artwork, branded folders, playback/subtitle improvements and platform refinements. Some account integrations and playback extras remain in progress.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-60.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "60",
+      "date": "2026-10-02",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Richer channel programme details, stable portrait artwork, branded folders, playback/subtitle improvements and platform refinements. Some account integrations and playback extras remain in progress.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-60.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "60",
+      "date": "2026-10-02",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. Richer channel programme details, stable portrait artwork, branded folders, playback/subtitle improvements and platform refinements. Some account integrations and playback extras remain in progress.",
+      "notes": "release-notes/apple/mac/1.0.0-build-60.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "53",
       "date": "2026-09-29",
       "status": "testflight",

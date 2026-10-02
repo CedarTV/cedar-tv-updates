@@ -251,7 +251,7 @@ function renderPlatformPage(platform, releases) {
     .map((release) => `        <article class="release-entry" id="${releaseAnchor(release)}">
           <header>
             <p class="eyebrow">${escapeHTML(platform.shortName)}</p>
-            <h2>Version ${escapeHTML(release.version)}</h2>
+            <h2>${escapeHTML(release.notesMarkdown.startsWith(`# ${platform.name} `) ? `Version ${release.version}` : `Cedar ${platform.shortName} ${release.version} · build ${release.build}`)}</h2>
             <p class="release-summary">${escapeHTML(release.summary)}</p>
             ${releaseMetadata(release)}
           </header>
@@ -319,7 +319,10 @@ for (const [index, source] of sourceCatalog.releases.entries()) {
   }
   seen.add(identity);
   const markdown = await readFile(resolve(repositoryRoot, source.notes), "utf8");
-  const expectedTitle = `${platform.name} ${version}`;
+  const legacyTitle = `${platform.name} ${version}`;
+  const expectedTitle = markdown.startsWith(`# ${legacyTitle}\n`)
+    ? legacyTitle
+    : `Cedar ${platform.shortName} ${version} · build ${build}`;
   releases.push({
     platform: platform.id,
     version,

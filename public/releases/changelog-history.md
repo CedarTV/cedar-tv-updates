@@ -8,6 +8,36 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 60 · 2026-10-02
+
+October 2, 2026 · Released to External TestFlight.
+
+#### Highlights
+
+- Channel details use a softer white selection highlight, richer expanded programme information, and consistent artwork frames. Portrait posters stay fully visible against a blurred backdrop; credits, ratings, duration and episode details appear when supplied by the guide.
+- Branch folders carry their logo and brand colours into the folder and its full-list pages, with clearer bundled logos and support for custom artwork.
+- Playback and subtitle updates improve authored ASS styling, multilingual text, seeking, audio-track switching, and DVB/teletext subtitles.
+- Live TV lineups can be created from a channel or programme and reordered alongside their channels. Settings and catalogue browsing include additional search and filtering refinements.
+- Connected accounts gain Seerr sign-in options and additional anime tracking destinations. Subtitle archive matching and soundtrack discovery handle more naming variations and repeated results.
+
+#### Platform changes
+
+- More compact playback controls and hold-to-2× playback return to your selected speed when released.
+- Home and detail pages retain their artwork atmosphere while scrolling. Expanded synopses open in a separate reader.
+- Play on TV handoff, PiP/AirPlay subtitle handling, and Watching Now progress updates have been refined.
+
+#### Experimental and still in progress
+
+- Anime account connections and newer Seerr sign-in methods are still being qualified against live accounts; provider coverage and account requirements vary. WeTrakr registration remains pending.
+- Cedar Posters/Poster Studio, AI Search, Home DVR, Play on TV, Sports Bar and newer playback extras remain experimental or in progress.
+
+#### Known issues
+
+- Some newer controls and help text still fall back to English.
+- DVR rule changes can leave previously scheduled recordings in place. Check and remove unwanted individual schedules.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 53 · 2026-09-29
 
 Build 53 · September 29, 2026 · Released to External TestFlight.
@@ -754,6 +784,36 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 60 · 2026-10-02
+
+October 2, 2026 · Released to External TestFlight.
+
+#### Highlights
+
+- Channel details use a softer white selection highlight, richer expanded programme information, and consistent artwork frames. Portrait posters stay fully visible against a blurred backdrop; credits, ratings, duration and episode details appear when supplied by the guide.
+- Branch folders carry their logo and brand colours into the folder and its full-list pages, with clearer bundled logos and support for custom artwork.
+- Playback and subtitle updates improve authored ASS styling, multilingual text, seeking, audio-track switching, and DVB/teletext subtitles.
+- Live TV lineups can be created from a channel or programme and reordered alongside their channels. Settings and catalogue browsing include additional search and filtering refinements.
+- Connected accounts gain Seerr sign-in options and additional anime tracking destinations. Subtitle archive matching and soundtrack discovery handle more naming variations and repeated results.
+
+#### Platform changes
+
+- More compact playback controls and hold-to-2× playback return to your selected speed when released.
+- Home and detail pages retain their artwork atmosphere while scrolling. Expanded synopses open in a separate reader, and channel programme details adapt to available width.
+- Play on TV handoff, PiP/AirPlay subtitle handling, and Watching Now progress updates have been refined.
+
+#### Experimental and still in progress
+
+- Anime account connections and newer Seerr sign-in methods are still being qualified against live accounts; provider coverage and account requirements vary. WeTrakr registration remains pending.
+- Cedar Posters/Poster Studio, AI Search, Home DVR, Play on TV, Sports Bar and newer playback extras remain experimental or in progress.
+
+#### Known issues
+
+- Some newer controls and help text still fall back to English.
+- DVR rule changes can leave previously scheduled recordings in place. Check and remove unwanted individual schedules.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 53 · 2026-09-29
 
 Build 53 · September 29, 2026 · Released to External TestFlight.
@@ -1499,6 +1559,36 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 60 · 2026-10-02
+
+October 2, 2026 · Released to External TestFlight.
+
+#### Highlights
+
+- Channel details use a softer white selection highlight, richer expanded programme information, and consistent artwork frames. Portrait posters stay fully visible against a blurred backdrop; credits, ratings, duration and episode details appear when supplied by the guide.
+- Branch folders carry their logo and brand colours into the folder and its full-list pages, with clearer bundled logos and support for custom artwork.
+- Playback and subtitle updates improve authored ASS styling, multilingual text, seeking, audio-track switching, and DVB/teletext subtitles.
+- Live TV lineups can be created from a channel or programme and reordered alongside their channels. Settings and catalogue browsing include additional search and filtering refinements.
+- Connected accounts gain Seerr sign-in options and additional anime tracking destinations. Subtitle archive matching and soundtrack discovery handle more naming variations and repeated results.
+
+#### Platform changes
+
+- Search within Settings to find controls more quickly.
+- Returning from distant View All pages restores Home branch navigation more reliably.
+- Guide programme details use a white focus treatment, show additional metadata, and keep artwork at a consistent size. Phone-to-TV handoff and playback recovery have also been refined.
+
+#### Experimental and still in progress
+
+- Anime account connections and newer Seerr sign-in methods are still being qualified against live accounts; provider coverage and account requirements vary. WeTrakr registration remains pending.
+- Cedar Posters/Poster Studio, AI Search, Home DVR, Play on TV, Sports Bar and newer playback extras remain experimental or in progress.
+
+#### Known issues
+
+- Some newer controls and help text still fall back to English.
+- DVR rule changes can leave previously scheduled recordings in place. Check and remove unwanted individual schedules.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 53 · 2026-09-29
 
 Build 53 · September 29, 2026 · Released to External TestFlight.
@@ -2148,6 +2238,36 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 60 · 2026-10-02
+
+October 2, 2026 · Released to External TestFlight.
+
+#### Highlights
+
+- Channel details use a softer white selection highlight, richer expanded programme information, and consistent artwork frames. Portrait posters stay fully visible against a blurred backdrop; credits, ratings, duration and episode details appear when supplied by the guide.
+- Branch folders carry their logo and brand colours into the folder and its full-list pages, with clearer bundled logos and support for custom artwork.
+- Playback and subtitle updates improve authored ASS styling, multilingual text, seeking, audio-track switching, and DVB/teletext subtitles.
+- Live TV lineups can be created from a channel or programme and reordered alongside their channels. Settings and catalogue browsing include additional search and filtering refinements.
+- Connected accounts gain Seerr sign-in options and additional anime tracking destinations. Subtitle archive matching and soundtrack discovery handle more naming variations and repeated results.
+
+#### Platform changes
+
+- Channel programme information adapts to the window width, with fixed artwork sizing and readable credits.
+- Branch folder branding and playback/subtitle improvements are included in the native Mac app.
+- Watching Now progress handles late duration updates and account changes more reliably.
+
+#### Experimental and still in progress
+
+- Anime account connections and newer Seerr sign-in methods are still being qualified against live accounts; provider coverage and account requirements vary. WeTrakr registration remains pending.
+- Cedar Posters/Poster Studio, AI Search, Home DVR, Play on TV, Sports Bar and newer playback extras remain experimental or in progress.
+
+#### Known issues
+
+- Some newer controls and help text still fall back to English.
+- DVR rule changes can leave previously scheduled recordings in place. Check and remove unwanted individual schedules.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
 
 ### 1.0.0 · build 53 · 2026-09-29
 
