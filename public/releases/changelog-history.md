@@ -2912,6 +2912,24 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Android TV, Google TV and Fire TV
 
+### 1.3.0-preview.7 · build 7 · 2026-10-03 · public preview
+
+October 3, 2026 · Public Preview for Android TV and Google TV.
+
+- Move directly from the Detailed Home hero into the first branch, including while titles are loading.
+- Keep the Live TV guide and category list steady when moving between them.
+- Open a playing Live preview with a single Back press, or expand after holding Back for two seconds without waiting for release. The video expands smoothly without reconnecting.
+- Keep player controls visible while navigating them, and simplify Slim playback controls.
+- Show artwork language labels for posters, backdrops and episode thumbnails, and restore thumbnail images in the artwork gallery.
+- Display clear titles without a gray background in Choose a Source.
+- Show View All only for branches with more than eight titles. Refine Continue Watching and Next Up with appropriate movie and episode captions and artwork.
+- Save sorting choices for each branch and profile, order watchlists by date added, and offer four branch-art themes with updated account-page presentation.
+
+Update from Settings → Software Update in Cedar Preview, or install the APK over the existing Preview app. The legacy Cedar Android app uses a separate package and does not receive this Preview update.
+
+[Install Cedar Preview](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.7/Cedar-Preview-1.3.0-preview.7.apk) · [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-preview-7-build-7) · [Teletext decoder source](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.7/Cedar-Teletext-Source-1.3.0-preview.7.tar.gz)
+
+
 ### 1.3.0-preview.6 · build 6 · 2026-10-02 · public preview
 
 October 2, 2026 · Public Preview for Android TV and Google TV.
