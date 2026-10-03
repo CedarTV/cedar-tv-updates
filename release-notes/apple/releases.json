@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "61",
+      "date": "2026-10-03",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. More reliable server setup and Home loading, artwork themes, ratings and reviews, live episode choices and platform refinements.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-61.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "61",
+      "date": "2026-10-03",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. More reliable server setup and Home loading, artwork themes, ratings and reviews, live episode choices and platform refinements.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-61.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "61",
+      "date": "2026-10-03",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. More reliable server setup and Home loading, artwork themes, ratings and reviews, live episode choices and platform refinements.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-61.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "61",
+      "date": "2026-10-03",
+      "status": "testflight",
+      "summary": "Released to External TestFlight. More reliable server setup and Home loading, artwork themes, ratings and reviews, live episode choices and platform refinements.",
+      "notes": "release-notes/apple/mac/1.0.0-build-61.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "60",
       "date": "2026-10-02",
       "status": "testflight",

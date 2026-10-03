@@ -8,6 +8,33 @@ Compiled September 17, 2026. Historical entries preserve release scope and avail
 
 ## iPhone
 
+### 1.0.0 · build 61 · 2026-10-03
+
+October 3, 2026 · Released to External TestFlight.
+
+#### Highlights
+
+- Emby, Jellyfin and Plex setup now separates connection testing from saving and library loading, with a cancellable connection check, a 20-second deadline and clearer failure messages.
+- Home restores cached account content more reliably and reduces repeated work when preparing Continue Watching, Next Up and Favorites. Detail pages can show their controls while optional artwork finishes loading.
+- Ratings and reviews have a consistent layout, rating distribution when available, and native rating and review controls.
+- Choose Cotton Candy, Paper Worlds, Vintage Cinema or Pixel Arcade artwork for Branch Groups and Browse Genres.
+- Episode cards can identify a matching live broadcast and offer its channel above on-demand sources when the connected guide supplies clear episode information.
+- Expanded episode menus include season download selection and confirmed watched/unwatched episode ranges. WebDAV library indexing and metadata handling have also been refined.
+- Weekly timed recording rules are available in Home DVR. Playback and subtitle updates improve text shaping, line breaking and audio/stream handling.
+
+#### Platform changes
+
+- Improved Home and detail loading, with fewer unnecessary account refreshes.
+- Touch-friendly rating controls and native episode/download review sheets.
+
+#### Known issues
+
+- Some newer controls and help text still fall back to English.
+- Home DVR, Play on TV, Sports Bar, Cedar Posters/Poster Studio, AI Search and newer account integrations remain experimental or in progress.
+- Remote server connections still require a reachable server address. Router forwarding, NAT loopback and server/network configuration are not changed by this update.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 60 · 2026-10-02
 
 October 2, 2026 · Released to External TestFlight.
@@ -784,6 +811,33 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 61 · 2026-10-03
+
+October 3, 2026 · Released to External TestFlight.
+
+#### Highlights
+
+- Emby, Jellyfin and Plex setup now separates connection testing from saving and library loading, with a cancellable connection check, a 20-second deadline and clearer failure messages.
+- Home restores cached account content more reliably and reduces repeated work when preparing Continue Watching, Next Up and Favorites. Detail pages can show their controls while optional artwork finishes loading.
+- Ratings and reviews have a consistent layout, rating distribution when available, and native rating and review controls.
+- Choose Cotton Candy, Paper Worlds, Vintage Cinema or Pixel Arcade artwork for Branch Groups and Browse Genres.
+- Episode cards can identify a matching live broadcast and offer its channel above on-demand sources when the connected guide supplies clear episode information.
+- Expanded episode menus include season download selection and confirmed watched/unwatched episode ranges. WebDAV library indexing and metadata handling have also been refined.
+- Weekly timed recording rules are available in Home DVR. Playback and subtitle updates improve text shaping, line breaking and audio/stream handling.
+
+#### Platform changes
+
+- Improved Home and detail loading, with fewer unnecessary account refreshes.
+- Ratings and reviews adapt to wider layouts, alongside native episode/download review sheets.
+
+#### Known issues
+
+- Some newer controls and help text still fall back to English.
+- Home DVR, Play on TV, Sports Bar, Cedar Posters/Poster Studio, AI Search and newer account integrations remain experimental or in progress.
+- Remote server connections still require a reachable server address. Router forwarding, NAT loopback and server/network configuration are not changed by this update.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 60 · 2026-10-02
 
 October 2, 2026 · Released to External TestFlight.
@@ -1559,6 +1613,34 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 61 · 2026-10-03
+
+October 3, 2026 · Released to External TestFlight.
+
+#### Highlights
+
+- Emby, Jellyfin and Plex setup now separates connection testing from saving and library loading, with a cancellable connection check, a 20-second deadline and clearer failure messages.
+- Home restores cached account content more reliably and reduces repeated work when preparing Continue Watching, Next Up and Favorites. Detail pages can show their controls while optional artwork finishes loading.
+- Ratings and reviews have a consistent layout, rating distribution when available, and native rating and review controls.
+- Choose Cotton Candy, Paper Worlds, Vintage Cinema or Pixel Arcade artwork for Branch Groups and Browse Genres.
+- Episode cards can identify a matching live broadcast and offer its channel above on-demand sources when the connected guide supplies clear episode information.
+- Expanded episode menus include season download selection and confirmed watched/unwatched episode ranges. WebDAV library indexing and metadata handling have also been refined.
+- Weekly timed recording rules are available in Home DVR. Playback and subtitle updates improve text shaping, line breaking and audio/stream handling.
+
+#### Platform changes
+
+- Settings text and password fields now span the settings column with labels above them, making Emby credentials and other inputs easier to reach with the remote.
+- Consistent field handling covers profiles, PINs, account settings, server details and other settings editors.
+- Home preserves valid cached rows during startup and reduces repeated account and metadata work. Ratings and review controls support remote focus and returning from full-screen readers.
+
+#### Known issues
+
+- Some newer controls and help text still fall back to English.
+- Home DVR, Play on TV, Sports Bar, Cedar Posters/Poster Studio, AI Search and newer account integrations remain experimental or in progress.
+- Remote server connections still require a reachable server address. Router forwarding, NAT loopback and server/network configuration are not changed by this update.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+
 ### 1.0.0 · build 60 · 2026-10-02
 
 October 2, 2026 · Released to External TestFlight.
@@ -2238,6 +2320,34 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 61 · 2026-10-03
+
+October 3, 2026 · Released to External TestFlight.
+
+#### Highlights
+
+- Emby, Jellyfin and Plex setup now separates connection testing from saving and library loading, with a cancellable connection check, a 20-second deadline and clearer failure messages.
+- Home restores cached account content more reliably and reduces repeated work when preparing Continue Watching, Next Up and Favorites. Detail pages can show their controls while optional artwork finishes loading.
+- Ratings and reviews have a consistent layout, rating distribution when available, and native rating and review controls.
+- Choose Cotton Candy, Paper Worlds, Vintage Cinema or Pixel Arcade artwork for Branch Groups and Browse Genres.
+- Episode cards can identify a matching live broadcast and offer its channel above on-demand sources when the connected guide supplies clear episode information.
+- Expanded episode menus include season download selection and confirmed watched/unwatched episode ranges. WebDAV library indexing and metadata handling have also been refined.
+- Weekly timed recording rules are available in Home DVR. Playback and subtitle updates improve text shaping, line breaking and audio/stream handling.
+
+#### Platform changes
+
+- Media cards and interactive guide buttons gain native pointer highlighting with accessibility-aware motion.
+- Ratings and reviews adapt to the window width and support keyboard dismissal.
+- Shared connection, loading, library and playback fixes are included in the native Apple-silicon Mac app.
+
+#### Known issues
+
+- Some newer controls and help text still fall back to English.
+- Home DVR, Play on TV, Sports Bar, Cedar Posters/Poster Studio, AI Search and newer account integrations remain experimental or in progress.
+- Remote server connections still require a reachable server address. Router forwarding, NAT loopback and server/network configuration are not changed by this update.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
 
 ### 1.0.0 · build 60 · 2026-10-02
 
