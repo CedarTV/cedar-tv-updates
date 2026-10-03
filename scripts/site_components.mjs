@@ -18,6 +18,7 @@ export function renderSiteFooter() {
             <ul>
               <li><a href="${projectBasePath}/">Android TV</a></li>
               <li><a href="${projectBasePath}/apple/">Apple apps</a></li>
+              <li><a href="${projectBasePath}/radio/">Cedar Radio</a></li>
               <li><a href="${projectBasePath}/link/">Cedar Link</a></li>
               <li><a href="${projectBasePath}/releases/">Release notes</a></li>
             </ul>

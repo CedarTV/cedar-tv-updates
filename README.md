@@ -49,6 +49,10 @@ build is available to testers, and `released` only after App Store availability 
 the public notes and App Store “What’s New” text aligned, but do not attach Apple binaries to this
 repository; App Store and TestFlight remain the binary distribution channels.
 
+## Cedar Radio
+
+`public/radio/` contains the separate Cedar Radio product, support, and privacy pages. Its Radio Browser, music catalog, and lyrics integrations differ from the Cedar media player. App Store Connect uses `/radio/support/` and `/radio/privacy/` for `com.cedarplayer.app`.
+
 ## Cedar Link and encrypted sync relay
 
 `public/link/` contains the static, phone-friendly Cedar Link surface. It is safe-by-default,
