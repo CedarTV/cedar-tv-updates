@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "62",
+      "date": "2026-10-03",
+      "status": "testflight",
+      "summary": "External TestFlight. Named Live TV lineups, linked-account Seerr sign-in, anime subtitle matching, soundtrack episode counts and improved add-on episode matching.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-62.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "62",
+      "date": "2026-10-03",
+      "status": "testflight",
+      "summary": "External TestFlight. Named Live TV lineups, linked-account Seerr sign-in, anime subtitle matching, soundtrack episode counts and improved add-on episode matching.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-62.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "62",
+      "date": "2026-10-03",
+      "status": "testflight",
+      "summary": "External TestFlight. Search Settings by control name, manage lineups from channel menus or programme long-press, and use improved Seerr, subtitle, soundtrack and episode matching.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-62.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "62",
+      "date": "2026-10-03",
+      "status": "testflight",
+      "summary": "External TestFlight. Manage named Live TV lineups with keyboard and pointer, with improved Seerr sign-in, subtitle archive matching, soundtrack counts and add-on episode matching.",
+      "notes": "release-notes/apple/mac/1.0.0-build-62.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "61",
       "date": "2026-10-03",
       "status": "testflight",

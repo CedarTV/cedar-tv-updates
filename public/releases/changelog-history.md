@@ -1,12 +1,33 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled September 17, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled October 4, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 62 · 2026-10-03
+
+October 3, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Sign in to Seerr with a linked Jellyfin, Emby or Plex account. Sessions renew automatically, and API-key sign-in remains available.
+- Find anime subtitles in ZIP archives by episode filename and numbered range folders. Conflicting or ambiguous matches are skipped.
+- Soundtrack results show a song once with the count of distinct episodes where it was identified, while saved discoveries are preserved.
+- Episode matching handles split add-on catalogues and alternate season numbering while preserving successful lookups and provider filters.
+- Add channels to a Live TV lineup from channel menus, create a lineup inline, and reorder lineups or channels.
+
+#### Known issues
+
+- Live TV lineup actions require a configured guide or source; episode matching depends on provider catalogue and guide metadata.
+- Subtitle archives with conflicting or ambiguous episode names are intentionally not auto-matched.
+- Seerr account sign-in requires a reachable Seerr server and an account from a supported connected service.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-62)
 
 ### 1.0.0 · build 61 · 2026-10-03
 
@@ -811,6 +832,27 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 62 · 2026-10-03
+
+October 3, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Sign in to Seerr with a linked Jellyfin, Emby or Plex account. Sessions renew automatically, and API-key sign-in remains available.
+- Find anime subtitles in ZIP archives by episode filename and numbered range folders. Conflicting or ambiguous matches are skipped.
+- Soundtrack results show a song once with the count of distinct episodes where it was identified, while saved discoveries are preserved.
+- Episode matching handles split add-on catalogues and alternate season numbering while preserving successful lookups and provider filters.
+- Add channels to a Live TV lineup from channel menus, create a lineup inline, and reorder lineups or channels.
+
+#### Known issues
+
+- Live TV lineup actions require a configured guide or source; episode matching depends on provider catalogue and guide metadata.
+- Subtitle archives with conflicting or ambiguous episode names are intentionally not auto-matched.
+- Seerr account sign-in requires a reachable Seerr server and an account from a supported connected service.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-62)
+
 ### 1.0.0 · build 61 · 2026-10-03
 
 October 3, 2026 · Released to External TestFlight.
@@ -1613,6 +1655,28 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 62 · 2026-10-03
+
+October 3, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Sign in to Seerr with a linked Jellyfin, Emby or Plex account. Sessions renew automatically, and API-key sign-in remains available.
+- Find anime subtitles in ZIP archives by episode filename and numbered range folders. Conflicting or ambiguous matches are skipped.
+- Soundtrack results show a song once with the count of distinct episodes where it was identified, while saved discoveries are preserved.
+- Episode matching handles split add-on catalogues and alternate season numbering while preserving successful lookups and provider filters.
+- Search Settings by control name or related term and open the matching page.
+- Add a channel to a lineup from its menu or programme long-press, create a lineup while adding, and reorder lineups or channels.
+
+#### Known issues
+
+- Live TV lineup actions require a configured guide or source; episode matching depends on provider catalogue and guide metadata.
+- Subtitle archives with conflicting or ambiguous episode names are intentionally not auto-matched.
+- Seerr account sign-in requires a reachable Seerr server and an account from a supported connected service.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-62)
+
 ### 1.0.0 · build 61 · 2026-10-03
 
 October 3, 2026 · Released to External TestFlight.
@@ -2320,6 +2384,27 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 62 · 2026-10-03
+
+October 3, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Sign in to Seerr with a linked Jellyfin, Emby or Plex account. Sessions renew automatically, and API-key sign-in remains available.
+- Find anime subtitles in ZIP archives by episode filename and numbered range folders. Conflicting or ambiguous matches are skipped.
+- Soundtrack results show a song once with the count of distinct episodes where it was identified, while saved discoveries are preserved.
+- Episode matching handles split add-on catalogues and alternate season numbering while preserving successful lookups and provider filters.
+- Manage named Live TV lineups and reorder channels or lineups using keyboard and pointer input.
+
+#### Known issues
+
+- Live TV lineup actions require a configured guide or source; episode matching depends on provider catalogue and guide metadata.
+- Subtitle archives with conflicting or ambiguous episode names are intentionally not auto-matched.
+- Seerr account sign-in requires a reachable Seerr server and an account from a supported connected service.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-62)
 
 ### 1.0.0 · build 61 · 2026-10-03
 
