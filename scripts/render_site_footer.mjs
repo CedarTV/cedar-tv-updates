@@ -30,6 +30,7 @@ function renderPage(source, relativePath) {
   if (!output.includes(footerStylesheet.trim())) {
     output = output.replace("  </head>", `${footerStylesheet}\n  </head>`);
   }
+  output = output.replace(/<main(?![^>]*\sid=)([\s>])/, '<main id="main"$1');
   output = output.replace(/^[ \t]*<header class="(?:site-header[^"\n]*|policy-header|topbar|cedar-header)">[\s\S]*?<\/header>/m, renderSiteHeader());
   if (!output.includes(themeAssets.trim())) {
     output = output.replace("  </head>", `${themeAssets}\n  </head>`);

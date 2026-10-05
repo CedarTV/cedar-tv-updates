@@ -16,7 +16,7 @@ export function renderSiteFooter() {
           <section class="site-footer-group">
             <h2>Products</h2>
             <ul>
-              <li><a href="${projectBasePath}/">Android TV</a></li>
+              <li><a href="${projectBasePath}/releases/android-tv/">Android TV</a></li>
               <li><a href="${projectBasePath}/apple/">Apple apps</a></li>
               <li><a href="${projectBasePath}/radio/">Cedar Radio</a></li>
               <li><a href="${projectBasePath}/link/">Cedar Link</a></li>
@@ -57,25 +57,62 @@ export const themeAssets = `    <script src="${projectBasePath}/theme.js"></scri
 
 export function renderSiteHeader() {
   return `      <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
         <a class="cedar-brand" href="${projectBasePath}/" aria-label="Cedar home">
           <img src="${projectBasePath}/assets/cedar-app-icon.png" alt="" width="36" height="36">
           <span>Cedar</span>
         </a>
-        <nav class="cedar-nav" aria-label="Primary navigation">
-          <a href="${projectBasePath}/#platforms">Platforms</a>
-          <a href="${projectBasePath}/apple/">Apple apps</a>
-          <a href="${projectBasePath}/releases/">What’s new</a>
-          <a href="${projectBasePath}/artwork/">Artwork</a>
-          <a href="${projectBasePath}/link/">Cedar Link</a>
-          <a href="${projectBasePath}/support/">Support</a>
-          <a class="cedar-download" href="${projectBasePath}/#download">Get Cedar</a>
-        </nav>
-        <label class="cedar-theme">Theme
-          <select aria-label="Color theme" data-theme-select>
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </label>
+        <a class="cedar-download cedar-download-compact" href="${projectBasePath}/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="${projectBasePath}/#platforms">Platforms</a>
+            <a href="${projectBasePath}/apple/">Apple apps</a>
+            <a href="${projectBasePath}/releases/">What’s new</a>
+            <a href="${projectBasePath}/artwork/">Artwork</a>
+            <a href="${projectBasePath}/link/">Cedar Link</a>
+            <a href="${projectBasePath}/support/">Support</a>
+            <a class="cedar-download" href="${projectBasePath}/#download">Get Cedar</a>
+          </nav>
+          <label class="cedar-theme">Theme
+            <select aria-label="Color theme" data-theme-select>
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+        </div>
       </header>`;
+}
+
+// Converts [label](https://…) in text that has already been HTML-escaped.
+export function linkifyEscapedMarkdown(escaped) {
+  return escaped.replace(/\[([^\]\n]+)\]\((https:\/\/[^)\s]+)\)/g, '<a href="$2">$1</a>');
+}
+
+export function renderReleaseHistoryHeading(title = "Earlier releases") {
+  return `<div class="release-history-heading">
+          <h2>${title}</h2>
+          <div class="release-history-controls" hidden>
+            <button type="button" data-release-expand="open">Expand all</button>
+            <button type="button" data-release-expand="close">Collapse all</button>
+          </div>
+        </div>`;
+}
+
+// Older releases stay in the page (searchable, linkable) but collapsed behind their summary.
+export function renderCollapsedRelease({ id, eyebrow = "", heading, summary, metadata, actions = "", notes }) {
+  const indentedNotes = notes.split("\n").map((line) => `              ${line}`).join("\n");
+  return `<article class="release-entry release-entry-collapsed" id="${id}">
+          <details>
+            <summary>
+              ${eyebrow ? `<p class="eyebrow">${eyebrow}</p>\n              ` : ""}<h2>${heading}</h2>
+              <p class="release-summary">${summary}</p>
+              ${metadata}
+            </summary>${actions ? `\n            <div class="release-entry-actions">${actions}</div>` : ""}
+            <div class="release-notes-body">
+${indentedNotes}
+            </div>
+          </details>
+        </article>`;
 }

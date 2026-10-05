@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { footerStylesheet, projectBasePath, renderSiteFooter, renderSiteHeader, themeAssets } from "./site_components.mjs";
+import { footerStylesheet, linkifyEscapedMarkdown, projectBasePath, renderCollapsedRelease, renderReleaseHistoryHeading, renderSiteFooter, renderSiteHeader, themeAssets } from "./site_components.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const publicRoot = resolve(repositoryRoot, "public/releases");
@@ -126,7 +126,7 @@ function renderMarkdown(markdown, expectedTitle) {
   let paragraph = [];
   const closeParagraph = () => {
     if (paragraph.length > 0) {
-      output.push(`<p>${escapeHTML(paragraph.join(" "))}</p>`);
+      output.push(`<p>${linkifyEscapedMarkdown(escapeHTML(paragraph.join(" ")))}</p>`);
       paragraph = [];
     }
   };
@@ -148,7 +148,7 @@ function renderMarkdown(markdown, expectedTitle) {
         output.push("<ul>");
         listOpen = true;
       }
-      output.push(`<li>${escapeHTML(requireText(line.slice(2), "list item", 500))}</li>`);
+      output.push(`<li>${linkifyEscapedMarkdown(escapeHTML(requireText(line.slice(2), "list item", 500)))}</li>`);
     } else {
       closeList();
       paragraph.push(requireText(line, "paragraph line", 1_000));
@@ -258,7 +258,7 @@ const indexPage = pageShell({
   title: "Cedar release notes",
   description: "Current version, build, status, and release notes for Cedar on Android TV, iPhone, iPad, Apple TV, and Mac.",
   canonical: `${publicBaseURL}/`,
-  body: `      <main class="document-page release-page">
+  body: `      <main id="main" class="document-page release-page">
         <header class="document-header release-header">
           <p class="eyebrow">All platforms</p>
           <h1>One release view. Every Cedar platform.</h1>
@@ -288,17 +288,31 @@ const androidNotes = renderMarkdown(await readFile(androidNotesPath, "utf8"), `$
 const previewEntries = [];
 for (const release of androidPreviews) {
   const notes = renderMarkdown(await readFile(resolve(repositoryRoot, release.notes), "utf8"), `Cedar Android TV ${release.version} · build ${release.build}`);
-  previewEntries.push(`<article class="release-entry" id="version-${release.version.replaceAll(".", "-")}-build-${release.build}">
-    <header>
-      <p class="eyebrow">${release === currentPreview ? "Current preview" : "Earlier preview"}</p>
-      <h2>Cedar Android TV ${escapeHTML(release.version)} · build ${release.build}</h2>
-      <p class="release-summary">${escapeHTML(release.summary)}</p>
-      ${releaseMetadata(release)}
-      <div class="apple-actions">
+  const id = `version-${release.version.replaceAll(".", "-")}-build-${release.build}`;
+  const actions = `<div class="apple-actions">
         <a class="inline-action" href="${previewAPKURL(release)}">Download Preview ${escapeHTML(release.version)}</a>
         <a class="secondary-action" href="${previewReleaseURL(release)}">GitHub release notes</a>
         <a class="secondary-action" href="${projectBasePath}/setup/">Browser setup</a>
-      </div>
+      </div>`;
+  if (release !== currentPreview) {
+    previewEntries.push(renderCollapsedRelease({
+      id,
+      eyebrow: "Earlier preview",
+      heading: `Cedar Android TV ${escapeHTML(release.version)} · build ${release.build}`,
+      summary: escapeHTML(release.summary),
+      metadata: releaseMetadata(release),
+      actions,
+      notes,
+    }));
+    continue;
+  }
+  previewEntries.push(`<article class="release-entry" id="${id}">
+    <header>
+      <p class="eyebrow">Current preview</p>
+      <h2>Cedar Android TV ${escapeHTML(release.version)} · build ${release.build}</h2>
+      <p class="release-summary">${escapeHTML(release.summary)}</p>
+      ${releaseMetadata(release)}
+      ${actions}
     </header>
     <div class="release-notes-body">${notes}</div>
   </article>`);
@@ -307,27 +321,29 @@ const previewSection = previewEntries.length ? `
         <section id="android-preview" aria-labelledby="preview-heading">
           <h2 id="preview-heading">Cedar Preview for Android TV</h2>
           <p>Public previews install alongside the original Cedar app. Existing Cedar Preview users can update from Settings → Software Update. The original Cedar stable release remains available below.</p>
-          ${previewEntries.join("\n")}
+          ${previewEntries[0] ?? ""}${previewEntries.length > 1 ? `
+          ${renderReleaseHistoryHeading("Earlier previews")}
+          ${previewEntries.slice(1).join("\n")}` : ""}
         </section>` : "";
 const androidHistory = [];
 for (const release of [...androidCatalog.releases].sort(compareReleases)) {
   if (release.build === androidRelease.build) continue;
   if (release.notes !== `release-notes/android-tv/${release.version}.md`) fail("Historical Android notes path must match version");
   const notes = renderMarkdown(await readFile(resolve(repositoryRoot, release.notes), "utf8"), `Cedar for Android TV ${release.version}`);
-  androidHistory.push(`<article class="release-entry" id="version-${release.version.replaceAll(".", "-")}-build-${release.build}">
-    <header><h2>Version ${escapeHTML(release.version)}</h2>
-      <p class="release-summary">${escapeHTML(release.summary)}</p>
-      ${releaseMetadata(release)}
-      <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v${escapeHTML(release.version)}">Archived GitHub release</a>
-    </header>
-    <div class="release-notes-body">${notes}</div>
-  </article>`);
+  androidHistory.push(renderCollapsedRelease({
+    id: `version-${release.version.replaceAll(".", "-")}-build-${release.build}`,
+    heading: `Version ${escapeHTML(release.version)}`,
+    summary: escapeHTML(release.summary),
+    metadata: releaseMetadata(release),
+    actions: `<a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/v${escapeHTML(release.version)}">Archived GitHub release</a>`,
+    notes,
+  }));
 }
 const androidPage = pageShell({
   title: "Cedar for Android TV release notes",
   description: androidRelease.description,
   canonical: `${publicBaseURL}/android-tv/`,
-  body: `      <main class="document-page release-page">
+  body: `      <main id="main" class="document-page release-page">
         <a class="release-back" href="${projectBasePath}/releases/">All platform releases</a>
         <header class="document-header release-header">
           <p class="eyebrow">Android TV changelog</p>
@@ -351,7 +367,8 @@ ${previewSection}
 ${androidNotes.split("\n").map((line) => `            ${line}`).join("\n")}
           </div>
         </article>
-        ${androidHistory.join("\n")}
+        ${androidHistory.length ? `${renderReleaseHistoryHeading("Earlier stable releases")}
+        ${androidHistory.join("\n")}` : ""}
       </main>`,
 });
 

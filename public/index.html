@@ -32,37 +32,42 @@
   </head>
   <body>
       <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
         <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
           <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
           <span>Cedar</span>
         </a>
-        <nav class="cedar-nav" aria-label="Primary navigation">
-          <a href="/cedar-tv-updates/#platforms">Platforms</a>
-          <a href="/cedar-tv-updates/apple/">Apple apps</a>
-          <a href="/cedar-tv-updates/releases/">What’s new</a>
-          <a href="/cedar-tv-updates/artwork/">Artwork</a>
-          <a href="/cedar-tv-updates/link/">Cedar Link</a>
-          <a href="/cedar-tv-updates/support/">Support</a>
-          <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
-        </nav>
-        <label class="cedar-theme">Theme
-          <select aria-label="Color theme" data-theme-select>
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </label>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/#platforms">Platforms</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/artwork/">Artwork</a>
+            <a href="/cedar-tv-updates/link/">Cedar Link</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </nav>
+          <label class="cedar-theme">Theme
+            <select aria-label="Color theme" data-theme-select>
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+        </div>
       </header>
 
-    <main id="top">
+    <main id="main">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow"><span></span>Cedar across every screen</p>
           <h1 id="hero-title">Your media.<br><em>At home everywhere.</em></h1>
           <p class="hero-lede">One focused media experience for the television, phone, tablet, and computer you already use. Bring your authorized sources, and Cedar keeps movies, series, live TV, profiles, and playback thoughtfully connected.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#platforms">Explore platforms</a>
-            <a class="button button-secondary" href="releases/">See what’s new <span aria-hidden="true">→</span></a>
+            <a class="button button-primary" href="#download" data-get-cedar>Get Cedar</a>
+            <a class="button button-secondary" href="#platforms">Explore platforms <span aria-hidden="true">→</span></a>
           </div>
           <p class="compatibility">Android TV · Google TV · Fire TV · iPhone · iPad · Apple TV · Mac</p>
         </div>
@@ -77,10 +82,10 @@
       </section>
 
       <section class="proof-strip" aria-label="Cedar highlights">
-        <p><span aria-hidden="true">1</span>Designed for touch and remotes</p>
-        <p><span aria-hidden="true">2</span>One experience across screens</p>
-        <p><span aria-hidden="true">3</span>Movies, series and live TV</p>
-        <p><span aria-hidden="true">4</span>Private device linking</p>
+        <a href="#experience"><span aria-hidden="true">1</span>Designed for touch and remotes</a>
+        <a href="#platforms"><span aria-hidden="true">2</span>One experience across screens</a>
+        <a href="#features"><span aria-hidden="true">3</span>Movies, series and live TV</a>
+        <a href="link/"><span aria-hidden="true">4</span>Private device linking</a>
       </section>
 
       <section class="platforms section-shell" id="platforms" aria-labelledby="platforms-title">
@@ -91,55 +96,81 @@
         </div>
 
         <div class="platform-grid">
-          <a class="platform-card platform-card-primary" href="releases/android-tv/">
+          <article class="platform-card platform-card-primary">
             <span class="platform-device">Android TV · Google TV · Fire TV</span>
-            <h3>Android TV</h3>
+            <h3><a class="platform-link" href="releases/android-tv/">Android TV</a></h3>
             <p>A remote-first living-room experience with cinematic browsing, live guide navigation, and signed direct updates.</p>
             <span class="platform-release">
-              <span data-platform-status="android-tv">Released</span>
-              <span data-platform-version="android-tv">Version 1.2.75 · Build 78</span>
+              <span class="status-pill" data-status="released" data-platform-status="android-tv">Available now</span>
+              <span data-platform-version="android-tv">Version 1.2.85 · Build 88</span>
+              <span data-platform-date="android-tv">Updated <time datetime="2026-09-09">Sep 9, 2026</time></span>
             </span>
-          </a>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Release notes <span>→</span></span>
+              <a class="platform-action" href="#download">Download</a>
+            </span>
+          </article>
 
-          <a class="platform-card" href="apple/releases/apple-tv/">
+          <article class="platform-card">
             <span class="platform-device">Living room</span>
-            <h3>Apple TV</h3>
+            <h3><a class="platform-link" href="apple/releases/apple-tv/">Apple TV</a></h3>
             <p>Native focus, household profiles, a full live guide, and playback designed around the Siri Remote.</p>
             <span class="platform-release">
-              <span data-platform-status="apple-tv">Release candidate</span>
-              <span data-platform-version="apple-tv">Version 1.0.0 · Build 1</span>
+              <span class="status-pill" data-status="testflight" data-platform-status="apple-tv">Public beta</span>
+              <span data-platform-version="apple-tv">Version 1.0.0 · Build 62</span>
+              <span data-platform-date="apple-tv">Updated <time datetime="2026-10-03">Oct 3, 2026</time></span>
             </span>
-          </a>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Release notes <span>→</span></span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="apple-tv">Join the beta</a>
+            </span>
+          </article>
 
-          <a class="platform-card" href="apple/releases/iphone/">
+          <article class="platform-card">
             <span class="platform-device">In your pocket</span>
-            <h3>iPhone</h3>
+            <h3><a class="platform-link" href="apple/releases/iphone/">iPhone</a></h3>
             <p>Fast browsing, downloads, live TV, and playback that stays useful away from the biggest screen.</p>
             <span class="platform-release">
-              <span data-platform-status="iphone">Release candidate</span>
-              <span data-platform-version="iphone">Version 1.0.0 · Build 1</span>
+              <span class="status-pill" data-status="testflight" data-platform-status="iphone">Public beta</span>
+              <span data-platform-version="iphone">Version 1.0.0 · Build 62</span>
+              <span data-platform-date="iphone">Updated <time datetime="2026-10-03">Oct 3, 2026</time></span>
             </span>
-          </a>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Release notes <span>→</span></span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="iphone">Join the beta</a>
+            </span>
+          </article>
 
-          <a class="platform-card" href="apple/releases/ipad/">
+          <article class="platform-card">
             <span class="platform-device">Room to browse</span>
-            <h3>iPad</h3>
+            <h3><a class="platform-link" href="apple/releases/ipad/">iPad</a></h3>
             <p>A spacious library, touch-first discovery, downloads, and live TV in a flexible tablet layout.</p>
             <span class="platform-release">
-              <span data-platform-status="ipad">Release candidate</span>
-              <span data-platform-version="ipad">Version 1.0.0 · Build 1</span>
+              <span class="status-pill" data-status="testflight" data-platform-status="ipad">Public beta</span>
+              <span data-platform-version="ipad">Version 1.0.0 · Build 62</span>
+              <span data-platform-date="ipad">Updated <time datetime="2026-10-03">Oct 3, 2026</time></span>
             </span>
-          </a>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Release notes <span>→</span></span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="ipad">Join the beta</a>
+            </span>
+          </article>
 
-          <a class="platform-card" href="apple/releases/mac/">
+          <article class="platform-card">
             <span class="platform-device">On your desktop</span>
-            <h3>Mac</h3>
+            <h3><a class="platform-link" href="apple/releases/mac/">Mac</a></h3>
             <p>Native files, connected sources, live TV, and focused playback in a desktop experience.</p>
             <span class="platform-release">
-              <span data-platform-status="mac">Release candidate</span>
-              <span data-platform-version="mac">Version 1.0.0 · Build 1</span>
+              <span class="status-pill" data-status="testflight" data-platform-status="mac">Public beta</span>
+              <span data-platform-version="mac">Version 1.0.0 · Build 62</span>
+              <span data-platform-date="mac">Updated <time datetime="2026-10-03">Oct 3, 2026</time></span>
             </span>
-          </a>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Release notes <span>→</span></span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="mac">Join the beta</a>
+            </span>
+          </article>
+
         </div>
       </section>
 
@@ -155,7 +186,7 @@
             <img src="assets/cedar-detail.webp" alt="Cedar movie details with rich artwork, metadata, and playback actions" width="1920" height="1080" loading="lazy">
           </div>
           <div class="detail-caption">
-            <p class="caption-number">1 / Details</p>
+            <p class="caption-number">Details</p>
             <h3>Every title gets the full treatment.</h3>
             <p>Clear artwork, localized imagery, ratings, cast, seasons, episodes, and source selection—without sacrificing the backdrop that makes television feel cinematic.</p>
           </div>
@@ -227,19 +258,48 @@
           <div class="download-copy">
             <p class="eyebrow"><span></span>Platform availability</p>
             <h2 id="download-title">Choose your<br><em>Cedar experience.</em></h2>
-            <p>The signed Android TV build is available now. Follow the shared release page for current iPhone, iPad, Apple TV, and Mac build status.</p>
-            <div class="release-meta" aria-live="polite">
-              <span>Android TV <strong data-version>1.2.75</strong></span>
-              <span>Build <strong data-build>78</strong></span>
-              <span data-file-size>13.4 MB</span>
+            <p>Android TV is available now as a signed direct download. Cedar for iPhone, iPad, Apple TV, and Mac is in public beta on TestFlight.</p>
+
+            <div class="download-option">
+              <h3>Android TV · Google TV · Fire TV</h3>
+              <div class="release-meta" aria-live="polite">
+                <span><span class="status-pill" data-status="released">Available now</span></span>
+                <span>Version <strong data-version>1.2.85</strong></span>
+                <span>Build <strong data-build>88</strong></span>
+                <span data-file-size>19.9 MB</span>
+                <span data-platform-date="android-tv">Updated <time datetime="2026-09-09">Sep 9, 2026</time></span>
+              </div>
+              <div class="hero-actions">
+                <a class="button button-primary" data-download-link href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.85/Cedar-TV-1.2.85.apk">Download for Android TV</a>
+                <a class="button button-secondary" href="releases/">All platform releases <span aria-hidden="true">→</span></a>
+              </div>
+              <details class="install-help">
+                <summary>How to install on your TV</summary>
+                <ol>
+                  <li>On your TV, install the free <strong>Downloader</strong> app from the Amazon Appstore or Google Play.</li>
+                  <li>Allow Downloader to install apps. On Fire TV, open Settings › My Fire TV › Developer options › Install unknown apps. If Developer options is hidden, open About and select your device name seven times. On Google TV and Android TV, open Settings › Apps › Security &amp; restrictions › Unknown sources.</li>
+                  <li>Open Downloader, enter <code>cedartv.github.io/cedar-tv-updates</code>, and choose <strong>Download for Android TV</strong>.</li>
+                  <li>Select <strong>Install</strong>, then open Cedar. Future updates are offered inside the app.</li>
+                </ol>
+                <p>Already installed? Use <a href="setup/">Browser setup</a> to add sources and arrange Home from your phone or computer.</p>
+              </details>
             </div>
-            <div class="hero-actions">
-              <a class="button button-primary" data-download-link href="https://github.com/CedarTV/cedar-tv-updates/releases/download/v1.2.75/Cedar-TV-1.2.75.apk">Download for Android TV</a>
-              <a class="button button-secondary" href="releases/">All platform releases <span aria-hidden="true">→</span></a>
+
+            <div class="download-option">
+              <h3>iPhone · iPad · Apple TV · Mac</h3>
+              <div class="release-meta">
+                <span><span class="status-pill" data-status="testflight" data-platform-status="iphone">Public beta</span></span>
+                <span data-platform-version="iphone">Version 1.0.0 · Build 62</span>
+                <span data-platform-date="iphone">Updated <time datetime="2026-10-03">Oct 3, 2026</time></span>
+              </div>
+              <div class="hero-actions">
+                <a class="button button-secondary" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="iphone">Join the Apple beta <span aria-hidden="true">→</span></a>
+              </div>
+              <p class="download-hint">Install Apple’s free TestFlight app first, then open the link on the device you want to use.</p>
             </div>
           </div>
         </div>
-        <p class="install-note">Android TV is independently distributed and may ask you to allow installation from your browser or file manager. Apple release candidates remain clearly labeled until their matching App Store builds are available.</p>
+        <p class="install-note">Android TV is distributed directly by Cedar and verified before each update installs. Apple builds stay labeled as beta until their App Store releases are available.</p>
       </section>
     </main>
 
@@ -256,7 +316,7 @@
           <section class="site-footer-group">
             <h2>Products</h2>
             <ul>
-              <li><a href="/cedar-tv-updates/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
               <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
               <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
               <li><a href="/cedar-tv-updates/link/">Cedar Link</a></li>

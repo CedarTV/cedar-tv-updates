@@ -100,3 +100,18 @@ test("Android page and downloadable archive include every recorded release", asy
   const apple = JSON.parse(await readFile("release-notes/apple/releases.json", "utf8"));
   for (const release of apple.releases) assert.ok(archive.includes(`${release.version} · build ${release.build}`));
 });
+
+test("changelogs show the newest build and collapse earlier builds behind linkable summaries", async () => {
+  for (const path of ["public/releases/android-tv/index.html", ...["iphone", "ipad", "apple-tv", "mac"].map((id) => `public/apple/releases/${id}/index.html`)]) {
+    const page = await readFile(path, "utf8");
+    const entries = page.match(/<article class="release-entry[^"]*" id="version-[^"]+">/g) ?? [];
+    const collapsed = entries.filter((entry) => entry.includes("release-entry-collapsed"));
+    assert.ok(collapsed.length > 0, `${path} should collapse earlier releases`);
+    assert.ok(entries.length - collapsed.length >= 1, `${path} should keep the newest release open`);
+    assert.match(page, /class="release-history-controls" hidden>/);
+    assert.doesNotMatch(page, /<details open>/);
+    assert.doesNotMatch(page, /\[[^\]\n]+\]\(https:\/\//, `${path} should render Markdown links`);
+  }
+  const theme = await readFile("public/theme.js", "utf8");
+  assert.match(theme, /hashchange/);
+});

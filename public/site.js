@@ -1,4 +1,24 @@
 const allowedRepositoryPath = "/CedarTV/cedar-tv-updates/releases/download/";
+const appleBetaURL = "https://testflight.apple.com/join/4A7sZ4q2";
+
+// Best-effort guess used only to label the hero button; every visitor can still reach #download.
+const visitorDevice = (() => {
+  const agent = navigator.userAgent;
+  if (/\bAFT[A-Z]|Android TV|GoogleTV|BRAVIA|AmazonWebAppPlatform/i.test(agent)) return "android-tv";
+  if (/iPhone|iPod/.test(agent)) return "iphone";
+  if (/iPad/.test(agent) || (/Macintosh/.test(agent) && navigator.maxTouchPoints > 1)) return "ipad";
+  if (/Macintosh/.test(agent)) return "mac";
+  return null;
+})();
+
+const deviceNames = new Map([["iphone", "iPhone"], ["ipad", "iPad"], ["mac", "Mac"]]);
+
+const formatDate = (value) => {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
+  const date = new Date(`${value}T00:00:00Z`);
+  if (Number.isNaN(date.getTime())) return null;
+  return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
+};
 
 const formatBytes = (bytes) => {
   if (!Number.isFinite(bytes) || bytes <= 0) return null;
@@ -20,6 +40,12 @@ const applyRelease = (manifest) => {
     document.querySelectorAll("[data-build]").forEach((node) => { node.textContent = String(build); });
   }
   document.querySelectorAll("[data-download-link]").forEach((link) => { link.href = download.href; });
+  if (visitorDevice === "android-tv") {
+    document.querySelectorAll("[data-get-cedar]").forEach((link) => {
+      link.href = download.href;
+      link.textContent = "Download for Android TV";
+    });
+  }
   document.querySelectorAll("[data-release-link]").forEach((link) => {
     link.href = `https://github.com/CedarTV/cedar-tv-updates/releases/tag/v${encodeURIComponent(version)}`;
   });
@@ -31,9 +57,9 @@ const applyRelease = (manifest) => {
 };
 
 const statusLabels = new Map([
-  ["release-candidate", "Release candidate"],
-  ["testflight", "TestFlight"],
-  ["released", "Released"],
+  ["release-candidate", "Coming soon"],
+  ["testflight", "Public beta"],
+  ["released", "Available now"],
 ]);
 
 const applyPlatformReleases = (catalog) => {
@@ -51,8 +77,33 @@ const applyPlatformReleases = (catalog) => {
   document.querySelectorAll("[data-platform-status]").forEach((node) => {
     const release = releases.get(node.dataset.platformStatus);
     const label = release ? statusLabels.get(release.status) : null;
-    if (label) node.textContent = label;
+    if (!label) return;
+    node.textContent = label;
+    node.dataset.status = release.status;
   });
+
+  document.querySelectorAll("[data-platform-date]").forEach((node) => {
+    const release = releases.get(node.dataset.platformDate);
+    const label = release ? formatDate(release.date) : null;
+    if (!label) return;
+    const time = document.createElement("time");
+    time.dateTime = release.date;
+    time.textContent = label;
+    node.replaceChildren("Updated ", time);
+  });
+
+  document.querySelectorAll("[data-beta-link]").forEach((link) => {
+    const release = releases.get(link.dataset.betaLink);
+    if (release) link.hidden = release.status !== "testflight";
+  });
+
+  const visitorRelease = releases.get(visitorDevice);
+  if (deviceNames.has(visitorDevice) && visitorRelease?.status === "testflight") {
+    document.querySelectorAll("[data-get-cedar]").forEach((link) => {
+      link.href = appleBetaURL;
+      link.textContent = `Join the ${deviceNames.get(visitorDevice)} beta`;
+    });
+  }
 };
 
 fetch("update-v1.json", { cache: "no-store", credentials: "omit" })

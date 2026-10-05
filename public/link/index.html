@@ -19,29 +19,34 @@
   </head>
   <body class="link-page">
       <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
         <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
           <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
           <span>Cedar</span>
         </a>
-        <nav class="cedar-nav" aria-label="Primary navigation">
-          <a href="/cedar-tv-updates/#platforms">Platforms</a>
-          <a href="/cedar-tv-updates/apple/">Apple apps</a>
-          <a href="/cedar-tv-updates/releases/">What’s new</a>
-          <a href="/cedar-tv-updates/artwork/">Artwork</a>
-          <a href="/cedar-tv-updates/link/">Cedar Link</a>
-          <a href="/cedar-tv-updates/support/">Support</a>
-          <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
-        </nav>
-        <label class="cedar-theme">Theme
-          <select aria-label="Color theme" data-theme-select>
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </label>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/#platforms">Platforms</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/artwork/">Artwork</a>
+            <a href="/cedar-tv-updates/link/">Cedar Link</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </nav>
+          <label class="cedar-theme">Theme
+            <select aria-label="Color theme" data-theme-select>
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+        </div>
       </header>
 
-    <main class="link-shell">
+    <main id="main" class="link-shell">
       <section class="link-intro" aria-labelledby="link-title">
         <p class="eyebrow"><span></span>Cedar Link</p>
         <h1 id="link-title">Your Cedar.<br><em>Within reach.</em></h1>
@@ -270,7 +275,7 @@
           <section class="site-footer-group">
             <h2>Products</h2>
             <ul>
-              <li><a href="/cedar-tv-updates/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
               <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
               <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
               <li><a href="/cedar-tv-updates/link/">Cedar Link</a></li>

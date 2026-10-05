@@ -49,3 +49,19 @@ test("landing page reads current platform release data", async () => {
   assert.match(source, /data-platform-status/);
   assert.match(source, /data-build/);
 });
+
+test("landing page offers a direct path to install and clear availability", async () => {
+  const source = await readFile("public/index.html", "utf8");
+  const script = await readFile("public/site.js", "utf8");
+  assert.match(source, /class="hero-actions">\s*<a class="button button-primary" href="#download" data-get-cedar>/);
+  assert.match(source, /<details class="install-help">/);
+  for (const platform of ["android-tv", "iphone", "ipad", "apple-tv", "mac"]) {
+    assert.match(source, new RegExp(`data-platform-date="${platform}"`));
+  }
+  for (const platform of ["iphone", "ipad", "apple-tv", "mac"]) {
+    assert.match(source, new RegExp(`href="https://testflight\\.apple\\.com/join/[A-Za-z0-9]+" data-beta-link="${platform}"`));
+  }
+  assert.doesNotMatch(source, /class="caption-number">\d+ \//);
+  assert.match(script, /\["testflight", "Public beta"\]/);
+  assert.match(script, /data-platform-date/);
+});

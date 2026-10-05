@@ -19,29 +19,34 @@
   <body>
     <div class="site-frame">
       <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
         <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
           <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
           <span>Cedar</span>
         </a>
-        <nav class="cedar-nav" aria-label="Primary navigation">
-          <a href="/cedar-tv-updates/#platforms">Platforms</a>
-          <a href="/cedar-tv-updates/apple/">Apple apps</a>
-          <a href="/cedar-tv-updates/releases/">What’s new</a>
-          <a href="/cedar-tv-updates/artwork/">Artwork</a>
-          <a href="/cedar-tv-updates/link/">Cedar Link</a>
-          <a href="/cedar-tv-updates/support/">Support</a>
-          <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
-        </nav>
-        <label class="cedar-theme">Theme
-          <select aria-label="Color theme" data-theme-select>
-            <option value="system">System</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-          </select>
-        </label>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/#platforms">Platforms</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/artwork/">Artwork</a>
+            <a href="/cedar-tv-updates/link/">Cedar Link</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </nav>
+          <label class="cedar-theme">Theme
+            <select aria-label="Color theme" data-theme-select>
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+        </div>
       </header>
 
-      <main class="document-page release-page">
+      <main id="main" class="document-page release-page">
         <a class="release-back" href="/cedar-tv-updates/apple/releases/">All Apple release notes</a>
         <header class="document-header release-header">
           <p class="eyebrow">Apple TV changelog</p>
@@ -52,7 +57,7 @@
         <div class="release-stack">
         <article class="release-entry" id="version-1-0-0-build-62">
           <header>
-            <p class="eyebrow">Apple TV</p>
+            <p class="eyebrow">Latest Apple TV build</p>
             <h2>Cedar Apple TV 1.0.0 · build 62</h2>
             <p class="release-summary">External TestFlight. Search Settings by control name, manage lineups from channel menus or programme long-press, and use improved Seerr, subtitle, soundtrack and episode matching.</p>
             <div class="release-metadata">
@@ -79,1076 +84,1119 @@
             <li>Subtitle archives with conflicting or ambiguous episode names are intentionally not auto-matched.</li>
             <li>Seerr account sign-in requires a reachable Seerr server and an account from a supported connected service.</li>
             </ul>
-            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) [Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-62)</p>
+            <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a> <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-62">Matching library source and platform relinking kits</a></p>
           </div>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-61">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Cedar Apple TV 1.0.0 · build 61</h2>
-            <p class="release-summary">Released to External TestFlight. More reliable server setup and Home loading, artwork themes, ratings and reviews, live episode choices and platform refinements.</p>
-            <div class="release-metadata">
+        <div class="release-history-heading">
+          <h2>Earlier releases</h2>
+          <div class="release-history-controls" hidden>
+            <button type="button" data-release-expand="open">Expand all</button>
+            <button type="button" data-release-expand="close">Collapse all</button>
+          </div>
+        </div>
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-61">
+          <details>
+            <summary>
+              <h2>Cedar Apple TV 1.0.0 · build 61</h2>
+              <p class="release-summary">Released to External TestFlight. More reliable server setup and Home loading, artwork themes, ratings and reviews, live episode choices and platform refinements.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 61</span>
               <time datetime="2026-10-03">October 3, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>October 3, 2026 · Released to External TestFlight.</p>
-            <h3>Highlights</h3>
-            <ul>
-            <li>Emby, Jellyfin and Plex setup now separates connection testing from saving and library loading, with a cancellable connection check, a 20-second deadline and clearer failure messages.</li>
-            <li>Home restores cached account content more reliably and reduces repeated work when preparing Continue Watching, Next Up and Favorites. Detail pages can show their controls while optional artwork finishes loading.</li>
-            <li>Ratings and reviews have a consistent layout, rating distribution when available, and native rating and review controls.</li>
-            <li>Choose Cotton Candy, Paper Worlds, Vintage Cinema or Pixel Arcade artwork for Branch Groups and Browse Genres.</li>
-            <li>Episode cards can identify a matching live broadcast and offer its channel above on-demand sources when the connected guide supplies clear episode information.</li>
-            <li>Expanded episode menus include season download selection and confirmed watched/unwatched episode ranges. WebDAV library indexing and metadata handling have also been refined.</li>
-            <li>Weekly timed recording rules are available in Home DVR. Playback and subtitle updates improve text shaping, line breaking and audio/stream handling.</li>
-            </ul>
-            <h3>Platform changes</h3>
-            <ul>
-            <li>Settings text and password fields now span the settings column with labels above them, making Emby credentials and other inputs easier to reach with the remote.</li>
-            <li>Consistent field handling covers profiles, PINs, account settings, server details and other settings editors.</li>
-            <li>Home preserves valid cached rows during startup and reduces repeated account and metadata work. Ratings and review controls support remote focus and returning from full-screen readers.</li>
-            </ul>
-            <h3>Known issues</h3>
-            <ul>
-            <li>Some newer controls and help text still fall back to English.</li>
-            <li>Home DVR, Play on TV, Sports Bar, Cedar Posters/Poster Studio, AI Search and newer account integrations remain experimental or in progress.</li>
-            <li>Remote server connections still require a reachable server address. Router forwarding, NAT loopback and server/network configuration are not changed by this update.</li>
-            </ul>
-            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>October 3, 2026 · Released to External TestFlight.</p>
+              <h3>Highlights</h3>
+              <ul>
+              <li>Emby, Jellyfin and Plex setup now separates connection testing from saving and library loading, with a cancellable connection check, a 20-second deadline and clearer failure messages.</li>
+              <li>Home restores cached account content more reliably and reduces repeated work when preparing Continue Watching, Next Up and Favorites. Detail pages can show their controls while optional artwork finishes loading.</li>
+              <li>Ratings and reviews have a consistent layout, rating distribution when available, and native rating and review controls.</li>
+              <li>Choose Cotton Candy, Paper Worlds, Vintage Cinema or Pixel Arcade artwork for Branch Groups and Browse Genres.</li>
+              <li>Episode cards can identify a matching live broadcast and offer its channel above on-demand sources when the connected guide supplies clear episode information.</li>
+              <li>Expanded episode menus include season download selection and confirmed watched/unwatched episode ranges. WebDAV library indexing and metadata handling have also been refined.</li>
+              <li>Weekly timed recording rules are available in Home DVR. Playback and subtitle updates improve text shaping, line breaking and audio/stream handling.</li>
+              </ul>
+              <h3>Platform changes</h3>
+              <ul>
+              <li>Settings text and password fields now span the settings column with labels above them, making Emby credentials and other inputs easier to reach with the remote.</li>
+              <li>Consistent field handling covers profiles, PINs, account settings, server details and other settings editors.</li>
+              <li>Home preserves valid cached rows during startup and reduces repeated account and metadata work. Ratings and review controls support remote focus and returning from full-screen readers.</li>
+              </ul>
+              <h3>Known issues</h3>
+              <ul>
+              <li>Some newer controls and help text still fall back to English.</li>
+              <li>Home DVR, Play on TV, Sports Bar, Cedar Posters/Poster Studio, AI Search and newer account integrations remain experimental or in progress.</li>
+              <li>Remote server connections still require a reachable server address. Router forwarding, NAT loopback and server/network configuration are not changed by this update.</li>
+              </ul>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-60">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Cedar Apple TV 1.0.0 · build 60</h2>
-            <p class="release-summary">Released to External TestFlight. Richer channel programme details, stable portrait artwork, branded folders, playback/subtitle improvements and platform refinements. Some account integrations and playback extras remain in progress.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-60">
+          <details>
+            <summary>
+              <h2>Cedar Apple TV 1.0.0 · build 60</h2>
+              <p class="release-summary">Released to External TestFlight. Richer channel programme details, stable portrait artwork, branded folders, playback/subtitle improvements and platform refinements. Some account integrations and playback extras remain in progress.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 60</span>
               <time datetime="2026-10-02">October 2, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>October 2, 2026 · Released to External TestFlight.</p>
-            <h3>Highlights</h3>
-            <ul>
-            <li>Channel details use a softer white selection highlight, richer expanded programme information, and consistent artwork frames. Portrait posters stay fully visible against a blurred backdrop; credits, ratings, duration and episode details appear when supplied by the guide.</li>
-            <li>Branch folders carry their logo and brand colours into the folder and its full-list pages, with clearer bundled logos and support for custom artwork.</li>
-            <li>Playback and subtitle updates improve authored ASS styling, multilingual text, seeking, audio-track switching, and DVB/teletext subtitles.</li>
-            <li>Live TV lineups can be created from a channel or programme and reordered alongside their channels. Settings and catalogue browsing include additional search and filtering refinements.</li>
-            <li>Connected accounts gain Seerr sign-in options and additional anime tracking destinations. Subtitle archive matching and soundtrack discovery handle more naming variations and repeated results.</li>
-            </ul>
-            <h3>Platform changes</h3>
-            <ul>
-            <li>Search within Settings to find controls more quickly.</li>
-            <li>Returning from distant View All pages restores Home branch navigation more reliably.</li>
-            <li>Guide programme details use a white focus treatment, show additional metadata, and keep artwork at a consistent size. Phone-to-TV handoff and playback recovery have also been refined.</li>
-            </ul>
-            <h3>Experimental and still in progress</h3>
-            <ul>
-            <li>Anime account connections and newer Seerr sign-in methods are still being qualified against live accounts; provider coverage and account requirements vary. WeTrakr registration remains pending.</li>
-            <li>Cedar Posters/Poster Studio, AI Search, Home DVR, Play on TV, Sports Bar and newer playback extras remain experimental or in progress.</li>
-            </ul>
-            <h3>Known issues</h3>
-            <ul>
-            <li>Some newer controls and help text still fall back to English.</li>
-            <li>DVR rule changes can leave previously scheduled recordings in place. Check and remove unwanted individual schedules.</li>
-            </ul>
-            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>October 2, 2026 · Released to External TestFlight.</p>
+              <h3>Highlights</h3>
+              <ul>
+              <li>Channel details use a softer white selection highlight, richer expanded programme information, and consistent artwork frames. Portrait posters stay fully visible against a blurred backdrop; credits, ratings, duration and episode details appear when supplied by the guide.</li>
+              <li>Branch folders carry their logo and brand colours into the folder and its full-list pages, with clearer bundled logos and support for custom artwork.</li>
+              <li>Playback and subtitle updates improve authored ASS styling, multilingual text, seeking, audio-track switching, and DVB/teletext subtitles.</li>
+              <li>Live TV lineups can be created from a channel or programme and reordered alongside their channels. Settings and catalogue browsing include additional search and filtering refinements.</li>
+              <li>Connected accounts gain Seerr sign-in options and additional anime tracking destinations. Subtitle archive matching and soundtrack discovery handle more naming variations and repeated results.</li>
+              </ul>
+              <h3>Platform changes</h3>
+              <ul>
+              <li>Search within Settings to find controls more quickly.</li>
+              <li>Returning from distant View All pages restores Home branch navigation more reliably.</li>
+              <li>Guide programme details use a white focus treatment, show additional metadata, and keep artwork at a consistent size. Phone-to-TV handoff and playback recovery have also been refined.</li>
+              </ul>
+              <h3>Experimental and still in progress</h3>
+              <ul>
+              <li>Anime account connections and newer Seerr sign-in methods are still being qualified against live accounts; provider coverage and account requirements vary. WeTrakr registration remains pending.</li>
+              <li>Cedar Posters/Poster Studio, AI Search, Home DVR, Play on TV, Sports Bar and newer playback extras remain experimental or in progress.</li>
+              </ul>
+              <h3>Known issues</h3>
+              <ul>
+              <li>Some newer controls and help text still fall back to English.</li>
+              <li>DVR rule changes can leave previously scheduled recordings in place. Check and remove unwanted individual schedules.</li>
+              </ul>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-53">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Source limits and episode matching, Live TV and connected-library updates. Experimental Poster Studio, AI Search and optional integrations; known limitations remain.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-53">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Source limits and episode matching, Live TV and connected-library updates. Experimental Poster Studio, AI Search and optional integrations; known limitations remain.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 53</span>
               <time datetime="2026-09-29">September 29, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 53 · September 29, 2026 · Released to External TestFlight.</p>
-            <h3>Highlights</h3>
-            <ul>
-            <li>Source selection: share a total result limit across providers or set a separate limit for each source. Maximum playback quality is respected, and episode lookup has additional fallbacks for empty responses and alternate season numbering.</li>
-            <li>Home and details: improved artwork loading and detail presentation, actor and studio discovery, and an optional Scheduled Recordings shelf with programme times and recording status.</li>
-            <li>Connected libraries: Sign In Again renews Plex, Emby or Jellyfin credentials while preserving the saved server and library settings.</li>
-            <li>Live TV: separate priorities for programme guides and channel logos, optional provider-guide backfill, programme search, and improved HLS recognition and playback recovery.</li>
-            <li>Tobacco Tie metadata: improved provider ordering and fallback for title information, artwork and episodes.</li>
-            </ul>
-            <h3>Platform changes</h3>
-            <ul>
-            <li>Choose Cedar Custom or Native focus effects. Reduce Motion keeps a stationary focus treatment; the episode browser improves focus placement and return.</li>
-            <li>Optional full-screen Continue Watching in Top Shelf offers separate Play and More Info actions, with poster-row fallback when wide artwork is unavailable.</li>
-            <li>Poster Studio uses remote-friendly expandable sections and inline plus/minus adjustments.</li>
-            </ul>
-            <h3>Experimental and still in progress</h3>
-            <ul>
-            <li>Cedar Posters and Poster Studio are experimental and still in progress. Opt in under Settings → Posters &amp; Cards → Enhanced Posters → Cedar (Experimental) → On This Device. Edit portrait and landscape designs, ratings, labels, badges, title-specific styles and progress overlays with a live preview. Studio is off by default; turn it off to restore the previous native appearance.</li>
-            <li>AI Search is experimental: describe a movie or show using your own Gemini API key. Requests use your Google quota or billing plan, and results may need refinement.</li>
-            <li>TOP Posters, SubDL, SubSource, a configured Wyzie backend and PublicMetaDB activity/skip-marker integrations are optional and still being refined. Availability depends on your connections, provider coverage and plan.</li>
-            <li>Home DVR, Play on TV, Sports Bar, My Channels, Quick Actions and post-play/skip/content-warning options remain in progress. Provider coverage and behavior vary by title, device and network.</li>
-            </ul>
-            <h3>Known issues</h3>
-            <ul>
-            <li>DVR: pausing or deleting a recurring rule may leave already scheduled recordings in place. Check and remove unwanted individual schedules as well. If a DVR save fails, check the schedule again before relying on it.</li>
-            <li>Artwork may occasionally remain blank after quickly leaving and returning to a card. Reopen the view to retry.</li>
-            <li>Some newer controls and help text still fall back to English. Additional translation and device testing remain in progress.</li>
-            </ul>
-            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 53 · September 29, 2026 · Released to External TestFlight.</p>
+              <h3>Highlights</h3>
+              <ul>
+              <li>Source selection: share a total result limit across providers or set a separate limit for each source. Maximum playback quality is respected, and episode lookup has additional fallbacks for empty responses and alternate season numbering.</li>
+              <li>Home and details: improved artwork loading and detail presentation, actor and studio discovery, and an optional Scheduled Recordings shelf with programme times and recording status.</li>
+              <li>Connected libraries: Sign In Again renews Plex, Emby or Jellyfin credentials while preserving the saved server and library settings.</li>
+              <li>Live TV: separate priorities for programme guides and channel logos, optional provider-guide backfill, programme search, and improved HLS recognition and playback recovery.</li>
+              <li>Tobacco Tie metadata: improved provider ordering and fallback for title information, artwork and episodes.</li>
+              </ul>
+              <h3>Platform changes</h3>
+              <ul>
+              <li>Choose Cedar Custom or Native focus effects. Reduce Motion keeps a stationary focus treatment; the episode browser improves focus placement and return.</li>
+              <li>Optional full-screen Continue Watching in Top Shelf offers separate Play and More Info actions, with poster-row fallback when wide artwork is unavailable.</li>
+              <li>Poster Studio uses remote-friendly expandable sections and inline plus/minus adjustments.</li>
+              </ul>
+              <h3>Experimental and still in progress</h3>
+              <ul>
+              <li>Cedar Posters and Poster Studio are experimental and still in progress. Opt in under Settings → Posters &amp; Cards → Enhanced Posters → Cedar (Experimental) → On This Device. Edit portrait and landscape designs, ratings, labels, badges, title-specific styles and progress overlays with a live preview. Studio is off by default; turn it off to restore the previous native appearance.</li>
+              <li>AI Search is experimental: describe a movie or show using your own Gemini API key. Requests use your Google quota or billing plan, and results may need refinement.</li>
+              <li>TOP Posters, SubDL, SubSource, a configured Wyzie backend and PublicMetaDB activity/skip-marker integrations are optional and still being refined. Availability depends on your connections, provider coverage and plan.</li>
+              <li>Home DVR, Play on TV, Sports Bar, My Channels, Quick Actions and post-play/skip/content-warning options remain in progress. Provider coverage and behavior vary by title, device and network.</li>
+              </ul>
+              <h3>Known issues</h3>
+              <ul>
+              <li>DVR: pausing or deleting a recurring rule may leave already scheduled recordings in place. Check and remove unwanted individual schedules as well. If a DVR save fails, check the schedule again before relying on it.</li>
+              <li>Artwork may occasionally remain blank after quickly leaving and returning to a card. Reopen the view to retry.</li>
+              <li>Some newer controls and help text still fall back to English. Additional translation and device testing remain in progress.</li>
+              </ul>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-49">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Continue Watching fixes, on-demand detail sections and clearer Live setup.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-49">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Continue Watching fixes, on-demand detail sections and clearer Live setup.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 49</span>
               <time datetime="2026-09-25">September 25, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 49 · September 25, 2026 · Released to External TestFlight.</p>
-            <h3>Improvements</h3>
-            <ul>
-            <li>Marking a title as watched removes its matching Continue Watching entry and old resume progress more reliably, including after a refresh or restart. Other episodes and later rewatches keep their progress.</li>
-            <li>Cast, trailers, reviews and collection contents load as their sections come into view. Loaded sections stay available when returning from a person page.</li>
-            <li>Live setup offers clear actions to add a Live TV source or create a custom channel, while keeping existing custom channels and saved Live collections accessible.</li>
-            <li>Secondary controls over artwork and video use clear glass on supported systems, with a more opaque treatment when Reduce Transparency is enabled.</li>
-            <li>The Live guide keeps its time axis above the channel list so the first channel rows remain visible.</li>
-            </ul>
-            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 49 · September 25, 2026 · Released to External TestFlight.</p>
+              <h3>Improvements</h3>
+              <ul>
+              <li>Marking a title as watched removes its matching Continue Watching entry and old resume progress more reliably, including after a refresh or restart. Other episodes and later rewatches keep their progress.</li>
+              <li>Cast, trailers, reviews and collection contents load as their sections come into view. Loaded sections stay available when returning from a person page.</li>
+              <li>Live setup offers clear actions to add a Live TV source or create a custom channel, while keeping existing custom channels and saved Live collections accessible.</li>
+              <li>Secondary controls over artwork and video use clear glass on supported systems, with a more opaque treatment when Reduce Transparency is enabled.</li>
+              <li>The Live guide keeps its time axis above the channel list so the first channel rows remain visible.</li>
+              </ul>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-47">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Artwork language, channel pages, watch-progress fixes and more reliable ratings.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-47">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Artwork language, channel pages, watch-progress fixes and more reliable ratings.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 47</span>
               <time datetime="2026-09-24">September 24, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 47 · September 24, 2026 · Released to External TestFlight.</p>
-            <h3>Improvements</h3>
-            <ul>
-            <li>Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.</li>
-            <li>Library collection labels follow the selected interface language more consistently.</li>
-            <li>Live TV channel pages bring programme information, upcoming schedules, favourites, alternate sources, reminders, recording and supported catch-up together. Watch Live always opens the current broadcast.</li>
-            <li>Continue Watching retains progress when switching watchlist providers and handles temporary tracking connection failures more reliably.</li>
-            <li>Mark as Unwatched clears old resume progress for the selected movie, episode, season or show without clearing unrelated progress.</li>
-            <li>Cards show active rewatch progress without a conflicting completion checkmark or Caught Up label.</li>
-            <li>Hero ratings retain existing provider scores during partial metadata refreshes and can reuse recently cached scores when a refresh fails. Ratings can update after the rest of the details appear.</li>
-            <li>Home and Detail rating controls include nearby MDBList setup, simpler visibility controls and provider filters. Enabling ratings refreshes visible metadata without restarting Cedar.</li>
-            <li>Channel details open full screen with a right-hand programme guide, expandable programme information and remote-friendly focus. Watch Live opens full-screen playback; Back returns through the programme reader and guide.</li>
-            </ul>
-            <p>Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.</p>
-            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 47 · September 24, 2026 · Released to External TestFlight.</p>
+              <h3>Improvements</h3>
+              <ul>
+              <li>Choose Artwork Language independently of metadata text for posters, landscape title art and logos. Missing artwork falls back to English, then language-neutral images where available.</li>
+              <li>Library collection labels follow the selected interface language more consistently.</li>
+              <li>Live TV channel pages bring programme information, upcoming schedules, favourites, alternate sources, reminders, recording and supported catch-up together. Watch Live always opens the current broadcast.</li>
+              <li>Continue Watching retains progress when switching watchlist providers and handles temporary tracking connection failures more reliably.</li>
+              <li>Mark as Unwatched clears old resume progress for the selected movie, episode, season or show without clearing unrelated progress.</li>
+              <li>Cards show active rewatch progress without a conflicting completion checkmark or Caught Up label.</li>
+              <li>Hero ratings retain existing provider scores during partial metadata refreshes and can reuse recently cached scores when a refresh fails. Ratings can update after the rest of the details appear.</li>
+              <li>Home and Detail rating controls include nearby MDBList setup, simpler visibility controls and provider filters. Enabling ratings refreshes visible metadata without restarting Cedar.</li>
+              <li>Channel details open full screen with a right-hand programme guide, expandable programme information and remote-friendly focus. Watch Live opens full-screen playback; Back returns through the programme reader and guide.</li>
+              </ul>
+              <p>Programme actions depend on guide data and source capabilities. Artwork and ratings depend on provider coverage.</p>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-44">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-44">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Server sync and quality, DVR rewind, expanded provider features and navigation fixes.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 44</span>
               <time datetime="2026-09-24">September 24, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 44 · September 24, 2026 · Released to External TestFlight.</p>
-            <h3>Servers and tracking</h3>
-            <ul>
-            <li>Plex, Jellyfin and Emby now synchronize resume positions and watched state, including manual watched changes and offline playback. Failed updates are saved for retry, and newer local progress is protected from older server data.</li>
-            <li>Choose Original, 1080p, 720p or 480p playback quality and change quality during playback. Supported server conversions include audio and subtitle choices; availability depends on your server and account permissions.</li>
-            <li>Jellyfin/Emby connections can browse servers that require separate catalogs, find matching titles on demand and offer distinct playable versions. Version selection retains your chosen file and filters explicit title-year or episode mismatches.</li>
-            <li>Test a source with a bounded streaming speed check. Server library shelves and version handling are more consistent.</li>
-            <li>Trakt and MDBList use activity changes to avoid redundant library refreshes. MDBList removal tracking and recovery handle older saved cursors, and Up Next continues beyond its former 100-show limit.</li>
-            <li>Simkl adds OAuth V2 QR/device sign-in for new connections, premium custom-list browsing and statistics on request. Existing saved legacy connections keep their credentials, and unmatched anime can retain native Simkl/MAL identifiers.</li>
-            <li>Trakt adds recommended and favorite list sources, hidden/dropped shows with restore controls, and movie, streaming-release and premiere calendar entries. MDBList adds official, recommended and external lists, popular catalogs and direct provider links where your account supports them.</li>
-            </ul>
-            <h3>Live TV and personal channels</h3>
-            <ul>
-            <li>Choose a local live-rewind window up to 60 minutes and a storage allowance. Available rewind depends on the stream, free storage, and device power/thermal conditions.</li>
-            <li>DVR recurring rules are evaluated by the Home service without keeping the guide open. Recording conflicts use the configured concurrent-recording capacity.</li>
-            <li>Search channel results now include the currently airing program, guide timing and provider label, with a clear fallback when no event is scheduled.</li>
-            <li>My Channels uses whole-title setup, editable automatic builder rules and simpler Channel Options. Channels open the normal player directly, with Retry and Open Guide available if a source fails.</li>
-            <li>Custom-channel schedules reuse cached series metadata and load upcoming episodes incrementally instead of expanding an entire series up front.</li>
-            </ul>
-            <h3>Playback and navigation</h3>
-            <ul>
-            <li>The in-player guide has its own top-row button. Playback Options adds an optional Stats for Nerds overlay with the playback, network and device measurements available from the current player.</li>
-            <li>Initial rating/content advisories use clearer category rows and corner shading, wait for controls to fade, and preserve readable accessibility presentation. Playback statistics wait until the advisory clears.</li>
-            <li>Switching profiles preserves saved navigation layouts and opening destinations, including Sports Bar, instead of replacing them with defaults.</li>
-            <li>Refined Quick Actions tiles and Library collection-picker icons, with accessible transparency and motion fallbacks.</li>
-            </ul>
-            <h3>Apple TV improvements</h3>
-            <ul>
-            <li>Watch Live from a guide program opens full-screen playback after dismissing the program popup.</li>
-            <li>Home cards and captions stay inside the safe scrolling area. Settings has a compact centered heading and more list space; browse pages keep centered fixed headers, and profile selection uses circular focus treatment.</li>
-            </ul>
-            <h3>Availability and limits</h3>
-            <p>Server conversion, premium lists and direct provider links depend on the connected service and account. Native Simkl/MAL IDs preserve unmatched anime; they do not supply a playable metadata match. My Channels, Sports Bar and the newer experimental playback features may still need adjustment. Commercial skipping uses imported markers; automatic commercial detection is not included. Manual Skip Commercial is available for recordings with markers imported on the Mac DVR host.</p>
-            <p>[All release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 44 · September 24, 2026 · Released to External TestFlight.</p>
+              <h3>Servers and tracking</h3>
+              <ul>
+              <li>Plex, Jellyfin and Emby now synchronize resume positions and watched state, including manual watched changes and offline playback. Failed updates are saved for retry, and newer local progress is protected from older server data.</li>
+              <li>Choose Original, 1080p, 720p or 480p playback quality and change quality during playback. Supported server conversions include audio and subtitle choices; availability depends on your server and account permissions.</li>
+              <li>Jellyfin/Emby connections can browse servers that require separate catalogs, find matching titles on demand and offer distinct playable versions. Version selection retains your chosen file and filters explicit title-year or episode mismatches.</li>
+              <li>Test a source with a bounded streaming speed check. Server library shelves and version handling are more consistent.</li>
+              <li>Trakt and MDBList use activity changes to avoid redundant library refreshes. MDBList removal tracking and recovery handle older saved cursors, and Up Next continues beyond its former 100-show limit.</li>
+              <li>Simkl adds OAuth V2 QR/device sign-in for new connections, premium custom-list browsing and statistics on request. Existing saved legacy connections keep their credentials, and unmatched anime can retain native Simkl/MAL identifiers.</li>
+              <li>Trakt adds recommended and favorite list sources, hidden/dropped shows with restore controls, and movie, streaming-release and premiere calendar entries. MDBList adds official, recommended and external lists, popular catalogs and direct provider links where your account supports them.</li>
+              </ul>
+              <h3>Live TV and personal channels</h3>
+              <ul>
+              <li>Choose a local live-rewind window up to 60 minutes and a storage allowance. Available rewind depends on the stream, free storage, and device power/thermal conditions.</li>
+              <li>DVR recurring rules are evaluated by the Home service without keeping the guide open. Recording conflicts use the configured concurrent-recording capacity.</li>
+              <li>Search channel results now include the currently airing program, guide timing and provider label, with a clear fallback when no event is scheduled.</li>
+              <li>My Channels uses whole-title setup, editable automatic builder rules and simpler Channel Options. Channels open the normal player directly, with Retry and Open Guide available if a source fails.</li>
+              <li>Custom-channel schedules reuse cached series metadata and load upcoming episodes incrementally instead of expanding an entire series up front.</li>
+              </ul>
+              <h3>Playback and navigation</h3>
+              <ul>
+              <li>The in-player guide has its own top-row button. Playback Options adds an optional Stats for Nerds overlay with the playback, network and device measurements available from the current player.</li>
+              <li>Initial rating/content advisories use clearer category rows and corner shading, wait for controls to fade, and preserve readable accessibility presentation. Playback statistics wait until the advisory clears.</li>
+              <li>Switching profiles preserves saved navigation layouts and opening destinations, including Sports Bar, instead of replacing them with defaults.</li>
+              <li>Refined Quick Actions tiles and Library collection-picker icons, with accessible transparency and motion fallbacks.</li>
+              </ul>
+              <h3>Apple TV improvements</h3>
+              <ul>
+              <li>Watch Live from a guide program opens full-screen playback after dismissing the program popup.</li>
+              <li>Home cards and captions stay inside the safe scrolling area. Settings has a compact centered heading and more list space; browse pages keep centered fixed headers, and profile selection uses circular focus treatment.</li>
+              </ul>
+              <h3>Availability and limits</h3>
+              <p>Server conversion, premium lists and direct provider links depend on the connected service and account. Native Simkl/MAL IDs preserve unmatched anime; they do not supply a playable metadata match. My Channels, Sports Bar and the newer experimental playback features may still need adjustment. Commercial skipping uses imported markers; automatic commercial detection is not included. Manual Skip Commercial is available for recordings with markers imported on the Mac DVR host.</p>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">All release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-43">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Sports Bar, Quick Actions, My Channels and critical reliability fixes. Experimental features may need adjustment.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-43">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Sports Bar, Quick Actions, My Channels and critical reliability fixes. Experimental features may need adjustment.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 43</span>
               <time datetime="2026-09-23">September 23, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 43 · September 23, 2026 · Released to External TestFlight.</p>
-            <h3>Highlights since external build 41</h3>
-            <ul>
-            <li>Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.</li>
-            <li>Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.</li>
-            <li>My Channels: build a personal channel from movies and series, choose All Episodes, Next Unwatched or Latest Episodes, preview the schedule and adjust estimated runtimes. New channels keep story order by default.</li>
-            <li>My Channels guides and playback share the same persistent schedule. Join the current programme, play from the beginning, or return to the live channel; refreshes preserve the programme already on air.</li>
-            <li>Experimental playback options add selectable post-play recommendations, movie skip timestamps where available, and optional timed content warnings. Warning notices do not automatically skip or mute playback.</li>
-            <li>Clear-art titles recover from oversized images and unsupported SVG artwork, including titles whose logo was previously missing.</li>
-            <li>Improved connected-list browsing, detail presentation and expanded synopsis sheets, with updated French, German and Spanish interface coverage.</li>
-            <li>Updated the playback engine and media libraries while retaining Cedar playback integrations.</li>
-            <li>Refined the detail hero and Live TV source-selector presentation, programme information and remote navigation.</li>
-            </ul>
-            <h3>Critical fixes</h3>
-            <ul>
-            <li>Parental controls now cover additional direct, offline and custom-channel playback routes, source management and Multiview. Unrated, genre and Live TV restrictions are enforced more consistently.</li>
-            <li>Delayed account errors from an old login or profile no longer clear a newer connection.</li>
-            <li>Recording failures are reported more accurately: missing segments are retried, empty or prematurely ended recordings are not reported as complete, and supported extensionless HLS streams are recognized.</li>
-            <li>Explore continues through filtered pages and preserves the failed page for retry, reducing prematurely empty discovery results.</li>
-            </ul>
-            <h3>Experimental features</h3>
-            <p>Sports Bar, My Channels, Quick Actions, and the new post-play, skip-timing and content-warning options are experimental. Coverage and behavior may vary by source, title and device; some things may still need adjusting.</p>
-            <p>Sports coverage and statistics depend on the competition. A matching channel requires your own connected source and guide data. Timed warnings and skip markers are not available for every title.</p>
-            <h3>Android parity roundup — development only</h3>
-            <ul>
-            <li>The public Android TV / Google TV / Android-based Fire TV release remains 1.2.85 (88). No new Android APK or OTA update is being announced with this roundup.</li>
-            <li>Local parity candidates 89–91 brought progressive subtitle delivery and timing controls, the in-player guide, same-station alternatives, collection release ordering, offline changelog history, poster controls and connected Trakt/MDBList branches.</li>
-            <li>Current development adds Cinematic and Detailed Home, an independent hero carousel, updated detail layouts and backdrops, primary/secondary hero sources, combination modes, title limits, metadata and ratings controls.</li>
-            <li>Sports Bar is implemented in local Android development. Profile-copy fixes improve source and credential isolation, cancellation and rollback, and preserve saved Home branches.</li>
-            <li>Phone/computer browser setup is published at the Cedar setup page for compatible development builds, including source entry and Home configuration. SVG title artwork now requests a compatible image rendition.</li>
-            <li>My Channels and the remaining Home, poster, playback and cross-platform acceptance work are still being implemented or verified. Full Apple/Android parity is not complete. Physical-device and provider playback qualification remain pending.</li>
-            <li>These development features are experimental and may still need adjusting. They are not a promise that every Apple feature is already available in the public Android build.</li>
-            </ul>
-            <p>Full build roundup: https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html</p>
-            <p>Join TestFlight: https://testflight.apple.com/join/4A7sZ4q2</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 43 · September 23, 2026 · Released to External TestFlight.</p>
+              <h3>Highlights since external build 41</h3>
+              <ul>
+              <li>Sports Bar in Library: follow leagues and teams, browse past and upcoming games around Today, and open scores, available statistics, standings and rosters. Game selection looks for matching programmes in your connected guides.</li>
+              <li>Quick Actions branches: add Random Episode, Random Movie, Random Show, Recently Added and Recently Watched tiles, with optional Continue Watching, Watchlist and Favorites. Random Movie and Random Show open details; Random Episode uses your usual source selection.</li>
+              <li>My Channels: build a personal channel from movies and series, choose All Episodes, Next Unwatched or Latest Episodes, preview the schedule and adjust estimated runtimes. New channels keep story order by default.</li>
+              <li>My Channels guides and playback share the same persistent schedule. Join the current programme, play from the beginning, or return to the live channel; refreshes preserve the programme already on air.</li>
+              <li>Experimental playback options add selectable post-play recommendations, movie skip timestamps where available, and optional timed content warnings. Warning notices do not automatically skip or mute playback.</li>
+              <li>Clear-art titles recover from oversized images and unsupported SVG artwork, including titles whose logo was previously missing.</li>
+              <li>Improved connected-list browsing, detail presentation and expanded synopsis sheets, with updated French, German and Spanish interface coverage.</li>
+              <li>Updated the playback engine and media libraries while retaining Cedar playback integrations.</li>
+              <li>Refined the detail hero and Live TV source-selector presentation, programme information and remote navigation.</li>
+              </ul>
+              <h3>Critical fixes</h3>
+              <ul>
+              <li>Parental controls now cover additional direct, offline and custom-channel playback routes, source management and Multiview. Unrated, genre and Live TV restrictions are enforced more consistently.</li>
+              <li>Delayed account errors from an old login or profile no longer clear a newer connection.</li>
+              <li>Recording failures are reported more accurately: missing segments are retried, empty or prematurely ended recordings are not reported as complete, and supported extensionless HLS streams are recognized.</li>
+              <li>Explore continues through filtered pages and preserves the failed page for retry, reducing prematurely empty discovery results.</li>
+              </ul>
+              <h3>Experimental features</h3>
+              <p>Sports Bar, My Channels, Quick Actions, and the new post-play, skip-timing and content-warning options are experimental. Coverage and behavior may vary by source, title and device; some things may still need adjusting.</p>
+              <p>Sports coverage and statistics depend on the competition. A matching channel requires your own connected source and guide data. Timed warnings and skip markers are not available for every title.</p>
+              <h3>Android parity roundup — development only</h3>
+              <ul>
+              <li>The public Android TV / Google TV / Android-based Fire TV release remains 1.2.85 (88). No new Android APK or OTA update is being announced with this roundup.</li>
+              <li>Local parity candidates 89–91 brought progressive subtitle delivery and timing controls, the in-player guide, same-station alternatives, collection release ordering, offline changelog history, poster controls and connected Trakt/MDBList branches.</li>
+              <li>Current development adds Cinematic and Detailed Home, an independent hero carousel, updated detail layouts and backdrops, primary/secondary hero sources, combination modes, title limits, metadata and ratings controls.</li>
+              <li>Sports Bar is implemented in local Android development. Profile-copy fixes improve source and credential isolation, cancellation and rollback, and preserve saved Home branches.</li>
+              <li>Phone/computer browser setup is published at the Cedar setup page for compatible development builds, including source entry and Home configuration. SVG title artwork now requests a compatible image rendition.</li>
+              <li>My Channels and the remaining Home, poster, playback and cross-platform acceptance work are still being implemented or verified. Full Apple/Android parity is not complete. Physical-device and provider playback qualification remain pending.</li>
+              <li>These development features are experimental and may still need adjusting. They are not a promise that every Apple feature is already available in the public Android build.</li>
+              </ul>
+              <p>Full build roundup: https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html</p>
+              <p>Join TestFlight: https://testflight.apple.com/join/4A7sZ4q2</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-41">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Hero title artwork improvements.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-41">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Hero title artwork improvements.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 41</span>
               <time datetime="2026-09-17">September 17, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 41 · September 17, 2026 · Released to External TestFlight.</p>
-            <h3>Changes since build 40</h3>
-            <ul>
-            <li>Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.</li>
-            <li>Updated cached hero metadata so previously missing logos can be resolved again.</li>
-            </ul>
-            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 41 · September 17, 2026 · Released to External TestFlight.</p>
+              <h3>Changes since build 40</h3>
+              <ul>
+              <li>Improved Home hero logo lookup, including original-language artwork when the initial metadata has no title image.</li>
+              <li>Updated cached hero metadata so previously missing logos can be resolved again.</li>
+              </ul>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-40">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Streaming catalogues, artwork and Home navigation improvements.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-40">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Streaming catalogues, artwork and Home navigation improvements.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 40</span>
               <time datetime="2026-09-17">September 17, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 40 · September 17, 2026 · Released to External TestFlight.</p>
-            <h3>Changes since build 39</h3>
-            <ul>
-            <li>Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.</li>
-            <li>Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.</li>
-            <li>Artwork titles wait for the enriched image before falling back to text, avoiding plain-text-to-logo swaps.</li>
-            <li>Added an optional Enhanced Landscape Artwork setting under Better Posters, with available metadata and remaining-episode labels. It is off by default.</li>
-            <li>Reduced Home navigation overhead and replaced heavy poster focus effects with a lighter outline and lift while retaining remote directional navigation.</li>
-            <li>Aligned custom collection hero titles with media titles, improved logo contrast and removed the extra collection hero shading.</li>
-            <li>Made Feature cards fit Cinematic Home, with the same focus treatment as other posters. Detailed Home retains its larger two-card layout.</li>
-            <li>Tightened poster caption spacing after removing the previous parallax effect.</li>
-            </ul>
-            <p>[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 40 · September 17, 2026 · Released to External TestFlight.</p>
+              <h3>Changes since build 39</h3>
+              <ul>
+              <li>Streaming-service folders now browse independently of your country, including HBO Max, Hulu and Peacock. Where to Watch remains region-specific.</li>
+              <li>Corrected regional provider matching for Prime Video and Disney+, and expanded the generic Paramount+ catalogue to include its direct subscription plans.</li>
+              <li>Artwork titles wait for the enriched image before falling back to text, avoiding plain-text-to-logo swaps.</li>
+              <li>Added an optional Enhanced Landscape Artwork setting under Better Posters, with available metadata and remaining-episode labels. It is off by default.</li>
+              <li>Reduced Home navigation overhead and replaced heavy poster focus effects with a lighter outline and lift while retaining remote directional navigation.</li>
+              <li>Aligned custom collection hero titles with media titles, improved logo contrast and removed the extra collection hero shading.</li>
+              <li>Made Feature cards fit Cinematic Home, with the same focus treatment as other posters. Detailed Home retains its larger two-card layout.</li>
+              <li>Tightened poster caption spacing after removing the previous parallax effect.</li>
+              </ul>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-39">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Available to Cedar External testers. Completion overlays, playback and profile-copy diagnostics. Home navigation and artwork improvements.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-39">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Available to Cedar External testers. Completion overlays, playback and profile-copy diagnostics. Home navigation and artwork improvements.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 39</span>
               <time datetime="2026-09-16">September 16, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 39 · 2026-09-16 · Released to External TestFlight.</p>
-            <h3>Changes since build 38</h3>
-            <ul>
-            <li>Series completion distinguishes Caught Up on ongoing shows from completed checkmarks on ended shows; partially watched series no longer appear complete.</li>
-            <li>Global completion styles also apply to detail episode selectors and the in-player episode browser.</li>
-            <li>Playback hides app navigation controls consistently across entry points.</li>
-            <li>Copy Profile identifies duplicate source IDs, credential references, settings keys, branches or shelves instead of a misleading encryption error.</li>
-            <li>Detailed Home keeps focused branches and titles visible while navigating down and back up, and restores the hero at the top.</li>
-            <li>Feature branches show two larger cards across on Apple TV; other platforms keep their existing sizing.</li>
-            <li>Fixed upward Critic-row navigation and improved spacing beneath focused portrait artwork.</li>
-            <li>View All appears only above eight items. Landscape titles default to visible while saved preferences are respected.</li>
-            <li>Centered and enlarged Movies / TV Shows / Live TV tabs, simplified filter focus styling, and made Sort reachable with the remote.</li>
-            <li>Widened Critic columns to keep release years on one line.</li>
-            <li>Collection heroes show only their title or original-colour logo; corrected logos being reused across branch groups.</li>
-            <li>Player controls initially prefer the timeline; Back dismisses audio/subtitle controls before leaving playback.</li>
-            </ul>
-            <p>Copy Profile diagnostics identify the failing check; they do not automatically repair duplicate profile data.</p>
-            <p>[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 39 · 2026-09-16 · Released to External TestFlight.</p>
+              <h3>Changes since build 38</h3>
+              <ul>
+              <li>Series completion distinguishes Caught Up on ongoing shows from completed checkmarks on ended shows; partially watched series no longer appear complete.</li>
+              <li>Global completion styles also apply to detail episode selectors and the in-player episode browser.</li>
+              <li>Playback hides app navigation controls consistently across entry points.</li>
+              <li>Copy Profile identifies duplicate source IDs, credential references, settings keys, branches or shelves instead of a misleading encryption error.</li>
+              <li>Detailed Home keeps focused branches and titles visible while navigating down and back up, and restores the hero at the top.</li>
+              <li>Feature branches show two larger cards across on Apple TV; other platforms keep their existing sizing.</li>
+              <li>Fixed upward Critic-row navigation and improved spacing beneath focused portrait artwork.</li>
+              <li>View All appears only above eight items. Landscape titles default to visible while saved preferences are respected.</li>
+              <li>Centered and enlarged Movies / TV Shows / Live TV tabs, simplified filter focus styling, and made Sort reachable with the remote.</li>
+              <li>Widened Critic columns to keep release years on one line.</li>
+              <li>Collection heroes show only their title or original-colour logo; corrected logos being reused across branch groups.</li>
+              <li>Player controls initially prefer the timeline; Back dismisses audio/subtitle controls before leaving playback.</li>
+              </ul>
+              <p>Copy Profile diagnostics identify the failing check; they do not automatically repair duplicate profile data.</p>
+              <p><a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-38">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-38">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">External TestFlight: global Cedar Overlays, consistent posters and collections, improved Favorites and source selection.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 38</span>
               <time datetime="2026-09-16">September 16, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 38 · 2026-09-16 · Released to External TestFlight on Apple TV.</p>
-            <h3>Changes since external build 34</h3>
-            <ul>
-            <li>Added global Cedar Overlays in Settings → Posters &amp; Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.</li>
-            <li>Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.</li>
-            <li>Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.</li>
-            <li>Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.</li>
-            <li>Connected lists now show one card per series instead of repeating individual episodes.</li>
-            <li>Feature-style artwork waits for the selected image instead of briefly showing another backdrop.</li>
-            <li>Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.</li>
-            <li>Improved initial Search content loading and restored bundled rating icons on Critic cards.</li>
-            <li>Improved full-bleed Home branch rendering so focused posters are not cut off at the bottom.</li>
-            <li>Hero titles wait for clear-art artwork before falling back to plain text.</li>
-            </ul>
-            <p>[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 38 · 2026-09-16 · Released to External TestFlight on Apple TV.</p>
+              <h3>Changes since external build 34</h3>
+              <ul>
+              <li>Added global Cedar Overlays in Settings → Posters &amp; Cards: customize Next, new-episode, playback-progress, series-progress and completion indicators with optional Liquid Glass capsules.</li>
+              <li>Added grouped overlay controls and an Inception preview with portrait artwork and Home-style landscape artwork.</li>
+              <li>Made poster captions, alignment, artwork, watched markers and branch presentation more consistent across Home, Library and collection screens.</li>
+              <li>Improved Favorites for movies, series and Live TV, with centered channel logos and more complete collection browsing.</li>
+              <li>Connected lists now show one card per series instead of repeating individual episodes.</li>
+              <li>Feature-style artwork waits for the selected image instead of briefly showing another backdrop.</li>
+              <li>Remembered-source labels now identify the selected release instead of marking every source from the same provider; source-picker filters are easier to read.</li>
+              <li>Improved initial Search content loading and restored bundled rating icons on Critic cards.</li>
+              <li>Improved full-bleed Home branch rendering so focused posters are not cut off at the bottom.</li>
+              <li>Hero titles wait for clear-art artwork before falling back to plain text.</li>
+              </ul>
+              <p><a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a></p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-34">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Connected list and folder improvements; faster Home loading, smoother scrolling and stable branch alignment on Apple TV.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-34">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Connected list and folder improvements; faster Home loading, smoother scrolling and stable branch alignment on Apple TV.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 34</span>
               <time datetime="2026-09-15">September 15, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 34 · 2026-09-15 · Released to External TestFlight on Apple TV.</p>
-            <h3>Changes since external build 31</h3>
-            <ul>
-            <li>Fixed Trakt and MDBList list previews and saved Home branches failing to load.</li>
-            <li>Removed the duplicate back arrow when browsing Connected Lists.</li>
-            <li>Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.</li>
-            <li>Improved spacing for Connected List account, title and help text in branch editing.</li>
-            <li>Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.</li>
-            </ul>
-            <h3>Apple TV Home and Live</h3>
-            <ul>
-            <li>Show Home hero content sooner after installing an update, without waiting for every remote branch to finish refreshing.</li>
-            <li>Improve scrolling through Detailed Home and Live categories.</li>
-            <li>Keep the Detailed hero carousel bounded: Left from the first hero reaches the sidebar.</li>
-            <li>Extend Live guide artwork and cells to the right and bottom edges while keeping controls inside the safe area.</li>
-            <li>Keep the Cinematic hero stationary when moving between poster and landscape branches, with consistent Home/detail alignment.</li>
-            <li>Fix vertical bouncing during horizontal navigation and improve returning to the first Continue Watching item.</li>
-            <li>Preserve native poster parallax while keeping branch paging stable.</li>
-            <li>Keep streaming-service, studio and other Branch Group rows aligned when their hero artwork appears.</li>
-            <li>Match group View All cards to landscape, square or portrait rows and improve spacing between group cards.</li>
-            </ul>
-            <p>[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 34 · 2026-09-15 · Released to External TestFlight on Apple TV.</p>
+              <h3>Changes since external build 31</h3>
+              <ul>
+              <li>Fixed Trakt and MDBList list previews and saved Home branches failing to load.</li>
+              <li>Removed the duplicate back arrow when browsing Connected Lists.</li>
+              <li>Made All Platforms folder-browsing choices apply throughout a Branch Group while retaining explicit platform overrides.</li>
+              <li>Improved spacing for Connected List account, title and help text in branch editing.</li>
+              <li>Made Folder Preview match Home artwork, tile shapes and title visibility, including bundled studio and custom covers.</li>
+              </ul>
+              <h3>Apple TV Home and Live</h3>
+              <ul>
+              <li>Show Home hero content sooner after installing an update, without waiting for every remote branch to finish refreshing.</li>
+              <li>Improve scrolling through Detailed Home and Live categories.</li>
+              <li>Keep the Detailed hero carousel bounded: Left from the first hero reaches the sidebar.</li>
+              <li>Extend Live guide artwork and cells to the right and bottom edges while keeping controls inside the safe area.</li>
+              <li>Keep the Cinematic hero stationary when moving between poster and landscape branches, with consistent Home/detail alignment.</li>
+              <li>Fix vertical bouncing during horizontal navigation and improve returning to the first Continue Watching item.</li>
+              <li>Preserve native poster parallax while keeping branch paging stable.</li>
+              <li>Keep streaming-service, studio and other Branch Group rows aligned when their hero artwork appears.</li>
+              <li>Match group View All cards to landscape, square or portrait rows and improve spacing between group cards.</li>
+              </ul>
+              <p><a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a>.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-31">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-31">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Released to External TestFlight. Connected lists, playback improvements and new Apple TV Home layouts.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 31</span>
               <time datetime="2026-09-15">September 15, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 31 · 2026-09-15 · Released to External TestFlight on Apple TV.</p>
-            <h3>Changes since external build 28</h3>
-            <ul>
-            <li>Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.</li>
-            <li>Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.</li>
-            <li>Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.</li>
-            <li>Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.</li>
-            <li>Improve profile-scoped media-server login restoration and separation between profiles.</li>
-            <li>Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.</li>
-            <li>Update playback and artwork dependencies.</li>
-            </ul>
-            <h3>Apple TV</h3>
-            <ul>
-            <li>Choose between Cinematic Home and the new Detailed Home layout.</li>
-            <li>Detailed offers a separately configured hero carousel with manual browsing, shared hero metadata styling, and a blurred background as you move down into branches.</li>
-            <li>Keep Left/Right focused on browsing the hero carousel; Back still opens the sidebar.</li>
-            <li>Improve safe-area handling, horizontal full-bleed branches, focus clearance, and spacing between hero details and branch titles.</li>
-            <li>Align Home and detail heroes, give detail sections a consistent starting position, and align Settings pages and submenus.</li>
-            <li>Improve folder-card focus, add poster-grid hero artwork for supported groups, clarify seek indicators, and move refresh status to the bottom of the screen.</li>
-            </ul>
-            <h3>Household tracking upgrade</h3>
-            <p>Update household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.</p>
-            <p>[Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2).</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 31 · 2026-09-15 · Released to External TestFlight on Apple TV.</p>
+              <h3>Changes since external build 28</h3>
+              <ul>
+              <li>Add Home branches from Trakt and MDBList personal, liked and public lists, with URL lookup and a preview before adding.</li>
+              <li>Add provider-specific watchlists from Trakt, MDBList and SIMKL, plus supported collections and enabled Plex, Jellyfin and Emby libraries.</li>
+              <li>Keep list sources independent of the selected tracking service, preserve provider order by default, and show retryable errors when a list cannot refresh.</li>
+              <li>Improve shared household tracking renewal and recovery across devices, and make Trakt sign-in more resilient when returning from the browser.</li>
+              <li>Improve profile-scoped media-server login restoration and separation between profiles.</li>
+              <li>Correct playback seek recovery handling and prefer main dialogue over descriptive/commentary tracks when automatically selecting audio.</li>
+              <li>Update playback and artwork dependencies.</li>
+              </ul>
+              <h3>Apple TV</h3>
+              <ul>
+              <li>Choose between Cinematic Home and the new Detailed Home layout.</li>
+              <li>Detailed offers a separately configured hero carousel with manual browsing, shared hero metadata styling, and a blurred background as you move down into branches.</li>
+              <li>Keep Left/Right focused on browsing the hero carousel; Back still opens the sidebar.</li>
+              <li>Improve safe-area handling, horizontal full-bleed branches, focus clearance, and spacing between hero details and branch titles.</li>
+              <li>Align Home and detail heroes, give detail sections a consistent starting position, and align Settings pages and submenus.</li>
+              <li>Improve folder-card focus, add poster-grid hero artwork for supported groups, clarify seek indicators, and move refresh status to the bottom of the screen.</li>
+              </ul>
+              <h3>Household tracking upgrade</h3>
+              <p>Update household devices before replacing a shared tracking connection. Reconnect once on one updated device, then use Share Connected Account for the fresh connection. Older builds cannot read the new shared connection format.</p>
+              <p><a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a>.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-29">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Internal-only TestFlight: AetherEngine 6.86.0, FFmpegBuild 3.3.0 and Kingfisher 8.12.0. External testers remain on build 28.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-29">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Internal-only TestFlight: AetherEngine 6.86.0, FFmpegBuild 3.3.0 and Kingfisher 8.12.0. External testers remain on build 28.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 29</span>
               <time datetime="2026-09-14">September 14, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 29 · September 14, 2026 · Internal TestFlight.</p>
-            <p>Available to internal TestFlight testers only on iPhone, iPad, Mac and Apple TV. External testers remain on build 28.</p>
-            <h3>Changes</h3>
-            <ul>
-            <li>Updated AetherEngine to 6.86.0, retaining Cedar&#39;s custom playback, subtitle and PiP integration.</li>
-            <li>Updated FFmpegBuild to 3.3.0, with framework debug symbols for better playback crash diagnostics. FFmpeg remains 8.1.2.</li>
-            <li>Updated Kingfisher to 8.12.0 for image lifecycle and download-priority fixes.</li>
-            </ul>
-            <h3>Testing</h3>
-            <p>Apple Debug and Release builds passed, along with automated playback bridge, artwork and focused engine regression tests. Please test seeking/resume, live pause and return to live, subtitle delay, audio switching, supported HDR/Dolby Vision/Atmos equipment, PiP where available, and poster loading while scrolling. Physical-device coverage remains the purpose of this internal build.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 29 · September 14, 2026 · Internal TestFlight.</p>
+              <p>Available to internal TestFlight testers only on iPhone, iPad, Mac and Apple TV. External testers remain on build 28.</p>
+              <h3>Changes</h3>
+              <ul>
+              <li>Updated AetherEngine to 6.86.0, retaining Cedar&#39;s custom playback, subtitle and PiP integration.</li>
+              <li>Updated FFmpegBuild to 3.3.0, with framework debug symbols for better playback crash diagnostics. FFmpeg remains 8.1.2.</li>
+              <li>Updated Kingfisher to 8.12.0 for image lifecycle and download-priority fixes.</li>
+              </ul>
+              <h3>Testing</h3>
+              <p>Apple Debug and Release builds passed, along with automated playback bridge, artwork and focused engine regression tests. Please test seeking/resume, live pause and return to live, subtitle delay, audio switching, supported HDR/Dolby Vision/Atmos equipment, PiP where available, and poster loading while scrolling. Physical-device coverage remains the purpose of this internal build.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-28">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-28">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Available to Cedar External testers. Platform branches, poster controls, Library/settings refinements.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 28</span>
               <time datetime="2026-09-14">September 14, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 28 · September 14, 2026 · External TestFlight rollout.</p>
-            <p>Available to Cedar External testers.</p>
-            <h3>Changes</h3>
-            <p>Reconciles changes since external build 24.</p>
-            <ul>
-            <li>Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.</li>
-            <li>Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.</li>
-            <li>Simpler Library section setup, media-server connections and consistent settings navigation actions.</li>
-            <li>Apple TV-specific Home branches and navigation settings. Featured Home artwork follows branches; the separate Hero option is removed for Apple TV.</li>
-            <li>Native TV settings/focus conventions retained, with shared poster/rating refinements.</li>
-            <li>Episode-aware deep links preserve explicit season/episode selection through the existing playback flow.</li>
-            </ul>
-            <p>Please test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On Apple TV, also test remote focus, Back navigation, branch-driven featured artwork and Top Shelf.</p>
-            <p>[Join Cedar TestFlight](https://testflight.apple.com/join/4A7sZ4q2). Availability is subject to Apple processing and beta review. Android releases are unchanged.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 28 · September 14, 2026 · External TestFlight rollout.</p>
+              <p>Available to Cedar External testers.</p>
+              <h3>Changes</h3>
+              <p>Reconciles changes since external build 24.</p>
+              <ul>
+              <li>Platform-specific Home branches with shared All Platforms editing, independent ordering/visibility, and new branches added at the bottom.</li>
+              <li>Poster styles, global title visibility and depth controls, Critic rating-source selection, service icons, and depth on company/branch-group artwork.</li>
+              <li>Simpler Library section setup, media-server connections and consistent settings navigation actions.</li>
+              <li>Apple TV-specific Home branches and navigation settings. Featured Home artwork follows branches; the separate Hero option is removed for Apple TV.</li>
+              <li>Native TV settings/focus conventions retained, with shared poster/rating refinements.</li>
+              <li>Episode-aware deep links preserve explicit season/episode selection through the existing playback flow.</li>
+              </ul>
+              <p>Please test startup/profile switching, per-platform branch changes, poster settings, Library/media-server browsing and playback. On Apple TV, also test remote focus, Back navigation, branch-driven featured artwork and Top Shelf.</p>
+              <p><a href="https://testflight.apple.com/join/4A7sZ4q2">Join Cedar TestFlight</a>. Availability is subject to Apple processing and beta review. Android releases are unchanged.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-24">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-24">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Settings consolidation, clearer source/audio information, faster cached heroes, and accumulated Library, Plex, calendar and playback refinements.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 24</span>
               <time datetime="2026-09-13">September 13, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 24 · September 13, 2026 · Available to external TestFlight testers.</p>
-            <h3>Settings</h3>
-            <ul>
-            <li>Combined detail-page and episode display options.</li>
-            <li>Moved Content Titles to Home Screen &amp; Branches.</li>
-            <li>Joined tracking, watchlist and favorite preferences with Connected Services.</li>
-            <li>Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.</li>
-            <li>Put metadata language, source preference, enrichment and poster options directly on Metadata &amp; Artwork. Advanced field routing and rating icons remain separate.</li>
-            </ul>
-            <h3>Browsing and playback</h3>
-            <ul>
-            <li>Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.</li>
-            <li>Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.</li>
-            <li>System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.</li>
-            <li>Improved source-loading progress and buffered VOD timeline feedback.</li>
-            <li>Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.</li>
-            </ul>
-            <h3>Apple TV</h3>
-            <ul>
-            <li>Hero metadata and backdrop switch as a coherent presentation. Neighbour preparation starts sooner; missing artwork resolves before a final fallback is committed.</li>
-            <li>Repeated cached poster navigation is faster. Physical testing showed many prepared commits under 50 ms, but uncached provider requests can still take longer; these are application timings, not frame-by-frame measurements.</li>
-            <li>View All appears at branch ends and follows poster focus styling.</li>
-            </ul>
-            <h3>Please test</h3>
-            <p>Check settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 24 · September 13, 2026 · Available to external TestFlight testers.</p>
+              <h3>Settings</h3>
+              <ul>
+              <li>Combined detail-page and episode display options.</li>
+              <li>Moved Content Titles to Home Screen &amp; Branches.</li>
+              <li>Joined tracking, watchlist and favorite preferences with Connected Services.</li>
+              <li>Standardized metadata/artwork service credential pages, with status and included/public access clearly shown.</li>
+              <li>Put metadata language, source preference, enrichment and poster options directly on Metadata &amp; Artwork. Advanced field routing and rating icons remain separate.</li>
+              </ul>
+              <h3>Browsing and playback</h3>
+              <ul>
+              <li>Includes guided Plex sign-in, source-based Library branches and poster calendar browsing from the internal builds since the previous external release.</li>
+              <li>Improved source resolution and audio-language labels, including styled provider text and filename evidence. Source Details shows the complete language list and availability information.</li>
+              <li>System audio preference follows system languages; explicit source-default selection remains available. Regional language codes are matched consistently.</li>
+              <li>Improved source-loading progress and buffered VOD timeline feedback.</li>
+              <li>Cached hero metadata can bypass unnecessary credential reads. Initial hero presentation no longer waits for optional episode/account enrichment.</li>
+              </ul>
+              <h3>Apple TV</h3>
+              <ul>
+              <li>Hero metadata and backdrop switch as a coherent presentation. Neighbour preparation starts sooner; missing artwork resolves before a final fallback is committed.</li>
+              <li>Repeated cached poster navigation is faster. Physical testing showed many prepared commits under 50 ms, but uncached provider requests can still take longer; these are application timings, not frame-by-frame measurements.</li>
+              <li>View All appears at branch ends and follows poster focus styling.</li>
+              </ul>
+              <h3>Please test</h3>
+              <p>Check settings search and saved preferences after updating, source language/quality labels, audio selection, Home and Library browsing, Plex, calendar navigation, playback, subtitles and live guide tuning. Existing data should remain available. Network-dependent metadata and missing provider artwork are not guaranteed to resolve instantly.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-22">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-22">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Home loading and artwork refinement. Internal update with platform-specific browsing and playback checks.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 22</span>
               <time datetime="2026-09-13">September 13, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 22 · 2026-09-13 · Internal TestFlight build.</p>
-            <h3>Home loading and artwork refinement</h3>
-            <p>Improved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.</p>
-            <p>Core metadata and the decoded backdrop are committed together. Immediate neighbouring heroes are preloaded with bounded work. View All is shown only at branch ends. Cold metadata requests can still delay presentation.</p>
-            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 22 · 2026-09-13 · Internal TestFlight build.</p>
+              <h3>Home loading and artwork refinement</h3>
+              <p>Improved Home launch, artwork loading, metadata enrichment and poster progress updates. Cached content remains usable while refreshed content is prepared.</p>
+              <p>Core metadata and the decoded backdrop are committed together. Immediate neighbouring heroes are preloaded with bounded work. View All is shown only at branch ends. Cold metadata requests can still delay presentation.</p>
+              <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-21">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Mac startup and shared regression update.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-21">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Mac startup and shared regression update.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 21</span>
               <time datetime="2026-09-12">September 12, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 21 · 2026-09-12 · Internal TestFlight build.</p>
-            <h3>Mac startup and shared regression update</h3>
-            <p>Internal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.</p>
-            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 21 · 2026-09-12 · Internal TestFlight build.</p>
+              <h3>Mac startup and shared regression update</h3>
+              <p>Internal regression coverage included profile selection, Home, credentials, playback, and the poster calendar. The Mac credential batching change does not alter iOS or tvOS reconciliation.</p>
+              <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-20">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Poster calendar and live guide refinements.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-20">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Poster calendar and live guide refinements.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 20</span>
               <time datetime="2026-09-12">September 12, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 20 · 2026-09-12 · Internal TestFlight build.</p>
-            <h3>Poster calendar and live guide refinements</h3>
-            <p>Added poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.</p>
-            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 20 · 2026-09-12 · Internal TestFlight build.</p>
+              <h3>Poster calendar and live guide refinements</h3>
+              <p>Added poster-based calendar browsing with release counts, day selection, month navigation and Today. Selecting a channel in the player guide changes playback without the directional slide animation.</p>
+              <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-18">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-18">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Home browsing and poster focus. Internal update with platform-specific browsing and playback checks.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 18</span>
               <time datetime="2026-09-12">September 12, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 18 · 2026-09-12 · Internal TestFlight build.</p>
-            <h3>Home browsing and poster focus</h3>
-            <p>Internal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.</p>
-            <p>View all received the same poster focus, lift and Depth Effect treatment as nearby content. This build offered controls at both branch ends; build 22 later changed them to trailing-only.</p>
-            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 18 · 2026-09-12 · Internal TestFlight build.</p>
+              <h3>Home browsing and poster focus</h3>
+              <p>Internal regression coverage included Home, Library, branch grids, navigation, sign-in and playback. Existing libraries and settings are retained.</p>
+              <p>View all received the same poster focus, lift and Depth Effect treatment as nearby content. This build offered controls at both branch ends; build 22 later changed them to trailing-only.</p>
+              <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-17">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Source-based Library branches. Internal update with platform-specific browsing and playback checks.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-17">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Source-based Library branches. Internal update with platform-specific browsing and playback checks.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 17</span>
               <time datetime="2026-09-12">September 12, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 17 · 2026-09-12 · Internal TestFlight build.</p>
-            <h3>Source-based Library branches</h3>
-            <p>Library presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.</p>
-            <p>Siri Remote navigation supports Library actions, source headings, horizontal title rows, full catalogs and Menu return.</p>
-            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 17 · 2026-09-12 · Internal TestFlight build.</p>
+              <h3>Source-based Library branches</h3>
+              <p>Library presents horizontal source branches with title previews, server/service identity and access to the full catalog. Customize controls source order, hidden sources and source-card choices separately from Home branches.</p>
+              <p>Siri Remote navigation supports Library actions, source headings, horizontal title rows, full catalogs and Menu return.</p>
+              <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-16">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Guided Plex sign-in and Library customization.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-16">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Guided Plex sign-in and Library customization.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 16</span>
               <time datetime="2026-09-12">September 12, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 16 · 2026-09-12 · Internal TestFlight build.</p>
-            <h3>Guided Plex sign-in and Library customization</h3>
-            <p>Added guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.</p>
-            <p>Plex uses a browser approval code at plex.tv/link, followed by server selection.</p>
-            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 16 · 2026-09-12 · Internal TestFlight build.</p>
+              <h3>Guided Plex sign-in and Library customization</h3>
+              <p>Added guided Plex sign-in and server selection, with manual setup retained. Plex server-directory lookup handles HTTPS IP certificate mismatches. Refined Library destination rows, empty shelves, file sources and customization previews.</p>
+              <p>Plex uses a browser approval code at plex.tv/link, followed by server selection.</p>
+              <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-15">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Internal regression snapshot. Internal update with platform-specific browsing and playback checks.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-15">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Internal regression snapshot. Internal update with platform-specific browsing and playback checks.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 15</span>
               <time datetime="2026-09-12">September 12, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 15 · 2026-09-12 · Internal TestFlight build.</p>
-            <h3>Internal regression snapshot</h3>
-            <p>Internal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.</p>
-            <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 15 · 2026-09-12 · Internal TestFlight build.</p>
+              <h3>Internal regression snapshot</h3>
+              <p>Internal validation covered startup, source setup, Home and Library, the live guide, subtitles, playback controls, and saved profiles/settings. The archived notes do not identify a separate feature delta for this build.</p>
+              <p>This historical entry records the internal build; it does not imply that this build was distributed externally.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-14">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Subtitle selection and timing fixes, a full-height in-player guide, improved remote guide focus and changelog reading, correct collection artwork/order, and profile setup.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-14">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Subtitle selection and timing fixes, a full-height in-player guide, improved remote guide focus and changelog reading, correct collection artwork/order, and profile setup.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 14</span>
               <time datetime="2026-09-10">September 10, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 14 · September 10, 2026 · Available to external testers on TestFlight.</p>
-            <h3>Subtitles and playback</h3>
-            <ul>
-            <li>Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.</li>
-            <li>Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.</li>
-            <li>Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.</li>
-            <li>Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.</li>
-            <li>Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.</li>
-            <li>Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.</li>
-            </ul>
-            <h3>Details and ratings</h3>
-            <ul>
-            <li>Fixed collection navigation retaining another movie&#39;s clearart title. Artwork results now belong to the selected movie and load request.</li>
-            <li>Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.</li>
-            <li>Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.</li>
-            </ul>
-            <h3>Profiles and setup</h3>
-            <ul>
-            <li>Add and manage profiles from Who&#39;s Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.</li>
-            <li>Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.</li>
-            <li>Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.</li>
-            </ul>
-            <h3>Apple TV</h3>
-            <ul>
-            <li>The changelog opens in a full-screen reader with larger text, individually focusable reading blocks, and a fixed Done action. Back returns to the previous screen.</li>
-            <li>Fixed guide focus discovery so Right can reach later programmes and reveal them while the pinned channel rail stays clear.</li>
-            <li>The in-player guide supports remote timeline browsing, pinned guide shortcuts and Menu/Back return to the same playback session.</li>
-            </ul>
-            <h3>Please test</h3>
-            <p>Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.</p>
-            <p>Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 14 · September 10, 2026 · Available to external testers on TestFlight.</p>
+              <h3>Subtitles and playback</h3>
+              <ul>
+              <li>Fixed add-on subtitles that appeared selected without rendering. Off, changing tracks, seeking and retrying failed downloads now keep selection and captions consistent.</li>
+              <li>Preferred languages and release-match evidence are ranked before the result limit. Compact subtitle choices use language and a number when needed, with Forced/SDH details; file and episode names stay out of the selector.</li>
+              <li>Added finer subtitle timing up to three minutes earlier or later, remembered locally for each profile, video and subtitle. Sync by Line supports a heard-line capture or paused position. Align with Embedded can suggest an undoable fixed offset when enough matching dialogue is available.</li>
+              <li>Added a full-height TV Guide over continuing playback, with playlist/category selection, pinned Recently Watched and Favorites, and a one-hour timeline. Choosing another channel retunes the existing player.</li>
+              <li>Live Sources now looks for matching station alternatives, including quality and backup variants, and labels the channel and playlist.</li>
+              <li>Skip Intro and Next Episode use native Liquid Glass on supported Apple systems, rest lower in the player, and move above visible transport controls.</li>
+              </ul>
+              <h3>Details and ratings</h3>
+              <ul>
+              <li>Fixed collection navigation retaining another movie&#39;s clearart title. Artwork results now belong to the selected movie and load request.</li>
+              <li>Movie collections display earliest release first, using the full release date. The label says Release order; in-story chronology is not supplied.</li>
+              <li>Simplified the rating prompt to a small How was it? panel with ten stars and Cancel / Rate actions.</li>
+              </ul>
+              <h3>Profiles and setup</h3>
+              <ul>
+              <li>Add and manage profiles from Who&#39;s Watching, including installations with one profile. A new profile chooses its name/avatar and starts independent setup that can resume after restart.</li>
+              <li>Refreshed the welcome screen with bundled poster artwork and a clearer setup action. WebDAV and Plex/Emby/Jellyfin setup open their dedicated connection screens, and Home preview artwork stays bounded.</li>
+              <li>Fixed a household invitation callback crash, improved first-share migration ordering, batched credential cleanup during profile deletion, and retained profile refreshes arriving during an existing refresh.</li>
+              </ul>
+              <h3>Apple TV</h3>
+              <ul>
+              <li>The changelog opens in a full-screen reader with larger text, individually focusable reading blocks, and a fixed Done action. Back returns to the previous screen.</li>
+              <li>Fixed guide focus discovery so Right can reach later programmes and reveal them while the pinned channel rail stays clear.</li>
+              <li>The in-player guide supports remote timeline browsing, pinned guide shortcuts and Menu/Back return to the same playback session.</li>
+              </ul>
+              <h3>Please test</h3>
+              <p>Test add-on subtitle selection, Off, alternate releases and timing after a seek; browse collections rapidly; open the guide, change playlists and tune a favorite; create a profile and resume its setup; and try the compact rating prompt.</p>
+              <p>Subtitle releases from different cuts can still require another release; fixed-offset alignment cannot repair inserted or removed scenes. Existing CloudKit throttling/backlog recovery and translation gaps are not certified as resolved. Physical-device volume/PiP interruption and broader hardware/accessibility qualification remain release checks.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-13">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Custom Home TV guides, bundled brand artwork and more consistent poster spacing.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-13">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Custom Home TV guides, bundled brand artwork and more consistent poster spacing.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 13</span>
               <time datetime="2026-09-09">September 9, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 13 · September 9, 2026 · Available to external testers in TestFlight.</p>
-            <h3>Changes</h3>
-            <p>NEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.</p>
-            <p>ARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.</p>
-            <p>LAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.</p>
-            <p>APPLE TV: A guide can be the first Home branch without waiting for poster artwork.</p>
-            <h3>Testing</h3>
-            <p>PLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation with the remote.</p>
-            <p>Known limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 13 · September 9, 2026 · Available to external testers in TestFlight.</p>
+              <h3>Changes</h3>
+              <p>NEW: Add a TV Guide Home branch with Recently Played, Favorites or a saved custom lineup. Choose its title, visible row count and time window; See All keeps the same channel source. Empty guides show setup guidance.</p>
+              <p>ARTWORK: Studio and streaming-service cards are bundled, with centered logos and brand-colored backgrounds. Compact and large-screen artwork are packaged separately.</p>
+              <p>LAYOUT: Branch Group poster spacing now matches Home. Live TV Continue Watching no longer casts dark shadows into the gaps between posters.</p>
+              <p>APPLE TV: A guide can be the first Home branch without waiting for poster artwork.</p>
+              <h3>Testing</h3>
+              <p>PLEASE TEST: Add/edit each guide source, change rows and hours, verify lineup order and empty states, open See All, select a current program and test reminders/catch-up where supported. Check bundled cards, poster spacing and navigation with the remote.</p>
+              <p>Known limitations: Prior CloudKit backlog recovery, translation gaps and broader hardware/accessibility qualification remain open. Provider playback and all-device visual checks are not comprehensively certified.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-12">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Clearer household sharing, bounded Home discovery and more efficient library, network and subtitle rendering work.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-12">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Clearer household sharing, bounded Home discovery and more efficient library, network and subtitle rendering work.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 12</span>
               <time datetime="2026-09-09">September 9, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 12 · September 9, 2026 · TestFlight beta</p>
-            <h3>Changes since build 11</h3>
-            <ul>
-            <li>Household &amp; Sync brings Apple household sharing, invitations, status and device controls together. Household discovery refreshes as iCloud imports arrive and shows initial download progress.</li>
-            <li>Replaying unchanged household profiles no longer creates new journal mutations. Copying a profile to Android is a one-time transfer and does not establish ongoing relay sync; existing links remain available under Advanced Transfers &amp; Links.</li>
-            <li>Connected libraries share in-flight refreshes, briefly reuse successful snapshots and refresh individual servers explicitly. Library badges and ordering reuse a prepared index.</li>
-            <li>Home bounds concurrent discovery work and updates affected add-on shelves without restarting unrelated shelves.</li>
-            <li>Metadata and service caches do less maintenance on each hit, have bounded disposable entries and coalesce purgeable writes.</li>
-            <li>Network responses are assembled in chunks; oversized downloads stop during transfer. Immediate playlist import reuses its validated download and batches category registration.</li>
-            <li>Catalog ordering and expired-guide cleanup use additional database indexes. Existing catalog contents and query behavior are retained.</li>
-            <li>Bitmap subtitles reuse unchanged layers, and diagnostics reuse their redaction patterns. Original hero and clear-art quality is preserved.</li>
-            </ul>
-            <h3>Apple TV details</h3>
-            <ul>
-            <li>Fullscreen hero artwork and existing native focus motion retain their original quality and presentation.</li>
-            <li>Connected-library and Home refreshes avoid repeated work while retaining current shelves and titles.</li>
-            </ul>
-            <h3>What to test</h3>
-            <p>Check Siri Remote sidebar, branch/episode/source selection, Menu return, cold household discovery, long playback, bitmap subtitles and iPhone remote seeking. Also test profile switching, offline/error recovery, media-server refreshes and one-time Android copies.</p>
-            <h3>Known limitations</h3>
-            <p>Existing CloudKit export backlogs/private-shared zone problems are not automatically repaired. Production-cloud convergence, sustained physical-device media/output compatibility and large-library performance still need validation. Some Apple translations and wider TV/iPad UI test coverage remain incomplete. The mobile hero follow-up fixes require fresh physical visual confirmation. No overall FPS, battery or startup percentage improvement is claimed.</p>
-            <p>Available to the existing Cedar External TestFlight group. This beta is not an App Store release.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 12 · September 9, 2026 · TestFlight beta</p>
+              <h3>Changes since build 11</h3>
+              <ul>
+              <li>Household &amp; Sync brings Apple household sharing, invitations, status and device controls together. Household discovery refreshes as iCloud imports arrive and shows initial download progress.</li>
+              <li>Replaying unchanged household profiles no longer creates new journal mutations. Copying a profile to Android is a one-time transfer and does not establish ongoing relay sync; existing links remain available under Advanced Transfers &amp; Links.</li>
+              <li>Connected libraries share in-flight refreshes, briefly reuse successful snapshots and refresh individual servers explicitly. Library badges and ordering reuse a prepared index.</li>
+              <li>Home bounds concurrent discovery work and updates affected add-on shelves without restarting unrelated shelves.</li>
+              <li>Metadata and service caches do less maintenance on each hit, have bounded disposable entries and coalesce purgeable writes.</li>
+              <li>Network responses are assembled in chunks; oversized downloads stop during transfer. Immediate playlist import reuses its validated download and batches category registration.</li>
+              <li>Catalog ordering and expired-guide cleanup use additional database indexes. Existing catalog contents and query behavior are retained.</li>
+              <li>Bitmap subtitles reuse unchanged layers, and diagnostics reuse their redaction patterns. Original hero and clear-art quality is preserved.</li>
+              </ul>
+              <h3>Apple TV details</h3>
+              <ul>
+              <li>Fullscreen hero artwork and existing native focus motion retain their original quality and presentation.</li>
+              <li>Connected-library and Home refreshes avoid repeated work while retaining current shelves and titles.</li>
+              </ul>
+              <h3>What to test</h3>
+              <p>Check Siri Remote sidebar, branch/episode/source selection, Menu return, cold household discovery, long playback, bitmap subtitles and iPhone remote seeking. Also test profile switching, offline/error recovery, media-server refreshes and one-time Android copies.</p>
+              <h3>Known limitations</h3>
+              <p>Existing CloudKit export backlogs/private-shared zone problems are not automatically repaired. Production-cloud convergence, sustained physical-device media/output compatibility and large-library performance still need validation. Some Apple translations and wider TV/iPad UI test coverage remain incomplete. The mobile hero follow-up fixes require fresh physical visual confirmation. No overall FPS, battery or startup percentage improvement is claimed.</p>
+              <p>Available to the existing Cedar External TestFlight group. This beta is not an App Store release.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-11">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-11">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-release-candidate">Release candidate</span>
               <span>Version 1.0.0</span>
               <span>Build 11</span>
               <time datetime="2026-09-09">September 9, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics.</p>
-            <h3>Improvements</h3>
-            <ul>
-            <li>Organized media-library folders can be the sole download destination, with movie/season naming and subtitle sidecars. Existing downloads and exports are preserved.</li>
-            <li>Reduced unnecessary iCloud writes and Home reloads when saved profile values have not changed.</li>
-            <li>Released obsolete database read snapshots to reduce checkpoint contention.</li>
-            <li>Overlapped Next Up metadata lookups and reduced unnecessary episode enrichment.</li>
-            <li>Improved artwork network-failure handling and repair diagnostics.</li>
-            </ul>
-            <h3>Please test</h3>
-            <ul>
-            <li>Select a profile, leave Home idle, then background and reopen Cedar. Check Home stability and sync status.</li>
-            <li>Verify Next Up episode selection and artwork.</li>
-            <li>Select an organized download destination, download a movie/episode with subtitles, relaunch, and reconnect an external folder. Confirm files are preserved and the chosen destination remains correct.</li>
-            <li>Check playback, source selection and settings on iPhone/iPad, Apple TV and Mac.</li>
-            </ul>
-            <h3>Known issue</h3>
-            <p>iCloud sync: iCloud exports can still be throttled and repeatedly retried by the system. These changes reduce new writes but do not claim to fix the existing CloudKit backlog or retry behavior. Please include device/OS and time of occurrence in feedback; do not send credentials or private media URLs.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Fewer unnecessary iCloud writes, improved Next Up loading, and clearer sync diagnostics.</p>
+              <h3>Improvements</h3>
+              <ul>
+              <li>Organized media-library folders can be the sole download destination, with movie/season naming and subtitle sidecars. Existing downloads and exports are preserved.</li>
+              <li>Reduced unnecessary iCloud writes and Home reloads when saved profile values have not changed.</li>
+              <li>Released obsolete database read snapshots to reduce checkpoint contention.</li>
+              <li>Overlapped Next Up metadata lookups and reduced unnecessary episode enrichment.</li>
+              <li>Improved artwork network-failure handling and repair diagnostics.</li>
+              </ul>
+              <h3>Please test</h3>
+              <ul>
+              <li>Select a profile, leave Home idle, then background and reopen Cedar. Check Home stability and sync status.</li>
+              <li>Verify Next Up episode selection and artwork.</li>
+              <li>Select an organized download destination, download a movie/episode with subtitles, relaunch, and reconnect an external folder. Confirm files are preserved and the chosen destination remains correct.</li>
+              <li>Check playback, source selection and settings on iPhone/iPad, Apple TV and Mac.</li>
+              </ul>
+              <h3>Known issue</h3>
+              <p>iCloud sync: iCloud exports can still be throttled and repeatedly retried by the system. These changes reduce new writes but do not claim to fix the existing CloudKit backlog or retry behavior. Please include device/OS and time of occurrence in feedback; do not send credentials or private media URLs.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-10">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">An organized changelog and improved guide identity for Home DVR scheduling.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-10">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">An organized changelog and improved guide identity for Home DVR scheduling.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 10</span>
               <time datetime="2026-09-08">September 8, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>An organized changelog and improved guide identity for Home DVR scheduling.</p>
-            <h3>Improvements</h3>
-            <ul>
-            <li>Changelog highlights the installed build and collapses other versions. Apple TV retains QR links and remote-friendly expansion controls.</li>
-            <li>Home DVR scheduling preserves explicit and XMLTV season/episode numbering. The recording Mac exports identified movies and episodes into media-server folders; unidentified broadcasts remain under Recordings.</li>
-            </ul>
-            <h3>Please test</h3>
-            <ul>
-            <li>Verify source setup, playback, settings navigation and household remote control.</li>
-            <li>Test library folders after relaunch and drive reconnection, export retries, and movie/episode matching in your media server. Refresh guide data to capture episode numbering formats. Existing exports are not renamed or overwritten.</li>
-            </ul>
-            <h3>Known limitations</h3>
-            <ul>
-            <li>Commercial detection and watch-while-recording are not included.</li>
-            <li>Signed folder-access and real-server scanning need device testing. Previously documented Mac household CloudKit-zone and legacy-Keychain migration limitations remain.</li>
-            </ul>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>An organized changelog and improved guide identity for Home DVR scheduling.</p>
+              <h3>Improvements</h3>
+              <ul>
+              <li>Changelog highlights the installed build and collapses other versions. Apple TV retains QR links and remote-friendly expansion controls.</li>
+              <li>Home DVR scheduling preserves explicit and XMLTV season/episode numbering. The recording Mac exports identified movies and episodes into media-server folders; unidentified broadcasts remain under Recordings.</li>
+              </ul>
+              <h3>Please test</h3>
+              <ul>
+              <li>Verify source setup, playback, settings navigation and household remote control.</li>
+              <li>Test library folders after relaunch and drive reconnection, export retries, and movie/episode matching in your media server. Refresh guide data to capture episode numbering formats. Existing exports are not renamed or overwritten.</li>
+              </ul>
+              <h3>Known limitations</h3>
+              <ul>
+              <li>Commercial detection and watch-while-recording are not included.</li>
+              <li>Signed folder-access and real-server scanning need device testing. Previously documented Mac household CloudKit-zone and legacy-Keychain migration limitations remain.</li>
+              </ul>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-9">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-9">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 9</span>
               <time datetime="2026-09-08">September 8, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.</p>
-            <h3>What changed</h3>
-            <ul>
-            <li>Onboarding posters are stationary, fill the window edges, and use a 12-degree angle.</li>
-            </ul>
-            <h3>Testing notes</h3>
-            <ul>
-            <li>Existing Mac household libraries with records split across private/shared CloudKit zones are not automatically repaired.</li>
-            <li>Signed-app migration of restricted legacy Mac credentials still needs real-device validation.</li>
-            <li>Phone-remote artwork and seeking still need verification during real TV playback.</li>
-            </ul>
-            <p>This is a TestFlight build, not an App Store release.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>A stationary, edge-to-edge onboarding poster wall with a stronger diagonal angle.</p>
+              <h3>What changed</h3>
+              <ul>
+              <li>Onboarding posters are stationary, fill the window edges, and use a 12-degree angle.</li>
+              </ul>
+              <h3>Testing notes</h3>
+              <ul>
+              <li>Existing Mac household libraries with records split across private/shared CloudKit zones are not automatically repaired.</li>
+              <li>Signed-app migration of restricted legacy Mac credentials still needs real-device validation.</li>
+              <li>Phone-remote artwork and seeking still need verification during real TV playback.</li>
+              </ul>
+              <p>This is a TestFlight build, not an App Store release.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-8">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-8">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 8</span>
               <time datetime="2026-09-08">September 8, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.</p>
-            <h3>What changed</h3>
-            <ul>
-            <li>Heroes always render full-screen, even when another device selects Card.</li>
-            <li>Removed touch-only settings and unavailable search results; external-player choices match installed TV apps.</li>
-            <li>Improved remote transport with authenticated artwork/status and seek support.</li>
-            <li>Hardware, installed-player, and touch-control preferences stay on each device. Languages and episode behavior remain shared.</li>
-            <li>Clearer iCloud sync errors and progress, plus corrected household migration ordering.</li>
-            </ul>
-            <h3>Testing notes</h3>
-            <ul>
-            <li>Check artwork loading and seeking during real playback; authenticated phone-to-TV connectivity was verified while idle.</li>
-            <li>Some existing Mac household libraries with records split across private/shared CloudKit zones still cannot export. This build does not automatically repair those libraries.</li>
-            </ul>
-            <p>This is a TestFlight build, not an App Store release.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Full-screen heroes, cleaner TV settings, local playback preferences, and improved phone remote control.</p>
+              <h3>What changed</h3>
+              <ul>
+              <li>Heroes always render full-screen, even when another device selects Card.</li>
+              <li>Removed touch-only settings and unavailable search results; external-player choices match installed TV apps.</li>
+              <li>Improved remote transport with authenticated artwork/status and seek support.</li>
+              <li>Hardware, installed-player, and touch-control preferences stay on each device. Languages and episode behavior remain shared.</li>
+              <li>Clearer iCloud sync errors and progress, plus corrected household migration ordering.</li>
+              </ul>
+              <h3>Testing notes</h3>
+              <ul>
+              <li>Check artwork loading and seeking during real playback; authenticated phone-to-TV connectivity was verified while idle.</li>
+              <li>Some existing Mac household libraries with records split across private/shared CloudKit zones still cannot export. This build does not automatically repair those libraries.</li>
+              </ul>
+              <p>This is a TestFlight build, not an App Store release.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-7">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Kept Apple TV artwork setup available through copied URLs and Cedar Link. Direct website-to-app artwork opening applied to iPhone, iPad and Mac.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-7">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Kept Apple TV artwork setup available through copied URLs and Cedar Link. Direct website-to-app artwork opening applied to iPhone, iPad and Mac.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 7</span>
               <time datetime="2026-09-08">September 8, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 7 · 2026-09-08</p>
-            <h3>What changed</h3>
-            <ul>
-            <li>Kept Apple TV artwork setup available through copied URLs and Cedar Link. Direct website-to-app artwork opening applied to iPhone, iPad and Mac.</li>
-            </ul>
-            <h3>Release status</h3>
-            <p>Available through TestFlight for eligible testers; this is not an App Store release. Status checked September 9, 2026.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 7 · 2026-09-08</p>
+              <h3>What changed</h3>
+              <ul>
+              <li>Kept Apple TV artwork setup available through copied URLs and Cedar Link. Direct website-to-app artwork opening applied to iPhone, iPad and Mac.</li>
+              </ul>
+              <h3>Release status</h3>
+              <p>Available through TestFlight for eligible testers; this is not an App Store release. Status checked September 9, 2026.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-5">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Blended hero backgrounds smoothly between titles and expanded Settings search with corrected destinations.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-5">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Blended hero backgrounds smoothly between titles and expanded Settings search with corrected destinations.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-release-candidate">Release candidate</span>
               <span>Version 1.0.0</span>
               <span>Build 5</span>
               <time datetime="2026-09-08">September 8, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 5 · 2026-09-08</p>
-            <h3>What changed</h3>
-            <ul>
-            <li>Blended hero backgrounds smoothly between titles and expanded Settings search with corrected destinations.</li>
-            </ul>
-            <h3>Release status</h3>
-            <p>Processed successfully. External TestFlight availability is not confirmed for this build; it is retained as a historical release candidate. Status checked September 9, 2026.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 5 · 2026-09-08</p>
+              <h3>What changed</h3>
+              <ul>
+              <li>Blended hero backgrounds smoothly between titles and expanded Settings search with corrected destinations.</li>
+              </ul>
+              <h3>Release status</h3>
+              <p>Processed successfully. External TestFlight availability is not confirmed for this build; it is retained as a historical release candidate. Status checked September 9, 2026.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-4">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Fixed watched episodes in Search → Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-4">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Fixed watched episodes in Search → Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
               <span>Build 4</span>
               <time datetime="2026-09-08">September 8, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 4 · 2026-09-08</p>
-            <h3>What changed</h3>
-            <ul>
-            <li>Fixed watched episodes in Search → Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.</li>
-            </ul>
-            <h3>Release status</h3>
-            <p>Available through TestFlight for eligible testers; this is not an App Store release. Status checked September 9, 2026.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 4 · 2026-09-08</p>
+              <h3>What changed</h3>
+              <ul>
+              <li>Fixed watched episodes in Search → Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.</li>
+              </ul>
+              <h3>Release status</h3>
+              <p>Available through TestFlight for eligible testers; this is not an App Store release. Status checked September 9, 2026.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-3">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Updated the interface and source terminology to Tobacco Ties while retaining compatible import formats.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-3">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Updated the interface and source terminology to Tobacco Ties while retaining compatible import formats.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-release-candidate">Release candidate</span>
               <span>Version 1.0.0</span>
               <span>Build 3</span>
               <time datetime="2026-09-08">September 8, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 3 · 2026-09-08</p>
-            <h3>What changed</h3>
-            <ul>
-            <li>Updated the interface and source terminology to Tobacco Ties while retaining compatible import formats.</li>
-            <li>Detail trailers used recognized YouTube links; retired trailer-provider settings were removed.</li>
-            <li>Updated detail, playback, guide, pairing and Home presentation.</li>
-            <li>Some revised strings still fell back to English. Physical-device playback, pairing, sync and accessibility acceptance remained open.</li>
-            </ul>
-            <h3>Release status</h3>
-            <p>Processed successfully. External TestFlight availability is not confirmed for this build; it is retained as a historical release candidate. Status checked September 9, 2026.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 3 · 2026-09-08</p>
+              <h3>What changed</h3>
+              <ul>
+              <li>Updated the interface and source terminology to Tobacco Ties while retaining compatible import formats.</li>
+              <li>Detail trailers used recognized YouTube links; retired trailer-provider settings were removed.</li>
+              <li>Updated detail, playback, guide, pairing and Home presentation.</li>
+              <li>Some revised strings still fell back to English. Physical-device playback, pairing, sync and accessibility acceptance remained open.</li>
+              </ul>
+              <h3>Release status</h3>
+              <p>Processed successfully. External TestFlight availability is not confirmed for this build; it is retained as a historical release candidate. Status checked September 9, 2026.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-2">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Repaired Apple TV Top Shelf device capabilities and added the required wide images with a Cedar wordmark fallback. This replaced the build 1 upload that Apple rejected during processing.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-2">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Repaired Apple TV Top Shelf device capabilities and added the required wide images with a Cedar wordmark fallback. This replaced the build 1 upload that Apple rejected during processing.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-release-candidate">Release candidate</span>
               <span>Version 1.0.0</span>
               <span>Build 2</span>
               <time datetime="2026-09-07">September 7, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <p>Build 2 · 2026-09-07</p>
-            <h3>What changed</h3>
-            <ul>
-            <li>Repaired Apple TV Top Shelf device capabilities and added the required wide images with a Cedar wordmark fallback. This replaced the build 1 upload that Apple rejected during processing.</li>
-            </ul>
-            <h3>Release status</h3>
-            <p>Processed successfully. External TestFlight availability is not confirmed for this build; it is retained as a historical release candidate. Status checked September 9, 2026.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>Build 2 · 2026-09-07</p>
+              <h3>What changed</h3>
+              <ul>
+              <li>Repaired Apple TV Top Shelf device capabilities and added the required wide images with a Cedar wordmark fallback. This replaced the build 1 upload that Apple rejected during processing.</li>
+              </ul>
+              <h3>Release status</h3>
+              <p>Processed successfully. External TestFlight availability is not confirmed for this build; it is retained as a historical release candidate. Status checked September 9, 2026.</p>
+            </div>
+          </details>
         </article>
-        <article class="release-entry" id="version-1-0-0-build-1">
-          <header>
-            <p class="eyebrow">Apple TV</p>
-            <h2>Version 1.0.0</h2>
-            <p class="release-summary">Initial Apple TV upload rejected during processing for Top Shelf capability and image requirements; corrected in build 2.</p>
-            <div class="release-metadata">
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-1">
+          <details>
+            <summary>
+              <h2>Version 1.0.0</h2>
+              <p class="release-summary">Initial Apple TV upload rejected during processing for Top Shelf capability and image requirements; corrected in build 2.</p>
+              <div class="release-metadata">
               <span class="release-status release-status-rejected">Rejected upload</span>
               <span>Version 1.0.0</span>
               <span>Build 1</span>
               <time datetime="2026-09-07">September 7, 2026</time>
             </div>
-          </header>
-          <div class="release-notes-body">
-            <h3>Highlights</h3>
-            <ul>
-            <li>Browse authorized personal media through a remote-first, ten-foot Home experience.</li>
-            <li>Customize branches and shelves for favorites, next plays, live channels, guide data, and provider collections.</li>
-            <li>Add M3U, Xtream-compatible, and XMLTV sources, then navigate a focused Live TV guide.</li>
-            <li>Resume playback, choose audio and subtitle tracks, and use controls designed for television focus.</li>
-            </ul>
-            <h3>Pair and sync</h3>
-            <ul>
-            <li>Pair Cedar devices over the local network.</li>
-            <li>Optionally sync profiles through private iCloud data, Cedar Household, or end-to-end encrypted Cedar Link.</li>
-            <li>Use Cedar without advertising, cross-app tracking, or a required Cedar account.</li>
-            </ul>
-            <h3>Release status</h3>
-            <p>Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.</p>
-          </div>
+            </summary>
+            <div class="release-notes-body">
+              <h3>Highlights</h3>
+              <ul>
+              <li>Browse authorized personal media through a remote-first, ten-foot Home experience.</li>
+              <li>Customize branches and shelves for favorites, next plays, live channels, guide data, and provider collections.</li>
+              <li>Add M3U, Xtream-compatible, and XMLTV sources, then navigate a focused Live TV guide.</li>
+              <li>Resume playback, choose audio and subtitle tracks, and use controls designed for television focus.</li>
+              </ul>
+              <h3>Pair and sync</h3>
+              <ul>
+              <li>Pair Cedar devices over the local network.</li>
+              <li>Optionally sync profiles through private iCloud data, Cedar Household, or end-to-end encrypted Cedar Link.</li>
+              <li>Use Cedar without advertising, cross-app tracking, or a required Cedar account.</li>
+              </ul>
+              <h3>Release status</h3>
+              <p>Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.</p>
+            </div>
+          </details>
         </article>
         </div>
       </main>
@@ -1166,7 +1214,7 @@
           <section class="site-footer-group">
             <h2>Products</h2>
             <ul>
-              <li><a href="/cedar-tv-updates/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
               <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
               <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
               <li><a href="/cedar-tv-updates/link/">Cedar Link</a></li>

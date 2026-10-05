@@ -26,6 +26,45 @@
       try { localStorage.setItem(key, preference); } catch {}
       apply();
     }));
+    document.querySelectorAll('.cedar-header').forEach(header => {
+      const toggle = header.querySelector('.cedar-menu-toggle');
+      const menu = header.querySelector('.cedar-menu');
+      if (!toggle || !menu) return;
+      const setOpen = open => {
+        toggle.setAttribute('aria-expanded', String(open));
+        header.classList.toggle('is-menu-open', open);
+      };
+      header.classList.add('has-menu-toggle');
+      toggle.hidden = false;
+      toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+      menu.addEventListener('click', event => { if (event.target.closest('a')) setOpen(false); });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && header.classList.contains('is-menu-open')) { setOpen(false); toggle.focus(); }
+      });
+    });
+    // Release notes keep earlier builds collapsed; open one when a link targets it.
+    const openLinkedRelease = () => {
+      let id = '';
+      try { id = decodeURIComponent((window.location.hash || '').slice(1)); } catch { return; }
+      const target = id ? document.getElementById(id) : null;
+      const details = target?.querySelector(':scope > details');
+      if (!details || details.open) return;
+      details.open = true;
+      target.scrollIntoView({ block: 'start' });
+    };
+    document.querySelectorAll('.release-history-controls').forEach(controls => {
+      const scope = controls.closest('section, main') ?? document;
+      controls.hidden = false;
+      controls.addEventListener('click', event => {
+        const button = event.target.closest('[data-release-expand]');
+        if (!button) return;
+        scope.querySelectorAll('.release-entry-collapsed > details').forEach(details => {
+          if (details.closest('section, main') === scope) details.open = button.dataset.releaseExpand === 'open';
+        });
+      });
+    });
+    window.addEventListener('hashchange', openLinkedRelease);
+    openLinkedRelease();
     const current = window.location.pathname.replace(/index\.html$/, '');
     document.querySelectorAll('.cedar-nav a').forEach(link => {
       const target = new URL(link.href);

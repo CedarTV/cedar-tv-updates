@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { footerStylesheet, renderSiteFooter, renderSiteHeader, themeAssets } from "./site_components.mjs";
+import { footerStylesheet, linkifyEscapedMarkdown, renderCollapsedRelease, renderReleaseHistoryHeading, renderSiteFooter, renderSiteHeader, themeAssets } from "./site_components.mjs";
 
 const repositoryRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const sourceCatalogPath = resolve(repositoryRoot, "release-notes/apple/releases.json");
@@ -121,7 +121,7 @@ function renderMarkdown(markdown, expectedTitle) {
   let listOpen = false;
   const closeParagraph = () => {
     if (paragraph.length > 0) {
-      output.push(`<p>${escapeHTML(paragraph.join(" "))}</p>`);
+      output.push(`<p>${linkifyEscapedMarkdown(escapeHTML(paragraph.join(" ")))}</p>`);
       paragraph = [];
     }
   };
@@ -151,7 +151,7 @@ function renderMarkdown(markdown, expectedTitle) {
         output.push("<ul>");
         listOpen = true;
       }
-      output.push(`<li>${escapeHTML(requireText(line.slice(2), `${expectedTitle} list item`, 500))}</li>`);
+      output.push(`<li>${linkifyEscapedMarkdown(escapeHTML(requireText(line.slice(2), `${expectedTitle} list item`, 500)))}</li>`);
       continue;
     }
     if (line.startsWith("#") || line.startsWith("-")) {
@@ -224,7 +224,7 @@ function renderIndex(releases) {
     title: "Cedar Apple release notes",
     description: "Versioned release notes for Cedar on iPhone, iPad, Apple TV, and Mac.",
     canonical: `${publicBaseURL}/`,
-    body: `      <main class="document-page release-page">
+    body: `      <main id="main" class="document-page release-page">
         <header class="document-header release-header">
           <p class="eyebrow">Release history</p>
           <h1>What’s new on every Apple device.</h1>
@@ -245,27 +245,36 @@ ${cards}
 }
 
 function renderPlatformPage(platform, releases) {
-  const entries = releases
-    .filter((release) => release.platform === platform.id)
-    .sort(compareReleases)
-    .map((release) => `        <article class="release-entry" id="${releaseAnchor(release)}">
+  const sorted = releases.filter((release) => release.platform === platform.id).sort(compareReleases);
+  const heading = (release) => escapeHTML(release.notesMarkdown.startsWith(`# ${platform.name} `) ? `Version ${release.version}` : `Cedar ${platform.shortName} ${release.version} · build ${release.build}`);
+  const [latest, ...earlier] = sorted;
+  const latestEntry = `        <article class="release-entry" id="${releaseAnchor(latest)}">
           <header>
-            <p class="eyebrow">${escapeHTML(platform.shortName)}</p>
-            <h2>${escapeHTML(release.notesMarkdown.startsWith(`# ${platform.name} `) ? `Version ${release.version}` : `Cedar ${platform.shortName} ${release.version} · build ${release.build}`)}</h2>
-            <p class="release-summary">${escapeHTML(release.summary)}</p>
-            ${releaseMetadata(release)}
+            <p class="eyebrow">Latest ${escapeHTML(platform.shortName)} build</p>
+            <h2>${heading(latest)}</h2>
+            <p class="release-summary">${escapeHTML(latest.summary)}</p>
+            ${releaseMetadata(latest)}
           </header>
           <div class="release-notes-body">
-${release.notesHTML.split("\n").map((line) => `            ${line}`).join("\n")}
+${latest.notesHTML.split("\n").map((line) => `            ${line}`).join("\n")}
           </div>
-        </article>`)
-    .join("\n");
+        </article>`;
+  const earlierEntries = earlier.map((release) => `        ${renderCollapsedRelease({
+    id: releaseAnchor(release),
+    heading: heading(release),
+    summary: escapeHTML(release.summary),
+    metadata: releaseMetadata(release),
+    notes: release.notesHTML,
+  })}`).join("\n");
+  const entries = earlier.length ? `${latestEntry}
+        ${renderReleaseHistoryHeading()}
+${earlierEntries}` : latestEntry;
 
   return pageShell({
     title: `${platform.name} release notes`,
     description: platform.description,
     canonical: `${publicBaseURL}/${platform.id}/`,
-    body: `      <main class="document-page release-page">
+    body: `      <main id="main" class="document-page release-page">
         <a class="release-back" href="${projectBasePath}/apple/releases/">All Apple release notes</a>
         <header class="document-header release-header">
           <p class="eyebrow">${escapeHTML(platform.shortName)} changelog</p>
