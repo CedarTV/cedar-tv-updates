@@ -4,10 +4,46 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "64",
+      "date": "2026-10-05",
+      "status": "testflight",
+      "summary": "External TestFlight. Download permissions, Cedar Library under Media Servers, Next Up, smarter described branches and faster source playback.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-64.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "64",
+      "date": "2026-10-05",
+      "status": "testflight",
+      "summary": "External TestFlight. Download permissions, Cedar Library under Media Servers, Next Up, smarter described branches and faster source playback.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-64.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "64",
+      "date": "2026-10-05",
+      "status": "testflight",
+      "summary": "External TestFlight. Cedar Library under Media Servers, Next Up, smarter described branches, consistent branch tabs and faster source playback.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-64.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "64",
+      "date": "2026-10-05",
+      "status": "testflight",
+      "summary": "External TestFlight. Download permissions, Sports Bar sidebar and team pages, Next Up, smarter described branches and faster source playback.",
+      "notes": "release-notes/apple/mac/1.0.0-build-64.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "62",
       "date": "2026-10-03",
       "status": "testflight",
-      "summary": "External TestFlight. Named Live TV lineups, linked-account Seerr sign-in, anime subtitle matching, soundtrack episode counts and improved add-on episode matching.",
+      "summary": "Released to External TestFlight. Named Live TV lineups, linked-account Seerr sign-in, anime subtitle matching, soundtrack episode counts and improved add-on episode matching.",
       "notes": "release-notes/apple/iphone/1.0.0-build-62.md"
     },
     {
@@ -16,7 +52,7 @@
       "build": "62",
       "date": "2026-10-03",
       "status": "testflight",
-      "summary": "External TestFlight. Named Live TV lineups, linked-account Seerr sign-in, anime subtitle matching, soundtrack episode counts and improved add-on episode matching.",
+      "summary": "Released to External TestFlight. Named Live TV lineups, linked-account Seerr sign-in, anime subtitle matching, soundtrack episode counts and improved add-on episode matching.",
       "notes": "release-notes/apple/ipad/1.0.0-build-62.md"
     },
     {
@@ -25,7 +61,7 @@
       "build": "62",
       "date": "2026-10-03",
       "status": "testflight",
-      "summary": "External TestFlight. Search Settings by control name, manage lineups from channel menus or programme long-press, and use improved Seerr, subtitle, soundtrack and episode matching.",
+      "summary": "Released to External TestFlight. Search Settings by control name, manage lineups from channel menus or programme long-press, and use improved Seerr, subtitle, soundtrack and episode matching.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-62.md"
     },
     {
@@ -34,7 +70,7 @@
       "build": "62",
       "date": "2026-10-03",
       "status": "testflight",
-      "summary": "External TestFlight. Manage named Live TV lineups with keyboard and pointer, with improved Seerr sign-in, subtitle archive matching, soundtrack counts and add-on episode matching.",
+      "summary": "Released to External TestFlight. Manage named Live TV lineups with keyboard and pointer, with improved Seerr sign-in, subtitle archive matching, soundtrack counts and add-on episode matching.",
       "notes": "release-notes/apple/mac/1.0.0-build-62.md"
     },
     {
@@ -1161,7 +1197,7 @@
       "build": "4",
       "date": "2026-09-08",
       "status": "expired",
-      "summary": "Fixed watched episodes in Search \u2192 Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
+      "summary": "Fixed watched episodes in Search → Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
       "notes": "release-notes/apple/mac/1.0.0-build-4.md"
     },
     {
@@ -1170,7 +1206,7 @@
       "build": "4",
       "date": "2026-09-08",
       "status": "testflight",
-      "summary": "Fixed watched episodes in Search \u2192 Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
+      "summary": "Fixed watched episodes in Search → Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
       "notes": "release-notes/apple/iphone/1.0.0-build-4.md"
     },
     {
@@ -1179,7 +1215,7 @@
       "build": "4",
       "date": "2026-09-08",
       "status": "testflight",
-      "summary": "Fixed watched episodes in Search \u2192 Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
+      "summary": "Fixed watched episodes in Search → Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
       "notes": "release-notes/apple/ipad/1.0.0-build-4.md"
     },
     {
@@ -1188,7 +1224,7 @@
       "build": "4",
       "date": "2026-09-08",
       "status": "testflight",
-      "summary": "Fixed watched episodes in Search \u2192 Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
+      "summary": "Fixed watched episodes in Search → Recently Viewed opening an invalid detail target. Episode cards opened their parent series while retaining history identity and episode progress.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-4.md"
     },
     {

@@ -1,12 +1,35 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled October 4, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled October 5, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 64 · 2026-10-05
+
+October 5, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Cedar asks once per profile before downloading from a media server or Cedar Library; change it in Downloads settings.
+- Cedar Library now lives under Media Servers and holds all your Tobacco Ties.
+- The Next Up shelf shows your next episodes; Continue Watching keeps only unfinished playback.
+- Described Home branches understand star ratings, vote counts, year ranges and excluded languages, and highest-rated lists skip titles with very few votes.
+- Expanded branches offer consistent All, Movies, TV Shows and, where available, Live TV tabs.
+- The Home hero button says what it opens, such as Go to Series or Go to Channel.
+- Choosing a source starts playback right away, and leaving the player returns to the details page.
+- Simkl Mark Watched covers every episode of a show, and the Parental Controls PIN locks briefly after repeated wrong entries.
+- Fixed poster badges overlapping the progress bar and spurious watched-state errors.
+
+#### Known issues
+
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-64)
 
 ### 1.0.0 · build 62 · 2026-10-03
 
@@ -832,6 +855,29 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 64 · 2026-10-05
+
+October 5, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Cedar asks once per profile before downloading from a media server or Cedar Library; change it in Downloads settings.
+- Cedar Library now lives under Media Servers and holds all your Tobacco Ties.
+- The Next Up shelf shows your next episodes; Continue Watching keeps only unfinished playback.
+- Described Home branches understand star ratings, vote counts, year ranges and excluded languages, and highest-rated lists skip titles with very few votes.
+- Expanded branches offer consistent All, Movies, TV Shows and, where available, Live TV tabs.
+- The Home hero button says what it opens, such as Go to Series or Go to Channel.
+- Choosing a source starts playback right away, and leaving the player returns to the details page.
+- Simkl Mark Watched covers every episode of a show, and the Parental Controls PIN locks briefly after repeated wrong entries.
+- Fixed poster badges overlapping the progress bar and spurious watched-state errors.
+
+#### Known issues
+
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-64)
+
 ### 1.0.0 · build 62 · 2026-10-03
 
 October 3, 2026 · Released to External TestFlight for iPad.
@@ -1655,6 +1701,28 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 64 · 2026-10-05
+
+October 5, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Cedar Library now lives under Media Servers and holds all your Tobacco Ties.
+- The Next Up shelf shows your next episodes; Continue Watching keeps only unfinished playback.
+- Described Home branches understand star ratings, vote counts, year ranges and excluded languages, and highest-rated lists skip titles with very few votes.
+- Expanded branches offer consistent All, Movies, TV Shows and, where available, Live TV tabs.
+- The Home hero button says what it opens, such as Go to Series or Go to Channel.
+- Choosing a source starts playback right away, and leaving the player returns to the details page.
+- Simkl Mark Watched covers every episode of a show, and the Parental Controls PIN locks briefly after repeated wrong entries.
+- Fixed poster badges overlapping the progress bar and spurious watched-state errors.
+
+#### Known issues
+
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-64)
+
 ### 1.0.0 · build 62 · 2026-10-03
 
 October 3, 2026 · Released to External TestFlight for Apple TV.
@@ -2384,6 +2452,30 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 64 · 2026-10-05
+
+October 5, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Cedar asks once per profile before downloading from a media server or Cedar Library; change it in Downloads settings.
+- Sports Bar (experimental) adds a sport sidebar, calendar-style day navigation, and team pages with recent matches and rosters.
+- Cedar Library now lives under Media Servers and holds all your Tobacco Ties.
+- The Next Up shelf shows your next episodes; Continue Watching keeps only unfinished playback.
+- Described Home branches understand star ratings, vote counts, year ranges and excluded languages, and highest-rated lists skip titles with very few votes.
+- Expanded branches offer consistent All, Movies, TV Shows and, where available, Live TV tabs.
+- The Home hero button says what it opens, such as Go to Series or Go to Channel.
+- Choosing a source starts playback right away, and leaving the player returns to the details page.
+- Simkl Mark Watched covers every episode of a show, and the Parental Controls PIN locks briefly after repeated wrong entries.
+- Fixed poster badges overlapping the progress bar and spurious watched-state errors.
+
+#### Known issues
+
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-64)
 
 ### 1.0.0 · build 62 · 2026-10-03
 
