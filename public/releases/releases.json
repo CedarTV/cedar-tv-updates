@@ -30,40 +30,40 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "64",
-      "date": "2026-10-05",
+      "build": "65",
+      "date": "2026-10-09",
       "status": "testflight",
-      "summary": "External TestFlight. Download permissions, Cedar Library under Media Servers, Next Up, smarter described branches and faster source playback.",
+      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and next-episode downloads.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "64",
-      "date": "2026-10-05",
+      "build": "65",
+      "date": "2026-10-09",
       "status": "testflight",
-      "summary": "External TestFlight. Download permissions, Cedar Library under Media Servers, Next Up, smarter described branches and faster source playback.",
+      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and next-episode downloads.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
       "id": "apple-tv",
       "name": "Cedar for Apple TV",
       "version": "1.0.0",
-      "build": "64",
-      "date": "2026-10-05",
+      "build": "65",
+      "date": "2026-10-09",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Library under Media Servers, Next Up, smarter described branches, consistent branch tabs and faster source playback.",
+      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and the Super Hero layout.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
       "id": "mac",
       "name": "Cedar for Mac",
       "version": "1.0.0",
-      "build": "64",
-      "date": "2026-10-05",
+      "build": "65",
+      "date": "2026-10-09",
       "status": "testflight",
-      "summary": "External TestFlight. Download permissions, Sports Bar sidebar and team pages, Next Up, smarter described branches and faster source playback.",
+      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and Sports Bar game details.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

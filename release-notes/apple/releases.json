@@ -4,10 +4,46 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "65",
+      "date": "2026-10-09",
+      "status": "testflight",
+      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and next-episode downloads.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-65.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "65",
+      "date": "2026-10-09",
+      "status": "testflight",
+      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and next-episode downloads.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-65.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "65",
+      "date": "2026-10-09",
+      "status": "testflight",
+      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and the Super Hero layout.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-65.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "65",
+      "date": "2026-10-09",
+      "status": "testflight",
+      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and Sports Bar game details.",
+      "notes": "release-notes/apple/mac/1.0.0-build-65.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "64",
       "date": "2026-10-05",
       "status": "testflight",
-      "summary": "External TestFlight. Download permissions, Cedar Library under Media Servers, Next Up, smarter described branches and faster source playback.",
+      "summary": "Released to External TestFlight. Download permissions, Cedar Library under Media Servers, Next Up, smarter described branches and faster source playback.",
       "notes": "release-notes/apple/iphone/1.0.0-build-64.md"
     },
     {
@@ -16,7 +52,7 @@
       "build": "64",
       "date": "2026-10-05",
       "status": "testflight",
-      "summary": "External TestFlight. Download permissions, Cedar Library under Media Servers, Next Up, smarter described branches and faster source playback.",
+      "summary": "Released to External TestFlight. Download permissions, Cedar Library under Media Servers, Next Up, smarter described branches and faster source playback.",
       "notes": "release-notes/apple/ipad/1.0.0-build-64.md"
     },
     {
@@ -25,7 +61,7 @@
       "build": "64",
       "date": "2026-10-05",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Library under Media Servers, Next Up, smarter described branches, consistent branch tabs and faster source playback.",
+      "summary": "Released to External TestFlight. Cedar Library under Media Servers, Next Up, smarter described branches, consistent branch tabs and faster source playback.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-64.md"
     },
     {
@@ -34,7 +70,7 @@
       "build": "64",
       "date": "2026-10-05",
       "status": "testflight",
-      "summary": "External TestFlight. Download permissions, Sports Bar sidebar and team pages, Next Up, smarter described branches and faster source playback.",
+      "summary": "Released to External TestFlight. Download permissions, Sports Bar sidebar and team pages, Next Up, smarter described branches and faster source playback.",
       "notes": "release-notes/apple/mac/1.0.0-build-64.md"
     },
     {

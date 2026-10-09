@@ -1,12 +1,41 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled October 5, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled October 9, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 65 · 2026-10-09
+
+October 9, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Downloads can auto-fetch next episodes, save to several locations including external storage, and organize files for Plex, Jellyfin and Emby.
+- Customize the profile menu in Settings › Navigation.
+- My Taste Home: an optional Home filled with For You, Because You Watched and genre picks from what you watch, with “Why am I seeing this?” and Not Interested.
+- Viewing Stats show your viewing time, genres and trends, synced across the profile’s devices.
+- Hide genres you never want to see from Home, Search and Explore.
+- Cedar works as its own tracking service, adds AniList and MyAnimeList, and shares tracking accounts with the profile’s household devices.
+- Custom appearance adds soft light or dark background colours.
+- Custom channel presets rebuild classic lineups like Saturday morning cartoons, retro networks and soap operas.
+- Audio Boost lifts quiet dialogue without distorting loud scenes.
+- Describe understands TV categories like soap operas and reality TV, networks, countries and topics, and tells you what it applied.
+- Stream Tags in the source picker, with installable tag packs, source-type priority and an IMAX-first option.
+- Live TV catch-up shows your provider’s full archive and plays reliably.
+- The calendar shows the past week alongside the weeks ahead.
+- Fixed brief player stutters during long playback.
+
+#### Known issues
+
+- Audio Boost is unavailable when AAC, Dolby Digital, Dolby Digital Plus or Atmos audio passes through unchanged.
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-65)
 
 ### 1.0.0 · build 64 · 2026-10-05
 
@@ -855,6 +884,35 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 65 · 2026-10-09
+
+October 9, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Downloads can auto-fetch next episodes, save to several locations including external storage, and organize files for Plex, Jellyfin and Emby.
+- Customize the profile menu in Settings › Navigation.
+- My Taste Home: an optional Home filled with For You, Because You Watched and genre picks from what you watch, with “Why am I seeing this?” and Not Interested.
+- Viewing Stats show your viewing time, genres and trends, synced across the profile’s devices.
+- Hide genres you never want to see from Home, Search and Explore.
+- Cedar works as its own tracking service, adds AniList and MyAnimeList, and shares tracking accounts with the profile’s household devices.
+- Custom appearance adds soft light or dark background colours.
+- Custom channel presets rebuild classic lineups like Saturday morning cartoons, retro networks and soap operas.
+- Audio Boost lifts quiet dialogue without distorting loud scenes.
+- Describe understands TV categories like soap operas and reality TV, networks, countries and topics, and tells you what it applied.
+- Stream Tags in the source picker, with installable tag packs, source-type priority and an IMAX-first option.
+- Live TV catch-up shows your provider’s full archive and plays reliably.
+- The calendar shows the past week alongside the weeks ahead.
+- Fixed brief player stutters during long playback.
+
+#### Known issues
+
+- Audio Boost is unavailable when AAC, Dolby Digital, Dolby Digital Plus or Atmos audio passes through unchanged.
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-65)
+
 ### 1.0.0 · build 64 · 2026-10-05
 
 October 5, 2026 · Released to External TestFlight for iPad.
@@ -1701,6 +1759,34 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 65 · 2026-10-09
+
+October 9, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- New Super Hero Home layout and a poster size setting.
+- My Taste Home: an optional Home filled with For You, Because You Watched and genre picks from what you watch, with “Why am I seeing this?” and Not Interested.
+- Viewing Stats show your viewing time, genres and trends, synced across the profile’s devices.
+- Hide genres you never want to see from Home, Search and Explore.
+- Cedar works as its own tracking service, adds AniList and MyAnimeList, and shares tracking accounts with the profile’s household devices.
+- Custom appearance adds soft light or dark background colours.
+- Custom channel presets rebuild classic lineups like Saturday morning cartoons, retro networks and soap operas.
+- Audio Boost lifts quiet dialogue without distorting loud scenes.
+- Describe understands TV categories like soap operas and reality TV, networks, countries and topics, and tells you what it applied.
+- Stream Tags in the source picker, with installable tag packs, source-type priority and an IMAX-first option.
+- Live TV catch-up shows your provider’s full archive and plays reliably.
+- The calendar shows the past week alongside the weeks ahead.
+- Fixed brief player stutters during long playback.
+
+#### Known issues
+
+- Audio Boost is unavailable when AAC, Dolby Digital, Dolby Digital Plus or Atmos audio passes through unchanged.
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-65)
+
 ### 1.0.0 · build 64 · 2026-10-05
 
 October 5, 2026 · Released to External TestFlight for Apple TV.
@@ -2452,6 +2538,35 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 65 · 2026-10-09
+
+October 9, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Downloads can auto-fetch next episodes, save to several locations including external storage, and organize files for Plex, Jellyfin and Emby.
+- Sports Bar (experimental) game pages add box scores, win probability, team stats and player details.
+- My Taste Home: an optional Home filled with For You, Because You Watched and genre picks from what you watch, with “Why am I seeing this?” and Not Interested.
+- Viewing Stats show your viewing time, genres and trends, synced across the profile’s devices.
+- Hide genres you never want to see from Home, Search and Explore.
+- Cedar works as its own tracking service, adds AniList and MyAnimeList, and shares tracking accounts with the profile’s household devices.
+- Custom appearance adds soft light or dark background colours.
+- Custom channel presets rebuild classic lineups like Saturday morning cartoons, retro networks and soap operas.
+- Audio Boost lifts quiet dialogue without distorting loud scenes.
+- Describe understands TV categories like soap operas and reality TV, networks, countries and topics, and tells you what it applied.
+- Stream Tags in the source picker, with installable tag packs, source-type priority and an IMAX-first option.
+- Live TV catch-up shows your provider’s full archive and plays reliably.
+- The calendar shows the past week alongside the weeks ahead.
+- Fixed brief player stutters during long playback.
+
+#### Known issues
+
+- Audio Boost is unavailable when AAC, Dolby Digital, Dolby Digital Plus or Atmos audio passes through unchanged.
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-65)
 
 ### 1.0.0 · build 64 · 2026-10-05
 
