@@ -176,7 +176,7 @@ Verify with `node --test test/studio.test.mjs` and `node scripts/verify_studio_b
 ## Tobacco Ties
 
 `public/create-tobacco-tie/` generates a portable username and password locally in the browser.
-In Tobacco Tie settings, enter the displayed server URL yourself and paste both credentials.
+In Cedar, open Settings → Connections & Services → Media Servers → Add Connection → Cedar Library, choose Add a Tobacco Tie, then enter the displayed server URL and both credentials.
 Cedar checks that server without sending the credentials, then decodes and installs the source.
 Legacy codes and `cedar://tie/` links remain available for older apps and through the code import option.
 Anyone holding both credentials or a complete code can install the tie; keep configured ties private. See
