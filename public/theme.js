@@ -4,6 +4,21 @@
   const valid = value => ['light', 'dark', 'system'].includes(value);
   const system = window.matchMedia('(prefers-color-scheme: dark)');
   let preference = 'system';
+  // Seasonal accent: October 1 – November 1 (site visitor's local date). ?halloween=on|off overrides and is remembered.
+  const seasonKey = 'cedar-season';
+  const season = (() => {
+    let override = null;
+    try {
+      const asked = new URLSearchParams(location.search).get('halloween');
+      if (asked === 'on' || asked === 'off') localStorage.setItem(seasonKey, asked);
+      override = localStorage.getItem(seasonKey);
+    } catch {}
+    if (override === 'on') return true;
+    if (override === 'off') return false;
+    const now = new Date();
+    return now.getMonth() === 9 || (now.getMonth() === 10 && now.getDate() === 1);
+  })();
+  if (season) document.documentElement.dataset.season = 'halloween';
   try { const saved = localStorage.getItem(key); if (valid(saved)) preference = saved; } catch {}
   function apply() {
     const theme = preference === 'system' ? (system.matches ? 'dark' : 'light') : preference;

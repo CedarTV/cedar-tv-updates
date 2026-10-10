@@ -122,3 +122,33 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 [data-theme="light"] .status-pill[data-status="release-candidate"] { color: var(--muted); background: var(--surface-raised); border-color: var(--line); }
 [data-theme="light"] .install-help code { background: var(--surface-raised); }
 [data-theme="light"] .platform-action { background: var(--surface); }
+
+/* Halloween accent (October 1 – November 1, or ?halloween=on). Colours only; layout and copy are untouched. */
+:root[data-season="halloween"] {
+  --cedar: #ff9d42;
+  --cedar-bright: #ffc27a;
+  --warm: #b78cff;
+  --green: #ff9d42;
+  --on-accent: #1a0e04;
+}
+:root[data-season="halloween"][data-theme="light"] {
+  --cedar: #a8480c;
+  --cedar-bright: #823508;
+  --warm: #5b3a99;
+  --green: #a8480c;
+  --on-accent: #ffffff;
+}
+:root[data-season="halloween"][data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(255, 122, 24, 0.16), transparent 30rem),
+    radial-gradient(circle at 16% 52%, rgba(120, 70, 200, 0.14), transparent 30rem),
+    var(--bg);
+}
+:root[data-season="halloween"][data-theme="light"] body {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(255, 140, 50, 0.14), transparent 30rem),
+    radial-gradient(circle at 16% 52%, rgba(120, 80, 200, 0.08), transparent 30rem),
+    var(--bg);
+}
+:root[data-season="halloween"] .cedar-header { border-bottom-color: color-mix(in srgb, var(--cedar) 45%, var(--line)); }
+:root[data-season="halloween"] :focus-visible { outline-color: var(--cedar-bright); }
