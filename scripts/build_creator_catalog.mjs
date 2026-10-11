@@ -18,6 +18,8 @@ const catalogPath = resolve(root, "public/catalogs/creator.json");
 export const previewImageHosts = ["image.tmdb.org", "raw.githubusercontent.com"];
 const previewImageHostSuffixes = [".github.io"];
 const secretKeyPattern = /(api[-_]?key|token|secret|password|passwd|auth|session|cookie|credential)/i;
+// Cedar's BranchLeafKind. An unknown value makes Cedar reject the whole file.
+const categoryKinds = new Set(["network", "studio", "company", "genre", "decade", "director", "actor", "award"]);
 const uuidPattern = /^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$/i;
 
 const argumentsList = process.argv.slice(2);
@@ -98,6 +100,9 @@ for (const entry of manifest.setups) {
     isPortable(branch.dataSource, path);
     for (const folder of branch.folderOptions || []) {
       isPortable(folder.dataSource, `${path} / ${folder.title}`);
+      if (folder.categoryIdentity && !categoryKinds.has(folder.categoryIdentity.kind)) {
+        fail(`${path} / ${folder.title}: categoryIdentity kind "${folder.categoryIdentity.kind}" is not one Cedar reads (${[...categoryKinds].join(", ")})`);
+      }
       for (const source of folder.sources || []) isPortable(source.dataSource, `${path} / ${folder.title} / ${source.title}`);
       for (const key of ["coverImageURL", "heroBackdropURL"]) {
         if (folder[key] && !previewImage(folder[key])) warnings.push(`${path} / ${folder.title}: ${key} is hosted on ${new URL(folder[key]).host}`);

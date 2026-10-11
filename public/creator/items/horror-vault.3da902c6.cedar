@@ -287,11 +287,7 @@
           ],
           "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzV1OG03cC53ZWJw",
           "tileShape": "landscape",
-          "hidesTitle": true,
-          "categoryIdentity": {
-            "kind": "streamingProvider",
-            "identifier": "99"
-          }
+          "hidesTitle": true
         },
         {
           "id": "folder-5",
