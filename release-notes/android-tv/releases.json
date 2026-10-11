@@ -176,6 +176,15 @@
   "previews": [
     {
       "platform": "android-tv",
+      "version": "1.3.0-preview.8",
+      "build": "8",
+      "date": "2026-10-11",
+      "status": "preview",
+      "summary": "Quick Actions on Home, Live TV Channel Details and Other Sources, tvOS-style Search and Settings search, fuller artwork, and fixed profile copies from Apple devices.",
+      "notes": "release-notes/android-tv/1.3.0-preview.8.md"
+    },
+    {
+      "platform": "android-tv",
       "version": "1.3.0-preview.7",
       "build": "7",
       "date": "2026-10-03",
