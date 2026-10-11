@@ -1,0 +1,6697 @@
+{
+  "branches" : [
+    {
+      "dataSource" : {
+        "identifier" : "cedar.branch-group",
+        "kind" : "custom",
+        "parameters" : {
+          "cedar.home.displaysFolderCards" : "true",
+          "cedar.home.folderRole" : "folder",
+          "cedar.home.leafBrowseLayout" : "rows"
+        }
+      },
+      "defaultFilters" : {
+        "contentType" : "both",
+        "countryCodes" : [
+
+        ],
+        "genreIDs" : [
+
+        ],
+        "networkIDs" : [
+
+        ],
+        "originalLanguageCodes" : [
+
+        ],
+        "productionCompanyIDs" : [
+
+        ],
+        "streamingProviderIDs" : [
+
+        ]
+      },
+      "folderOptions" : [
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzRhamUxby53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "049AE346-E3A3-4656-9272-957B0B51D04B",
+          "query" : {
+            "identifier" : "snoak|latest-horror-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "128045"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "snoak|latest-horror-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "128045"
+                }
+              },
+              "title" : "Latest Horror Movies"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "jaskraus|top-recent-horror-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Top Recent Horror Movies"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Latest horror movies"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzQ5bzh3ai53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "shows",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "2C8A4496-B9A7-46FB-84E2-C2B5EF884615",
+          "query" : {
+            "identifier" : "snoak|latest-horror-shows",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "128046"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "snoak|latest-horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "128046"
+                }
+              },
+              "title" : "Latest Horror Shows"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "jarvis-16255551|latest-top-horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "172541"
+                }
+              },
+              "title" : "Latest Top Horror Shows"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Latest horror shows"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3luMjF0MS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "254A77A3-3CA2-4527-98CA-445E64203294",
+          "query" : {
+            "identifier" : "lish408|popular-horror",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "lish408|popular-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Popular Horror"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Popular horror Movies"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzd1d2xuYS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "DFB648F7-9130-49E5-A770-A7329A3D1A5C",
+          "query" : {
+            "identifier" : "lish408|popular-horror",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "lish408|popular-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Popular Horror"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Popular Horror Shows"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3llcTk4My53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "6212AC88-BFFA-4E0D-867A-BA052A10195F",
+          "query" : {
+            "identifier" : "hdlists|horror-movies-top-rated-from-1960-to-today",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "2410"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "hdlists|horror-movies-top-rated-from-1960-to-today",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "2410"
+                }
+              },
+              "title" : "Horror Movies (Top Rated From 1960 to Today)"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "jarvis-16255551|best-horror-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "172565"
+                }
+              },
+              "title" : "Best horror movies"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Best Horror Movies"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2txeGJ1Zy53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "shows",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "14621969-EC89-4B6F-BD07-8966BCC832D9",
+          "query" : {
+            "identifier" : "jarvis-16255551|best-horror-shows",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "172563"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "jarvis-16255551|best-horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "172563"
+                }
+              },
+              "title" : "Best horror shows"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Best Horror Shows"
+        }
+      ],
+      "id" : "06FAE67B-77DB-546E-8DD0-FF1BE3D920F7",
+      "isEnabled" : true,
+      "position" : 0,
+      "presentation" : {
+        "enhancedPostersEnabled" : false,
+        "ratings" : {
+          "isEnabled" : false,
+          "providerIDs" : [
+
+          ]
+        },
+        "templateID" : "wide-backdrop-carousel"
+      },
+      "profileID" : "00000000-0000-0000-0000-000000000000",
+      "query" : {
+        "identifier" : "snoak|latest-horror-movies",
+        "kind" : "curatedList",
+        "parameters" : {
+          "listID" : "128045"
+        }
+      },
+      "schemaVersion" : 2,
+      "title" : "Discovery"
+    },
+    {
+      "dataSource" : {
+        "identifier" : "cedar.branch-group",
+        "kind" : "custom",
+        "parameters" : {
+          "cedar.home.displaysFolderCards" : "true",
+          "cedar.home.folderRole" : "folder",
+          "cedar.home.leafBrowseLayout" : "rows"
+        }
+      },
+      "defaultFilters" : {
+        "contentType" : "both",
+        "countryCodes" : [
+
+        ],
+        "genreIDs" : [
+
+        ],
+        "networkIDs" : [
+
+        ],
+        "originalLanguageCodes" : [
+
+        ],
+        "productionCompanyIDs" : [
+
+        ],
+        "streamingProviderIDs" : [
+
+        ]
+      },
+      "folderOptions" : [
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2sycTF3Yy53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "D876B7B2-174E-4C62-95DE-932DEC9FEE24",
+          "query" : {
+            "identifier" : "majeed_pk|top-200-psychological-thrillers",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "majeed_pk|top-200-psychological-thrillers",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Top 200 Psychological Thrillers"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Psychological"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzBzNmI3Mi53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "6594098C-A2EC-46F5-9095-9EF1F175113D",
+          "query" : {
+            "identifier" : "ravynloony|2000s-supernatural-horror-films",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "ravynloony|2000s-supernatural-horror-films",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "2000s supernatural horror films"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Supernatural"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2U4aHBvdy5qcGVn",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "0143DB8B-0E58-40B1-A150-7867C7D8A6E8",
+          "query" : {
+            "identifier" : "sysops|found-footage",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "25504"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "sysops|found-footage",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "25504"
+                }
+              },
+              "title" : "Found Footage"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "windphoenix_|found-footage-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Found Footage Horror"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Found footage"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2RudmJobC53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "7016E8A0-0CBF-42C6-A1AF-2A77E289DEFA",
+          "query" : {
+            "identifier" : "agentsar|slasher",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "107568"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "agentsar|slasher",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "107568"
+                }
+              },
+              "title" : "Slasher"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "zephir|the-horror-club-the-best-of-slasher-flicks",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "The Horror Club: The Best of... Slasher Flicks!"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Slasher"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3kwM215ci53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "1E737457-4A77-489E-8FED-9F17CCD702AF",
+          "query" : {
+            "identifier" : "axolotlsmile|disturbing-films",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "axolotlsmile|disturbing-films",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Disturbing Films"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Disturbing Films"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3h6aXdscC53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "800EC584-A241-4652-8531-EC2ED358694F",
+          "query" : {
+            "identifier" : "atalante421|zombies-living-dead",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "132038"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "atalante421|zombies-living-dead",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "132038"
+                }
+              },
+              "title" : "Zombies & Living Dead"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "sp1ti|the-horror-club-the-best-of-zombie-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "The Horror Club: The Best of… Zombie Horror!"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Zombies & Living Dead"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2J0cHMyMS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "9652CBC8-42A1-4288-8B15-AE77CAC1A3D4",
+          "query" : {
+            "identifier" : "gnislew|horror-classics",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "gnislew|horror-classics",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Horror Classics"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Horror Classics"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzIzbXoyZS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "81E648FC-8643-4EBD-831D-D3655B229D59",
+          "query" : {
+            "identifier" : "x0r|top-50-cult-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "x0r|top-50-cult-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Top 50 cult movies"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Cult"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2t4cHA3My53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "57457643-8ABA-4AA4-8EFA-24EAA1B6A125",
+          "query" : {
+            "identifier" : "garycrawfordgc|horror-shows",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "3124"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "garycrawfordgc|horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "3124"
+                }
+              },
+              "title" : "Horror Shows"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "garycrawfordgc|horror",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "3110"
+                }
+              },
+              "title" : "Horror"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Comedy"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzIwOTVnei53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "6FBD1C6F-FDF6-4864-9C69-C0140B1FBDE2",
+          "query" : {
+            "identifier" : "sp1ti|the-horror-club-the-best-of-haunted-house-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "sp1ti|the-horror-club-the-best-of-haunted-house-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "The Horror Club: The Best of… Haunted House Movies!"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Haunted houses"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2RzaHZvby53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "144E7EB2-BD40-459B-BED3-5BD7FB375A13",
+          "query" : {
+            "identifier" : "hdlists|mindfuck-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "3892"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "hdlists|mindfuck-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "3892"
+                }
+              },
+              "title" : "Mindfuck Movies"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "MindFuck"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3Q4ZTQwcS53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "17DB0742-4FA7-4865-9351-5F4C12A29ED5",
+          "query" : {
+            "identifier" : "hdlists|halloween-movies-the-best-of-all-time",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "41422"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "hdlists|halloween-movies-the-best-of-all-time",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "41422"
+                }
+              },
+              "title" : "Halloween Movies - The Best of All Time"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "garycrawfordgc|horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "3124"
+                }
+              },
+              "title" : "Horror Shows"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Halloween"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL20wdzhuci53ZWJw",
+          "dataSource" : {
+            "kind" : "preferredMetadata",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "8F2FF449-E51A-488F-91A4-8ADF7FA6D42C",
+          "query" : {
+            "identifier" : "external-collection-discovery",
+            "kind" : "custom",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "kind" : "preferredMetadata",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+                  "27",
+                  "16"
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "sortOrder" : "popularity",
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "external-collection-discovery",
+                "kind" : "custom",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Animation"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "Animation"
+        }
+      ],
+      "id" : "FA02D2FD-FE79-583F-88BD-973D03E89426",
+      "isEnabled" : true,
+      "position" : 1,
+      "presentation" : {
+        "enhancedPostersEnabled" : false,
+        "ratings" : {
+          "isEnabled" : false,
+          "providerIDs" : [
+
+          ]
+        },
+        "templateID" : "wide-backdrop-carousel"
+      },
+      "profileID" : "00000000-0000-0000-0000-000000000000",
+      "query" : {
+        "identifier" : "majeed_pk|top-200-psychological-thrillers",
+        "kind" : "curatedList",
+        "parameters" : {
+
+        }
+      },
+      "schemaVersion" : 2,
+      "title" : "Horror genre"
+    },
+    {
+      "dataSource" : {
+        "identifier" : "cedar.branch-group",
+        "kind" : "custom",
+        "parameters" : {
+          "cedar.home.displaysFolderCards" : "true",
+          "cedar.home.folderRole" : "folder",
+          "cedar.home.leafBrowseLayout" : "rows"
+        }
+      },
+      "defaultFilters" : {
+        "contentType" : "both",
+        "countryCodes" : [
+
+        ],
+        "genreIDs" : [
+
+        ],
+        "networkIDs" : [
+
+        ],
+        "originalLanguageCodes" : [
+
+        ],
+        "productionCompanyIDs" : [
+
+        ],
+        "streamingProviderIDs" : [
+
+        ]
+      },
+      "folderOptions" : [
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3c2ZHBjcC53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/dd0013d4-d49c-4596-93c6-94013da6d202.jpg",
+          "hidesTitle" : true,
+          "id" : "9F30767F-38BF-451B-9CF2-9BC529C1993B",
+          "query" : {
+            "identifier" : "csrz|rank-a24-horror",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "csrz|rank-a24-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Rank : A24 Horror"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "nobnobz|studio-a24",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "159693"
+                }
+              },
+              "title" : "[Studio] A24"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "A24"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3djZ2NheC53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "0E0594F4-03E0-4C0C-BB24-7654F6FAA692",
+          "query" : {
+            "identifier" : "auwboyz|netflix-horror-tv",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "auwboyz|netflix-horror-tv",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Netflix Horror Tv"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "snoak|latest-netflix-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "86752"
+                }
+              },
+              "title" : "Latest Netflix Movies"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-3",
+              "query" : {
+                "identifier" : "snoak|latest-netflix-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "86751"
+                }
+              },
+              "title" : "Latest Netflix Shows"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Netflix"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL20wZHhmMS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "957E3C05-F93D-4967-9DB1-3F3E87213117",
+          "query" : {
+            "identifier" : "mitchelll98|movies-hbo-max",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "mitchelll98|movies-hbo-max",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Movies - HBO Max"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "snoak|latest-hbo-max-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "89647"
+                }
+              },
+              "title" : "Latest HBO Max Movies"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-3",
+              "query" : {
+                "identifier" : "snoak|latest-hbo-max-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "89649"
+                }
+              },
+              "title" : "Latest HBO Max Shows"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "HBO"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2swam0yZi53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "shows",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "B5DBA2B8-2700-40AE-89C8-77309B2DFAE4",
+          "query" : {
+            "identifier" : "jarvis-16255551|tubi-horror-shows",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "171129"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "jarvis-16255551|tubi-horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "171129"
+                }
+              },
+              "title" : "Tubi horror shows"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Tubi"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzV1OG03cC53ZWJw",
+          "dataSource" : {
+            "kind" : "preferredMetadata",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "88CE9898-AC51-40C4-ABFB-CACFFBA7FE42",
+          "query" : {
+            "identifier" : "external-collection-discovery",
+            "kind" : "custom",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "kind" : "preferredMetadata",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+                  "27"
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+                  "142877"
+                ],
+                "sortOrder" : "popularity",
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "external-collection-discovery",
+                "kind" : "custom",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Shudder"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Shudder"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2xpaDJrdi53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "88DFD2C2-C9EF-4447-83C5-978869FAB018",
+          "query" : {
+            "identifier" : "jarvis-16255551|20th-century-fox-horror-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "173043"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "jarvis-16255551|20th-century-fox-horror-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "173043"
+                }
+              },
+              "title" : "20th century fox horror movies"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "jarvis-16255551|20th-century-fox-horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "173044"
+                }
+              },
+              "title" : "20th century fox horror shows"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "FX horror"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL21vd3BpaS53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "48F2BB51-76F1-48E6-9445-58CB7579D2FC",
+          "query" : {
+            "identifier" : "jarvis-16255551|screambox-horror-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "173127"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "jarvis-16255551|screambox-horror-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "173127"
+                }
+              },
+              "title" : "Screambox Horror Movies"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "jarvis-16255551|screambox-horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "173134"
+                }
+              },
+              "title" : "Screambox horror shows"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Screambox"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzkzeDRtaC53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "F4AB762B-53BB-46DF-9C09-2732F610F963",
+          "query" : {
+            "identifier" : "shaverz|blumhouse",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "shaverz|blumhouse",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Blumhouse"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Blumhouse"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2NpNmNqci53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "33BCC851-77E1-4E11-94E2-269F40D0FC6E",
+          "query" : {
+            "identifier" : "goryaur|disney-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "goryaur|disney-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Disney+ Movies"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Disney"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2N5ZDN3Mi53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "6A3CBB9A-2348-4C0A-9EAF-F5312DF39D60",
+          "query" : {
+            "identifier" : "ashleyangel|20th-century-fox",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "ashleyangel|20th-century-fox",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "20th Century FOX"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "jarvis-16255551|20th-century-fox-horror-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "173043"
+                }
+              },
+              "title" : "20th century fox horror movies"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "shows",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-3",
+              "query" : {
+                "identifier" : "jarvis-16255551|20th-century-fox-horror-shows",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "173044"
+                }
+              },
+              "title" : "20th century fox horror shows"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "20th Century Horror"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3J6bWNjMS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "0089FA09-372D-4EEC-8A2F-2A40AAE81907",
+          "query" : {
+            "identifier" : "666jascha|neon-studio-ranking",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "666jascha|neon-studio-ranking",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "NEON Studio Ranking"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Neon"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzNndTNsYy53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "A210E34A-A8B9-4D7C-9D66-4E8759C9B494",
+          "query" : {
+            "identifier" : "northernwish|japanese-horror-the-criterion-channel",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "northernwish|japanese-horror-the-criterion-channel",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Japanese Horror - The Criterion Channel"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Criterion"
+        }
+      ],
+      "id" : "08BBED1F-0178-5649-BBD0-AD0B90D6C585",
+      "isEnabled" : true,
+      "position" : 2,
+      "presentation" : {
+        "enhancedPostersEnabled" : false,
+        "ratings" : {
+          "isEnabled" : false,
+          "providerIDs" : [
+
+          ]
+        },
+        "templateID" : "wide-backdrop-carousel"
+      },
+      "profileID" : "00000000-0000-0000-0000-000000000000",
+      "query" : {
+        "identifier" : "csrz|rank-a24-horror",
+        "kind" : "curatedList",
+        "parameters" : {
+
+        }
+      },
+      "schemaVersion" : 2,
+      "title" : "Horror Studios"
+    },
+    {
+      "dataSource" : {
+        "identifier" : "cedar.branch-group",
+        "kind" : "custom",
+        "parameters" : {
+          "cedar.home.displaysFolderCards" : "true",
+          "cedar.home.folderRole" : "folder",
+          "cedar.home.leafBrowseLayout" : "rows"
+        }
+      },
+      "defaultFilters" : {
+        "contentType" : "both",
+        "countryCodes" : [
+
+        ],
+        "genreIDs" : [
+
+        ],
+        "networkIDs" : [
+
+        ],
+        "originalLanguageCodes" : [
+
+        ],
+        "productionCompanyIDs" : [
+
+        ],
+        "streamingProviderIDs" : [
+
+        ]
+      },
+      "folderOptions" : [
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3R0dXJwMi53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "892F136E-F875-4C41-9AEA-CA6D59778CAE",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-horror-1900-1949",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "41048"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-horror-1900-1949",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "41048"
+                }
+              },
+              "title" : "Top Horror 1900-1949"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "1950s"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3IwaDg2ai53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "9E280144-6B57-4582-AF21-79626E04EE70",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-horror-1950-1969",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "37337"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-horror-1950-1969",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "37337"
+                }
+              },
+              "title" : "Top Horror 1950-1969"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "1960s"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3IyY3Vydy53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "B7A7061E-256D-4EBD-AEDB-FA3EE68FD6D1",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-horror-1970s",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "41059"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-horror-1970s",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "41059"
+                }
+              },
+              "title" : "Top Horror 1970s"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "rogerioandre|5-1970-s-horror-movies-copy",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "5.1970's Horror Movies copy"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "1970s"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2g0M3ZjNC53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "B21E4E2C-C3A1-43F6-BD16-47500319BA79",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-horror-1980s",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "41060"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-horror-1980s",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "41060"
+                }
+              },
+              "title" : "Top Horror 1980s"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "royceb|horror-80-s",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "horror 80's"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "1980s"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3VuandqMy53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "E14D0B39-FBE5-453E-ACFF-44DF98F26214",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-horror-1970-1999",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "37338"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-horror-1970-1999",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "37338"
+                }
+              },
+              "title" : "Top Horror 1970-1999"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "1990s"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzZrNGt5by53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "5CCE8E51-6B0E-4CD6-918C-707865008104",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-horror-2000s",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "41062"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-horror-2000s",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "41062"
+                }
+              },
+              "title" : "Top Horror 2000s"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "2000s"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2hoY3RjaC53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "B504152E-479B-401D-B8D5-B8CB90C1AE27",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-horror-2010s",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "37339"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-horror-2010s",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "37339"
+                }
+              },
+              "title" : "Top Horror 2010s"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "ravynloony|2010-s-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "2010's Horror"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "2010"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzc4cm9nNS53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "F19DC260-641E-4867-8045-4EA4245B44B1",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-horror-2020s",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "37341"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-horror-2020s",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "37341"
+                }
+              },
+              "title" : "Top Horror 2020s"
+            }
+          ],
+          "tileShape" : "poster",
+          "title" : "2020"
+        }
+      ],
+      "id" : "75343A41-9FD0-52ED-9D42-14A48BD73689",
+      "isEnabled" : true,
+      "position" : 3,
+      "presentation" : {
+        "enhancedPostersEnabled" : false,
+        "ratings" : {
+          "isEnabled" : false,
+          "providerIDs" : [
+
+          ]
+        },
+        "templateID" : "wide-backdrop-carousel"
+      },
+      "profileID" : "00000000-0000-0000-0000-000000000000",
+      "query" : {
+        "identifier" : "travis_mcnelly-hotmail-com|top-horror-1900-1949",
+        "kind" : "curatedList",
+        "parameters" : {
+          "listID" : "41048"
+        }
+      },
+      "schemaVersion" : 2,
+      "title" : "Horror Decades"
+    },
+    {
+      "dataSource" : {
+        "identifier" : "cedar.branch-group",
+        "kind" : "custom",
+        "parameters" : {
+          "cedar.home.displaysFolderCards" : "true",
+          "cedar.home.folderRole" : "folder",
+          "cedar.home.leafBrowseLayout" : "rows"
+        }
+      },
+      "defaultFilters" : {
+        "contentType" : "both",
+        "countryCodes" : [
+
+        ],
+        "genreIDs" : [
+
+        ],
+        "networkIDs" : [
+
+        ],
+        "originalLanguageCodes" : [
+
+        ],
+        "productionCompanyIDs" : [
+
+        ],
+        "streamingProviderIDs" : [
+
+        ]
+      },
+      "folderOptions" : [
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL211ZTcydC5qcGVn",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/02752ff1-b166-4f05-a647-192ea3fbb979.jpg",
+          "hidesTitle" : true,
+          "id" : "AF3425E0-CAEF-4A73-992D-36A99B0E3638",
+          "query" : {
+            "identifier" : "fuzi0n|halloween-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "58591"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "fuzi0n|halloween-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "58591"
+                }
+              },
+              "title" : "Halloween Movies"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Halloween"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzhheDh1Ny53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/a1cf72b4-5bba-4ef5-b898-f1ffd8b89762.jpg",
+          "hidesTitle" : true,
+          "id" : "D8B454E6-A3D1-4044-BDF0-5EE0F0117850",
+          "query" : {
+            "identifier" : "nobnobz|collection-friday-the-13th",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "159951"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "nobnobz|collection-friday-the-13th",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "159951"
+                }
+              },
+              "title" : "[Collection] Friday the 13th"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Friday the 13th"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3docDJibC53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "A1931E92-25AA-4521-8035-D7901E327BFB",
+          "query" : {
+            "identifier" : "whitemagica|a-nightmare-on-elm-street-collection",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "134963"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "whitemagica|a-nightmare-on-elm-street-collection",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "134963"
+                }
+              },
+              "title" : "A Nightmare on Elm Street Collection"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "A Nightmare on elm street"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3A0Z2cwbC53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/4dd8b782-b0fe-428e-b05f-8f0fc6e9c1b2.jpg",
+          "hidesTitle" : true,
+          "id" : "28734B43-ADE1-4131-A768-CBE182BBD9C2",
+          "query" : {
+            "identifier" : "nobnobz|collection-scream",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "159929"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "nobnobz|collection-scream",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "159929"
+                }
+              },
+              "title" : "[Collection] Scream"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Scream"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzRsdWhnZS53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "36E2C23D-32E0-4439-904A-27A297A044AC",
+          "query" : {
+            "identifier" : "nxsxs|the-texas-chainsaw-massacre",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "155090"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "nxsxs|the-texas-chainsaw-massacre",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "155090"
+                }
+              },
+              "title" : "The Texas Chainsaw Massacre"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Texas Chainsaw Massacre"
+        },
+        {
+          "coverImageURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/full\/24e77e38-9988-4a9c-be93-286fc8411077.jpg",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/24e77e38-9988-4a9c-be93-286fc8411077.jpg",
+          "hidesTitle" : true,
+          "id" : "FA217A03-07DE-47A3-9468-D844119FA81A",
+          "query" : {
+            "identifier" : "nobnobz|collection-conjuring-verse",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "159945"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "nobnobz|collection-conjuring-verse",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "159945"
+                }
+              },
+              "title" : "[Collection] Conjuring-Verse"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Conjuring"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3I5ZGsxeS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/d73c1851-3faa-416d-b33e-93260ed081c4.jpg",
+          "hidesTitle" : true,
+          "id" : "810D954E-947D-4971-AD49-22EDE7DBDFFF",
+          "query" : {
+            "identifier" : "julienicoletv|insidious-collection",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "julienicoletv|insidious-collection",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Insidious Collection"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Insidious"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzl0Mno2cC53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/90ee1880-48f6-4bb1-bb3c-c9a32e9e06b5.jpg",
+          "hidesTitle" : true,
+          "id" : "E68E9D85-EB35-41F8-93AD-47E760C9752F",
+          "query" : {
+            "identifier" : "julienicoletv|paranormal-activity-collection",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "julienicoletv|paranormal-activity-collection",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Paranormal Activity Collection"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Paranormal Activity"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzZ5MHFtNS53ZWJw",
+          "dataSource" : {
+            "kind" : "preferredMetadata",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/b6d951b6-a725-4724-9b5f-4413e650608f.jpg",
+          "hidesTitle" : true,
+          "id" : "FE1CF398-11EF-4A5E-95C4-328F39BEC267",
+          "query" : {
+            "identifier" : "8864",
+            "kind" : "metadataCollection",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "kind" : "preferredMetadata",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "sortOrder" : "releaseDateOldest",
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "8864",
+                "kind" : "metadataCollection",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Final Destination Collection"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Final Destination"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzBsMTMxZy53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/3d81b011-98f1-43a7-a925-5a414a9d4ea2.jpg",
+          "hidesTitle" : true,
+          "id" : "DBB5DF36-353A-4EDE-B450-23FB0D449765",
+          "query" : {
+            "identifier" : "nobnobz|collection-chucky",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "159943"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "nobnobz|collection-chucky",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "159943"
+                }
+              },
+              "title" : "[Collection] Chucky"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Child’s Play"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3lrcDJ4MC53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "heroBackdropURL" : "https:\/\/wepiii2.github.io\/strand-backgrounds\/focus\/2a151495-5b76-4b33-bad0-e5abc0066295.jpg",
+          "hidesTitle" : true,
+          "id" : "2D026035-4F20-478A-BD23-08B57706A380",
+          "query" : {
+            "identifier" : "jarvis-16255551|saw-collection",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "170291"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "jarvis-16255551|saw-collection",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "170291"
+                }
+              },
+              "title" : "Saw Collection"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "Saw"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL29qMm1tZi53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : false,
+          "id" : "3842A8BA-6493-44E7-AC84-9E861B2EA8AA",
+          "query" : {
+            "identifier" : "jarvis-16255551|28-days-later-collection",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "172542"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "jarvis-16255551|28-days-later-collection",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "172542"
+                }
+              },
+              "title" : "28 Days Later Collection"
+            }
+          ],
+          "tileShape" : "landscape",
+          "title" : "28 days"
+        }
+      ],
+      "id" : "D819E474-CD15-5DAD-BE2B-C4AC25120A4F",
+      "isEnabled" : true,
+      "position" : 4,
+      "presentation" : {
+        "enhancedPostersEnabled" : false,
+        "ratings" : {
+          "isEnabled" : false,
+          "providerIDs" : [
+
+          ]
+        },
+        "templateID" : "wide-backdrop-carousel"
+      },
+      "profileID" : "00000000-0000-0000-0000-000000000000",
+      "query" : {
+        "identifier" : "fuzi0n|halloween-movies",
+        "kind" : "curatedList",
+        "parameters" : {
+          "listID" : "58591"
+        }
+      },
+      "schemaVersion" : 2,
+      "title" : "Horror Franchises"
+    },
+    {
+      "dataSource" : {
+        "identifier" : "cedar.branch-group",
+        "kind" : "custom",
+        "parameters" : {
+          "cedar.home.displaysFolderCards" : "true",
+          "cedar.home.folderRole" : "folder",
+          "cedar.home.leafBrowseLayout" : "rows"
+        }
+      },
+      "defaultFilters" : {
+        "contentType" : "both",
+        "countryCodes" : [
+
+        ],
+        "genreIDs" : [
+
+        ],
+        "networkIDs" : [
+
+        ],
+        "originalLanguageCodes" : [
+
+        ],
+        "productionCompanyIDs" : [
+
+        ],
+        "streamingProviderIDs" : [
+
+        ]
+      },
+      "folderOptions" : [
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzB3MHlpcC53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : false,
+          "id" : "CAC110B7-4C82-4CC8-BB42-E72BDDC1E1FB",
+          "query" : {
+            "identifier" : "travis_mcnelly-hotmail-com|top-japanese-horror",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "41528"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-japanese-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "41528"
+                }
+              },
+              "title" : "Top Japanese Horror"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "caoimh|best-japanese-horrors",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Best Japanese Horrors"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-3",
+              "query" : {
+                "identifier" : "kris-felscher|japanese-splatter-bizarro",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Japanese Splatter & Bizarro"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Japanese"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzR2eXEwaS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : false,
+          "id" : "EF55A775-EA23-4517-A524-A800BDDD67AD",
+          "query" : {
+            "identifier" : "idkmanitsnotok|korean-horror-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "idkmanitsnotok|korean-horror-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Korean Horror Movies"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "travis_mcnelly-hotmail-com|top-south-korean-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "41529"
+                }
+              },
+              "title" : "Top South Korean Horror"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Korean"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2s5dTh3NS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : false,
+          "id" : "E2788B13-704E-435D-B449-EA3C5A8EF93A",
+          "query" : {
+            "identifier" : "fexi|all-movies-with-german-audio",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "fexi|all-movies-with-german-audio",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "All movies with german audio"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "jason-postrel|top-rated-german-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "11144"
+                }
+              },
+              "title" : "Top Rated German Movies"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "German"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL29wOXBobS53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : false,
+          "id" : "8E5B4D7E-5A89-44E5-BB89-966594C36591",
+          "query" : {
+            "identifier" : "ravynloony|french-horror",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "ravynloony|french-horror",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "French Horror"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "French"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3RvY3Bnby53ZWJw",
+          "dataSource" : {
+            "kind" : "preferredMetadata",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : false,
+          "id" : "CB4DEB8C-CB63-4809-8363-624EC3ECDCF2",
+          "query" : {
+            "identifier" : "external-collection-discovery",
+            "kind" : "custom",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "kind" : "preferredMetadata",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+                  "27"
+                ],
+                "minimumVoteCount" : 150,
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+                  "it"
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "sortOrder" : "popularity",
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "external-collection-discovery",
+                "kind" : "custom",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Italian"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Italian"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2N2aTFjbS53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : false,
+          "id" : "0EC8296F-DBB5-4F7A-9B78-19C8FF840C3C",
+          "query" : {
+            "identifier" : "auwboyz|horror-latino",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "36795"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "auwboyz|horror-latino",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "36795"
+                }
+              },
+              "title" : "Horror  Latino"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Spanish"
+        }
+      ],
+      "id" : "A5F25EBB-71D4-5368-86B3-E515AC39E4E3",
+      "isEnabled" : true,
+      "position" : 5,
+      "presentation" : {
+        "enhancedPostersEnabled" : false,
+        "ratings" : {
+          "isEnabled" : false,
+          "providerIDs" : [
+
+          ]
+        },
+        "templateID" : "wide-backdrop-carousel"
+      },
+      "profileID" : "00000000-0000-0000-0000-000000000000",
+      "query" : {
+        "identifier" : "travis_mcnelly-hotmail-com|top-japanese-horror",
+        "kind" : "curatedList",
+        "parameters" : {
+          "listID" : "41528"
+        }
+      },
+      "schemaVersion" : 2,
+      "title" : "International Horror"
+    },
+    {
+      "dataSource" : {
+        "identifier" : "cedar.branch-group",
+        "kind" : "custom",
+        "parameters" : {
+          "cedar.home.displaysFolderCards" : "true",
+          "cedar.home.folderRole" : "folder",
+          "cedar.home.leafBrowseLayout" : "rows"
+        }
+      },
+      "defaultFilters" : {
+        "contentType" : "both",
+        "countryCodes" : [
+
+        ],
+        "genreIDs" : [
+
+        ],
+        "networkIDs" : [
+
+        ],
+        "originalLanguageCodes" : [
+
+        ],
+        "productionCompanyIDs" : [
+
+        ],
+        "streamingProviderIDs" : [
+
+        ]
+      },
+      "folderOptions" : [
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzgwZWtrMi53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "DB8AEB40-D7ED-43C5-9D8D-9E5370820758",
+          "query" : {
+            "identifier" : "danaramapyjama|90-minute-films-for-pyjama-wearers",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "119609"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "danaramapyjama|90-minute-films-for-pyjama-wearers",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "119609"
+                }
+              },
+              "title" : "90-minute films for Pyjama wearers"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "lendricklamar|90-minute-hits",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "18751"
+                }
+              },
+              "title" : "90 Minute Hits"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Short and Scary"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3YzZjk3dy53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "movies",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "92BF9DDA-2A3E-4C10-AC3B-9F1DF30DACF8",
+          "query" : {
+            "identifier" : "gijs11|best-horror-mystery-mindfuck",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "81967"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "gijs11|best-horror-mystery-mindfuck",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "81967"
+                }
+              },
+              "title" : "Best Horror\/Mystery\/Mindfuck"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "hdlists|crazy-plot-twists",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "3923"
+                }
+              },
+              "title" : "Crazy Plot Twists"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Mind Bending"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzFrNnF5OS53ZWJw",
+          "dataSource" : {
+            "identifier" : "mdblist-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "CE9D14C2-BCC5-409D-A188-95E9EADBDF6C",
+          "query" : {
+            "identifier" : "bbrodka1963|kid-friendly-halloween-movies",
+            "kind" : "curatedList",
+            "parameters" : {
+              "listID" : "71619"
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "mdblist-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "movies",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "bbrodka1963|kid-friendly-halloween-movies",
+                "kind" : "curatedList",
+                "parameters" : {
+                  "listID" : "71619"
+                }
+              },
+              "title" : "Kid friendly Halloween movies"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "galacticboy|not-so-spooky-halloween",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Not So Spooky Halloween"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Not Scary"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzh2NzdzZi53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "B64171AD-FACC-442F-A583-56DDAD46D06C",
+          "query" : {
+            "identifier" : "almj24|gory-intense-violence-serial-killer-psycho-2",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "almj24|gory-intense-violence-serial-killer-psycho-2",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Gory\/Intense Violence\/Serial Killer\/Psycho 2"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-2",
+              "query" : {
+                "identifier" : "kris-felscher|japanese-splatter-bizarro",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Japanese Splatter & Bizarro"
+            },
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-3",
+              "query" : {
+                "identifier" : "uteproud83|moisty-gore-horror-and-lewdity-to-ingest",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Moisty Gore, Horror, and Lewdity to Ingest"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Gory"
+        },
+        {
+          "coverImageURL" : "https:\/\/get-stranded.fabriceleven.com\/img\/remote\/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL215ajhnci53ZWJw",
+          "dataSource" : {
+            "identifier" : "trakt-public",
+            "kind" : "trackingService",
+            "parameters" : {
+
+            }
+          },
+          "filters" : {
+            "contentType" : "both",
+            "countryCodes" : [
+
+            ],
+            "genreIDs" : [
+
+            ],
+            "networkIDs" : [
+
+            ],
+            "originalLanguageCodes" : [
+
+            ],
+            "productionCompanyIDs" : [
+
+            ],
+            "streamingProviderIDs" : [
+
+            ]
+          },
+          "hidesTitle" : true,
+          "id" : "188FB22A-5FDC-405D-AF72-DD2CE12AE96D",
+          "query" : {
+            "identifier" : "phantasmx1975|hidden-horror-gems",
+            "kind" : "curatedList",
+            "parameters" : {
+
+            }
+          },
+          "sources" : [
+            {
+              "dataSource" : {
+                "identifier" : "trakt-public",
+                "kind" : "trackingService",
+                "parameters" : {
+
+                }
+              },
+              "filters" : {
+                "contentType" : "both",
+                "countryCodes" : [
+
+                ],
+                "genreIDs" : [
+
+                ],
+                "networkIDs" : [
+
+                ],
+                "originalLanguageCodes" : [
+
+                ],
+                "productionCompanyIDs" : [
+
+                ],
+                "streamingProviderIDs" : [
+
+                ]
+              },
+              "id" : "source-1",
+              "query" : {
+                "identifier" : "phantasmx1975|hidden-horror-gems",
+                "kind" : "curatedList",
+                "parameters" : {
+
+                }
+              },
+              "title" : "Hidden Horror Gems"
+            }
+          ],
+          "tileShape" : "square",
+          "title" : "Hidden Gems"
+        }
+      ],
+      "id" : "B8136F12-6D58-5908-A742-BE9C0541DAD9",
+      "isEnabled" : true,
+      "position" : 6,
+      "presentation" : {
+        "enhancedPostersEnabled" : false,
+        "ratings" : {
+          "isEnabled" : false,
+          "providerIDs" : [
+
+          ]
+        },
+        "templateID" : "wide-backdrop-carousel"
+      },
+      "profileID" : "00000000-0000-0000-0000-000000000000",
+      "query" : {
+        "identifier" : "danaramapyjama|90-minute-films-for-pyjama-wearers",
+        "kind" : "curatedList",
+        "parameters" : {
+          "listID" : "119609"
+        }
+      },
+      "schemaVersion" : 2,
+      "title" : "Horror Mood & Vibe"
+    }
+  ],
+  "bundleID" : "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
+  "createdAt" : "2026-10-11T14:18:02Z",
+  "formatIdentifier" : "app.cedar.bundle",
+  "generator" : {
+    "application" : "Cedar Creator"
+  },
+  "kind" : "branches",
+  "schemaVersion" : 1,
+  "title" : "Ultimate Horror Collection"
+}

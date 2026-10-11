@@ -39,6 +39,26 @@ test("every catalog item has a portable Cedar Branches file under the shared bun
   }
 });
 
+test("every setup credits its creator, and every published file carries that credit", async () => {
+  const { setups } = JSON.parse(await readFile("public/catalogs/creator.json", "utf8"));
+  for (const entry of setups) {
+    assert.ok(entry.creator, `${entry.id} names its creator`);
+    assert.ok(["Cedar", "Strand", "Fusion", "Nuvio"].includes(entry.credit.platform));
+    if (entry.credit.platform !== "Cedar") assert.match(entry.credit.sourceURL || "", /^https:\/\//, `${entry.id} links to its source`);
+    for (const id of [entry.id, ...entry.groups.map(group => group.id)]) {
+      const bundle = JSON.parse(await readFile(`public/creator/items/${id}.cedar`, "utf8"));
+      assert.equal(bundle.credits.creator, entry.creator);
+      assert.equal(bundle.credits.platform, entry.credit.platform);
+    }
+  }
+});
+
+test("the custom Strand setup with a provider login is never published", async () => {
+  const { setups } = JSON.parse(await readFile("public/catalogs/creator.json", "utf8"));
+  assert.ok(!setups.some(entry => /custom/i.test(entry.title)));
+  assert.ok(!JSON.stringify(setups).match(/xtream|password/i));
+});
+
 test("cart keeps one avatar, folds groups into their setup, and refuses duplicates", () => {
   let cart = [];
   cart = addToCart(cart, group("horror-vault.d4e19235")).cart;
@@ -100,4 +120,8 @@ test("setup browsing filters by text and category without changing featured orde
   assert.deepEqual(setupOptions(rows, { sort: "newest" }).map(row => row.id), ["a", "b"]);
   assert.deepEqual(setupOptions(rows, { sort: "name" }).map(row => row.id), ["a", "b"]);
   assert.deepEqual(setupOptions(rows).map(row => row.id), ["b", "a"]);
+  rows[0].credit = { platform: "Strand" };
+  rows[1].credit = { platform: "Cedar" };
+  assert.deepEqual(setupOptions(rows, { platform: "Strand" }).map(row => row.id), ["b"]);
+  assert.deepEqual(setupOptions(rows, { query: "strand" }).map(row => row.id), ["b"]);
 });

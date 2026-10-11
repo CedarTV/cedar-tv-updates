@@ -35,12 +35,15 @@ export function setupTags(setups) {
   return [...new Set(setups.flatMap(setup => setup.tags || []))].sort((a, b) => a.localeCompare(b));
 }
 
-export function setupOptions(setups, { query = "", tag = "", sort = "featured" } = {}) {
+export const setupPlatforms = setups => [...new Set(setups.map(setup => setup.credit?.platform).filter(Boolean))];
+
+export function setupOptions(setups, { query = "", tag = "", platform = "", sort = "featured" } = {}) {
   const text = query.trim().toLowerCase();
   const matches = setups.filter(setup => {
     if (tag && !(setup.tags || []).includes(tag)) return false;
+    if (platform && setup.credit?.platform !== platform) return false;
     if (!text) return true;
-    const haystack = [setup.title, setup.creator, setup.description, ...(setup.tags || []),
+    const haystack = [setup.title, setup.creator, setup.description, setup.credit?.platform, setup.credit?.via, ...(setup.tags || []),
       ...setup.groups.flatMap(group => [group.title, ...group.rows])].join(" ").toLowerCase();
     return haystack.includes(text);
   });
@@ -123,7 +126,7 @@ export function parseCart(search, knownItemIDs = null) {
 
 // MARK: Files
 
-export function makeBundle({ title, createdAt, branches, avatar = null }) {
+export function makeBundle({ title, createdAt, branches, avatar = null, credits = null }) {
   const bundle = {
     formatIdentifier: "app.cedar.bundle",
     schemaVersion: 1,
@@ -135,6 +138,7 @@ export function makeBundle({ title, createdAt, branches, avatar = null }) {
     branches: branches.map((branch, position) => ({ ...branch, position })),
   };
   if (avatar) bundle.avatarURL = avatar;
+  if (credits) bundle.credits = credits;
   return bundle;
 }
 
@@ -143,10 +147,12 @@ export function mergeCart(cart, filesByID, createdAt = new Date().toISOString().
   const seen = new Set();
   const branches = [];
   const titles = [];
+  const credits = [];
   for (const entry of branchEntries(cart)) {
     const file = filesByID[entry.id];
     if (!file || !Array.isArray(file.branches)) throw new Error(`Missing ${entry.id}`);
     titles.push(file.title);
+    if (file.credits && !credits.some(credit => JSON.stringify(credit) === JSON.stringify(file.credits))) credits.push(file.credits);
     for (const branch of file.branches) {
       if (seen.has(branch.id)) continue;
       seen.add(branch.id);
@@ -159,6 +165,7 @@ export function mergeCart(cart, filesByID, createdAt = new Date().toISOString().
     createdAt,
     branches,
     avatar: avatar ? avatarURL(avatar.id) : null,
+    credits: credits.length === 1 ? credits[0] : credits.length ? credits : null,
   });
 }
 

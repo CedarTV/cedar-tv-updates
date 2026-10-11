@@ -1,6 +1,6 @@
 import {
   addToCart, avatarEntry, branchEntries, cartAppLink, cartWebLink, downloadName, entryKey,
-  itemFileURL, mergeCart, moveInCart, parseCart, removeFromCart, setupOf, setupOptions, setupTags,
+  itemFileURL, mergeCart, moveInCart, parseCart, removeFromCart, setupOf, setupOptions, setupPlatforms, setupTags,
 } from "./creator-model.mjs";
 import { artworkURL, appURL, matchingOptions, avatarCategories, avatarOptions } from "./artwork-model.mjs";
 
@@ -120,6 +120,27 @@ function addButton(entry, labels) {
 
 function renderSetupFilters() {
   $("setup-tag").replaceChildren(new Option("All categories", ""), ...setupTags(setups).map(tag => new Option(tag, tag)));
+  $("setup-platform").replaceChildren(new Option("Everywhere", ""), ...setupPlatforms(setups).map(platform => new Option(platform, platform)));
+}
+
+/// "By Kaptain · Strand": who made it and the app it was made for.
+const byline = setup => setup.credit?.platform && setup.credit.platform !== "Cedar"
+  ? `By ${setup.creator} · ${setup.credit.platform}` : `By ${setup.creator}`;
+
+function creditDetails(setup) {
+  const credit = setup.credit || {};
+  if (credit.platform === "Cedar") return [element("p", { text: "Made by Cedar for Cedar." })];
+  const made = element("p", {}, [
+    "Made by ", element("strong", { text: setup.creator }), ` for ${credit.platform}`,
+    ...(credit.via ? [`, shared on ${credit.via}`] : []), "."]);
+  const parts = [made];
+  if (credit.sourceURL) {
+    parts.push(element("p", {}, [element("a", {
+      href: credit.sourceURL, target: "_blank", rel: "noopener noreferrer", text: "View the original ↗",
+    })]));
+  }
+  if (credit.conversion) parts.push(element("p", { class: "setup-conversion", text: credit.conversion }));
+  return parts;
 }
 
 function coverMosaic(covers, label) {
@@ -130,9 +151,9 @@ function coverMosaic(covers, label) {
 }
 
 function renderSetups() {
-  const options = setupOptions(setups, { query: $("setup-search").value, tag: $("setup-tag").value, sort: $("setup-sort").value });
+  const options = setupOptions(setups, { query: $("setup-search").value, tag: $("setup-tag").value, platform: $("setup-platform").value, sort: $("setup-sort").value });
   $("setup-status").textContent = setups.length
-    ? `${plural(options.length, "setup")}${$("setup-search").value || $("setup-tag").value ? " found" : ""}`
+    ? `${plural(options.length, "setup")}${$("setup-search").value || $("setup-tag").value || $("setup-platform").value ? " found" : ""}`
     : $("setup-status").textContent;
   $("setup-grid").replaceChildren(...options.map(setup => {
     const details = element("button", { type: "button", class: "button button-secondary", text: "View groups" });
@@ -142,7 +163,7 @@ function renderSetups() {
     return element("article", { class: "setup-card" }, [
       coverMosaic(setup.covers, setup.title),
       element("div", { class: "setup-body" }, [
-        element("p", { class: "setup-creator", text: `By ${setup.creator}` }),
+        element("p", { class: "setup-creator", text: byline(setup) }),
         element("h2", {}, [title]),
         element("p", { class: "setup-description", text: setup.description }),
         element("ul", { class: "setup-tags", "aria-label": "Categories" }, setup.tags.map(tag => element("li", { text: tag }))),
@@ -163,7 +184,8 @@ function openSetup(id) {
 function renderSetupDialog(id) {
   const setup = setupsByID.get(id);
   if (!setup) return;
-  $("setup-dialog-creator").textContent = `By ${setup.creator}`;
+  $("setup-dialog-creator").textContent = byline(setup);
+  $("setup-dialog-credit").replaceChildren(...creditDetails(setup));
   $("setup-dialog-title").textContent = setup.title;
   $("setup-dialog-description").textContent = setup.description;
   $("setup-dialog-meta").textContent = `${plural(setup.groupCount, "group")} · ${plural(setup.branchCount, "branch")}`;
@@ -464,6 +486,7 @@ $("cart-download").addEventListener("click", downloadCart);
 $("cart-clear").addEventListener("click", () => { if (confirm("Empty your cart?")) updateCart([], "Cart emptied."); });
 $("setup-search").addEventListener("input", renderSetups);
 $("setup-tag").addEventListener("change", renderSetups);
+$("setup-platform").addEventListener("change", renderSetups);
 $("setup-sort").addEventListener("change", renderSetups);
 $("search").addEventListener("input", () => { gallery.visible = 48; renderGallery(); });
 for (const control of [$("category"), $("sort")]) control.addEventListener("change", () => { gallery.visible = 48; renderGallery(); });

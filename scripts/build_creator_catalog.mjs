@@ -15,7 +15,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const itemsDirectory = resolve(root, "public/creator/items");
 const catalogPath = resolve(root, "public/catalogs/creator.json");
 // Hosts the Creator page may show previews from; see its Content-Security-Policy.
-export const previewImageHosts = ["image.tmdb.org", "raw.githubusercontent.com"];
+export const previewImageHosts = ["image.tmdb.org", "media.themoviedb.org", "raw.githubusercontent.com"];
 const previewImageHostSuffixes = [".github.io"];
 const secretKeyPattern = /(api[-_]?key|token|secret|password|passwd|auth|session|cookie|credential)/i;
 // Cedar's BranchLeafKind. An unknown value makes Cedar reject the whole file.
@@ -84,6 +84,11 @@ for (const entry of manifest.setups) {
     if (typeof entry[field] !== "string" || !entry[field].trim()) fail(`${entry.id} needs a ${field}`);
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.addedAt)) fail(`${entry.id} addedAt must be YYYY-MM-DD`);
+  const credit = entry.credit;
+  if (!credit || !["Cedar", "Strand", "Fusion", "Nuvio"].includes(credit.platform)) fail(`${entry.id} needs credit.platform (Cedar, Strand, Fusion or Nuvio)`);
+  if (credit.sourceURL != null && !/^https:\/\/[^\s"<>]+$/.test(credit.sourceURL)) fail(`${entry.id} credit.sourceURL must be an https link`);
+  // Credits travel inside every published file, so a downloaded setup still says who made it.
+  const credits = { creator: entry.creator, platform: credit.platform, via: credit.via || null, sourceURL: credit.sourceURL || null };
   const document = JSON.parse(await readFile(resolve(root, "creator/setups", entry.file), "utf8"));
   const branches = readBranches(document, entry.file)
     .filter(branch => branch.isEnabled !== false)
@@ -111,7 +116,7 @@ for (const entry of manifest.setups) {
     const id = groupID(entry.id, branch.id);
     if (groups.some(group => group.id === id)) fail(`${path} shares its short id with another branch in this setup`);
     const createdAt = `${entry.addedAt}T00:00:00Z`;
-    files.set(`${id}.cedar`, makeBundle({ title: branch.title, createdAt, branches: [branch] }));
+    files.set(`${id}.cedar`, makeBundle({ title: branch.title, createdAt, branches: [branch], credits }));
     groups.push({
       id,
       title: branch.title,
@@ -122,7 +127,7 @@ for (const entry of manifest.setups) {
       covers: (branch.folderOptions || []).map(folder => previewImage(folder.coverImageURL) || previewImage(folder.heroBackdropURL)).filter(Boolean).slice(0, 6),
     });
   }
-  files.set(`${entry.id}.cedar`, makeBundle({ title: entry.title, createdAt: `${entry.addedAt}T00:00:00Z`, branches }));
+  files.set(`${entry.id}.cedar`, makeBundle({ title: entry.title, createdAt: `${entry.addedAt}T00:00:00Z`, branches, credits }));
   setups.push({
     id: entry.id,
     title: entry.title,
@@ -130,6 +135,7 @@ for (const entry of manifest.setups) {
     description: entry.description,
     tags: entry.tags || [],
     addedAt: entry.addedAt,
+    credit: { platform: credit.platform, via: credit.via || null, sourceURL: credit.sourceURL || null, conversion: credit.conversion || null },
     groupCount: groups.length,
     branchCount: groups.reduce((total, group) => total + group.branchCount, 0),
     covers: groups.flatMap(group => group.covers).slice(0, 4),
@@ -138,7 +144,7 @@ for (const entry of manifest.setups) {
 }
 
 const catalog = `${JSON.stringify({ version: 1, setups }, null, 2)}\n`;
-const rendered = new Map([...files].map(([name, bundle]) => [name, `${JSON.stringify(bundle, null, 2)}\n`]));
+const rendered = new Map([...files].map(([name, bundle]) => [name, `${JSON.stringify(bundle)}\n`]));
 const existing = new Set((await readdir(itemsDirectory).catch(() => [])).filter(name => name.endsWith(".cedar")));
 
 if (checkOnly) {

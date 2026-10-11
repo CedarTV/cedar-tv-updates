@@ -60,6 +60,7 @@
         <div class="creator-controls">
           <label class="search">Search<input id="setup-search" type="search" placeholder="Search setups, groups and branches" autocomplete="off"></label>
           <label>Category<select id="setup-tag"><option value="">All categories</option></select></label>
+          <label>From<select id="setup-platform"><option value="">Everywhere</option></select></label>
           <label>Sort by<select id="setup-sort"><option value="featured">Featured</option><option value="newest">Newest</option><option value="branches">Most branches</option><option value="name">Name A–Z</option></select></label>
         </div>
         <p id="setup-status" class="creator-status" role="status">Loading setups…</p>
@@ -113,6 +114,7 @@
         <button type="button" class="icon-button" data-close aria-label="Close setup">×</button>
       </div>
       <p id="setup-dialog-description" class="dialog-lede"></p>
+      <div id="setup-dialog-credit" class="setup-credit"></div>
       <div class="dialog-actions">
         <button id="setup-dialog-add" class="button button-primary" type="button">Add whole setup</button>
         <span id="setup-dialog-meta" class="setup-meta"></span>
