@@ -1,8 +1,12 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createDecipheriv } from 'node:crypto';
-import { createTie, validateAddress, PREFIX, LINK_PREFIX, USERNAME_PREFIX, PASSWORD_PREFIX, SERVER_URL } from '../public/create-tobacco-tie/codec.mjs';
+import { createTie, splitAddresses, validateAddress, MAX_BUNDLE_COUNT, PREFIX, LINK_PREFIX, USERNAME_PREFIX, PASSWORD_PREFIX, SERVER_URL } from '../public/create-tobacco-tie/codec.mjs';
 
+function decryptAll(code) {
+  const [keyText, ...boxes] = code.slice(PREFIX.length).split('.');
+  return boxes.map(box => decrypt(`${PREFIX}${keyText}.${box}`));
+}
 function decrypt(code) {
   assert.ok(code.startsWith(PREFIX));
   const [key, raw] = code.slice(PREFIX.length).split('.').map(value => Buffer.from(value, 'base64url'));
@@ -75,4 +79,27 @@ test('maximum-size addresses fit the native credential input limit', async () =>
   const result = await createTie(address);
   assert.ok(result.username.length + result.password.length <= 8192);
   assert.equal(decrypt(result.code).url, address);
+});
+
+test('splits URLs on whitespace and on commas that start a new URL', () => {
+  assert.deepEqual(splitAddresses(' https://a.example/manifest.json,https://b.example\n\nhttps://c.example/x , https://d.example, '),
+    ['https://a.example/manifest.json', 'https://b.example', 'https://c.example/x', 'https://d.example']);
+  // Configured paths keep their own commas.
+  assert.deepEqual(splitAddresses('https://p.example/providers=yts,eztv|sort=quality/manifest.json'),
+    ['https://p.example/providers=yts,eztv|sort=quality/manifest.json']);
+});
+test('several URLs share one key, keep their order, and drop repeats', async () => {
+  const result = await createTie('https://a.example, https://b.example/x/manifest.json\nhttps://a.example/manifest.json');
+  assert.equal(result.count, 2);
+  assert.deepEqual(result.hosts, ['a.example', 'b.example']);
+  assert.deepEqual(decryptAll(result.code).map(payload => payload.url), ['https://a.example/manifest.json', 'https://b.example/x/manifest.json']);
+  assert.ok(!result.password.slice(PASSWORD_PREFIX.length).includes('.'));
+  assert.equal(result.code, PREFIX + result.password.slice(PASSWORD_PREFIX.length) + '.' + result.username.slice(USERNAME_PREFIX.length));
+});
+test('bundles name the failing URL and enforce their limits', async () => {
+  await assert.rejects(createTie('https://a.example, http://b.example'), /^Error: URL 2:/);
+  const many = Array.from({ length: MAX_BUNDLE_COUNT + 1 }, (_, index) => `https://${index}.example`).join('\n');
+  await assert.rejects(createTie(many), /up to 20/);
+  const long = Array.from({ length: 20 }, (_, index) => `https://${index}.example/${'x'.repeat(3000)}/manifest.json`).join('\n');
+  await assert.rejects(createTie(long), /too long to share one tie/);
 });

@@ -5,6 +5,8 @@ export const LINK_PREFIX = 'cedar://tie/';
 export const USERNAME_PREFIX = 'cedar-user1.';
 export const PASSWORD_PREFIX = 'cedar-pass1.';
 export const SERVER_URL = 'https://cedartv.github.io/cedar-tv-updates/';
+export const MAX_BUNDLE_COUNT = 20;
+export const MAX_BUNDLE_BYTES = 65536;
 const encoder = new TextEncoder();
 function base64url(bytes) {
   return btoa(String.fromCharCode(...bytes)).replaceAll('+', '-').replaceAll('/', '_').replace(/=+$/, '');
@@ -29,19 +31,44 @@ export function validateAddress(value) {
   if (encoder.encode(url.href).length > 4096) throw new Error('This address is too long. Use an address under 4,096 bytes.');
   return { address: url.href, host: url.hostname };
 }
-export async function createTie(value) {
-  const { address, host } = validateAddress(value);
+// Separate addresses with line breaks, spaces, or commas. A comma only separates when the next
+// address starts right after it: configured paths can contain commas themselves.
+export function splitAddresses(value) {
+  return value.split(/\s+|,\s*(?=https?:\/\/)/i)
+    .map(part => part.replace(/^,+|,+$/g, ''))
+    .filter(Boolean);
+}
+async function seal(key, address) {
   const bytes = encoder.encode(JSON.stringify({ v: 1, kind: 'addon', url: address }));
-  const keyBytes = crypto.getRandomValues(new Uint8Array(32));
   const nonce = crypto.getRandomValues(new Uint8Array(12));
-  const key = await crypto.subtle.importKey('raw', keyBytes, 'AES-GCM', false, ['encrypt']);
   const encrypted = new Uint8Array(await crypto.subtle.encrypt(
     { name: 'AES-GCM', iv: nonce, additionalData: encoder.encode(PREFIX), tagLength: 128 }, key, bytes));
   const combined = new Uint8Array(nonce.length + encrypted.length);
   combined.set(nonce); combined.set(encrypted, nonce.length);
+  return base64url(combined);
+}
+// Several URLs share one key, one sealed box each, so one username and password installs them all.
+export async function createTie(value) {
+  const parts = splitAddresses(value);
+  if (!parts.length) throw new Error('Paste your Cedar Library URL to create your tie.');
+  if (parts.length > MAX_BUNDLE_COUNT) throw new Error(`Add up to ${MAX_BUNDLE_COUNT} URLs to one tie. Create another tie for the rest.`);
+  const validated = parts.map((part, index) => {
+    try { return validateAddress(part); }
+    catch (issue) { throw parts.length > 1 ? new Error(`URL ${index + 1}: ${issue.message}`) : issue; }
+  });
+  // Repeating a URL would only reinstall the same tie.
+  const unique = [...new Map(validated.map(item => [item.address, item])).values()];
+  const keyBytes = crypto.getRandomValues(new Uint8Array(32));
+  const key = await crypto.subtle.importKey('raw', keyBytes, 'AES-GCM', false, ['encrypt']);
+  const boxes = [];
+  for (const { address } of unique) boxes.push(await seal(key, address));
   const password = `${PASSWORD_PREFIX}${base64url(keyBytes)}`;
-  const username = `${USERNAME_PREFIX}${base64url(combined)}`;
-  const code = `${PREFIX}${password.slice(PASSWORD_PREFIX.length)}.${username.slice(USERNAME_PREFIX.length)}`;
+  const username = `${USERNAME_PREFIX}${boxes.join('.')}`;
   keyBytes.fill(0);
-  return { username, password, server: SERVER_URL, code, link: `${LINK_PREFIX}${code}`, host };
+  if (encoder.encode(username + password).length > MAX_BUNDLE_BYTES) {
+    throw new Error('These URLs are too long to share one tie. Split them across two ties.');
+  }
+  const code = `${PREFIX}${password.slice(PASSWORD_PREFIX.length)}.${username.slice(USERNAME_PREFIX.length)}`;
+  const hosts = unique.map(item => item.host);
+  return { username, password, server: SERVER_URL, code, link: `${LINK_PREFIX}${code}`, host: hosts[0], hosts, count: unique.length };
 }

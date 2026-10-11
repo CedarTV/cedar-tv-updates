@@ -31,6 +31,24 @@ Existing codes and `cedar://tie/` links remain accepted through **Use a code or 
 new server check. Incoming legacy links select that mode automatically. Existing installations
 and refreshes do not change. The website keeps legacy output under **Using an older Cedar app?**.
 
+## Bundles (several ties in one username and password)
+
+- The website accepts several addresses at once, separated by whitespace or line breaks, or by a
+  comma directly followed by the next `http(s)://` address. Other commas stay inside the address,
+  because configured provider paths can contain them. Repeated addresses are dropped.
+- One random key is generated per bundle. Each address gets its own sealed box with a fresh nonce,
+  using the same plaintext and additional data as a single tie.
+- Username: `cedar-user1.<box>.<box>…`; password: `cedar-pass1.<key>` (always one segment).
+  Legacy code: `cedar-tie1.<key>.<box>.<box>…`. A single-address tie is unchanged.
+- At most 20 boxes per bundle; username plus password (or the complete code/link) at most
+  65,536 UTF-8 bytes. Each decrypted address keeps the 4,096-byte ceiling.
+- Every box must authenticate under the shared key; one foreign, empty or corrupted box rejects
+  the whole bundle before anything is installed.
+- Apps check the server once, then install each address in order. A provider that fails to install
+  does not undo the others; the app reports how many installed and why the rest did not.
+  A custom display name only applies to single-tie installs.
+- Apps released before bundles reject a bundled username as an invalid credential pair.
+
 ## Wire format
 
 `cedar-tie1.<key>.<sealed-box>`

@@ -12,3 +12,5 @@
 .credential-output{border-color:var(--control-border,var(--line))}
 [data-theme="light"] .credential-output{background:var(--bg);border-color:var(--control-border);color:var(--text)}
 [data-theme="light"] .credential-output::placeholder{color:var(--muted)}
+
+.bundle-note{font-size:12px;line-height:1.5;color:var(--muted);margin:-12px 0 20px;padding-left:10px;border-left:2px solid var(--line)}

@@ -1,4 +1,4 @@
-import { createTie, SERVER_URL } from './codec.mjs?v=3';
+import { createTie, SERVER_URL } from './codec.mjs?v=4';
 const form = document.querySelector('#tie-form');
 const input = document.querySelector('#addon-url');
 const error = document.querySelector('#address-error');
@@ -51,7 +51,9 @@ form.addEventListener('submit', async event => {
     openCedar.href = result.link;
     openCedar.hidden = false;
     for (const output of outputs) output.button.disabled = false;
-    status.textContent = 'Your Tobacco Tie username and password are ready.';
+    status.textContent = result.count > 1
+      ? `Your username and password are ready. They install all ${result.count} URLs together.`
+      : 'Your Tobacco Tie username and password are ready.';
     username.focus({ preventScroll: true });
   } catch (issue) {
     if (current !== revision) return;
