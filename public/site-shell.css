@@ -76,7 +76,7 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 [data-theme="light"] :is(.orbit-tv, .orbit-profile, .release-card) { background: var(--surface); }
 [data-theme="light"] .release-status-testflight { color: #334d88; }
 [data-theme="light"] .release-card :is(p, time), [data-theme="light"] .release-metadata { color: var(--muted); }
-[data-theme="light"] .artwork-shell :is(input, select, .artwork-choice) { color: var(--text); background: var(--surface); border-color: var(--control-border); }
+[data-theme="light"] .creator-shell :is(input, select, .artwork-choice) { color: var(--text); background: var(--surface); border-color: var(--control-border); }
 [data-theme="light"] .artwork-choice[aria-pressed="true"], [data-theme="light"] .selection { background: #e3eadc; border-color: var(--cedar); }
 [data-theme="light"] :is(.artwork-choice small, .full-set-grid figcaption) { color: var(--muted); }
 [data-theme="light"] #full-set summary { color: var(--cedar); }
@@ -105,9 +105,9 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 /* Readable secondary copy and distinguishable controls in either theme. */
 :is(.compatibility, .proof-strip a, .proof-strip span, .platform-release, .caption-number, .feature-index, .release-meta, .install-note) { color: var(--muted); }
 .cedar-theme select, .cedar-header .cedar-nav .cedar-download,
-.button-secondary, .artwork-shell :is(input, select, .artwork-choice),
+.button-secondary, .creator-shell :is(input, select, .artwork-choice),
 #addon-url, #tie-code, .copy-button { border-color: var(--control-border); }
-:root .artwork-shell :focus-visible, :root #addon-url:focus,
+:root .creator-shell :focus-visible, :root #addon-url:focus,
 :root :is(input, select, textarea, button, a, summary):focus-visible {
   outline: 3px solid var(--cedar); outline-offset: 4px;
 }

@@ -1,0 +1,423 @@
+{
+  "version": 1,
+  "setups": [
+    {
+      "id": "horror-vault",
+      "title": "Horror Vault",
+      "creator": "Cedar",
+      "description": "Seven groups of horror: new releases, subgenres, studios and streamers, iconic sagas, decades, international terror and late-night moods.",
+      "tags": [
+        "Genres",
+        "Studios",
+        "Streaming",
+        "Decades",
+        "Franchises"
+      ],
+      "addedAt": "2026-10-11",
+      "groupCount": 7,
+      "branchCount": 54,
+      "covers": [
+        "https://image.tmdb.org/t/p/w780/umyOinNa6vqqnqoVc9QqzyaapUz.jpg",
+        "https://image.tmdb.org/t/p/w780/sHI9xlFRWCJ38AIIfOqnGjuEvXz.jpg",
+        "https://image.tmdb.org/t/p/w780/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
+        "https://image.tmdb.org/t/p/w780/ecKQlAEG95k62SMGhvX83oEqANK.jpg"
+      ],
+      "groups": [
+        {
+          "id": "horror-vault.d4e19235",
+          "title": "The Crypt Discovery",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "Midnight Vault: Latest Movies",
+            "Midnight Vault: Latest Shows",
+            "Popular Nightmares",
+            "All-Time Fright Club",
+            "Bingeable Nightmares"
+          ],
+          "branchCount": 5,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/umyOinNa6vqqnqoVc9QqzyaapUz.jpg"
+          ]
+        },
+        {
+          "id": "horror-vault.a8dd20c2",
+          "title": "Subgenres of Terror",
+          "kind": "group",
+          "layout": "poster-carousel",
+          "rows": [
+            "Slasher Vault",
+            "Cosmic Dread & Lovecraftian",
+            "Supernatural & Hauntings",
+            "Found Footage & Analog Horror",
+            "Folk Horror & The Occult",
+            "Creature Features & Monsters",
+            "Fractured Mind: Psychological Horror",
+            "Zombies & The Living Dead",
+            "Haunted Houses & Ghost Stories",
+            "Cult Horror & Midnight Rarities",
+            "Disturbing & Extreme Cinema"
+          ],
+          "branchCount": 11,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/sHI9xlFRWCJ38AIIfOqnGjuEvXz.jpg",
+            "https://image.tmdb.org/t/p/w780/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
+            "https://image.tmdb.org/t/p/w780/ecKQlAEG95k62SMGhvX83oEqANK.jpg",
+            "https://image.tmdb.org/t/p/w780/oPSDUtgVjFiWOve4e2dDZUpa50n.jpg",
+            "https://image.tmdb.org/t/p/w780/zi2oYYNSSv7t44iSt5YrxHX9PYs.jpg",
+            "https://image.tmdb.org/t/p/w780/1zs8iKZMKrtIh2MulIwwU6Gs9EK.jpg"
+          ]
+        },
+        {
+          "id": "horror-vault.3da902c6",
+          "title": "Horror Studios & Visions",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "A24 Nightmares",
+            "Blumhouse Vault",
+            "NEON Dark Cinema",
+            "Shudder Exclusives",
+            "Netflix Horror",
+            "HBO Max Chills",
+            "Tubi Horror Vault",
+            "Criterion Channel Horror"
+          ],
+          "branchCount": 8,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/gJbTXKNTL6O7r7PzF6ZRkJGBlPp.jpg"
+          ]
+        },
+        {
+          "id": "horror-vault.b2c6fd5f",
+          "title": "Iconic Horror Sagas",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "Evil Dead",
+            "Halloween",
+            "Friday the 13th",
+            "A Nightmare on Elm Street",
+            "Scream",
+            "Saw",
+            "The Texas Chainsaw Massacre",
+            "The Conjuring Universe",
+            "Alien vs Predator Timeline",
+            "Child’s Play / Chucky",
+            "28 Days Later"
+          ],
+          "branchCount": 11,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/377E9KSoUGxKWuvyR1Zu9aXcU4I.jpg",
+            "https://wepiii2.github.io/strand-backgrounds/full/24e77e38-9988-4a9c-be93-286fc8411077.jpg",
+            "https://image.tmdb.org/t/p/w780/x8rEmL5lmMKcBFcYa1FgAv25PHr.jpg"
+          ]
+        },
+        {
+          "id": "horror-vault.d891a389",
+          "title": "Decades of Dread",
+          "kind": "group",
+          "layout": "poster-carousel",
+          "rows": [
+            "1980s Horror: Synths & Slashers",
+            "1970s Horror",
+            "1990s Horror",
+            "2000s Horror",
+            "2010s Horror",
+            "2020s Horror",
+            "1960s Horror",
+            "1950s & Vintage Horror"
+          ],
+          "branchCount": 8,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/nzSjTiecdosBfwMGAdpt9CxltCI.jpg"
+          ]
+        },
+        {
+          "id": "horror-vault.42d86354",
+          "title": "International Terrors",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "J-Horror (Japan)",
+            "K-Horror (South Korea)",
+            "French Extremity",
+            "Italian Giallo",
+            "Spanish & Latin Horror",
+            "German Dark Cinema"
+          ],
+          "branchCount": 6,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/sGhbO6muh1Fnpa7nkxYCfvmgWCo.jpg"
+          ]
+        },
+        {
+          "id": "horror-vault.eaf26dcd",
+          "title": "Moods & Midnight Vibes",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "Quick & Lethal (Under 90 Mins)",
+            "Mind Bending & Crazy Twists",
+            "Not Scary / Spooky Halloween Fun",
+            "Gory & Unrelenting Carnage",
+            "Hidden Cult Gems"
+          ],
+          "branchCount": 5,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/xxyAStrE7vVeKto3dGDAKAZRM68.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cinematic-sagas",
+      "title": "Cinematic Sagas",
+      "creator": "Cedar",
+      "description": "The big franchises in one place: a box-office row, then space operas, fantasy realms and comic-book universes.",
+      "tags": [
+        "Franchises",
+        "Movies"
+      ],
+      "addedAt": "2026-10-11",
+      "groupCount": 4,
+      "branchCount": 14,
+      "covers": [
+        "https://image.tmdb.org/t/p/w780/iY2ujEY2m68OTTlPFTiHub9joHS.jpg",
+        "https://image.tmdb.org/t/p/w780/fahk0Fu7VUUfK6IkTt1R3waOD9F.jpg",
+        "https://image.tmdb.org/t/p/w780/qM8q2gWAeQF0XUpZ4XZc4CMX87a.jpg",
+        "https://image.tmdb.org/t/p/w780/6X42JnSMdo3dPAswOHUuvebdTq7.jpg"
+      ],
+      "groups": [
+        {
+          "id": "cinematic-sagas.3152b1d9",
+          "title": "Franchise Vault: Top Box Office Sagas",
+          "kind": "row",
+          "layout": "wide-backdrop-carousel",
+          "rows": [],
+          "branchCount": 1,
+          "covers": []
+        },
+        {
+          "id": "cinematic-sagas.28a96ba4",
+          "title": "Sci-Fi & Space Operas",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "Star Wars: The Skywalker Saga",
+            "Dune Chronicles",
+            "Star Trek Universe",
+            "Alien & Predator Universe",
+            "Planet of the Apes",
+            "The Matrix"
+          ],
+          "branchCount": 6,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/iY2ujEY2m68OTTlPFTiHub9joHS.jpg",
+            "https://image.tmdb.org/t/p/w780/fahk0Fu7VUUfK6IkTt1R3waOD9F.jpg",
+            "https://image.tmdb.org/t/p/w780/qM8q2gWAeQF0XUpZ4XZc4CMX87a.jpg",
+            "https://image.tmdb.org/t/p/w780/6X42JnSMdo3dPAswOHUuvebdTq7.jpg",
+            "https://image.tmdb.org/t/p/w780/iMhm0g555HgQNIXAMvnlgOiW5Rz.jpg",
+            "https://image.tmdb.org/t/p/w780/bRm2DEgUiYciDw3myHuYFInD7la.jpg"
+          ]
+        },
+        {
+          "id": "cinematic-sagas.9a9e99c3",
+          "title": "Fantasy & Mythic Realms",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "Middle-earth: Lord of the Rings & Hobbit",
+            "The Wizarding World",
+            "MonsterVerse: Godzilla & Kong",
+            "Pirates of the Caribbean"
+          ],
+          "branchCount": 4,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg",
+            "https://image.tmdb.org/t/p/w780/4gV0rKUjB1nLUdZB4zIltLvNZZr.jpg",
+            "https://image.tmdb.org/t/p/w780/psZ5CETZoaq2VRnxk95HuxOnI5D.jpg",
+            "https://image.tmdb.org/t/p/w780/wxgD3fB5lQ2sGJLog0rvXW049Pf.jpg"
+          ]
+        },
+        {
+          "id": "cinematic-sagas.02568793",
+          "title": "Comic & Superhero Universes",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "The Dark Knight Trilogy (Christopher Nolan)",
+            "Spider-Man Cinematic Multiverse",
+            "Batman Anthology"
+          ],
+          "branchCount": 3,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/xyhrCEdB4XRkelfVsqXeUZ6rLHi.jpg",
+            "https://image.tmdb.org/t/p/w780/waZqriYTuBE3WqXI3SDGi3kfDQE.jpg",
+            "https://image.tmdb.org/t/p/w780/4UHZWw5lV3ZoadTjXuVOakdH32L.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "action-adrenaline",
+      "title": "Action Adrenaline",
+      "creator": "Cedar",
+      "description": "Trending and top-rated action, combat subgenres, legendary sagas and the stars who do their own stunts.",
+      "tags": [
+        "Genres",
+        "Franchises",
+        "People"
+      ],
+      "addedAt": "2026-10-11",
+      "groupCount": 5,
+      "branchCount": 18,
+      "covers": [
+        "https://image.tmdb.org/t/p/w500/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
+        "https://image.tmdb.org/t/p/w500/Abnm1Ws3JH0ReCfEhLMPwPcMcGO.jpg",
+        "https://image.tmdb.org/t/p/w500/umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
+        "https://image.tmdb.org/t/p/w500/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg"
+      ],
+      "groups": [
+        {
+          "id": "action-adrenaline.dd0c5c7c",
+          "title": "Full Throttle: Trending Action",
+          "kind": "row",
+          "layout": "wide-backdrop-carousel",
+          "rows": [],
+          "branchCount": 1,
+          "covers": []
+        },
+        {
+          "id": "action-adrenaline.c0d5a709",
+          "title": "The Action Pantheon: Top Rated",
+          "kind": "row",
+          "layout": "poster-carousel",
+          "rows": [],
+          "branchCount": 1,
+          "covers": []
+        },
+        {
+          "id": "action-adrenaline.80c0a004",
+          "title": "Combat & Adrenaline Subgenres",
+          "kind": "group",
+          "layout": "poster-carousel",
+          "rows": [
+            "Gun-Fu & Tactical Combat",
+            "Martial Arts Masters & Wuxia",
+            "Heists, Cons & High Stakes",
+            "Espionage & Rogue Agents",
+            "Post-Apocalyptic Survival & Car Combat",
+            "Sci-Fi Action & Cyberpunk Spectacle"
+          ],
+          "branchCount": 6,
+          "covers": [
+            "https://image.tmdb.org/t/p/w500/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
+            "https://image.tmdb.org/t/p/w500/Abnm1Ws3JH0ReCfEhLMPwPcMcGO.jpg",
+            "https://image.tmdb.org/t/p/w500/umSVjVdbVwtx5ryCA2QXL44Durm.jpg",
+            "https://image.tmdb.org/t/p/w500/AkJQpZp9WoNdj7pLYSj1L0RcMMN.jpg",
+            "https://image.tmdb.org/t/p/w500/ulcAi4dKpAjHwYGS08vNyx9H6I9.jpg",
+            "https://image.tmdb.org/t/p/w500/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg"
+          ]
+        },
+        {
+          "id": "action-adrenaline.10401c45",
+          "title": "Legendary Action Sagas",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "Mission: Impossible",
+            "John Wick Universe",
+            "Mad Max Saga",
+            "The Bourne Franchise",
+            "Die Hard Collection",
+            "Fast & Furious Saga"
+          ],
+          "branchCount": 6,
+          "covers": [
+            "https://image.tmdb.org/t/p/w780/mroWh717g0Ah2c0rrPGW6f3EWMM.jpg",
+            "https://image.tmdb.org/t/p/w780/fSwYa5q2xRkBoOOjueLpkLf3N1m.jpg",
+            "https://image.tmdb.org/t/p/w780/zI0q2ENcQOLECbe0gAEGlncVh2j.jpg",
+            "https://image.tmdb.org/t/p/w780/vA5xMglyZv7yzDTj1qUTU4OvelV.jpg",
+            "https://image.tmdb.org/t/p/w780/nKShbIW0wJnSbl3t8uPje0QhTb7.jpg",
+            "https://image.tmdb.org/t/p/w780/z5A5W3WYJc3UVEWljSGwdjDgQ0j.jpg"
+          ]
+        },
+        {
+          "id": "action-adrenaline.2d99003a",
+          "title": "Action Icons & Directors",
+          "kind": "group",
+          "layout": "wide-backdrop-carousel",
+          "rows": [
+            "Tom Cruise: Daredevil Cinema",
+            "Keanu Reeves: The Assassin",
+            "Jackie Chan: The Legend of Stunts",
+            "Arnold Schwarzenegger: The 80s/90s Titan"
+          ],
+          "branchCount": 4,
+          "covers": [
+            "https://image.tmdb.org/t/p/w500/maf8PhSvDCdEwjEMbYfGpojR5RP.jpg",
+            "https://image.tmdb.org/t/p/w500/8RZLOyYGsoRe9p44q3xin9QkMHv.jpg",
+            "https://image.tmdb.org/t/p/w500/nraZoTzwJQPHspAVsKfgl3RXKKa.jpg",
+            "https://image.tmdb.org/t/p/w500/4jM3vsHIEQVeNFifiTAUDVAmiUo.jpg"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decades-chronicles",
+      "title": "Decades Chronicles",
+      "creator": "Cedar",
+      "description": "A timeless-masterpieces row and a decade-by-decade group from the 1950s to today.",
+      "tags": [
+        "Decades",
+        "Movies"
+      ],
+      "addedAt": "2026-10-11",
+      "groupCount": 2,
+      "branchCount": 9,
+      "covers": [
+        "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/50s-movies/v2/50s-movies-cover.png",
+        "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/60s-movies/v2/60s-movies-cover.png",
+        "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/70s-movies/v2/70s-movies-cover.png",
+        "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/80s-movies/v2/80s-movies-cover.png"
+      ],
+      "groups": [
+        {
+          "id": "decades-chronicles.df41c02f",
+          "title": "Century Spotlight: Timeless Masterpieces",
+          "kind": "row",
+          "layout": "poster-carousel",
+          "rows": [],
+          "branchCount": 1,
+          "covers": []
+        },
+        {
+          "id": "decades-chronicles.9fe504a1",
+          "title": "The Golden Centuries (1950s - 2020s)",
+          "kind": "group",
+          "layout": "poster-carousel",
+          "rows": [
+            "The 1950s: Technicolor Epics & Golden Age",
+            "The 1960s: Revolution & New Wave",
+            "The 1970s: Gritty Auteurs & Blockbusters",
+            "The 1980s: Neon Nostalgia & High Concept",
+            "The 1990s: Indie Explosion & CGI Dawn",
+            "The 2000s: Digital Renaissance & Franchises",
+            "The 2010s: Modern Marvels & Streaming Era",
+            "The 2020s: Contemporary Visions"
+          ],
+          "branchCount": 8,
+          "covers": [
+            "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/50s-movies/v2/50s-movies-cover.png",
+            "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/60s-movies/v2/60s-movies-cover.png",
+            "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/70s-movies/v2/70s-movies-cover.png",
+            "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/80s-movies/v2/80s-movies-cover.png",
+            "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/90s-movies/v2/90s-movies-cover.png",
+            "https://raw.githubusercontent.com/ImKaptain/nuvio-art/main/art/by-decade/00s-movies/v2/00s-movies-cover.png"
+          ]
+        }
+      ]
+    }
+  ]
+}

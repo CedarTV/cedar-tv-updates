@@ -69,7 +69,7 @@ export function renderSiteHeader() {
             <a href="${projectBasePath}/#platforms">Platforms</a>
             <a href="${projectBasePath}/apple/">Apple apps</a>
             <a href="${projectBasePath}/releases/">What’s new</a>
-            <a href="${projectBasePath}/artwork/">Artwork</a>
+            <a href="${projectBasePath}/creator/">Creator</a>
             <a href="${projectBasePath}/link/">Cedar Link</a>
             <a href="${projectBasePath}/support/">Support</a>
             <a class="cedar-download" href="${projectBasePath}/#download">Get Cedar</a>

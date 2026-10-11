@@ -1,0 +1,56 @@
+{
+  "setups": [
+    {
+      "id": "horror-vault",
+      "file": "horror-vault.json",
+      "title": "Horror Vault",
+      "creator": "Cedar",
+      "description": "Seven groups of horror: new releases, subgenres, studios and streamers, iconic sagas, decades, international terror and late-night moods.",
+      "tags": [
+        "Genres",
+        "Studios",
+        "Streaming",
+        "Decades",
+        "Franchises"
+      ],
+      "addedAt": "2026-10-11"
+    },
+    {
+      "id": "cinematic-sagas",
+      "file": "cinematic-sagas.json",
+      "title": "Cinematic Sagas",
+      "creator": "Cedar",
+      "description": "The big franchises in one place: a box-office row, then space operas, fantasy realms and comic-book universes.",
+      "tags": [
+        "Franchises",
+        "Movies"
+      ],
+      "addedAt": "2026-10-11"
+    },
+    {
+      "id": "action-adrenaline",
+      "file": "action-adrenaline.json",
+      "title": "Action Adrenaline",
+      "creator": "Cedar",
+      "description": "Trending and top-rated action, combat subgenres, legendary sagas and the stars who do their own stunts.",
+      "tags": [
+        "Genres",
+        "Franchises",
+        "People"
+      ],
+      "addedAt": "2026-10-11"
+    },
+    {
+      "id": "decades-chronicles",
+      "file": "decades-chronicles.json",
+      "title": "Decades Chronicles",
+      "creator": "Cedar",
+      "description": "A timeless-masterpieces row and a decade-by-decade group from the 1950s to today.",
+      "tags": [
+        "Decades",
+        "Movies"
+      ],
+      "addedAt": "2026-10-11"
+    }
+  ]
+}

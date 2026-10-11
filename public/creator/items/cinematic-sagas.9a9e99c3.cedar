@@ -1,0 +1,269 @@
+{
+  "formatIdentifier": "app.cedar.bundle",
+  "schemaVersion": 1,
+  "kind": "branches",
+  "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
+  "title": "Fantasy & Mythic Realms",
+  "createdAt": "2026-10-11T00:00:00Z",
+  "generator": {
+    "application": "Cedar Creator"
+  },
+  "branches": [
+    {
+      "id": "9A9E99C3-A2D8-4242-9BB7-FE07C41A08A7",
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "schemaVersion": 2,
+      "groupName": null,
+      "title": "Fantasy & Mythic Realms",
+      "titleMode": "custom",
+      "dataSource": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
+        }
+      },
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
+      },
+      "presentation": {
+        "templateID": "wide-backdrop-carousel",
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": true,
+          "providerIDs": [
+            "imdb",
+            "tmdb",
+            "trakt"
+          ]
+        }
+      },
+      "defaultFilters": {
+        "contentType": "both",
+        "genreIDs": [],
+        "originalLanguageCodes": [],
+        "countryCodes": [],
+        "streamingProviderIDs": [],
+        "networkIDs": [],
+        "productionCompanyIDs": []
+      },
+      "folderOptions": [
+        {
+          "id": "folder-1",
+          "title": "Middle-earth: Lord of the Rings & Hobbit",
+          "query": {
+            "kind": "metadataCollection",
+            "identifier": "119",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "genreIDs": [],
+            "originalLanguageCodes": [],
+            "countryCodes": [],
+            "streamingProviderIDs": [],
+            "networkIDs": [],
+            "productionCompanyIDs": []
+          },
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "identifier": null,
+            "parameters": {}
+          },
+          "sources": [
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "identifier": null,
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "119",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1",
+              "title": "The Lord of the Rings Collection"
+            }
+          ],
+          "coverImageURL": "https://image.tmdb.org/t/p/original/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg",
+          "tileShape": "landscape",
+          "hidesTitle": false,
+          "heroBackdropURL": "https://image.tmdb.org/t/p/original/bccR2CGTWVVSZAG0yqmy3DIvhTX.jpg"
+        },
+        {
+          "id": "folder-2",
+          "title": "The Wizarding World",
+          "query": {
+            "kind": "metadataCollection",
+            "identifier": "1241",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "genreIDs": [],
+            "originalLanguageCodes": [],
+            "countryCodes": [],
+            "streamingProviderIDs": [],
+            "networkIDs": [],
+            "productionCompanyIDs": []
+          },
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "identifier": null,
+            "parameters": {}
+          },
+          "sources": [
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "identifier": null,
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "1241",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1",
+              "title": "Harry Potter Collection"
+            }
+          ],
+          "coverImageURL": "https://image.tmdb.org/t/p/original/4gV0rKUjB1nLUdZB4zIltLvNZZr.jpg",
+          "tileShape": "landscape",
+          "hidesTitle": false,
+          "heroBackdropURL": "https://image.tmdb.org/t/p/original/4gV0rKUjB1nLUdZB4zIltLvNZZr.jpg"
+        },
+        {
+          "id": "folder-3",
+          "title": "MonsterVerse: Godzilla & Kong",
+          "query": {
+            "kind": "metadataCollection",
+            "identifier": "535313",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "genreIDs": [],
+            "originalLanguageCodes": [],
+            "countryCodes": [],
+            "streamingProviderIDs": [],
+            "networkIDs": [],
+            "productionCompanyIDs": []
+          },
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "identifier": null,
+            "parameters": {}
+          },
+          "sources": [
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "identifier": null,
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "535313",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1",
+              "title": "MonsterVerse Collection"
+            }
+          ],
+          "coverImageURL": "https://image.tmdb.org/t/p/original/psZ5CETZoaq2VRnxk95HuxOnI5D.jpg",
+          "tileShape": "landscape",
+          "hidesTitle": false,
+          "heroBackdropURL": "https://image.tmdb.org/t/p/original/psZ5CETZoaq2VRnxk95HuxOnI5D.jpg"
+        },
+        {
+          "id": "folder-4",
+          "title": "Pirates of the Caribbean",
+          "query": {
+            "kind": "metadataCollection",
+            "identifier": "295",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "genreIDs": [],
+            "originalLanguageCodes": [],
+            "countryCodes": [],
+            "streamingProviderIDs": [],
+            "networkIDs": [],
+            "productionCompanyIDs": []
+          },
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "identifier": null,
+            "parameters": {}
+          },
+          "sources": [
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "identifier": null,
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "295",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1",
+              "title": "Pirates of the Caribbean Collection"
+            }
+          ],
+          "coverImageURL": "https://image.tmdb.org/t/p/original/wxgD3fB5lQ2sGJLog0rvXW049Pf.jpg",
+          "tileShape": "landscape",
+          "hidesTitle": false,
+          "heroBackdropURL": "https://image.tmdb.org/t/p/original/wxgD3fB5lQ2sGJLog0rvXW049Pf.jpg"
+        }
+      ],
+      "position": 0,
+      "isEnabled": true,
+      "pageSize": null
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Cedar Creator: browse curated Home setups, branch groups, profile photos and source badges. Build a cart, arrange it, and import it into Cedar.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://image.tmdb.org https://raw.githubusercontent.com https://*.github.io; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Creator — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/creator/">
+    <link rel="icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="creator.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+      <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/#platforms">Platforms</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/link/">Cedar Link</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </nav>
+          <label class="cedar-theme">Theme
+            <select aria-label="Color theme" data-theme-select>
+              <option value="system">System</option>
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+            </select>
+          </label>
+        </div>
+      </header>
+    <main id="main" class="section-shell creator-shell">
+      <div class="creator-heading">
+        <p class="eyebrow"><span></span>Cedar Creator</p>
+        <h1>Build your Home<br><em>from great setups.</em></h1>
+        <p class="creator-lede">Add whole setups or single branch groups, choose a profile photo, and arrange your cart. Then open it in Cedar, copy its link, or download a .cedar file.</p>
+      </div>
+
+      <div class="creator-tabs" role="tablist" aria-label="Creator sections">
+        <button type="button" role="tab" id="tab-setups" data-tab="setups" aria-controls="panel-setups" aria-selected="true">Setups</button>
+        <button type="button" role="tab" id="tab-avatars" data-tab="avatars" aria-controls="panel-gallery" aria-selected="false" tabindex="-1">Profile photos</button>
+        <button type="button" role="tab" id="tab-badges" data-tab="badges" aria-controls="panel-gallery" aria-selected="false" tabindex="-1">Source badges</button>
+      </div>
+
+      <section id="panel-setups" role="tabpanel" aria-labelledby="tab-setups">
+        <div class="creator-controls">
+          <label class="search">Search<input id="setup-search" type="search" placeholder="Search setups, groups and branches" autocomplete="off"></label>
+          <label>Category<select id="setup-tag"><option value="">All categories</option></select></label>
+          <label>Sort by<select id="setup-sort"><option value="featured">Featured</option><option value="newest">Newest</option><option value="branches">Most branches</option><option value="name">Name A–Z</option></select></label>
+        </div>
+        <p id="setup-status" class="creator-status" role="status">Loading setups…</p>
+        <div id="setup-grid" class="setup-grid"></div>
+      </section>
+
+      <section id="panel-gallery" role="tabpanel" aria-labelledby="tab-avatars" hidden>
+        <div class="creator-controls">
+          <label class="search">Search<input id="search" type="search" placeholder="Search names or collections" autocomplete="off"></label>
+          <label id="category-control">Category<select id="category"><option value="">All categories</option></select></label>
+          <label id="sort-control">Sort by<select id="sort"><option value="featured">Original order</option><option value="category">Category</option><option value="name">Name A–Z</option></select></label>
+        </div>
+        <p id="status" class="creator-status" role="status"></p>
+        <section id="selection" class="selection" aria-labelledby="selection-title" hidden>
+          <div>
+            <div id="preview" class="selection-preview"></div>
+            <details id="full-set" hidden>
+              <summary id="full-set-label">View full set</summary>
+              <div id="full-set-grid" class="full-set-grid"></div>
+            </details>
+          </div>
+          <div>
+            <p class="eyebrow">Your selection</p><h2 id="selection-title"></h2>
+            <div class="hero-actions">
+              <button id="add-avatar" class="button button-primary" type="button">Add to cart</button>
+              <a id="open-cedar" class="button button-secondary">Open in Cedar</a>
+              <button id="copy" class="button button-secondary" type="button">Copy URL</button>
+            </div>
+            <p id="manual-help"></p>
+            <label>Selection URL<input id="selection-url" type="url" readonly spellcheck="false"></label>
+            <p id="copy-status" role="status"></p>
+          </div>
+        </section>
+        <div id="gallery" class="artwork-grid"></div>
+        <button id="more" class="button button-secondary" type="button" hidden>Show more</button>
+      </section>
+      <noscript><p>Enable JavaScript to browse Creator. You can still choose artwork with <a href="../link/">Cedar Link</a>.</p></noscript>
+    </main>
+
+    <button id="cart-button" class="cart-button" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
+      Cart <span id="cart-count" class="cart-count">0</span>
+    </button>
+    <p id="toast" class="creator-toast" role="status" aria-live="polite"></p>
+
+    <dialog id="setup-dialog" class="creator-dialog" aria-labelledby="setup-dialog-title">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow" id="setup-dialog-creator"></p>
+          <h2 id="setup-dialog-title"></h2>
+        </div>
+        <button type="button" class="icon-button" data-close aria-label="Close setup">×</button>
+      </div>
+      <p id="setup-dialog-description" class="dialog-lede"></p>
+      <div class="dialog-actions">
+        <button id="setup-dialog-add" class="button button-primary" type="button">Add whole setup</button>
+        <span id="setup-dialog-meta" class="setup-meta"></span>
+      </div>
+      <h3 class="dialog-subheading">Branch groups</h3>
+      <ol id="setup-dialog-groups" class="group-list"></ol>
+    </dialog>
+
+    <dialog id="cart-dialog" class="creator-dialog cart-dialog" aria-labelledby="cart-title">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">Your cart</p>
+          <h2 id="cart-title">Ready for Cedar</h2>
+        </div>
+        <button type="button" class="icon-button" data-close aria-label="Close cart">×</button>
+      </div>
+      <p id="cart-empty" class="dialog-lede">Your cart is empty. Add setups, branch groups or a profile photo.</p>
+      <div id="cart-contents">
+        <p class="dialog-lede">Branches are added to the end of your Home in this order. Drag the handle or use the arrows to rearrange.</p>
+        <ol id="cart-list" class="cart-list"></ol>
+        <div id="cart-avatar" class="cart-avatar"></div>
+        <div class="checkout">
+          <p id="cart-summary" class="setup-meta"></p>
+          <div class="hero-actions">
+            <a id="cart-open" class="button button-primary">Open in Cedar</a>
+            <button id="cart-copy" class="button button-secondary" type="button">Copy link</button>
+            <button id="cart-download" class="button button-secondary" type="button">Download .cedar</button>
+          </div>
+          <label>Cart link<input id="cart-link" type="url" readonly spellcheck="false"></label>
+          <p id="cart-status" role="status"></p>
+          <p class="compatibility">On iPhone, iPad or Mac, Open in Cedar shows what will be added before anything changes. To paste the link instead, open Cedar Settings → Home &amp; Branches → Import from Link. A downloaded .cedar file opens in Cedar from Files or AirDrop. Apple TV receives the branches from your profile.</p>
+          <button id="cart-clear" class="text-button" type="button">Empty cart</button>
+        </div>
+      </div>
+    </dialog>
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/link/">Cedar Link</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/issues">Report an issue</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
+              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+    <script type="module" src="creator.js"></script>
+  </body>
+</html>

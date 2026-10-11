@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { artworkURL, appURL, matchingOptions } from "../public/artwork/artwork-model.mjs";
+import { artworkURL, appURL, matchingOptions } from "../public/creator/artwork-model.mjs";
 
 test("every catalog choice yields a mirrored copy URL and a lossless app request", async () => {
   for (const kind of ["avatars", "badges"]) {
@@ -28,7 +28,7 @@ test("gallery rejects outside URLs and filters names and collection metadata", (
 });
 
 test("avatar category filtering composes with search and sorting without changing catalog order", async () => {
-  const { avatarOptions, avatarCategories } = await import("../public/artwork/artwork-model.mjs");
+  const { avatarOptions, avatarCategories } = await import("../public/creator/artwork-model.mjs");
   const rows = [{ name: "Zed", category: "Marvel" }, { name: "Amy", category: null }, { name: "Ant", category: "Marvel" }];
   assert.deepEqual(avatarCategories(rows), ["Marvel", "Uncategorized"]);
   assert.deepEqual(avatarOptions(rows, "", "Marvel", "name").map(x => x.name), ["Ant", "Zed"]);

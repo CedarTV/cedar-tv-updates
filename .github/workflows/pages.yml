@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - public/**
+      - creator/**
+      - scripts/build_creator_catalog.mjs
       - release-notes/**
       - test/**
       - scripts/render_apple_releases.mjs
@@ -45,6 +47,8 @@ jobs:
           node --check public/link/link.js
           node --check public/link/cedar-sync.mjs
           node --check public/link/companion-ui.mjs
+          node --check public/creator/creator.js
+          node scripts/build_creator_catalog.mjs --check
           node --test test/*.test.mjs
           node scripts/render_apple_releases.mjs --check
           node scripts/render_release_hub.mjs --check

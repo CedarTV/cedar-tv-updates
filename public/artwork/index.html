@@ -4,14 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#08090b">
-    <meta name="description" content="Browse Cedar avatars and source badge sets. Open your choice in Cedar, copy its URL, or apply it with Cedar Link.">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'">
-    <title>Avatars &amp; source badges — Cedar</title>
-    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/artwork/">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'none'">
+    <meta http-equiv="refresh" content="0; url=../creator/?tab=avatars">
+    <title>Artwork has moved — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/creator/">
     <link rel="icon" href="../assets/cedar-app-icon.png">
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="artwork.css">
     <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="redirect.js"></script>
     <script src="/cedar-tv-updates/theme.js"></script>
     <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
   </head>
@@ -29,7 +30,7 @@
             <a href="/cedar-tv-updates/#platforms">Platforms</a>
             <a href="/cedar-tv-updates/apple/">Apple apps</a>
             <a href="/cedar-tv-updates/releases/">What’s new</a>
-            <a href="/cedar-tv-updates/artwork/">Artwork</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
             <a href="/cedar-tv-updates/link/">Cedar Link</a>
             <a href="/cedar-tv-updates/support/">Support</a>
             <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
@@ -43,43 +44,10 @@
           </label>
         </div>
       </header>
-    <main id="main" class="section-shell artwork-shell">
-      <div class="section-heading compact">
-        <p class="eyebrow"><span></span>Make Cedar yours</p>
-        <h1>Find your<br><em>finishing touch.</em></h1>
-        <p>Browse freely. Pick an avatar or source badge set, then open it in Cedar or copy its link. No pairing required to explore.</p>
-      </div>
-      <div class="gallery-controls">
-        <label>Show<select id="kind"><option value="avatars">Avatars</option><option value="badges">Source badge sets</option></select></label>
-        <label id="category-control">Category<select id="category"><option value="">All categories</option></select></label>
-        <label id="sort-control">Sort by<select id="sort"><option value="featured">Original order</option><option value="category">Category</option><option value="name">Name A–Z</option></select></label>
-        <label class="search">Search<input id="search" type="search" placeholder="Search names or collections" autocomplete="off"></label>
-      </div>
-      <p id="status" role="status">Loading artwork…</p>
-      <section id="selection" class="selection" aria-labelledby="selection-title" hidden>
-        <div>
-          <div id="preview" class="selection-preview"></div>
-          <details id="full-set" hidden>
-            <summary id="full-set-label">View full set</summary>
-            <div id="full-set-grid" class="full-set-grid"></div>
-          </details>
-        </div>
-        <div>
-          <p class="eyebrow">Your selection</p><h2 id="selection-title"></h2>
-          <div class="hero-actions">
-            <a id="open-cedar" class="button button-primary">Open in Cedar</a>
-            <button id="copy" class="button button-secondary" type="button">Copy URL</button>
-            <a id="cedar-link" class="button button-secondary">Use Cedar Link</a>
-          </div>
-          <p id="manual-help"></p>
-          <label>Selection URL<input id="selection-url" type="url" readonly spellcheck="false"></label>
-          <p id="copy-status" role="status"></p>
-          <p class="compatibility">Open in Cedar is supported in Cedar 1.0.0 build 7 or later on iPhone, iPad, and Mac. Older builds may open without filling the selection; use Copy URL instead. For another device, use Cedar Link and choose the same artwork there.</p>
-        </div>
-      </section>
-      <div id="gallery" class="artwork-grid"></div>
-      <button id="more" class="button button-secondary" type="button" hidden>Show more</button>
-      <noscript><p>Enable JavaScript to browse and preview the artwork. You can also use <a href="../link/">Cedar Link</a>.</p></noscript>
+    <main id="main" class="section-shell">
+      <p class="eyebrow"><span></span>Cedar Creator</p>
+      <h1>Artwork now lives<br><em>in Creator.</em></h1>
+      <p><a href="../creator/?tab=avatars">Profile photos</a> · <a href="../creator/?tab=badges">Source badges</a> · <a href="../creator/">Setups</a></p>
     </main>
       <footer class="site-footer">
         <div class="site-footer-intro">
@@ -128,6 +96,5 @@
           <span>Cedar does not provide, host, or sell media content.</span>
         </p>
       </footer>
-    <script type="module" src="artwork.js"></script>
   </body>
 </html>

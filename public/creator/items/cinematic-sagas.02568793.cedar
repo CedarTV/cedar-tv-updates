@@ -1,0 +1,217 @@
+{
+  "formatIdentifier": "app.cedar.bundle",
+  "schemaVersion": 1,
+  "kind": "branches",
+  "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
+  "title": "Comic & Superhero Universes",
+  "createdAt": "2026-10-11T00:00:00Z",
+  "generator": {
+    "application": "Cedar Creator"
+  },
+  "branches": [
+    {
+      "id": "02568793-A757-4A7E-A654-A64256A7A285",
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "schemaVersion": 2,
+      "groupName": null,
+      "title": "Comic & Superhero Universes",
+      "titleMode": "custom",
+      "dataSource": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
+        }
+      },
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
+      },
+      "presentation": {
+        "templateID": "wide-backdrop-carousel",
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": true,
+          "providerIDs": [
+            "imdb",
+            "tmdb",
+            "trakt"
+          ]
+        }
+      },
+      "defaultFilters": {
+        "contentType": "both",
+        "genreIDs": [],
+        "originalLanguageCodes": [],
+        "countryCodes": [],
+        "streamingProviderIDs": [],
+        "networkIDs": [],
+        "productionCompanyIDs": []
+      },
+      "folderOptions": [
+        {
+          "id": "folder-1",
+          "title": "The Dark Knight Trilogy (Christopher Nolan)",
+          "query": {
+            "kind": "metadataCollection",
+            "identifier": "263",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "genreIDs": [],
+            "originalLanguageCodes": [],
+            "countryCodes": [],
+            "streamingProviderIDs": [],
+            "networkIDs": [],
+            "productionCompanyIDs": []
+          },
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "identifier": null,
+            "parameters": {}
+          },
+          "sources": [
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "identifier": null,
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "263",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1",
+              "title": "The Dark Knight Collection"
+            }
+          ],
+          "coverImageURL": "https://image.tmdb.org/t/p/original/xyhrCEdB4XRkelfVsqXeUZ6rLHi.jpg",
+          "tileShape": "landscape",
+          "hidesTitle": false,
+          "heroBackdropURL": "https://image.tmdb.org/t/p/original/xyhrCEdB4XRkelfVsqXeUZ6rLHi.jpg"
+        },
+        {
+          "id": "folder-2",
+          "title": "Spider-Man Cinematic Multiverse",
+          "query": {
+            "kind": "metadataCollection",
+            "identifier": "556",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "genreIDs": [],
+            "originalLanguageCodes": [],
+            "countryCodes": [],
+            "streamingProviderIDs": [],
+            "networkIDs": [],
+            "productionCompanyIDs": []
+          },
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "identifier": null,
+            "parameters": {}
+          },
+          "sources": [
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "identifier": null,
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "556",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1",
+              "title": "Spider-Man Collection"
+            }
+          ],
+          "coverImageURL": "https://image.tmdb.org/t/p/original/waZqriYTuBE3WqXI3SDGi3kfDQE.jpg",
+          "tileShape": "landscape",
+          "hidesTitle": false,
+          "heroBackdropURL": "https://image.tmdb.org/t/p/original/waZqriYTuBE3WqXI3SDGi3kfDQE.jpg"
+        },
+        {
+          "id": "folder-3",
+          "title": "Batman Anthology",
+          "query": {
+            "kind": "metadataCollection",
+            "identifier": "120794",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "genreIDs": [],
+            "originalLanguageCodes": [],
+            "countryCodes": [],
+            "streamingProviderIDs": [],
+            "networkIDs": [],
+            "productionCompanyIDs": []
+          },
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "identifier": null,
+            "parameters": {}
+          },
+          "sources": [
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "identifier": null,
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "120794",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1",
+              "title": "Batman (1989-1997) Collection"
+            }
+          ],
+          "coverImageURL": "https://image.tmdb.org/t/p/original/4UHZWw5lV3ZoadTjXuVOakdH32L.jpg",
+          "tileShape": "landscape",
+          "hidesTitle": false,
+          "heroBackdropURL": "https://image.tmdb.org/t/p/original/4UHZWw5lV3ZoadTjXuVOakdH32L.jpg"
+        }
+      ],
+      "position": 0,
+      "isEnabled": true,
+      "pageSize": null
+    }
+  ]
+}
