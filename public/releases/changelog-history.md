@@ -1,12 +1,50 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled October 9, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled October 13, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 68 · 2026-10-13
+
+October 13, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Customize Live shelves, with programme pages showing where a show airs.
+- Radio in CarPlay.
+- Network shares re-index only changed folders.
+- Radio: stations by country and genre, synced lyrics and Shazam. Add it in Settings › Navigation.
+- What Should I Watch in Search returns ranked picks you can save as a Home row.
+- Jellyfin and Emby Live TV join Live TV, with lineups, multiview and Cedar DVR.
+- Share and import .cedar setup files with passphrase-locked passwords, plus Strand, Xperience, Fusion and Nuvio imports.
+- Detail pages: press and hold a section to reorder or hide it. New sections include Tagline, Themes and Box Office.
+- Mark Segments sends intro, recap and credits times to IntroDB and SkipDB.
+- Top 10 Charts, public MDBList lists and Sports Bar scores on Home.
+- Faster Cedar Posters, with new styles, presets and per-title styles.
+- Watched movies show Watch Again instead of Play. Requested by godzilladad on Discord.
+- Guide: open past or upcoming programme details, or press and hold for more actions. Requested by mazzi526 on Discord.
+- Custom Range release years, such as 1996–2003, for branches and custom channels. Requested by mazzi526 on Discord.
+- Tobacco Ties: one login for several Cedar Library URLs. Requested by MrT on Discord.
+- Faster HEVC live channel starts, and no more live audio stutter with Live rewind off.
+
+## Fixes
+
+- Decade filters show their real years behind UTC.
+- Ambient channels stay out of Continue Watching.
+- Poster labels no longer collide with badges.
+- Closing a media-server channel releases its tuner.
+
+#### Known issues
+
+- Media-server Live TV has no catch-up; Plex Live TV isn't supported yet.
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-68)
 
 ### 1.0.0 · build 65 · 2026-10-09
 
@@ -884,6 +922,42 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 68 · 2026-10-13
+
+October 13, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Network shares re-index only changed folders.
+- Radio: stations by country and genre, synced lyrics and Shazam. Add it in Settings › Navigation.
+- What Should I Watch in Search returns ranked picks you can save as a Home row.
+- Jellyfin and Emby Live TV join Live TV, with lineups, multiview and Cedar DVR.
+- Share and import .cedar setup files with passphrase-locked passwords, plus Strand, Xperience, Fusion and Nuvio imports.
+- Detail pages: press and hold a section to reorder or hide it. New sections include Tagline, Themes and Box Office.
+- Mark Segments sends intro, recap and credits times to IntroDB and SkipDB.
+- Top 10 Charts, public MDBList lists and Sports Bar scores on Home.
+- Faster Cedar Posters, with new styles, presets and per-title styles.
+- Watched movies show Watch Again instead of Play. Requested by godzilladad on Discord.
+- Guide: open past or upcoming programme details, or press and hold for more actions. Requested by mazzi526 on Discord.
+- Custom Range release years, such as 1996–2003, for branches and custom channels. Requested by mazzi526 on Discord.
+- Tobacco Ties: one login for several Cedar Library URLs. Requested by MrT on Discord.
+- Faster HEVC live channel starts, and no more live audio stutter with Live rewind off.
+
+## Fixes
+
+- Decade filters show their real years behind UTC.
+- Ambient channels stay out of Continue Watching.
+- Poster labels no longer collide with badges.
+- Closing a media-server channel releases its tuner.
+
+#### Known issues
+
+- Media-server Live TV has no catch-up; Plex Live TV isn't supported yet.
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-68)
+
 ### 1.0.0 · build 65 · 2026-10-09
 
 October 9, 2026 · Released to External TestFlight for iPad.
@@ -1759,6 +1833,41 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 68 · 2026-10-13
+
+October 13, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Radio: stations by country and genre, synced lyrics and Shazam. Add it in Settings › Navigation.
+- What Should I Watch in Search returns ranked picks you can save as a Home row.
+- Jellyfin and Emby Live TV join Live TV, with lineups, multiview and Cedar DVR.
+- Share and import .cedar setup files with passphrase-locked passwords, plus Strand, Xperience, Fusion and Nuvio imports.
+- Detail pages: press and hold a section to reorder or hide it. New sections include Tagline, Themes and Box Office.
+- Mark Segments sends intro, recap and credits times to IntroDB and SkipDB.
+- Top 10 Charts, public MDBList lists and Sports Bar scores on Home.
+- Faster Cedar Posters, with new styles, presets and per-title styles.
+- Watched movies show Watch Again instead of Play. Requested by godzilladad on Discord.
+- Guide: open past or upcoming programme details, or press and hold for more actions. Requested by mazzi526 on Discord.
+- Custom Range release years, such as 1996–2003, for branches and custom channels. Requested by mazzi526 on Discord.
+- Tobacco Ties: one login for several Cedar Library URLs. Requested by MrT on Discord.
+- Faster HEVC live channel starts, and no more live audio stutter with Live rewind off.
+
+## Fixes
+
+- Decade filters show their real years behind UTC.
+- Ambient channels stay out of Continue Watching.
+- Poster labels no longer collide with badges.
+- Closing a media-server channel releases its tuner.
+
+#### Known issues
+
+- Media-server Live TV has no catch-up; Plex Live TV isn't supported yet.
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-68)
+
 ### 1.0.0 · build 65 · 2026-10-09
 
 October 9, 2026 · Released to External TestFlight for Apple TV.
@@ -2538,6 +2647,41 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 68 · 2026-10-13
+
+October 13, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Radio: stations by country and genre, synced lyrics and Shazam. Add it in Settings › Navigation.
+- What Should I Watch in Search returns ranked picks you can save as a Home row.
+- Jellyfin and Emby Live TV join Live TV, with lineups, multiview and Cedar DVR.
+- Share and import .cedar setup files with passphrase-locked passwords, plus Strand, Xperience, Fusion and Nuvio imports.
+- Detail pages: press and hold a section to reorder or hide it. New sections include Tagline, Themes and Box Office.
+- Mark Segments sends intro, recap and credits times to IntroDB and SkipDB.
+- Top 10 Charts, public MDBList lists and Sports Bar scores on Home.
+- Faster Cedar Posters, with new styles, presets and per-title styles.
+- Watched movies show Watch Again instead of Play. Requested by godzilladad on Discord.
+- Guide: open past or upcoming programme details, or press and hold for more actions. Requested by mazzi526 on Discord.
+- Custom Range release years, such as 1996–2003, for branches and custom channels. Requested by mazzi526 on Discord.
+- Tobacco Ties: one login for several Cedar Library URLs. Requested by MrT on Discord.
+- Faster HEVC live channel starts, and no more live audio stutter with Live rewind off.
+
+## Fixes
+
+- Decade filters show their real years behind UTC.
+- Ambient channels stay out of Continue Watching.
+- Poster labels no longer collide with badges.
+- Closing a media-server channel releases its tuner.
+
+#### Known issues
+
+- Media-server Live TV has no catch-up; Plex Live TV isn't supported yet.
+- Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-68)
 
 ### 1.0.0 · build 65 · 2026-10-09
 

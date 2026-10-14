@@ -4,10 +4,46 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "68",
+      "date": "2026-10-13",
+      "status": "testflight",
+      "summary": "External TestFlight. Radio with CarPlay, What Should I Watch, Customize Live, Jellyfin and Emby Live TV, and .cedar setup files.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-68.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "68",
+      "date": "2026-10-13",
+      "status": "testflight",
+      "summary": "External TestFlight. Radio, What Should I Watch, Jellyfin and Emby Live TV, .cedar setup files and editable detail pages.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-68.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "68",
+      "date": "2026-10-13",
+      "status": "testflight",
+      "summary": "External TestFlight. Radio, What Should I Watch, Jellyfin and Emby Live TV, editable detail pages and Mark Segments.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-68.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "68",
+      "date": "2026-10-13",
+      "status": "testflight",
+      "summary": "External TestFlight. Radio, What Should I Watch, Jellyfin and Emby Live TV, .cedar setup files and editable detail pages.",
+      "notes": "release-notes/apple/mac/1.0.0-build-68.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "65",
       "date": "2026-10-09",
       "status": "testflight",
-      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and next-episode downloads.",
+      "summary": "Released to External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and next-episode downloads.",
       "notes": "release-notes/apple/iphone/1.0.0-build-65.md"
     },
     {
@@ -16,7 +52,7 @@
       "build": "65",
       "date": "2026-10-09",
       "status": "testflight",
-      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and next-episode downloads.",
+      "summary": "Released to External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and next-episode downloads.",
       "notes": "release-notes/apple/ipad/1.0.0-build-65.md"
     },
     {
@@ -25,7 +61,7 @@
       "build": "65",
       "date": "2026-10-09",
       "status": "testflight",
-      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and the Super Hero layout.",
+      "summary": "Released to External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and the Super Hero layout.",
       "notes": "release-notes/apple/apple-tv/1.0.0-build-65.md"
     },
     {
@@ -34,7 +70,7 @@
       "build": "65",
       "date": "2026-10-09",
       "status": "testflight",
-      "summary": "External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and Sports Bar game details.",
+      "summary": "Released to External TestFlight. My Taste Home, Viewing Stats, hidden genres, Audio Boost, smarter Describe and Sports Bar game details.",
       "notes": "release-notes/apple/mac/1.0.0-build-65.md"
     },
     {
