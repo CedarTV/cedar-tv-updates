@@ -1,4 +1,4 @@
-// Portable collection vocabulary mirrors CedarCore/ExternalCollectionImport.swift.
+// Studio reads other apps' collection JSON and writes Cedar's native .cedar Branches file.
 export const MAX_BYTES = 10 * 1024 * 1024;
 export const deviceFamilies = ['phone','tablet','desktop','television'];
 export const deviceNames = {shared:'All devices',phone:'iPhone',tablet:'iPad',desktop:'Mac',television:'TV'};
@@ -32,20 +32,13 @@ export function sanitizeSource(v){
  return s;
 }
 export function sourceProblem(s,direct=false){
- if(direct&&!['movie','movies','tv','series','show','shows'].includes(s.mediaType||s.type))return 'Choose Movies or TV shows for a direct Branch. Mixed-media sources belong in a Branch Group.';
  if(s.provider==='tmdb'){
   if(!kinds.includes(s.tmdbSourceType))return `Cedar does not support TMDB ${s.tmdbSourceType}.`;
   if(['LIST','COLLECTION','COMPANY','NETWORK','PERSON','DIRECTOR'].includes(s.tmdbSourceType)&&!positive(s.tmdbId))return 'A numeric TMDB ID is required.';
-  if(direct&&!directKinds.includes(s.tmdbSourceType))return 'This source is supported inside a Branch Group. Move it into a group before exporting.';
   return '';
  }
  if(s.provider==='trakt')return !positive(s.traktListId)||!['movie','movies','tv','series','show','shows'].includes(s.mediaType) ? 'A public Trakt list ID and media type are required.' : '';
- if(s.provider==='addon'){
-  if(direct)return 'This account source needs a Branch Group in the current Cedar importer.';
-  if(['trakt.upnext','trakt.watchlist.movies','trakt.watchlist.series'].includes(s.catalogId))return '';
-  if(s.catalogId&&/(?:^|[.:/])[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}(?:$|[.:/])/i.test(s.addonId||''))return '';
-  return 'This add-on cannot be matched to an installed Cedar Tobacco Tie.';
- }
+ if(s.provider==='addon')return ['trakt.upnext','trakt.watchlist.movies','trakt.watchlist.series'].includes(s.catalogId) ? '' : 'Tobacco Tie catalogs can’t travel in a .cedar file, so Cedar leaves this source out.';
  return `Cedar does not support the ${s.provider||'unknown'} source provider.`;
 }
 export function makeBranch(title='Trending',kind='TRENDING',type='movie',filters={}){return {id:uid(),kind:'branch',title,enabled:true,source:sanitizeSource({title,provider:'tmdb',tmdbSourceType:kind,mediaType:type,filters})};}
@@ -57,7 +50,7 @@ function cleanChild(v){if(!obj(v)||!Array.isArray(v.sources)||v.sources.length>1
 export function validateDraft(v){
  if(!obj(v)||v.version!==2||!Array.isArray(v.rows)||v.rows.length>1000)throw Error('Choose a supported collection or Cedar Studio draft.');
  let total=0;const ids=new Set();const rows=v.rows.map(r=>{if(!obj(r)||!['branch','group'].includes(r.kind))throw Error('Invalid Home row.');const row={id:text(r.id,uid()),kind:r.kind,title:name(r.title,'Untitled branch'),enabled:r.enabled!==false};if(ids.has(row.id))throw Error('The draft contains duplicate Home row IDs.');ids.add(row.id);if(r.kind==='branch'){row.source=sanitizeSource(r.source);total++;}else{if(!Array.isArray(r.branches)||r.branches.length>2000)throw Error('Too many branches in this group.');row.branches=r.branches.map(cleanChild);row.deviceLayout=validateDeviceLayout(r.deviceLayout||newDeviceLayout());const childIDs=new Set();for(const b of row.branches){if(childIDs.has(b.id))throw Error('The group contains duplicate branch IDs.');childIDs.add(b.id);const sourceIDs=new Set();for(const s of b.sources){if(sourceIDs.has(s.id))s.id=uid();sourceIDs.add(s.id);}total+=b.sources.length;}}return row;});
- if(total>15000)throw Error('Choose a collection with fewer than 15,000 sources.');return {version:2,title:name(v.title,'My Home'),rows};
+ if(total>15000)throw Error('Choose a collection with fewer than 15,000 sources.');const draft={version:2,title:name(v.title,'My Home'),rows};if(typeof v.bundleID==='string'&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v.bundleID))draft.bundleID=v.bundleID.toUpperCase();return draft;
 }
 const builtin={trending_movies:'TRENDING',trending_series:'TRENDING',trending_shows:'TRENDING',popular_movies:'POPULAR',popular_series:'POPULAR',popular_shows:'POPULAR',top_rated_movies:'TOP_RATED',toprated_movies:'TOP_RATED',top_rated_series:'TOP_RATED',top_rated_shows:'TOP_RATED',toprated_series:'TOP_RATED',toprated_shows:'TOP_RATED',upcoming_movies:'UPCOMING',now_playing_movies:'NOW_PLAYING',nowplaying_movies:'NOW_PLAYING',airing_today_series:'AIRING_TODAY',airing_today_shows:'AIRING_TODAY',on_the_air_series:'ON_THE_AIR',on_the_air_shows:'ON_THE_AIR'};
 function resolveCatalog(ref,config){const id=ref.catalogId||'',type=ref.type||(/series|shows/.test(id)?'series':'movie'),label=config.catalog_name_overrides?.[id]||config.custom_lists?.find(l=>l.id===id)?.label||id.replaceAll('_',' ');const common={id:`catalog:${id}`,title:label,mediaType:type};const discover=config.discover_catalogs?.[id];if(discover)return {...common,provider:'tmdb',tmdbSourceType:'DISCOVER',filters:discover.filters,sortBy:discover.sort_by};if(builtin[id])return {...common,provider:'tmdb',tmdbSourceType:builtin[id]};const list=config.custom_lists?.find(l=>l.id===id);if(list){const n=Number(id.match(/^(?:tmdb|trakt)_list_(\d+)/)?.[1]);return {...common,provider:list.provider,mediaType:list.kind||type,...(list.provider==='tmdb'?{tmdbSourceType:'LIST',tmdbId:n}:{traktListId:n})};}return {...ref,title:label,provider:ref.provider||'addon'};}
@@ -68,7 +61,7 @@ export function parseImport(input){
  if(data?.version===1&&Array.isArray(data.folders)){
   const g=makeGroup(name(data.title,'Imported group'));g.id=text(data.id,uid());g.deviceLayout=validateDeviceLayout(data.deviceLayout||newDeviceLayout());g.branches=data.folders.map(f=>({id:text(f.id,uid()),title:name(f.title,'Untitled branch'),enabled:f.enabled!==false,sources:[sanitizeSource({title:f.title,provider:'tmdb',tmdbSourceType:f.kind,mediaType:f.media,tmdbId:f.tmdbID,filters:f.genre?{withGenres:f.genre}:{}})]}));return {draft:validateDraft({version:2,title:'My Home',rows:[g]}),issues:[],format:'Earlier Studio draft'};
  }
- if(data?.formatIdentifier==='app.cedar.home-branches')throw Error('This is a native Cedar share export. The current collection importer cannot restore these source bindings. Import collection JSON or a Studio draft instead.');
+ if(data?.formatIdentifier==='app.cedar.home-branches'||data?.formatIdentifier==='app.cedar.bundle')throw Error('This is already a Cedar file. Open it in Cedar. To keep editing in Studio, open a saved Studio draft instead.');
  const config=obj(data?.config)?data.config:obj(data)?data:{};const collections=Array.isArray(data)?data:Array.isArray(config.collections)?config.collections:obj(data)&&Array.isArray(data.folders)?[data]:[];
  if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose collection JSON, a Nuvio profile export, or a Cedar Studio draft.');
  const rows=[],issues=[];const rowIDs=new Set();const byExternal=new Map();
@@ -80,7 +73,7 @@ export function parseImport(input){
  return {draft,issues,format:data?.config?'Nuvio profile export':'Collection JSON'};
 }
 export function mergeImport(current,incoming,mode='append',selectedIDs=incoming.rows.map(r=>r.id)){
- const next=mode==='replace'?{version:2,title:current.title,rows:[]}:validateDraft(current);const chosen=validateDraft(incoming).rows.filter(r=>selectedIDs.includes(r.id));
+ const next=mode==='replace'?{version:2,title:current.title,bundleID:current.bundleID,rows:[]}:validateDraft(current);const chosen=validateDraft(incoming).rows.filter(r=>selectedIDs.includes(r.id));
  if(!chosen.length)throw Error('Select at least one Branch or Branch Group.');
  const signature=s=>JSON.stringify({...s,id:undefined,title:undefined,enabled:undefined});
  for(const row of chosen){const existing=next.rows.find(r=>r.kind===row.kind&&(r.id===row.id||r.title.toLowerCase()===row.title.toLowerCase()));if(mode==='missing'&&existing){if(row.kind==='group'){for(const child of row.branches){const match=existing.branches.find(b=>b.id===child.id||b.title.toLowerCase()===child.title.toLowerCase());if(!match)existing.branches.push(child);else for(const source of child.sources)if(!match.sources.some(s=>s.id===source.id||signature(s)===signature(source)))match.sources.push(source);}}continue;}if(next.rows.some(r=>r.id===row.id))row.id=uid();next.rows.push(row);}
@@ -88,21 +81,59 @@ export function mergeImport(current,incoming,mode='append',selectedIDs=incoming.
 }
 export function moveItem(items,id,position){const index=items.findIndex(i=>i.id===id);if(index<0||position<0||position>=items.length)return;items.splice(position,0,...items.splice(index,1));}
 export function counts(draft){let branches=0,sources=0,unsupported=0;for(const r of draft.rows){if(r.kind==='branch'){branches++;sources++;if(sourceProblem(r.source,true))unsupported++;}else for(const b of r.branches){branches++;sources+=b.sources.length;unsupported+=b.sources.filter(s=>sourceProblem(s)).length;}}return {rows:draft.rows.length,branches,sources,unsupported};}
-export function exportCollection(value){
- const draft=validateDraft(value),config={collections:[],home_rows:[],home_order:[],discover_catalogs:{},custom_lists:[],catalog_name_overrides:{}},issues=[];const directIDs=new Set();
- const clean=s=>{const {enabled,...source}=s;return source;};
- for(const row of draft.rows){if(!row.enabled)continue;
+// Studio writes Cedar's own `.cedar` Branches file (CEDAR_FILE_FORMAT.md in the Cedar repo).
+const uuidPattern=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+const fnv=(input,seed)=>{let h=seed;for(const byte of new TextEncoder().encode(input))h=BigInt.asUintN(64,(h^BigInt(byte))*1099511628211n);return h;};
+export function stableUUID(namespace,value){if(uuidPattern.test(value))return value.toUpperCase();const input=`${namespace.toLowerCase()}|studio.row.${value}`,high=fnv(input,14695981039346656037n),low=fnv(input,1099511628211n),hex=(v,n)=>v.toString(16).padStart(n,'0').toUpperCase();return `${hex((high>>32n)&0xffffffffn,8)}-${hex((high>>16n)&0xffffn,4)}-${hex((high&0xfffn)|0x5000n,4)}-${hex(((low>>48n)&0x3fffn)|0x8000n,4)}-${hex(low&0xffffffffffffn,12)}`;}
+const cedarContent=x=>['movie','movies'].includes(x)?'movies':['tv','series','show','shows'].includes(x)?'shows':'both';
+const ids=x=>typeof x==='string'?x.split(/[,|]/).map(v=>v.trim()).filter(Boolean):[];
+const day=x=>typeof x==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(x)?`${x}T00:00:00Z`:undefined;
+const tmdbSorts={'popularity':'popularity','vote_average':'topRated','vote_count':'voteCount','revenue':'revenue','runtime':'runtime'};
+function tmdbSort(v){const [field,dir]=String(v||'').toLowerCase().split('.');if(tmdbSorts[field])return tmdbSorts[field];if(['primary_release_date','first_air_date'].includes(field))return dir==='asc'?'releaseDateOldest':'releaseDate';if(['title','name'].includes(field))return dir==='desc'?'alphabeticalDescending':'alphabetical';return undefined;}
+function traktSort(v,how){const d=String(how||'').toLowerCase()==='desc';return {title:d?'alphabeticalDescending':'alphabetical',released:d?'releaseDate':'releaseDateOldest',added:d?'releaseDate':'releaseDateOldest',runtime:'runtime',popularity:'popularity',percentage:'topRated',votes:'voteCount'}[String(v||'').toLowerCase()];}
+export function cedarFilters(contentType,f={},sortOrder){const out={contentType,genreIDs:ids(f.withGenres),originalLanguageCodes:ids(f.withOriginalLanguage),countryCodes:ids(f.withOriginCountry),streamingProviderIDs:ids(f.withWatchProviders),networkIDs:ids(f.withNetworks),productionCompanyIDs:ids(f.withCompanies)};const keywords=ids(f.withKeywords);if(keywords.length)out.keywordIDs=keywords;if(Number.isSafeInteger(f.year))out.releaseYear=f.year;else{const start=day(f.releaseDateGte),end=day(f.releaseDateLte);if(start)out.releaseDateStart=start;if(end)out.releaseDateEnd=end;}if(typeof f.voteAverageGte==='number')out.minimumVoteAverage=f.voteAverageGte;if(typeof f.voteAverageLte==='number')out.maximumVoteAverage=f.voteAverageLte;if(Number.isSafeInteger(f.voteCountGte))out.minimumVoteCount=f.voteCountGte;if(sortOrder)out.sortOrder=sortOrder;return out;}
+const feeds={TRENDING:'trending',POPULAR:'popular',TOP_RATED:'topRated',UPCOMING:'upcoming',NOW_PLAYING:'nowPlaying',AIRING_TODAY:'airingToday',ON_THE_AIR:'onTheAir',DISCOVER:'popular'};
+const metadata={kind:'preferredMetadata',parameters:{}};
+/** One Studio source as Cedar's `dataSource`, `query` and `filters`. Call only after `sourceProblem` passes. */
+export function cedarSource(s){
+ if(s.provider==='trakt'){const type=cedarContent(s.mediaType);return {dataSource:{kind:'trackingService',identifier:'trakt-public',parameters:{}},query:{kind:'curatedList',identifier:`global:${s.traktListId}:${type==='shows'?'show':'movie'}`,parameters:{}},filters:cedarFilters(type,{},traktSort(s.sortBy,s.sortHow))};}
+ if(s.provider==='addon')return {dataSource:{kind:'local',parameters:{}},query:{kind:s.catalogId==='trakt.upnext'?'upNext':'watchlist',parameters:{}},filters:cedarFilters(cedarContent(s.type||s.mediaType))};
+ const k=s.tmdbSourceType,parameters={};if(s.filters?.watchRegion)parameters.region=s.filters.watchRegion;let query;
+ if(feeds[k])query={kind:feeds[k],parameters};
+ else if(k==='LIST')query={kind:'curatedList',identifier:String(s.tmdbId),parameters:{provider:'tmdb'}};
+ else if(k==='COLLECTION')query={kind:'metadataCollection',identifier:String(s.tmdbId),parameters};
+ else if(k==='COMPANY')query={kind:'productionCompany',identifier:String(s.tmdbId),parameters};
+ else if(k==='NETWORK')query={kind:'network',identifier:String(s.tmdbId),parameters};
+ else query={kind:'personCredits',identifier:String(s.tmdbId),parameters:{...parameters,role:k==='DIRECTOR'?'director':'actor'}};
+ const type=['LIST','COLLECTION'].includes(k)?'movies':cedarContent(s.mediaType||s.type);
+ return {dataSource:metadata,query,filters:cedarFilters(type,s.filters,tmdbSort(s.sortBy))};
+}
+const templates={classic:'poster-carousel',wide:'wide-backdrop-carousel',feature:'list-preview-full-width'};
+const presentation=templateID=>({templateID,enhancedPostersEnabled:false,ratings:{isEnabled:false,providerIDs:[]}});
+const groupContent=sources=>{const types=new Set(sources.map(s=>s.filters.contentType));return types.size===1?[...types][0]:'both';};
+const empty=contentType=>cedarFilters(contentType);
+/** Studio's per-device appearance becomes `platformConfiguration` (CEDAR_FILE_FORMAT.md §7.3). */
+function platformConfiguration(row){const shared=row.deviceLayout.shared,overrides={},platforms=[];
+ for(const family of deviceFamilies){const a=appearanceFor(row,family),o={};if(a.enabled)platforms.push(family);if(a.rowStyle!==shared.rowStyle)o.presentation=presentation(templates[a.rowStyle]);if(a.cardStyle!=='backdrop')o.leafCardStyle=a.cardStyle;if(a.browseLayout!==shared.browseLayout)o.leafBrowseLayout=a.browseLayout;if(Object.keys(o).length)overrides[family]=o;}
+ const config={overrides};if(platforms.length<deviceFamilies.length)config.platforms=platforms;return platforms.length&&(config.platforms||Object.keys(overrides).length)?config:platforms.length?null:false;}
+const branch=(id,title,base,template,folderOptions=[])=>({id,profileID:'00000000-0000-0000-0000-000000000000',schemaVersion:2,title,titleMode:'custom',dataSource:base.dataSource,query:base.query,defaultFilters:base.filters,presentation:presentation(template),folderOptions,position:0,isEnabled:true});
+export function exportCedar(value,now=new Date()){
+ const draft=validateDraft(value),bundleID=draft.bundleID||uid().toUpperCase(),branches=[],issues=[];let groups=0;
+ for(const row of draft.rows){if(!row.enabled)continue;const id=stableUUID(bundleID,row.id);
   if(row.kind==='group'){
-   const folders=[];for(const b of row.branches){if(!b.enabled)continue;const sources=b.sources.filter(s=>{if(!s.enabled)return false;const p=sourceProblem(s);if(p)issues.push(`${b.title} / ${s.title}: ${p}`);return !p;});if(!sources.length){issues.push(`${b.title}: no compatible enabled sources.`);continue;}const {enabled,...folder}=b;folders.push({...folder,hideTitle:false,sources:sources.map(clean)});}
+   const folders=[];for(const b of row.branches){if(!b.enabled)continue;const sources=[];for(const s of b.sources){if(!s.enabled)continue;const p=sourceProblem(s);if(p){issues.push(`${row.title} / ${b.title} / ${s.title}: ${p}`);continue;}sources.push({id:s.id,title:s.title,...cedarSource(s)});}
+    if(!sources.length){issues.push(`${row.title} / ${b.title}: no compatible enabled sources.`);continue;}
+    const folder={id:b.id,title:b.title,dataSource:sources[0].dataSource,query:sources[0].query,filters:sources[0].filters,sources,tileShape:b.tileShape||'landscape',hidesTitle:false};const cover=b.customCoverImageUrl||b.coverImageUrl;if(cover)folder.coverImageURL=cover;if(b.heroBackdropUrl)folder.heroBackdropURL=b.heroBackdropUrl;if(b.focusGifEnabled&&b.focusGifUrl)folder.focusedCoverImageURL=b.focusGifUrl;if(b.titleLogoUrl)folder.titleLogoURL=b.titleLogoUrl;folders.push(folder);}
    if(!folders.length){issues.push(`${row.title}: no compatible enabled branches.`);continue;}
-   config.collections.push({id:row.id,title:row.title,folders,cedarLayout:row.deviceLayout});config.home_order.push({kind:'collection',id:row.id});
+   const platforms=platformConfiguration(row);if(platforms===false){issues.push(`${row.title}: turned off on every device.`);continue;}
+   const shared=row.deviceLayout.shared,base={dataSource:{kind:'custom',identifier:'cedar.branch-group',parameters:{'cedar.home.displaysFolderCards':'true','cedar.home.folderRole':'folder','cedar.home.leafBrowseLayout':shared.browseLayout}},query:{kind:'custom',identifier:'cedar.branch-group',parameters:{}},filters:empty(groupContent(folders.flatMap(f=>f.sources)))};
+   const b=branch(id,row.title,base,templates[shared.rowStyle],folders);if(platforms)b.platformConfiguration=platforms;branches.push(b);groups++;
   }else{
-   const s=row.source;if(!s.enabled)continue;const problem=sourceProblem(s,true);if(problem){issues.push(`${row.title}: ${problem}`);continue;}let id;const type=media(s.mediaType)==='tv'?'series':'movie';
-   if(s.provider==='trakt'||s.tmdbSourceType==='LIST'){if(s.sortBy||s.sortHow||Object.keys(s.filters||{}).length)issues.push(`${row.title}: direct list filters and sorting are not supported by Cedar’s profile import format; the list imports in its default order. Use a Branch Group to retain source filters.`);const provider=s.provider,idNumber=provider==='trakt'?s.traktListId:s.tmdbId;id=`${provider}_list_${idNumber}_${row.id}`;config.custom_lists.push({id,label:row.title,provider,kind:type});}
-   else if(s.tmdbSourceType==='DISCOVER'||Object.keys(s.filters||{}).length||s.sortBy){id=`studio_${row.id}_${type==='series'?'series':'movies'}`;config.discover_catalogs[id]={filters:s.filters||{},...(s.sortBy?{sort_by:s.sortBy}:{})};}
-   else{const stem={TRENDING:'trending',POPULAR:'popular',TOP_RATED:'top_rated',UPCOMING:'upcoming',NOW_PLAYING:'now_playing',AIRING_TODAY:'airing_today',ON_THE_AIR:'on_the_air'}[s.tmdbSourceType];id=`${stem}_${type==='series'?'series':'movies'}`;if(!builtin[id])throw Error(`${row.title}: choose a feed that supports this media type.`);}
-   if(directIDs.has(id))throw Error(`Two Home branches use the same ${s.tmdbSourceType.toLowerCase()} feed. Keep one, or add discovery filters to distinguish them.`);directIDs.add(id);config.home_rows.push({catalog_id:id,enabled:true});config.home_order.push({kind:'catalog',id});config.catalog_name_overrides[id]=row.title;
+   const s=row.source;if(!s.enabled)continue;const problem=sourceProblem(s,true);if(problem){issues.push(`${row.title}: ${problem}`);continue;}branches.push(branch(id,row.title,cedarSource(s),'poster-carousel'));
   }
  }
- if(!config.home_order.length)throw Error('Enable at least one compatible branch or source before exporting.');return {document:{config},issues};
+ if(!branches.length)throw Error('Enable at least one compatible branch or source before exporting.');
+ const document={formatIdentifier:'app.cedar.bundle',schemaVersion:1,kind:'branches',bundleID,title:draft.title,createdAt:now.toISOString().replace(/\.\d{3}Z$/,'Z'),generator:{application:'Cedar Studio'},branches:branches.map((b,position)=>({...b,position}))};
+ return {document,issues,bundleID,branchCount:branches.length-groups,groupCount:groups};
 }
+export function cedarFileName(title){return `${String(title||'').replace(/[^A-Za-z0-9 _-]+/g,'').trim().replace(/\s+/g,'-')||'Cedar-Studio-Home'}.cedar`;}
