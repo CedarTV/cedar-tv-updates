@@ -33,12 +33,11 @@ Repository: [github.com/skynet01/get-stranded](https://github.com/skynet01/get-s
 | **Full Setup** | `RenatoQ` | `S2KPMHwS` | [View Setup](https://get-stranded.fabriceleven.com/p/S2KPMHwS) | 12 |
 | **Native-Focused-Hero-v37** | `impissedoff` | `UrZxjxLa` | [View Setup](https://get-stranded.fabriceleven.com/p/UrZxjxLa) | 13 |
 | **Nuvio V3 Setup** | `DaVincisDomain` | `eijjF6Zi` | [View Setup](https://get-stranded.fabriceleven.com/p/eijjF6Zi) | 5 |
-| **nuvio-collections-profile-1-2026-10-04** | `anon-jRFCkx` | `BSUrQaZ1` | [View Setup](https://get-stranded.fabriceleven.com/p/BSUrQaZ1) | 10 |
+| **Cinema & Television Hubs** | `anon-jRFCkx` | `BSUrQaZ1` | [View Setup](https://get-stranded.fabriceleven.com/p/BSUrQaZ1) | 10 |
 | **Ultimate Horror Collection** | `Anonymous (Nuvio)` | `s3ucrahf` | [View Setup](https://get-stranded.fabriceleven.com/p/s3ucrahf) | 8 |
 | **No Nonsense Classic TV Collection** | `Anonymous (Nuvio)` | `t8cCYHb8` | [View Setup](https://get-stranded.fabriceleven.com/p/t8cCYHb8) | 7 |
 | **Simple Kids Profile** | `Anonymous (Nuvio)` | `29vU8UI3` | [View Setup](https://get-stranded.fabriceleven.com/p/29vU8UI3) | 4 |
 | **Icons** | `Strand Dev` | `izEszk9U` | [View Setup](https://get-stranded.fabriceleven.com/p/izEszk9U) | N/A (Icons) |
-| **Strand Setup (Custom Curated)** | `Cedar / Strand Community` | `custom` | — | 11 |
 
 ---
 
@@ -109,17 +108,17 @@ Curated Shelves Included:
 
 ---
 
-## 4. Cedar Native Branches
+## 4. Cedar Community Setups (Modified for Cedar)
 
-Platform: **Cedar** (`app.cedar.home-branches`)  
-Created by: **Cedar Team / Cedar Posters**  
-Repository: [Cedar Posters](https://github.com/cedar-posters)
+Platform: **Cedar**  
+Curation & Provenance: **Community Curators (Trakt, MDBList & TMDB), modified for Cedar**  
+*Note: Cedar does not claim authorship for these catalogs; all collections are community-curated and adapted for Cedar Native layouts.*
 
 Configurations Included:
-- **Cedar Action Adrenaline** (5 high-octane branches)
-- **Cedar Cinematic Sagas** (4 franchise and cinematic universe branches)
-- **Cedar Decades Chronicles** (2 historic film branches)
-- **Cedar Horror Vault** (7 terror and suspense branches)
+- **Horror Vault** (7 branch groups): Curated from 47 community lists by **snoak**, **travis_mcnelly**, **nobnobz**, **jarvis-16255551**, **RavynLoony**, **lish408**, **JasKraus**, **exoduso**, **hdlists**, **sp1ti**, **zephir**, **whitemagica**, **nxsxs**, **fuzi0n**, **666jascha**, **SHAVERZ**, **northernwish**, **AxolotlSmile**, **IDKMANITSNOTOK**, **caoimh**, **kris.felscher**, **auwboyz**, **fexi**, **jason-postrel**, **agentsar**, **atalante421**, **almj24**, **UteProud83**, **gijs11**, **lendricklamar**, **danaramapyjama**, **bbrodka1963**, **galacticboy**, **Phantasmx1975**, **rogerioandre**, **royceb**, **majeed_pk**, **sysops**, **windphoenix_**, **x0r**, and TMDB Collections.
+- **Cinematic Sagas** (4 branches): Curated from TMDB Movie Collections and community franchise timeline curation by **exoduso** (`exoduso|101434`).
+- **Action Adrenaline** (5 branches): Curated from community lists by **lish408** (`gun-fu-modern-tactical-action`), **travis_mcnelly** (`top-martial-arts-movies`), **hdlists** (`best-heist-movies-of-all-time`), alongside TMDB Collections & actor retrospectives.
+- **Decades Chronicles** (2 branches): Adapted from community decade structures and powered by TMDB historical decade queries.
 
 ---
 

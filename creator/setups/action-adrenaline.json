@@ -15,8 +15,7 @@
         "parameters": {}
       },
       "query": {
-        "kind": "custom",
-        "identifier": "external-collection-discovery",
+        "kind": "trending",
         "parameters": {}
       },
       "presentation": {
@@ -61,8 +60,7 @@
         "parameters": {}
       },
       "query": {
-        "kind": "custom",
-        "identifier": "external-collection-discovery",
+        "kind": "topRated",
         "parameters": {}
       },
       "presentation": {
@@ -305,8 +303,7 @@
           "id": "folder-4",
           "title": "Espionage & Rogue Agents",
           "query": {
-            "kind": "custom",
-            "identifier": "external-collection-discovery",
+            "kind": "popular",
             "parameters": {}
           },
           "filters": {
@@ -335,8 +332,7 @@
                 "parameters": {}
               },
               "query": {
-                "kind": "custom",
-                "identifier": "external-collection-discovery",
+                "kind": "popular",
                 "parameters": {}
               },
               "filters": {
@@ -365,8 +361,7 @@
           "id": "folder-5",
           "title": "Post-Apocalyptic Survival & Car Combat",
           "query": {
-            "kind": "custom",
-            "identifier": "external-collection-discovery",
+            "kind": "popular",
             "parameters": {}
           },
           "filters": {
@@ -395,8 +390,7 @@
                 "parameters": {}
               },
               "query": {
-                "kind": "custom",
-                "identifier": "external-collection-discovery",
+                "kind": "popular",
                 "parameters": {}
               },
               "filters": {
@@ -425,8 +419,7 @@
           "id": "folder-6",
           "title": "Sci-Fi Action & Cyberpunk Spectacle",
           "query": {
-            "kind": "custom",
-            "identifier": "external-collection-discovery",
+            "kind": "popular",
             "parameters": {}
           },
           "filters": {
@@ -455,8 +448,7 @@
                 "parameters": {}
               },
               "query": {
-                "kind": "custom",
-                "identifier": "external-collection-discovery",
+                "kind": "popular",
                 "parameters": {}
               },
               "filters": {

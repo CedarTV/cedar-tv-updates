@@ -1,900 +1,564 @@
 {
-  "branches" : [
+  "branches": [
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "chips-and-grid"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "chips-and-grid"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/1930s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/1930s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "DC72B588-A027-485A-A12A-EF28C61A42A3",
-          "query" : {
-            "identifier" : "RavynLoony|1930-films",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "DC72B588-A027-485A-A12A-EF28C61A42A3",
+          "query": {
+            "identifier": "RavynLoony|1930-films",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "1F0C5F1F-7E99-5AD7-A6F9-FF735E382599",
-              "query" : {
-                "identifier" : "RavynLoony|1930-films",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "1F0C5F1F-7E99-5AD7-A6F9-FF735E382599",
+              "query": {
+                "identifier": "RavynLoony|1930-films",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "1930 Films"
+              "title": "1930 Films"
             }
           ],
-          "tileShape" : "square",
-          "title" : "1930s"
+          "tileShape": "square",
+          "title": "1930s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/1940s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/1940s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "B82923A5-AED1-44AA-8B21-96EA100F9F9C",
-          "query" : {
-            "identifier" : "RavynLoony|1940-films",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "B82923A5-AED1-44AA-8B21-96EA100F9F9C",
+          "query": {
+            "identifier": "RavynLoony|1940-films",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "6F4A92BB-A4D1-5E5B-A8E7-9BB79ABC99CD",
-              "query" : {
-                "identifier" : "RavynLoony|1940-films",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "6F4A92BB-A4D1-5E5B-A8E7-9BB79ABC99CD",
+              "query": {
+                "identifier": "RavynLoony|1940-films",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "1940 Films"
+              "title": "1940 Films"
             }
           ],
-          "tileShape" : "square",
-          "title" : "1940s"
+          "tileShape": "square",
+          "title": "1940s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/1950s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/1950s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "F5B79B30-36BF-4A02-9B16-E599D9390F17",
-          "query" : {
-            "identifier" : "RavynLoony|1950-films",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "F5B79B30-36BF-4A02-9B16-E599D9390F17",
+          "query": {
+            "identifier": "RavynLoony|1950-films",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "7118AE59-18A5-564C-82C1-DB24E5EB53CA",
-              "query" : {
-                "identifier" : "RavynLoony|1950-films",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "7118AE59-18A5-564C-82C1-DB24E5EB53CA",
+              "query": {
+                "identifier": "RavynLoony|1950-films",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "1950 Films"
+              "title": "1950 Films"
             }
           ],
-          "tileShape" : "square",
-          "title" : "1950s"
+          "tileShape": "square",
+          "title": "1950s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/1960s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/1960s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "8DDC3538-D246-4245-AE3A-1D6CFAE4AD48",
-          "query" : {
-            "identifier" : "snoak|popular-1960s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "8DDC3538-D246-4245-AE3A-1D6CFAE4AD48",
+          "query": {
+            "identifier": "snoak|popular-1960s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "918BFF7D-97FD-5780-9A22-4F1AFC8CDA0A",
-              "query" : {
-                "identifier" : "snoak|popular-1960s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "918BFF7D-97FD-5780-9A22-4F1AFC8CDA0A",
+              "query": {
+                "identifier": "snoak|popular-1960s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Popular 1960s Movies"
+              "title": "Popular 1960s Movies"
             }
           ],
-          "tileShape" : "square",
-          "title" : "1960s"
+          "tileShape": "square",
+          "title": "1960s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/1970s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/1970s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "F1D835C1-8B0C-418B-B209-B966258FEF43",
-          "query" : {
-            "identifier" : "snoak|popular-1970s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "F1D835C1-8B0C-418B-B209-B966258FEF43",
+          "query": {
+            "identifier": "snoak|popular-1970s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "D89567B8-EADA-52EB-8C91-90A27C30FD89",
-              "query" : {
-                "identifier" : "snoak|popular-1970s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "D89567B8-EADA-52EB-8C91-90A27C30FD89",
+              "query": {
+                "identifier": "snoak|popular-1970s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Popular 1970s Movies"
+              "title": "Popular 1970s Movies"
             }
           ],
-          "tileShape" : "square",
-          "title" : "1970s"
+          "tileShape": "square",
+          "title": "1970s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/1980s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/1980s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "D4AFE6F5-C168-4860-9334-766822A6C5B1",
-          "query" : {
-            "identifier" : "snoak|popular-1980s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "D4AFE6F5-C168-4860-9334-766822A6C5B1",
+          "query": {
+            "identifier": "snoak|popular-1980s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "977DB5EA-DD1C-5DD7-A7C2-28282D4E95ED",
-              "query" : {
-                "identifier" : "snoak|popular-1980s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "977DB5EA-DD1C-5DD7-A7C2-28282D4E95ED",
+              "query": {
+                "identifier": "snoak|popular-1980s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Popular 1980s Movies"
+              "title": "Popular 1980s Movies"
             }
           ],
-          "tileShape" : "square",
-          "title" : "1980s"
+          "tileShape": "square",
+          "title": "1980s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/1990s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/1990s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "09C0518C-90CE-4420-BC77-D8B5ADA77297",
-          "query" : {
-            "identifier" : "snoak|popular-1990s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "09C0518C-90CE-4420-BC77-D8B5ADA77297",
+          "query": {
+            "identifier": "snoak|popular-1990s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "99F8504C-EA61-5711-9385-73A226EDCB33",
-              "query" : {
-                "identifier" : "snoak|popular-1990s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "99F8504C-EA61-5711-9385-73A226EDCB33",
+              "query": {
+                "identifier": "snoak|popular-1990s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Popular 1990s Movies"
+              "title": "Popular 1990s Movies"
             }
           ],
-          "tileShape" : "square",
-          "title" : "1990s"
+          "tileShape": "square",
+          "title": "1990s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/2000s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/2000s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "A7B738C8-8242-4568-9E2A-CC27E6B04DE5",
-          "query" : {
-            "identifier" : "snoak|popular-2000s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "A7B738C8-8242-4568-9E2A-CC27E6B04DE5",
+          "query": {
+            "identifier": "snoak|popular-2000s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "2B88F5E5-61D2-541B-832E-F769769ACFD1",
-              "query" : {
-                "identifier" : "snoak|popular-2000s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "2B88F5E5-61D2-541B-832E-F769769ACFD1",
+              "query": {
+                "identifier": "snoak|popular-2000s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Popular 2000s Movies"
+              "title": "Popular 2000s Movies"
             }
           ],
-          "tileShape" : "square",
-          "title" : "2000s"
+          "tileShape": "square",
+          "title": "2000s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/2010s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/2010s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "4C002957-8773-46D1-B48A-14C7F9F41838",
-          "query" : {
-            "identifier" : "snoak|popular-2010s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "4C002957-8773-46D1-B48A-14C7F9F41838",
+          "query": {
+            "identifier": "snoak|popular-2010s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "836CC0C9-6CE1-5ED2-82DA-F90FD5137898",
-              "query" : {
-                "identifier" : "snoak|popular-2010s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "836CC0C9-6CE1-5ED2-82DA-F90FD5137898",
+              "query": {
+                "identifier": "snoak|popular-2010s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Popular 2010s Movies"
+              "title": "Popular 2010s Movies"
             }
           ],
-          "tileShape" : "square",
-          "title" : "2010s"
+          "tileShape": "square",
+          "title": "2010s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/square\/orangebyte\/2020s-square.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/square/orangebyte/2020s-square.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "0F381D3D-6D69-4B1E-98EF-8F180692ADE8",
-          "query" : {
-            "identifier" : "snoak|popular-2020s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "0F381D3D-6D69-4B1E-98EF-8F180692ADE8",
+          "query": {
+            "identifier": "snoak|popular-2020s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "52D6F8AE-1A35-5534-92DE-BA271B01EA8A",
-              "query" : {
-                "identifier" : "snoak|popular-2020s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "52D6F8AE-1A35-5534-92DE-BA271B01EA8A",
+              "query": {
+                "identifier": "snoak|popular-2020s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Popular 2020s Movies"
+              "title": "Popular 2020s Movies"
             }
           ],
-          "tileShape" : "square",
-          "title" : "2020s"
+          "tileShape": "square",
+          "title": "2020s"
         }
       ],
-      "id" : "88AA8A75-1FD1-5AC9-95E3-53B5F4CBE55C",
-      "isEnabled" : true,
-      "position" : 0,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "88AA8A75-1FD1-5AC9-95E3-53B5F4CBE55C",
+      "isEnabled": true,
+      "position": 0,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "RavynLoony|1930-films",
-        "kind" : "curatedList",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "Decades"
+      "schemaVersion": 2,
+      "title": "Decades"
     }
   ],
-  "bundleID" : "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
-  "createdAt" : "2026-10-11T14:18:02Z",
-  "formatIdentifier" : "app.cedar.bundle",
-  "generator" : {
-    "application" : "Cedar Creator"
+  "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
+  "createdAt": "2026-10-11T14:18:02Z",
+  "formatIdentifier": "app.cedar.bundle",
+  "generator": {
+    "application": "Cedar Creator"
   },
-  "kind" : "branches",
-  "schemaVersion" : 1,
-  "title" : "Sourced-Decades-Square-Orangebyte"
+  "kind": "branches",
+  "schemaVersion": 1,
+  "title": "Sourced-Decades-Square-Orangebyte"
 }

@@ -129,10 +129,16 @@ const byline = setup => setup.credit?.platform && setup.credit.platform !== "Ced
 
 function creditDetails(setup) {
   const credit = setup.credit || {};
-  if (credit.platform === "Cedar") return [element("p", { text: "Made by Cedar for Cedar." })];
-  const made = element("p", {}, [
-    "Made by ", element("strong", { text: setup.creator }), ` for ${credit.platform}`,
-    ...(credit.via ? [`, shared on ${credit.via}`] : []), "."]);
+  const made = credit.platform === "Cedar"
+    ? element("p", {}, [
+      "Curated by ", element("strong", { text: setup.creator }),
+      ...(credit.via ? [`, via ${credit.via}`] : []),
+      ", modified for Cedar.",
+    ])
+    : element("p", {}, [
+      "Made by ", element("strong", { text: setup.creator }), ` for ${credit.platform}`,
+      ...(credit.via ? [`, shared on ${credit.via}`] : []), ".",
+    ]);
   const parts = [made];
   if (credit.sourceURL) {
     parts.push(element("p", {}, [element("a", {

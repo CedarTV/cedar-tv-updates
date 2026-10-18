@@ -4,7 +4,7 @@
       "id": "horror-vault",
       "file": "horror-vault.json",
       "title": "Horror Vault",
-      "creator": "Cedar",
+      "creator": "Trakt & MDBList Community (snoak, travis_mcnelly, nobnobz, et al.)",
       "description": "Seven groups of horror: new releases, subgenres, studios and streamers, iconic sagas, decades, international terror and late-night moods.",
       "tags": [
         "Genres",
@@ -16,16 +16,16 @@
       "addedAt": "2026-10-11",
       "credit": {
         "platform": "Cedar",
-        "via": "Cedar",
+        "via": "Trakt & MDBList Community Curators",
         "sourceURL": null,
-        "conversion": null
+        "conversion": "Assembled from 47 community lists by snoak, travis_mcnelly, nobnobz, RavynLoony, jarvis, JasKraus, lish408, exoduso, and others; modified for Cedar."
       }
     },
     {
       "id": "cinematic-sagas",
       "file": "cinematic-sagas.json",
       "title": "Cinematic Sagas",
-      "creator": "Cedar",
+      "creator": "TMDB & Community (exoduso)",
       "description": "The big franchises in one place: a box-office row, then space operas, fantasy realms and comic-book universes.",
       "tags": [
         "Franchises",
@@ -34,16 +34,16 @@
       "addedAt": "2026-10-11",
       "credit": {
         "platform": "Cedar",
-        "via": "Cedar",
+        "via": "TMDB Movie Collections & exoduso",
         "sourceURL": null,
-        "conversion": null
+        "conversion": "Assembled from TMDB franchise collections and community timeline curation by exoduso; modified for Cedar."
       }
     },
     {
       "id": "action-adrenaline",
       "file": "action-adrenaline.json",
       "title": "Action Adrenaline",
-      "creator": "Cedar",
+      "creator": "Trakt, MDBList & TMDB Community (lish408, travis_mcnelly, hdlists)",
       "description": "Trending and top-rated action, combat subgenres, legendary sagas and the stars who do their own stunts.",
       "tags": [
         "Genres",
@@ -53,16 +53,16 @@
       "addedAt": "2026-10-11",
       "credit": {
         "platform": "Cedar",
-        "via": "Cedar",
+        "via": "Community Curators (lish408, travis_mcnelly, hdlists) & TMDB",
         "sourceURL": null,
-        "conversion": null
+        "conversion": "Assembled from community lists by lish408, travis_mcnelly, and hdlists alongside TMDB collections; modified for Cedar."
       }
     },
     {
       "id": "decades-chronicles",
       "file": "decades-chronicles.json",
       "title": "Decades Chronicles",
-      "creator": "Cedar",
+      "creator": "Community & TMDB",
       "description": "A timeless-masterpieces row and a decade-by-decade group from the 1950s to today.",
       "tags": [
         "Decades",
@@ -71,17 +71,17 @@
       "addedAt": "2026-10-11",
       "credit": {
         "platform": "Cedar",
-        "via": "Cedar",
+        "via": "TMDB Historical Catalog & Community Decades",
         "sourceURL": null,
-        "conversion": null
+        "conversion": "Adapted from classic community decade structures using TMDB historical decade queries; modified for Cedar."
       }
     },
     {
       "id": "collection-source-award",
       "file": "96XPwo6G.cedar",
-      "title": "Collection Source Award",
+      "title": "Film Awards Showcase (Poster)",
       "creator": "mousa.a",
-      "description": "1 branch converted from Strand.",
+      "description": "Curated film festival and award winner showcases including the Academy Awards, Golden Globes, and international film festivals in a clean poster layout. Curated by mousa.a.",
       "tags": [
         "Awards",
         "Movies"
@@ -116,7 +116,7 @@
     {
       "id": "decades-rdnoni",
       "file": "H6I00U0E.cedar",
-      "title": "Decades",
+      "title": "Decades (rdnoni)",
       "creator": "rdnoni",
       "description": "Thanks to collection from https://itsrenoria.github.io/fusion-starter-kit/ and Rdnoni.",
       "tags": [
@@ -159,9 +159,9 @@
     {
       "id": "black-and-white",
       "file": "0nnVrtpB.cedar",
-      "title": "Black and White",
+      "title": "Black & White Hubs",
       "creator": "Ahmed_No1",
-      "description": "2 branches converted from Strand.",
+      "description": "Curated streaming services and genre hubs styled with sleek monochrome artwork. Curated by Ahmed_No1.",
       "tags": [
         "Genres",
         "Movies",
@@ -178,9 +178,9 @@
     {
       "id": "genres-meow",
       "file": "NXCwhXLa.cedar",
-      "title": "Genres",
+      "title": "Curated Genres (Wide)",
       "creator": "meow",
-      "description": "1 branch converted from Strand.",
+      "description": "Ten core movie and series genre hubs presented in a wide backdrop layout, adapted by meow from mousa.a’s designs.",
       "tags": [
         "Genres",
         "Movies"
@@ -196,9 +196,9 @@
     {
       "id": "genres-mousa-a",
       "file": "uVV4iXMN.cedar",
-      "title": "Genres",
+      "title": "Essential Genres (mousa.a)",
       "creator": "mousa.a",
-      "description": "1 branch converted from Strand.",
+      "description": "Ten essential movie and series genre collections curated by mousa.a.",
       "tags": [
         "Genres",
         "Movies"
@@ -305,7 +305,7 @@
     {
       "id": "decades-skynet",
       "file": "b7h0eekT.cedar",
-      "title": "Decades",
+      "title": "Decades (SkyNet)",
       "creator": "Skynet",
       "description": "A decades collection from Fusion Starter kit: https://itsrenoria.github.io/fusion-starter-kit/",
       "tags": [
@@ -323,7 +323,7 @@
     {
       "id": "decades-in-color",
       "file": "E24Idxs4.cedar",
-      "title": "Decades in color",
+      "title": "Decades in Color",
       "creator": "Akram2130",
       "description": "Decades in color from fusion starter kit.",
       "tags": [
@@ -366,9 +366,9 @@
     {
       "id": "full-setup",
       "file": "S2KPMHwS.cedar",
-      "title": "Full Setup",
+      "title": "RenatoQ’s Cinema & Decades Setup",
       "creator": "RenatoQ",
-      "description": "3 branches converted from Strand.",
+      "description": "Curated setup by RenatoQ featuring decades from the 1970s to 2020s, franchise collections, and spotlight actors.",
       "tags": [
         "Awards",
         "Decades",
@@ -468,9 +468,9 @@
     {
       "id": "native-focused-hero-v37",
       "file": "UrZxjxLa.cedar",
-      "title": "Native-Focused-Hero-v37",
+      "title": "Native Focus & Mega Hubs",
       "creator": "impissedoff",
-      "description": "From discord",
+      "description": "A comprehensive media setup featuring 15 streaming services, 48 television networks, 20 production studios, nearly 200 film franchises, moods, and curated genres. Curated by impissedoff.",
       "tags": [
         "Awards",
         "Decades",
@@ -534,9 +534,9 @@
     {
       "id": "nuvio-collections-profile-1-2026-10-04",
       "file": "BSUrQaZ1.cedar",
-      "title": "nuvio-collections-profile-1-2026-10-04",
+      "title": "Cinema & Television Hubs",
       "creator": "anon-jRFCkx",
-      "description": "8 branches converted from Strand.",
+      "description": "An extensive 8-branch collection featuring streaming hubs, decades from the 1980s onward, major film franchises, and acclaimed director retrospectives. Curated by anon-jRFCkx.",
       "tags": [
         "Decades",
         "Genres",
@@ -577,7 +577,13 @@
       "title": "callandt95’s Fusion Home",
       "creator": "callandt95",
       "description": "A complete Fusion home screen curated by callandt95, as 15 Cedar branches.",
-      "tags": [],
+      "tags": [
+        "Franchises",
+        "Genres",
+        "Movies",
+        "Series",
+        "Streaming"
+      ],
       "addedAt": "2026-10-11",
       "credit": {
         "platform": "Fusion",
@@ -592,13 +598,20 @@
       "title": "snoak’s Fusion Home",
       "creator": "snoak 🐐",
       "description": "A complete Fusion home screen curated by snoak 🐐, as 17 Cedar branches.",
-      "tags": [],
+      "tags": [
+        "Decades",
+        "Discover",
+        "Genres",
+        "Movies",
+        "Series",
+        "Streaming"
+      ],
       "addedAt": "2026-10-11",
       "credit": {
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#setup",
-        "conversion": "Converted from Fusion. 1 filter Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "conversion": "Converted from Fusion. 1 filter Cedar doesn’t support was relaxed, so some rows may show more titles."
       }
     },
     {
@@ -607,13 +620,18 @@
       "title": "ttoadd’s Fusion Home",
       "creator": "ttoadd",
       "description": "A complete Fusion home screen curated by ttoadd, as 8 Cedar branches.",
-      "tags": [],
+      "tags": [
+        "Anime",
+        "Movies",
+        "Series",
+        "Streaming"
+      ],
       "addedAt": "2026-10-11",
       "credit": {
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#setup",
-        "conversion": "Converted from Fusion. 1 filter Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "conversion": "Converted from Fusion. 1 filter Cedar doesn’t support was relaxed, so some rows may show more titles."
       }
     },
     {
@@ -642,7 +660,7 @@
       "file": "widgets-sourced-awards-poster-mousa.a.cedar",
       "title": "Awards (Poster)",
       "creator": "mousa.a",
-      "description": "A awards shelf with built-in sources, designed by mousa.a for Fusion.",
+      "description": "An awards shelf with built-in sources, designed by mousa.a for Fusion.",
       "tags": [
         "Awards"
       ],
@@ -855,7 +873,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet were left out."
+        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet was left out."
       }
     },
     {
@@ -889,7 +907,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet were left out."
+        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet was left out."
       }
     },
     {

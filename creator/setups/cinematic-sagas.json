@@ -15,8 +15,7 @@
         "parameters": {}
       },
       "query": {
-        "kind": "custom",
-        "identifier": "external-collection-discovery",
+        "kind": "popular",
         "parameters": {}
       },
       "presentation": {

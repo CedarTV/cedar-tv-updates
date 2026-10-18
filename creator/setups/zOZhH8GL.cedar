@@ -1,4559 +1,2961 @@
 {
-  "branches" : [
+  "branches": [
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/i.ibb.co\/RGWLbN1j\/New-Movies-Base.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.ibb.co/RGWLbN1j/New-Movies-Base.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "01DFA9C0-AC2A-4960-B40C-91804136C7DD",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "01DFA9C0-AC2A-4960-B40C-91804136C7DD",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Movies"
+              "title": "New Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "28"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Action Movies"
+              "title": "New Action Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "12"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Adventure Movies"
+              "title": "New Adventure Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "16"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Animation Movies"
+              "title": "New Animation Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "35"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-5",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Comedy Movies"
+              "title": "New Comedy Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "80"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-6",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-6",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Crime Movies"
+              "title": "New Crime Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "99"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-7",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-7",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Documentary Movies"
+              "title": "New Documentary Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "18"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-8",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-8",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Drama Movies"
+              "title": "New Drama Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10751"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-9",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-9",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Family Movies"
+              "title": "New Family Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "14"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-10",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-10",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Fantasy Movies"
+              "title": "New Fantasy Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "36"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-11",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-11",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New History Movies"
+              "title": "New History Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "27"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-12",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-12",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Horror Movies"
+              "title": "New Horror Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10402"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-13",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-13",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Music Movies"
+              "title": "New Music Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "9648"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-14",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-14",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Mystery Movies"
+              "title": "New Mystery Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10749"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-15",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-15",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Romance Movies"
+              "title": "New Romance Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "878"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-16",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-16",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Sci-Fi Movies"
+              "title": "New Sci-Fi Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "53"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-17",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-17",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Thriller Movies"
+              "title": "New Thriller Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10752"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-18",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-18",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New War Movies"
+              "title": "New War Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "37"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-19",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-19",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Western Movies"
+              "title": "New Western Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "New Movies"
+          "tileShape": "landscape",
+          "title": "New Movies"
         },
         {
-          "coverImageURL" : "https:\/\/i.ibb.co\/fjPLCdm\/New-Series-Base.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.ibb.co/fjPLCdm/New-Series-Base.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "shows",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "9619ECC7-D8AD-4728-AC62-F178F1453E03",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "9619ECC7-D8AD-4728-AC62-F178F1453E03",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Series"
+              "title": "New Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10759"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Action & Adventure Series"
+              "title": "New Action & Adventure Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "16"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Animation Series"
+              "title": "New Animation Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "35"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Comedy Series"
+              "title": "New Comedy Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "80"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-5",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Crime Series"
+              "title": "New Crime Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "99"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-6",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-6",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Documentary Series"
+              "title": "New Documentary Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "18"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-7",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-7",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Drama Series"
+              "title": "New Drama Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10751"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-8",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-8",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Family Series"
+              "title": "New Family Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10762"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-9",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-9",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Kids Series"
+              "title": "New Kids Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "9648"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-10",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-10",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Mystery Series"
+              "title": "New Mystery Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10763"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-11",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-11",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New News Series"
+              "title": "New News Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10764"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-12",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-12",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Reality Series"
+              "title": "New Reality Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10765"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-13",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-13",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Sci-Fi & Fantasy Series"
+              "title": "New Sci-Fi & Fantasy Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10766"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-14",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-14",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Soap Series"
+              "title": "New Soap Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10767"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-15",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-15",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Talk Series"
+              "title": "New Talk Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10768"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-16",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-16",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New War & Politics Series"
+              "title": "New War & Politics Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "37"
                 ],
-                "minimumVoteCount" : 10,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "minimumVoteCount": 10,
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-17",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-17",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "New Western Series"
+              "title": "New Western Series"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "New Series"
+          "tileShape": "landscape",
+          "title": "New Series"
         },
         {
-          "coverImageURL" : "https:\/\/i.ibb.co\/bMXtwmrB\/Trending-Movies-Base.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.ibb.co/bMXtwmrB/Trending-Movies-Base.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "F839F0F1-D304-404F-9337-86433C194AFF",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "F839F0F1-D304-404F-9337-86433C194AFF",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Movies"
+              "title": "Trending Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "28"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Action Movies"
+              "title": "Trending Action Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "12"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Adventure Movies"
+              "title": "Trending Adventure Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "16"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Animation Movies"
+              "title": "Trending Animation Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "35"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-5",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Comedy Movies"
+              "title": "Trending Comedy Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "80"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-6",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-6",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Crime Movies"
+              "title": "Trending Crime Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "99"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-7",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-7",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Documentary Movies"
+              "title": "Trending Documentary Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "18"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-8",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-8",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Drama Movies"
+              "title": "Trending Drama Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10751"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-9",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-9",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Family Movies"
+              "title": "Trending Family Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "14"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-10",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-10",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Fantasy Movies"
+              "title": "Trending Fantasy Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "36"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-11",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-11",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending History Movies"
+              "title": "Trending History Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "27"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-12",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-12",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Horror Movies"
+              "title": "Trending Horror Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10402"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-13",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-13",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Music Movies"
+              "title": "Trending Music Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "9648"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-14",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-14",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Mystery Movies"
+              "title": "Trending Mystery Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10749"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-15",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-15",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Romance Movies"
+              "title": "Trending Romance Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "878"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-16",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-16",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Sci-Fi Movies"
+              "title": "Trending Sci-Fi Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "53"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-17",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-17",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Thriller Movies"
+              "title": "Trending Thriller Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10752"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-18",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-18",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending War Movies"
+              "title": "Trending War Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "37"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-19",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-19",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Western Movies"
+              "title": "Trending Western Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Trending Movies"
+          "tileShape": "landscape",
+          "title": "Trending Movies"
         },
         {
-          "coverImageURL" : "https:\/\/i.ibb.co\/JFQ07xpm\/Trending-Series-Base.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.ibb.co/JFQ07xpm/Trending-Series-Base.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "shows",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "A39AA458-D225-4E6B-88FC-DE994861FB9F",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "A39AA458-D225-4E6B-88FC-DE994861FB9F",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Series"
+              "title": "Trending Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10759"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Action & Adventure Series"
+              "title": "Trending Action & Adventure Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "16"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Animation Series"
+              "title": "Trending Animation Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "35"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Comedy Series"
+              "title": "Trending Comedy Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "80"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-5",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Crime Series"
+              "title": "Trending Crime Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "99"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-6",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-6",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Documentary Series"
+              "title": "Trending Documentary Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "18"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-7",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-7",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Drama Series"
+              "title": "Trending Drama Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10751"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-8",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-8",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Family Series"
+              "title": "Trending Family Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10762"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-9",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-9",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Kids Series"
+              "title": "Trending Kids Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "9648"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-10",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-10",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Mystery Series"
+              "title": "Trending Mystery Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10763"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-11",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-11",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending News Series"
+              "title": "Trending News Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10764"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-12",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-12",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Reality Series"
+              "title": "Trending Reality Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10765"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-13",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-13",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Sci-Fi & Fantasy Series"
+              "title": "Trending Sci-Fi & Fantasy Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10766"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-14",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-14",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Soap Series"
+              "title": "Trending Soap Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10767"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-15",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-15",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Talk Series"
+              "title": "Trending Talk Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10768"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-16",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-16",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending War & Politics Series"
+              "title": "Trending War & Politics Series"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "37"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
+                "networkIDs": [],
+                "originalLanguageCodes": [
                   "en"
                 ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-17",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-17",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Trending Western Series"
+              "title": "Trending Western Series"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Trending TV"
+          "tileShape": "landscape",
+          "title": "Trending TV"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/ImKaptain\/nuvio-assets\/refs\/heads\/main\/Misc\/Top%20Streaming%20Movies\/Top_Streaming_Movies_Base.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
+          "coverImageURL": "https://raw.githubusercontent.com/ImKaptain/nuvio-assets/refs/heads/main/Misc/Top%20Streaming%20Movies/Top_Streaming_Movies_Base.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": false,
+          "id": "7CE834BB-C4C0-49FF-A259-3C74EE2BD617",
+          "query": {
+            "identifier": "8660201",
+            "kind": "curatedList",
+            "parameters": {
+              "provider": "tmdb"
             }
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : false,
-          "id" : "7CE834BB-C4C0-49FF-A259-3C74EE2BD617",
-          "query" : {
-            "identifier" : "8660201",
-            "kind" : "curatedList",
-            "parameters" : {
-              "provider" : "tmdb"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "8660201",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "8660201",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top Streaming Movies Combined"
+              "title": "Top Streaming Movies Combined"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-2",
+              "query": {
+                "identifier": "8679739",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "8679739",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Netflix Movies"
+              "title": "Top 10 Netflix Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-3",
+              "query": {
+                "identifier": "8679741",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "8679741",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Apple TV+ Movies"
+              "title": "Top 10 Apple TV+ Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-4",
+              "query": {
+                "identifier": "8679743",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "8679743",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Hulu Movies"
+              "title": "Top 10 Hulu Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-5",
+              "query": {
+                "identifier": "8679742",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "8679742",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Prime Video Movies"
+              "title": "Top 10 Prime Video Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-6",
+              "query": {
+                "identifier": "8679755",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-6",
-              "query" : {
-                "identifier" : "8679755",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 AMC+ Movies"
+              "title": "Top 10 AMC+ Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-7",
+              "query": {
+                "identifier": "8679744",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-7",
-              "query" : {
-                "identifier" : "8679744",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Crunchyroll Movies"
+              "title": "Top 10 Crunchyroll Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-8",
+              "query": {
+                "identifier": "8679745",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-8",
-              "query" : {
-                "identifier" : "8679745",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Discovery+ Movies"
+              "title": "Top 10 Discovery+ Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-9",
+              "query": {
+                "identifier": "8679746",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-9",
-              "query" : {
-                "identifier" : "8679746",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Disney+ Movies"
+              "title": "Top 10 Disney+ Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-10",
+              "query": {
+                "identifier": "8679740",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-10",
-              "query" : {
-                "identifier" : "8679740",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 HBO Max Movies"
+              "title": "Top 10 HBO Max Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-11",
+              "query": {
+                "identifier": "8679747",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-11",
-              "query" : {
-                "identifier" : "8679747",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 MGM+ Movies"
+              "title": "Top 10 MGM+ Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-12",
+              "query": {
+                "identifier": "8679748",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-12",
-              "query" : {
-                "identifier" : "8679748",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Mubi Movies"
+              "title": "Top 10 Mubi Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-13",
+              "query": {
+                "identifier": "8679749",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-13",
-              "query" : {
-                "identifier" : "8679749",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Paramount+ Movies"
+              "title": "Top 10 Paramount+ Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-14",
+              "query": {
+                "identifier": "8679750",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-14",
-              "query" : {
-                "identifier" : "8679750",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Peacock Movies"
+              "title": "Top 10 Peacock Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-15",
+              "query": {
+                "identifier": "8679754",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-15",
-              "query" : {
-                "identifier" : "8679754",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Pluto TV Movies"
+              "title": "Top 10 Pluto TV Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-16",
+              "query": {
+                "identifier": "8679751",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-16",
-              "query" : {
-                "identifier" : "8679751",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Shudder Movies"
+              "title": "Top 10 Shudder Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-17",
+              "query": {
+                "identifier": "8679752",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-17",
-              "query" : {
-                "identifier" : "8679752",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Starz Movies"
+              "title": "Top 10 Starz Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-18",
+              "query": {
+                "identifier": "8679753",
+                "kind": "curatedList",
+                "parameters": {
+                  "provider": "tmdb"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-18",
-              "query" : {
-                "identifier" : "8679753",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "provider" : "tmdb"
-                }
-              },
-              "title" : "Top 10 Tubi TV Movies"
+              "title": "Top 10 Tubi TV Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Top Streaming Movies"
+          "tileShape": "landscape",
+          "title": "Top Streaming Movies"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/ImKaptain\/nuvio-assets\/refs\/heads\/main\/Misc\/Top%20Streaming%20Series\/Top_Streaming_Series_Base.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/ImKaptain/nuvio-assets/refs/heads/main/Misc/Top%20Streaming%20Series/Top_Streaming_Series_Base.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "D3FB5998-2126-4A4A-9731-D124CA7B2BBB",
-          "query" : {
-            "identifier" : "imkaptain|top-streaming-series-combined",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "D3FB5998-2126-4A4A-9731-D124CA7B2BBB",
+          "query": {
+            "identifier": "imkaptain|top-streaming-series-combined",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "imkaptain|top-streaming-series-combined",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "imkaptain|top-streaming-series-combined",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top Streaming Series Combined"
+              "title": "Top Streaming Series Combined"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "imkaptain|top-10-netflix-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "imkaptain|top-10-netflix-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Netflix Series"
+              "title": "Top 10 Netflix Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "imkaptain|top-10-apple-tv-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "imkaptain|top-10-apple-tv-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Apple TV+ Series"
+              "title": "Top 10 Apple TV+ Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "imkaptain|top-10-hulu-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "imkaptain|top-10-hulu-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Hulu Series"
+              "title": "Top 10 Hulu Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "imkaptain|top-10-prime-video-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-5",
+              "query": {
+                "identifier": "imkaptain|top-10-prime-video-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Prime Video Series"
+              "title": "Top 10 Prime Video Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-6",
-              "query" : {
-                "identifier" : "imkaptain|top-10-amc-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-6",
+              "query": {
+                "identifier": "imkaptain|top-10-amc-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 AMC+ Series"
+              "title": "Top 10 AMC+ Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-7",
-              "query" : {
-                "identifier" : "imkaptain|top-10-crunchyroll-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-7",
+              "query": {
+                "identifier": "imkaptain|top-10-crunchyroll-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Crunchyroll Series"
+              "title": "Top 10 Crunchyroll Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-8",
-              "query" : {
-                "identifier" : "imkaptain|top-10-discovery-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-8",
+              "query": {
+                "identifier": "imkaptain|top-10-discovery-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Discovery+ Series"
+              "title": "Top 10 Discovery+ Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-9",
-              "query" : {
-                "identifier" : "imkaptain|top-10-disney-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-9",
+              "query": {
+                "identifier": "imkaptain|top-10-disney-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Disney+ Series"
+              "title": "Top 10 Disney+ Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-10",
-              "query" : {
-                "identifier" : "imkaptain|top-10-hbo-max-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-10",
+              "query": {
+                "identifier": "imkaptain|top-10-hbo-max-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 HBO Max Series"
+              "title": "Top 10 HBO Max Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-11",
-              "query" : {
-                "identifier" : "imkaptain|top-10-mgm-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-11",
+              "query": {
+                "identifier": "imkaptain|top-10-mgm-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 MGM+ Series"
+              "title": "Top 10 MGM+ Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-12",
-              "query" : {
-                "identifier" : "imkaptain|top-10-mubi-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-12",
+              "query": {
+                "identifier": "imkaptain|top-10-mubi-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Mubi Series"
+              "title": "Top 10 Mubi Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-13",
-              "query" : {
-                "identifier" : "imkaptain|top-10-paramount-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-13",
+              "query": {
+                "identifier": "imkaptain|top-10-paramount-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Paramount+ Series"
+              "title": "Top 10 Paramount+ Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-14",
-              "query" : {
-                "identifier" : "imkaptain|top-10-peacock-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-14",
+              "query": {
+                "identifier": "imkaptain|top-10-peacock-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Peacock Series"
+              "title": "Top 10 Peacock Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-15",
-              "query" : {
-                "identifier" : "imkaptain|top-10-pluto-tv-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-15",
+              "query": {
+                "identifier": "imkaptain|top-10-pluto-tv-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Pluto TV Series"
+              "title": "Top 10 Pluto TV Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-16",
-              "query" : {
-                "identifier" : "imkaptain|top-10-shudder-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-16",
+              "query": {
+                "identifier": "imkaptain|top-10-shudder-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Shudder Series"
+              "title": "Top 10 Shudder Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-17",
-              "query" : {
-                "identifier" : "imkaptain|top-10-starz-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-17",
+              "query": {
+                "identifier": "imkaptain|top-10-starz-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Starz Series"
+              "title": "Top 10 Starz Series"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-18",
-              "query" : {
-                "identifier" : "imkaptain|top-10-tubi-tv-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-18",
+              "query": {
+                "identifier": "imkaptain|top-10-tubi-tv-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 10 Tubi TV Series"
+              "title": "Top 10 Tubi TV Series"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Top Streaming Series"
+          "tileShape": "landscape",
+          "title": "Top Streaming Series"
         }
       ],
-      "id" : "5BE58D19-1C43-5ADE-86FD-4315998218F1",
-      "isEnabled" : true,
-      "position" : 0,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "5BE58D19-1C43-5ADE-86FD-4315998218F1",
+      "isEnabled": true,
+      "position": 0,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "external-collection-discovery",
-        "kind" : "custom",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "Discover"
+      "schemaVersion": 2,
+      "title": "Discover"
     }
   ],
-  "bundleID" : "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
-  "createdAt" : "2026-10-11T14:18:02Z",
-  "formatIdentifier" : "app.cedar.bundle",
-  "generator" : {
-    "application" : "Cedar Creator"
+  "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
+  "createdAt": "2026-10-11T14:18:02Z",
+  "formatIdentifier": "app.cedar.bundle",
+  "generator": {
+    "application": "Cedar Creator"
   },
-  "kind" : "branches",
-  "schemaVersion" : 1,
-  "title" : "Kaptain's Discover Collection"
+  "kind": "branches",
+  "schemaVersion": 1,
+  "title": "Kaptain's Discover Collection"
 }

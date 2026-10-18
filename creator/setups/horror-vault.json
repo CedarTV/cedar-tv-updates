@@ -520,8 +520,7 @@
           "id": "folder-2",
           "title": "Cosmic Dread & Lovecraftian",
           "query": {
-            "kind": "custom",
-            "identifier": "external-collection-discovery",
+            "kind": "popular",
             "parameters": {}
           },
           "filters": {
@@ -550,8 +549,7 @@
                 "parameters": {}
               },
               "query": {
-                "kind": "custom",
-                "identifier": "external-collection-discovery",
+                "kind": "popular",
                 "parameters": {}
               },
               "filters": {
@@ -780,8 +778,7 @@
                 "parameters": {}
               },
               "query": {
-                "kind": "custom",
-                "identifier": "external-collection-discovery",
+                "kind": "popular",
                 "parameters": {}
               },
               "filters": {
@@ -809,8 +806,7 @@
           "id": "folder-6",
           "title": "Creature Features & Monsters",
           "query": {
-            "kind": "custom",
-            "identifier": "external-collection-discovery",
+            "kind": "popular",
             "parameters": {}
           },
           "filters": {
@@ -838,8 +834,7 @@
                 "parameters": {}
               },
               "query": {
-                "kind": "custom",
-                "identifier": "external-collection-discovery",
+                "kind": "popular",
                 "parameters": {}
               },
               "filters": {
@@ -1009,7 +1004,7 @@
                 "productionCompanyIDs": []
               },
               "id": "source-2",
-              "title": "The Horror Club: The Best of\u2026 Zombie Horror!"
+              "title": "The Horror Club: The Best of… Zombie Horror!"
             }
           ],
           "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3h6aXdscC53ZWJw",
@@ -1060,7 +1055,7 @@
                 "productionCompanyIDs": []
               },
               "id": "source-1",
-              "title": "The Horror Club: The Best of\u2026 Haunted House Movies!"
+              "title": "The Horror Club: The Best of… Haunted House Movies!"
             }
           ],
           "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzIwOTVnei53ZWJw",
@@ -2308,7 +2303,7 @@
         },
         {
           "id": "folder-10",
-          "title": "Child\u2019s Play / Chucky",
+          "title": "Child’s Play / Chucky",
           "query": {
             "kind": "curatedList",
             "identifier": "nobnobz|159943",
@@ -3330,8 +3325,7 @@
           "id": "folder-4",
           "title": "Italian Giallo",
           "query": {
-            "kind": "custom",
-            "identifier": "external-collection-discovery",
+            "kind": "popular",
             "parameters": {}
           },
           "filters": {
@@ -3359,8 +3353,7 @@
                 "parameters": {}
               },
               "query": {
-                "kind": "custom",
-                "identifier": "external-collection-discovery",
+                "kind": "popular",
                 "parameters": {}
               },
               "filters": {

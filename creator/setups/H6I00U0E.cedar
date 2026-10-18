@@ -1,485 +1,309 @@
 {
-  "branches" : [
+  "branches": [
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/wide\/rdnoni\/1980s-wide.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/wide/rdnoni/1980s-wide.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "F32FAAEE-A03B-45AD-9EC4-B869B70E26DB",
-          "query" : {
-            "identifier" : "tvgeniekodi|top-1980s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "F32FAAEE-A03B-45AD-9EC4-B869B70E26DB",
+          "query": {
+            "identifier": "tvgeniekodi|top-1980s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|top-1980s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|top-1980s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 1980s Movies"
+              "title": "Top 1980s Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "1980s"
+          "tileShape": "landscape",
+          "title": "1980s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/wide\/rdnoni\/1990s-wide.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/wide/rdnoni/1990s-wide.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "4F4F7260-D459-4616-8EC4-FC74530557D0",
-          "query" : {
-            "identifier" : "tvgeniekodi|top-1990s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "4F4F7260-D459-4616-8EC4-FC74530557D0",
+          "query": {
+            "identifier": "tvgeniekodi|top-1990s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|top-1990s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|top-1990s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 1990s Movies"
+              "title": "Top 1990s Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "1990s"
+          "tileShape": "landscape",
+          "title": "1990s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/wide\/rdnoni\/2000s-wide.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/wide/rdnoni/2000s-wide.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "6D5405CE-8051-464D-9937-77E8A1656FF7",
-          "query" : {
-            "identifier" : "tvgeniekodi|top-2000s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "6D5405CE-8051-464D-9937-77E8A1656FF7",
+          "query": {
+            "identifier": "tvgeniekodi|top-2000s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|top-2000s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|top-2000s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 2000s Movies"
+              "title": "Top 2000s Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2000s"
+          "tileShape": "landscape",
+          "title": "2000s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/wide\/rdnoni\/2010s-wide.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/wide/rdnoni/2010s-wide.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "9FEE6893-82B3-44AE-85DD-82DBD03E83CF",
-          "query" : {
-            "identifier" : "tvgeniekodi|top-2010s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "9FEE6893-82B3-44AE-85DD-82DBD03E83CF",
+          "query": {
+            "identifier": "tvgeniekodi|top-2010s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|top-2010s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|top-2010s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 2010s Movies"
+              "title": "Top 2010s Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2010s"
+          "tileShape": "landscape",
+          "title": "2010s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/itsrenoria\/fusion-starter-kit\/refs\/heads\/main\/resources\/widgets\/decades\/wide\/rdnoni\/2020s-wide.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/wide/rdnoni/2020s-wide.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "E1538782-48D6-4C01-A252-DFA85ADAC1CB",
-          "query" : {
-            "identifier" : "tvgeniekodi|top-2020s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "E1538782-48D6-4C01-A252-DFA85ADAC1CB",
+          "query": {
+            "identifier": "tvgeniekodi|top-2020s-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|top-2020s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|top-2020s-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 2020s Movies"
+              "title": "Top 2020s Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2020s"
+          "tileShape": "landscape",
+          "title": "2020s"
         }
       ],
-      "id" : "DCA67D87-F3EF-5DB9-ADAD-E248AD1080E9",
-      "isEnabled" : true,
-      "position" : 0,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "DCA67D87-F3EF-5DB9-ADAD-E248AD1080E9",
+      "isEnabled": true,
+      "position": 0,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "tvgeniekodi|top-1980s-movies",
-        "kind" : "curatedList",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "Collections Sourced Decades"
+      "schemaVersion": 2,
+      "title": "Collections Sourced Decades"
     }
   ],
-  "bundleID" : "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
-  "createdAt" : "2026-10-11T14:18:02Z",
-  "formatIdentifier" : "app.cedar.bundle",
-  "generator" : {
-    "application" : "Cedar Creator"
+  "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
+  "createdAt": "2026-10-11T14:18:02Z",
+  "formatIdentifier": "app.cedar.bundle",
+  "generator": {
+    "application": "Cedar Creator"
   },
-  "kind" : "branches",
-  "schemaVersion" : 1,
-  "title" : "Decades"
+  "kind": "branches",
+  "schemaVersion": 1,
+  "title": "Decades"
 }

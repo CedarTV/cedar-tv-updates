@@ -1,11162 +1,6980 @@
 {
-  "branches" : [
+  "branches": [
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/netflix.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/netflix.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "E6B03455-8B8D-41E0-ACE8-5354B2D5512D",
-          "query" : {
-            "identifier" : "garycrawfordgc|netflix-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "E6B03455-8B8D-41E0-ACE8-5354B2D5512D",
+          "query": {
+            "identifier": "garycrawfordgc|netflix-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "garycrawfordgc|netflix-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "garycrawfordgc|netflix-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Netflix Movies"
+              "title": "Netflix Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "garycrawfordgc|netflix-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "garycrawfordgc|netflix-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Netflix Shows"
+              "title": "Netflix Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Netflix"
+          "tileShape": "landscape",
+          "title": "Netflix"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/disneyplus.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/disneyplus.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "BB805D83-4E23-4745-AB8D-788681C4FACA",
-          "query" : {
-            "identifier" : "garycrawfordgc|disney-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "BB805D83-4E23-4745-AB8D-788681C4FACA",
+          "query": {
+            "identifier": "garycrawfordgc|disney-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "garycrawfordgc|disney-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "garycrawfordgc|disney-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Disney+ Movies"
+              "title": "Disney+ Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "garycrawfordgc|disney-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "garycrawfordgc|disney-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Disney+ Shows"
+              "title": "Disney+ Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Disney+"
+          "tileShape": "landscape",
+          "title": "Disney+"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/prime-video.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/prime-video.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "A99A5B6A-6486-4E49-B491-52DB245BEAB1",
-          "query" : {
-            "identifier" : "garycrawfordgc|amazon-prime-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "A99A5B6A-6486-4E49-B491-52DB245BEAB1",
+          "query": {
+            "identifier": "garycrawfordgc|amazon-prime-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "garycrawfordgc|amazon-prime-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "garycrawfordgc|amazon-prime-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Amazon Prime Movies"
+              "title": "Amazon Prime Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "garycrawfordgc|amazon-prime-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "garycrawfordgc|amazon-prime-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Amazon Prime Shows"
+              "title": "Amazon Prime Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Prime Video"
+          "tileShape": "landscape",
+          "title": "Prime Video"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/hbo-max.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/hbo-max.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "4D850947-2E89-4615-874D-F93A40104783",
-          "query" : {
-            "identifier" : "tvgeniekodi|max-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "4D850947-2E89-4615-874D-F93A40104783",
+          "query": {
+            "identifier": "tvgeniekodi|max-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|max-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|max-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Max Movies"
+              "title": "Max Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "garycrawfordgc|hbo-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "garycrawfordgc|hbo-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "HBO Shows"
+              "title": "HBO Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "HBO Max"
+          "tileShape": "landscape",
+          "title": "HBO Max"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/paramountplus.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/paramountplus.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "B7A3B1C9-7305-4B82-A562-4D1A26568EFD",
-          "query" : {
-            "identifier" : "tvgeniekodi|paramount-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "B7A3B1C9-7305-4B82-A562-4D1A26568EFD",
+          "query": {
+            "identifier": "tvgeniekodi|paramount-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|paramount-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|paramount-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Paramount+ Movies"
+              "title": "Paramount+ Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "tvgeniekodi|paramount-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "tvgeniekodi|paramount-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Paramount+ Shows"
+              "title": "Paramount+ Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Paramount+"
+          "tileShape": "landscape",
+          "title": "Paramount+"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/hulu.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/hulu.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "0CE1C2DB-E757-42C8-9879-F1EFC172D2E1",
-          "query" : {
-            "identifier" : "garycrawfordgc|hulu-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "0CE1C2DB-E757-42C8-9879-F1EFC172D2E1",
+          "query": {
+            "identifier": "garycrawfordgc|hulu-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "garycrawfordgc|hulu-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "garycrawfordgc|hulu-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Hulu Movies"
+              "title": "Hulu Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "garycrawfordgc|hulu-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "garycrawfordgc|hulu-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Hulu Shows"
+              "title": "Hulu Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Hulu"
+          "tileShape": "landscape",
+          "title": "Hulu"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/peacock.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/peacock.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "3C261932-5122-414E-8829-1F200C46DA1C",
-          "query" : {
-            "identifier" : "tvgeniekodi|peacock-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "3C261932-5122-414E-8829-1F200C46DA1C",
+          "query": {
+            "identifier": "tvgeniekodi|peacock-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|peacock-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|peacock-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Peacock Movies"
+              "title": "Peacock Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "tvgeniekodi|peacock-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "tvgeniekodi|peacock-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Peacock Shows"
+              "title": "Peacock Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Peacock"
+          "tileShape": "landscape",
+          "title": "Peacock"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/apple-tv.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/apple-tv.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "FBE1B82E-134F-4914-8428-338F05B76749",
-          "query" : {
-            "identifier" : "tvgeniekodi|apple-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "FBE1B82E-134F-4914-8428-338F05B76749",
+          "query": {
+            "identifier": "tvgeniekodi|apple-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|apple-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|apple-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Apple+ Movies"
+              "title": "Apple+ Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "tvgeniekodi|apple-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "tvgeniekodi|apple-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Apple+ Shows"
+              "title": "Apple+ Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Apple TV"
+          "tileShape": "landscape",
+          "title": "Apple TV"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/streaming\/crunchyroll.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/streaming/crunchyroll.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "F27FE949-4CFB-4ED0-871B-48386242EDC5",
-          "query" : {
-            "identifier" : "frostypolicia|crunchyroll-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "F27FE949-4CFB-4ED0-871B-48386242EDC5",
+          "query": {
+            "identifier": "frostypolicia|crunchyroll-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "frostypolicia|crunchyroll-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "frostypolicia|crunchyroll-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Crunchyroll - Movies"
+              "title": "Crunchyroll - Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "frostypolicia|crunchyroll-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "frostypolicia|crunchyroll-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Crunchyroll - Shows"
+              "title": "Crunchyroll - Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Crunchyroll"
+          "tileShape": "landscape",
+          "title": "Crunchyroll"
         }
       ],
-      "id" : "D50B889B-5662-503E-817E-83E3B2C5794B",
-      "isEnabled" : true,
-      "position" : 0,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "D50B889B-5662-503E-817E-83E3B2C5794B",
+      "isEnabled": true,
+      "position": 0,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "garycrawfordgc|netflix-movies",
-        "kind" : "curatedList",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "Streaming Services"
+      "schemaVersion": 2,
+      "title": "Streaming Services"
     },
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "movies",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "movies",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/action.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/action.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "28"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "91A43E1B-0D72-4D4E-88A0-583B777DA4B9",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "91A43E1B-0D72-4D4E-88A0-583B777DA4B9",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "28"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Action"
+              "title": "Action"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Action"
+          "tileShape": "landscape",
+          "title": "Action"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/adventure.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/adventure.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "12"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "F79CEE77-FF53-488F-8F23-8934559A223F",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "F79CEE77-FF53-488F-8F23-8934559A223F",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "12"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Adventure"
+              "title": "Adventure"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Adventure"
+          "tileShape": "landscape",
+          "title": "Adventure"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/animation.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/animation.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "16"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "9717C842-99FD-417E-AE68-15632B9CF0B7",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "9717C842-99FD-417E-AE68-15632B9CF0B7",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "16"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Animation"
+              "title": "Animation"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Animation"
+          "tileShape": "landscape",
+          "title": "Animation"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/comedy.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/comedy.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "35"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "D4631ED3-948B-45A3-9955-114764C54662",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "D4631ED3-948B-45A3-9955-114764C54662",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "35"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Comedy"
+              "title": "Comedy"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Comedy"
+          "tileShape": "landscape",
+          "title": "Comedy"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/crime.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/crime.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "80"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "0C692E13-5EA9-4607-91E5-01115477F01D",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "0C692E13-5EA9-4607-91E5-01115477F01D",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "80"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Crime"
+              "title": "Crime"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Crime"
+          "tileShape": "landscape",
+          "title": "Crime"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/documentary.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/documentary.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "99"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "4847425A-10D4-451A-9BE6-988D1FFE2A75",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "4847425A-10D4-451A-9BE6-988D1FFE2A75",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "99"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Documentary"
+              "title": "Documentary"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Documentary"
+          "tileShape": "landscape",
+          "title": "Documentary"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/drama.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/drama.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "18"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "9DBB9C55-2E9C-4257-8F75-1561B875033C",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "9DBB9C55-2E9C-4257-8F75-1561B875033C",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "18"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Drama"
+              "title": "Drama"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Drama"
+          "tileShape": "landscape",
+          "title": "Drama"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/family.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/family.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "10751"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "1104B954-6868-47FA-B578-92C643E09B93",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "1104B954-6868-47FA-B578-92C643E09B93",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10751"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Family"
+              "title": "Family"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Family"
+          "tileShape": "landscape",
+          "title": "Family"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/fantasy.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/fantasy.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "14"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "D44E82B6-563E-4EC4-881F-9F4A8F0E55B3",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "D44E82B6-563E-4EC4-881F-9F4A8F0E55B3",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "14"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Fantasy"
+              "title": "Fantasy"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Fantasy"
+          "tileShape": "landscape",
+          "title": "Fantasy"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/history.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/history.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "36"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "3F2AB632-5BBF-419C-9E5B-935C1AE498B0",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "3F2AB632-5BBF-419C-9E5B-935C1AE498B0",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "36"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "History"
+              "title": "History"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "History"
+          "tileShape": "landscape",
+          "title": "History"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/horror.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/horror.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "27"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "07C7DC57-EC41-4757-AE68-BDFD0ADEEF6E",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "07C7DC57-EC41-4757-AE68-BDFD0ADEEF6E",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "27"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Horror"
+              "title": "Horror"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Horror"
+          "tileShape": "landscape",
+          "title": "Horror"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/music.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/music.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "10402"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "E79770E0-ABA5-4B50-B35E-B9C4DA7FA03D",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "E79770E0-ABA5-4B50-B35E-B9C4DA7FA03D",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10402"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Music"
+              "title": "Music"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Music"
+          "tileShape": "landscape",
+          "title": "Music"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/mystery.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/mystery.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "9648"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "C37D2264-6C22-4FA3-AE52-35EB379D970C",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "C37D2264-6C22-4FA3-AE52-35EB379D970C",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "9648"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Mystery"
+              "title": "Mystery"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Mystery"
+          "tileShape": "landscape",
+          "title": "Mystery"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/romance.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/romance.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "10749"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "865F6096-138E-460C-8C01-8D1723391BA5",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "865F6096-138E-460C-8C01-8D1723391BA5",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10749"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Romance"
+              "title": "Romance"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Romance"
+          "tileShape": "landscape",
+          "title": "Romance"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/sci-fi.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/sci-fi.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "878"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "1E0ECAFC-7AD7-40E5-8070-44F55D5CDB29",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "1E0ECAFC-7AD7-40E5-8070-44F55D5CDB29",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "878"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Science Fiction"
+              "title": "Science Fiction"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Science Fiction"
+          "tileShape": "landscape",
+          "title": "Science Fiction"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/thriller.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/thriller.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "53"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "9D7ED5B7-C3BB-41A2-A0E8-376E711AE908",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "9D7ED5B7-C3BB-41A2-A0E8-376E711AE908",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "53"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Thriller"
+              "title": "Thriller"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Thriller"
+          "tileShape": "landscape",
+          "title": "Thriller"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/war.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/war.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "10752"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "607631C5-466A-4C2B-A51A-E47EAA2B4CEC",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "607631C5-466A-4C2B-A51A-E47EAA2B4CEC",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10752"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "War"
+              "title": "War"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "War"
+          "tileShape": "landscape",
+          "title": "War"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/genres\/westerns.png",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/genres/westerns.png",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "37"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "0F9FA7AD-A7CE-4B21-9D58-D31B14C039C2",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "0F9FA7AD-A7CE-4B21-9D58-D31B14C039C2",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "37"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Westerns"
+              "title": "Westerns"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Westerns"
+          "tileShape": "landscape",
+          "title": "Westerns"
         }
       ],
-      "id" : "415B1562-6FD1-5313-A1DB-5C54801EBE96",
-      "isEnabled" : true,
-      "position" : 1,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "415B1562-6FD1-5313-A1DB-5C54801EBE96",
+      "isEnabled": true,
+      "position": 1,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "external-collection-discovery",
-        "kind" : "custom",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "Genres"
+      "schemaVersion": 2,
+      "title": "Genres"
     },
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/decades\/80s.jpg",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/decades/80s.jpg",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "6FB2D403-3D28-4FDB-B597-51995960FF70",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "6FB2D403-3D28-4FDB-B597-51995960FF70",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "1989-12-31T00:00:00Z",
-                "releaseDateStart" : "1980-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "1989-12-31T00:00:00Z",
+                "releaseDateStart": "1980-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "1980s"
+              "title": "1980s"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "1989-12-31T00:00:00Z",
-                "releaseDateStart" : "1980-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "1989-12-31T00:00:00Z",
+                "releaseDateStart": "1980-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "1980s"
+              "title": "1980s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "1980s"
+          "tileShape": "landscape",
+          "title": "1980s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/decades\/90s.jpg",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/decades/90s.jpg",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "0A2DB9B6-5EF2-42F5-AF14-CFAE08A432E5",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "0A2DB9B6-5EF2-42F5-AF14-CFAE08A432E5",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "1999-12-31T00:00:00Z",
-                "releaseDateStart" : "1990-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "1999-12-31T00:00:00Z",
+                "releaseDateStart": "1990-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "1990s"
+              "title": "1990s"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "1999-12-31T00:00:00Z",
-                "releaseDateStart" : "1990-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "1999-12-31T00:00:00Z",
+                "releaseDateStart": "1990-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "1990s"
+              "title": "1990s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "1990s"
+          "tileShape": "landscape",
+          "title": "1990s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/decades\/00s.jpg",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/decades/00s.jpg",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "791DF632-606D-4600-A483-F35112218810",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "791DF632-606D-4600-A483-F35112218810",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2009-12-31T00:00:00Z",
-                "releaseDateStart" : "2000-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2009-12-31T00:00:00Z",
+                "releaseDateStart": "2000-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2000s"
+              "title": "2000s"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2009-12-31T00:00:00Z",
-                "releaseDateStart" : "2000-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2009-12-31T00:00:00Z",
+                "releaseDateStart": "2000-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2000s"
+              "title": "2000s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2000s"
+          "tileShape": "landscape",
+          "title": "2000s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/decades\/10s.jpg",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/decades/10s.jpg",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "4D1C949D-05EF-4963-A1CF-8AF22B63FF48",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "4D1C949D-05EF-4963-A1CF-8AF22B63FF48",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2019-12-31T00:00:00Z",
-                "releaseDateStart" : "2010-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2019-12-31T00:00:00Z",
+                "releaseDateStart": "2010-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2010s"
+              "title": "2010s"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2019-12-31T00:00:00Z",
-                "releaseDateStart" : "2010-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2019-12-31T00:00:00Z",
+                "releaseDateStart": "2010-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2010s"
+              "title": "2010s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2010s"
+          "tileShape": "landscape",
+          "title": "2010s"
         },
         {
-          "coverImageURL" : "https:\/\/raw.githubusercontent.com\/DryKillLogic\/stremio-account-bootstrapper\/refs\/heads\/main\/public\/covers\/decades\/20s.jpg",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://raw.githubusercontent.com/DryKillLogic/stremio-account-bootstrapper/refs/heads/main/public/covers/decades/20s.jpg",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "C05BF2FA-B1CE-4F64-B78E-BB314A61DA70",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "C05BF2FA-B1CE-4F64-B78E-BB314A61DA70",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2029-12-31T00:00:00Z",
-                "releaseDateStart" : "2020-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2029-12-31T00:00:00Z",
+                "releaseDateStart": "2020-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2020s"
+              "title": "2020s"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2029-12-31T00:00:00Z",
-                "releaseDateStart" : "2020-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2029-12-31T00:00:00Z",
+                "releaseDateStart": "2020-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2020s"
+              "title": "2020s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2020s"
+          "tileShape": "landscape",
+          "title": "2020s"
         }
       ],
-      "id" : "3A2FB55D-7572-51CB-A525-445C7B836A7E",
-      "isEnabled" : true,
-      "position" : 2,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "3A2FB55D-7572-51CB-A525-445C7B836A7E",
+      "isEnabled": true,
+      "position": 2,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "external-collection-discovery",
-        "kind" : "custom",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "Decades"
+      "schemaVersion": 2,
+      "title": "Decades"
     },
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/dVHLbsIwEPyVaM8gOQ8njq-VekOqSqUeqh7W9hqikjiKDQgh_r2CBkJSOM5oZmdn9wgaA27cyoP8gtDhT5iHjhpTNSuYPSNa12432D3CtVHz4AweRmDu127vr5R2dT9tQGNFcO1t-B6DXm8qH27MGUiLO7ftqkAevmdQU0CQx-nC8ggN1gQSPnoqWlJX0SUIJHg4TTsMlrc_5pFjaHmX4Noo4dHC7QZ1PVb3Jf95niT0dxrkLxciWjrXPMsZXfOx82mfdrLZOwYyo4TJQwb54hB93v9p7Jg-bPC9DuTNdbWdZag1eQ8SSsoMlgqxSFOyBmNmE82sZtySFiLNKCNknBvBsri0nHJjmNKp5iRszguYQUe2I78GCYTEdZHl2qIlEipTQpdFmiXCljFLFGVpyQQZludM8TxOYqsKZQthTJGLsoDT6Rc\/cover\/series\/trakt-trending.png?name=Trending%20Shows",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/dVHLbsIwEPyVaM8gOQ8njq-VekOqSqUeqh7W9hqikjiKDQgh_r2CBkJSOM5oZmdn9wgaA27cyoP8gtDhT5iHjhpTNSuYPSNa12432D3CtVHz4AweRmDu127vr5R2dT9tQGNFcO1t-B6DXm8qH27MGUiLO7ftqkAevmdQU0CQx-nC8ggN1gQSPnoqWlJX0SUIJHg4TTsMlrc_5pFjaHmX4Noo4dHC7QZ1PVb3Jf95niT0dxrkLxciWjrXPMsZXfOx82mfdrLZOwYyo4TJQwb54hB93v9p7Jg-bPC9DuTNdbWdZag1eQ8SSsoMlgqxSFOyBmNmE82sZtySFiLNKCNknBvBsri0nHJjmNKp5iRszguYQUe2I78GCYTEdZHl2qIlEipTQpdFmiXCljFLFGVpyQQZludM8TxOYqsKZQthTJGLsoDT6Rc/cover/series/trakt-trending.png?name=Trending%20Shows",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": false,
+          "id": "230637C5-02CB-4AA6-BDF3-F416AA3D1548",
+          "query": {
+            "identifier": "hdlists|latest-tv-shows",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "3882"
             }
           },
-          "filters" : {
-            "contentType" : "shows",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : false,
-          "id" : "230637C5-02CB-4AA6-BDF3-F416AA3D1548",
-          "query" : {
-            "identifier" : "hdlists|latest-tv-shows",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "3882"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "hdlists|latest-tv-shows",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "3882"
                 }
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "hdlists|latest-tv-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "3882"
-                }
-              },
-              "title" : "Latest TV Shows"
+              "title": "Latest TV Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Trending Shows"
+          "tileShape": "landscape",
+          "title": "Trending Shows"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/dVHLbsIwEPyVaM8gOQ8njq-VekOqSqUeqh7W9hqikjiKDQgh_r2CBkJSOM5oZmdn9wgaA27cyoP8gtDhT5iHjhpTNSuYPSNa12432D3CtVHz4AweRmDu127vr5R2dT9tQGNFcO1t-B6DXm8qH27MGUiLO7ftqkAevmdQU0CQx-nC8ggN1gQSPnoqWlJX0SUIJHg4TTsMlrc_5pFjaHmX4Noo4dHC7QZ1PVb3Jf95niT0dxrkLxciWjrXPMsZXfOx82mfdrLZOwYyo4TJQwb54hB93v9p7Jg-bPC9DuTNdbWdZag1eQ8SSsoMlgqxSFOyBmNmE82sZtySFiLNKCNknBvBsri0nHJjmNKp5iRszguYQUe2I78GCYTEdZHl2qIlEipTQpdFmiXCljFLFGVpyQQZludM8TxOYqsKZQthTJGLsoDT6Rc\/cover\/movie\/trakt-trending.png?name=Trending%20Movies",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/dVHLbsIwEPyVaM8gOQ8njq-VekOqSqUeqh7W9hqikjiKDQgh_r2CBkJSOM5oZmdn9wgaA27cyoP8gtDhT5iHjhpTNSuYPSNa12432D3CtVHz4AweRmDu127vr5R2dT9tQGNFcO1t-B6DXm8qH27MGUiLO7ftqkAevmdQU0CQx-nC8ggN1gQSPnoqWlJX0SUIJHg4TTsMlrc_5pFjaHmX4Noo4dHC7QZ1PVb3Jf95niT0dxrkLxciWjrXPMsZXfOx82mfdrLZOwYyo4TJQwb54hB93v9p7Jg-bPC9DuTNdbWdZag1eQ8SSsoMlgqxSFOyBmNmE82sZtySFiLNKCNknBvBsri0nHJjmNKp5iRszguYQUe2I78GCYTEdZHl2qIlEipTQpdFmiXCljFLFGVpyQQZludM8TxOYqsKZQthTJGLsoDT6Rc/cover/movie/trakt-trending.png?name=Trending%20Movies",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": false,
+          "id": "8163E68F-19D6-47A5-AF99-1EE9BF2DA5BC",
+          "query": {
+            "identifier": "tvgeniekodi|latest-movies",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "88306"
             }
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : false,
-          "id" : "8163E68F-19D6-47A5-AF99-1EE9BF2DA5BC",
-          "query" : {
-            "identifier" : "tvgeniekodi|latest-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "88306"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "tvgeniekodi|latest-movies",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "88306"
                 }
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "tvgeniekodi|latest-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "88306"
-                }
-              },
-              "title" : "Latest Movies"
+              "title": "Latest Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Trending Movies"
+          "tileShape": "landscape",
+          "title": "Trending Movies"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/dVHLbsIwEPyVaM8gOQ8njq-VekOqSqUeqh7W9hqikjiKDQgh_r2CBkJSOM5oZmdn9wgaA27cyoP8gtDhT5iHjhpTNSuYPSNa12432D3CtVHz4AweRmDu127vr5R2dT9tQGNFcO1t-B6DXm8qH27MGUiLO7ftqkAevmdQU0CQx-nC8ggN1gQSPnoqWlJX0SUIJHg4TTsMlrc_5pFjaHmX4Noo4dHC7QZ1PVb3Jf95niT0dxrkLxciWjrXPMsZXfOx82mfdrLZOwYyo4TJQwb54hB93v9p7Jg-bPC9DuTNdbWdZag1eQ8SSsoMlgqxSFOyBmNmE82sZtySFiLNKCNknBvBsri0nHJjmNKp5iRszguYQUe2I78GCYTEdZHl2qIlEipTQpdFmiXCljFLFGVpyQQZludM8TxOYqsKZQthTJGLsoDT6Rc\/cover\/movie\/tmdb-top.png?name=Top%20Rated",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/dVHLbsIwEPyVaM8gOQ8njq-VekOqSqUeqh7W9hqikjiKDQgh_r2CBkJSOM5oZmdn9wgaA27cyoP8gtDhT5iHjhpTNSuYPSNa12432D3CtVHz4AweRmDu127vr5R2dT9tQGNFcO1t-B6DXm8qH27MGUiLO7ftqkAevmdQU0CQx-nC8ggN1gQSPnoqWlJX0SUIJHg4TTsMlrc_5pFjaHmX4Noo4dHC7QZ1PVb3Jf95niT0dxrkLxciWjrXPMsZXfOx82mfdrLZOwYyo4TJQwb54hB93v9p7Jg-bPC9DuTNdbWdZag1eQ8SSsoMlgqxSFOyBmNmE82sZtySFiLNKCNknBvBsri0nHJjmNKp5iRszguYQUe2I78GCYTEdZHl2qIlEipTQpdFmiXCljFLFGVpyQQZludM8TxOYqsKZQthTJGLsoDT6Rc/cover/movie/tmdb-top.png?name=Top%20Rated",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "315B24D4-C3A8-49A1-BF85-C3243845325F",
-          "query" : {
-            "identifier" : "justin|imdb-top-rated-tv-shows",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "315B24D4-C3A8-49A1-BF85-C3243845325F",
+          "query": {
+            "identifier": "justin|imdb-top-rated-tv-shows",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "justin|imdb-top-rated-tv-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "justin|imdb-top-rated-tv-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "IMDB: Top Rated TV Shows"
+              "title": "IMDB: Top Rated TV Shows"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "justin|imdb-top-rated-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "justin|imdb-top-rated-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "IMDB: Top Rated Movies"
+              "title": "IMDB: Top Rated Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "captainnapalm|1001-greatest-movies-of-all-time",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "captainnapalm|1001-greatest-movies-of-all-time",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "1001 Greatest Movies of All Time"
+              "title": "1001 Greatest Movies of All Time"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Top Rated"
+          "tileShape": "landscape",
+          "title": "Top Rated"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/bYwxCoAwEAS_IlubD1xrbZVSLKIGDXg58IIWIX8XbVSw3GFnMkaX3CqzgjokngYzCoc4o34vo4scir4G--RA-XOljOjYg9DcoLIisWplD16vDgiM8hf8N63fHlNRSjkB\/cover\/series\/tmdb-coming-shows.png?name=Coming%20Soon%20Shows",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/bYwxCoAwEAS_IlubD1xrbZVSLKIGDXg58IIWIX8XbVSw3GFnMkaX3CqzgjokngYzCoc4o34vo4scir4G--RA-XOljOjYg9DcoLIisWplD16vDgiM8hf8N63fHlNRSjkB/cover/series/tmdb-coming-shows.png?name=Coming%20Soon%20Shows",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": false,
+          "id": "94E76EB0-4B9D-45C0-87F7-962CF73614D4",
+          "query": {
+            "identifier": "volkt|anticipated-tvshows",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "20340"
             }
           },
-          "filters" : {
-            "contentType" : "shows",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : false,
-          "id" : "94E76EB0-4B9D-45C0-87F7-962CF73614D4",
-          "query" : {
-            "identifier" : "volkt|anticipated-tvshows",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "20340"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "volkt|anticipated-tvshows",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "20340"
                 }
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "volkt|anticipated-tvshows",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "20340"
-                }
-              },
-              "title" : "anticipated-tvshows"
+              "title": "anticipated-tvshows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Coming Soon Shows"
+          "tileShape": "landscape",
+          "title": "Coming Soon Shows"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/dVHLbsIwEPyVaM8gOQ8njq-VekOqSqUeqh7W9hqikjiKDQgh_r2CBkJSOM5oZmdn9wgaA27cyoP8gtDhT5iHjhpTNSuYPSNa12432D3CtVHz4AweRmDu127vr5R2dT9tQGNFcO1t-B6DXm8qH27MGUiLO7ftqkAevmdQU0CQx-nC8ggN1gQSPnoqWlJX0SUIJHg4TTsMlrc_5pFjaHmX4Noo4dHC7QZ1PVb3Jf95niT0dxrkLxciWjrXPMsZXfOx82mfdrLZOwYyo4TJQwb54hB93v9p7Jg-bPC9DuTNdbWdZag1eQ8SSsoMlgqxSFOyBmNmE82sZtySFiLNKCNknBvBsri0nHJjmNKp5iRszguYQUe2I78GCYTEdZHl2qIlEipTQpdFmiXCljFLFGVpyQQZludM8TxOYqsKZQthTJGLsoDT6Rc\/cover\/movie\/tmdb-coming.png?name=Coming%20Soon%20Movies",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/dVHLbsIwEPyVaM8gOQ8njq-VekOqSqUeqh7W9hqikjiKDQgh_r2CBkJSOM5oZmdn9wgaA27cyoP8gtDhT5iHjhpTNSuYPSNa12432D3CtVHz4AweRmDu127vr5R2dT9tQGNFcO1t-B6DXm8qH27MGUiLO7ftqkAevmdQU0CQx-nC8ggN1gQSPnoqWlJX0SUIJHg4TTsMlrc_5pFjaHmX4Noo4dHC7QZ1PVb3Jf95niT0dxrkLxciWjrXPMsZXfOx82mfdrLZOwYyo4TJQwb54hB93v9p7Jg-bPC9DuTNdbWdZag1eQ8SSsoMlgqxSFOyBmNmE82sZtySFiLNKCNknBvBsri0nHJjmNKp5iRszguYQUe2I78GCYTEdZHl2qIlEipTQpdFmiXCljFLFGVpyQQZludM8TxOYqsKZQthTJGLsoDT6Rc/cover/movie/tmdb-coming.png?name=Coming%20Soon%20Movies",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": false,
+          "id": "A0072BB9-FC07-49F0-8570-80708EB25E68",
+          "query": {
+            "identifier": "morinphen|upcoming-movies-all",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "26816"
             }
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : false,
-          "id" : "A0072BB9-FC07-49F0-8570-80708EB25E68",
-          "query" : {
-            "identifier" : "morinphen|upcoming-movies-all",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "26816"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "morinphen|upcoming-movies-all",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "26816"
                 }
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "morinphen|upcoming-movies-all",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "26816"
-                }
-              },
-              "title" : "upcoming movies (all)"
+              "title": "upcoming movies (all)"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Coming Soon Movies"
+          "tileShape": "landscape",
+          "title": "Coming Soon Movies"
         }
       ],
-      "id" : "C85DB2DA-9E2E-588B-B762-0D7E58808E0F",
-      "isEnabled" : true,
-      "position" : 3,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "C85DB2DA-9E2E-588B-B762-0D7E58808E0F",
+      "isEnabled": true,
+      "position": 3,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "hdlists|latest-tv-shows",
-        "kind" : "curatedList",
-        "parameters" : {
-          "listID" : "3882"
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "‎Discover"
+      "schemaVersion": 2,
+      "title": "‎Discover"
     },
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/vHK1D7bP\/Star-Wars.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/vHK1D7bP/Star-Wars.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "FE8D7552-1E56-4FC4-AF1E-8940C5E1AA6F",
-          "query" : {
-            "identifier" : "maxtrontv|star-wars-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "FE8D7552-1E56-4FC4-AF1E-8940C5E1AA6F",
+          "query": {
+            "identifier": "maxtrontv|star-wars-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "maxtrontv|star-wars-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "maxtrontv|star-wars-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Star Wars Movies"
+              "title": "Star Wars Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "geekztor|star-wars-shows-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "geekztor|star-wars-shows-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Star Wars: Shows & Series"
+              "title": "Star Wars: Shows & Series"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Star Wars"
+          "tileShape": "landscape",
+          "title": "Star Wars"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/qvn2MrXq\/Lo-TR-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/qvn2MrXq/Lo-TR-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "6F93848A-2211-443D-BBC1-6059F0011B82",
-          "query" : {
-            "identifier" : "jjmalpz|middle-earth",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "6F93848A-2211-443D-BBC1-6059F0011B82",
+          "query": {
+            "identifier": "jjmalpz|middle-earth",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "jjmalpz|middle-earth",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "jjmalpz|middle-earth",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Middle-Earth"
+              "title": "Middle-Earth"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Middle Earth"
+          "tileShape": "landscape",
+          "title": "Middle Earth"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/xj44xqMB\/Wizarding-World-of-Harry-Potter-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/xj44xqMB/Wizarding-World-of-Harry-Potter-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "DBF0B5B2-2480-485D-BF43-1086F2B62529",
-          "query" : {
-            "identifier" : "arachn0id|wizarding-world",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "DBF0B5B2-2480-485D-BF43-1086F2B62529",
+          "query": {
+            "identifier": "arachn0id|wizarding-world",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "arachn0id|wizarding-world",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "arachn0id|wizarding-world",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Wizarding World"
+              "title": "Wizarding World"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "The Wizarding World"
+          "tileShape": "landscape",
+          "title": "The Wizarding World"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/5yrL2sh2\/5440db5f-be91-4941-b1ba-4b4ea07b0f25.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/5yrL2sh2/5440db5f-be91-4941-b1ba-4b4ea07b0f25.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "D404AF57-03B9-4983-9C14-515B07B192BF",
-          "query" : {
-            "identifier" : "draackje|pixar-feature-films",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "D404AF57-03B9-4983-9C14-515B07B192BF",
+          "query": {
+            "identifier": "draackje|pixar-feature-films",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "draackje|pixar-feature-films",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "draackje|pixar-feature-films",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Pixar Feature Films"
+              "title": "Pixar Feature Films"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "megamene|pixar-short-films",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "megamene|pixar-short-films",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Pixar Short Films"
+              "title": "Pixar Short Films"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Pixar"
+          "tileShape": "landscape",
+          "title": "Pixar"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/JnVNH8M5\/882cf7a8-9aa6-4673-81c1-d3ed7a859e95.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/JnVNH8M5/882cf7a8-9aa6-4673-81c1-d3ed7a859e95.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "8AAFEB4B-E3BA-48C6-B86A-97AB14F6C129",
-          "query" : {
-            "identifier" : "draackje|dreamworks-feature-films",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "8AAFEB4B-E3BA-48C6-B86A-97AB14F6C129",
+          "query": {
+            "identifier": "draackje|dreamworks-feature-films",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "draackje|dreamworks-feature-films",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "draackje|dreamworks-feature-films",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Dreamworks Feature Films"
+              "title": "Dreamworks Feature Films"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Dreamworks"
+          "tileShape": "landscape",
+          "title": "Dreamworks"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/4xbkvk41\/Piratesof-The-Caribbean-Tile.jpg",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://i.postimg.cc/4xbkvk41/Piratesof-The-Caribbean-Tile.jpg",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "5B0B9CB6-13F3-4A23-AF7E-2E521EB91DF6",
+          "query": {
+            "identifier": "extreme_one|pirates-of-the-caribbean",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "162329"
             }
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "5B0B9CB6-13F3-4A23-AF7E-2E521EB91DF6",
-          "query" : {
-            "identifier" : "extreme_one|pirates-of-the-caribbean",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "162329"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "extreme_one|pirates-of-the-caribbean",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "162329"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "extreme_one|pirates-of-the-caribbean",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "162329"
-                }
-              },
-              "title" : "Pirates of the Caribbean"
+              "title": "Pirates of the Caribbean"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Pirates Of The Caribbean"
+          "tileShape": "landscape",
+          "title": "Pirates Of The Caribbean"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/63FmJY5K\/Backto-The-Future-Tile.png",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://i.postimg.cc/63FmJY5K/Backto-The-Future-Tile.png",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "3773BA35-D829-421D-8F30-BD7350EB5899",
+          "query": {
+            "identifier": "extreme_one|back-to-the-future",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "162330"
             }
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "3773BA35-D829-421D-8F30-BD7350EB5899",
-          "query" : {
-            "identifier" : "extreme_one|back-to-the-future",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "162330"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "extreme_one|back-to-the-future",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "162330"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "extreme_one|back-to-the-future",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "162330"
-                }
-              },
-              "title" : "Back to the Future"
+              "title": "Back to the Future"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Back to the Future"
+          "tileShape": "landscape",
+          "title": "Back to the Future"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/k5zCjN89\/Indiana-Jones-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/k5zCjN89/Indiana-Jones-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "E2619DB3-944A-4451-9F32-95AE21A69729",
-          "query" : {
-            "identifier" : "dinkysniff|collection-the-indiana-jones-series",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "E2619DB3-944A-4451-9F32-95AE21A69729",
+          "query": {
+            "identifier": "dinkysniff|collection-the-indiana-jones-series",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "dinkysniff|collection-the-indiana-jones-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "dinkysniff|collection-the-indiana-jones-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: The Indiana Jones Series"
+              "title": "Collection: The Indiana Jones Series"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Indiana Jones"
+          "tileShape": "landscape",
+          "title": "Indiana Jones"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/k43Gpd3c\/The-Matrix-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/k43Gpd3c/The-Matrix-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "44A005C0-8CCE-484A-901D-5660A2B6043D",
-          "query" : {
-            "identifier" : "dinkysniff|collection-the-matrix-series",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "44A005C0-8CCE-484A-901D-5660A2B6043D",
+          "query": {
+            "identifier": "dinkysniff|collection-the-matrix-series",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "dinkysniff|collection-the-matrix-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "dinkysniff|collection-the-matrix-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: The Matrix Series"
+              "title": "Collection: The Matrix Series"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "The Matrix"
+          "tileShape": "landscape",
+          "title": "The Matrix"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/T1DT4WLq\/0d7e0b16-0ad8-454e-8de1-31e42781a305.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/T1DT4WLq/0d7e0b16-0ad8-454e-8de1-31e42781a305.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "17227E44-D9C0-4654-BF36-02EBE3DD1BD9",
-          "query" : {
-            "identifier" : "grelipe|hunger-games",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "17227E44-D9C0-4654-BF36-02EBE3DD1BD9",
+          "query": {
+            "identifier": "grelipe|hunger-games",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "grelipe|hunger-games",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "grelipe|hunger-games",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Hunger Games"
+              "title": "Hunger Games"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "The Hunger Games"
+          "tileShape": "landscape",
+          "title": "The Hunger Games"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/9FvGHPkB\/a453ea55-5840-4dea-a6b8-bc2ba0a1e481.webp",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/9FvGHPkB/a453ea55-5840-4dea-a6b8-bc2ba0a1e481.webp",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "E6B8FDEA-67FD-4CC1-AD2A-868DEB17D5B8",
-          "query" : {
-            "identifier" : "dinkysniff|collection-the-planet-of-the-apes-reboot-series",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "E6B8FDEA-67FD-4CC1-AD2A-868DEB17D5B8",
+          "query": {
+            "identifier": "dinkysniff|collection-the-planet-of-the-apes-reboot-series",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "dinkysniff|collection-the-planet-of-the-apes-reboot-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "dinkysniff|collection-the-planet-of-the-apes-reboot-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: The Planet of the Apes (Reboot) Series"
+              "title": "Collection: The Planet of the Apes (Reboot) Series"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "The Planet of the Apes"
+          "tileShape": "landscape",
+          "title": "The Planet of the Apes"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/xCpJgLZJ\/Jurassic-World-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/xCpJgLZJ/Jurassic-World-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "FB07D9A5-8CBF-4314-A216-2BC45E6AA428",
-          "query" : {
-            "identifier" : "strangerer|jurassic-park-jurassic-world-trilogies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "FB07D9A5-8CBF-4314-A216-2BC45E6AA428",
+          "query": {
+            "identifier": "strangerer|jurassic-park-jurassic-world-trilogies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "strangerer|jurassic-park-jurassic-world-trilogies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "strangerer|jurassic-park-jurassic-world-trilogies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Jurassic Park & Jurassic World Trilogies."
+              "title": "Jurassic Park & Jurassic World Trilogies."
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Jurassic World"
+          "tileShape": "landscape",
+          "title": "Jurassic World"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/X7HNTVNC\/Men-In-Black-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/X7HNTVNC/Men-In-Black-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "1FEA2855-CD18-4F58-82F3-AE47F98A878B",
-          "query" : {
-            "identifier" : "rygo92|men-in-black",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "1FEA2855-CD18-4F58-82F3-AE47F98A878B",
+          "query": {
+            "identifier": "rygo92|men-in-black",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "rygo92|men-in-black",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "rygo92|men-in-black",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Men in Black"
+              "title": "Men in Black"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Men In Black"
+          "tileShape": "landscape",
+          "title": "Men In Black"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/j5vJGHJb\/Ghostbusters-Tile.png",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://i.postimg.cc/j5vJGHJb/Ghostbusters-Tile.png",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "789DC318-B1E8-4AEB-8C7B-5D3E8D375BAD",
+          "query": {
+            "identifier": "extreme_one|ghostbusters",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "162311"
             }
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "789DC318-B1E8-4AEB-8C7B-5D3E8D375BAD",
-          "query" : {
-            "identifier" : "extreme_one|ghostbusters",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "162311"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "extreme_one|ghostbusters",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "162311"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "extreme_one|ghostbusters",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "162311"
-                }
-              },
-              "title" : "Ghostbusters"
+              "title": "Ghostbusters"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Ghostbusters"
+          "tileShape": "landscape",
+          "title": "Ghostbusters"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/JzLh2h56\/Battle-Star-Tile.png",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://i.postimg.cc/JzLh2h56/Battle-Star-Tile.png",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "4B00D42D-C57D-4BF6-957F-22B2BADE2D17",
+          "query": {
+            "identifier": "extreme_one|battlestar-galactica",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "173508"
             }
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "4B00D42D-C57D-4BF6-957F-22B2BADE2D17",
-          "query" : {
-            "identifier" : "extreme_one|battlestar-galactica",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "173508"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "extreme_one|battlestar-galactica",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "173508"
                 }
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "extreme_one|battlestar-galactica",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "173508"
-                }
-              },
-              "title" : "Battlestar Galactica"
+              "title": "Battlestar Galactica"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Battlestar Galactica"
+          "tileShape": "landscape",
+          "title": "Battlestar Galactica"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/9fxVdSC1\/DC-Universe.jpg",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/9fxVdSC1/DC-Universe.jpg",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "5DE36C87-AF1D-4F90-A30C-734FD6596589",
-          "query" : {
-            "identifier" : "ricksanchez|dc-universe-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "5DE36C87-AF1D-4F90-A30C-734FD6596589",
+          "query": {
+            "identifier": "ricksanchez|dc-universe-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "ricksanchez|dc-universe-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "ricksanchez|dc-universe-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "DC Universe Movies"
+              "title": "DC Universe Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "DC Universe"
+          "tileShape": "landscape",
+          "title": "DC Universe"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/TYKW4WdV\/Marvel-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/TYKW4WdV/Marvel-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "67482FF6-3AA6-4F2A-84B0-9C7324E5A4E2",
-          "query" : {
-            "identifier" : "jbilling9|marvel-cinematic-universe-movies-release-order",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "67482FF6-3AA6-4F2A-84B0-9C7324E5A4E2",
+          "query": {
+            "identifier": "jbilling9|marvel-cinematic-universe-movies-release-order",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "jbilling9|marvel-cinematic-universe-movies-release-order",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "jbilling9|marvel-cinematic-universe-movies-release-order",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Marvel Cinematic Universe - Movies (Release Order)"
+              "title": "Marvel Cinematic Universe - Movies (Release Order)"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "geekritique|marvel-cinematic-universe-timeline",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "geekritique|marvel-cinematic-universe-timeline",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Marvel Cinematic Universe Timeline"
+              "title": "Marvel Cinematic Universe Timeline"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Marvel"
+          "tileShape": "landscape",
+          "title": "Marvel"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/V6GryckF\/Rocky-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/V6GryckF/Rocky-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "7092296B-9261-4AAD-ADC1-06AFCBC4A628",
-          "query" : {
-            "identifier" : "dinkysniff|collection-the-rocky-series",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "7092296B-9261-4AAD-ADC1-06AFCBC4A628",
+          "query": {
+            "identifier": "dinkysniff|collection-the-rocky-series",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "dinkysniff|collection-the-rocky-series",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "dinkysniff|collection-the-rocky-series",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: The Rocky Series"
+              "title": "Collection: The Rocky Series"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Rocky"
+          "tileShape": "landscape",
+          "title": "Rocky"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/PJRvqd4D\/James-Bond-Tile.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/PJRvqd4D/James-Bond-Tile.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "B4B00731-0A31-42FB-9D31-284858C003B4",
-          "query" : {
-            "identifier" : "dinkysniff|collection-james-bond-sean-connery",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "B4B00731-0A31-42FB-9D31-284858C003B4",
+          "query": {
+            "identifier": "dinkysniff|collection-james-bond-sean-connery",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "dinkysniff|collection-james-bond-sean-connery",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "dinkysniff|collection-james-bond-sean-connery",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: James Bond - Sean Connery"
+              "title": "Collection: James Bond - Sean Connery"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "dinkysniff|collection-james-bond-roger-moore",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "dinkysniff|collection-james-bond-roger-moore",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: James Bond - Roger Moore"
+              "title": "Collection: James Bond - Roger Moore"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "dinkysniff|collection-james-bond-timothy-dalton",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "dinkysniff|collection-james-bond-timothy-dalton",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: James Bond - Timothy Dalton"
+              "title": "Collection: James Bond - Timothy Dalton"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "dinkysniff|collection-james-bond-pierce-brosnan",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "dinkysniff|collection-james-bond-pierce-brosnan",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: James Bond - Pierce Brosnan"
+              "title": "Collection: James Bond - Pierce Brosnan"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "dinkysniff|collection-james-bond-daniel-craig",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-5",
+              "query": {
+                "identifier": "dinkysniff|collection-james-bond-daniel-craig",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Collection: James Bond - Daniel Craig"
+              "title": "Collection: James Bond - Daniel Craig"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "James Bond"
+          "tileShape": "landscape",
+          "title": "James Bond"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/4NRMpgW1\/Monty-Python-Button.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/4NRMpgW1/Monty-Python-Button.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "86FE7770-4E4C-498B-AB51-1F0ECD7D0B29",
-          "query" : {
-            "identifier" : "astrolansen|monty-python",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "86FE7770-4E4C-498B-AB51-1F0ECD7D0B29",
+          "query": {
+            "identifier": "astrolansen|monty-python",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "astrolansen|monty-python",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "astrolansen|monty-python",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Monty Python"
+              "title": "Monty Python"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Monty Python"
+          "tileShape": "landscape",
+          "title": "Monty Python"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/d33f6Ng3\/Aliens.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/d33f6Ng3/Aliens.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "918B2D4B-254A-4CB2-9EAB-C2F37670E9C7",
-          "query" : {
-            "identifier" : "extreme_one|it-s-aliens",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "918B2D4B-254A-4CB2-9EAB-C2F37670E9C7",
+          "query": {
+            "identifier": "extreme_one|it-s-aliens",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "extreme_one|it-s-aliens",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "extreme_one|it-s-aliens",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "It's Aliens"
+              "title": "It's Aliens"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "It's Aliens"
+          "tileShape": "landscape",
+          "title": "It's Aliens"
         }
       ],
-      "id" : "0C8620B3-ABCE-5868-8BC4-1DC771C9D6CA",
-      "isEnabled" : true,
-      "position" : 4,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "0C8620B3-ABCE-5868-8BC4-1DC771C9D6CA",
+      "isEnabled": true,
+      "position": 4,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "maxtrontv|star-wars-movies",
-        "kind" : "curatedList",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "‎Franchises"
+      "schemaVersion": 2,
+      "title": "‎Franchises"
     },
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Alencocoa--100-best-action-movies.png?name=Action",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Alencocoa--100-best-action-movies.png?name=Action",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [
+              "10759"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "B3A6C916-3F18-437E-9A10-806D47A41174",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "B3A6C916-3F18-437E-9A10-806D47A41174",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10759"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Action"
+              "title": "Action"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "28"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Action"
+              "title": "Action"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "lencocoa|100-best-action-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "lencocoa|100-best-action-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "100 Best Action Movies"
+              "title": "100 Best Action Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Action"
+          "tileShape": "landscape",
+          "title": "Action"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Ahyperrreal--100-greatest-animations.png?name=Animation",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Ahyperrreal--100-greatest-animations.png?name=Animation",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [
+              "16"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "E393D6D0-4CDF-4BEA-8576-767255559F9D",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "E393D6D0-4CDF-4BEA-8576-767255559F9D",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "16"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Animation"
+              "title": "Animation"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "16"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Animation"
+              "title": "Animation"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "nylgeroo|julia-donaldson-collection",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "nylgeroo|julia-donaldson-collection",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Julia Donaldson Collection"
+              "title": "Julia Donaldson Collection"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "lish408|imdb-popular-family-animation",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "lish408|imdb-popular-family-animation",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "IMDB: Popular Family Animation"
+              "title": "IMDB: Popular Family Animation"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "irishstevo|imdb-s-top-animation-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-5",
+              "query": {
+                "identifier": "irishstevo|imdb-s-top-animation-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "IMDb's Top Animation Movies"
+              "title": "IMDb's Top Animation Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Animation"
+          "tileShape": "landscape",
+          "title": "Animation"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/show\/trakt-pub%3Arfsbraz--100-animes-to-watch-before-you-die.png?name=Anime",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/show/trakt-pub%3Arfsbraz--100-animes-to-watch-before-you-die.png?name=Anime",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "FD1984D3-41EE-4E9F-9C91-827CAC99ED93",
-          "query" : {
-            "identifier" : "rfsbraz|100-animes-to-watch-before-you-die",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "FD1984D3-41EE-4E9F-9C91-827CAC99ED93",
+          "query": {
+            "identifier": "rfsbraz|100-animes-to-watch-before-you-die",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "rfsbraz|100-animes-to-watch-before-you-die",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "rfsbraz|100-animes-to-watch-before-you-die",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "100 Animes to watch before you die"
+              "title": "100 Animes to watch before you die"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "majeed_pk|the-100-best-anime-movies-of-all-time",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "majeed_pk|the-100-best-anime-movies-of-all-time",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "The 100 Best Anime Movies of All Time"
+              "title": "The 100 Best Anime Movies of All Time"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Anime"
+          "tileShape": "landscape",
+          "title": "Anime"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Achazlarson--time-out-100-best-comedy-movies.png?name=Comedy",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Achazlarson--time-out-100-best-comedy-movies.png?name=Comedy",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [
+              "35"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "663808D6-929D-4815-9D5E-806BB1E8FAA3",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "663808D6-929D-4815-9D5E-806BB1E8FAA3",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "35"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Comedy"
+              "title": "Comedy"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "35"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Comedy"
+              "title": "Comedy"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "cands|the-best-of-british-comedy-tv-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "cands|the-best-of-british-comedy-tv-shows",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "The best of... British Comedy (TV Shows)"
+              "title": "The best of... British Comedy (TV Shows)"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "chazlarson|time-out-100-best-comedy-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "chazlarson|time-out-100-best-comedy-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Time Out 100 best comedy movies"
+              "title": "Time Out 100 best comedy movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Comedy"
+          "tileShape": "landscape",
+          "title": "Comedy"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Aistoit--rotten-tomatoes-100-best-documentaries-ranked-by-tomatometer.png?name=Documentary%20%20%20%20%20%20%20%20%20%20",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Aistoit--rotten-tomatoes-100-best-documentaries-ranked-by-tomatometer.png?name=Documentary%20%20%20%20%20%20%20%20%20%20",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [
+              "99"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "minimumVoteCount": 20,
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "releaseDate",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "46C92C5E-0EA2-49A8-A723-12CCE7307D7B",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "46C92C5E-0EA2-49A8-A723-12CCE7307D7B",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "99"
                 ],
-                "minimumVoteCount" : 20,
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "releaseDate",
-                "streamingProviderIDs" : [
-
-                ]
+                "minimumVoteCount": 20,
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "releaseDate",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Documentary"
+              "title": "Documentary"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "sp1ti|the-documentary-blog-s-top-50-documentaries-of-the-decade",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "sp1ti|the-documentary-blog-s-top-50-documentaries-of-the-decade",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "The Documentary Blog’s Top 50 Documentaries of the Decade"
+              "title": "The Documentary Blog’s Top 50 Documentaries of the Decade"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "istoit|rotten-tomatoes-100-best-documentaries-ranked-by-tomatometer",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "istoit|rotten-tomatoes-100-best-documentaries-ranked-by-tomatometer",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Rotten Tomatoes’ 100 Best Documentaries Ranked by Tomatometer"
+              "title": "Rotten Tomatoes’ 100 Best Documentaries Ranked by Tomatometer"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "extreme_one|professor-brian-cox",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "extreme_one|professor-brian-cox",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Professor Brian Cox"
+              "title": "Professor Brian Cox"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Documentary"
+          "tileShape": "landscape",
+          "title": "Documentary"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Alencocoa--100-best-drama-movies.png?name=Drama",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Alencocoa--100-best-drama-movies.png?name=Drama",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [
+              "18"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "486E6ACE-8CBF-4E2A-9F8D-FF40165D68B5",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "486E6ACE-8CBF-4E2A-9F8D-FF40165D68B5",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "18"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Drama"
+              "title": "Drama"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "18"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Drama"
+              "title": "Drama"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "pauls67|british-crime-drama",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "pauls67|british-crime-drama",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "British Crime & Drama"
+              "title": "British Crime & Drama"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "majeed_pk|courtroom-dramas",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "majeed_pk|courtroom-dramas",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Courtroom Dramas"
+              "title": "Courtroom Dramas"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-5",
-              "query" : {
-                "identifier" : "majeed_pk|period-drama-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-5",
+              "query": {
+                "identifier": "majeed_pk|period-drama-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Period Drama Movies"
+              "title": "Period Drama Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Drama"
+          "tileShape": "landscape",
+          "title": "Drama"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Agiladg--rotten-tomatoes-top-100-kids-family-movies.png?name=Family",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Agiladg--rotten-tomatoes-top-100-kids-family-movies.png?name=Family",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [
+              "10751"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "F30802EB-F8E2-4E9D-8679-9D34EB686284",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "F30802EB-F8E2-4E9D-8679-9D34EB686284",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "10751"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Family"
+              "title": "Family"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10751"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Family"
+              "title": "Family"
             },
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-3",
+              "query": {
+                "identifier": "hdlists|family-movies-top-rated-from-1980-to-today",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "2415"
                 }
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "hdlists|family-movies-top-rated-from-1980-to-today",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "2415"
-                }
-              },
-              "title" : "Family Movies (Top Rated From 1980 to Today)"
+              "title": "Family Movies (Top Rated From 1980 to Today)"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "giladg|rotten-tomatoes-top-100-kids-family-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "giladg|rotten-tomatoes-top-100-kids-family-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Rotten Tomatoes: Top 100 Kids & Family Movies"
+              "title": "Rotten Tomatoes: Top 100 Kids & Family Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Family"
+          "tileShape": "landscape",
+          "title": "Family"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Alencocoa--100-best-fantasy-movies.png?name=Fantasy",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Alencocoa--100-best-fantasy-movies.png?name=Fantasy",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "14"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "86C50B20-C549-4DFB-83FE-E4FE59F55C9D",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "86C50B20-C549-4DFB-83FE-E4FE59F55C9D",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "14"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Fantasy"
+              "title": "Fantasy"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "irishstevo|imdb-s-top-fantasy-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "irishstevo|imdb-s-top-fantasy-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "IMDb's Top Fantasy Movies"
+              "title": "IMDb's Top Fantasy Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Fantasy"
+          "tileShape": "landscape",
+          "title": "Fantasy"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Aphilrivers--dreadit-s-top-100-horror-films-2018-edition-r-horror.png?name=Horror",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Aphilrivers--dreadit-s-top-100-horror-films-2018-edition-r-horror.png?name=Horror",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "27"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "C0896F1E-2ACD-46A6-92B5-2D1D6BA1B0B7",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "C0896F1E-2ACD-46A6-92B5-2D1D6BA1B0B7",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "27"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Horror"
+              "title": "Horror"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "lish408|popular-horror",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "lish408|popular-horror",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Popular Horror"
+              "title": "Popular Horror"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "lish408|rotten-tomatoes-best-horror-movies-of-all-time",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "lish408|rotten-tomatoes-best-horror-movies-of-all-time",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Rotten Tomatoes: Best Horror Movies Of All Time"
+              "title": "Rotten Tomatoes: Best Horror Movies Of All Time"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Horror"
+          "tileShape": "landscape",
+          "title": "Horror"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Amajeed_pk--100-classic-martial-arts-films.png?name=Martial%20Arts",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Amajeed_pk--100-classic-martial-arts-films.png?name=Martial%20Arts",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "50B7D708-D28D-46F9-8CBC-539F8DDE38FD",
-          "query" : {
-            "identifier" : "majeed_pk|martial-arts-the-top-250-greatest-movies-of-all-time",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "50B7D708-D28D-46F9-8CBC-539F8DDE38FD",
+          "query": {
+            "identifier": "majeed_pk|martial-arts-the-top-250-greatest-movies-of-all-time",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "majeed_pk|martial-arts-the-top-250-greatest-movies-of-all-time",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "majeed_pk|martial-arts-the-top-250-greatest-movies-of-all-time",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Martial Arts - The Top 250 Greatest Movies of All-Time"
+              "title": "Martial Arts - The Top 250 Greatest Movies of All-Time"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "hammers-lists|hollywood-martial-arts",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "hammers-lists|hollywood-martial-arts",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Hollywood Martial Arts"
+              "title": "Hollywood Martial Arts"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "kareemaab|bruce-lee",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "kareemaab|bruce-lee",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Bruce Lee"
+              "title": "Bruce Lee"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "hazygravy|jackie-chan-complete-collection",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "hazygravy|jackie-chan-complete-collection",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Jackie Chan Complete Collection"
+              "title": "Jackie Chan Complete Collection"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Martial Arts"
+          "tileShape": "landscape",
+          "title": "Martial Arts"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Alencocoa--100-best-musicals.png?name=Musicals",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Alencocoa--100-best-musicals.png?name=Musicals",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "EDEE80E8-276D-4978-9B95-F45C920DCAFC",
-          "query" : {
-            "identifier" : "mpsimala|musicals",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "EDEE80E8-276D-4978-9B95-F45C920DCAFC",
+          "query": {
+            "identifier": "mpsimala|musicals",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "mpsimala|musicals",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "mpsimala|musicals",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Musicals"
+              "title": "Musicals"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "lencocoa|100-best-musicals",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "lencocoa|100-best-musicals",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "100 Best Musicals"
+              "title": "100 Best Musicals"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Musicals"
+          "tileShape": "landscape",
+          "title": "Musicals"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Alencocoa--100-best-mystery-movies.png?name=Mystery",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Alencocoa--100-best-mystery-movies.png?name=Mystery",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "shows",
+            "countryCodes": [],
+            "genreIDs": [
+              "9648"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "EC468399-E837-4E05-8B0A-CEA2E9B5491A",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "EC468399-E837-4E05-8B0A-CEA2E9B5491A",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "9648"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Mystery"
+              "title": "Mystery"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "9648"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Mystery"
+              "title": "Mystery"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "giladg|murder-mystery-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "giladg|murder-mystery-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Murder Mystery Movies"
+              "title": "Murder Mystery Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "xilfneps|genre-mystery-1000-titles-1970-2013",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "xilfneps|genre-mystery-1000-titles-1970-2013",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Genre: Mystery, 1000 Titles (1970-2013)"
+              "title": "Genre: Mystery, 1000 Titles (1970-2013)"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Mystery"
+          "tileShape": "landscape",
+          "title": "Mystery"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/media\/trakt-pub%3Amonkeeman--nature-science-documentaries.png?name=Nature",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/media/trakt-pub%3Amonkeeman--nature-science-documentaries.png?name=Nature",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "722C4BC8-7DED-4116-972A-C227612E1B7F",
-          "query" : {
-            "identifier" : "hammers-lists|attenborough-documentaries",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "722C4BC8-7DED-4116-972A-C227612E1B7F",
+          "query": {
+            "identifier": "hammers-lists|attenborough-documentaries",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "hammers-lists|attenborough-documentaries",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "hammers-lists|attenborough-documentaries",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Attenborough Documentaries"
+              "title": "Attenborough Documentaries"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "lorumipsomlydia|bbc-earth-life-on-our-planet",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "lorumipsomlydia|bbc-earth-life-on-our-planet",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "BBC Earth - Life on our Planet"
+              "title": "BBC Earth - Life on our Planet"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "lish408|imdb-popular-nature-documentaries",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "lish408|imdb-popular-nature-documentaries",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "IMDB: Popular Nature Documentaries"
+              "title": "IMDB: Popular Nature Documentaries"
             },
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-4",
+              "query": {
+                "identifier": "tvgeniekodi|top-nature-shows",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "84487"
                 }
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "tvgeniekodi|top-nature-shows",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "84487"
-                }
-              },
-              "title" : "Top Nature Shows"
+              "title": "Top Nature Shows"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Nature"
+          "tileShape": "landscape",
+          "title": "Nature"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Acristinx--rotten-tomatoe-s-top-100-romance-movies.png?name=Romance",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Acristinx--rotten-tomatoe-s-top-100-romance-movies.png?name=Romance",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "10749"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "A90C17CB-A7E2-4C20-8274-344E3000A01B",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "A90C17CB-A7E2-4C20-8274-344E3000A01B",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10749"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Romance"
+              "title": "Romance"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "xeexex|mega-erotic",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "xeexex|mega-erotic",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Mega Erotic"
+              "title": "Mega Erotic"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "cristinx|rotten-tomatoe-s-top-100-romance-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "cristinx|rotten-tomatoe-s-top-100-romance-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Rotten Tomatoe's Top 100 Romance Movies"
+              "title": "Rotten Tomatoe's Top 100 Romance Movies"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Romance"
+          "tileShape": "landscape",
+          "title": "Romance"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Acodermike--100-greatest-sci-fi-movies.png?name=Sci-Fi",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Acodermike--100-greatest-sci-fi-movies.png?name=Sci-Fi",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "33149B37-42F6-4FE4-BD07-59F62C822504",
-          "query" : {
-            "identifier" : "codermike|100-greatest-sci-fi-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "33149B37-42F6-4FE4-BD07-59F62C822504",
+          "query": {
+            "identifier": "codermike|100-greatest-sci-fi-movies",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "codermike|100-greatest-sci-fi-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "codermike|100-greatest-sci-fi-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "100 Greatest Sci-Fi Movies"
+              "title": "100 Greatest Sci-Fi Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "878"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Sci-Fi"
+              "title": "Sci-Fi"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Sci-Fi"
+          "tileShape": "landscape",
+          "title": "Sci-Fi"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/media\/trakt-pub%3Atcjelly--late-night-space.png?name=Space",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/media/trakt-pub%3Atcjelly--late-night-space.png?name=Space",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "73A1C658-4C9A-4DD9-A917-DF69B7469023",
-          "query" : {
-            "identifier" : "michaeldibben|astronomy-and-cosmology",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "73A1C658-4C9A-4DD9-A917-DF69B7469023",
+          "query": {
+            "identifier": "michaeldibben|astronomy-and-cosmology",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "michaeldibben|astronomy-and-cosmology",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "michaeldibben|astronomy-and-cosmology",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Astronomy and Cosmology"
+              "title": "Astronomy and Cosmology"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Space"
+          "tileShape": "landscape",
+          "title": "Space"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Amajeed_pk--bfi-100-best-thrillers.png?name=Thriller",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Amajeed_pk--bfi-100-best-thrillers.png?name=Thriller",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "53"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "4E416409-0883-4027-B2D6-B5305D26BAA6",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "4E416409-0883-4027-B2D6-B5305D26BAA6",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "53"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Thriller"
+              "title": "Thriller"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "majeed_pk|bfi-100-best-thrillers",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "majeed_pk|bfi-100-best-thrillers",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "BFI 100 Best Thrillers"
+              "title": "BFI 100 Best Thrillers"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "majeed_pk|top-200-psychological-thrillers",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "majeed_pk|top-200-psychological-thrillers",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Top 200 Psychological Thrillers"
+              "title": "Top 200 Psychological Thrillers"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Thriller"
+          "tileShape": "landscape",
+          "title": "Thriller"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Alencocoa--100-best-war-movies.png?name=War",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Alencocoa--100-best-war-movies.png?name=War",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "10752"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "2C149562-EF85-4328-8339-B3D903BB7AAF",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "2C149562-EF85-4328-8339-B3D903BB7AAF",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "10752"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "War"
+              "title": "War"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "kayaaron13|ranker-the-best-war-movies-ever-made",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "identifier": "kayaaron13|ranker-the-best-war-movies-ever-made",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Ranker: The Best War Movies Ever Made"
+              "title": "Ranker: The Best War Movies Ever Made"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "War"
+          "tileShape": "landscape",
+          "title": "War"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Amedous--100-best-western-films-of-all-time-according-to-critics.png?name=Western",
-          "dataSource" : {
-            "kind" : "preferredMetadata",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Amedous--100-best-western-films-of-all-time-according-to-critics.png?name=Western",
+          "dataSource": {
+            "kind": "preferredMetadata",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [
+              "37"
             ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "sortOrder": "popularity",
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : true,
-          "id" : "8506948E-2B72-4B8B-9065-985D9EDAD16F",
-          "query" : {
-            "identifier" : "external-collection-discovery",
-            "kind" : "custom",
-            "parameters" : {
-
-            }
+          "hidesTitle": true,
+          "id": "8506948E-2B72-4B8B-9065-985D9EDAD16F",
+          "query": {
+            "kind": "popular",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [
                   "37"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Western"
+              "title": "Western"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "shows",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
+              "filters": {
+                "contentType": "shows",
+                "countryCodes": [],
+                "genreIDs": [
                   "37"
                 ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "Western"
+              "title": "Western"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-3",
-              "query" : {
-                "identifier" : "irishstevo|imdb-s-top-western-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-3",
+              "query": {
+                "identifier": "irishstevo|imdb-s-top-western-movies",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "IMDb's Top Western Movies"
+              "title": "IMDb's Top Western Movies"
             },
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-4",
-              "query" : {
-                "identifier" : "majeed_pk|western-spaghetti-westerns-500-films",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-4",
+              "query": {
+                "identifier": "majeed_pk|western-spaghetti-westerns-500-films",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Western - Spaghetti Westerns 500+ Films"
+              "title": "Western - Spaghetti Westerns 500+ Films"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Western"
+          "tileShape": "landscape",
+          "title": "Western"
         }
       ],
-      "id" : "EF442FED-AC96-5FC6-A3FA-ECE1121AD205",
-      "isEnabled" : true,
-      "position" : 5,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "EF442FED-AC96-5FC6-A3FA-ECE1121AD205",
+      "isEnabled": true,
+      "position": 5,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "external-collection-discovery",
-        "kind" : "custom",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "‎Genres"
+      "schemaVersion": 2,
+      "title": "‎Genres"
     },
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "both",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "both",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/P55n5nHZ\/Wes-Anderson.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/P55n5nHZ/Wes-Anderson.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "E20806FE-41D9-4A1B-9AC3-ECFAF9500F81",
-          "query" : {
-            "identifier" : "origin14|director-wes-anderson",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "E20806FE-41D9-4A1B-9AC3-ECFAF9500F81",
+          "query": {
+            "identifier": "origin14|director-wes-anderson",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-wes-anderson",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-wes-anderson",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Wes Anderson"
+              "title": "Director: Wes Anderson"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Wes Anderson"
+          "tileShape": "landscape",
+          "title": "Wes Anderson"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/MKD8wKhs\/Danny-Boyle.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/MKD8wKhs/Danny-Boyle.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "63694A9A-C5D0-463F-9A17-8FA8F71F0A34",
-          "query" : {
-            "identifier" : "origin14|director-danny-boyle",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "63694A9A-C5D0-463F-9A17-8FA8F71F0A34",
+          "query": {
+            "identifier": "origin14|director-danny-boyle",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-danny-boyle",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-danny-boyle",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Danny Boyle"
+              "title": "Director: Danny Boyle"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Danny Boyle"
+          "tileShape": "landscape",
+          "title": "Danny Boyle"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/RZZxZxmW\/Tim-Burton.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/RZZxZxmW/Tim-Burton.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "E2B84B64-01A3-4AC0-A652-10710DF807B3",
-          "query" : {
-            "identifier" : "origin14|director-tim-burton",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "E2B84B64-01A3-4AC0-A652-10710DF807B3",
+          "query": {
+            "identifier": "origin14|director-tim-burton",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-tim-burton",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-tim-burton",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Tim Burton"
+              "title": "Director: Tim Burton"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Tim Burton"
+          "tileShape": "landscape",
+          "title": "Tim Burton"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/hPrqnPHN\/James-Cameron.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/hPrqnPHN/James-Cameron.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "8050C7BA-400A-4621-BCDC-7929816FF537",
-          "query" : {
-            "identifier" : "origin14|director-james-cameron",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "8050C7BA-400A-4621-BCDC-7929816FF537",
+          "query": {
+            "identifier": "origin14|director-james-cameron",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-james-cameron",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-james-cameron",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: James Cameron"
+              "title": "Director: James Cameron"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "James Cameron"
+          "tileShape": "landscape",
+          "title": "James Cameron"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/02fqv2LZ\/Coen-Brothers.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/02fqv2LZ/Coen-Brothers.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "0CE1F08F-E4C2-403E-8638-ABAD45A74986",
-          "query" : {
-            "identifier" : "origin14|director-coen-brothers",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "0CE1F08F-E4C2-403E-8638-ABAD45A74986",
+          "query": {
+            "identifier": "origin14|director-coen-brothers",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-coen-brothers",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-coen-brothers",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Coen Brothers"
+              "title": "Director: Coen Brothers"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Coen Brothers"
+          "tileShape": "landscape",
+          "title": "Coen Brothers"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/TY9XxYz1\/Ron-Howard.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/TY9XxYz1/Ron-Howard.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "77670548-0007-4AC1-9F97-A1797630013B",
-          "query" : {
-            "identifier" : "origin14|director-ron-howard",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "77670548-0007-4AC1-9F97-A1797630013B",
+          "query": {
+            "identifier": "origin14|director-ron-howard",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-ron-howard",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-ron-howard",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Ron Howard"
+              "title": "Director: Ron Howard"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Ron Howard"
+          "tileShape": "landscape",
+          "title": "Ron Howard"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/JzzCzC8z\/Stanley-Kubrick.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/JzzCzC8z/Stanley-Kubrick.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "965C4F83-72E8-4883-83CE-2CED7B0228ED",
-          "query" : {
-            "identifier" : "origin14|director-stanley-kubrick",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "965C4F83-72E8-4883-83CE-2CED7B0228ED",
+          "query": {
+            "identifier": "origin14|director-stanley-kubrick",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-stanley-kubrick",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-stanley-kubrick",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Stanley Kubrick"
+              "title": "Director: Stanley Kubrick"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Stanley Kubrick"
+          "tileShape": "landscape",
+          "title": "Stanley Kubrick"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/m2RGKF6X\/Christopher-Nolan.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/m2RGKF6X/Christopher-Nolan.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "02E9EFE8-A145-45C4-9A5A-F0D864E57259",
-          "query" : {
-            "identifier" : "origin14|director-christopher-nolan",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "02E9EFE8-A145-45C4-9A5A-F0D864E57259",
+          "query": {
+            "identifier": "origin14|director-christopher-nolan",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-christopher-nolan",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-christopher-nolan",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Christopher Nolan"
+              "title": "Director: Christopher Nolan"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Christopher Nolan"
+          "tileShape": "landscape",
+          "title": "Christopher Nolan"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/RCDwJskZ\/Martin-Scorsese.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/RCDwJskZ/Martin-Scorsese.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "A81C26A8-39AF-4A80-9A78-13160314BA8E",
-          "query" : {
-            "identifier" : "charlymg80|martin-scorcese",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "A81C26A8-39AF-4A80-9A78-13160314BA8E",
+          "query": {
+            "identifier": "charlymg80|martin-scorcese",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "charlymg80|martin-scorcese",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "charlymg80|martin-scorcese",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Martin Scorcese"
+              "title": "Martin Scorcese"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Martin Scorsese"
+          "tileShape": "landscape",
+          "title": "Martin Scorsese"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/X780W7RJ\/Ridley-Scott.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/X780W7RJ/Ridley-Scott.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "AD77D307-1978-48A9-9345-DA937D5D70DA",
-          "query" : {
-            "identifier" : "origin14|director-ridley-scott",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "AD77D307-1978-48A9-9345-DA937D5D70DA",
+          "query": {
+            "identifier": "origin14|director-ridley-scott",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-ridley-scott",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-ridley-scott",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Ridley Scott"
+              "title": "Director: Ridley Scott"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Ridley Scott"
+          "tileShape": "landscape",
+          "title": "Ridley Scott"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/X780W7R3\/M-Night-Shyamalan.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/X780W7R3/M-Night-Shyamalan.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "518B6EF3-F7FA-43A2-976A-5C0F7A29D8AC",
-          "query" : {
-            "identifier" : "origin14|director-m-night-shyamalan",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "518B6EF3-F7FA-43A2-976A-5C0F7A29D8AC",
+          "query": {
+            "identifier": "origin14|director-m-night-shyamalan",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-m-night-shyamalan",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-m-night-shyamalan",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: M. Night Shyamalan"
+              "title": "Director: M. Night Shyamalan"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "M. Night Shyamalan"
+          "tileShape": "landscape",
+          "title": "M. Night Shyamalan"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/Z55z5zmq\/Steven-Spielberg.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/Z55z5zmq/Steven-Spielberg.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "339211FF-7D03-46AE-AEC7-D8380A7D4B23",
-          "query" : {
-            "identifier" : "origin14|director-steven-spielberg",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "339211FF-7D03-46AE-AEC7-D8380A7D4B23",
+          "query": {
+            "identifier": "origin14|director-steven-spielberg",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-steven-spielberg",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-steven-spielberg",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Steven Spielberg"
+              "title": "Director: Steven Spielberg"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Steven Spielberg"
+          "tileShape": "landscape",
+          "title": "Steven Spielberg"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/L6TMS6cH\/Oliver-Stone.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/L6TMS6cH/Oliver-Stone.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "CC6D6C1A-7855-4439-88B8-FAE7976A0E49",
-          "query" : {
-            "identifier" : "origin14|director-oliver-stone",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "CC6D6C1A-7855-4439-88B8-FAE7976A0E49",
+          "query": {
+            "identifier": "origin14|director-oliver-stone",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-oliver-stone",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-oliver-stone",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Oliver Stone"
+              "title": "Director: Oliver Stone"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Oliver Stone"
+          "tileShape": "landscape",
+          "title": "Oliver Stone"
         },
         {
-          "coverImageURL" : "https:\/\/i.postimg.cc\/CLNV0L3L\/Quentin-Tarantino.png",
-          "dataSource" : {
-            "identifier" : "trakt-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
-            }
+          "coverImageURL": "https://i.postimg.cc/CLNV0L3L/Quentin-Tarantino.png",
+          "dataSource": {
+            "identifier": "trakt-public",
+            "kind": "trackingService",
+            "parameters": {}
           },
-          "filters" : {
-            "contentType" : "both",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
+          "filters": {
+            "contentType": "both",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
           },
-          "hidesTitle" : false,
-          "id" : "92A1DFC8-20C7-4FE3-97BC-812C6B05F2D1",
-          "query" : {
-            "identifier" : "origin14|director-quentin-tarantino",
-            "kind" : "curatedList",
-            "parameters" : {
-
-            }
+          "hidesTitle": false,
+          "id": "92A1DFC8-20C7-4FE3-97BC-812C6B05F2D1",
+          "query": {
+            "identifier": "origin14|director-quentin-tarantino",
+            "kind": "curatedList",
+            "parameters": {}
           },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "trakt-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "identifier": "trakt-public",
+                "kind": "trackingService",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "both",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "both",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
               },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "origin14|director-quentin-tarantino",
-                "kind" : "curatedList",
-                "parameters" : {
-
-                }
+              "id": "source-1",
+              "query": {
+                "identifier": "origin14|director-quentin-tarantino",
+                "kind": "curatedList",
+                "parameters": {}
               },
-              "title" : "Director: Quentin Tarantino"
+              "title": "Director: Quentin Tarantino"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "Quentin Tarantino"
+          "tileShape": "landscape",
+          "title": "Quentin Tarantino"
         }
       ],
-      "id" : "E7BAD2DA-FF35-59E0-875E-D82030209BBD",
-      "isEnabled" : true,
-      "position" : 6,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "E7BAD2DA-FF35-59E0-875E-D82030209BBD",
+      "isEnabled": true,
+      "position": 6,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "origin14|director-wes-anderson",
-        "kind" : "curatedList",
-        "parameters" : {
-
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "‎Directors"
+      "schemaVersion": 2,
+      "title": "‎Directors"
     },
     {
-      "dataSource" : {
-        "identifier" : "cedar.branch-group",
-        "kind" : "custom",
-        "parameters" : {
-          "cedar.home.displaysFolderCards" : "true",
-          "cedar.home.folderRole" : "folder",
-          "cedar.home.leafBrowseLayout" : "rows"
+      "dataSource": {
+        "identifier": "cedar.branch-group",
+        "kind": "custom",
+        "parameters": {
+          "cedar.home.displaysFolderCards": "true",
+          "cedar.home.folderRole": "folder",
+          "cedar.home.leafBrowseLayout": "rows"
         }
       },
-      "defaultFilters" : {
-        "contentType" : "movies",
-        "countryCodes" : [
-
-        ],
-        "genreIDs" : [
-
-        ],
-        "networkIDs" : [
-
-        ],
-        "originalLanguageCodes" : [
-
-        ],
-        "productionCompanyIDs" : [
-
-        ],
-        "streamingProviderIDs" : [
-
-        ]
+      "defaultFilters": {
+        "contentType": "movies",
+        "countryCodes": [],
+        "genreIDs": [],
+        "networkIDs": [],
+        "originalLanguageCodes": [],
+        "productionCompanyIDs": [],
+        "streamingProviderIDs": []
       },
-      "folderOptions" : [
+      "folderOptions": [
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Aanim8onme--imdb-top-500-us-box-office-of-the-1980s.png?name=1980s",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Aanim8onme--imdb-top-500-us-box-office-of-the-1980s.png?name=1980s",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "DA49EE43-1A2E-48A3-8CEB-C346124FEAC5",
+          "query": {
+            "identifier": "snoak|popular-1980s-movies",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "91301"
             }
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "DA49EE43-1A2E-48A3-8CEB-C346124FEAC5",
-          "query" : {
-            "identifier" : "snoak|popular-1980s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "91301"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "snoak|popular-1980s-movies",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "91301"
                 }
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "snoak|popular-1980s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "91301"
-                }
-              },
-              "title" : "Popular 1980s Movies"
+              "title": "Popular 1980s Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "1989-12-31T00:00:00Z",
-                "releaseDateStart" : "1980-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "1989-12-31T00:00:00Z",
+                "releaseDateStart": "1980-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "1980s"
+              "title": "1980s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "1980s"
+          "tileShape": "landscape",
+          "title": "1980s"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Aanim8onme--imdb-top-1000-us-box-office-of-the-1990s.png?name=1990s",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Aanim8onme--imdb-top-1000-us-box-office-of-the-1990s.png?name=1990s",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "663148EE-186D-4251-92D4-FE34B89F4BD4",
+          "query": {
+            "identifier": "snoak|popular-1990s-movies",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "91300"
             }
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "663148EE-186D-4251-92D4-FE34B89F4BD4",
-          "query" : {
-            "identifier" : "snoak|popular-1990s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "91300"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "snoak|popular-1990s-movies",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "91300"
                 }
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "snoak|popular-1990s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "91300"
-                }
-              },
-              "title" : "Popular 1990s Movies"
+              "title": "Popular 1990s Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "1999-12-31T00:00:00Z",
-                "releaseDateStart" : "1990-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "1999-12-31T00:00:00Z",
+                "releaseDateStart": "1990-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "1990s"
+              "title": "1990s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "1990s"
+          "tileShape": "landscape",
+          "title": "1990s"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Aanim8onme--imdb-top-1500-us-box-office-of-the-2000s.png?name=2000s",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Aanim8onme--imdb-top-1500-us-box-office-of-the-2000s.png?name=2000s",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "710E7329-C621-4C06-AE0C-FA29EA142D7A",
+          "query": {
+            "identifier": "snoak|popular-2000s-movies",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "91302"
             }
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "710E7329-C621-4C06-AE0C-FA29EA142D7A",
-          "query" : {
-            "identifier" : "snoak|popular-2000s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "91302"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "snoak|popular-2000s-movies",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "91302"
                 }
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "snoak|popular-2000s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "91302"
-                }
-              },
-              "title" : "Popular 2000s Movies"
+              "title": "Popular 2000s Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2009-12-31T00:00:00Z",
-                "releaseDateStart" : "2000-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2009-12-31T00:00:00Z",
+                "releaseDateStart": "2000-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2000s"
+              "title": "2000s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2000s"
+          "tileShape": "landscape",
+          "title": "2000s"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Aanim8onme--imdb-top-1750-us-box-office-of-the-2010s.png?name=2010s",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Aanim8onme--imdb-top-1750-us-box-office-of-the-2010s.png?name=2010s",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "0612CC17-4E73-4A73-92A7-16F0589A720F",
+          "query": {
+            "identifier": "snoak|popular-2010s-movies",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "91303"
             }
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "0612CC17-4E73-4A73-92A7-16F0589A720F",
-          "query" : {
-            "identifier" : "snoak|popular-2010s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "91303"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "snoak|popular-2010s-movies",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "91303"
                 }
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "snoak|popular-2010s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "91303"
-                }
-              },
-              "title" : "Popular 2010s Movies"
+              "title": "Popular 2010s Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2019-12-31T00:00:00Z",
-                "releaseDateStart" : "2010-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2019-12-31T00:00:00Z",
+                "releaseDateStart": "2010-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2010s"
+              "title": "2010s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2010s"
+          "tileShape": "landscape",
+          "title": "2010s"
         },
         {
-          "coverImageURL" : "https:\/\/btttr.cc\/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0\/cover\/movie\/trakt-pub%3Aacerider--best-films-2020-2024.png?name=2020s",
-          "dataSource" : {
-            "identifier" : "mdblist-public",
-            "kind" : "trackingService",
-            "parameters" : {
-
+          "coverImageURL": "https://btttr.cc/jcsxDkBAEEbhq8hfm0RENaXCJUQxGCIssjuqzd5dttJqXvPlRUxiclxrAPcwL7vR_Ywsk_ptVk80ajBatsMFqqu6ymkwlHBqAo7_H444xSkYrQYrusxcfF7CwHBIKb0/cover/movie/trakt-pub%3Aacerider--best-films-2020-2024.png?name=2020s",
+          "dataSource": {
+            "identifier": "mdblist-public",
+            "kind": "trackingService",
+            "parameters": {}
+          },
+          "filters": {
+            "contentType": "movies",
+            "countryCodes": [],
+            "genreIDs": [],
+            "networkIDs": [],
+            "originalLanguageCodes": [],
+            "productionCompanyIDs": [],
+            "streamingProviderIDs": []
+          },
+          "hidesTitle": true,
+          "id": "B2844D76-B948-4AA1-823E-84864824FFA6",
+          "query": {
+            "identifier": "snoak|popular-2020s-movies",
+            "kind": "curatedList",
+            "parameters": {
+              "listID": "91304"
             }
           },
-          "filters" : {
-            "contentType" : "movies",
-            "countryCodes" : [
-
-            ],
-            "genreIDs" : [
-
-            ],
-            "networkIDs" : [
-
-            ],
-            "originalLanguageCodes" : [
-
-            ],
-            "productionCompanyIDs" : [
-
-            ],
-            "streamingProviderIDs" : [
-
-            ]
-          },
-          "hidesTitle" : true,
-          "id" : "B2844D76-B948-4AA1-823E-84864824FFA6",
-          "query" : {
-            "identifier" : "snoak|popular-2020s-movies",
-            "kind" : "curatedList",
-            "parameters" : {
-              "listID" : "91304"
-            }
-          },
-          "sources" : [
+          "sources": [
             {
-              "dataSource" : {
-                "identifier" : "mdblist-public",
-                "kind" : "trackingService",
-                "parameters" : {
-
+              "dataSource": {
+                "identifier": "mdblist-public",
+                "kind": "trackingService",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1",
+              "query": {
+                "identifier": "snoak|popular-2020s-movies",
+                "kind": "curatedList",
+                "parameters": {
+                  "listID": "91304"
                 }
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "streamingProviderIDs" : [
-
-                ]
-              },
-              "id" : "source-1",
-              "query" : {
-                "identifier" : "snoak|popular-2020s-movies",
-                "kind" : "curatedList",
-                "parameters" : {
-                  "listID" : "91304"
-                }
-              },
-              "title" : "Popular 2020s Movies"
+              "title": "Popular 2020s Movies"
             },
             {
-              "dataSource" : {
-                "kind" : "preferredMetadata",
-                "parameters" : {
-
-                }
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
               },
-              "filters" : {
-                "contentType" : "movies",
-                "countryCodes" : [
-
-                ],
-                "genreIDs" : [
-
-                ],
-                "networkIDs" : [
-
-                ],
-                "originalLanguageCodes" : [
-
-                ],
-                "productionCompanyIDs" : [
-
-                ],
-                "releaseDateEnd" : "2029-12-31T00:00:00Z",
-                "releaseDateStart" : "2020-01-01T00:00:00Z",
-                "sortOrder" : "popularity",
-                "streamingProviderIDs" : [
-
-                ]
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "releaseDateEnd": "2029-12-31T00:00:00Z",
+                "releaseDateStart": "2020-01-01T00:00:00Z",
+                "sortOrder": "popularity",
+                "streamingProviderIDs": []
               },
-              "id" : "source-2",
-              "query" : {
-                "identifier" : "external-collection-discovery",
-                "kind" : "custom",
-                "parameters" : {
-
-                }
+              "id": "source-2",
+              "query": {
+                "kind": "popular",
+                "parameters": {}
               },
-              "title" : "2020s"
+              "title": "2020s"
             }
           ],
-          "tileShape" : "landscape",
-          "title" : "2020s"
+          "tileShape": "landscape",
+          "title": "2020s"
         }
       ],
-      "id" : "22D51C42-DFB0-5CA8-91B8-A684F44CE865",
-      "isEnabled" : true,
-      "position" : 7,
-      "presentation" : {
-        "enhancedPostersEnabled" : false,
-        "ratings" : {
-          "isEnabled" : false,
-          "providerIDs" : [
-
-          ]
+      "id": "22D51C42-DFB0-5CA8-91B8-A684F44CE865",
+      "isEnabled": true,
+      "position": 7,
+      "presentation": {
+        "enhancedPostersEnabled": false,
+        "ratings": {
+          "isEnabled": false,
+          "providerIDs": []
         },
-        "templateID" : "wide-backdrop-carousel"
+        "templateID": "wide-backdrop-carousel"
       },
-      "profileID" : "00000000-0000-0000-0000-000000000000",
-      "query" : {
-        "identifier" : "snoak|popular-1980s-movies",
-        "kind" : "curatedList",
-        "parameters" : {
-          "listID" : "91301"
-        }
+      "profileID": "00000000-0000-0000-0000-000000000000",
+      "query": {
+        "kind": "custom",
+        "identifier": "cedar.branch-group",
+        "parameters": {}
       },
-      "schemaVersion" : 2,
-      "title" : "‎Decades"
+      "schemaVersion": 2,
+      "title": "‎Decades"
     }
   ],
-  "bundleID" : "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
-  "createdAt" : "2026-10-11T14:18:02Z",
-  "formatIdentifier" : "app.cedar.bundle",
-  "generator" : {
-    "application" : "Cedar Creator"
+  "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
+  "createdAt": "2026-10-11T14:18:02Z",
+  "formatIdentifier": "app.cedar.bundle",
+  "generator": {
+    "application": "Cedar Creator"
   },
-  "kind" : "branches",
-  "schemaVersion" : 1,
-  "title" : "nuvio-collections-profile-1-2026-10-04"
+  "kind": "branches",
+  "schemaVersion": 1,
+  "title": "nuvio-collections-profile-1-2026-10-04"
 }
