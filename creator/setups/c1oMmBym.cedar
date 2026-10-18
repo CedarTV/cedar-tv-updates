@@ -246,7 +246,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Discover"
+      "title": "Discover"
     },
     {
       "dataSource": {
@@ -1543,7 +1543,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Franchises"
+      "title": "Franchises"
     },
     {
       "dataSource": {
@@ -2064,7 +2064,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Streaming"
+      "title": "Streaming"
     },
     {
       "dataSource": {
@@ -3577,7 +3577,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Genres"
+      "title": "Genres"
     },
     {
       "dataSource": {
@@ -3893,7 +3893,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Decades"
+      "title": "Decades"
     },
     {
       "dataSource": {
@@ -4648,7 +4648,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Directors"
+      "title": "Directors"
     }
   ],
   "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",

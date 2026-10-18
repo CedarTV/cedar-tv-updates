@@ -840,7 +840,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Collections"
+      "title": "Collections"
     },
     {
       "dataSource": {

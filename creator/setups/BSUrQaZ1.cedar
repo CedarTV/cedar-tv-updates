@@ -2469,7 +2469,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Discover"
+      "title": "Discover"
     },
     {
       "dataSource": {
@@ -3758,7 +3758,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Franchises"
+      "title": "Franchises"
     },
     {
       "dataSource": {
@@ -5774,7 +5774,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Genres"
+      "title": "Genres"
     },
     {
       "dataSource": {
@@ -6529,7 +6529,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Directors"
+      "title": "Directors"
     },
     {
       "dataSource": {
@@ -6965,7 +6965,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "‎Decades"
+      "title": "Decades"
     }
   ],
   "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
@@ -6976,5 +6976,5 @@
   },
   "kind": "branches",
   "schemaVersion": 1,
-  "title": "nuvio-collections-profile-1-2026-10-04"
+  "title": "Cinema & Television Hubs"
 }

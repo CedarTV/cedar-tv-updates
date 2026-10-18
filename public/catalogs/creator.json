@@ -470,7 +470,7 @@
       "groups": [
         {
           "id": "collection-source-award.b1724350",
-          "title": "Collections Sourced Awards Poster",
+          "title": "Awards",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -519,7 +519,7 @@
       "groups": [
         {
           "id": "directors-in-bw.804139cd",
-          "title": "Fusion Shelf",
+          "title": "Directors",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -573,7 +573,7 @@
       "groups": [
         {
           "id": "decades-rdnoni.dca67d87",
-          "title": "Collections Sourced Decades",
+          "title": "Decades",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -1535,7 +1535,7 @@
       "groups": [
         {
           "id": "genres-meow.a6cd3ccd",
-          "title": "Collections Sourced Genres Wide Mousa.A",
+          "title": "Genres",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -2103,7 +2103,7 @@
       "groups": [
         {
           "id": "b-e-s-t-better-enhanced-simple-tv.c95fb06a",
-          "title": "‎Discover",
+          "title": "Discover",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -2116,7 +2116,7 @@
         },
         {
           "id": "b-e-s-t-better-enhanced-simple-tv.a7a87b8e",
-          "title": "‎Franchises",
+          "title": "Franchises",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -2154,7 +2154,7 @@
         },
         {
           "id": "b-e-s-t-better-enhanced-simple-tv.42882fdb",
-          "title": "‎Streaming",
+          "title": "Streaming",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -2177,7 +2177,7 @@
         },
         {
           "id": "b-e-s-t-better-enhanced-simple-tv.d86a3ec1",
-          "title": "‎Genres",
+          "title": "Genres",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -2213,7 +2213,7 @@
         },
         {
           "id": "b-e-s-t-better-enhanced-simple-tv.75397d36",
-          "title": "‎Decades",
+          "title": "Decades",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -2228,7 +2228,7 @@
         },
         {
           "id": "b-e-s-t-better-enhanced-simple-tv.206d5b9d",
-          "title": "‎Directors",
+          "title": "Directors",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -2330,7 +2330,7 @@
       "groups": [
         {
           "id": "decades-in-color.5e0e19b1",
-          "title": "Collections Sourced Decades Poster Mousa.A",
+          "title": "Decades",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3459,7 +3459,7 @@
       "groups": [
         {
           "id": "no-nonsense-classic-tv-collection.4e08b28b",
-          "title": "‎Discover",
+          "title": "Discover",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3478,7 +3478,7 @@
         },
         {
           "id": "no-nonsense-classic-tv-collection.0d2be715",
-          "title": "‎Streaming Services",
+          "title": "Streaming Services",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3499,7 +3499,7 @@
         },
         {
           "id": "no-nonsense-classic-tv-collection.4b30f718",
-          "title": "‎Genres",
+          "title": "Genres",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3525,7 +3525,7 @@
         },
         {
           "id": "no-nonsense-classic-tv-collection.93053cca",
-          "title": "‎Decades",
+          "title": "Decades",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3540,7 +3540,7 @@
         },
         {
           "id": "no-nonsense-classic-tv-collection.c04c44a6",
-          "title": "‎Directors",
+          "title": "Directors",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3813,7 +3813,7 @@
         },
         {
           "id": "nuvio-collections-profile-1-2026-10-04.c85db2da",
-          "title": "‎Discover",
+          "title": "Discover",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3828,7 +3828,7 @@
         },
         {
           "id": "nuvio-collections-profile-1-2026-10-04.0c8620b3",
-          "title": "‎Franchises",
+          "title": "Franchises",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3859,7 +3859,7 @@
         },
         {
           "id": "nuvio-collections-profile-1-2026-10-04.ef442fed",
-          "title": "‎Genres",
+          "title": "Genres",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3888,7 +3888,7 @@
         },
         {
           "id": "nuvio-collections-profile-1-2026-10-04.e7bad2da",
-          "title": "‎Directors",
+          "title": "Directors",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3912,7 +3912,7 @@
         },
         {
           "id": "nuvio-collections-profile-1-2026-10-04.22d51c42",
-          "title": "‎Decades",
+          "title": "Decades",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -3957,7 +3957,7 @@
       "groups": [
         {
           "id": "simple-kids-profile.f41b440a",
-          "title": "‎Collections",
+          "title": "Collections",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -6125,7 +6125,7 @@
       "groups": [
         {
           "id": "fusion-genres-square-orangebyte-color.6e44a612",
-          "title": "Genres (Color)",
+          "title": "Genres",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -6182,7 +6182,7 @@
       "groups": [
         {
           "id": "fusion-genres-square-orangebyte-fusion.9fa933aa",
-          "title": "Genres (Fusion)",
+          "title": "Genres",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -6390,7 +6390,7 @@
       "groups": [
         {
           "id": "fusion-streaming-square-orangebyte-color.2a4d17af",
-          "title": "Streaming (Color)",
+          "title": "Streaming Services",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -6449,7 +6449,7 @@
       "groups": [
         {
           "id": "fusion-streaming-square-orangebyte-fusion.d460b260",
-          "title": "Streaming (Fusion)",
+          "title": "Streaming Services",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -6501,7 +6501,7 @@
       "groups": [
         {
           "id": "fusion-streaming-square-orangebyte.6739057e",
-          "title": "Streaming",
+          "title": "Streaming Services",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -6560,7 +6560,7 @@
       "groups": [
         {
           "id": "fusion-streaming-wide-rdnoni-color.63bb1222",
-          "title": "Streaming (Color)",
+          "title": "Streaming Services",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -6618,7 +6618,7 @@
       "groups": [
         {
           "id": "fusion-streaming-wide-rdnoni-tinted.2225ae42",
-          "title": "Streaming (Tinted)",
+          "title": "Streaming Services",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [
@@ -6671,7 +6671,7 @@
       "groups": [
         {
           "id": "fusion-streaming-wide-rdnoni-transparent.c2c19859",
-          "title": "Streaming (Transparent)",
+          "title": "Streaming Services",
           "kind": "group",
           "layout": "wide-backdrop-carousel",
           "rows": [

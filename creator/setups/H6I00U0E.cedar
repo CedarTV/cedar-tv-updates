@@ -294,7 +294,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "Collections Sourced Decades"
+      "title": "Decades"
     }
   ],
   "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",

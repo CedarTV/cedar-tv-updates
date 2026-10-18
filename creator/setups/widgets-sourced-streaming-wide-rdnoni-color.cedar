@@ -1103,7 +1103,7 @@
         "parameters": {}
       },
       "schemaVersion": 2,
-      "title": "Streaming (Color)"
+      "title": "Streaming Services"
     }
   ],
   "bundleID": "EEF15CF5-D85F-422E-8F05-E647A430BCAB",
@@ -1114,5 +1114,5 @@
   },
   "kind": "branches",
   "schemaVersion": 1,
-  "title": "Sourced-Streaming-Wide-Rdnoni-Color"
+  "title": "Streaming Services (Color)"
 }
