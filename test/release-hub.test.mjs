@@ -73,7 +73,7 @@ test("public Android previews keep their own current download and preserve stabl
   assert.equal(catalog.previews[0].status, "preview");
   assert.ok(hub.includes(catalog.previews[0].notesURL));
   assert.ok(page.includes('id="android-preview"'));
-  assert.match(page, /Current preview/);
+  assert.match(page, /Current build/);
   assert.match(page, /Earlier preview/);
   assert.match(page, /Android TV stable release/);
   assert.ok(page.indexOf(`id="version-${preview.versionName.replaceAll(".", "-")}-build-${preview.versionCode}"`)
@@ -82,7 +82,8 @@ test("public Android previews keep their own current download and preserve stabl
   for (const release of source.previews) {
     assert.equal(release.status, "preview");
     assert.ok(page.includes(`id="version-${release.version.replaceAll(".", "-")}-build-${release.build}"`));
-    assert.ok(page.includes(`releases/tag/android-preview-${release.version}`));
+    const tag = release.version.includes("-preview.") ? `android-preview-${release.version}` : `android-tv-${release.version}`;
+    assert.ok(page.includes(`releases/tag/${tag}`));
     assert.ok(archive.includes(`${release.version} · build ${release.build}`));
     await access(release.notes);
   }

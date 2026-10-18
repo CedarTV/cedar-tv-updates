@@ -82,7 +82,7 @@ function validateRelease(source, expectedPlatform, label) {
   const status = requireText(source.status, `${label} status`, 40);
   const summary = requireText(source.summary, `${label} summary`, 280);
   const versionPattern = expectedPlatform === "android-tv" && status === "preview"
-    ? /^\d+\.\d+\.\d+-preview\.[1-9]\d*$/
+    ? /^\d+\.\d+\.\d+(-preview\.[1-9]\d*)?$/
     : /^\d+\.\d+\.\d+$/;
   if (!versionPattern.test(version)) fail(`${label} version must match its release channel`);
   if (!/^[1-9]\d*$/.test(build)) fail(`${label} build must be a positive integer string`);
@@ -224,8 +224,14 @@ if (new Set(androidPreviews.map((release) => release.version)).size !== androidP
   || new Set(androidPreviews.map((release) => release.build)).size !== androidPreviews.length) {
   fail("Android preview versions and builds must be unique within the preview channel");
 }
-const previewReleaseURL = (release) => `https://github.com/CedarTV/cedar-tv-updates/releases/tag/android-preview-${release.version}`;
-const previewAPKURL = (release) => `https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-${release.version}/Cedar-Preview-${release.version}.apk`;
+// Builds named 1.3.0-preview.N kept the Preview tag and file names; later builds on this
+// channel use normal version names with android-tv-<version> tags and Cedar-TV APKs.
+const isPreviewName = (release) => release.version.includes("-preview.");
+const previewTag = (release) => isPreviewName(release) ? `android-preview-${release.version}` : `android-tv-${release.version}`;
+const previewAPKName = (release) => `${isPreviewName(release) ? "Cedar-Preview" : "Cedar-TV"}-${release.version}.apk`;
+const previewDownloadLabel = (release) => `Download ${isPreviewName(release) ? "Preview" : "Cedar"} ${release.version}`;
+const previewReleaseURL = (release) => `https://github.com/CedarTV/cedar-tv-updates/releases/tag/${previewTag(release)}`;
+const previewAPKURL = (release) => `https://github.com/CedarTV/cedar-tv-updates/releases/download/${previewTag(release)}/${previewAPKName(release)}`;
 const previewNotesURL = (release) => `${publicBaseURL}/android-tv/#version-${release.version.replaceAll(".", "-")}-build-${release.build}`;
 const currentPreview = androidPreviews[0];
 if (currentPreview) {
@@ -239,11 +245,11 @@ if (currentPreview) {
 }
 const previewCallout = currentPreview ? `
         <section class="policy-callout" aria-labelledby="android-preview-title">
-          <p class="eyebrow">Android TV public preview</p>
-          <h2 id="android-preview-title">Cedar Preview ${escapeHTML(currentPreview.version)}</h2>
+          <p class="eyebrow">New Cedar app for Android TV</p>
+          <h2 id="android-preview-title">Cedar ${escapeHTML(currentPreview.version)}</h2>
           <p>${escapeHTML(currentPreview.summary)}</p>
-          <p>Cedar Preview installs alongside the original Cedar app and has its own in-app updates.</p>
-          <a class="inline-document-link" href="${previewNotesURL(currentPreview)}">Preview notes and installation</a>
+          <p>The new Cedar app installs alongside the original Cedar app and has its own in-app updates.</p>
+          <a class="inline-document-link" href="${previewNotesURL(currentPreview)}">Release notes and installation</a>
         </section>` : "";
 
 const cards = currentReleases.map((release) => `          <article class="release-card">
@@ -264,7 +270,7 @@ const indexPage = pageShell({
           <h1>One release view. Every Cedar platform.</h1>
           <p>See the current version, build number, availability status, and notes for Android TV, iPhone, iPad, Apple TV, and Mac.</p>
           <p><a href="/cedar-tv-updates/releases/roundup-2026-09-23.html">September 23 roundup: new features, critical fixes and Android parity progress</a>.</p>
-          <p><a href="/cedar-tv-updates/releases/changelog-history.md">Download the complete recorded build history</a>. Android TV, Google TV and Fire TV share the stable release line. Cedar Preview is listed separately. Skipped build numbers are not separate releases.</p>
+          <p><a href="/cedar-tv-updates/releases/changelog-history.md">Download the complete recorded build history</a>. Android TV, Google TV and Fire TV share the stable release line. The new Cedar app is listed separately. Skipped build numbers are not separate releases.</p>
         </header>
 
         <section class="release-grid" aria-label="Current Cedar releases">
@@ -290,14 +296,14 @@ for (const release of androidPreviews) {
   const notes = renderMarkdown(await readFile(resolve(repositoryRoot, release.notes), "utf8"), `Cedar Android TV ${release.version} · build ${release.build}`);
   const id = `version-${release.version.replaceAll(".", "-")}-build-${release.build}`;
   const actions = `<div class="apple-actions">
-        <a class="inline-action" href="${previewAPKURL(release)}">Download Preview ${escapeHTML(release.version)}</a>
+        <a class="inline-action" href="${previewAPKURL(release)}">${escapeHTML(previewDownloadLabel(release))}</a>
         <a class="secondary-action" href="${previewReleaseURL(release)}">GitHub release notes</a>
         <a class="secondary-action" href="${projectBasePath}/setup/">Browser setup</a>
       </div>`;
   if (release !== currentPreview) {
     previewEntries.push(renderCollapsedRelease({
       id,
-      eyebrow: "Earlier preview",
+      eyebrow: isPreviewName(release) ? "Earlier preview" : "Earlier build",
       heading: `Cedar Android TV ${escapeHTML(release.version)} · build ${release.build}`,
       summary: escapeHTML(release.summary),
       metadata: releaseMetadata(release),
@@ -308,7 +314,7 @@ for (const release of androidPreviews) {
   }
   previewEntries.push(`<article class="release-entry" id="${id}">
     <header>
-      <p class="eyebrow">Current preview</p>
+      <p class="eyebrow">Current build</p>
       <h2>Cedar Android TV ${escapeHTML(release.version)} · build ${release.build}</h2>
       <p class="release-summary">${escapeHTML(release.summary)}</p>
       ${releaseMetadata(release)}
@@ -319,10 +325,10 @@ for (const release of androidPreviews) {
 }
 const previewSection = previewEntries.length ? `
         <section id="android-preview" aria-labelledby="preview-heading">
-          <h2 id="preview-heading">Cedar Preview for Android TV</h2>
-          <p>Public previews install alongside the original Cedar app. Existing Cedar Preview users can update from Settings → Software Update. The original Cedar stable release remains available below.</p>
+          <h2 id="preview-heading">New Cedar app for Android TV</h2>
+          <p>The new Cedar app installs alongside the original Cedar app. Existing users of the new app, including Cedar Preview installs, can update from Settings → Software Update. The original Cedar stable release remains available below.</p>
           ${previewEntries[0] ?? ""}${previewEntries.length > 1 ? `
-          ${renderReleaseHistoryHeading("Earlier previews")}
+          ${renderReleaseHistoryHeading("Earlier builds")}
           ${previewEntries.slice(1).join("\n")}` : ""}
         </section>` : "";
 const androidHistory = [];
@@ -377,7 +383,7 @@ const publicCatalog = {
   previews: currentPreview ? [{
     id: "android-tv-preview",
     platform: "android-tv",
-    name: "Cedar Preview for Android TV",
+    name: "New Cedar app for Android TV",
     version: currentPreview.version,
     build: currentPreview.build,
     date: currentPreview.date,

@@ -3458,6 +3458,28 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Android TV, Google TV and Fire TV
 
+### 1.3.0 · build 9 · 2026-10-17 · public release
+
+October 17, 2026 · Public release for Android TV and Google TV.
+
+- Cedar now uses normal version numbers, and the app appears as Cedar on your Home screen instead of Cedar Preview. It updates in place, so your profiles and settings stay as they are.
+- Browse the new Explore tab for films by celebrated directors, award winners and genre traditions.
+- Hold left or right on the playback timeline to scrub, speeding up the longer you hold. A single click still skips by your seek interval.
+- Watch Cedar Home DVR recordings while they are still recording, with the timeline growing as the programme continues.
+- Record a whole series from Live TV, and pick channels for Multiview from a dedicated channel picker. Expanding a Multiview tile no longer restarts its stream.
+- Live TV switches to the healthiest backup feed for a channel when the current one fails.
+- Jellyfin Live TV keeps the channel categories from your playlist.
+- Turn up quiet dialogue with Audio Boost: Low, Medium or High.
+- Subtitles in Cyrillic, Greek, Hebrew, Arabic, Thai and East Asian scripts display correctly even when the file does not say which text encoding it uses.
+- Series pages show the episode you are up to, such as S01E03, beside Resume or Play Next.
+- Choose your own colours with the Custom theme, and new edge-tab poster labels match Cedar on Apple TV.
+- Cedar Link and browser setup have been retired. Cedar removes the leftover Cedar Link sign-in from your TV; use a .cedar setup file to move profiles between devices.
+
+Update from Settings → Software Update, or install the APK over your current Cedar Preview or Cedar app from this release line. The original Cedar Android app (version 1.2.85) uses a separate package and does not receive this update.
+
+[Install Cedar 1.3.0](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.3.0/Cedar-TV-1.3.0.apk) · [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-build-9) · [Teletext decoder source](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.3.0/Cedar-Teletext-Source-1.3.0.tar.gz)
+
+
 ### 1.3.0-preview.8 · build 8 · 2026-10-11 · public preview
 
 October 11, 2026 · Public Preview for Android TV and Google TV.

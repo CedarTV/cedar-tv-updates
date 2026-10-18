@@ -4,14 +4,14 @@
     {
       "id": "android-tv-preview",
       "platform": "android-tv",
-      "name": "Cedar Preview for Android TV",
-      "version": "1.3.0-preview.8",
-      "build": "8",
-      "date": "2026-10-11",
+      "name": "New Cedar app for Android TV",
+      "version": "1.3.0",
+      "build": "9",
+      "date": "2026-10-17",
       "status": "preview",
-      "summary": "Quick Actions on Home, Live TV Channel Details and Other Sources, tvOS-style Search and Settings search, fuller artwork, and fixed profile copies from Apple devices.",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-preview-8-build-8",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-preview-1.3.0-preview.8/Cedar-Preview-1.3.0-preview.8.apk"
+      "summary": "Normal version numbers and the Cedar app name, a new Explore tab, hold-to-scrub, watching recordings in progress, series recording, Audio Boost and automatic backup feeds.",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-build-9",
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.3.0/Cedar-TV-1.3.0.apk"
     }
   ],
   "platforms": [
