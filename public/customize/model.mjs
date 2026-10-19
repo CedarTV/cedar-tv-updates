@@ -1,4 +1,6 @@
-// Studio reads other apps' collection JSON and writes Cedar's native .cedar Branches file.
+// Studio reads other apps' collection JSON and writes Cedar's native .cedar files: a Branches file
+// to share, or a sealed profile file that keeps the owner's Tobacco Ties.
+import {branchesFile,profileFile,cedarDate,findTobaccoTies,addonFamily} from '../shared/cedar-file.mjs';
 export const MAX_BYTES = 10 * 1024 * 1024;
 export const deviceFamilies = ['phone','tablet','desktop','television'];
 export const deviceNames = {shared:'All devices',phone:'iPhone',tablet:'iPad',desktop:'Mac',television:'TV'};
@@ -70,7 +72,7 @@ export function parseImport(input){
  const ordered=[];for(const entry of config.home_order||[]){const row=byExternal.get(`${entry.kind}:${entry.id}`);if(row&&!ordered.includes(row))ordered.push(row);}for(const row of rows)if(!ordered.includes(row))ordered.push(row);
  const draft=validateDraft({version:2,title:'Imported Home',rows:ordered});
  for(const r of draft.rows){const pairs=r.kind==='branch'?[[r.title,r.source,true]]:r.branches.flatMap(b=>b.sources.map(s=>[`${r.title} / ${b.title}`,s,false]));for(const [path,s,direct] of pairs){const problem=sourceProblem(s,direct);if(problem)issues.push(`${path} / ${s.title}: ${problem}`);}if(r.kind==='group'&&r.branches.some(b=>b.sources.length===0))issues.push(`${r.title}: branches without sources cannot be exported.`);}
- return {draft,issues,format:data?.config?'Nuvio profile export':'Collection JSON'};
+ return {draft,issues,format:data?.config?'Nuvio profile export':'Collection JSON',ties:findTobaccoTies(data)};
 }
 export function mergeImport(current,incoming,mode='append',selectedIDs=incoming.rows.map(r=>r.id)){
  const next=mode==='replace'?{version:2,title:current.title,bundleID:current.bundleID,rows:[]}:validateDraft(current);const chosen=validateDraft(incoming).rows.filter(r=>selectedIDs.includes(r.id));
@@ -117,11 +119,14 @@ function platformConfiguration(row){const shared=row.deviceLayout.shared,overrid
  for(const family of deviceFamilies){const a=appearanceFor(row,family),o={};if(a.enabled)platforms.push(family);if(a.rowStyle!==shared.rowStyle)o.presentation=presentation(templates[a.rowStyle]);if(a.cardStyle!=='backdrop')o.leafCardStyle=a.cardStyle;if(a.browseLayout!==shared.browseLayout)o.leafBrowseLayout=a.browseLayout;if(Object.keys(o).length)overrides[family]=o;}
  const config={overrides};if(platforms.length<deviceFamilies.length)config.platforms=platforms;return platforms.length&&(config.platforms||Object.keys(overrides).length)?config:platforms.length?null:false;}
 const branch=(id,title,base,template,folderOptions=[])=>({id,profileID:'00000000-0000-0000-0000-000000000000',schemaVersion:2,title,titleMode:'custom',dataSource:base.dataSource,query:base.query,defaultFilters:base.filters,presentation:presentation(template),folderOptions,position:0,isEnabled:true});
-export function exportCedar(value,now=new Date()){
- const draft=validateDraft(value),bundleID=draft.bundleID||uid().toUpperCase(),branches=[],issues=[];let groups=0;
+/** Every enabled row as Cedar Branches. `tieFor(source)` returns the profile file's Tobacco Tie for
+ an add-on source, so a profile export keeps rows a Branches file has to leave out. */
+function cedarBranches(draft,bundleID,tieFor=()=>null){
+ const branches=[],issues=[];let groups=0;
+ const convert=(s,direct)=>{const tie=s.provider==='addon'?tieFor(s):null;if(tie)return tieSource(s,tie);const p=sourceProblem(s,direct);return p?{problem:p}:cedarSource(s);};
  for(const row of draft.rows){if(!row.enabled)continue;const id=stableUUID(bundleID,row.id);
   if(row.kind==='group'){
-   const folders=[];for(const b of row.branches){if(!b.enabled)continue;const sources=[];for(const s of b.sources){if(!s.enabled)continue;const p=sourceProblem(s);if(p){issues.push(`${row.title} / ${b.title} / ${s.title}: ${p}`);continue;}sources.push({id:s.id,title:s.title,...cedarSource(s)});}
+   const folders=[];for(const b of row.branches){if(!b.enabled)continue;const sources=[];for(const s of b.sources){if(!s.enabled)continue;const c=convert(s,false);if(c.problem){issues.push(`${row.title} / ${b.title} / ${s.title}: ${c.problem}`);continue;}sources.push({id:s.id,title:s.title,...c});}
     if(!sources.length){issues.push(`${row.title} / ${b.title}: no compatible enabled sources.`);continue;}
     const folder={id:b.id,title:b.title,dataSource:sources[0].dataSource,query:sources[0].query,filters:sources[0].filters,sources,tileShape:b.tileShape||'landscape',hidesTitle:false};const cover=b.customCoverImageUrl||b.coverImageUrl;if(cover)folder.coverImageURL=cover;if(b.heroBackdropUrl)folder.heroBackdropURL=b.heroBackdropUrl;if(b.focusGifEnabled&&b.focusGifUrl)folder.focusedCoverImageURL=b.focusGifUrl;if(b.titleLogoUrl)folder.titleLogoURL=b.titleLogoUrl;folders.push(folder);}
    if(!folders.length){issues.push(`${row.title}: no compatible enabled branches.`);continue;}
@@ -129,11 +134,37 @@ export function exportCedar(value,now=new Date()){
    const shared=row.deviceLayout.shared,base={dataSource:{kind:'custom',identifier:'cedar.branch-group',parameters:{'cedar.home.displaysFolderCards':'true','cedar.home.folderRole':'folder','cedar.home.leafBrowseLayout':shared.browseLayout}},query:{kind:'custom',identifier:'cedar.branch-group',parameters:{}},filters:empty(groupContent(folders.flatMap(f=>f.sources)))};
    const b=branch(id,row.title,base,templates[shared.rowStyle],folders);if(platforms)b.platformConfiguration=platforms;branches.push(b);groups++;
   }else{
-   const s=row.source;if(!s.enabled)continue;const problem=sourceProblem(s,true);if(problem){issues.push(`${row.title}: ${problem}`);continue;}branches.push(branch(id,row.title,cedarSource(s),'poster-carousel'));
+   const s=row.source;if(!s.enabled)continue;const c=convert(s,true);if(c.problem){issues.push(`${row.title}: ${c.problem}`);continue;}branches.push(branch(id,row.title,c,'poster-carousel'));
   }
  }
  if(!branches.length)throw Error('Enable at least one compatible branch or source before exporting.');
- const document={formatIdentifier:'app.cedar.bundle',schemaVersion:1,kind:'branches',bundleID,title:draft.title,createdAt:now.toISOString().replace(/\.\d{3}Z$/,'Z'),generator:{application:'Cedar Studio'},branches:branches.map((b,position)=>({...b,position}))};
+ return {branches,issues,groups};
+}
+const generator={application:'Cedar Studio'};
+export function exportCedar(value,now=new Date()){
+ const draft=validateDraft(value),bundleID=draft.bundleID||uid().toUpperCase();
+ const {branches,issues,groups}=cedarBranches(draft,bundleID);
+ const document=branchesFile({bundleID,title:draft.title,createdAt:cedarDate(now),generator,branches});
  return {document,issues,bundleID,branchCount:branches.length-groups,groupCount:groups};
+}
+/** A row that reads one catalog of a Tobacco Tie in the same profile file (CEDAR_FILE_FORMAT.md §9.2). */
+function tieSource(s,tie){const type=s.type||(s.mediaType==='tv'?'series':s.mediaType)||'movie';return {dataSource:{kind:'manifestAddon',identifier:tie.id.toLowerCase(),parameters:{}},query:{kind:'addonCatalog',identifier:`${tie.manifestID}|${type}|${s.catalogId}`,parameters:{}},filters:cedarFilters(cedarContent(type))};}
+/**
+ * The Home as a `.cedar` profile file, optionally with the owner's Tobacco Ties. Ties hold the
+ * owner's own addresses, so a file with any tie is always sealed with `passphrase`. Rows from an
+ * add-on whose manifest ID (or add-on family) matches a tie read that tie instead of being left out.
+ * `ties`: [{url, name?, manifestID?}].
+ */
+export async function exportCedarProfile(value,{passphrase='',ties=[],now=new Date()}={}){
+ const draft=validateDraft(value),bundleID=draft.bundleID||uid().toUpperCase();
+ const fileTies=ties.map(t=>({...t,id:stableUUID(bundleID,`tie.${t.url}`)}));
+ const byID=new Map(),byFamily=new Map();for(const t of fileTies)if(t.manifestID){byID.set(t.manifestID.toLowerCase(),t);if(!byFamily.has(addonFamily(t.manifestID)))byFamily.set(addonFamily(t.manifestID),t);}
+ const used=new Set();const tieFor=s=>{if(!s.addonId||!s.catalogId)return null;const t=byID.get(s.addonId.toLowerCase())||byFamily.get(addonFamily(s.addonId));if(t)used.add(t.id);return t||null;};
+ const {branches,issues,groups}=cedarBranches(draft,bundleID,tieFor);
+ const payload={home:{branches:branches.map((b,position)=>({...b,position})),shelves:[]}};
+ if(fileTies.length)payload.tobaccoTies={ties:fileTies.map(t=>({id:t.id,url:t.url,...(t.name?{name:t.name}:{}),enabledCatalogIDs:[]})),settings:[]};
+ const document=await profileFile({bundleID,title:draft.title,createdAt:cedarDate(now),generator,payload,passphrase});
+ const linkedRows=branches.flatMap(b=>[b,...b.folderOptions.flatMap(f=>f.sources||[])]).filter(x=>x.dataSource?.kind==='manifestAddon').length;
+ return {document,issues,bundleID,branchCount:branches.length-groups,groupCount:groups,tieCount:fileTies.length,linkedRows,unusedTies:fileTies.filter(t=>!used.has(t.id)).length};
 }
 export function cedarFileName(title){return `${String(title||'').replace(/[^A-Za-z0-9 _-]+/g,'').trim().replace(/\s+/g,'-')||'Cedar-Studio-Home'}.cedar`;}

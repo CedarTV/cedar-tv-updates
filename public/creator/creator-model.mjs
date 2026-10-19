@@ -1,4 +1,5 @@
 // Pure Creator logic shared by the page, the catalog build script and tests. No DOM access.
+import { branchesFile } from "../shared/cedar-file.mjs";
 export const siteBase = "https://cedartv.github.io/cedar-tv-updates/";
 export const appCartBase = "cedar://creator/cart";
 // Every Creator file shares one bundle ID, so Cedar namespaces a branch the same way whether it
@@ -127,19 +128,16 @@ export function parseCart(search, knownItemIDs = null) {
 // MARK: Files
 
 export function makeBundle({ title, createdAt, branches, avatar = null, credits = null }) {
-  const bundle = {
-    formatIdentifier: "app.cedar.bundle",
-    schemaVersion: 1,
-    kind: "branches",
+  // `credits` is Creator's attribution block (CEDAR_FILE_FORMAT.md §3), kept with every item.
+  return branchesFile({
     bundleID: creatorBundleID,
     title,
     createdAt,
     generator: { application: "Cedar Creator" },
-    branches: branches.map((branch, position) => ({ ...branch, position })),
-  };
-  if (avatar) bundle.avatarURL = avatar;
-  if (credits) bundle.credits = credits;
-  return bundle;
+    branches,
+    avatarURL: avatar,
+    extra: credits ? { credits } : {},
+  });
 }
 
 /// Combines downloaded item files in cart order. A branch that appears twice is kept once.
