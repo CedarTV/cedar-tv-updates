@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {bundleHeader, branchesFile, profileFile, openProfileFile, seal, open, findTobaccoTies, parseTobaccoTieLinks, addonFamily, CATEGORIES, SENSITIVE} from '../public/shared/cedar-file.mjs';
-import {parseImport, exportCedar, exportCedarProfile} from '../public/customize/model.mjs';
+import {parseImport, exportCedar, exportCedarProfile} from '../public/creator/home-model.mjs';
 
 const bundleID = '6F1C2B8A-4E2D-4F0B-9C3A-1D2E3F405162';
 const generator = {application: 'Test'};

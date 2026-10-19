@@ -1,6 +1,8 @@
-// Studio reads other apps' collection JSON and writes Cedar's native .cedar files: a Branches file
-// to share, or a sealed profile file that keeps the owner's Tobacco Ties.
+// Creator's Home: setups picked from the catalog plus the person's own Branches, read from other
+// apps' collection JSON or built by hand. It writes Cedar's native .cedar files: a Branches file to
+// share, or a sealed profile file that keeps the owner's Tobacco Ties.
 import {branchesFile,profileFile,cedarDate,findTobaccoTies,addonFamily} from '../shared/cedar-file.mjs';
+import {creatorBundleID,maximumCartItems,isItemID,isAvatarPath,avatarURL,setupOf} from './creator-model.mjs';
 export const MAX_BYTES = 10 * 1024 * 1024;
 export const deviceFamilies = ['phone','tablet','desktop','television'];
 export const deviceNames = {shared:'All devices',phone:'iPhone',tablet:'iPad',desktop:'Mac',television:'TV'};
@@ -49,23 +51,31 @@ export function makeChild(title='New branch'){return {id:uid(),title,enabled:tru
 export const presets=[{title:'Trending movies',kind:'TRENDING',media:'movie'},{title:'Trending TV shows',kind:'TRENDING',media:'tv'},{title:'Popular movies',kind:'POPULAR',media:'movie'},{title:'Top rated movies',kind:'TOP_RATED',media:'movie'},{title:'Science fiction',kind:'DISCOVER',media:'movie',genre:'878'},{title:'Documentaries',kind:'DISCOVER',media:'movie',genre:'99'},{title:'Family movies',kind:'DISCOVER',media:'movie',genre:'10751'}];
 export function newDraft(){return {version:2,title:'My Home',rows:[makeBranch('Trending movies'),makeBranch('Popular movies','POPULAR'),makeBranch('Top rated movies','TOP_RATED')]};}
 function cleanChild(v){if(!obj(v)||!Array.isArray(v.sources)||v.sources.length>1000)throw Error('Invalid branch sources.');const b={id:text(v.id,uid()),title:name(v.title,'Untitled branch'),enabled:v.enabled!==false,sources:v.sources.map(sanitizeSource)};for(const k of ['coverImageUrl','customCoverImageUrl','heroBackdropUrl','focusGifUrl','titleLogoUrl']){const u=safeArtworkURL(v[k]);if(u)b[k]=u;}if(typeof v.focusGifEnabled==='boolean')b.focusGifEnabled=v.focusGifEnabled;if(['landscape','poster','square'].includes(String(v.tileShape).toLowerCase()))b.tileShape=v.tileShape.toLowerCase();return b;}
+/** A setup or one of its groups from the Creator catalog. Its Branches are exported exactly as published. */
+function cleanPick(v){if(!obj(v)||!['setup','group'].includes(v.type)||!isItemID(v.id)||(v.type==='group')!==v.id.includes('.'))throw Error('Invalid Creator pick.');return {type:v.type,id:v.id};}
+export function makePick(item,title){return {id:`pick.${item.id}`,kind:'pick',title:name(title,'Creator setup'),enabled:true,item:cleanPick(item)};}
+/** The picks as a Creator cart, so a Home made only of enabled picks can still be shared as a link. */
+export function draftCart(draft){if(!draft.rows.length||draft.rows.some(r=>r.kind!=='pick'||!r.enabled))return null;const cart=draft.rows.map(r=>({...r.item}));if(draft.avatar)cart.push({type:'avatar',id:draft.avatar});return cart;}
+/** Adds a catalog pick. A whole setup replaces any of its groups already on Home; a group already inside a picked setup is not added again. */
+export function addPick(draft,item,title){const picks=draft.rows.filter(r=>r.kind==='pick');if(picks.some(r=>r.item.id===item.id))return 'duplicate';if(item.type==='group'&&picks.some(r=>r.item.type==='setup'&&r.item.id===setupOf(item.id)))return 'included';const row=makePick(item,title);if(item.type==='setup'){const isGroupOf=r=>r.kind==='pick'&&r.item.type==='group'&&setupOf(r.item.id)===item.id;const first=draft.rows.findIndex(isGroupOf);if(first>=0){draft.rows=draft.rows.flatMap((r,i)=>i===first?[row]:isGroupOf(r)?[]:[r]);return 'replaced';}}if(picks.length>=maximumCartItems)return 'full';draft.rows.push(row);return 'added';}
+export function pickState(draft,item){const picks=draft.rows.filter(r=>r.kind==='pick');if(picks.some(r=>r.item.id===item.id))return 'added';if(item.type==='group'&&picks.some(r=>r.item.type==='setup'&&r.item.id===setupOf(item.id)))return 'included';return 'available';}
 export function validateDraft(v){
- if(!obj(v)||v.version!==2||!Array.isArray(v.rows)||v.rows.length>1000)throw Error('Choose a supported collection or Cedar Studio draft.');
- let total=0;const ids=new Set();const rows=v.rows.map(r=>{if(!obj(r)||!['branch','group'].includes(r.kind))throw Error('Invalid Home row.');const row={id:text(r.id,uid()),kind:r.kind,title:name(r.title,'Untitled branch'),enabled:r.enabled!==false};if(ids.has(row.id))throw Error('The draft contains duplicate Home row IDs.');ids.add(row.id);if(r.kind==='branch'){row.source=sanitizeSource(r.source);total++;}else{if(!Array.isArray(r.branches)||r.branches.length>2000)throw Error('Too many branches in this group.');row.branches=r.branches.map(cleanChild);row.deviceLayout=validateDeviceLayout(r.deviceLayout||newDeviceLayout());const childIDs=new Set();for(const b of row.branches){if(childIDs.has(b.id))throw Error('The group contains duplicate branch IDs.');childIDs.add(b.id);const sourceIDs=new Set();for(const s of b.sources){if(sourceIDs.has(s.id))s.id=uid();sourceIDs.add(s.id);}total+=b.sources.length;}}return row;});
- if(total>15000)throw Error('Choose a collection with fewer than 15,000 sources.');const draft={version:2,title:name(v.title,'My Home'),rows};if(typeof v.bundleID==='string'&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v.bundleID))draft.bundleID=v.bundleID.toUpperCase();return draft;
+ if(!obj(v)||v.version!==2||!Array.isArray(v.rows)||v.rows.length>1000)throw Error('Choose a supported collection or saved Creator draft.');
+ let total=0;const ids=new Set();const rows=v.rows.map(r=>{if(!obj(r)||!['branch','group','pick'].includes(r.kind))throw Error('Invalid Home row.');const row={id:text(r.id,uid()),kind:r.kind,title:name(r.title,'Untitled branch'),enabled:r.enabled!==false};if(ids.has(row.id))throw Error('The draft contains duplicate Home row IDs.');ids.add(row.id);if(r.kind==='branch'){row.source=sanitizeSource(r.source);total++;}else if(r.kind==='pick'){row.item=cleanPick(r.item);}else{if(!Array.isArray(r.branches)||r.branches.length>2000)throw Error('Too many branches in this group.');row.branches=r.branches.map(cleanChild);row.deviceLayout=validateDeviceLayout(r.deviceLayout||newDeviceLayout());const childIDs=new Set();for(const b of row.branches){if(childIDs.has(b.id))throw Error('The group contains duplicate branch IDs.');childIDs.add(b.id);const sourceIDs=new Set();for(const s of b.sources){if(sourceIDs.has(s.id))s.id=uid();sourceIDs.add(s.id);}total+=b.sources.length;}}return row;});
+ if(total>15000)throw Error('Choose a collection with fewer than 15,000 sources.');const draft={version:2,title:name(v.title,'My Home'),rows};if(isAvatarPath(v.avatar))draft.avatar=v.avatar;if(typeof v.bundleID==='string'&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v.bundleID))draft.bundleID=v.bundleID.toUpperCase();return draft;
 }
 const builtin={trending_movies:'TRENDING',trending_series:'TRENDING',trending_shows:'TRENDING',popular_movies:'POPULAR',popular_series:'POPULAR',popular_shows:'POPULAR',top_rated_movies:'TOP_RATED',toprated_movies:'TOP_RATED',top_rated_series:'TOP_RATED',top_rated_shows:'TOP_RATED',toprated_series:'TOP_RATED',toprated_shows:'TOP_RATED',upcoming_movies:'UPCOMING',now_playing_movies:'NOW_PLAYING',nowplaying_movies:'NOW_PLAYING',airing_today_series:'AIRING_TODAY',airing_today_shows:'AIRING_TODAY',on_the_air_series:'ON_THE_AIR',on_the_air_shows:'ON_THE_AIR'};
 function resolveCatalog(ref,config){const id=ref.catalogId||'',type=ref.type||(/series|shows/.test(id)?'series':'movie'),label=config.catalog_name_overrides?.[id]||config.custom_lists?.find(l=>l.id===id)?.label||id.replaceAll('_',' ');const common={id:`catalog:${id}`,title:label,mediaType:type};const discover=config.discover_catalogs?.[id];if(discover)return {...common,provider:'tmdb',tmdbSourceType:'DISCOVER',filters:discover.filters,sortBy:discover.sort_by};if(builtin[id])return {...common,provider:'tmdb',tmdbSourceType:builtin[id]};const list=config.custom_lists?.find(l=>l.id===id);if(list){const n=Number(id.match(/^(?:tmdb|trakt)_list_(\d+)/)?.[1]);return {...common,provider:list.provider,mediaType:list.kind||type,...(list.provider==='tmdb'?{tmdbSourceType:'LIST',tmdbId:n}:{traktListId:n})};}return {...ref,title:label,provider:ref.provider||'addon'};}
 export function parseImport(input){
  const serialized=typeof input==='string'?input:JSON.stringify(input);if(new TextEncoder().encode(serialized).length>MAX_BYTES)throw Error('Choose a JSON file smaller than 10 MB.');
  let data;try{data=typeof input==='string'?JSON.parse(input):input;}catch{throw Error('This is not valid JSON. Your current Home has not changed.');}
- if(data?.version===2)return {draft:validateDraft(data),issues:[],format:'Cedar Studio draft'};
+ if(data?.version===2)return {draft:validateDraft(data),issues:[],format:'Saved Creator draft'};
  if(data?.version===1&&Array.isArray(data.folders)){
-  const g=makeGroup(name(data.title,'Imported group'));g.id=text(data.id,uid());g.deviceLayout=validateDeviceLayout(data.deviceLayout||newDeviceLayout());g.branches=data.folders.map(f=>({id:text(f.id,uid()),title:name(f.title,'Untitled branch'),enabled:f.enabled!==false,sources:[sanitizeSource({title:f.title,provider:'tmdb',tmdbSourceType:f.kind,mediaType:f.media,tmdbId:f.tmdbID,filters:f.genre?{withGenres:f.genre}:{}})]}));return {draft:validateDraft({version:2,title:'My Home',rows:[g]}),issues:[],format:'Earlier Studio draft'};
+  const g=makeGroup(name(data.title,'Imported group'));g.id=text(data.id,uid());g.deviceLayout=validateDeviceLayout(data.deviceLayout||newDeviceLayout());g.branches=data.folders.map(f=>({id:text(f.id,uid()),title:name(f.title,'Untitled branch'),enabled:f.enabled!==false,sources:[sanitizeSource({title:f.title,provider:'tmdb',tmdbSourceType:f.kind,mediaType:f.media,tmdbId:f.tmdbID,filters:f.genre?{withGenres:f.genre}:{}})]}));return {draft:validateDraft({version:2,title:'My Home',rows:[g]}),issues:[],format:'Earlier saved draft'};
  }
- if(data?.formatIdentifier==='app.cedar.home-branches'||data?.formatIdentifier==='app.cedar.bundle')throw Error('This is already a Cedar file. Open it in Cedar. To keep editing in Studio, open a saved Studio draft instead.');
+ if(data?.formatIdentifier==='app.cedar.home-branches'||data?.formatIdentifier==='app.cedar.bundle')throw Error('This is already a Cedar file. Open it in Cedar. To keep editing here, open a saved Creator draft instead.');
  const config=obj(data?.config)?data.config:obj(data)?data:{};const collections=Array.isArray(data)?data:Array.isArray(config.collections)?config.collections:obj(data)&&Array.isArray(data.folders)?[data]:[];
- if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose collection JSON, a Nuvio profile export, or a Cedar Studio draft.');
+ if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose collection JSON, a Nuvio profile export, or a saved Creator draft.');
  const rows=[],issues=[];const rowIDs=new Set();const byExternal=new Map();
  for(const c of collections){if(!obj(c)||!Array.isArray(c.folders))throw Error('A collection has no branch list.');const g=makeGroup(name(c.title,'Imported group'));g.id=text(c.id,uid());if(rowIDs.has(g.id)){issues.push(`Duplicate group ID in ${g.title}; a fresh ID was assigned.`);g.id=uid();}rowIDs.add(g.id);g.deviceLayout=validateDeviceLayout(c.cedarLayout||newDeviceLayout());const childIDs=new Set();g.branches=c.folders.map(f=>{const sources=Array.isArray(f.sources)?f.sources:Array.isArray(f.catalogSources)?f.catalogSources.map(s=>resolveCatalog(s,config)):[];const b=cleanChild({...f,sources});if(childIDs.has(b.id))b.id=uid();childIDs.add(b.id);return b;});rows.push(g);byExternal.set(`collection:${c.id}`,g);}
  for(const h of config.home_rows||[]){const refs=collections.flatMap(c=>c.folders||[]).flatMap(f=>f.catalogSources||[]);const ref=refs.find(s=>s.catalogId===h.catalog_id)||{catalogId:h.catalog_id};const s=sanitizeSource(resolveCatalog(ref,config));const b={id:uid(),kind:'branch',title:name(config.catalog_name_overrides?.[h.catalog_id]||s.title,'Imported branch'),enabled:h.enabled!==false,source:s};rows.push(b);byExternal.set(`catalog:${h.catalog_id}`,b);}
@@ -75,15 +85,15 @@ export function parseImport(input){
  return {draft,issues,format:data?.config?'Nuvio profile export':'Collection JSON',ties:findTobaccoTies(data)};
 }
 export function mergeImport(current,incoming,mode='append',selectedIDs=incoming.rows.map(r=>r.id)){
- const next=mode==='replace'?{version:2,title:current.title,bundleID:current.bundleID,rows:[]}:validateDraft(current);const chosen=validateDraft(incoming).rows.filter(r=>selectedIDs.includes(r.id));
+ const next=mode==='replace'?{version:2,title:current.title,bundleID:current.bundleID,avatar:current.avatar,rows:[]}:validateDraft(current);const chosen=validateDraft(incoming).rows.filter(r=>selectedIDs.includes(r.id));
  if(!chosen.length)throw Error('Select at least one Branch or Branch Group.');
  const signature=s=>JSON.stringify({...s,id:undefined,title:undefined,enabled:undefined});
  for(const row of chosen){const existing=next.rows.find(r=>r.kind===row.kind&&(r.id===row.id||r.title.toLowerCase()===row.title.toLowerCase()));if(mode==='missing'&&existing){if(row.kind==='group'){for(const child of row.branches){const match=existing.branches.find(b=>b.id===child.id||b.title.toLowerCase()===child.title.toLowerCase());if(!match)existing.branches.push(child);else for(const source of child.sources)if(!match.sources.some(s=>s.id===source.id||signature(s)===signature(source)))match.sources.push(source);}}continue;}if(next.rows.some(r=>r.id===row.id))row.id=uid();next.rows.push(row);}
  return validateDraft(next);
 }
 export function moveItem(items,id,position){const index=items.findIndex(i=>i.id===id);if(index<0||position<0||position>=items.length)return;items.splice(position,0,...items.splice(index,1));}
-export function counts(draft){let branches=0,sources=0,unsupported=0;for(const r of draft.rows){if(r.kind==='branch'){branches++;sources++;if(sourceProblem(r.source,true))unsupported++;}else for(const b of r.branches){branches++;sources+=b.sources.length;unsupported+=b.sources.filter(s=>sourceProblem(s)).length;}}return {rows:draft.rows.length,branches,sources,unsupported};}
-// Studio writes Cedar's own `.cedar` Branches file (CEDAR_FILE_FORMAT.md in the Cedar repo).
+export function counts(draft){let branches=0,sources=0,unsupported=0;let picks=0;for(const r of draft.rows){if(r.kind==='pick'){picks++;continue;}if(r.kind==='branch'){branches++;sources++;if(sourceProblem(r.source,true))unsupported++;}else for(const b of r.branches){branches++;sources+=b.sources.length;unsupported+=b.sources.filter(s=>sourceProblem(s)).length;}}return {rows:draft.rows.length,picks,branches,sources,unsupported};}
+// Creator writes Cedar's own `.cedar` Branches file (CEDAR_FILE_FORMAT.md in the Cedar repo).
 const uuidPattern=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 const fnv=(input,seed)=>{let h=seed;for(const byte of new TextEncoder().encode(input))h=BigInt.asUintN(64,(h^BigInt(byte))*1099511628211n);return h;};
 export function stableUUID(namespace,value){if(uuidPattern.test(value))return value.toUpperCase();const input=`${namespace.toLowerCase()}|studio.row.${value}`,high=fnv(input,14695981039346656037n),low=fnv(input,1099511628211n),hex=(v,n)=>v.toString(16).padStart(n,'0').toUpperCase();return `${hex((high>>32n)&0xffffffffn,8)}-${hex((high>>16n)&0xffffn,4)}-${hex((high&0xfffn)|0x5000n,4)}-${hex(((low>>48n)&0x3fffn)|0x8000n,4)}-${hex(low&0xffffffffffffn,12)}`;}
@@ -120,11 +130,14 @@ function platformConfiguration(row){const shared=row.deviceLayout.shared,overrid
  const config={overrides};if(platforms.length<deviceFamilies.length)config.platforms=platforms;return platforms.length&&(config.platforms||Object.keys(overrides).length)?config:platforms.length?null:false;}
 const branch=(id,title,base,template,folderOptions=[])=>({id,profileID:'00000000-0000-0000-0000-000000000000',schemaVersion:2,title,titleMode:'custom',dataSource:base.dataSource,query:base.query,defaultFilters:base.filters,presentation:presentation(template),folderOptions,position:0,isEnabled:true});
 /** Every enabled row as Cedar Branches. `tieFor(source)` returns the profile file's Tobacco Tie for
- an add-on source, so a profile export keeps rows a Branches file has to leave out. */
-function cedarBranches(draft,bundleID,tieFor=()=>null){
- const branches=[],issues=[];let groups=0;
+ an add-on source, so a profile export keeps rows a Branches file has to leave out. `items` holds the
+ downloaded catalog file of each pick, by item ID; a pick's Branches are copied as published. */
+function cedarBranches(draft,bundleID,tieFor=()=>null,items={}){
+ const branches=[],issues=[],credits=[],titles=[],seen=new Set();let groups=0;
  const convert=(s,direct)=>{const tie=s.provider==='addon'?tieFor(s):null;if(tie)return tieSource(s,tie);const p=sourceProblem(s,direct);return p?{problem:p}:cedarSource(s);};
- for(const row of draft.rows){if(!row.enabled)continue;const id=stableUUID(bundleID,row.id);
+ for(const row of draft.rows){if(!row.enabled)continue;
+  if(row.kind==='pick'){const file=items[row.item.id];if(!obj(file)||!Array.isArray(file.branches)){issues.push(`${row.title}: this setup could not be downloaded.`);continue;}titles.push(file.title||row.title);if(file.credits&&!credits.some(c=>JSON.stringify(c)===JSON.stringify(file.credits)))credits.push(file.credits);for(const b of file.branches){if(!obj(b)||seen.has(b.id))continue;seen.add(b.id);branches.push(structuredClone(b));if(isBranchGroupJSON(b))groups++;}continue;}
+  const id=stableUUID(bundleID,row.id);
   if(row.kind==='group'){
    const folders=[];for(const b of row.branches){if(!b.enabled)continue;const sources=[];for(const s of b.sources){if(!s.enabled)continue;const c=convert(s,false);if(c.problem){issues.push(`${row.title} / ${b.title} / ${s.title}: ${c.problem}`);continue;}sources.push({id:s.id,title:s.title,...c});}
     if(!sources.length){issues.push(`${row.title} / ${b.title}: no compatible enabled sources.`);continue;}
@@ -138,14 +151,22 @@ function cedarBranches(draft,bundleID,tieFor=()=>null){
   }
  }
  if(!branches.length)throw Error('Enable at least one compatible branch or source before exporting.');
- return {branches,issues,groups};
+ return {branches,issues,groups,credits,titles};
 }
-const generator={application:'Cedar Studio'};
-export function exportCedar(value,now=new Date()){
- const draft=validateDraft(value),bundleID=draft.bundleID||uid().toUpperCase();
- const {branches,issues,groups}=cedarBranches(draft,bundleID);
- const document=branchesFile({bundleID,title:draft.title,createdAt:cedarDate(now),generator,branches});
- return {document,issues,bundleID,branchCount:branches.length-groups,groupCount:groups};
+const isBranchGroupJSON=b=>b.dataSource?.kind==='custom'&&b.dataSource?.identifier==='cedar.branch-group';
+const generator={application:'Cedar Creator'};
+const onlyPicks=draft=>draft.rows.length>0&&draft.rows.every(r=>r.kind==='pick');
+/**
+ * The Home as a `.cedar` Branches file. A Home made only of catalog picks is written exactly as
+ * Creator's own files are, under Creator's bundle ID, so it updates the same Branches in Cedar as
+ * downloading each setup alone would.
+ */
+export function exportCedar(value,now=new Date(),items={}){
+ const draft=validateDraft(value),picksOnly=onlyPicks(draft),bundleID=picksOnly?creatorBundleID:draft.bundleID||uid().toUpperCase();
+ const {branches,issues,groups,credits,titles}=cedarBranches(draft,bundleID,undefined,items);
+ const title=picksOnly&&titles.length===1?titles[0]:picksOnly&&draft.title==='My Home'?'Cedar Creator selection':draft.title;
+ const document=branchesFile({bundleID,title,createdAt:cedarDate(now),generator,branches,avatarURL:draft.avatar?avatarURL(draft.avatar):null,extra:credits.length?{credits:credits.length===1?credits[0]:credits}:{}});
+ return {document,issues,bundleID:picksOnly?draft.bundleID:bundleID,branchCount:branches.length-groups,groupCount:groups};
 }
 /** A row that reads one catalog of a Tobacco Tie in the same profile file (CEDAR_FILE_FORMAT.md §9.2). */
 function tieSource(s,tie){const type=s.type||(s.mediaType==='tv'?'series':s.mediaType)||'movie';return {dataSource:{kind:'manifestAddon',identifier:tie.id.toLowerCase(),parameters:{}},query:{kind:'addonCatalog',identifier:`${tie.manifestID}|${type}|${s.catalogId}`,parameters:{}},filters:cedarFilters(cedarContent(type))};}
@@ -155,16 +176,16 @@ function tieSource(s,tie){const type=s.type||(s.mediaType==='tv'?'series':s.medi
  * add-on whose manifest ID (or add-on family) matches a tie read that tie instead of being left out.
  * `ties`: [{url, name?, manifestID?}].
  */
-export async function exportCedarProfile(value,{passphrase='',ties=[],now=new Date()}={}){
+export async function exportCedarProfile(value,{passphrase='',ties=[],now=new Date(),items={}}={}){
  const draft=validateDraft(value),bundleID=draft.bundleID||uid().toUpperCase();
  const fileTies=ties.map(t=>({...t,id:stableUUID(bundleID,`tie.${t.url}`)}));
  const byID=new Map(),byFamily=new Map();for(const t of fileTies)if(t.manifestID){byID.set(t.manifestID.toLowerCase(),t);if(!byFamily.has(addonFamily(t.manifestID)))byFamily.set(addonFamily(t.manifestID),t);}
  const used=new Set();const tieFor=s=>{if(!s.addonId||!s.catalogId)return null;const t=byID.get(s.addonId.toLowerCase())||byFamily.get(addonFamily(s.addonId));if(t)used.add(t.id);return t||null;};
- const {branches,issues,groups}=cedarBranches(draft,bundleID,tieFor);
+ const {branches,issues,groups}=cedarBranches(draft,bundleID,tieFor,items);if(draft.avatar)issues.push('Profile photo: profile files don’t carry a suggested photo. Choose a Branches file to include it.');
  const payload={home:{branches:branches.map((b,position)=>({...b,position})),shelves:[]}};
  if(fileTies.length)payload.tobaccoTies={ties:fileTies.map(t=>({id:t.id,url:t.url,...(t.name?{name:t.name}:{}),enabledCatalogIDs:[]})),settings:[]};
  const document=await profileFile({bundleID,title:draft.title,createdAt:cedarDate(now),generator,payload,passphrase});
  const linkedRows=branches.flatMap(b=>[b,...b.folderOptions.flatMap(f=>f.sources||[])]).filter(x=>x.dataSource?.kind==='manifestAddon').length;
  return {document,issues,bundleID,branchCount:branches.length-groups,groupCount:groups,tieCount:fileTies.length,linkedRows,unusedTies:fileTies.filter(t=>!used.has(t.id)).length};
 }
-export function cedarFileName(title){return `${String(title||'').replace(/[^A-Za-z0-9 _-]+/g,'').trim().replace(/\s+/g,'-')||'Cedar-Studio-Home'}.cedar`;}
+export function cedarFileName(title){return `${String(title||'').replace(/[^A-Za-z0-9 _-]+/g,'').trim().replace(/\s+/g,'-')||'Cedar-Home'}.cedar`;}

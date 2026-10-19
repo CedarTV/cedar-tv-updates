@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#08090b">
-    <meta name="description" content="Cedar Creator: browse curated Home setups, branch groups, profile photos and source badges. Build a cart, arrange it, and import it into Cedar.">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://image.tmdb.org https://raw.githubusercontent.com https://*.github.io; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'">
+    <meta name="description" content="Cedar Creator: add curated Home setups, bring your collections from other apps, build Branches and Branch Groups, choose a profile photo and source badges, and take it all to Cedar.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; style-src 'self'; script-src 'self'; connect-src 'self' https:; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="no-referrer">
     <title>Creator — Cedar</title>
     <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/creator/">
     <link rel="icon" href="../assets/cedar-app-icon.png">
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
     <script src="/cedar-tv-updates/theme.js"></script>
     <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+    <link rel="stylesheet" href="home-builder.css">
   </head>
   <body>
       <header class="cedar-header">
@@ -47,11 +49,12 @@
       <div class="creator-heading">
         <p class="eyebrow"><span></span>Cedar Creator</p>
         <h1>Build your Home<br><em>from great setups.</em></h1>
-        <p class="creator-lede">Add whole setups or single branch groups, choose a profile photo, and arrange your cart. Then open it in Cedar, copy its link, or download a .cedar file.</p>
+        <p class="creator-lede">Add curated setups, bring the collections you use in other apps, or build Branches yourself. Arrange it all on Your Home, choose a profile photo, then open it in Cedar or download a .cedar file.</p>
       </div>
 
       <div class="creator-tabs" role="tablist" aria-label="Creator sections">
         <button type="button" role="tab" id="tab-setups" data-tab="setups" aria-controls="panel-setups" aria-selected="true">Setups</button>
+        <button type="button" role="tab" id="tab-home" data-tab="home" aria-controls="panel-home" aria-selected="false" tabindex="-1">Your Home <span id="home-tab-count" class="tab-count" hidden></span></button>
         <button type="button" role="tab" id="tab-avatars" data-tab="avatars" aria-controls="panel-gallery" aria-selected="false" tabindex="-1">Profile photos</button>
         <button type="button" role="tab" id="tab-badges" data-tab="badges" aria-controls="panel-gallery" aria-selected="false" tabindex="-1">Source badges</button>
       </div>
@@ -65,6 +68,22 @@
         </div>
         <p id="setup-status" class="creator-status" role="status">Loading setups…</p>
         <div id="setup-grid" class="setup-grid"></div>
+      </section>
+
+      <section id="panel-home" class="home-scope" role="tabpanel" aria-labelledby="tab-home" hidden>
+    <div class="home-toolbar"><div><strong id="home-count">Your Home</strong><span id="home-summary" class="muted"></span></div><div class="toolbar-actions"><button id="undo" class="text-button" disabled>Undo</button><button id="save-draft" class="text-button">Save draft</button><button id="open-presets" class="text-button">Starting points</button><button id="open-import" class="button">Import collection</button><button id="export" class="button primary">Export for Cedar <span aria-hidden="true">↗</span></button></div></div>
+    <div class="home-toolbar"><div id="home-avatar" class="home-avatar"></div><span id="save-state">Saved on this browser</span></div>
+    <p id="home-status" role="status" aria-live="polite"></p><input id="copy-fallback" aria-label="URL to copy" readonly hidden>
+    <div class="builder-layout">
+      <aside class="outline-panel"><div class="panel-heading"><h2>Home arrangement</h2><span class="muted">Drag to reorder</span></div><label class="search-label"><span class="sr-only">Search branches</span><input id="branch-search" type="search" placeholder="Search your branches"></label><ol id="home-outline"></ol><div class="add-actions"><button id="add-branch" class="button">+ Branch</button><button id="add-group" class="button">+ Branch Group</button></div><p class="panel-note">A Branch is a row of titles. A Branch Group brings related branches together.</p></aside>
+      <div class="canvas-panel"><div class="canvas-toolbar"><div class="segmented" aria-label="Preview mode"><button data-mode="visual" aria-pressed="true">Home preview</button><button data-mode="checklist" aria-pressed="false">Quick editor</button></div><label class="device-label"><span class="sr-only">Preview device</span><select id="preview-device" aria-label="Preview device"><option value="television">TV</option><option value="phone">iPhone</option><option value="tablet">iPad</option><option value="desktop">Mac</option></select></label></div>
+        <div id="home-preview" class="home-preview" data-device="television"><div class="preview-top"><img src="../assets/cedar-app-icon.png" width="28" height="28" alt="Cedar"><strong>Home</strong><span>Library</span><span>Search</span></div><div id="preview-content"></div></div>
+        <div id="quick-editor" hidden></div><p class="preview-caption">Layout preview · Sample posters from Cedar. Imported artwork is shown where available.</p>
+      </div>
+      <aside id="inspector" class="inspector" aria-label="Branch editor"></aside>
+    </div>
+    <section id="branch-content" class="content-panel" aria-label="Selected branch contents"></section>
+    <div class="home-footnote"><p>Your Home stays in this browser until you export it. Nothing changes on your devices.</p><a href="../link/">Manage a linked device with Cedar Link ↗</a></div>
       </section>
 
       <section id="panel-gallery" role="tabpanel" aria-labelledby="tab-avatars" hidden>
@@ -85,7 +104,7 @@
           <div>
             <p class="eyebrow">Your selection</p><h2 id="selection-title"></h2>
             <div class="hero-actions">
-              <button id="add-avatar" class="button button-primary" type="button">Add to cart</button>
+              <button id="add-avatar" class="button button-primary" type="button">Use on Your Home</button>
               <a id="open-cedar" class="button button-secondary">Open in Cedar</a>
               <button id="copy" class="button button-secondary" type="button">Copy URL</button>
             </div>
@@ -97,11 +116,11 @@
         <div id="gallery" class="artwork-grid"></div>
         <button id="more" class="button button-secondary" type="button" hidden>Show more</button>
       </section>
-      <noscript><p>Enable JavaScript to browse Creator. You can still choose artwork with <a href="../link/">Cedar Link</a>.</p></noscript>
+      <noscript><p>Enable JavaScript to use Creator. You can still choose artwork with <a href="../link/">Cedar Link</a>.</p></noscript>
     </main>
 
-    <button id="cart-button" class="cart-button" type="button" aria-haspopup="dialog" aria-controls="cart-dialog">
-      Cart <span id="cart-count" class="cart-count">0</span>
+    <button id="home-button" class="home-button" type="button" aria-controls="panel-home">
+      Your Home <span id="home-button-count" class="home-button-count">0</span>
     </button>
     <p id="toast" class="creator-toast" role="status" aria-live="polite"></p>
 
@@ -123,33 +142,12 @@
       <ol id="setup-dialog-groups" class="group-list"></ol>
     </dialog>
 
-    <dialog id="cart-dialog" class="creator-dialog cart-dialog" aria-labelledby="cart-title">
-      <div class="dialog-header">
-        <div>
-          <p class="eyebrow">Your cart</p>
-          <h2 id="cart-title">Ready for Cedar</h2>
-        </div>
-        <button type="button" class="icon-button" data-close aria-label="Close cart">×</button>
-      </div>
-      <p id="cart-empty" class="dialog-lede">Your cart is empty. Add setups, branch groups or a profile photo.</p>
-      <div id="cart-contents">
-        <p class="dialog-lede">Branches are added to the end of your Home in this order. Drag the handle or use the arrows to rearrange.</p>
-        <ol id="cart-list" class="cart-list"></ol>
-        <div id="cart-avatar" class="cart-avatar"></div>
-        <div class="checkout">
-          <p id="cart-summary" class="setup-meta"></p>
-          <div class="hero-actions">
-            <a id="cart-open" class="button button-primary">Open in Cedar</a>
-            <button id="cart-copy" class="button button-secondary" type="button">Copy link</button>
-            <button id="cart-download" class="button button-secondary" type="button">Download .cedar</button>
-          </div>
-          <label>Cart link<input id="cart-link" type="url" readonly spellcheck="false"></label>
-          <p id="cart-status" role="status"></p>
-          <p class="compatibility">On iPhone, iPad or Mac, Open in Cedar shows what will be added before anything changes. To paste the link instead, open Cedar Settings → Home &amp; Branches → Import from Link. A downloaded .cedar file opens in Cedar from Files or AirDrop. Apple TV receives the branches from your profile.</p>
-          <button id="cart-clear" class="text-button" type="button">Empty cart</button>
-        </div>
-      </div>
-    </dialog>
+    <div class="home-scope">
+<dialog id="import-dialog"><div class="dialog-header"><div><p class="eyebrow">BRING YOUR COLLECTIONS</p><h2>Start with something you love.</h2></div><button class="icon-button" data-close="import-dialog" aria-label="Close import">×</button></div><p class="muted">Open Kaptain / Nuvio collection JSON, a Nuvio profile export, or a saved Creator draft. Review it before changing your Home.</p><p class="collection-reference"><button type="button" id="load-kaptain" class="button">Try Kaptain’s Mega Collection · v0.92</button> <a href="https://imkaptain.github.io/Kaptain-Collection/" target="_blank" rel="noopener noreferrer">By Kaptain ↗</a></p><div class="import-inputs"><label class="file-drop">Choose a JSON file<input id="import-file" type="file" accept=".json,application/json"><span>Up to 10 MB · Read locally</span></label><details><summary>Or paste JSON or a collection URL</summary><label>Collection URL<input id="import-url" type="url" placeholder="https://…/collection.json"></label><button id="load-url" class="button">Load URL</button><p class="quiet">Public HTTPS JSON links only. If the host blocks browser access, download the file and open it above.</p><label>Collection JSON<textarea id="import-json" rows="5" placeholder='{"collections": […]}'></textarea></label><button id="read-json" class="button">Read JSON</button></details></div><p id="import-status" role="status"></p><div id="import-review" hidden><div class="section-heading"><h3 id="import-summary">Review import</h3><div><button id="import-all" class="text-button">All</button><button id="import-none" class="text-button">None</button></div></div><div id="import-choices"></div><details id="import-issues"><summary id="issue-summary">Compatibility notes</summary><ul id="issue-list"></ul></details><label>How should this update your Home?<select id="import-mode"><option value="append">Add to current Home</option><option value="missing">Add only missing branches and sources</option><option value="replace">Replace current Home</option></select></label><p class="quiet">Replace changes this browser draft only. Undo restores your previous arrangement.</p><button id="apply-import" class="button primary">Use selected branches</button></div></dialog>
+<dialog id="preset-dialog"><div class="dialog-header"><div><p class="eyebrow">A PLACE TO START</p><h2>Build your next favourite Home.</h2></div><button class="icon-button" data-close="preset-dialog" aria-label="Close starting points">×</button></div><p class="muted">Add a title feed, build a group, or import a collection you already use.</p><div id="preset-list" class="preset-grid"></div><button id="preset-import" class="button">Import your own collection</button></dialog>
+<dialog id="source-dialog"><form id="source-form"><div class="dialog-header"><div><p class="eyebrow">BRANCH CONTENT</p><h2 id="source-dialog-title">Edit source</h2></div><button type="button" class="icon-button" data-close="source-dialog" aria-label="Close source editor">×</button></div><label>Title<input id="source-title" required maxlength="200"></label><div class="form-grid"><label>Provider<select id="source-provider"><option value="tmdb">TMDB</option><option value="trakt">Public Trakt list</option></select></label><label>Content<select id="source-media"><option value="movie">Movies</option><option value="tv">TV shows</option></select></label><label id="source-kind-label">Feed<select id="source-kind"></select></label><label id="source-id-label">List or catalogue ID<input id="source-id" type="number" min="1" max="2147483647"></label></div><details id="source-filter-details"><summary>Refine this source</summary><div class="form-grid"><label>Genre<select id="source-genre"></select></label><label>Release year<input id="source-year" type="number" min="1870" max="2200"></label><label>Minimum rating<input id="source-rating" type="number" min="0" max="10" step="0.1"></label><label>Minimum votes<input id="source-votes" type="number" min="0" step="1"></label><label>Original language<input id="source-language" maxlength="30" placeholder="e.g. en"></label><label>Watch region<input id="source-region" maxlength="2" placeholder="e.g. CA"></label></div><p class="quiet">Other imported filters are retained when you save.</p></details><p id="source-error" role="alert"></p><button class="button primary" type="submit">Save source</button></form></dialog>
+<dialog id="export-dialog"><div class="dialog-header"><div><p class="eyebrow">READY FOR CEDAR</p><h2>Your Home, ready to take with you.</h2></div><button class="icon-button" data-close="export-dialog" aria-label="Close export">×</button></div><p id="export-summary"></p><div id="export-link" class="export-link" hidden><p class="quiet">Your Home is made only of Creator setups, so it can also travel as a link. On iPhone, iPad or Mac, Open in Cedar shows what will be added before anything changes. Apple TV receives the branches from your profile.</p><div class="toolbar-actions"><a id="export-open" class="button primary">Open in Cedar</a><button id="export-copy" type="button" class="button">Copy link</button></div><label>Link<input id="export-link-url" type="url" readonly spellcheck="false"></label></div><ol class="export-steps" id="export-steps-profile" hidden><li>Download your locked <strong>.cedar</strong> profile file.</li><li>In Cedar on iPhone, iPad, Mac or Apple TV, choose <strong>Settings → Profiles → Import Profile</strong>, or open the file.</li><li>Enter your passphrase and choose what to bring in. Cedar fetches each Tobacco Tie and adds it to Cedar Library, or turns a catalog-only one into Branches.</li></ol><ol class="export-steps" id="export-steps-branches"><li>Download your <strong>.cedar</strong> file.</li><li>Open it with Cedar on iPhone, iPad, or Mac, or choose <strong>Settings → Home Screen &amp; Branches → Import Branches</strong>.</li><li>Review the import in Cedar. Importing the same Home again updates those Branches instead of adding copies.</li></ol><p class="quiet">Direct Branches import as poster rows. Branch Group device layouts carry over to each device. This preview does not send changes directly to a device.</p><fieldset class="export-kind"><legend class="sr-only">File type</legend><label class="import-choice"><input type="radio" name="export-kind" value="branches" checked><span><strong>Branches file</strong><small>Safe to share with anyone. Rows that need a Tobacco Tie are left out.</small></span></label><label class="import-choice"><input type="radio" name="export-kind" value="profile"><span><strong>Profile file, just for you</strong><small>Locked with a passphrase. Keeps your own Tobacco Ties so their rows come too. Import it in Cedar from Profiles → Import Profile.</small></span></label></fieldset><div id="export-profile" hidden><label>Tobacco Tie links<textarea id="export-ties" rows="4" spellcheck="false" autocomplete="off" placeholder="https://…/manifest.json, one per line"></textarea></label><p class="quiet" id="export-ties-note">These are your own addresses and may contain your access token. They are only ever saved inside the locked file, on this device. Nothing is uploaded.</p><div class="form-grid"><label>Passphrase<input id="export-passphrase" type="password" autocomplete="new-password" minlength="8"></label><label>Confirm<input id="export-confirm" type="password" autocomplete="new-password"></label></div><p class="quiet">Send the passphrase separately from the file. Cedar asks for it when you import.</p></div><details id="export-notes"><summary id="export-note-count">Items left out</summary><ul id="export-note-list"></ul></details><p id="export-error" class="quiet" role="alert"></p><button id="download-export" class="button primary">Download .cedar file</button></dialog>
+    </div>
       <footer class="site-footer">
         <div class="site-footer-intro">
           <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">

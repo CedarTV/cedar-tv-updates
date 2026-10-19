@@ -163,15 +163,46 @@ make network requests or access Cedar Link credentials.
 Run `node --test test/*.test.mjs`, each renderer with `--check`, and
 `node scripts/verify_public_site.mjs` before publishing.
 
-## Cedar Studio preview
+## Cedar Creator
 
-`public/customize/` is the unlinked Home builder at <https://cedartv.github.io/cedar-tv-updates/customize/>. It follows Cedar's Branch / Branch Group distinction, with title rows, a Home preview, a quick editor, source selection and filters, group device layouts, and local draft persistence. No emoji controls are used.
+`public/creator/` is the one place to shape a Cedar Home on the website, at
+<https://cedartv.github.io/cedar-tv-updates/creator/>. It has four tabs:
 
-Import accepts external collection arrays, collection envelopes, Nuvio profile exports, and Studio v1/v2 drafts, through files, pasted JSON or public HTTPS URLs (10 MB maximum). A review precedes append, replace or add-missing. Kaptain's public v0.92 collection can be loaded through the import dialog; its JSON and artwork remain hosted by their original authors. Studio is now the only place other apps' collection formats are read; the Cedar apps import only `.cedar` files. Existing Cedar files are rejected with a pointer to saved Studio drafts.
+- **Setups**: the curated catalog (`creator/setups.json`, built into `public/creator/items/` by
+  `scripts/build_creator_catalog.mjs`). Adding a setup or one of its branch groups puts it on Your Home.
+- **Your Home**: the builder that used to be Cedar Studio. Catalog picks sit alongside Branches and
+  Branch Groups built by hand or imported, with a Home preview, quick editor, source filters, group
+  device layouts, undo, and a draft saved in the browser. No emoji controls are used.
+- **Profile photos** and **Source badges**: the artwork galleries. A profile photo can be put on Your
+  Home so the exported file offers it.
 
-Export writes Cedar's native `.cedar` Branches file (`app.cedar.bundle`, kind `branches`), as described in `CEDAR_FILE_FORMAT.md` in the Cedar repository. Direct Branches become ordinary Branches with poster presentation. Branch Groups become `cedar.branch-group` Branches with one folder per Studio branch, and their device layouts become `platformConfiguration`. Each draft keeps one `bundleID`, so importing a re-exported draft updates the same Branches in Cedar instead of adding copies. Sources that can't travel in a `.cedar` file (Tobacco Tie catalogs other than Trakt Up Next and watchlists) are left out and listed in the export review. The browser never sends a file to a paired device. `Tests/Fixtures/CedarFormat/studio-export.cedar` in the Cedar repository is generated from this exporter and checked by Cedar's own importer.
+Import accepts external collection arrays, collection envelopes, Nuvio profile exports, and saved
+v1/v2 drafts, through files, pasted JSON or public HTTPS URLs (10 MB maximum). A review precedes
+append, replace or add-missing. Kaptain's public v0.92 collection can be loaded through the import
+dialog; its JSON and artwork remain hosted by their original authors. Creator is the only place other
+apps' collection formats are read; the Cedar apps import only `.cedar` files.
 
-Verify with `node --test test/studio.test.mjs` and `node scripts/verify_studio_browser.cjs` (Playwright and Chrome required). Set `CEDAR_STUDIO_URL` to a served project root or the live Pages root, and `CEDAR_STUDIO_ARTIFACTS` to a disposable directory under the parent workspace's `tmp` symlink.
+Export writes Cedar's native `.cedar` file, as described in `CEDAR_FILE_FORMAT.md` in the Cedar
+repository, through `public/shared/cedar-file.mjs`:
+
+- A **Branches file** is safe to share. Catalog picks are copied exactly as published. Direct
+  Branches become ordinary Branches with poster presentation; Branch Groups become
+  `cedar.branch-group` Branches whose device layouts become `platformConfiguration`. Sources that
+  can't travel (Tobacco Tie catalogs other than Trakt Up Next and watchlists) are left out and listed.
+- A **profile file** is sealed with a passphrase and can carry the owner's own Tobacco Ties, so rows
+  that read them come too.
+- A Home made only of catalog picks is written under Creator's shared bundle ID, exactly as the old
+  cart download was, and can also be opened as a `cedar://creator/cart` link or copied as a web link.
+  Any hand-made row makes it a file-only Home with its own stable bundle ID.
+
+The browser never sends a file to a paired device. The old Studio address, `public/customize/`,
+redirects to the Your Home tab, and Creator moves an old cart and an old Studio draft into Your Home.
+`Tests/Fixtures/CedarFormat/studio-export.cedar` and `studio-profile.cedar` in the Cedar repository
+come from this exporter and are checked by Cedar's own importer.
+
+Verify with `node --test test/*.test.mjs` and `node scripts/verify_creator_browser.cjs` (Playwright
+and Chrome required). Set `CEDAR_STUDIO_URL` to a served project root or the live Pages root, and
+`CEDAR_STUDIO_ARTIFACTS` to a disposable directory under the parent workspace's `tmp` symlink.
 
 ## Tobacco Ties
 
