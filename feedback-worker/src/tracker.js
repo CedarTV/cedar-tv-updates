@@ -1,6 +1,8 @@
 // Roadmap items: vocabulary, validation and the public projection the website shows.
 // publicFeed() is the only path from items to the public roadmap; it must stay in step with
-// the site's scripts/tracker_feed.mjs schema.
+// the site's scripts/tracker_feed.mjs schema. Public detail is only what staff write for the
+// roadmap (title, summary, description) plus status facts; a report's own text, its reporter,
+// email and device details stay private.
 
 import { FeedbackError } from "./errors.js";
 
@@ -76,7 +78,7 @@ const block = (value, field, maximum) => {
 
 export const statusInfo = (kind, status) => STATUSES[kind]?.find((candidate) => candidate.id === status);
 
-const EDITABLE = ["kind", "title", "summary", "notes", "status", "platforms", "priority", "public", "requests", "shippedIn", "releaseURL"];
+const EDITABLE = ["kind", "title", "summary", "description", "notes", "status", "platforms", "priority", "public", "requests", "shippedIn", "releaseURL"];
 
 // Validates editable fields over `existing` and returns the complete editable item.
 export const normalizeItem = (input, existing = null) => {
@@ -99,6 +101,7 @@ export const normalizeItem = (input, existing = null) => {
     kind,
     title: line(input.title ?? existing?.title, "Title", { minimum: 3, maximum: 120 }),
     summary: block(input.summary ?? existing?.summary, "Public summary", 600),
+    description: block(input.description ?? existing?.description, "Public details", 2_000),
     notes: block(input.notes ?? existing?.notes, "Private notes", 20_000),
     status,
     platforms: Object.keys(PLATFORMS).filter((platform) => platforms.includes(platform)),
@@ -122,6 +125,7 @@ export const publicFeed = (items) => {
     .map((item) => {
       const entry = { id: item.id, kind: item.kind, title: item.title };
       if (item.summary) entry.summary = item.summary;
+      if (item.description) entry.description = item.description;
       entry.status = item.status;
       entry.platforms = item.platforms;
       if (item.requests > 0) entry.requests = item.requests;

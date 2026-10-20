@@ -1,6 +1,7 @@
 // Schema for the public roadmap feed the cedar-feedback Worker serves at /v1/roadmap.
-// Private notes, priorities and unreviewed items never belong in it; this check makes sure
-// nothing outside the public shape slips through.
+// Private notes, priorities and unreviewed items never belong in it, and neither does anything
+// from the original reports (their text, reporter, email or device details): public detail is
+// only the wording written for the roadmap. This check makes sure nothing else slips through.
 
 export const PUBLIC_STATUSES = Object.freeze({
   feature: ["considering", "planned", "in-progress", "shipped"],
@@ -9,7 +10,7 @@ export const PUBLIC_STATUSES = Object.freeze({
 
 export const PLATFORMS = Object.freeze(["iphone", "ipad", "apple-tv", "mac", "android-tv", "radio", "website"]);
 
-const ITEM_FIELDS = ["id", "kind", "title", "summary", "status", "platforms", "requests", "shippedIn", "releaseURL", "updated"];
+const ITEM_FIELDS = ["id", "kind", "title", "summary", "description", "status", "platforms", "requests", "shippedIn", "releaseURL", "updated"];
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 
 const fail = (message) => { throw new Error(`roadmap feed: ${message}`); };
@@ -33,6 +34,7 @@ export function validateTrackerFeed(feed) {
     if (!PUBLIC_STATUSES[item.kind].includes(item.status)) fail(`${label} has a status that isn't public`);
     if (typeof item.title !== "string" || item.title.trim().length < 3 || item.title.length > 120) fail(`${label} needs a title`);
     if (item.summary !== undefined && (typeof item.summary !== "string" || item.summary.length > 600)) fail(`${label} summary is invalid`);
+    if (item.description !== undefined && (typeof item.description !== "string" || item.description.length > 2000)) fail(`${label} description is invalid`);
     if (!Array.isArray(item.platforms) || item.platforms.some((platform) => !PLATFORMS.includes(platform))) fail(`${label} platforms are invalid`);
     if (item.requests !== undefined && (!Number.isSafeInteger(item.requests) || item.requests < 1)) fail(`${label} requests is invalid`);
     if (item.shippedIn !== undefined && (typeof item.shippedIn !== "string" || item.shippedIn.length > 40)) fail(`${label} shippedIn is invalid`);

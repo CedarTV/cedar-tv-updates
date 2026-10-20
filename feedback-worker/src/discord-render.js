@@ -1,4 +1,4 @@
-// Discord message bodies for the private triage channel, and the small REST client that posts them.
+// Discord message bodies for the private triage and roadmap channels, and the small REST client that posts them.
 import { CLOSED_STATUSES, isPublished, PLATFORMS, STATUSES, statusInfo } from "./tracker.js";
 
 export const ROADMAP_URL = "https://cedartv.github.io/cedar-tv-updates/roadmap/";
@@ -14,6 +14,29 @@ const button = (custom_id, label, style = STYLE.secondary) => ({ type: BUTTON, s
 const row = (...components) => ({ type: ROW, components });
 const field = (name, value, inline = true) => (value ? { name, value: clip(String(value), 1024), inline } : null);
 
+const fromLabel = (submission) => (submission.channel === "discord" && submission.reporter
+  ? `Discord, from ${submission.reporter}`
+  : CHANNELS[submission.channel] ?? submission.channel);
+
+// A report as staff see it: its full text and device details, never its email.
+const reportEmbed = (submission, { detailsMaximum = 3500, footer = "" } = {}) => {
+  const isBug = submission.kind === "bug";
+  return {
+    author: { name: isBug ? "Bug report" : "Feature request" },
+    title: clip(submission.title, 256),
+    description: clip(submission.details, detailsMaximum),
+    color: isBug ? COLORS.bug : COLORS.feature,
+    fields: [
+      field("App", PLATFORMS[submission.platform] ?? submission.platform),
+      field("From", fromLabel(submission)),
+      field("Version", submission.appVersion),
+      field("System", submission.osVersion),
+      field("Device", submission.deviceModel),
+    ].filter(Boolean),
+    footer: { text: `Reference ${submission.submissionID.slice(0, 8)}${footer}` },
+  };
+};
+
 // Submissions waiting for a decision.
 export const submissionMessage = (submission) => {
   const isBug = submission.kind === "bug";
@@ -23,9 +46,6 @@ export const submissionMessage = (submission) => {
         button(`s:approve:considering:${submission.submissionID}`, "Approve · Considering", STYLE.success),
         button(`s:approve:planned:${submission.submissionID}`, "Approve · Planned", STYLE.primary),
       ];
-  const from = submission.channel === "discord" && submission.reporter
-    ? `Discord, from ${submission.reporter}`
-    : CHANNELS[submission.channel] ?? submission.channel;
   const rows = [row(
     ...approve,
     button(`s:private:${submission.submissionID}`, "Keep private"),
@@ -34,27 +54,15 @@ export const submissionMessage = (submission) => {
   )];
   if (submission.contact) rows.push(row(button(`s:contact:${submission.submissionID}`, "Show email")));
   return {
-    embeds: [{
-      author: { name: isBug ? "Bug report" : "Feature request" },
-      title: clip(submission.title, 256),
-      description: clip(submission.details, 3500),
-      color: isBug ? COLORS.bug : COLORS.feature,
-      fields: [
-        field("App", PLATFORMS[submission.platform] ?? submission.platform),
-        field("From", from),
-        field("Version", submission.appVersion),
-        field("System", submission.osVersion),
-        field("Device", submission.deviceModel),
-      ].filter(Boolean),
-      footer: { text: `Reference ${submission.submissionID.slice(0, 8)}${submission.contact ? " · email provided" : ""}` },
-    }],
+    embeds: [reportEmbed(submission, { footer: submission.contact ? " · email provided" : "" })],
     components: rows,
     allowed_mentions: { parse: [] },
   };
 };
 
-// A submission that ended without becoming its own item.
-export const closedSubmissionMessage = (submission, outcome) => ({
+// A submission that has been triaged. When it became (or joined) an item, the report is kept
+// and a button reopens it privately.
+export const closedSubmissionMessage = (submission, outcome, { keepsReport = false } = {}) => ({
   embeds: [{
     author: { name: submission.kind === "bug" ? "Bug report" : "Feature request" },
     title: clip(submission.title, 256),
@@ -62,9 +70,29 @@ export const closedSubmissionMessage = (submission, outcome) => ({
     color: COLORS.muted,
     footer: { text: `Reference ${submission.submissionID.slice(0, 8)}` },
   }],
-  components: [],
+  components: keepsReport ? [row(button(`s:report:${submission.submissionID}`, "Show report"))] : [],
   allowed_mentions: { parse: [] },
 });
+
+// The original reports behind an item, shown only to the person who asked. Discord allows 6,000
+// characters across a message's embeds, so it shows the latest five and clips long text evenly.
+export const reportsMessage = (item, reports) => {
+  if (!reports.length) {
+    return { content: `${item.id} has no original report (it was added directly, or its report was deleted).`, allowed_mentions: { parse: [] } };
+  }
+  const shown = reports.slice(-5);
+  const detailsMaximum = Math.min(3500, Math.floor(3000 / shown.length));
+  const date = (report) => new Date(report.createdAtEpochMilliseconds).toISOString().slice(0, 10);
+  const more = reports.length > shown.length ? ` Showing the latest ${shown.length} of ${reports.length}; Cedar Tracker lists them all.` : "";
+  return {
+    content: `Original report${reports.length === 1 ? "" : "s"} for **${item.id}** ${clip(item.title, 120)}.${more}`,
+    embeds: shown.map((report) => reportEmbed(report, {
+      detailsMaximum,
+      footer: ` · ${report.state === "merged" ? "merged in" : "accepted"} · sent ${date(report)}`,
+    })),
+    allowed_mentions: { parse: [] },
+  };
+};
 
 // The live control panel for an item: status buttons move it along the roadmap.
 export const itemMessage = (item) => {
@@ -78,7 +106,7 @@ export const itemMessage = (item) => {
       author: { name: `${item.id} · ${item.kind === "bug" ? "Bug" : "Feature"}` },
       title: clip(item.title, 256),
       url: published ? ROADMAP_URL : undefined,
-      description: item.summary ? clip(item.summary, 2000) : "_No public summary yet._",
+      description: [item.summary || "_No public summary yet._", item.description].filter(Boolean).map((text) => clip(text, 1900)).join("\n\n"),
       color: done ? (["shipped", "fixed"].includes(item.status) ? COLORS.done : COLORS.muted) : item.kind === "bug" ? COLORS.bug : COLORS.feature,
       fields: [
         field("Status", statusInfo(item.kind, item.status)?.label ?? item.status),
@@ -93,6 +121,7 @@ export const itemMessage = (item) => {
       row(...statuses.map((status) => button(`i:status:${status.id}:${item.id}`, label(status), style(status)))),
       row(
         button(`i:edit:${item.id}`, "Edit wording"),
+        button(`i:reports:${item.id}`, "Original reports"),
         button(`i:visibility:${item.id}`, item.public ? "Hide from roadmap" : "Show on roadmap", item.public ? STYLE.secondary : STYLE.success),
         { type: BUTTON, style: STYLE.link, label: "Open roadmap", url: ROADMAP_URL },
       ),

@@ -4,7 +4,7 @@ import { FeedbackError } from "./errors.js";
 import { handleInteraction } from "./discord.js";
 import {
   acceptSubmission, announceSubmission, createItem, deleteItem, discardSubmission, ensureItemMessage,
-  mergeSubmission, updateItem,
+  itemReports, mergeSubmission, updateItem,
 } from "./operations.js";
 import { publicFeed, vocabulary } from "./tracker.js";
 
@@ -219,6 +219,8 @@ const adminRoutes = {
     ensureItemMessage(deps, env, item);
     return ok({ item });
   },
+  // Staff-only: the full original reports behind an item, kept for as long as the item exists.
+  "GET items/:id/reports": async (request, env, deps, id) => ok({ reports: await itemReports(deps, id) }),
   "PUT items/:id": async (request, env, deps, id) => ok({ item: await updateItem(deps, id, await readJSON(request)) }),
   "DELETE items/:id": async (request, env, deps, id) => ok({ item: await deleteItem(deps, id) }),
 };

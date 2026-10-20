@@ -18,7 +18,8 @@ private `#tracker-triage` and `#roadmap` Discord channels.
 - `GET /v1/roadmap`: public, any origin, cached for 10 seconds. Only items marked public with a
   public status, and only public fields (see `scripts/tracker_feed.mjs` in the site).
 - Admin (bearer `ADMIN_TOKEN`, no browser origin): `GET /v1/inbox?state=…`,
-  `POST /v1/inbox/:id/accept|merge|discard`, `GET|POST /v1/items`, `PUT|DELETE /v1/items/:id`.
+  `POST /v1/inbox/:id/accept|merge|discard`, `GET|POST /v1/items`, `PUT|DELETE /v1/items/:id`,
+  `GET /v1/items/:id/reports` (the full original reports behind an item, without email).
   Triage clears the reporter's `contact`.
 - `POST /v1/discord/interactions`: Discord's signed interactions (Ed25519, `DISCORD_PUBLIC_KEY`).
   Only `DISCORD_OWNER_ID` can act.
@@ -54,7 +55,12 @@ success response.
 
 ## Retention
 
-The daily cron deletes triaged reports 30 days after triage and untriaged reports after a year.
+The daily cron deletes discarded reports 30 days after triage and untriaged reports after a year.
+Reports that were accepted as, or merged into, a roadmap item stay while that item exists, so
+staff can reopen them (`GET /v1/items/:id/reports`, the item panel's **Original reports** button,
+or the closed triage message's **Show report** button); once the item is deleted they go at the
+next daily run. Email is cleared at triage either way, and none of a report's fields ever reach
+`/v1/roadmap`, which carries only the roadmap wording (title, summary, description) and status facts.
 The public privacy policy (`/privacy/#feedback`) states the same.
 
 ## Local verification

@@ -25,8 +25,13 @@ export default {
       return;
     }
     await env.DB.batch([
+      // Reports behind a roadmap item stay (privately) while the item exists, so staff can
+      // reopen them; discarded reports, and reports whose item was deleted, go after 30 days.
       env.DB.prepare(
-        "DELETE FROM feedback_submissions WHERE state != 'new' AND triaged_at_ms < ?1",
+        `DELETE FROM feedback_submissions
+          WHERE state != 'new' AND triaged_at_ms < ?1
+            AND (state = 'discarded' OR item_id IS NULL
+                 OR item_id NOT IN (SELECT 'CDR-' || number FROM tracker_items))`,
       ).bind(now - LIMITS.triagedRetentionMs),
       env.DB.prepare(
         "DELETE FROM feedback_submissions WHERE state = 'new' AND created_at_ms < ?1",
