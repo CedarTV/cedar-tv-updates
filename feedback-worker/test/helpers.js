@@ -21,6 +21,9 @@ export const memoryStore = () => {
     async setSubmissionMessage(id, channelID, messageID) {
       Object.assign(rows.find((row) => row.submissionID === id), { discordChannelID: channelID, discordMessageID: messageID });
     },
+    async unannounced(createdBefore, limit) {
+      return rows.filter((row) => row.state === "new" && !row.discordMessageID && row.createdAtMs < createdBefore).slice(0, limit).map(copy);
+    },
     async discard(id) {
       const row = pending(id);
       if (!row) return false;
@@ -53,9 +56,7 @@ export const memoryStore = () => {
     async acceptSubmission(id, fields, date) {
       const row = pending(id);
       if (!row) return null;
-      const item = await this.createItem(fields, date, {
-        discordChannelID: row.discordChannelID, discordMessageID: row.discordMessageID, sourceChannelID: row.sourceChannelID,
-      });
+      const item = await this.createItem(fields, date, { sourceChannelID: row.sourceChannelID });
       Object.assign(row, { state: "accepted", itemID: item.id, contact: null });
       return item;
     },
@@ -96,6 +97,7 @@ export const environment = (overrides = {}) => ({
   SUBMIT_RATE_LIMITER: allowAll,
   ADMIN_RATE_LIMITER: allowAll,
   DISCORD_TRIAGE_CHANNEL_ID: "triage",
+  DISCORD_ROADMAP_CHANNEL_ID: "roadmap",
   DISCORD_OWNER_ID: OWNER,
   ...overrides,
 });

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { LIMITS, respond } from "../src/feedback.js";
+import { announcePending } from "../src/operations.js";
 import { admin, dependencies, environment, fakeDiscord, memoryStore, post, submissionBody as body, WEB } from "./helpers.js";
 
 const send = (request, env = environment(), deps = dependencies()) => respond(request, env, deps);
@@ -105,7 +106,10 @@ test("accepting a submission creates a private item, clears contact and updates 
   await deps.settle();
   const edit = deps.discord.calls.find((call) => call.op === "edit");
   assert.equal(edit.messageID, "1001");
-  assert.match(edit.message.embeds[0].author.name, /CDR-1/);
+  assert.match(edit.message.embeds[0].description, /Kept private as \*\*CDR-1\*\*.*<#roadmap>/);
+  const panel = deps.discord.calls.find((call) => call.op === "send" && call.channelID === "roadmap");
+  assert.match(panel.message.embeds[0].author.name, /CDR-1/);
+  assert.equal(deps.store.items[0].discordChannelID, "roadmap");
   assert.equal((await send(admin(`/v1/inbox/${id}/accept`, { method: "POST", body: "{}" }), environment(), deps)).status, 409);
 });
 
@@ -154,6 +158,7 @@ test("the roadmap feed is public and readable from any origin", async () => {
   const response = await send(new Request("https://feedback.test/v1/roadmap", { headers: { Origin: "https://example.com" } }));
   assert.equal(response.status, 200);
   assert.equal(response.headers.get("Access-Control-Allow-Origin"), "*");
+  assert.equal(response.headers.get("Cache-Control"), "public, max-age=10");
   assert.deepEqual(await response.json(), { schemaVersion: 1, updated: null, items: [] });
 });
 
@@ -163,4 +168,17 @@ test("preflight answers only the site origin", async () => {
   assert.equal(ok.status, 200);
   assert.equal(ok.headers.get("Access-Control-Allow-Methods"), "POST, OPTIONS");
   assert.equal((await send(preflight("https://evil.example"))).status, 403);
+});
+
+test("reports that never reached Discord are posted later, once", async () => {
+  const deps = dependencies({ now: 1_000_000 });
+  await send(post(body()), environment(), deps);
+  await send(post(body({ title: "Second report" })), environment(), dependencies({ store: deps.store, now: 1_100_000 }));
+  const later = dependencies({ store: deps.store, discord: fakeDiscord(), now: 1_000_000 + 2 * 60 * 1000 + 1 });
+  assert.equal(await announcePending(later, environment()), 1);
+  assert.equal(later.discord.calls[0].message.embeds[0].title, "Guide freezes on scroll");
+  assert.equal(await announcePending(later, environment()), 0);
+  later.now += 10 * 60 * 1000;
+  assert.equal(await announcePending(later, environment()), 1);
+  assert.equal(await announcePending(dependencies({ store: deps.store }), environment()), 0);
 });

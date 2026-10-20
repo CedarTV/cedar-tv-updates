@@ -7,6 +7,7 @@ CEDAR_WEB_ORIGIN = "https://cedartv.github.io"
 # Discord triage (optional; leave empty to run without Discord).
 DISCORD_PUBLIC_KEY = ""
 DISCORD_TRIAGE_CHANNEL_ID = ""
+DISCORD_ROADMAP_CHANNEL_ID = ""
 DISCORD_OWNER_ID = ""
 
 # Secrets (set with `wrangler secret put`, never committed):
@@ -21,7 +22,7 @@ database_id = "00000000-0000-0000-0000-000000000000"
 migrations_dir = "migrations"
 
 [triggers]
-crons = ["41 4 * * *"]
+crons = ["*/5 * * * *", "41 4 * * *"]
 
 [[ratelimits]]
 name = "SUBMIT_RATE_LIMITER"

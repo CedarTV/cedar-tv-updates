@@ -7,7 +7,7 @@ text.
 
 It also holds the roadmap: items live in D1, the public roadmap page reads `/v1/roadmap`, and
 they're edited from Cedar Tracker (a local app in the private Cedar repository) or from the
-private `#tracker-triage` Discord channel.
+private `#tracker-triage` and `#roadmap` Discord channels.
 
 ## Endpoints
 
@@ -15,7 +15,7 @@ private `#tracker-triage` Discord channel.
   the apps send `X-Cedar-Client: app` and no `Origin`. Fields: `schemaVersion` (1), `kind`
   (`bug`/`feature`), `title` (3–120), `details` (10–4,000), `platform`, and optional `appVersion`,
   `osVersion`, `deviceModel`, `contact` (email). Answers `201 { reference }`.
-- `GET /v1/roadmap`: public, any origin, cached for 30 seconds. Only items marked public with a
+- `GET /v1/roadmap`: public, any origin, cached for 10 seconds. Only items marked public with a
   public status, and only public fields (see `scripts/tracker_feed.mjs` in the site).
 - Admin (bearer `ADMIN_TOKEN`, no browser origin): `GET /v1/inbox?state=…`,
   `POST /v1/inbox/:id/accept|merge|discard`, `GET|POST /v1/items`, `PUT|DELETE /v1/items/:id`.
@@ -27,8 +27,14 @@ private `#tracker-triage` Discord channel.
 
 Each new report is posted to `DISCORD_TRIAGE_CHANNEL_ID` with **Approve** (opens a form for the
 public title and summary), **Keep private**, **Merge into…**, **Discard** and, when an email was
-given, **Show email** (ephemeral, never posted). Approved items keep a panel with status buttons;
-**Shipped**/**Fixed** ask for the version. Changes from Cedar Tracker refresh the panel.
+given, **Show email** (ephemeral, never posted). Accepting closes the report's message and posts
+the item's panel in `DISCORD_ROADMAP_CHANNEL_ID`: status buttons (**Shipped**/**Fixed** ask for
+the version), **Edit wording** and **Hide from roadmap**. Changes from Cedar Tracker refresh the
+panel. `/roadmap feature` and `/roadmap bug` (with a starting status) add an item directly.
+
+A cron every five minutes posts any untriaged report that never reached Discord (sent before it
+was configured, or during an outage), skipping reports less than two minutes old. The daily cron
+handles retention.
 
 The **Track as bug** and **Track as feature** message commands turn any Discord post into a
 report. For forum threads, status changes apply the matching moderated tag (Planned, Shipped,

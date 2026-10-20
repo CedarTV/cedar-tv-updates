@@ -3,17 +3,39 @@
 import { closedSubmissionMessage, itemMessage } from "./discord-render.js";
 import { FeedbackError } from "./errors.js";
 import { recordSubmission, validateSubmission } from "./feedback.js";
-import { acceptSubmission, discardSubmission, mergeSubmission, updateItem } from "./operations.js";
-import { CLOSED_STATUSES, itemNumber, statusInfo } from "./tracker.js";
+import {
+  acceptedOutcome, acceptSubmission, createItem, discardSubmission, ensureItemMessage, mergeSubmission, updateItem,
+} from "./operations.js";
+import { CLOSED_STATUSES, itemNumber, STATUSES, statusInfo } from "./tracker.js";
 
 const TYPE = { ping: 1, command: 2, component: 3, modal: 5 };
 const REPLY = { pong: 1, message: 4, update: 7, modal: 9 };
 const EPHEMERAL = 64;
 const THREAD_TYPES = new Set([10, 11, 12]);
 
+const statusChoices = (kind) => STATUSES[kind]
+  .filter((status) => status.public)
+  .map((status) => ({ name: status.label, value: status.id }));
+
 export const COMMANDS = Object.freeze([
   { name: "Track as bug", type: 3, default_member_permissions: "0" },
   { name: "Track as feature", type: 3, default_member_permissions: "0" },
+  {
+    name: "roadmap",
+    description: "Add an item to the public Cedar roadmap",
+    type: 1,
+    default_member_permissions: "0",
+    options: [
+      {
+        type: 1, name: "feature", description: "Add a feature",
+        options: [{ type: 3, name: "status", description: "Where it starts on the roadmap", required: true, choices: statusChoices("feature") }],
+      },
+      {
+        type: 1, name: "bug", description: "Add a known issue",
+        options: [{ type: 3, name: "status", description: "Where it starts on the roadmap", required: true, choices: statusChoices("bug") }],
+      },
+    ],
+  },
 ]);
 
 const hexBytes = (hex) => Uint8Array.from(hex.match(/.{2}/g) ?? [], (pair) => Number.parseInt(pair, 16));
@@ -80,8 +102,11 @@ const component = async (interaction, env, deps) => {
         const label = statusInfo(submission.kind, rest[0])?.label ?? rest[0];
         return modal(`m:approve:${rest[0]}:${submissionID}`, `Approve as ${label}`, wordingInputs(submission.title.slice(0, 120), ""));
       }
-      case "private":
-        return update(itemMessage(await acceptSubmission(deps, submissionID, {}, silent)));
+      case "private": {
+        const submission = await getSubmission(deps, submissionID);
+        const item = await acceptSubmission(deps, submissionID, {}, silent);
+        return update(closedSubmissionMessage(submission, acceptedOutcome(item, env)));
+      }
       case "discard": {
         const submission = await discardSubmission(deps, submissionID, silent);
         return update(closedSubmissionMessage(submission, "Discarded."));
@@ -154,10 +179,22 @@ const modalSubmit = async (interaction, env, deps) => {
   const values = modalValues(interaction.data.components);
   const silent = { refreshMessage: false };
   switch (action) {
-    case "approve":
-      return update(itemMessage(await acceptSubmission(deps, rest[1], {
+    case "approve": {
+      const submission = await getSubmission(deps, rest[1]);
+      const item = await acceptSubmission(deps, rest[1], {
         status: rest[0], public: true, title: values.title, summary: values.summary ?? "",
-      }, silent)));
+      }, silent);
+      return update(closedSubmissionMessage(submission, acceptedOutcome(item, env)));
+    }
+    case "create": {
+      const [kind, status] = rest;
+      const item = await createItem(deps, {
+        kind, status, public: true, title: values.title, summary: values.summary ?? "", shippedIn: values.shippedIn ?? "",
+      });
+      ensureItemMessage(deps, env, item);
+      const where = env.DISCORD_ROADMAP_CHANNEL_ID ? ` Its panel is in <#${env.DISCORD_ROADMAP_CHANNEL_ID}>.` : "";
+      return notice(`Added **${item.id}** ${item.title} to the roadmap.${where}`);
+    }
     case "edit":
       return update(itemMessage(await updateItem(deps, rest[0], { title: values.title, summary: values.summary ?? "" }, silent)));
     case "ship":
@@ -178,6 +215,17 @@ const modalSubmit = async (interaction, env, deps) => {
     }
   }
   throw new FeedbackError(400, "unknown_action");
+};
+
+// /roadmap feature|bug status:… opens a form for the new item's public wording.
+const roadmapCommand = (interaction) => {
+  const subcommand = interaction.data.options?.[0];
+  const kind = subcommand?.name;
+  const status = subcommand?.options?.find((option) => option.name === "status")?.value;
+  if (!STATUSES[kind] || !statusInfo(kind, status)?.public) throw new FeedbackError(400, "unknown_action");
+  const inputs = wordingInputs("", "");
+  if (["shipped", "fixed"].includes(status)) inputs.push(shipInputs({ shippedIn: "", releaseURL: "" })[0]);
+  return modal(`m:create:${kind}:${status}`, `New ${kind === "bug" ? "known issue" : "feature"} · ${statusInfo(kind, status).label}`, inputs);
 };
 
 // "Track as bug" / "Track as feature" on any message: opens a prefilled modal.
@@ -225,7 +273,9 @@ export const handleInteraction = async (request, env, deps) => {
   try {
     if (interaction.type === TYPE.component) return await component(interaction, env, deps);
     if (interaction.type === TYPE.modal) return await modalSubmit(interaction, env, deps);
-    if (interaction.type === TYPE.command) return messageCommand(interaction);
+    if (interaction.type === TYPE.command) {
+      return interaction.data.name === "roadmap" ? roadmapCommand(interaction) : messageCommand(interaction);
+    }
   } catch (error) {
     if (error instanceof FeedbackError) return notice(describe(error));
     throw error;

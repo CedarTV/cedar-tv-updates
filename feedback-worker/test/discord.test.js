@@ -61,14 +61,17 @@ test("approve opens a prefilled modal, and submitting it publishes the item", as
 
   const done = await call(deps, submitModal(`m:approve:planned:${id}`, { title: "Picture-in-picture on Apple TV", summary: "Keep a game in the corner." }));
   assert.equal(done.body.type, 7);
-  assert.match(done.body.data.embeds[0].author.name, /CDR-1/);
+  assert.match(done.body.data.embeds[0].description, /Approved as \*\*CDR-1\*\* \(Planned\)\. Its panel is in <#roadmap>/);
+  assert.equal(done.body.data.components.length, 0);
+  const panel = deps.discord.calls.find((entry) => entry.op === "send" && entry.channelID === "roadmap");
+  assert.match(panel.message.embeds[0].author.name, /CDR-1/);
   const [item] = deps.store.items;
   assert.equal(item.status, "planned");
   assert.equal(item.public, true);
   assert.equal(item.title, "Picture-in-picture on Apple TV");
   const feed = await (await respond(new Request("https://feedback.test/v1/roadmap"), env, deps)).json();
   assert.equal(feed.items[0].summary, "Keep a game in the corner.");
-  // The interaction answer updates the message, so no extra REST edit is made.
+  // The interaction answer updates the triage message, so no extra REST edit is made.
   assert.equal(deps.discord.calls.filter((entry) => entry.op === "edit").length, 0);
 });
 
@@ -175,4 +178,33 @@ test("items created in Cedar Tracker get a Discord control panel", async () => {
   await deps.settle();
   assert.equal(deps.discord.calls.at(-1).op, "edit");
   assert.equal(deps.discord.calls.at(-1).messageID, "1001");
+});
+
+test("/roadmap adds an item directly and posts its panel", async () => {
+  const deps = dependencies({ discord: fakeDiscord() });
+  const command = (subcommand, status) => interaction({
+    type: 2,
+    data: { name: "roadmap", type: 1, options: [{ type: 1, name: subcommand, options: [{ type: 3, name: "status", value: status }] }] },
+  });
+  const opened = await call(deps, command("feature", "shipped"));
+  assert.equal(opened.body.type, 9);
+  assert.equal(opened.body.data.custom_id, "m:create:feature:shipped");
+  assert.deepEqual(opened.body.data.components.map((row) => row.components[0].custom_id), ["title", "summary", "shippedIn"]);
+  assert.match((await call(deps, command("bug", "planned"))).body.data.content, /didn’t work/);
+
+  const added = await call(deps, submitModal("m:create:feature:shipped", { title: "Mini player", summary: "Float a small player.", shippedIn: "1.1.0 (80)" }));
+  assert.match(added.body.data.content, /Added \*\*CDR-1\*\* Mini player/);
+  assert.equal(added.body.data.flags, 64);
+  const [item] = deps.store.items;
+  assert.deepEqual([item.status, item.public, item.shippedIn], ["shipped", true, "1.1.0 (80)"]);
+  assert.equal(item.discordChannelID, "roadmap");
+  const feed = await (await respond(new Request("https://feedback.test/v1/roadmap"), env, deps)).json();
+  assert.equal(feed.items[0].shippedIn, "1.1.0 (80)");
+});
+
+test("the /roadmap command offers only public statuses for each kind", async () => {
+  const { COMMANDS } = await import("../src/discord.js");
+  const roadmap = COMMANDS.find((command) => command.name === "roadmap");
+  const choices = Object.fromEntries(roadmap.options.map((option) => [option.name, option.options[0].choices.map((choice) => choice.value)]));
+  assert.deepEqual(choices, { feature: ["considering", "planned", "in-progress", "shipped"], bug: ["investigating", "in-progress", "fixed"] });
 });

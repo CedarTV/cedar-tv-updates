@@ -91,12 +91,12 @@ test("pricing only ever asks for nothing", async () => {
   assert.ok(prices.every((price) => price === 0));
 });
 
-test("roadmap reads the published release catalog", async () => {
+test("roadmap shows only tracker items and refreshes itself", async () => {
   const page = await readFile("public/roadmap/index.html", "utf8");
   const script = await readFile("public/roadmap/roadmap.js", "utf8");
   assert.match(page, /<link rel="canonical" href="https:\/\/cedartv\.github\.io\/cedar-tv-updates\/roadmap\/">/);
-  for (const status of ["preview", "testflight", "released"]) {
-    assert.match(page, new RegExp(`data-roadmap-status="${status}"`));
-  }
-  assert.match(script, /fetch\("\.\.\/releases\/releases\.json"/);
+  assert.doesNotMatch(page, /data-roadmap-status=/);
+  assert.doesNotMatch(script, /releases\.json/);
+  assert.match(script, /setInterval\(/);
+  assert.match(script, /visibilitychange/);
 });
