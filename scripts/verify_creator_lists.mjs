@@ -140,9 +140,18 @@ function makeChecker({ traktClientID, tmdbAPIKey }) {
     },
   };
   const cache = new Map();
+  // MDBList now and then answers 404 for a list that is there, so a missing list is read again
+  // before the check fails. A list that has really gone stays missing.
+  const confirmed = async reference => {
+    const run = () => queues[reference.provider](() => check[reference.provider](reference));
+    const first = await run();
+    if (first.status !== "missing") return first;
+    await sleep(15_000);
+    return run();
+  };
   return reference => {
     if (reference.invalid) return Promise.resolve({ status: "missing", detail: "malformed identifier" });
-    if (!cache.has(reference.key)) cache.set(reference.key, queues[reference.provider](() => check[reference.provider](reference)));
+    if (!cache.has(reference.key)) cache.set(reference.key, confirmed(reference));
     return cache.get(reference.key);
   };
 }
