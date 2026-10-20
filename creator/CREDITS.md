@@ -120,6 +120,15 @@ Configurations Included:
 - **Action Adrenaline** (5 branches): Curated from community lists by **lish408** (`gun-fu-modern-tactical-action`), **travis_mcnelly** (`top-martial-arts-movies`), **hdlists** (`best-heist-movies-of-all-time`), alongside TMDB Collections & actor retrospectives.
 - **Decades Chronicles** (2 branches): Adapted from community decade structures and powered by TMDB historical decade queries.
 
+### 4.1 List repairs (2026-10-20)
+
+Some lists used by these setups went private or were renamed after the setups were published. They were re-pointed so every row still loads without an account:
+
+- **Renamed MDBList lists** now use the curator's current slug for the same MDBList list ID, so the original curator keeps the credit.
+- **snoak's Trakt lists** (now private) use snoak's matching MDBList lists. Where snoak has no MDBList copy (the "Top" streaming lists, Hulu, MagellanTV and Curiosity Stream rows), they use Cedar's own streaming-service rows from TMDB.
+- **Franchise lists** by **drjenkins**, **nobnobz**, **jarvis-16255551**, **nxsxs** and **exoduso** use TMDB Collections.
+- **Replacement public lists:** Trakt lists by **onuryasar** (Letterboxd Top 250 Narrative Feature Films), **majeed_pk** (gun-fight movies), **thetryingscotsman** (cosmic horror), **RavynLoony** (J-Horror), **rzepkowski** (hacker movies), **ImKaptain** (mecha anime) and **29zombies** (zombies).
+
 ---
 
 ## 5. Website Attribution Guidelines

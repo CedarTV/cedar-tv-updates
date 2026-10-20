@@ -23,69 +23,72 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/streaming/wide/rdnoni/tinted/appletv-wide-tinted.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
             "originalLanguageCodes": [],
             "productionCompanyIDs": [],
-            "streamingProviderIDs": []
+            "streamingProviderIDs": [
+              "350"
+            ],
+            "sortOrder": "popularity"
           },
           "hidesTitle": true,
           "id": "84EC7513-1E56-4032-9D66-2A74DF2F4B2B",
           "query": {
-            "identifier": "snoak|top-apple-tv-movies",
-            "kind": "curatedList",
+            "kind": "popular",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "350"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "099A0A9B-8FE6-5920-AEF5-E36845286962",
               "query": {
-                "identifier": "snoak|top-apple-tv-movies",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Apple TV+ Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "shows",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "350"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "343E0270-860D-590D-B588-F2C76C1D65B7",
               "query": {
-                "identifier": "snoak|top-apple-tv-shows",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Apple TV+ Shows"
@@ -222,69 +225,72 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/streaming/wide/rdnoni/tinted/disney-wide-tinted.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
             "originalLanguageCodes": [],
             "productionCompanyIDs": [],
-            "streamingProviderIDs": []
+            "streamingProviderIDs": [
+              "337"
+            ],
+            "sortOrder": "popularity"
           },
           "hidesTitle": true,
           "id": "4A937ECC-2794-4BC6-8326-9B9FD8D457B2",
           "query": {
-            "identifier": "snoak|top-disney-movies",
-            "kind": "curatedList",
+            "kind": "popular",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "337"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "18FFC929-C25A-5B77-99E3-21AAC3F2AEF1",
               "query": {
-                "identifier": "snoak|top-disney-movies",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Disney+ Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "shows",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "337"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "BE476698-F974-54BC-9671-280D4A52E6B6",
               "query": {
-                "identifier": "snoak|top-disney-shows",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Disney+ Shows"
@@ -296,69 +302,75 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/streaming/wide/rdnoni/tinted/hbomax-wide-tinted.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
             "originalLanguageCodes": [],
             "productionCompanyIDs": [],
-            "streamingProviderIDs": []
+            "streamingProviderIDs": [
+              "1899",
+              "1825"
+            ],
+            "sortOrder": "popularity"
           },
           "hidesTitle": true,
           "id": "4E018798-ABB7-4729-B82E-62F0ED04C6B4",
           "query": {
-            "identifier": "snoak|top-hbo-max-movies",
-            "kind": "curatedList",
+            "kind": "popular",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "1899",
+                  "1825"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "9E40B4A0-D8B7-5E13-8660-6251F094740D",
               "query": {
-                "identifier": "snoak|top-hbo-max-movies",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top HBO Max Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "shows",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "1899",
+                  "1825"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "D4F406ED-4BA7-5C50-B75E-83FF37A3671A",
               "query": {
-                "identifier": "snoak|top-hbo-max-shows",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top HBO Max Shows"
@@ -370,7 +382,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/streaming/wide/rdnoni/tinted/kdramaplus-wide-tinted.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -388,12 +400,14 @@
           "query": {
             "identifier": "snoak|popular-kdrama-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "130778"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -410,13 +424,15 @@
               "query": {
                 "identifier": "snoak|popular-kdrama-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130778"
+                }
               },
               "title": "Popular KDrama Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -433,7 +449,9 @@
               "query": {
                 "identifier": "snoak|popular-kdrama-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130775"
+                }
               },
               "title": "Popular KDrama Shows"
             }
@@ -444,69 +462,75 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/streaming/wide/rdnoni/tinted/netflixdark-wide-tinted.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
             "originalLanguageCodes": [],
             "productionCompanyIDs": [],
-            "streamingProviderIDs": []
+            "streamingProviderIDs": [
+              "8",
+              "1796"
+            ],
+            "sortOrder": "popularity"
           },
           "hidesTitle": true,
           "id": "47E486A2-4F34-4F64-8D23-CFE6E4CB4268",
           "query": {
-            "identifier": "snoak|top-netflix-movies",
-            "kind": "curatedList",
+            "kind": "popular",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "8",
+                  "1796"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "88DABD80-5328-58EB-AF22-578DB81A6465",
               "query": {
-                "identifier": "snoak|top-netflix-movies",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Netflix Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "shows",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "8",
+                  "1796"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "E9A1DCDB-D82B-5508-B0FB-BD12608855B2",
               "query": {
-                "identifier": "snoak|top-netflix-shows",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Netflix Shows"
@@ -518,69 +542,75 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/streaming/wide/rdnoni/tinted/netflixred-wide-tinted.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
             "originalLanguageCodes": [],
             "productionCompanyIDs": [],
-            "streamingProviderIDs": []
+            "streamingProviderIDs": [
+              "8",
+              "1796"
+            ],
+            "sortOrder": "popularity"
           },
           "hidesTitle": true,
           "id": "7CAAB902-6830-4A76-B5C0-25E2DC229D91",
           "query": {
-            "identifier": "snoak|top-netflix-movies",
-            "kind": "curatedList",
+            "kind": "popular",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "8",
+                  "1796"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "349305AD-3E63-58E0-BDF8-4026E4833D06",
               "query": {
-                "identifier": "snoak|top-netflix-movies",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Netflix Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "shows",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "8",
+                  "1796"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "56C72479-A016-5BCD-BA1C-8FECBCBD4843",
               "query": {
-                "identifier": "snoak|top-netflix-shows",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Netflix Shows"
@@ -592,69 +622,72 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/streaming/wide/rdnoni/tinted/paramount-wide-tinted.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
             "originalLanguageCodes": [],
             "productionCompanyIDs": [],
-            "streamingProviderIDs": []
+            "streamingProviderIDs": [
+              "2303"
+            ],
+            "sortOrder": "popularity"
           },
           "hidesTitle": true,
           "id": "3E4B2F6F-35B9-487C-896F-BC87EDC891CD",
           "query": {
-            "identifier": "snoak|top-paramount-movies",
-            "kind": "curatedList",
+            "kind": "popular",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "2303"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "CBBA9A08-5D43-5558-BD84-9062D28C35FA",
               "query": {
-                "identifier": "snoak|top-paramount-movies",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Paramount+ Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "shows",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "2303"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "A289F31A-FA81-5965-A5E4-C9E3A1C1D32F",
               "query": {
-                "identifier": "snoak|top-paramount-shows",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Paramount+ Shows"
@@ -666,69 +699,75 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/streaming/wide/rdnoni/tinted/primevideo-wide-tinted.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
             "originalLanguageCodes": [],
             "productionCompanyIDs": [],
-            "streamingProviderIDs": []
+            "streamingProviderIDs": [
+              "9",
+              "2100"
+            ],
+            "sortOrder": "popularity"
           },
           "hidesTitle": true,
           "id": "65143B14-C7C4-4811-B3FA-7ACE358B07E0",
           "query": {
-            "identifier": "snoak|top-amazon-prime-movies",
-            "kind": "curatedList",
+            "kind": "popular",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "9",
+                  "2100"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "48451130-48FF-5D27-83EE-FE594D1F648D",
               "query": {
-                "identifier": "snoak|top-amazon-prime-movies",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Amazon Prime Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "shows",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "9",
+                  "2100"
+                ],
+                "sortOrder": "popularity"
               },
               "id": "730BAE95-0036-512C-8C69-67D0275F749A",
               "query": {
-                "identifier": "snoak|top-amazon-prime-shows",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Top Amazon Prime Shows"

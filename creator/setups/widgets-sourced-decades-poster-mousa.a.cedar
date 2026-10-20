@@ -23,7 +23,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/poster/mousa.a/1960s-poster.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -41,12 +41,14 @@
           "query": {
             "identifier": "snoak|popular-1960s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "144321"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -63,7 +65,9 @@
               "query": {
                 "identifier": "snoak|popular-1960s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "144321"
+                }
               },
               "title": "Popular 1960s Movies"
             }
@@ -74,7 +78,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/poster/mousa.a/1970s-poster.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -92,12 +96,14 @@
           "query": {
             "identifier": "snoak|popular-1970s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "127962"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -114,7 +120,9 @@
               "query": {
                 "identifier": "snoak|popular-1970s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "127962"
+                }
               },
               "title": "Popular 1970s Movies"
             }
@@ -125,7 +133,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/poster/mousa.a/1980s-poster.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -141,14 +149,16 @@
           "hidesTitle": true,
           "id": "1F8B097C-1711-4CF5-BD70-422029EDDCA8",
           "query": {
-            "identifier": "snoak|popular-1980s-movies",
+            "identifier": "snoak|top-1980s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91301"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -163,9 +173,11 @@
               },
               "id": "7AD5039D-3F4F-5DB8-BC47-38CA130D591E",
               "query": {
-                "identifier": "snoak|popular-1980s-movies",
+                "identifier": "snoak|top-1980s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91301"
+                }
               },
               "title": "Popular 1980s Movies"
             }
@@ -176,7 +188,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/poster/mousa.a/1990s-poster.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -192,14 +204,16 @@
           "hidesTitle": true,
           "id": "9CBBB2CF-5B35-4C8F-96DA-0FA51FAE41ED",
           "query": {
-            "identifier": "snoak|popular-1990s-movies",
+            "identifier": "snoak|top-1990s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91300"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -214,9 +228,11 @@
               },
               "id": "17D6118D-CFF6-5BFE-8943-4E638D9DAAE8",
               "query": {
-                "identifier": "snoak|popular-1990s-movies",
+                "identifier": "snoak|top-1990s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91300"
+                }
               },
               "title": "Popular 1990s Movies"
             }
@@ -227,7 +243,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/poster/mousa.a/2000s-poster.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -243,14 +259,16 @@
           "hidesTitle": true,
           "id": "3423DED3-6B26-44FD-96A0-B5304E74B108",
           "query": {
-            "identifier": "snoak|popular-2000s-movies",
+            "identifier": "snoak|top-2000s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91302"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -265,9 +283,11 @@
               },
               "id": "8DA08187-7E59-5BAC-A3B6-5EF73B768472",
               "query": {
-                "identifier": "snoak|popular-2000s-movies",
+                "identifier": "snoak|top-2000s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91302"
+                }
               },
               "title": "Popular 2000s Movies"
             }
@@ -278,7 +298,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/poster/mousa.a/2010s-poster.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -294,14 +314,16 @@
           "hidesTitle": true,
           "id": "3DDBE12D-FCE4-4E14-8742-63E0FC3A41DE",
           "query": {
-            "identifier": "snoak|popular-2010s-movies",
+            "identifier": "snoak|top-2010s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91303"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -316,9 +338,11 @@
               },
               "id": "AC36371E-1C52-5189-92E6-7B91C8D917A7",
               "query": {
-                "identifier": "snoak|popular-2010s-movies",
+                "identifier": "snoak|top-2010s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91303"
+                }
               },
               "title": "Popular 2010s Movies"
             }
@@ -329,7 +353,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/decades/poster/mousa.a/2020s-poster.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -345,14 +369,16 @@
           "hidesTitle": true,
           "id": "7A0B9FCC-D32A-4761-92DD-CCDE36ED98E1",
           "query": {
-            "identifier": "snoak|popular-2020s-movies",
+            "identifier": "snoak|top-2020s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91304"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -367,9 +393,11 @@
               },
               "id": "AA3227C7-741F-5099-B7AA-F67A6BEF4FCB",
               "query": {
-                "identifier": "snoak|popular-2020s-movies",
+                "identifier": "snoak|top-2020s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91304"
+                }
               },
               "title": "Popular 2020s Movies"
             }

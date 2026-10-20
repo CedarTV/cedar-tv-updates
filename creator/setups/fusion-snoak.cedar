@@ -2,7 +2,7 @@
   "branches": [
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -29,16 +29,18 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|today-s-most-popular-movies-on-justwatch",
+        "identifier": "snoak|todays-most-popular-movies-on-justwatch",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "217427"
+        }
       },
       "schemaVersion": 2,
       "title": "Today's Most Popular Movies"
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -65,9 +67,11 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|today-s-most-popular-shows-on-justwatch",
+        "identifier": "snoak|todays-most-popular-shows-on-justwatch",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "217429"
+        }
       },
       "schemaVersion": 2,
       "title": "Today's Most Popular Shows"
@@ -152,7 +156,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/gkHRm77c/trending-movies.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -168,14 +172,16 @@
           "hidesTitle": true,
           "id": "434c98a3-ceb5-48d8-a9b3-06bd5d278594",
           "query": {
-            "identifier": "snoak|trakt-s-trending-movies",
+            "identifier": "snoak|trending-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "87667"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -190,9 +196,11 @@
               },
               "id": "2A2CBEC0-F01C-5009-AB64-8F3206DF2AE3",
               "query": {
-                "identifier": "snoak|trakt-s-trending-movies",
+                "identifier": "snoak|trending-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "87667"
+                }
               },
               "title": "Trakt's Trending Movies"
             }
@@ -203,7 +211,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/nhVmzk8c/trending-shows.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -221,12 +229,14 @@
           "query": {
             "identifier": "snoak|trakt-s-trending-shows",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "88434"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -243,7 +253,9 @@
               "query": {
                 "identifier": "snoak|trakt-s-trending-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "88434"
+                }
               },
               "title": "Trakt's Trending Shows"
             }
@@ -254,7 +266,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/sD4SsLLj/latest-movies.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -270,14 +282,16 @@
           "hidesTitle": true,
           "id": "fb5c8586-d4c9-471d-ab66-10a73ce80433",
           "query": {
-            "identifier": "snoak|latest-streaming-movies",
+            "identifier": "snoak|latest-movies-digital-release",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "86934"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -292,9 +306,11 @@
               },
               "id": "32242CB3-4BB1-5A22-A3DA-8DF188F521A8",
               "query": {
-                "identifier": "snoak|latest-streaming-movies",
+                "identifier": "snoak|latest-movies-digital-release",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86934"
+                }
               },
               "title": "Latest Streaming Movies"
             }
@@ -305,7 +321,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/TYJmfssR/latest-shows.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -321,14 +337,16 @@
           "hidesTitle": true,
           "id": "0c54e7f6-4363-4120-b86d-3e1a243db378",
           "query": {
-            "identifier": "snoak|latest-shows",
+            "identifier": "snoak|latest-tv-shows",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "86710"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -343,9 +361,11 @@
               },
               "id": "58CB5120-154E-55D2-A336-A9C3EF3C0050",
               "query": {
-                "identifier": "snoak|latest-shows",
+                "identifier": "snoak|latest-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86710"
+                }
               },
               "title": "Latest Shows"
             }
@@ -397,7 +417,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/3R9D8yrK/netflix.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -415,12 +435,14 @@
           "query": {
             "identifier": "snoak|latest-netflix-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "86752"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -437,13 +459,15 @@
               "query": {
                 "identifier": "snoak|latest-netflix-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86752"
+                }
               },
               "title": "Latest Netflix Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -458,9 +482,11 @@
               },
               "id": "961D16FE-6622-528C-B6B1-A0D39036160A",
               "query": {
-                "identifier": "snoak|latest-netflix-shows",
+                "identifier": "snoak|latest-netflix-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86751"
+                }
               },
               "title": "Latest Netflix Shows"
             }
@@ -471,7 +497,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/JzkSVMTy/prime-video.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -489,12 +515,14 @@
           "query": {
             "identifier": "snoak|latest-amazon-prime-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "86755"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -511,13 +539,15 @@
               "query": {
                 "identifier": "snoak|latest-amazon-prime-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86755"
+                }
               },
               "title": "Latest Amazon Prime Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -532,9 +562,11 @@
               },
               "id": "29672575-5FC0-578C-8779-08E158F730FE",
               "query": {
-                "identifier": "snoak|latest-amazon-prime-shows",
+                "identifier": "snoak|latest-amazon-prime-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86753"
+                }
               },
               "title": "Latest Amazon Prime Shows"
             }
@@ -545,7 +577,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/j5vJxWqT/apple-tv.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -561,14 +593,16 @@
           "hidesTitle": true,
           "id": "40b2ebc1-7cf8-4a0f-96b2-433edbe4d52a",
           "query": {
-            "identifier": "snoak|latest-apple-tv-movies",
+            "identifier": "snoak|latest-apple-tv-plus-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "86757"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -583,15 +617,17 @@
               },
               "id": "9039C5AA-E528-52E4-B516-83FB67E82BEE",
               "query": {
-                "identifier": "snoak|latest-apple-tv-movies",
+                "identifier": "snoak|latest-apple-tv-plus-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86757"
+                }
               },
               "title": "Latest Apple TV+ Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -606,9 +642,11 @@
               },
               "id": "0640F2A7-A287-59D9-9A83-4D43C872AF8B",
               "query": {
-                "identifier": "snoak|latest-apple-tv-shows",
+                "identifier": "snoak|latest-apple-tv-plus-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86756"
+                }
               },
               "title": "Latest Apple TV+ Shows"
             }
@@ -619,7 +657,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/pTknW9VP/disney.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -635,14 +673,16 @@
           "hidesTitle": true,
           "id": "0c376b34-e281-41a9-8176-7aed8f9dd606",
           "query": {
-            "identifier": "snoak|latest-disney-movies",
+            "identifier": "snoak|latest-disney-plus-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "86759"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -657,15 +697,17 @@
               },
               "id": "ACE030A5-654E-5875-897D-7253B0819EB3",
               "query": {
-                "identifier": "snoak|latest-disney-movies",
+                "identifier": "snoak|latest-disney-plus-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86759"
+                }
               },
               "title": "Latest Disney+ Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -680,9 +722,11 @@
               },
               "id": "CB002ABE-2535-5E42-8035-0825DDF52270",
               "query": {
-                "identifier": "snoak|latest-disney-shows",
+                "identifier": "snoak|latest-disney-plus-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86758"
+                }
               },
               "title": "Latest Disney+ Shows"
             }
@@ -693,7 +737,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/gJ46zwcm/paramount.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -709,14 +753,16 @@
           "hidesTitle": true,
           "id": "c33aff93-382c-4c79-940d-d0cfa1b69d80",
           "query": {
-            "identifier": "snoak|latest-paramount-movies",
+            "identifier": "snoak|latest-paramount-plus-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "86762"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -731,15 +777,17 @@
               },
               "id": "04D79B30-E060-5AF5-825B-0C8E4606F753",
               "query": {
-                "identifier": "snoak|latest-paramount-movies",
+                "identifier": "snoak|latest-paramount-plus-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86762"
+                }
               },
               "title": "Latest Paramount+ Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -754,9 +802,11 @@
               },
               "id": "7FFEECE6-7C00-51C2-9B0F-F69FE5235990",
               "query": {
-                "identifier": "snoak|latest-paramount-shows",
+                "identifier": "snoak|latest-paramount-plus-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "86761"
+                }
               },
               "title": "Latest Paramount+ Shows"
             }
@@ -767,7 +817,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/3R9D8yr8/hbo-max.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -783,14 +833,16 @@
           "hidesTitle": true,
           "id": "0656de84-b29d-4009-9965-b63e58234977",
           "query": {
-            "identifier": "snoak|latest-hbo-max-movies",
+            "identifier": "snoak|latest-max-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "89647"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -805,15 +857,17 @@
               },
               "id": "CCECB738-1147-5F4A-B9F8-F2DB2DB351C8",
               "query": {
-                "identifier": "snoak|latest-hbo-max-movies",
+                "identifier": "snoak|latest-max-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "89647"
+                }
               },
               "title": "Latest HBO Max Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -828,9 +882,11 @@
               },
               "id": "1C285D14-89DF-5BBF-A4D5-FAFD378CC655",
               "query": {
-                "identifier": "snoak|latest-hbo-max-shows",
+                "identifier": "snoak|latest-max-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "89649"
+                }
               },
               "title": "Latest HBO Max Shows"
             }
@@ -841,69 +897,72 @@
         {
           "coverImageURL": "https://i.postimg.cc/bNM4BsR1/hulu.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
             "originalLanguageCodes": [],
             "productionCompanyIDs": [],
-            "streamingProviderIDs": []
+            "streamingProviderIDs": [
+              "15"
+            ],
+            "sortOrder": "releaseDate"
           },
           "hidesTitle": true,
           "id": "58eeaeed-0f1a-4d89-b1a0-e83e21d9e5e3",
           "query": {
-            "identifier": "snoak|latest-hulu-movies",
-            "kind": "curatedList",
+            "kind": "popular",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "15"
+                ],
+                "sortOrder": "releaseDate"
               },
               "id": "368404F2-60CC-547C-9F80-137970E2CAD2",
               "query": {
-                "identifier": "snoak|latest-hulu-movies",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Latest Hulu Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "shows",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
                 "originalLanguageCodes": [],
                 "productionCompanyIDs": [],
-                "streamingProviderIDs": []
+                "streamingProviderIDs": [
+                  "15"
+                ],
+                "sortOrder": "releaseDate"
               },
               "id": "AC000945-5D00-5811-8462-7B85E1133EE7",
               "query": {
-                "identifier": "snoak|latest-hulu-shows",
-                "kind": "curatedList",
+                "kind": "popular",
                 "parameters": {}
               },
               "title": "Latest Hulu Shows"
@@ -956,7 +1015,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/D06yHczT/EBR-TVA-WW-ACTION.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -974,12 +1033,14 @@
           "query": {
             "identifier": "snoak|latest-action-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128037"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -996,13 +1057,15 @@
               "query": {
                 "identifier": "snoak|latest-action-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128037"
+                }
               },
               "title": "Latest Action Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1017,9 +1080,11 @@
               },
               "id": "FD40F41F-07B0-57F0-9F87-D6016A00EA56",
               "query": {
-                "identifier": "snoak|latest-action-shows",
+                "identifier": "snoak|latest-action-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128029"
+                }
               },
               "title": "Latest Action Shows"
             }
@@ -1030,7 +1095,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/mkj2JSrf/EBR-TVA-WW-ANIMATION.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1046,14 +1111,16 @@
           "hidesTitle": true,
           "id": "ECD50011-D94E-443D-BC00-18AA772D20FA",
           "query": {
-            "identifier": "snoak|latest-animation-anime-movies",
+            "identifier": "snoak|latest-animationanime-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128039"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1068,15 +1135,17 @@
               },
               "id": "4CCFB5BA-F8EA-5C2E-8F6F-E0B7320FBA0C",
               "query": {
-                "identifier": "snoak|latest-animation-anime-movies",
+                "identifier": "snoak|latest-animationanime-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128039"
+                }
               },
               "title": "Latest Animation/Anime Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1091,9 +1160,11 @@
               },
               "id": "63E3CF71-36D4-5ACB-9389-E69F17C825E1",
               "query": {
-                "identifier": "snoak|latest-animation-anime-shows",
+                "identifier": "snoak|latest-animationanime-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128038"
+                }
               },
               "title": "Latest Animation/Anime Shows"
             }
@@ -1104,7 +1175,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/Y0RqZxC5/EBR-TVA-WW-COMEDY.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1122,12 +1193,14 @@
           "query": {
             "identifier": "snoak|latest-comedy-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128040"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1144,13 +1217,15 @@
               "query": {
                 "identifier": "snoak|latest-comedy-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128040"
+                }
               },
               "title": "Latest Comedy Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1167,7 +1242,9 @@
               "query": {
                 "identifier": "snoak|latest-comedy-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128041"
+                }
               },
               "title": "Latest Comedy Shows"
             }
@@ -1178,7 +1255,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/Fzps8xKt/EBR-TVA-WW-DOCUMENTARY.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1196,12 +1273,14 @@
           "query": {
             "identifier": "snoak|latest-documentary-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128027"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1218,13 +1297,15 @@
               "query": {
                 "identifier": "snoak|latest-documentary-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128027"
+                }
               },
               "title": "Latest Documentary Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1239,9 +1320,11 @@
               },
               "id": "A4421F98-B366-59EB-B8AC-404DD05063A5",
               "query": {
-                "identifier": "snoak|latest-documentary-shows",
+                "identifier": "snoak|latest-documentary-tv-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128028"
+                }
               },
               "title": "Latest Documentary Shows"
             }
@@ -1252,7 +1335,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/6qc5ghpF/EBR-TVA-WW-DRAMA-Final.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1270,12 +1353,14 @@
           "query": {
             "identifier": "snoak|latest-drama-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128043"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1292,13 +1377,15 @@
               "query": {
                 "identifier": "snoak|latest-drama-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128043"
+                }
               },
               "title": "Latest Drama Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1315,7 +1402,9 @@
               "query": {
                 "identifier": "snoak|latest-drama-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128044"
+                }
               },
               "title": "Latest Drama Shows"
             }
@@ -1326,7 +1415,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/vTbZ0KGy/EBR-TVA-WW-HORROR.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1344,12 +1433,14 @@
           "query": {
             "identifier": "snoak|latest-horror-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128045"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1366,13 +1457,15 @@
               "query": {
                 "identifier": "snoak|latest-horror-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128045"
+                }
               },
               "title": "Latest Horror Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1389,7 +1482,9 @@
               "query": {
                 "identifier": "snoak|latest-horror-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128046"
+                }
               },
               "title": "Latest Horror Shows"
             }
@@ -1400,7 +1495,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/d36tp9VS/EBR-TVA-WW-ROMANCE.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1418,12 +1513,14 @@
           "query": {
             "identifier": "snoak|latest-romance-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128261"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1440,13 +1537,15 @@
               "query": {
                 "identifier": "snoak|latest-romance-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128261"
+                }
               },
               "title": "Latest Romance Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1463,7 +1562,9 @@
               "query": {
                 "identifier": "snoak|latest-romance-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128264"
+                }
               },
               "title": "Latest Romance Shows"
             }
@@ -1474,7 +1575,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/3NYxtq3T/EBR-TVA-WW-SCIFI.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1492,12 +1593,14 @@
           "query": {
             "identifier": "snoak|latest-sci-fi-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128047"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1514,13 +1617,15 @@
               "query": {
                 "identifier": "snoak|latest-sci-fi-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128047"
+                }
               },
               "title": "Latest Sci-Fi Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1537,7 +1642,9 @@
               "query": {
                 "identifier": "snoak|latest-sci-fi-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128048"
+                }
               },
               "title": "Latest Sci-Fi Shows"
             }
@@ -1548,7 +1655,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/QChdfzjr/EBR-TVA-WW-THRILLER.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1566,12 +1673,14 @@
           "query": {
             "identifier": "snoak|latest-thriller-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128049"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1588,13 +1697,15 @@
               "query": {
                 "identifier": "snoak|latest-thriller-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128049"
+                }
               },
               "title": "Latest Thriller Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1611,7 +1722,9 @@
               "query": {
                 "identifier": "snoak|latest-thriller-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128050"
+                }
               },
               "title": "Latest Thriller Shows"
             }
@@ -1642,18 +1755,21 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "movies",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "8",
+          "1796"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "03B6E882-5CD6-558F-9D60-AA0C7586EF51",
@@ -1669,8 +1785,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-netflix-movies",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1678,18 +1793,21 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "shows",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "8",
+          "1796"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "CFE5BF44-2478-5272-81FE-DD5737672EFA",
@@ -1705,8 +1823,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-netflix-shows",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1714,18 +1831,21 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "movies",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "9",
+          "2100"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "99DFEB79-DFE3-501A-B576-55925DCBD3B9",
@@ -1741,8 +1861,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-amazon-prime-movies",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1750,18 +1869,21 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "shows",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "9",
+          "2100"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "6051CF51-F82A-557D-8F24-D33769409FED",
@@ -1777,8 +1899,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-amazon-prime-shows",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1786,18 +1907,20 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "movies",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "350"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "4D770829-F099-5671-8F69-DF8D163D7AFB",
@@ -1813,8 +1936,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-apple-tv-movies",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1822,18 +1944,20 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "shows",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "350"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "BC532814-29B1-5211-9BAB-FAE4303FFF0C",
@@ -1849,8 +1973,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-apple-tv-shows",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1858,18 +1981,20 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "movies",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "337"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "05EEF4A1-B2A9-5ECD-848E-1D87834F6C4F",
@@ -1885,8 +2010,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-disney-movies",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1894,18 +2018,20 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "shows",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "337"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "E377D6C2-F586-5A2A-AE7F-A891F492C5AE",
@@ -1921,8 +2047,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-disney-shows",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1930,18 +2055,20 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "movies",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "2303"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "EB87B50C-30BA-5F74-83B4-3FAF2F69CE53",
@@ -1957,8 +2084,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-paramount-movies",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -1966,18 +2092,20 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "shows",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "2303"
+        ],
+        "sortOrder": "popularity"
       },
       "folderOptions": [],
       "id": "2A105B48-2DEB-58A3-880F-3926A59716E4",
@@ -1993,8 +2121,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|top-paramount-shows",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -2023,7 +2150,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/D06yHczT/EBR-TVA-WW-ACTION.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2039,14 +2166,16 @@
           "hidesTitle": true,
           "id": "5fb8095e-d7b8-42b8-ba1c-1c4a82cee899",
           "query": {
-            "identifier": "snoak|popular-action-movies",
+            "identifier": "snoak|action-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91211"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2061,15 +2190,17 @@
               },
               "id": "C8DE9A55-8DDF-5B3A-ACE6-9E36322F1A34",
               "query": {
-                "identifier": "snoak|popular-action-movies",
+                "identifier": "snoak|action-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91211"
+                }
               },
               "title": "Popular Action Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2084,9 +2215,11 @@
               },
               "id": "0B8BB10B-E160-526F-9419-EF510E4F7929",
               "query": {
-                "identifier": "snoak|popular-action-shows",
+                "identifier": "snoak|action-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91213"
+                }
               },
               "title": "Popular Action Shows"
             }
@@ -2097,7 +2230,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/mkj2JSrf/EBR-TVA-WW-ANIMATION.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2113,14 +2246,16 @@
           "hidesTitle": true,
           "id": "c379a941-015e-4468-a566-16d4fe58ddf4",
           "query": {
-            "identifier": "snoak|popular-animation-anime-movies",
+            "identifier": "snoak|animationanime-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "121922"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2135,15 +2270,17 @@
               },
               "id": "FE852315-3F89-51E2-9EB5-F98018DABA9C",
               "query": {
-                "identifier": "snoak|popular-animation-anime-movies",
+                "identifier": "snoak|animationanime-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "121922"
+                }
               },
               "title": "Popular Animation/Anime Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2158,9 +2295,11 @@
               },
               "id": "5964142D-0AFF-5B37-8AD0-36BF018D30B1",
               "query": {
-                "identifier": "snoak|popular-animation-anime-shows",
+                "identifier": "snoak|animationanime-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "121921"
+                }
               },
               "title": "Popular Animation/Anime Shows"
             }
@@ -2171,7 +2310,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/Y0RqZxC5/EBR-TVA-WW-COMEDY.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2187,14 +2326,16 @@
           "hidesTitle": true,
           "id": "f42363a1-b40d-4577-9729-90b2569ce8b4",
           "query": {
-            "identifier": "snoak|popular-comedy-movies",
+            "identifier": "snoak|comedy-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91223"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2209,15 +2350,17 @@
               },
               "id": "BD9C96A4-9CFB-57BC-8059-68CF7C08AC9A",
               "query": {
-                "identifier": "snoak|popular-comedy-movies",
+                "identifier": "snoak|comedy-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91223"
+                }
               },
               "title": "Popular Comedy Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2232,9 +2375,11 @@
               },
               "id": "4F0BE0BC-DE7E-5951-8150-1486A4BF8F4F",
               "query": {
-                "identifier": "snoak|popular-comedy-shows",
+                "identifier": "snoak|comedy-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91224"
+                }
               },
               "title": "Popular Comedy Shows"
             }
@@ -2245,7 +2390,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/Fzps8xKt/EBR-TVA-WW-DOCUMENTARY.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2263,12 +2408,14 @@
           "query": {
             "identifier": "snoak|popular-documentary-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128051"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2285,13 +2432,15 @@
               "query": {
                 "identifier": "snoak|popular-documentary-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128051"
+                }
               },
               "title": "Popular Documentary Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2308,7 +2457,9 @@
               "query": {
                 "identifier": "snoak|popular-documentary-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128052"
+                }
               },
               "title": "Popular Documentary Shows"
             }
@@ -2319,7 +2470,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/6qc5ghpF/EBR-TVA-WW-DRAMA-Final.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2335,14 +2486,16 @@
           "hidesTitle": true,
           "id": "a2b75798-ebdc-434a-925c-5bc621c1df57",
           "query": {
-            "identifier": "snoak|popular-drama-movies",
+            "identifier": "snoak|drama-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91296"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2357,15 +2510,17 @@
               },
               "id": "CB9B850F-F366-56D6-BDF0-A8AAFD4DECD0",
               "query": {
-                "identifier": "snoak|popular-drama-movies",
+                "identifier": "snoak|drama-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91296"
+                }
               },
               "title": "Popular Drama Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2380,9 +2535,11 @@
               },
               "id": "6DD15927-4E29-57D3-85D4-FE08A5B0E53D",
               "query": {
-                "identifier": "snoak|popular-drama-shows",
+                "identifier": "snoak|drama-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91297"
+                }
               },
               "title": "Popular Drama Shows"
             }
@@ -2393,7 +2550,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/vTbZ0KGy/EBR-TVA-WW-HORROR.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2409,14 +2566,16 @@
           "hidesTitle": true,
           "id": "d70e69c1-fd38-4566-8e29-f664497b94e9",
           "query": {
-            "identifier": "snoak|popular-horror-movies",
+            "identifier": "snoak|horror-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91215"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2431,15 +2590,17 @@
               },
               "id": "909982EA-E400-57A2-8E82-0CF1CE2C301C",
               "query": {
-                "identifier": "snoak|popular-horror-movies",
+                "identifier": "snoak|horror-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91215"
+                }
               },
               "title": "Popular Horror Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2454,9 +2615,11 @@
               },
               "id": "FE257FFB-2701-5BF7-9FCC-9702F2142531",
               "query": {
-                "identifier": "snoak|popular-horror-shows",
+                "identifier": "snoak|horror-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91217"
+                }
               },
               "title": "Popular Horror Shows"
             }
@@ -2467,7 +2630,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/d36tp9VS/EBR-TVA-WW-ROMANCE.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2485,12 +2648,14 @@
           "query": {
             "identifier": "snoak|popular-romance-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128262"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2507,13 +2672,15 @@
               "query": {
                 "identifier": "snoak|popular-romance-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128262"
+                }
               },
               "title": "Popular Romance Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2530,7 +2697,9 @@
               "query": {
                 "identifier": "snoak|popular-romance-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128265"
+                }
               },
               "title": "Popular Romance Shows"
             }
@@ -2541,7 +2710,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/3NYxtq3T/EBR-TVA-WW-SCIFI.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2557,14 +2726,16 @@
           "hidesTitle": true,
           "id": "e45513c9-fd57-4acd-9556-92e6902818d6",
           "query": {
-            "identifier": "snoak|popular-sci-fi-movies",
+            "identifier": "snoak|science-fiction-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91220"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2579,15 +2750,17 @@
               },
               "id": "D5FD6EFB-CA71-5259-AE38-26E623777AEF",
               "query": {
-                "identifier": "snoak|popular-sci-fi-movies",
+                "identifier": "snoak|science-fiction-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91220"
+                }
               },
               "title": "Popular Sci-Fi Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2602,9 +2775,11 @@
               },
               "id": "A35718DE-834F-53BE-9566-0484A995BED4",
               "query": {
-                "identifier": "snoak|popular-sci-fi-shows",
+                "identifier": "snoak|science-fiction-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91221"
+                }
               },
               "title": "Popular Sci-Fi Shows"
             }
@@ -2615,7 +2790,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/QChdfzjr/EBR-TVA-WW-THRILLER.webp",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2631,14 +2806,16 @@
           "hidesTitle": true,
           "id": "4da74c56-cf60-4fdd-8d21-3d84458dd79e",
           "query": {
-            "identifier": "snoak|popular-thriller-movies",
+            "identifier": "snoak|thriller-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91893"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2653,15 +2830,17 @@
               },
               "id": "68E6B52A-782B-5FD3-8F36-9F76B117C335",
               "query": {
-                "identifier": "snoak|popular-thriller-movies",
+                "identifier": "snoak|thriller-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91893"
+                }
               },
               "title": "Popular Thriller Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2676,9 +2855,11 @@
               },
               "id": "E29811CA-09BD-5F10-9448-EF195EE5C202",
               "query": {
-                "identifier": "snoak|popular-thriller-shows",
+                "identifier": "snoak|thriller-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91894"
+                }
               },
               "title": "Popular Thriller Shows"
             }
@@ -2730,7 +2911,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/L5jnk6gT/20s.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2746,14 +2927,16 @@
           "hidesTitle": true,
           "id": "e9b3ec09-7613-4193-ad25-41b9261178ae",
           "query": {
-            "identifier": "snoak|popular-2020s-movies",
+            "identifier": "snoak|top-2020s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91304"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2768,9 +2951,11 @@
               },
               "id": "341A0810-82D3-56C7-ADAD-C580BEFA53D5",
               "query": {
-                "identifier": "snoak|popular-2020s-movies",
+                "identifier": "snoak|top-2020s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91304"
+                }
               },
               "title": "Popular 2020s Movies"
             }
@@ -2781,7 +2966,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/br1s0NSR/10s.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2797,14 +2982,16 @@
           "hidesTitle": true,
           "id": "22667ac4-87c9-4ef1-961f-6a1898681669",
           "query": {
-            "identifier": "snoak|popular-2010s-movies",
+            "identifier": "snoak|top-2010s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91303"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2819,9 +3006,11 @@
               },
               "id": "97F54D86-4708-571C-AE4B-22E7F8FFBE22",
               "query": {
-                "identifier": "snoak|popular-2010s-movies",
+                "identifier": "snoak|top-2010s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91303"
+                }
               },
               "title": "Popular 2010s Movies"
             }
@@ -2832,7 +3021,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/RhwN1VJK/00s.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2848,14 +3037,16 @@
           "hidesTitle": true,
           "id": "c72e3bd7-0ad6-425b-936c-97c583b441ba",
           "query": {
-            "identifier": "snoak|popular-2000s-movies",
+            "identifier": "snoak|top-2000s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91302"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2870,9 +3061,11 @@
               },
               "id": "4D0571F7-A0C2-5913-BB4C-7678BC478C49",
               "query": {
-                "identifier": "snoak|popular-2000s-movies",
+                "identifier": "snoak|top-2000s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91302"
+                }
               },
               "title": "Popular 2000s Movies"
             }
@@ -2883,7 +3076,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/J7XDCKYH/90s.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2899,14 +3092,16 @@
           "hidesTitle": true,
           "id": "2dd74771-006e-40d1-9db3-819447299076",
           "query": {
-            "identifier": "snoak|popular-1990s-movies",
+            "identifier": "snoak|top-1990s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91300"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2921,9 +3116,11 @@
               },
               "id": "E650009C-238E-5667-BA2B-A988DDD0A2E9",
               "query": {
-                "identifier": "snoak|popular-1990s-movies",
+                "identifier": "snoak|top-1990s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91300"
+                }
               },
               "title": "Popular 1990s Movies"
             }
@@ -2934,7 +3131,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/qBKhHQDz/80s.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2950,14 +3147,16 @@
           "hidesTitle": true,
           "id": "3f830227-d7f5-4d55-b435-295b8db76d09",
           "query": {
-            "identifier": "snoak|popular-1980s-movies",
+            "identifier": "snoak|top-1980s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91301"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2972,9 +3171,11 @@
               },
               "id": "60584BB0-EBCC-5B67-AF6E-6335BB1C0BC9",
               "query": {
-                "identifier": "snoak|popular-1980s-movies",
+                "identifier": "snoak|top-1980s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91301"
+                }
               },
               "title": "Popular 1980s Movies"
             }
@@ -2985,7 +3186,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/VvXd9L0j/70s.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -3003,12 +3204,14 @@
           "query": {
             "identifier": "snoak|popular-1970s-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "127962"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -3025,7 +3228,9 @@
               "query": {
                 "identifier": "snoak|popular-1970s-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "127962"
+                }
               },
               "title": "Popular 1970s Movies"
             }

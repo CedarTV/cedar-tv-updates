@@ -140,7 +140,7 @@
           "title": "Gun-Fu & Tactical Combat",
           "query": {
             "kind": "curatedList",
-            "identifier": "lish408|gun-fu-modern-tactical-action",
+            "identifier": "majeed_pk|best-shoot-em-up-gun-fight-movies",
             "parameters": {}
           },
           "filters": {
@@ -166,7 +166,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "lish408|gun-fu-modern-tactical-action",
+                "identifier": "majeed_pk|best-shoot-em-up-gun-fight-movies",
                 "parameters": {}
               },
               "filters": {
@@ -179,7 +179,7 @@
                 "productionCompanyIDs": []
               },
               "id": "source-1",
-              "title": "Gun Fu & Modern Tactical Action"
+              "title": "Best Shoot em Up, Gun Fight Movies"
             }
           ],
           "coverImageURL": "https://image.tmdb.org/t/p/w500/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
@@ -192,7 +192,7 @@
           "title": "Martial Arts Masters & Wuxia",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|41528",
+            "identifier": "travis_mcnelly-hotmail-com|top-japanese-horror",
             "parameters": {
               "listID": "41528"
             }
@@ -220,7 +220,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|41528",
+                "identifier": "travis_mcnelly-hotmail-com|top-japanese-horror",
                 "parameters": {
                   "listID": "41528"
                 }
@@ -248,7 +248,7 @@
           "title": "Heists, Cons & High Stakes",
           "query": {
             "kind": "curatedList",
-            "identifier": "hdlists|9286",
+            "identifier": "hdlists|best-heist-movies-of-all-time",
             "parameters": {
               "listID": "9286"
             }
@@ -276,7 +276,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "hdlists|9286",
+                "identifier": "hdlists|best-heist-movies-of-all-time",
                 "parameters": {
                   "listID": "9286"
                 }

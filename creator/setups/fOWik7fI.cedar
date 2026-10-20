@@ -625,7 +625,7 @@
           "hidesTitle": true,
           "id": "1F2E1BCD-80E2-4EA6-A08B-8EF744A86106",
           "query": {
-            "identifier": "chrismilton605-gmail-com|production-i-g-shows",
+            "identifier": "chrismilton605-gmail-com|production-ig-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "103387"
@@ -649,7 +649,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "chrismilton605-gmail-com|production-i-g-shows",
+                "identifier": "chrismilton605-gmail-com|production-ig-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "103387"
@@ -1273,7 +1273,7 @@
           "hidesTitle": true,
           "id": "26FD10EF-A4C0-4E9F-B1E9-665989F9FCA6",
           "query": {
-            "identifier": "axee4|anime-shounen",
+            "identifier": "axee4|anime-hounen",
             "kind": "curatedList",
             "parameters": {
               "listID": "158514"
@@ -1297,7 +1297,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "axee4|anime-shounen",
+                "identifier": "axee4|anime-hounen",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "158514"
@@ -1375,7 +1375,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/xCs18TPD/ACTION(11).png",
           "dataSource": {
-            "identifier": "mdblist-public",
+            "identifier": "trakt-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1391,16 +1391,14 @@
           "hidesTitle": true,
           "id": "377ACEEF-DA26-4AE9-9F62-CD43855BD636",
           "query": {
-            "identifier": "mwillacey71|mecha-anime",
+            "identifier": "imkaptain|anime-mecha-cyberpunk",
             "kind": "curatedList",
-            "parameters": {
-              "listID": "98352"
-            }
+            "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "mdblist-public",
+                "identifier": "trakt-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1415,17 +1413,15 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "mwillacey71|mecha-anime",
+                "identifier": "imkaptain|anime-mecha-cyberpunk",
                 "kind": "curatedList",
-                "parameters": {
-                  "listID": "98352"
-                }
+                "parameters": {}
               },
-              "title": "Mecha Anime"
+              "title": "Anime - Mecha & Cyberpunk"
             },
             {
               "dataSource": {
-                "identifier": "mdblist-public",
+                "identifier": "trakt-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1440,13 +1436,11 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "mwillacey71|mecha-anime",
+                "identifier": "imkaptain|anime-mecha-cyberpunk",
                 "kind": "curatedList",
-                "parameters": {
-                  "listID": "10296"
-                }
+                "parameters": {}
               },
-              "title": "Mecha Anime"
+              "title": "Anime - Mecha & Cyberpunk"
             }
           ],
           "tileShape": "landscape",

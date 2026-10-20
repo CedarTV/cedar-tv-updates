@@ -1585,7 +1585,7 @@
           "hidesTitle": true,
           "id": "DD115B2C-ABF1-444F-9606-D7DCD4CD5D36",
           "query": {
-            "identifier": "snoak|popular-netflix-shows",
+            "identifier": "snoak|netflix-top-10-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "86620"
@@ -1609,7 +1609,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-netflix-shows",
+                "identifier": "snoak|netflix-top-10-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86620"
@@ -1634,7 +1634,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-netflix-movies",
+                "identifier": "snoak|netflix-top-10-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86628"
@@ -1666,7 +1666,7 @@
           "hidesTitle": true,
           "id": "B2C00998-5D60-4B87-B789-AE1002769303",
           "query": {
-            "identifier": "snoak|popular-amazon-prime-shows",
+            "identifier": "snoak|amazon-prime-top-10-tv-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "86624"
@@ -1690,7 +1690,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-amazon-prime-shows",
+                "identifier": "snoak|amazon-prime-top-10-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86624"
@@ -1715,7 +1715,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-amazon-prime-movies",
+                "identifier": "snoak|amazon-prime-top-10-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86623"
@@ -1747,7 +1747,7 @@
           "hidesTitle": true,
           "id": "A2F0D94A-3577-4B82-872A-D3C7229BCA3B",
           "query": {
-            "identifier": "snoak|popular-paramount-shows",
+            "identifier": "snoak|paramount-plus-top-10-tv-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "89374"
@@ -1771,7 +1771,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-paramount-shows",
+                "identifier": "snoak|paramount-plus-top-10-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "89374"
@@ -1796,7 +1796,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-paramount-movies",
+                "identifier": "snoak|paramount-plus-top-10-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "89366"
@@ -1828,7 +1828,7 @@
           "hidesTitle": true,
           "id": "0857961F-8AD7-47E9-9EAA-3657AEB01F2A",
           "query": {
-            "identifier": "snoak|popular-disney-shows",
+            "identifier": "snoak|disney-plus-top-10-tv-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "86946"
@@ -1852,7 +1852,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-disney-shows",
+                "identifier": "snoak|disney-plus-top-10-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86946"
@@ -1877,7 +1877,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-disney-movies",
+                "identifier": "snoak|disney-plus-top-10-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86945"
@@ -1909,7 +1909,7 @@
           "hidesTitle": true,
           "id": "220F62EC-7501-4411-8285-A15A9967289D",
           "query": {
-            "identifier": "snoak|popular-apple-tv-shows",
+            "identifier": "snoak|apple-tv-top-10-tv-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "86625"
@@ -1933,7 +1933,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-apple-tv-shows",
+                "identifier": "snoak|apple-tv-top-10-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86625"
@@ -1958,7 +1958,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-apple-tv-movies",
+                "identifier": "snoak|apple-tv-top-10-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86626"
@@ -2600,7 +2600,7 @@
           "hidesTitle": true,
           "id": "864065CF-FA54-448B-B245-FE9D9993668E",
           "query": {
-            "identifier": "hdlists|family-movies-top-rated-from-1980-to-today",
+            "identifier": "hdlists|latest-hd-family-movies-top-rated-from-1980-to-today",
             "kind": "curatedList",
             "parameters": {
               "listID": "2415"
@@ -2624,7 +2624,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "hdlists|family-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-family-movies-top-rated-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2415"
@@ -3166,7 +3166,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "tvgeniekodi|top-nature-shows",
+                "identifier": "tvgeniekodi|popular-nature-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "84487"
@@ -3618,7 +3618,7 @@
           "hidesTitle": true,
           "id": "35020C2A-CB7F-412B-94AF-0FAA46E7D646",
           "query": {
-            "identifier": "snoak|popular-1980s-movies",
+            "identifier": "snoak|top-1980s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91301"
@@ -3642,7 +3642,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-1980s-movies",
+                "identifier": "snoak|top-1980s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91301"
@@ -3673,7 +3673,7 @@
           "hidesTitle": true,
           "id": "F1CB191F-565A-4B0E-9D91-18EDDD71F2C5",
           "query": {
-            "identifier": "snoak|popular-1990s-movies",
+            "identifier": "snoak|top-1990s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91300"
@@ -3697,7 +3697,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-1990s-movies",
+                "identifier": "snoak|top-1990s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91300"
@@ -3728,7 +3728,7 @@
           "hidesTitle": true,
           "id": "18900843-EE8D-43D5-AFE2-4D691276458B",
           "query": {
-            "identifier": "snoak|popular-2000s-movies",
+            "identifier": "snoak|top-2000s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91302"
@@ -3752,7 +3752,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-2000s-movies",
+                "identifier": "snoak|top-2000s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91302"
@@ -3783,7 +3783,7 @@
           "hidesTitle": true,
           "id": "C25B02F9-C31C-4FDE-A7AC-000268DA17D0",
           "query": {
-            "identifier": "snoak|popular-2010s-movies",
+            "identifier": "snoak|top-2010s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91303"
@@ -3807,7 +3807,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-2010s-movies",
+                "identifier": "snoak|top-2010s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91303"
@@ -3838,7 +3838,7 @@
           "hidesTitle": true,
           "id": "DD0C4103-044F-43FF-9346-C42332C5FC61",
           "query": {
-            "identifier": "snoak|popular-2020s-movies",
+            "identifier": "snoak|top-2020s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91304"
@@ -3862,7 +3862,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-2020s-movies",
+                "identifier": "snoak|top-2020s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91304"

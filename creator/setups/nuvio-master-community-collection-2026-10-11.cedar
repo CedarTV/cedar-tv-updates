@@ -48750,9 +48750,12 @@
               },
               "id": "src-ESTRL177",
               "query": {
-                "identifier": "1701237",
-                "kind": "metadataCollection",
-                "parameters": {}
+                "identifier": "eastrail-177-trilogy",
+                "kind": "curatedList",
+                "parameters": {
+                  "movies": "9741,381288,450465",
+                  "provider": "cedar-titles"
+                }
               },
               "title": "Eastrail 177 Trilogy"
             },
@@ -51567,9 +51570,12 @@
           "hidesTitle": true,
           "id": "folder-R1WHDLHR",
           "query": {
-            "identifier": "1701237",
-            "kind": "metadataCollection",
-            "parameters": {}
+            "identifier": "eastrail-177-trilogy",
+            "kind": "curatedList",
+            "parameters": {
+              "movies": "9741,381288,450465",
+              "provider": "cedar-titles"
+            }
           },
           "sources": [
             {
@@ -51588,9 +51594,12 @@
               },
               "id": "src-RH170JXD",
               "query": {
-                "identifier": "1701237",
-                "kind": "metadataCollection",
-                "parameters": {}
+                "identifier": "eastrail-177-trilogy",
+                "kind": "curatedList",
+                "parameters": {
+                  "movies": "9741,381288,450465",
+                  "provider": "cedar-titles"
+                }
               },
               "title": "Eastrail 177 Trilogy"
             }
@@ -74316,8 +74325,7 @@
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
@@ -74332,9 +74340,11 @@
               },
               "id": "src-Z4BYWMMO",
               "query": {
-                "identifier": "global:34819290:show",
-                "kind": "curatedList",
-                "parameters": {}
+                "identifier": "234352",
+                "kind": "personCredits",
+                "parameters": {
+                  "role": "actor"
+                }
               },
               "title": "Popular Series"
             },
@@ -74366,8 +74376,7 @@
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
@@ -74381,9 +74390,11 @@
               },
               "id": "src-IP5W35JS",
               "query": {
-                "identifier": "global:34819290:show",
-                "kind": "curatedList",
-                "parameters": {}
+                "identifier": "234352",
+                "kind": "personCredits",
+                "parameters": {
+                  "role": "actor"
+                }
               },
               "title": "Top Rated Series"
             },
@@ -74415,8 +74426,7 @@
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
@@ -74431,9 +74441,11 @@
               },
               "id": "src-WMBZ8GH0",
               "query": {
-                "identifier": "global:34819290:show",
-                "kind": "curatedList",
-                "parameters": {}
+                "identifier": "234352",
+                "kind": "personCredits",
+                "parameters": {
+                  "role": "actor"
+                }
               },
               "title": "New Series"
             }

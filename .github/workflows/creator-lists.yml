@@ -1,0 +1,45 @@
+name: Check Creator setup lists
+
+# Community Trakt and MDBList lists can go private, be renamed or be deleted at any time, which
+# leaves empty rows in the setups the website offers. This checks every list a setup uses.
+# It runs on its own so a third-party outage never blocks a Pages deploy.
+on:
+  schedule:
+    - cron: "17 9 * * 1"
+  pull_request:
+    paths:
+      - creator/**
+      - scripts/verify_creator_lists.mjs
+      - .github/workflows/creator-lists.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: creator-lists
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Set up Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: Check every list the setups use
+        env:
+          TRAKT_CLIENT_ID: ${{ secrets.TRAKT_CLIENT_ID }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: node scripts/verify_creator_lists.mjs --report creator-lists-report.json
+      - name: Upload the health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: creator-lists-report
+          path: creator-lists-report.json
+          if-no-files-found: ignore

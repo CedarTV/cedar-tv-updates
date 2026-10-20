@@ -972,7 +972,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-action-shows",
+                "identifier": "snoak|action-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91213"
@@ -997,7 +997,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-action-movies",
+                "identifier": "snoak|action-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91211"
@@ -1251,7 +1251,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-comedy-shows",
+                "identifier": "snoak|comedy-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91224"
@@ -1276,7 +1276,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "snoak|popular-comedy-movies",
+                "identifier": "snoak|comedy-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91223"
@@ -1456,7 +1456,7 @@
           "hidesTitle": true,
           "id": "7C6F89C4-0487-47EB-839C-8D0370A21BEE",
           "query": {
-            "identifier": "snoak|latest-documentary-shows",
+            "identifier": "snoak|latest-documentary-tv-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "128028"
@@ -1480,7 +1480,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|latest-documentary-shows",
+                "identifier": "snoak|latest-documentary-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "128028"
@@ -1661,7 +1661,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-drama-shows",
+                "identifier": "snoak|drama-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91297"
@@ -1686,7 +1686,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "snoak|popular-drama-movies",
+                "identifier": "snoak|drama-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91296"
@@ -1915,7 +1915,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "hdlists|family-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-family-movies-top-rated-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2415"
@@ -2095,7 +2095,7 @@
           "hidesTitle": true,
           "id": "F6CF5A1E-AFE5-43FA-8F26-0DA506E198EF",
           "query": {
-            "identifier": "snoak|popular-horror-shows",
+            "identifier": "snoak|horror-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "91217"
@@ -2119,7 +2119,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-horror-shows",
+                "identifier": "snoak|horror-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91217"
@@ -2144,7 +2144,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-horror-movies",
+                "identifier": "snoak|horror-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91215"
@@ -2529,7 +2529,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-sci-fi-shows",
+                "identifier": "snoak|science-fiction-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91221"
@@ -2554,7 +2554,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "snoak|popular-sci-fi-movies",
+                "identifier": "snoak|science-fiction-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91220"
@@ -2734,7 +2734,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-thriller-shows",
+                "identifier": "snoak|thriller-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91894"
@@ -2759,7 +2759,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "snoak|popular-thriller-movies",
+                "identifier": "snoak|thriller-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91893"
@@ -2949,7 +2949,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-1980s-movies",
+                "identifier": "snoak|top-1980s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91301"
@@ -3024,7 +3024,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-1990s-movies",
+                "identifier": "snoak|top-1990s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91300"
@@ -3099,7 +3099,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-2000s-movies",
+                "identifier": "snoak|top-2000s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91302"
@@ -3174,7 +3174,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-2010s-movies",
+                "identifier": "snoak|top-2010s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91303"
@@ -3249,7 +3249,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-2020s-movies",
+                "identifier": "snoak|top-2020s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91304"
