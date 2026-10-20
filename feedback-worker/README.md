@@ -5,8 +5,9 @@ A small Cloudflare Worker/D1 service that receives bug reports and feature reque
 sync relay in `worker/` on purpose: the relay only ever stores ciphertext, and feedback is plain
 text.
 
-Nothing here is public. The local Cedar Tracker reads the inbox with an admin token, and turns
-reviewed reports into roadmap items that are published as `public/roadmap/tracker.json`.
+It also holds the roadmap: items live in D1, the public roadmap page reads `/v1/roadmap`, and
+they're edited from Cedar Tracker (a local app in the private Cedar repository) or from the
+private `#tracker-triage` Discord channel.
 
 ## Endpoints
 
@@ -14,8 +15,29 @@ reviewed reports into roadmap items that are published as `public/roadmap/tracke
   the apps send `X-Cedar-Client: app` and no `Origin`. Fields: `schemaVersion` (1), `kind`
   (`bug`/`feature`), `title` (3–120), `details` (10–4,000), `platform`, and optional `appVersion`,
   `osVersion`, `deviceModel`, `contact` (email). Answers `201 { reference }`.
-- `GET /v1/inbox?state=new|accepted|merged|discarded`: admin bearer token, no browser origin.
-- `POST /v1/inbox/:submissionID` `{ schemaVersion, state, itemID }`: admin. Triage clears `contact`.
+- `GET /v1/roadmap`: public, any origin, cached for 30 seconds. Only items marked public with a
+  public status, and only public fields (see `scripts/tracker_feed.mjs` in the site).
+- Admin (bearer `ADMIN_TOKEN`, no browser origin): `GET /v1/inbox?state=…`,
+  `POST /v1/inbox/:id/accept|merge|discard`, `GET|POST /v1/items`, `PUT|DELETE /v1/items/:id`.
+  Triage clears the reporter's `contact`.
+- `POST /v1/discord/interactions`: Discord's signed interactions (Ed25519, `DISCORD_PUBLIC_KEY`).
+  Only `DISCORD_OWNER_ID` can act.
+
+## Discord triage
+
+Each new report is posted to `DISCORD_TRIAGE_CHANNEL_ID` with **Approve** (opens a form for the
+public title and summary), **Keep private**, **Merge into…**, **Discard** and, when an email was
+given, **Show email** (ephemeral, never posted). Approved items keep a panel with status buttons;
+**Shipped**/**Fixed** ask for the version. Changes from Cedar Tracker refresh the panel.
+
+The **Track as bug** and **Track as feature** message commands turn any Discord post into a
+report. For forum threads, status changes apply the matching moderated tag (Planned, Shipped,
+Not planned, Fixed) and a shipped or fixed item posts a thank-you in the thread.
+
+`scripts/configure-discord.mjs` registers those commands and sets the application's
+interactions endpoint; it runs with `DISCORD_BOT_TOKEN` and `GUILD_ID` and prints the public key
+and owner ID for `wrangler.toml`. Discord sends a signed PING before accepting the endpoint, so
+deploy the Worker with `DISCORD_PUBLIC_KEY` first.
 
 ## Abuse limits
 
@@ -46,9 +68,12 @@ npm run dev
    two account-unique rate-limit namespace IDs.
 3. `npm run migrate:remote`, then `npm run deploy`.
 4. `npx wrangler secret put ADMIN_TOKEN --config wrangler.toml` (32+ characters, the same value
-   saved in Cedar Tracker's Settings) and `npx wrangler secret put CLIENT_HASH_SALT --config wrangler.toml`.
+   saved in Cedar Tracker's Settings), `npx wrangler secret put CLIENT_HASH_SALT --config wrangler.toml`,
+   and for Discord `npx wrangler secret put DISCORD_BOT_TOKEN --config wrangler.toml`. Set
+   `DISCORD_PUBLIC_KEY`, `DISCORD_TRIAGE_CHANNEL_ID` and `DISCORD_OWNER_ID` in `wrangler.toml`.
 5. If the Worker's URL isn't `https://cedar-feedback.cedar-feedback.workers.dev`, update
-   `public/feedback/feedback.js`, the `/feedback/` page's `connect-src`, and
-   `CedarFeedbackClient.endpoint` in the Cedar app.
+   `public/feedback/feedback.js` and `public/roadmap/roadmap.js`, both pages' `connect-src`,
+   `CedarFeedbackClient.endpoint` in the Cedar app, and Cedar Tracker's `config.json`.
+6. Run `scripts/configure-discord.mjs --endpoint https://…/v1/discord/interactions --apply`.
 
-Never commit `wrangler.toml`, `.dev.vars`, or either secret.
+Never commit `wrangler.toml`, `.dev.vars`, or any secret.

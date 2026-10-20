@@ -1,4 +1,12 @@
-// Request handling for the feedback inbox. Storage is injected so tests can run without D1.
+// Request handling for the feedback inbox, roadmap items and Discord. Storage and the Discord
+// client are injected as `deps` so tests can run without D1 or Discord.
+import { FeedbackError } from "./errors.js";
+import { handleInteraction } from "./discord.js";
+import {
+  acceptSubmission, announceSubmission, createItem, deleteItem, discardSubmission, ensureItemMessage,
+  mergeSubmission, updateItem,
+} from "./operations.js";
+import { publicFeed, vocabulary } from "./tracker.js";
 
 export const LIMITS = Object.freeze({
   requestBytes: 16 * 1_024,
@@ -27,16 +35,9 @@ const SUBMISSION_FIELDS = [
 ];
 const VERSION_PATTERN = /^[0-9A-Za-z.() -]{1,32}$/;
 const EMAIL_PATTERN = /^[^\s@<>]+@[^\s@<>]+\.[^\s@<>]+$/;
-const ITEM_ID_PATTERN = /^CDR-[1-9]\d{0,6}$/;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 
-export class FeedbackError extends Error {
-  constructor(status, code) {
-    super(code);
-    this.status = status;
-    this.code = code;
-  }
-}
+export { FeedbackError };
 
 export const jsonResponse = (status, body, origin = null) => {
   const headers = new Headers({
@@ -55,7 +56,7 @@ export const jsonResponse = (status, body, origin = null) => {
   return new Response(JSON.stringify(body), { status, headers });
 };
 
-const sha256 = async (text) => {
+export const sha256 = async (text) => {
   const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
   return [...new Uint8Array(digest)].map((byte) => byte.toString(16).padStart(2, "0")).join("");
 };
@@ -150,22 +151,29 @@ const limit = async (limiter, key) => {
   if (!result.success) throw new FeedbackError(429, "rate_limited");
 };
 
-const submit = async (request, env, store, now) => {
+// Stores a validated submission and posts it to the Discord triage channel.
+export const recordSubmission = async (deps, env, submission, meta) => {
+  const record = { ...submission, ...meta, submissionID: crypto.randomUUID(), createdAtMs: deps.now };
+  await deps.store.insert(record);
+  announceSubmission(deps, env, { ...record, state: "new" });
+  return record;
+};
+
+const submit = async (request, env, deps) => {
   const { channel, origin } = submissionChannel(request, env);
-  const clientHash = await clientDayHash(request, env, now);
+  const clientHash = await clientDayHash(request, env, deps.now);
   await limit(env.SUBMIT_RATE_LIMITER, `submit:${clientHash}`);
   const submission = validateSubmission(await readJSON(request));
-  const reference = crypto.randomUUID();
   // Likely bots get the same success response so they don't learn to adapt, but nothing is stored.
   const looksAutomated = submission.honeypot
     || (channel === "website" && (submission.elapsedMs == null || submission.elapsedMs < LIMITS.minimumWebsiteFillMs));
-  if (!looksAutomated) {
-    if (await store.countForClientDay(clientHash) >= LIMITS.submissionsPerClientDay) {
-      throw new FeedbackError(429, "daily_limit_reached");
-    }
-    await store.insert({ ...submission, submissionID: reference, channel, clientHash, createdAtMs: now });
+  if (looksAutomated) return jsonResponse(201, { schemaVersion: 1, reference: crypto.randomUUID().slice(0, 8) }, origin);
+  if (await deps.store.countForClientDay(clientHash) >= LIMITS.submissionsPerClientDay) {
+    throw new FeedbackError(429, "daily_limit_reached");
   }
-  return jsonResponse(201, { schemaVersion: 1, reference: reference.slice(0, 8) }, origin);
+  const { honeypot: _honeypot, elapsedMs: _elapsed, ...fields } = submission;
+  const record = await recordSubmission(deps, env, fields, { channel, clientHash });
+  return jsonResponse(201, { schemaVersion: 1, reference: record.submissionID.slice(0, 8) }, origin);
 };
 
 const timingSafeEqual = async (left, right) => {
@@ -185,53 +193,99 @@ const requireAdmin = async (request, env) => {
   }
 };
 
-const listInbox = async (request, env, store) => {
-  await requireAdmin(request, env);
-  const state = new URL(request.url).searchParams.get("state") || "new";
-  if (state !== "new" && !TRIAGE_STATES.includes(state)) throw new FeedbackError(400, "invalid_state");
-  const submissions = await store.list(state, LIMITS.inboxPage);
-  return jsonResponse(200, { schemaVersion: 1, submissions });
+const submissionID = (value) => {
+  if (!UUID_PATTERN.test(value)) throw new FeedbackError(400, "invalid_identifier");
+  return value;
 };
 
-const triage = async (request, env, store, submissionID, now) => {
-  await requireAdmin(request, env);
-  if (!UUID_PATTERN.test(submissionID)) throw new FeedbackError(400, "invalid_identifier");
-  const body = await readJSON(request);
-  if (!body || typeof body !== "object" || Object.keys(body).some((key) => !["schemaVersion", "state", "itemID"].includes(key))) {
-    throw new FeedbackError(400, "unknown_field");
-  }
-  if (body.schemaVersion !== 1) throw new FeedbackError(400, "unsupported_schema");
-  if (!TRIAGE_STATES.includes(body.state)) throw new FeedbackError(400, "invalid_state");
-  const itemID = body.itemID ?? null;
-  if (body.state === "discarded" ? itemID !== null : !ITEM_ID_PATTERN.test(itemID ?? "")) {
-    throw new FeedbackError(400, "invalid_item");
-  }
-  // Contact details are cleared once a submission is triaged; the tracker never copies them.
-  if (!(await store.triage(submissionID, body.state, itemID, now))) throw new FeedbackError(404, "not_found");
-  return jsonResponse(200, { schemaVersion: 1 });
+const ok = (body) => jsonResponse(200, { schemaVersion: 1, ...body });
+
+// Admin routes for Cedar Tracker. Bodies are plain item fields.
+const adminRoutes = {
+  "GET inbox": async (request, env, deps) => {
+    const state = new URL(request.url).searchParams.get("state") || "new";
+    if (state !== "new" && !TRIAGE_STATES.includes(state)) throw new FeedbackError(400, "invalid_state");
+    return ok({ submissions: await deps.store.list(state, LIMITS.inboxPage) });
+  },
+  "POST inbox/:id/accept": async (request, env, deps, id) => ok({ item: await acceptSubmission(deps, submissionID(id), await readJSON(request)) }),
+  "POST inbox/:id/merge": async (request, env, deps, id) => ok({ item: await mergeSubmission(deps, submissionID(id), (await readJSON(request)).itemID) }),
+  "POST inbox/:id/discard": async (request, env, deps, id) => {
+    await discardSubmission(deps, submissionID(id));
+    return ok({});
+  },
+  "GET items": async (request, env, deps) => ok({ items: await deps.store.listItems(), vocabulary: vocabulary() }),
+  "POST items": async (request, env, deps) => {
+    const item = await createItem(deps, await readJSON(request));
+    ensureItemMessage(deps, env, item);
+    return ok({ item });
+  },
+  "PUT items/:id": async (request, env, deps, id) => ok({ item: await updateItem(deps, id, await readJSON(request)) }),
+  "DELETE items/:id": async (request, env, deps, id) => ok({ item: await deleteItem(deps, id) }),
 };
 
-export const handle = async (request, env, store, now = Date.now()) => {
+const matchAdminRoute = (method, parts) => {
+  for (const [key, handler] of Object.entries(adminRoutes)) {
+    const [routeMethod, pattern] = key.split(" ");
+    const expected = pattern.split("/");
+    if (routeMethod !== method || expected.length !== parts.length) continue;
+    const params = [];
+    if (expected.every((part, index) => (part === ":id" ? params.push(decodeURIComponent(parts[index])) : part === parts[index]))) {
+      return { handler, params };
+    }
+  }
+  return null;
+};
+
+// The public roadmap feed. Anyone may read it; it's cached briefly at the edge.
+const roadmap = async (request, deps) => {
+  const cache = globalThis.caches?.default;
+  const cached = await cache?.match(request);
+  if (cached) return cached;
+  const response = new Response(JSON.stringify(publicFeed(await deps.store.listItems())), {
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "Cache-Control": "public, max-age=30",
+      "Access-Control-Allow-Origin": "*",
+      "X-Content-Type-Options": "nosniff",
+    },
+  });
+  if (cache) deps.waitUntil(cache.put(request, response.clone()));
+  return response;
+};
+
+export const handle = async (request, env, deps) => {
   const url = new URL(request.url);
   const parts = url.pathname.split("/").filter(Boolean);
-  if (request.method === "OPTIONS" && url.pathname === "/v1/feedback") {
-    const { origin } = submissionChannel(request, env);
-    return jsonResponse(200, { schemaVersion: 1 }, origin);
+  if (url.pathname === "/v1/feedback") {
+    if (request.method === "OPTIONS") {
+      const { origin } = submissionChannel(request, env);
+      return jsonResponse(200, { schemaVersion: 1 }, origin);
+    }
+    if (request.method === "POST") return submit(request, env, deps);
   }
-  if (request.method === "POST" && url.pathname === "/v1/feedback") return submit(request, env, store, now);
-  if (parts[0] === "v1" && parts[1] === "inbox") {
-    if (parts.length === 2 && request.method === "GET") return listInbox(request, env, store);
-    if (parts.length === 3 && request.method === "POST") return triage(request, env, store, parts[2], now);
+  if (url.pathname === "/v1/roadmap" && request.method === "GET") return roadmap(request, deps);
+  if (url.pathname === "/v1/discord/interactions" && request.method === "POST") return handleInteraction(request, env, deps);
+  if (parts[0] === "v1") {
+    const match = matchAdminRoute(request.method, parts.slice(1));
+    if (match) {
+      await requireAdmin(request, env);
+      return match.handler(request, env, deps, ...match.params);
+    }
   }
   throw new FeedbackError(404, "not_found");
 };
 
-export const respond = async (request, env, store, now) => {
+export const respond = async (request, env, deps) => {
   try {
-    return await handle(request, env, store, now);
+    return await handle(request, env, deps);
   } catch (error) {
     const origin = request.headers.get("Origin") === env.CEDAR_WEB_ORIGIN ? env.CEDAR_WEB_ORIGIN : null;
-    if (error instanceof FeedbackError) return jsonResponse(error.status, { schemaVersion: 1, error: error.code }, origin);
+    if (error instanceof FeedbackError) {
+      const body = { schemaVersion: 1, error: error.code };
+      if (error.message !== error.code) body.message = error.message;
+      return jsonResponse(error.status, body, origin);
+    }
+    console.error(error);
     return jsonResponse(500, { schemaVersion: 1, error: "internal_error" }, origin);
   }
 };

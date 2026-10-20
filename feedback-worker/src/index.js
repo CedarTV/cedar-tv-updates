@@ -1,66 +1,15 @@
+import { discordClient } from "./discord-render.js";
 import { LIMITS, respond } from "./feedback.js";
-
-const submissionFromRow = (row) => ({
-  submissionID: row.submission_id,
-  kind: row.kind,
-  title: row.title,
-  details: row.details,
-  platform: row.platform,
-  appVersion: row.app_version,
-  osVersion: row.os_version,
-  deviceModel: row.device_model,
-  contact: row.contact,
-  channel: row.channel,
-  state: row.state,
-  itemID: row.item_id,
-  createdAtEpochMilliseconds: Number(row.created_at_ms),
-  triagedAtEpochMilliseconds: row.triaged_at_ms == null ? null : Number(row.triaged_at_ms),
-});
-
-export const d1Store = (db) => ({
-  async countForClientDay(clientHash) {
-    const row = await db.prepare(
-      "SELECT COUNT(*) AS count FROM feedback_submissions WHERE client_day_hash = ?1",
-    ).bind(clientHash).first();
-    return Number(row?.count ?? 0);
-  },
-
-  async insert(submission) {
-    await db.prepare(
-      `INSERT INTO feedback_submissions(
-         submission_id, kind, title, details, platform, app_version, os_version,
-         device_model, contact, channel, client_day_hash, created_at_ms)
-       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12)`,
-    ).bind(
-      submission.submissionID, submission.kind, submission.title, submission.details,
-      submission.platform, submission.appVersion, submission.osVersion, submission.deviceModel,
-      submission.contact, submission.channel, submission.clientHash, submission.createdAtMs,
-    ).run();
-  },
-
-  async list(state, limit) {
-    const result = await db.prepare(
-      `SELECT * FROM feedback_submissions
-        WHERE state = ?1
-        ORDER BY created_at_ms ASC
-        LIMIT ?2`,
-    ).bind(state, limit).all();
-    return (result.results || []).map(submissionFromRow);
-  },
-
-  async triage(submissionID, state, itemID, now) {
-    const result = await db.prepare(
-      `UPDATE feedback_submissions
-          SET state = ?2, item_id = ?3, contact = NULL, triaged_at_ms = ?4
-        WHERE submission_id = ?1`,
-    ).bind(submissionID, state, itemID, now).run();
-    return Number(result.meta?.changes ?? 0) > 0;
-  },
-});
+import { d1Store } from "./store.js";
 
 export default {
-  fetch(request, env) {
-    return respond(request, env, d1Store(env.DB), Date.now());
+  fetch(request, env, context) {
+    return respond(request, env, {
+      store: d1Store(env.DB),
+      discord: env.DISCORD_BOT_TOKEN ? discordClient(env.DISCORD_BOT_TOKEN) : null,
+      now: Date.now(),
+      waitUntil: (promise) => context.waitUntil(promise),
+    });
   },
 
   async scheduled(_controller, env) {
