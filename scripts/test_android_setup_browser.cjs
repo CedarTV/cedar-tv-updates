@@ -4,7 +4,7 @@ const path = require('node:path');
 const assert = require('node:assert/strict');
 const {randomUUID,createHash} = require('node:crypto');
 (async()=>{
- const {sealEnvelope,openEnvelope,bytesToBase64URL}=await import('../public/link/cedar-sync.mjs');
+ const {sealEnvelope,openEnvelope,bytesToBase64URL}=await import('../public/setup/cedar-sync.mjs');
  const out=process.env.CEDAR_SETUP_EVIDENCE;if(!out)throw Error('Set CEDAR_SETUP_EVIDENCE.');
  const configuration=JSON.parse(await fs.readFile(path.join(out,'settings-fixture.json'),'utf8'));
  const profile=configuration.profileID,owner={spaceID:randomUUID(),deviceID:randomUUID(),profileKey:bytesToBase64URL(new Uint8Array(32).fill(77)),deviceToken:bytesToBase64URL(new Uint8Array(32).fill(33))};

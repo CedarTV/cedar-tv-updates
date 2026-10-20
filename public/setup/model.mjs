@@ -1,4 +1,4 @@
-import { parseWebInvitationFragment, bytesToBase64, bytesToBase64URL, openEnvelope, sealEnvelope, normalizeUUID } from '../link/cedar-sync.mjs';
+import { parseWebInvitationFragment, bytesToBase64, bytesToBase64URL, openEnvelope, sealEnvelope, normalizeUUID } from './cedar-sync.mjs';
 
 export const RELAY = 'https://cedar-sync-relay.cedar-sync-relay.workers.dev';
 export function parseInvitation(fragment, now = Date.now()) {

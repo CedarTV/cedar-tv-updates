@@ -39,14 +39,12 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
-      - name: Verify Cedar Link assets and configuration
+      - name: Verify site assets and configuration
         run: |
           node --check public/setup/channels.mjs
           node --check public/setup/setup.mjs
           node --check public/setup/model.mjs
-          node --check public/link/link.js
-          node --check public/link/cedar-sync.mjs
-          node --check public/link/companion-ui.mjs
+          node --check public/setup/cedar-sync.mjs
           node --check public/creator/creator.js
           node scripts/build_creator_catalog.mjs --check
           node --test test/*.test.mjs

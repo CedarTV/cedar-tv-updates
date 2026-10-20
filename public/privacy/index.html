@@ -28,21 +28,22 @@
         <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
         <div class="cedar-menu" id="cedar-menu">
           <nav class="cedar-nav" aria-label="Primary navigation">
-            <a href="/cedar-tv-updates/#platforms">Platforms</a>
+            <a href="/cedar-tv-updates/">Home</a>
             <a href="/cedar-tv-updates/apple/">Apple apps</a>
             <a href="/cedar-tv-updates/releases/">What’s new</a>
             <a href="/cedar-tv-updates/creator/">Creator</a>
-            <a href="/cedar-tv-updates/link/">Cedar Link</a>
             <a href="/cedar-tv-updates/support/">Support</a>
-            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
           </nav>
-          <label class="cedar-theme">Theme
-            <select aria-label="Color theme" data-theme-select>
-              <option value="system">System</option>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
-          </label>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Theme
+              <select aria-label="Color theme" data-theme-select>
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </label>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </div>
         </div>
       </header>
 
@@ -67,12 +68,8 @@
             <p>If you connect Trakt, Simkl, or MDBList, Cedar sends that service the connected account identifier and the title identifiers, progress, timestamps, history, watchlist changes, or ratings needed for the sync actions you enable.</p>
           </section>
           <section>
-            <h2>Optional Cedar Link</h2>
-            <p>Cedar Link bridges an Apple profile to linked Cedar devices and the browser companion through an end-to-end encrypted relay. The relay stores authenticated ciphertext plus random space and device identifiers, timestamps, authorization, and delivery state. It cannot read the full profile or provider credentials in plaintext. The browser’s derived companion key can manage presentation, Home shelves, linked devices, and playback controls, but cannot decrypt the full profile or provider credentials.</p>
-          </section>
-          <section>
-            <h2>Cedar Link retention and deletion</h2>
-            <p>The relay keeps encrypted journal records and limited routing metadata while a Cedar Link space is active. Revoking a device removes that installation’s relay authorization. To remove an active space’s relay records, delete its linked profile in Cedar before deleting the app. Copies already stored locally on another linked device remain until removed there.</p>
+            <h2>Cedar Link (retired)</h2>
+            <p>Cedar Link, the optional encrypted relay that bridged an Apple profile to other Cedar devices and a browser, has been retired. Updated Cedar apps remove leftover Cedar Link sign-ins from the device. Until the relay shuts down, it keeps only the encrypted records and limited routing metadata it already held, which it cannot read.</p>
           </section>
           <section>
             <h2>YouTube trailers</h2>
@@ -131,7 +128,6 @@
               <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
               <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
               <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
-              <li><a href="/cedar-tv-updates/link/">Cedar Link</a></li>
               <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
             </ul>
           </section>

@@ -69,7 +69,7 @@ claim and enrollment is recovered by an idempotent retry with the same device ID
 3. Replace the zero D1 database ID, choose two account-unique integer rate-limit namespace IDs,
    and verify the exact `CEDAR_WEB_ORIGIN`.
 4. Run `npm run migrate:remote`, then `npm run deploy`.
-5. Put the resulting exact HTTPS origin in `public/sync-config.json` and in the `/link/` page's
+5. Put the resulting exact HTTPS origin in `public/setup/model.mjs` (`RELAY`) and in the `/setup/` page's
    `connect-src` CSP before publishing Pages.
 
 Do not commit `wrangler.toml`, Cloudflare credentials, Cedar profile keys, device tokens, or

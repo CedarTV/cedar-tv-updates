@@ -19,7 +19,6 @@ export function renderSiteFooter() {
               <li><a href="${projectBasePath}/releases/android-tv/">Android TV</a></li>
               <li><a href="${projectBasePath}/apple/">Apple apps</a></li>
               <li><a href="${projectBasePath}/radio/">Cedar Radio</a></li>
-              <li><a href="${projectBasePath}/link/">Cedar Link</a></li>
               <li><a href="${projectBasePath}/releases/">Release notes</a></li>
             </ul>
           </section>
@@ -66,21 +65,22 @@ export function renderSiteHeader() {
         <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
         <div class="cedar-menu" id="cedar-menu">
           <nav class="cedar-nav" aria-label="Primary navigation">
-            <a href="${projectBasePath}/#platforms">Platforms</a>
+            <a href="${projectBasePath}/">Home</a>
             <a href="${projectBasePath}/apple/">Apple apps</a>
             <a href="${projectBasePath}/releases/">What’s new</a>
             <a href="${projectBasePath}/creator/">Creator</a>
-            <a href="${projectBasePath}/link/">Cedar Link</a>
             <a href="${projectBasePath}/support/">Support</a>
-            <a class="cedar-download" href="${projectBasePath}/#download">Get Cedar</a>
           </nav>
-          <label class="cedar-theme">Theme
-            <select aria-label="Color theme" data-theme-select>
-              <option value="system">System</option>
-              <option value="light">Light</option>
-              <option value="dark">Dark</option>
-            </select>
-          </label>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Theme
+              <select aria-label="Color theme" data-theme-select>
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </label>
+            <a class="cedar-download" href="${projectBasePath}/#download">Get Cedar</a>
+          </div>
         </div>
       </header>`;
 }
