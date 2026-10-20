@@ -874,7 +874,7 @@
           "hidesTitle": true,
           "id": "BE30735D-8C10-4544-828A-5884A22B0E3F",
           "query": {
-            "identifier": "alaxkouad|peacock-movies",
+            "identifier": "alaxkouad|peacock-movies-zgl7064ys4",
             "kind": "curatedList",
             "parameters": {
               "listID": "84239"
@@ -898,7 +898,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "alaxkouad|peacock-movies",
+                "identifier": "alaxkouad|peacock-movies-zgl7064ys4",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "84239"
