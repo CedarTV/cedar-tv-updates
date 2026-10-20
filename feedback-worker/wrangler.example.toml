@@ -1,0 +1,35 @@
+name = "cedar-feedback"
+main = "src/index.js"
+compatibility_date = "2026-08-01"
+
+[vars]
+CEDAR_WEB_ORIGIN = "https://cedartv.github.io"
+
+# Secrets (set with `wrangler secret put`, never committed):
+#   ADMIN_TOKEN      bearer token the local Cedar Tracker uses to read and triage the inbox
+#   CLIENT_HASH_SALT random string that keys the per-day abuse counter
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cedar-feedback"
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["41 4 * * *"]
+
+[[ratelimits]]
+name = "SUBMIT_RATE_LIMITER"
+namespace_id = "17101"
+
+  [ratelimits.simple]
+  limit = 3
+  period = 60
+
+[[ratelimits]]
+name = "ADMIN_RATE_LIMITER"
+namespace_id = "17102"
+
+  [ratelimits.simple]
+  limit = 120
+  period = 60

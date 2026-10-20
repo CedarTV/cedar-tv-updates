@@ -37,7 +37,7 @@ export function renderSiteFooter() {
             <ul>
               <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
               <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
-              <li><a href="https://github.com/CedarTV/cedar-tv-updates/issues">Report an issue</a></li>
+              <li><a href="${projectBasePath}/feedback/">Send feedback</a></li>
               <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
               <li><a href="${projectBasePath}/update-v1.json">Android manifest</a></li>
             </ul>

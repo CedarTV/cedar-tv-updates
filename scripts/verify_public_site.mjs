@@ -12,6 +12,8 @@ const requiredFiles = [
   "public/privacy/index.html",
   "public/accessibility/index.html",
   "public/content-policy/index.html",
+  "public/feedback/index.html",
+  "public/roadmap/tracker.json",
   "public/demo/cedar-review.m3u",
   "public/setup/cedar-sync.mjs",
   "public/setup/vendor/fflate-inflate.mjs",
@@ -60,6 +62,9 @@ for (const requiredPrivacyTopic of [
     throw new Error(`The privacy policy is missing ${requiredPrivacyTopic}`);
   }
 }
+
+const { validateTrackerFeed } = await import("./tracker_feed.mjs");
+validateTrackerFeed(JSON.parse(await readFile("public/roadmap/tracker.json", "utf8")));
 
 const demoPlaylist = await readFile("public/demo/cedar-review.m3u", "utf8");
 if (!demoPlaylist.startsWith("#EXTM3U\n") || !demoPlaylist.includes("Big Buck Bunny") || !demoPlaylist.includes("https://")) {

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#08090b">
-    <meta name="description" content="Where each Cedar app stands: in preview, in public beta, or available now.">
+    <meta name="description" content="Where each Cedar app stands, what’s being built next, and the known issues being fixed.">
     <meta name="robots" content="noindex,follow">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
     <title>Roadmap — Cedar</title>
@@ -51,9 +51,9 @@
         <header class="document-header roadmap-header">
           <div>
             <h1>Roadmap</h1>
-            <p>Where each Cedar app stands, from the first preview build to a full release. It reads the same release catalog as the release notes, so it’s always current.</p>
+            <p>Where each Cedar app stands, what’s being built next, and the known issues being fixed. Release status comes from the same catalog as the release notes, so it’s always current.</p>
           </div>
-          <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/issues">Suggest or report something</a>
+          <a class="inline-action" href="/cedar-tv-updates/feedback/">Suggest or report something</a>
         </header>
 
         <div class="roadmap-board" data-roadmap>
@@ -76,9 +76,9 @@
             <h2 id="roadmap-next"><span class="roadmap-dot dot-blue" aria-hidden="true"></span>What’s next</h2>
             <p class="roadmap-help">Requests and bug reports shape what comes next. Tell us what you’d like.</p>
             <div class="roadmap-cards">
-              <a class="roadmap-card roadmap-link" href="https://github.com/CedarTV/cedar-tv-updates/issues">
-                <strong>Report an issue</strong>
-                <span>Tell us what broke, or ask for a feature, on GitHub.</span>
+              <a class="roadmap-card roadmap-link" href="/cedar-tv-updates/feedback/">
+                <strong>Send feedback</strong>
+                <span>Report a bug or request a feature. Every report is read before anything is added here.</span>
               </a>
               <a class="roadmap-card roadmap-link" href="https://discord.gg/TFTx7j86v">
                 <strong>Talk it through on Discord</strong>
@@ -87,6 +87,58 @@
             </div>
           </section>
         </div>
+        <section class="tracker-section" aria-labelledby="tracker-features">
+          <div class="tracker-heading">
+            <h2 id="tracker-features">Features</h2>
+            <p>What’s being considered, planned and built, and what shipped recently.</p>
+          </div>
+          <div class="roadmap-board" data-tracker>
+            <section class="roadmap-column" data-tracker-kind="feature" data-tracker-status="considering" aria-labelledby="tracker-considering">
+              <h3 id="tracker-considering"><span class="roadmap-dot dot-plum" aria-hidden="true"></span>Considering</h3>
+              <p class="roadmap-help">Requests being looked at. Not promised yet.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="feature" data-tracker-status="planned" aria-labelledby="tracker-planned">
+              <h3 id="tracker-planned"><span class="roadmap-dot dot-blue" aria-hidden="true"></span>Planned</h3>
+              <p class="roadmap-help">Decided on, and waiting for its turn.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="feature" data-tracker-status="in-progress" aria-labelledby="tracker-building">
+              <h3 id="tracker-building"><span class="roadmap-dot dot-amber" aria-hidden="true"></span>In progress</h3>
+              <p class="roadmap-help">Being built now.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="feature" data-tracker-status="shipped" aria-labelledby="tracker-shipped">
+              <h3 id="tracker-shipped"><span class="roadmap-dot dot-green" aria-hidden="true"></span>Recently shipped</h3>
+              <p class="roadmap-help">In a build you can install.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="tracker-section" aria-labelledby="tracker-issues">
+          <div class="tracker-heading">
+            <h2 id="tracker-issues">Known issues</h2>
+            <p>Bugs we know about, so you don’t have to report them again.</p>
+          </div>
+          <div class="roadmap-board roadmap-board-three" data-tracker>
+            <section class="roadmap-column" data-tracker-kind="bug" data-tracker-status="investigating" aria-labelledby="tracker-investigating">
+              <h3 id="tracker-investigating"><span class="roadmap-dot dot-plum" aria-hidden="true"></span>Investigating</h3>
+              <p class="roadmap-help">Confirmed, and the cause is being tracked down.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="bug" data-tracker-status="in-progress" aria-labelledby="tracker-fixing">
+              <h3 id="tracker-fixing"><span class="roadmap-dot dot-amber" aria-hidden="true"></span>Fix in progress</h3>
+              <p class="roadmap-help">The fix is being built and tested.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="bug" data-tracker-status="fixed" aria-labelledby="tracker-fixed">
+              <h3 id="tracker-fixed"><span class="roadmap-dot dot-green" aria-hidden="true"></span>Recently fixed</h3>
+              <p class="roadmap-help">Fixed in a build you can install.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+          </div>
+        </section>
         <noscript><p class="roadmap-help">Turn on JavaScript to see each app’s current status, or read the <a class="inline-document-link" href="/cedar-tv-updates/releases/">release notes</a>.</p></noscript>
       </main>
 
@@ -124,7 +176,7 @@
             <ul>
               <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
               <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
-              <li><a href="https://github.com/CedarTV/cedar-tv-updates/issues">Report an issue</a></li>
+              <li><a href="/cedar-tv-updates/feedback/">Send feedback</a></li>
               <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
               <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
             </ul>

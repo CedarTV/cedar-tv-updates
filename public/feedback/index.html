@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Report a bug or request a feature for Cedar.">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; connect-src https://cedar-feedback.cedar-feedback.workers.dev; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+    <title>Send feedback — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/feedback/">
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../policy.css">
+    <link rel="stylesheet" href="feedback.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/">Home</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Theme
+              <select aria-label="Color theme" data-theme-select>
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </label>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="document-page feedback-page">
+        <header class="document-header">
+          <p class="eyebrow">Send feedback</p>
+          <h1>Tell us what broke, or what you’d like.</h1>
+          <p>Every report is read. Reports that become part of the plan show up on the <a class="inline-document-link" href="/cedar-tv-updates/roadmap/">roadmap</a>, worded so nothing personal is shared.</p>
+        </header>
+
+        <form class="feedback-form" data-feedback-form novalidate hidden>
+          <fieldset class="feedback-kind">
+            <legend>What is this?</legend>
+            <label><input type="radio" name="kind" value="bug" checked> <span><strong>Bug report</strong> Something doesn’t work the way it should.</span></label>
+            <label><input type="radio" name="kind" value="feature"> <span><strong>Feature request</strong> Something you’d like Cedar to do.</span></label>
+          </fieldset>
+
+          <label class="feedback-field">
+            <span>Which app?</span>
+            <select name="platform" required>
+              <option value="">Choose one</option>
+              <option value="iphone">iPhone</option>
+              <option value="ipad">iPad</option>
+              <option value="apple-tv">Apple TV</option>
+              <option value="mac">Mac</option>
+              <option value="android-tv">Android TV</option>
+              <option value="radio">Cedar Radio</option>
+              <option value="website">This website</option>
+              <option value="other">Something else</option>
+            </select>
+          </label>
+
+          <label class="feedback-field">
+            <span>Short summary</span>
+            <input name="title" type="text" minlength="3" maxlength="120" required autocomplete="off" data-kind-placeholder-bug="The guide freezes when I scroll past midnight" data-kind-placeholder-feature="Picture in picture on Apple TV">
+          </label>
+
+          <label class="feedback-field">
+            <span data-kind-label-bug="What happened, and what did you expect?" data-kind-label-feature="What would you like, and how would you use it?">What happened, and what did you expect?</span>
+            <textarea name="details" rows="7" minlength="10" maxlength="4000" required></textarea>
+            <small>Don’t include passwords, playlist or provider addresses, or other private details.</small>
+          </label>
+
+          <div class="feedback-row">
+            <label class="feedback-field">
+              <span>App version <em>(optional)</em></span>
+              <input name="appVersion" type="text" maxlength="32" autocomplete="off" placeholder="1.0.0 (68)">
+              <small>In Settings › About.</small>
+            </label>
+            <label class="feedback-field">
+              <span>Email <em>(optional)</em></span>
+              <input name="contact" type="email" maxlength="254" autocomplete="email">
+              <small>Only if you’re happy to be asked a follow-up question. It’s deleted once your report is reviewed.</small>
+            </label>
+          </div>
+
+          <label class="feedback-trap" aria-hidden="true">Leave this empty <input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+
+          <p class="feedback-status" role="status" aria-live="polite" data-feedback-status></p>
+          <div class="feedback-actions">
+            <button class="inline-action" type="submit">Send</button>
+            <a class="inline-document-link" href="/cedar-tv-updates/privacy/#feedback">How feedback is handled</a>
+          </div>
+        </form>
+
+        <section class="feedback-done" data-feedback-done hidden tabindex="-1">
+          <h2>Thanks, it’s on its way.</h2>
+          <p>Your reference is <strong data-feedback-reference></strong>. Mention it if you follow up on Discord.</p>
+          <p><button class="secondary-action" type="button" data-feedback-again>Send something else</button></p>
+        </section>
+
+        <noscript><p>This form needs JavaScript. You can also report bugs and request features on <a class="inline-document-link" href="https://discord.gg/TFTx7j86v">Discord</a>.</p></noscript>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/TFTx7j86v">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/feedback/">Send feedback</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
+              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+    </div>
+    <script src="feedback.js" defer></script>
+  </body>
+</html>

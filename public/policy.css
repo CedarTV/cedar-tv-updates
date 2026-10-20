@@ -409,7 +409,7 @@ h1 {
 .roadmap-header .inline-action { margin-top: 0; }
 .roadmap-board { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; align-items: start; }
 .roadmap-column { min-height: 240px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
-.roadmap-column h2 { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 0.95rem; font-weight: 650; }
+.roadmap-column h2, .roadmap-column h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; font-size: 0.95rem; font-weight: 650; }
 .roadmap-dot { width: 8px; height: 8px; border-radius: 50%; }
 .dot-plum { background: #b58ad6; }
 .dot-amber { background: #f0a43a; }
@@ -426,5 +426,11 @@ h1 {
 @media (hover: hover) and (pointer: fine) {
   .roadmap-link:hover { border-color: var(--control-border, var(--line)); }
 }
+.roadmap-board-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.tracker-section { margin-top: clamp(40px, 6vw, 64px); }
+.tracker-heading { max-width: 720px; margin-bottom: 16px; }
+.tracker-heading h2 { margin-bottom: 6px; }
+.tracker-heading p { margin: 0; color: var(--muted); }
+.roadmap-card .roadmap-tag { padding: 1px 8px; border: 1px solid var(--line); border-radius: 999px; }
 @media (max-width: 1000px) { .roadmap-board { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 620px) { .roadmap-board { grid-template-columns: 1fr; } .roadmap-column { min-height: 0; } }
+@media (max-width: 620px) { .roadmap-board, .roadmap-board-three { grid-template-columns: 1fr; } .roadmap-column { min-height: 0; } }

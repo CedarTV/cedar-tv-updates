@@ -14,6 +14,8 @@ on:
       - scripts/render_site_footer.mjs
       - scripts/site_components.mjs
       - scripts/verify_public_site.mjs
+      - scripts/tracker_feed.mjs
+      - feedback-worker/src/**
       - .github/workflows/pages.yml
   workflow_dispatch:
 
@@ -46,6 +48,8 @@ jobs:
           node --check public/setup/model.mjs
           node --check public/setup/cedar-sync.mjs
           node --check public/creator/creator.js
+          node --check public/feedback/feedback.js
+          node --check public/roadmap/roadmap.js
           node scripts/build_creator_catalog.mjs --check
           node --test test/*.test.mjs
           node scripts/render_apple_releases.mjs --check
