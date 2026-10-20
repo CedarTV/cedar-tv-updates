@@ -4,10 +4,15 @@ compatibility_date = "2026-08-01"
 
 [vars]
 CEDAR_WEB_ORIGIN = "https://cedartv.github.io"
+# Discord triage (optional; leave empty to run without Discord).
+DISCORD_PUBLIC_KEY = ""
+DISCORD_TRIAGE_CHANNEL_ID = ""
+DISCORD_OWNER_ID = ""
 
 # Secrets (set with `wrangler secret put`, never committed):
 #   ADMIN_TOKEN      bearer token the local Cedar Tracker uses to read and triage the inbox
 #   CLIENT_HASH_SALT random string that keys the per-day abuse counter
+#   DISCORD_BOT_TOKEN bot token that posts and edits triage messages (optional)
 
 [[d1_databases]]
 binding = "DB"

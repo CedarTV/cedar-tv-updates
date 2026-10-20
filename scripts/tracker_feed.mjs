@@ -1,8 +1,6 @@
-// Schema for public/roadmap/tracker.json, the public projection the local Cedar Tracker publishes.
-// The tracker keeps private notes, priorities and unreviewed items out of this file; this check
-// makes sure nothing outside the public shape slips through.
-
-export const trackerFeedPath = "public/roadmap/tracker.json";
+// Schema for the public roadmap feed the cedar-feedback Worker serves at /v1/roadmap.
+// Private notes, priorities and unreviewed items never belong in it; this check makes sure
+// nothing outside the public shape slips through.
 
 export const PUBLIC_STATUSES = Object.freeze({
   feature: ["considering", "planned", "in-progress", "shipped"],
@@ -14,7 +12,7 @@ export const PLATFORMS = Object.freeze(["iphone", "ipad", "apple-tv", "mac", "an
 const ITEM_FIELDS = ["id", "kind", "title", "summary", "status", "platforms", "requests", "shippedIn", "releaseURL", "updated"];
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 
-const fail = (message) => { throw new Error(`tracker.json: ${message}`); };
+const fail = (message) => { throw new Error(`roadmap feed: ${message}`); };
 
 export function validateTrackerFeed(feed) {
   if (!feed || typeof feed !== "object" || Array.isArray(feed)) fail("must be an object");

@@ -57,12 +57,13 @@ repository; App Store and TestFlight remain the binary distribution channels.
 - `public/feedback/` is the public bug report and feature request form. It posts to the
   `cedar-feedback` Worker in [`feedback-worker/`](feedback-worker/README.md), which keeps reports
   private and is separate from the encrypted relay.
-- `public/roadmap/tracker.json` is published by Cedar Tracker, a local app in the private Cedar
-  repository. It holds only reviewed items marked public. `scripts/tracker_feed.mjs` defines the
-  schema and refuses private fields; `test/roadmap-tracker.test.mjs` and `verify_public_site.mjs`
-  enforce it. Edit roadmap items in Cedar Tracker rather than by hand.
+- Roadmap items live in the same Worker's D1 database. They're edited in Cedar Tracker (a local
+  app in the private Cedar repository) or from the private Discord triage channel, and the Worker
+  serves the reviewed, public ones at `/v1/roadmap`. `scripts/tracker_feed.mjs` defines that
+  feed's schema and refuses private fields; `test/roadmap-tracker.test.mjs` checks the Worker's
+  output against it.
 - The roadmap page renders release status from `releases.json` plus Features and Known issues
-  from `tracker.json`.
+  from the live `/v1/roadmap` feed.
 
 ## Encrypted relay
 

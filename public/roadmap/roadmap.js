@@ -82,7 +82,9 @@ fetch("../releases/releases.json", { cache: "no-store", credentials: "omit" })
     });
   });
 
-// Features and known issues come from the tracker feed, which only ever holds reviewed, public items.
+// Features and known issues come from the live roadmap feed, which only ever holds reviewed,
+// public items. Changes made in Cedar Tracker or Discord show up within a minute.
+const ROADMAP_FEED = "https://cedar-feedback.cedar-feedback.workers.dev/v1/roadmap";
 const platformNames = {
   iphone: "iPhone",
   ipad: "iPad",
@@ -132,7 +134,7 @@ const renderTracker = (feed) => {
   });
 };
 
-fetch("tracker.json", { cache: "no-store", credentials: "omit" })
+fetch(ROADMAP_FEED, { cache: "no-store", credentials: "omit", referrerPolicy: "no-referrer" })
   .then((response) => response.ok ? response.json() : Promise.reject(new Error("Tracker feed unavailable")))
   .then(renderTracker)
   .catch(() => {
