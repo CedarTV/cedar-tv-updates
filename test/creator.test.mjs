@@ -110,6 +110,16 @@ test("merging a cart keeps cart order, drops repeated branches and adds the avat
   assert.equal(bundle.title, "Cedar Creator selection");
 });
 
+test("a cart carries one badge pack by its site file name", () => {
+  const badges = id => ({ type: "badges", id });
+  const cart = [setup("first"), avatar("avatars/nuvio/a.webp"), badges("xp_aurora")];
+  assert.deepEqual(parseCart(new URL(cartWebLink(cart)).search), cart);
+  assert.deepEqual(addToCart(cart, badges("xp_onyx")).cart.at(-1), badges("xp_onyx"));
+  assert.deepEqual(parseCart("?i=first&b=../evil&b=https://evil.example/x.json"), [setup("first")]);
+  const files = { first: { title: "First", branches: [{ id: "A", title: "One", position: 0 }] } };
+  assert.equal(mergeCart(cart, files).badgePackURL, "https://cedartv.github.io/cedar-tv-updates/badge-packs/xp_aurora.json");
+});
+
 test("setup browsing filters by text and category without changing featured order", () => {
   const rows = [
     { id: "b", title: "Beta", creator: "Cedar", description: "", tags: ["Decades"], addedAt: "2026-10-01", branchCount: 3, groups: [{ title: "Retro", rows: ["1980s"] }] },

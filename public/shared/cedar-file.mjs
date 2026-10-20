@@ -36,9 +36,10 @@ export function bundleHeader({kind, bundleID, title, createdAt = cedarDate(), ge
 }
 
 /** A `kind: branches` file (§3). Branches here must never carry logins or tokens. */
-export function branchesFile({bundleID, title, createdAt, generator, branches, avatarURL = null, extra = {}}) {
+export function branchesFile({bundleID, title, createdAt, generator, branches, avatarURL = null, badgePackURL = null, extra = {}}) {
   const file = {...bundleHeader({kind: 'branches', bundleID, title, createdAt, generator}), branches: branches.map((branch, position) => ({...branch, position}))};
   if (avatarURL) file.avatarURL = avatarURL;
+  if (badgePackURL) file.badgePackURL = badgePackURL;
   return Object.assign(file, extra);
 }
 

@@ -1,6 +1,6 @@
 // Creator: the setup catalog, profile photos and source badges, all feeding one Home built in the
 // Your Home tab (home-builder.mjs).
-import { parseCart, setupOf, setupOptions, setupPlatforms, setupTags } from "./creator-model.mjs";
+import { isBadgePackID, parseCart, setupOf, setupOptions, setupPlatforms, setupTags } from "./creator-model.mjs";
 import { artworkURL, appURL, matchingOptions, avatarCategories, avatarOptions } from "./artwork-model.mjs";
 import { home } from "./home-builder.mjs";
 
@@ -211,12 +211,9 @@ function selectArtwork(option) {
   $("selection-title").textContent = name;
   $("selection-url").value = source;
   $("open-cedar").href = appURL(source, gallery.kind);
-  $("add-avatar").hidden = !isAvatar;
-  $("open-cedar").classList.toggle("button-primary", !isAvatar);
-  $("open-cedar").classList.toggle("button-secondary", isAvatar);
   $("manual-help").textContent = isAvatar
-    ? "Use it on Your Home so Cedar offers it with your setups, or open it in Cedar now. To paste it yourself, edit your profile → avatar → Custom Image → Image Link."
-    : "In Cedar Settings, open Source Badges. Paste the URL into the badge-pack field, then choose Add Badge Pack.";
+    ? "Use it on Your Home so it travels in your .cedar file, or open it in Cedar now. To paste it yourself, edit your profile → avatar → Custom Image → Image Link."
+    : "Use it on Your Home so Cedar installs it with your .cedar file, or open it in Cedar now. To paste it yourself, open Source Badges in Cedar Settings, paste the URL and choose Add Badge Pack.";
   $("copy-status").textContent = "";
   $("preview").classList.toggle("avatar", isAvatar);
   $("preview").replaceChildren(...(isAvatar ? [galleryImage(option.url, name)] : option.badges.slice(0, 4).map(badge => galleryImage(badge.imageURL, badge.name))));
@@ -227,7 +224,7 @@ function selectArtwork(option) {
   $("selection").hidden = false;
   renderGallery();
   $("selection").scrollIntoView({ block: "start", behavior: "instant" });
-  (isAvatar ? $("add-avatar") : $("open-cedar")).focus({ preventScroll: true });
+  $("add-avatar").focus({ preventScroll: true });
 }
 
 function renderGallery() {
@@ -322,9 +319,16 @@ for (const control of [$("category"), $("sort")]) control.addEventListener("chan
 $("more").addEventListener("click", () => { gallery.visible += 48; renderGallery(); });
 $("copy").addEventListener("click", () => copyText($("selection-url").value, $("copy-status"), $("selection-url"), "URL copied. Paste it into Cedar."));
 $("add-avatar").addEventListener("click", () => {
-  if (!gallery.selected?.url) return;
-  home.setAvatar(gallery.selected.url.slice(1));
-  toast(`${gallery.selected.name || "Profile photo"} will be offered with Your Home.`);
+  const option = gallery.selected;
+  if (gallery.kind === "badges") {
+    if (!isBadgePackID(option?.id)) return;
+    home.setBadgePack(option.id);
+    toast(`${option.label || "These source badges"} will be installed with Your Home.`);
+    return;
+  }
+  if (!option?.url) return;
+  home.setAvatar(option.url.slice(1));
+  toast(`${option.name || "Profile photo"} will travel with Your Home.`);
 });
 $("full-set").addEventListener("toggle", () => {
   if (!$("full-set").open || !gallery.selected?.badges || $("full-set-grid").childElementCount) return;
@@ -337,8 +341,10 @@ async function start() {
   const requestedTab = query.get("tab") || ({ avatars: "avatars", badges: "badges" })[query.get("kind")];
   if (["home", "avatars", "badges"].includes(requestedTab)) selectTab(requestedTab);
   try {
-    const [catalogResponse, avatarResponse] = await Promise.all([fetch("../catalogs/creator.json"), fetch("../catalogs/avatars.json")]);
+    const [catalogResponse, avatarResponse, badgeResponse] = await Promise.all([fetch("../catalogs/creator.json"), fetch("../catalogs/avatars.json"),
+      home.badgePack() ? fetch("../catalogs/badges.json") : null]);
     if (!catalogResponse.ok) throw new Error("Unavailable");
+    if (badgeResponse?.ok) gallery.catalogs.badges ??= (await badgeResponse.json()).sets;
     setups = (await catalogResponse.json()).setups;
     if (avatarResponse.ok) {
       const data = await avatarResponse.json();
@@ -354,22 +360,24 @@ async function start() {
   home.connect({
     describePick: describe,
     describeAvatar: path => avatarsByPath.get(path)?.name,
+    describeBadgePack: id => gallery.catalogs.badges?.find(set => set.id === id)?.label,
     openSetup: item => openSetup(setupOf(item.id)),
     showTab: selectTab,
   });
 
   // A shared Creator link (…/creator/?i=…&a=…) opened in a browser adds its picks to Your Home.
-  if (query.has("i") || query.has("a")) {
+  if (query.has("i") || query.has("a") || query.has("b")) {
     const shared = parseCart(location.search, knownItemIDs()).filter(entry => entry.type !== "avatar" || avatarsByPath.has(entry.id));
     if (shared.length && (!home.counts().rows || confirm("Add the shared setups to Your Home?"))) {
       for (const entry of shared) {
         if (entry.type === "avatar") home.setAvatar(entry.id);
+        else if (entry.type === "badges") home.setBadgePack(entry.id);
         else home.add(entry, describe(entry)?.title);
       }
       selectTab("home");
     }
     const url = new URL(location.href);
-    url.searchParams.delete("i"); url.searchParams.delete("a");
+    url.searchParams.delete("i"); url.searchParams.delete("a"); url.searchParams.delete("b");
     history.replaceState(null, "", url);
   }
   renderSetupFilters();

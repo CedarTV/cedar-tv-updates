@@ -10,10 +10,13 @@ export const maximumCartItems = 40;
 const setupIDPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const itemIDPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*(?:\.[0-9a-f]{8})?$/;
 const avatarPathPattern = /^avatars\/[a-z0-9_-]+\/[a-z0-9_-]+\.webp$/i;
+const badgePackIDPattern = /^[a-z0-9_]{1,80}$/;
 
 export const isSetupID = id => typeof id === "string" && setupIDPattern.test(id);
 export const isItemID = id => typeof id === "string" && id.length <= 120 && itemIDPattern.test(id);
 export const isAvatarPath = path => typeof path === "string" && avatarPathPattern.test(path);
+/// A source-badge pack on this site, by its file name under `badge-packs/` (for example `xp_aurora`).
+export const isBadgePackID = id => typeof id === "string" && badgePackIDPattern.test(id);
 export const groupID = (setupID, branchID) => `${setupID}.${branchID.slice(0, 8).toLowerCase()}`;
 export const setupOf = itemID => itemID.split(".")[0];
 export const itemFileURL = id => {
@@ -23,6 +26,10 @@ export const itemFileURL = id => {
 export const avatarURL = path => {
   if (!isAvatarPath(path)) throw new Error("Invalid avatar");
   return siteBase + path;
+};
+export const badgePackURL = id => {
+  if (!isBadgePackID(id)) throw new Error("Invalid badge pack");
+  return `${siteBase}badge-packs/${id}.json`;
 };
 
 // MARK: Branch summaries
@@ -58,19 +65,23 @@ export function setupOptions(setups, { query = "", tag = "", platform = "", sort
 }
 
 // MARK: Cart
-// Entries are { type: "setup" | "group" | "avatar", id }. Order is the order branches are added
-// to Home. A cart holds at most one avatar; it is applied to the profile, not ordered.
+// Entries are { type: "setup" | "group" | "avatar" | "badges", id }. Order is the order branches
+// are added to Home. A cart holds at most one avatar and one badge pack; they are applied to the
+// profile, not ordered.
 
+const profileTypes = new Set(["avatar", "badges"]);
 export const entryKey = entry => `${entry.type}:${entry.id}`;
-export const branchEntries = cart => cart.filter(entry => entry.type !== "avatar");
+export const branchEntries = cart => cart.filter(entry => !profileTypes.has(entry.type));
 export const avatarEntry = cart => cart.find(entry => entry.type === "avatar") || null;
+export const badgePackEntry = cart => cart.find(entry => entry.type === "badges") || null;
+const profileEntries = cart => cart.filter(entry => profileTypes.has(entry.type));
 
 /// Returns { cart, status } where status is "added", "replaced", "included", "duplicate" or "full".
 export function addToCart(cart, entry) {
   if (cart.some(existing => entryKey(existing) === entryKey(entry))) return { cart, status: "duplicate" };
-  if (entry.type === "avatar") {
-    const replaced = cart.some(existing => existing.type === "avatar");
-    return { cart: [...cart.filter(existing => existing.type !== "avatar"), entry], status: replaced ? "replaced" : "added" };
+  if (profileTypes.has(entry.type)) {
+    const replaced = cart.some(existing => existing.type === entry.type);
+    return { cart: [...cart.filter(existing => existing.type !== entry.type), entry], status: replaced ? "replaced" : "added" };
   }
   if (entry.type === "group" && cart.some(existing => existing.type === "setup" && existing.id === setupOf(entry.id))) {
     return { cart, status: "included" };
@@ -98,8 +109,7 @@ export function moveInCart(cart, from, to) {
   if (from < 0 || from >= branches.length || to < 0 || to >= branches.length || from === to) return cart;
   const [moved] = branches.splice(from, 1);
   branches.splice(to, 0, moved);
-  const avatar = avatarEntry(cart);
-  return avatar ? [...branches, avatar] : branches;
+  return [...branches, ...profileEntries(cart)];
 }
 
 export function cartQuery(cart) {
@@ -107,6 +117,8 @@ export function cartQuery(cart) {
   for (const entry of branchEntries(cart)) query.append("i", entry.id);
   const avatar = avatarEntry(cart);
   if (avatar) query.set("a", avatar.id);
+  const badges = badgePackEntry(cart);
+  if (badges) query.set("b", badges.id);
   return query.toString();
 }
 export const cartWebLink = cart => `${siteBase}creator/?${cartQuery(cart)}`;
@@ -122,12 +134,14 @@ export function parseCart(search, knownItemIDs = null) {
   }
   const avatar = query.get("a");
   if (avatar && isAvatarPath(avatar)) cart = addToCart(cart, { type: "avatar", id: avatar }).cart;
+  const badges = query.get("b");
+  if (badges && isBadgePackID(badges)) cart = addToCart(cart, { type: "badges", id: badges }).cart;
   return cart;
 }
 
 // MARK: Files
 
-export function makeBundle({ title, createdAt, branches, avatar = null, credits = null }) {
+export function makeBundle({ title, createdAt, branches, avatar = null, badgePack = null, credits = null }) {
   // `credits` is Creator's attribution block (CEDAR_FILE_FORMAT.md §3), kept with every item.
   return branchesFile({
     bundleID: creatorBundleID,
@@ -136,6 +150,7 @@ export function makeBundle({ title, createdAt, branches, avatar = null, credits 
     generator: { application: "Cedar Creator" },
     branches,
     avatarURL: avatar,
+    badgePackURL: badgePack,
     extra: credits ? { credits } : {},
   });
 }
@@ -158,11 +173,13 @@ export function mergeCart(cart, filesByID, createdAt = new Date().toISOString().
     }
   }
   const avatar = avatarEntry(cart);
+  const badges = badgePackEntry(cart);
   return makeBundle({
     title: titles.length === 1 ? titles[0] : "Cedar Creator selection",
     createdAt,
     branches,
     avatar: avatar ? avatarURL(avatar.id) : null,
+    badgePack: badges ? badgePackURL(badges.id) : null,
     credits: credits.length === 1 ? credits[0] : credits.length ? credits : null,
   });
 }

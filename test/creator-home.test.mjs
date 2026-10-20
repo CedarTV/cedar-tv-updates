@@ -67,3 +67,23 @@ test('replacing a Home from an import keeps the chosen profile photo', () => {
   const incoming = parseImport([{ id: 'g', title: 'G', folders: [{ id: 'f', title: 'F', sources: [{ id: 's', title: 'Popular', provider: 'tmdb', tmdbSourceType: 'POPULAR', mediaType: 'movie' }] }] }]).draft;
   assert.equal(mergeImport(draft, incoming, 'replace').avatar, 'avatars/marvel/iron-man.webp');
 });
+
+test('the profile photo and source badges travel in both kinds of file', async () => {
+  const draft = empty();
+  addPick(draft, { type: 'setup', id: 'horror-vault' }, 'Horror Vault');
+  draft.avatar = 'avatars/marvel/iron-man.webp';
+  draft.badgePack = 'xp_aurora';
+  const items = { 'horror-vault': await item('horror-vault') };
+  const photo = 'https://cedartv.github.io/cedar-tv-updates/avatars/marvel/iron-man.webp';
+  const badges = 'https://cedartv.github.io/cedar-tv-updates/badge-packs/xp_aurora.json';
+  assert.deepEqual(draftCart(validateDraft(draft)).at(-1), { type: 'badges', id: 'xp_aurora' });
+  const { document } = exportCedar(draft, now, items);
+  assert.equal(document.avatarURL, photo);
+  assert.equal(document.badgePackURL, badges);
+  const profile = await exportCedarProfile(draft, { passphrase: 'correct horse', items, now });
+  assert.deepEqual(profile.issues, []);
+  assert.ok(profile.document.contents.categories.includes('profile'));
+  // No name: the profile keeps the one chosen in Cedar.
+  assert.deepEqual((await openProfileFile(profile.document, 'correct horse')).identity, { avatar: photo, badgePackURL: badges });
+  assert.equal(validateDraft({ ...draft, badgePack: '../x' }).badgePack, undefined);
+});
