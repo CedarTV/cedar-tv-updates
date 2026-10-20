@@ -155,6 +155,13 @@ Run `node --test test/*.test.mjs`, each renderer with `--check`, and
 - **Your Home**: the builder that used to be Cedar Studio. Catalog picks sit alongside Branches and
   Branch Groups built by hand or imported, with a Home preview, quick editor, source filters, group
   device layouts, undo, and a draft saved in the browser. No emoji controls are used.
+
+  The Home preview (`public/creator/home-preview.mjs`) draws the same Branch JSON that export
+  writes, so a picked setup shows every row it publishes. Rows take their real style (poster, wide,
+  featured or hero) and each Branch Group shows its folder cards in the group's one shape (poster,
+  landscape or square), as Cedar does on the chosen device. A folder card opens the folder's page:
+  its rows (or chips and grid), or the folders inside a hub. **See all** opens a Branch's titles or
+  a group's cards. Titles are sample posters; covers, heroes and logos are the setup's own artwork.
 - **Profile photos** and **Source badges**: the artwork galleries. A profile photo can be put on Your
   Home so the exported file offers it.
 
@@ -168,7 +175,7 @@ Export writes Cedar's native `.cedar` file, as described in `CEDAR_FILE_FORMAT.m
 repository, through `public/shared/cedar-file.mjs`:
 
 - A **Branches file** is safe to share. Catalog picks are copied exactly as published. Direct
-  Branches become ordinary Branches with poster presentation; Branch Groups become
+  Branches become ordinary Branches in the row style chosen for them (posters by default); Branch Groups become
   `cedar.branch-group` Branches whose device layouts become `platformConfiguration`. Sources that
   can't travel (Tobacco Tie catalogs other than Trakt Up Next and watchlists) are left out and listed.
 - A **profile file** is sealed with a passphrase and can carry the owner's own Tobacco Ties, so rows
