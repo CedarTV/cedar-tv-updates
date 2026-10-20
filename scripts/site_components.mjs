@@ -68,6 +68,7 @@ export function renderSiteHeader() {
             <a href="${projectBasePath}/">Home</a>
             <a href="${projectBasePath}/apple/">Apple apps</a>
             <a href="${projectBasePath}/releases/">What’s new</a>
+            <a href="${projectBasePath}/roadmap/">Roadmap</a>
             <a href="${projectBasePath}/creator/">Creator</a>
             <a href="${projectBasePath}/support/">Support</a>
           </nav>
