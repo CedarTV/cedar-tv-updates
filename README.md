@@ -162,6 +162,16 @@ Run `node --test test/*.test.mjs`, each renderer with `--check`, and
   landscape or square), as Cedar does on the chosen device. A folder card opens the folder's page:
   its rows (or chips and grid), or the folders inside a hub. **See all** opens a Branch's titles or
   a group's cards. Titles are sample posters; covers, heroes and logos are the setup's own artwork.
+  Card and poster titles sit below the artwork by default; the preview's Titles menu also offers
+  Cedar's other positions (on the artwork, or hidden) and is remembered in the browser only.
+
+  **+ Branch** opens the Branch builder (`public/creator/branch-builder.mjs`), the website's version
+  of Cedar's New Branch page: Content (Discover, Your Library, Saved & Tracked, or a public Trakt,
+  MDBList or TMDB list link), Build Your Own with Refine Results, Layout with a live preview, an
+  automatic or custom Branch Title, and Devices. Its choices and title rules come from the app
+  (`branch-options.mjs`), and a built Branch is stored and exported as Cedar's own `dataSource`,
+  `query` and filters. The same builder edits a row inside a Branch Group folder, and opens imported
+  TMDB and Trakt sources too.
 - **Profile photos** and **Source badges**: the artwork galleries. A profile photo can be put on Your
   Home so the exported file offers it.
 

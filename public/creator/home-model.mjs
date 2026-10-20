@@ -2,6 +2,7 @@
 // apps' collection JSON or built by hand. It writes Cedar's native .cedar files: a Branches file to
 // share, or a sealed profile file that keeps the owner's Tobacco Ties.
 import {branchesFile,profileFile,cedarDate,findTobaccoTies,addonFamily} from '../shared/cedar-file.mjs';
+import {cleanCedarSource,sourceIssue,families} from './branch-options.mjs';
 import {creatorBundleID,maximumCartItems,isItemID,isAvatarPath,avatarURL,isBadgePackID,badgePackURL,setupOf} from './creator-model.mjs';
 export const MAX_BYTES = 10 * 1024 * 1024;
 export const deviceFamilies = ['phone','tablet','desktop','television'];
@@ -33,6 +34,8 @@ export function sanitizeSource(v){
  for(const k of ['tmdbId','traktListId'])if(positive(v[k]))s[k]=v[k];
  if(obj(v.filters)){s.filters={};for(const k of stringFilters)if(typeof v.filters[k]==='string')s.filters[k]=text(v.filters[k]);for(const k of numberFilters)if(typeof v.filters[k]==='number'&&Number.isFinite(v.filters[k])){if(['year','voteCountGte'].includes(k)&&!Number.isSafeInteger(v.filters[k]))continue;s.filters[k]=v.filters[k];}if(!Object.hasOwn(s.filters,'voteCountGte')&&Number.isSafeInteger(v.filters['vote_count.gte']))s.filters.voteCountGte=v.filters['vote_count.gte'];}
  if(s.provider==='tmdb')s.tmdbSourceType=(s.tmdbSourceType||'DISCOVER').toUpperCase();
+ // Built in Creator's Branch builder: Cedar's own dataSource, query and filters.
+ if(s.provider==='cedar'){try{s.cedar=cleanCedarSource(v.cedar);}catch{delete s.cedar;}}
  return s;
 }
 export function sourceProblem(s,direct=false){
@@ -42,12 +45,32 @@ export function sourceProblem(s,direct=false){
   return '';
  }
  if(s.provider==='trakt')return !positive(s.traktListId)||!['movie','movies','tv','series','show','shows'].includes(s.mediaType) ? 'A public Trakt list ID and media type are required.' : '';
+ if(s.provider==='cedar')return s.cedar?sourceIssue(s.cedar):'This source can’t be read.';
  if(s.provider==='addon')return ['trakt.upnext','trakt.watchlist.movies','trakt.watchlist.series'].includes(s.catalogId) ? '' : 'Tobacco Tie catalogs can’t travel in a .cedar file, so Cedar leaves this source out.';
  return `Cedar does not support the ${s.provider||'unknown'} source provider.`;
 }
 export function makeBranch(title='Trending',kind='TRENDING',type='movie',filters={}){return {id:uid(),kind:'branch',title,enabled:true,source:sanitizeSource({title,provider:'tmdb',tmdbSourceType:kind,mediaType:type,filters})};}
 export function makeGroup(title='New Branch Group'){return {id:uid(),kind:'group',title,enabled:true,deviceLayout:newDeviceLayout(),branches:[]};}
 export function makeChild(title='New branch',shape){const b={id:uid(),title,enabled:true,sources:[makeBranch(title).source]};if(shape&&shape!=='landscape')b.tileShape=shape;return b;}
+// Rows made in the Branch builder (branch-builder.mjs). A "build" is {title, titleMode, style,
+// platforms, source: {dataSource, query, filters}}; rows keep it as a `cedar` source.
+const styleOf=row=>row.rowStyle==='wide'?'landscape':row.rowStyle==='feature'?'feature':row.posterLook==='critic'?'ratings':'poster';
+/** A source as the builder edits it. Imported TMDB and Trakt sources convert; Tobacco Tie ones can't. */
+export function buildSource(s){const problem=sourceProblem(s,true);if(problem&&s.provider!=='cedar')throw Error(problem);return cleanCedarSource(cedarSource(s));}
+export function buildFromRow(row){return {title:row.title,titleMode:row.titleMode==='automatic'?'automatic':'custom',style:styleOf(row),platforms:row.platforms?[...row.platforms]:null,source:buildSource(row.source)};}
+export function buildFromChild(s){return {title:s.title,titleMode:'custom',style:'poster',platforms:null,source:buildSource(s)};}
+export function sourceFromBuild(build,id=uid()){return {id,title:name(build.title,'Untitled source'),enabled:true,provider:'cedar',cedar:cleanCedarSource(build.source)};}
+/** Writes a build onto a direct Branch row (made with `rowFromBuild` or opened with `buildFromRow`). */
+export function applyBuild(row,build){
+ row.title=name(build.title,'Untitled branch');row.source=sourceFromBuild(build,row.source?.id);
+ if(build.style==='landscape')row.rowStyle='wide';else if(build.style==='feature')row.rowStyle='feature';else delete row.rowStyle;
+ if(build.style==='ratings')row.posterLook='critic';else delete row.posterLook;
+ if(build.titleMode==='automatic')row.titleMode='automatic';else delete row.titleMode;
+ const platforms=Array.isArray(build.platforms)?families.filter(f=>build.platforms.includes(f)):[];
+ if(platforms.length&&platforms.length<families.length)row.platforms=platforms;else delete row.platforms;
+ return row;
+}
+export function rowFromBuild(build){return applyBuild({id:uid(),kind:'branch',title:'',enabled:true},build);}
 /** Home row styles: Cedar's poster, wide backdrop and featured rows. */
 export const rowStyles=['classic','wide','feature'];
 export const cardShapes=['landscape','poster','square'];
@@ -67,7 +90,7 @@ export function addPick(draft,item,title){const picks=draft.rows.filter(r=>r.kin
 export function pickState(draft,item){const picks=draft.rows.filter(r=>r.kind==='pick');if(picks.some(r=>r.item.id===item.id))return 'added';if(item.type==='group'&&picks.some(r=>r.item.type==='setup'&&r.item.id===setupOf(item.id)))return 'included';return 'available';}
 export function validateDraft(v){
  if(!obj(v)||v.version!==2||!Array.isArray(v.rows)||v.rows.length>1000)throw Error('Choose a supported collection or saved Creator draft.');
- let total=0;const ids=new Set();const rows=v.rows.map(r=>{if(!obj(r)||!['branch','group','pick'].includes(r.kind))throw Error('Invalid Home row.');const row={id:text(r.id,uid()),kind:r.kind,title:name(r.title,'Untitled branch'),enabled:r.enabled!==false};if(ids.has(row.id))throw Error('The draft contains duplicate Home row IDs.');ids.add(row.id);if(r.kind==='branch'){row.source=sanitizeSource(r.source);if(rowStyles.includes(r.rowStyle))row.rowStyle=r.rowStyle;total++;}else if(r.kind==='pick'){row.item=cleanPick(r.item);}else{if(!Array.isArray(r.branches)||r.branches.length>2000)throw Error('Too many branches in this group.');row.branches=r.branches.map(cleanChild);row.deviceLayout=validateDeviceLayout(r.deviceLayout||newDeviceLayout());const childIDs=new Set();for(const b of row.branches){if(childIDs.has(b.id))throw Error('The group contains duplicate branch IDs.');childIDs.add(b.id);const sourceIDs=new Set();for(const s of b.sources){if(sourceIDs.has(s.id))s.id=uid();sourceIDs.add(s.id);}total+=b.sources.length;}}return row;});
+ let total=0;const ids=new Set();const rows=v.rows.map(r=>{if(!obj(r)||!['branch','group','pick'].includes(r.kind))throw Error('Invalid Home row.');const row={id:text(r.id,uid()),kind:r.kind,title:name(r.title,'Untitled branch'),enabled:r.enabled!==false};if(ids.has(row.id))throw Error('The draft contains duplicate Home row IDs.');ids.add(row.id);if(r.kind==='branch'){row.source=sanitizeSource(r.source);if(rowStyles.includes(r.rowStyle))row.rowStyle=r.rowStyle;if(r.posterLook==='critic')row.posterLook='critic';if(r.titleMode==='automatic')row.titleMode='automatic';const platforms=Array.isArray(r.platforms)?families.filter(f=>r.platforms.includes(f)):[];if(platforms.length&&platforms.length<families.length)row.platforms=platforms;total++;}else if(r.kind==='pick'){row.item=cleanPick(r.item);}else{if(!Array.isArray(r.branches)||r.branches.length>2000)throw Error('Too many branches in this group.');row.branches=r.branches.map(cleanChild);row.deviceLayout=validateDeviceLayout(r.deviceLayout||newDeviceLayout());const childIDs=new Set();for(const b of row.branches){if(childIDs.has(b.id))throw Error('The group contains duplicate branch IDs.');childIDs.add(b.id);const sourceIDs=new Set();for(const s of b.sources){if(sourceIDs.has(s.id))s.id=uid();sourceIDs.add(s.id);}total+=b.sources.length;}}return row;});
  if(total>15000)throw Error('Choose a collection with fewer than 15,000 sources.');const draft={version:2,title:name(v.title,'My Home'),rows};if(isAvatarPath(v.avatar))draft.avatar=v.avatar;if(isBadgePackID(v.badgePack))draft.badgePack=v.badgePack;if(typeof v.bundleID==='string'&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v.bundleID))draft.bundleID=v.bundleID.toUpperCase();return draft;
 }
 const builtin={trending_movies:'TRENDING',trending_series:'TRENDING',trending_shows:'TRENDING',popular_movies:'POPULAR',popular_series:'POPULAR',popular_shows:'POPULAR',top_rated_movies:'TOP_RATED',toprated_movies:'TOP_RATED',top_rated_series:'TOP_RATED',top_rated_shows:'TOP_RATED',toprated_series:'TOP_RATED',toprated_shows:'TOP_RATED',upcoming_movies:'UPCOMING',now_playing_movies:'NOW_PLAYING',nowplaying_movies:'NOW_PLAYING',airing_today_series:'AIRING_TODAY',airing_today_shows:'AIRING_TODAY',on_the_air_series:'ON_THE_AIR',on_the_air_shows:'ON_THE_AIR'};
@@ -114,6 +137,7 @@ const feeds={TRENDING:'trending',POPULAR:'popular',TOP_RATED:'topRated',UPCOMING
 const metadata={kind:'preferredMetadata',parameters:{}};
 /** One Studio source as Cedar's `dataSource`, `query` and `filters`. Call only after `sourceProblem` passes. */
 export function cedarSource(s){
+ if(s.provider==='cedar')return structuredClone(s.cedar);
  if(s.provider==='trakt'){const type=cedarContent(s.mediaType);return {dataSource:{kind:'trackingService',identifier:'trakt-public',parameters:{}},query:{kind:'curatedList',identifier:`global:${s.traktListId}:${type==='shows'?'show':'movie'}`,parameters:{}},filters:cedarFilters(type,{},traktSort(s.sortBy,s.sortHow))};}
  if(s.provider==='addon')return {dataSource:{kind:'local',parameters:{}},query:{kind:s.catalogId==='trakt.upnext'?'upNext':'watchlist',parameters:{}},filters:cedarFilters(cedarContent(s.type||s.mediaType))};
  const k=s.tmdbSourceType,parameters={};if(s.filters?.watchRegion)parameters.region=s.filters.watchRegion;let query;
@@ -127,14 +151,14 @@ export function cedarSource(s){
  return {dataSource:metadata,query,filters:cedarFilters(type,s.filters,tmdbSort(s.sortBy))};
 }
 const templates={classic:'poster-carousel',wide:'wide-backdrop-carousel',feature:'list-preview-full-width'};
-const presentation=templateID=>({templateID,enhancedPostersEnabled:false,ratings:{isEnabled:false,providerIDs:[]}});
+const presentation=(templateID,posterLook)=>({templateID,enhancedPostersEnabled:false,ratings:{isEnabled:false,providerIDs:[]},...(posterLook?{posterLook}:{})});
 const groupContent=sources=>{const types=new Set(sources.map(s=>s.filters.contentType));return types.size===1?[...types][0]:'both';};
 const empty=contentType=>cedarFilters(contentType);
 /** Studio's per-device appearance becomes `platformConfiguration` (CEDAR_FILE_FORMAT.md §7.3). */
 function platformConfiguration(row){const shared=row.deviceLayout.shared,overrides={},platforms=[];
  for(const family of deviceFamilies){const a=appearanceFor(row,family),o={};if(a.enabled)platforms.push(family);if(a.rowStyle!==shared.rowStyle)o.presentation=presentation(templates[a.rowStyle]);if(a.cardStyle!=='backdrop')o.leafCardStyle=a.cardStyle;if(a.browseLayout!==shared.browseLayout)o.leafBrowseLayout=a.browseLayout;if(Object.keys(o).length)overrides[family]=o;}
  const config={overrides};if(platforms.length<deviceFamilies.length)config.platforms=platforms;return platforms.length&&(config.platforms||Object.keys(overrides).length)?config:platforms.length?null:false;}
-const branch=(id,title,base,template,folderOptions=[])=>({id,profileID:'00000000-0000-0000-0000-000000000000',schemaVersion:2,title,titleMode:'custom',dataSource:base.dataSource,query:base.query,defaultFilters:base.filters,presentation:presentation(template),folderOptions,position:0,isEnabled:true});
+const branch=(id,title,base,template,folderOptions=[],{posterLook,titleMode='custom'}={})=>({id,profileID:'00000000-0000-0000-0000-000000000000',schemaVersion:2,title,titleMode,dataSource:base.dataSource,query:base.query,defaultFilters:base.filters,presentation:presentation(template,posterLook),folderOptions,position:0,isEnabled:true});
 /** Every enabled row as Cedar Branches. `tieFor(source)` returns the profile file's Tobacco Tie for
  an add-on source, so a profile export keeps rows a Branches file has to leave out. `items` holds the
  downloaded catalog file of each pick, by item ID; a pick's Branches are copied as published. */
@@ -153,7 +177,7 @@ function cedarBranches(draft,bundleID,tieFor=()=>null,items={}){
    const shared=row.deviceLayout.shared,base={dataSource:{kind:'custom',identifier:'cedar.branch-group',parameters:{'cedar.home.displaysFolderCards':'true','cedar.home.folderRole':'folder','cedar.home.leafBrowseLayout':shared.browseLayout}},query:{kind:'custom',identifier:'cedar.branch-group',parameters:{}},filters:empty(groupContent(folders.flatMap(f=>f.sources)))};
    const b=branch(id,row.title,base,templates[shared.rowStyle],folders);if(platforms)b.platformConfiguration=platforms;branches.push(b);groups++;
   }else{
-   const s=row.source;if(!s.enabled)continue;const c=convert(s,true);if(c.problem){issues.push(`${row.title}: ${c.problem}`);continue;}branches.push(branch(id,row.title,c,templates[row.rowStyle]||'poster-carousel'));
+   const s=row.source;if(!s.enabled)continue;const c=convert(s,true);if(c.problem){issues.push(`${row.title}: ${c.problem}`);continue;}const b=branch(id,row.title,c,templates[row.rowStyle]||'poster-carousel',[],{posterLook:row.posterLook,titleMode:row.titleMode});if(row.platforms)b.platformConfiguration={platforms:row.platforms,overrides:{}};branches.push(b);
   }
  }
  if(!branches.length)throw Error('Enable at least one compatible branch or source before exporting.');

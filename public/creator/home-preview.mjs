@@ -58,31 +58,35 @@ const button=(text,action,cls='text-button')=>{const b=el('button',cls,text);b.t
 export function previewImageURL(url){const tmdb=/^https:\/\/(?:image\.tmdb\.org|media\.themoviedb\.org)\/t\/p\/original\//;if(tmdb.test(url||''))return url.replace(tmdb,'https://image.tmdb.org/t/p/w780/');const m=/^https:\/\/get-stranded\.fabriceleven\.com\/img\/remote\/([A-Za-z0-9_-]+=*)$/.exec(url||'');if(!m)return url;try{const original=atob(m[1].replace(/-/g,'+').replace(/_/g,'/'));return /^https:\/\/[^\s"'<>]+$/.test(original)?original:url;}catch{return url;}}
 function image(url,cls,failed){const i=el('img',cls);i.src=previewImageURL(url);i.alt='';i.loading='lazy';i.decoding='async';i.referrerPolicy='no-referrer';i.addEventListener('error',()=>{i.remove();failed?.();},{once:true});return i;}
 /** Sample titles from Cedar's own screenshots: the preview shows shapes and order, not each list's titles. */
-function samples(count,cls){const rail=el('div',`sample-rail ${cls}`);rail.setAttribute('aria-hidden','true');for(let i=0;i<count;i++)rail.append(el('span',`sample-poster s${i%6}`));return rail;}
+const sampleTitles=['Mutiny','Toy Story 5','Lanterns','Spider-Man: Brand New Day','The Odyssey','Insidious: Out of the Further'];
+function samples(count,cls){const rail=el('div',`sample-rail ${cls}`);rail.setAttribute('aria-hidden','true');for(let i=0;i<count;i++){const item=el('span','sample-item');item.append(el('span',`sample-poster s${i%6}`),el('span','sample-title',sampleTitles[i%6]));rail.append(item);}return rail;}
+/** Where card and poster titles sit, as Cedar's Title Position setting: below, on the artwork, or hidden. */
+export const titlePositions={below:'Below artwork',on:'On artwork',hidden:'Hidden'};
 const sampleCounts={poster:12,wide:7,feature:3};
 function heading(title,caption,actions=[]){const h=el('div','preview-row-heading'),text=el('div');text.append(el('h3','',title));if(caption)text.append(el('small','',caption));h.append(text,...actions);return h;}
 
 function folderCard(folder,shape,cardStyle,open){
  const art=folder.coverImageURL,logo=folder.titleLogoURL;
- const card=button('',open,`group-card shape-${shape}`);card.setAttribute('aria-label',`Open ${folder.title}`);
- // A hidden title comes back if the artwork that stood in for it doesn't load.
- const title=el('span',folder.hidesTitle&&(art||logo)?'title-hidden':'',folder.title),reveal=()=>{if(!card.querySelector('img'))title.className='';};
- if(art)card.append(image(art,'',reveal));else if(cardStyle==='poster-wall'||folder.categoryCardStyle==='poster-wall')card.classList.add('poster-wall');
- if(logo)card.append(image(logo,'card-logo',reveal));
- card.append(title);
- if(folder.folderOptions?.length)card.append(el('small','card-badge',`${folder.folderOptions.length} inside`));
+ const card=button('',open,`group-card shape-${shape}`),box=el('span','card-art');card.setAttribute('aria-label',`Open ${folder.title}`);
+ // On the artwork, a hidden title comes back if the artwork that stood in for it doesn't load.
+ const overlay=el('span',`card-overlay-title${folder.hidesTitle&&(art||logo)?' title-hidden':''}`,folder.title),reveal=()=>{if(!box.querySelector('img'))overlay.classList.remove('title-hidden');};
+ if(art)box.append(image(art,'',reveal));else if(cardStyle==='poster-wall'||folder.categoryCardStyle==='poster-wall')box.classList.add('poster-wall');
+ if(logo)box.append(image(logo,'card-logo',reveal));
+ box.append(overlay);
+ if(folder.folderOptions?.length)box.append(el('small','card-badge',`${folder.folderOptions.length} inside`));
+ card.append(box,el('span','card-title',folder.title));
  return card;
 }
 
 /** One Branch as a Home row. `open(path)` opens its page: [] for the Branch, [i] for a folder. */
 function homeRow(branch,open,edit){
  const row=el('section','preview-row'),style=rowStyle(branch.presentation?.templateID);
- const actions=[button('See all',()=>open([]))];if(edit)actions.push(button('Edit',edit));
+ const actions=open?[button('See all',()=>open([]))]:[];if(edit)actions.push(button('Edit',edit));
  if(isGroup(branch)){
   const shape=cardShape(branch),folders=branch.folderOptions||[];
   row.append(heading(branch.title,`Branch Group · ${folders.length} ${folders.length===1?'branch':'branches'} · ${shapeNames[shape]}`,actions));
   const rail=el('div',`group-rail ${style} shape-${shape}`);
-  folders.forEach((f,i)=>rail.append(folderCard(f,shape,branch.cardStyle,()=>open([i]))));
+  folders.forEach((f,i)=>rail.append(folderCard(f,shape,branch.cardStyle,()=>open?.([i]))));
   if(!folders.length)rail.append(el('p','empty','No branches in this group.'));
   row.append(rail);return row;
  }
@@ -159,3 +163,6 @@ export function renderHome(out,{blocks,device,deviceName,entry,parentTitle},on){
  if(!out.children.length)out.append(el('p','empty','Your Home starts here. Add a setup from Setups, import a collection, or add a Branch.'));
  return true;
 }
+
+/** One Branch as it would sit on Home, for the Branch builder's Layout preview. */
+export function renderBranchPreview(out,branch){out.replaceChildren(homeRow(branch,null,null));}
