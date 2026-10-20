@@ -26,6 +26,7 @@ const itemFromRow = (row) => ({
   kind: row.kind,
   title: row.title,
   summary: row.summary,
+  description: row.description ?? "",
   notes: row.notes,
   status: row.status,
   platforms: JSON.parse(row.platforms),
@@ -42,11 +43,11 @@ const itemFromRow = (row) => ({
 });
 
 const itemValues = (item) => [
-  item.kind, item.title, item.summary, item.notes, item.status, JSON.stringify(item.platforms),
+  item.kind, item.title, item.summary, item.description, item.notes, item.status, JSON.stringify(item.platforms),
   item.priority, item.public ? 1 : 0, item.requests, item.shippedIn, item.releaseURL,
 ];
 
-const ITEM_COLUMNS = "kind, title, summary, notes, status, platforms, priority, is_public, requests, shipped_in, release_url";
+const ITEM_COLUMNS = "kind, title, summary, description, notes, status, platforms, priority, is_public, requests, shipped_in, release_url";
 
 export const d1Store = (db) => ({
   async countForClientDay(clientHash) {
@@ -110,6 +111,16 @@ export const d1Store = (db) => ({
     return Number(result.meta?.changes ?? 0) > 0;
   },
 
+  // The original reports behind an item: the one it was accepted from and any merged into it.
+  async reportsForItem(itemID) {
+    const result = await db.prepare(
+      `SELECT * FROM feedback_submissions
+        WHERE item_id = ?1 AND state IN ('accepted', 'merged')
+        ORDER BY created_at_ms ASC`,
+    ).bind(itemID).all();
+    return (result.results || []).map(submissionFromRow);
+  },
+
   async listItems() {
     const result = await db.prepare("SELECT * FROM tracker_items ORDER BY number ASC").all();
     return (result.results || []).map(itemFromRow);
@@ -125,7 +136,7 @@ export const d1Store = (db) => ({
       db.prepare("UPDATE tracker_counters SET value = value + 1 WHERE name = 'item'"),
       db.prepare(
         `INSERT INTO tracker_items(number, ${ITEM_COLUMNS}, created, updated)
-         SELECT value, ?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?12
+         SELECT value, ?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?13
            FROM tracker_counters WHERE name = 'item'
          RETURNING *`,
       ).bind(...itemValues(item), date),
@@ -136,9 +147,9 @@ export const d1Store = (db) => ({
   async updateItem(number, item, date) {
     const row = await db.prepare(
       `UPDATE tracker_items
-          SET kind = ?2, title = ?3, summary = ?4, notes = ?5, status = ?6, platforms = ?7,
-              priority = ?8, is_public = ?9, requests = ?10, shipped_in = ?11, release_url = ?12,
-              updated = ?13
+          SET kind = ?2, title = ?3, summary = ?4, description = ?5, notes = ?6, status = ?7,
+              platforms = ?8, priority = ?9, is_public = ?10, requests = ?11, shipped_in = ?12,
+              release_url = ?13, updated = ?14
         WHERE number = ?1
         RETURNING *`,
     ).bind(number, ...itemValues(item), date).first();
@@ -164,7 +175,7 @@ export const d1Store = (db) => ({
       db.prepare(`UPDATE tracker_counters SET value = value + 1 WHERE name = 'item' AND ${stillNew}`).bind(submissionID),
       db.prepare(
         `INSERT INTO tracker_items(number, ${ITEM_COLUMNS}, created, updated, source_channel_id)
-         SELECT counter.value, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?13,
+         SELECT counter.value, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?14,
                 submission.source_channel_id
            FROM tracker_counters AS counter
            JOIN feedback_submissions AS submission ON submission.submission_id = ?1 AND submission.state = 'new'

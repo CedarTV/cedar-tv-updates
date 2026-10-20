@@ -14,7 +14,10 @@ export const memoryStore = () => {
     items,
     async countForClientDay(clientHash) { return rows.filter((row) => row.clientHash === clientHash).length; },
     async insert(row) {
-      rows.push({ reporter: null, sourceChannelID: null, ...row, state: "new", itemID: null, discordChannelID: null, discordMessageID: null });
+      rows.push({
+        reporter: null, sourceChannelID: null, ...row, createdAtEpochMilliseconds: row.createdAtMs,
+        state: "new", itemID: null, discordChannelID: null, discordMessageID: null,
+      });
     },
     async list(state) { return rows.filter((row) => row.state === state).map(copy); },
     async get(id) { return copy(rows.find((row) => row.submissionID === id)); },
@@ -29,6 +32,9 @@ export const memoryStore = () => {
       if (!row) return false;
       Object.assign(row, { state: "discarded", contact: null });
       return true;
+    },
+    async reportsForItem(itemID) {
+      return rows.filter((row) => row.itemID === itemID && ["accepted", "merged"].includes(row.state)).map(copy);
     },
     async listItems() { return items.map(copy); },
     async getItem(number) { return copy(items.find((item) => item.id === `CDR-${number}`)); },

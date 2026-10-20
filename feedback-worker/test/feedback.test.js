@@ -128,6 +128,29 @@ test("merging adds a request; discarding closes the report", async () => {
   assert.deepEqual(deps.store.rows.map((row) => row.state), ["accepted", "merged", "discarded"]);
 });
 
+test("an item's original reports stay readable to staff after triage, without email", async () => {
+  const deps = dependencies();
+  await send(post(body({ contact: "viewer@example.com" })), environment(), deps);
+  await send(post(body({ title: "Guide freeze again", details: "It froze again on the second Apple TV." })), environment(), deps);
+  const [first, second] = deps.store.rows.map((row) => row.submissionID);
+  await send(admin(`/v1/inbox/${first}/accept`, { method: "POST", body: "{}" }), environment(), deps);
+  await send(admin(`/v1/inbox/${second}/merge`, { method: "POST", body: JSON.stringify({ itemID: "CDR-1" }) }), environment(), deps);
+  // Staff can rewrite the item's notes without losing the report.
+  await send(admin("/v1/items/CDR-1", { method: "PUT", body: JSON.stringify({ notes: "" }) }), environment(), deps);
+
+  const response = await send(admin("/v1/items/CDR-1/reports"), environment(), deps);
+  assert.equal(response.status, 200);
+  const { reports } = await response.json();
+  assert.deepEqual(reports.map((report) => [report.state, report.details]), [
+    ["accepted", "Scrolling the guide past midnight freezes the Apple TV app."],
+    ["merged", "It froze again on the second Apple TV."],
+  ]);
+  assert.equal(reports[0].appVersion, "1.0.0 (68)");
+  assert.doesNotMatch(JSON.stringify(reports), /viewer@example\.com|contact/);
+  assert.equal((await send(admin("/v1/items/CDR-9/reports"), environment(), deps)).status, 404);
+  assert.equal((await send(new Request("https://feedback.test/v1/items/CDR-1/reports"), environment(), deps)).status, 401);
+});
+
 test("items can be created, edited and deleted, and the roadmap shows only public ones", async () => {
   const deps = dependencies();
   const create = (fields) => send(admin("/v1/items", { method: "POST", body: JSON.stringify(fields) }), environment(), deps).then((response) => response.json());

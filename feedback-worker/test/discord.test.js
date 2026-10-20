@@ -59,10 +59,16 @@ test("approve opens a prefilled modal, and submitting it publishes the item", as
   assert.equal(opened.body.type, 9);
   assert.equal(opened.body.data.components[0].components[0].value, "Picture in picture");
 
-  const done = await call(deps, submitModal(`m:approve:planned:${id}`, { title: "Picture-in-picture on Apple TV", summary: "Keep a game in the corner." }));
+  // The modal holds public wording only; the report's text is never prefilled into it.
+  assert.deepEqual(opened.body.data.components.map((row) => row.components[0].custom_id), ["title", "summary", "description"]);
+  assert.doesNotMatch(JSON.stringify(opened.body.data.components), /Scrolling the guide/);
+
+  const done = await call(deps, submitModal(`m:approve:planned:${id}`, {
+    title: "Picture-in-picture on Apple TV", summary: "Keep a game in the corner.", description: "A small player stays on screen while you browse.",
+  }));
   assert.equal(done.body.type, 7);
   assert.match(done.body.data.embeds[0].description, /Approved as \*\*CDR-1\*\* \(Planned\)\. Its panel is in <#roadmap>/);
-  assert.equal(done.body.data.components.length, 0);
+  assert.deepEqual(done.body.data.components[0].components.map((button) => button.custom_id), [`s:report:${id}`]);
   const panel = deps.discord.calls.find((entry) => entry.op === "send" && entry.channelID === "roadmap");
   assert.match(panel.message.embeds[0].author.name, /CDR-1/);
   const [item] = deps.store.items;
@@ -71,8 +77,37 @@ test("approve opens a prefilled modal, and submitting it publishes the item", as
   assert.equal(item.title, "Picture-in-picture on Apple TV");
   const feed = await (await respond(new Request("https://feedback.test/v1/roadmap"), env, deps)).json();
   assert.equal(feed.items[0].summary, "Keep a game in the corner.");
+  assert.equal(feed.items[0].description, "A small player stays on screen while you browse.");
+  assert.doesNotMatch(JSON.stringify(feed), /Scrolling the guide|1\.0\.0 \(68\)/);
   // The interaction answer updates the triage message, so no extra REST edit is made.
   assert.equal(deps.discord.calls.filter((entry) => entry.op === "edit").length, 0);
+});
+
+test("staff can reopen the full original reports after approval, privately", async () => {
+  const { deps, id } = await setup({ contact: "viewer@example.com" });
+  await call(deps, press(`s:approve:investigating:${id}`));
+  await call(deps, submitModal(`m:approve:investigating:${id}`, { title: "Guide freezes after midnight", summary: "" }));
+  await respond(post(submissionBody({ title: "Guide stuck again", details: "Same freeze on the bedroom TV every night." })), env, deps);
+  await deps.settle();
+  await call(deps, press(`s:mergepick:${deps.store.rows.at(-1).submissionID}`, { values: ["CDR-1"] }));
+
+  const one = await call(deps, press(`s:report:${id}`));
+  assert.equal(one.body.data.flags, 64);
+  assert.equal(one.body.data.embeds[0].description, "Scrolling the guide past midnight freezes the Apple TV app.");
+  assert.match(JSON.stringify(one.body.data.embeds[0].fields), /1\.0\.0 \(68\)/);
+
+  const panel = deps.discord.calls.find((entry) => entry.op === "send" && entry.channelID === "roadmap");
+  assert.match(JSON.stringify(panel.message.components), /i:reports:CDR-1/);
+  const all = await call(deps, press("i:reports:CDR-1"));
+  assert.equal(all.body.data.flags, 64);
+  assert.deepEqual(all.body.data.embeds.map((embed) => embed.description), [
+    "Scrolling the guide past midnight freezes the Apple TV app.",
+    "Same freeze on the bedroom TV every night.",
+  ]);
+  assert.doesNotMatch(JSON.stringify(all.body), /viewer@example\.com/);
+
+  await call(deps, submitModal("m:create:feature:planned", { title: "Mini player", summary: "" }));
+  assert.match((await call(deps, press("i:reports:CDR-2"))).body.data.content, /no original report/);
 });
 
 test("status buttons move items, shipping asks for a version", async () => {
@@ -189,7 +224,7 @@ test("/roadmap adds an item directly and posts its panel", async () => {
   const opened = await call(deps, command("feature", "shipped"));
   assert.equal(opened.body.type, 9);
   assert.equal(opened.body.data.custom_id, "m:create:feature:shipped");
-  assert.deepEqual(opened.body.data.components.map((row) => row.components[0].custom_id), ["title", "summary", "shippedIn"]);
+  assert.deepEqual(opened.body.data.components.map((row) => row.components[0].custom_id), ["title", "summary", "description", "shippedIn"]);
   assert.match((await call(deps, command("bug", "planned"))).body.data.content, /didn’t work/);
 
   const added = await call(deps, submitModal("m:create:feature:shipped", { title: "Mini player", summary: "Float a small player.", shippedIn: "1.1.0 (80)" }));

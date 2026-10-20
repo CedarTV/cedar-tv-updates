@@ -83,7 +83,7 @@ export const acceptSubmission = async (deps, submissionID, overrides = {}, optio
   const item = await deps.store.acceptSubmission(submissionID, fields, today(deps.now), deps.now);
   if (!item) throw new FeedbackError(409, "already_triaged");
   // The report's triage message closes; the item gets its own panel in the roadmap channel.
-  if (options.refreshMessage !== false) editSubmissionMessage(deps, submission, closedSubmissionMessage(submission, acceptedOutcome(item, deps.env)));
+  if (options.refreshMessage !== false) editSubmissionMessage(deps, submission, closedSubmissionMessage(submission, acceptedOutcome(item, deps.env), { keepsReport: true }));
   ensureItemMessage(deps, deps.env, item);
   itemChanged(deps, null, item, { refreshMessage: false });
   return item;
@@ -97,7 +97,7 @@ export const mergeSubmission = async (deps, submissionID, itemID, options = {}) 
   const item = await deps.store.mergeSubmission(submissionID, itemNumber(itemID), today(deps.now), deps.now);
   if (!item) throw new FeedbackError(409, "already_triaged");
   if (options.refreshMessage !== false) {
-    editSubmissionMessage(deps, submission, closedSubmissionMessage(submission, `Merged into **${item.id}** ${item.title} (now ${item.requests} requests).`));
+    editSubmissionMessage(deps, submission, closedSubmissionMessage(submission, `Merged into **${item.id}** ${item.title} (now ${item.requests} requests).`, { keepsReport: true }));
   }
   itemChanged(deps, target, item);
   return item;
@@ -108,6 +108,14 @@ export const discardSubmission = async (deps, submissionID, options = {}) => {
   if (!(await deps.store.discard(submissionID, deps.now))) throw new FeedbackError(409, "already_triaged");
   if (options.refreshMessage !== false) editSubmissionMessage(deps, submission, closedSubmissionMessage(submission, "Discarded."));
   return submission;
+};
+
+// The reports an item came from. Contact details were cleared at triage, so none are returned.
+export const itemReports = async (deps, itemID) => {
+  const item = await deps.store.getItem(itemNumber(itemID));
+  if (!item) throw notFound("item_not_found");
+  const reports = await deps.store.reportsForItem(item.id);
+  return reports.map(({ contact: _contact, ...report }) => report);
 };
 
 export const createItem = async (deps, input) => deps.store.createItem(normalizeItem(input), today(deps.now));

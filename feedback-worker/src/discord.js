@@ -1,10 +1,11 @@
 // Discord interactions: buttons, select menus, modals and the "Track as …" message commands.
 // Discord calls this endpoint over HTTPS with an Ed25519 signature; only the owner may act.
-import { closedSubmissionMessage, itemMessage } from "./discord-render.js";
+import { closedSubmissionMessage, itemMessage, reportsMessage } from "./discord-render.js";
 import { FeedbackError } from "./errors.js";
 import { recordSubmission, validateSubmission } from "./feedback.js";
 import {
-  acceptedOutcome, acceptSubmission, createItem, discardSubmission, ensureItemMessage, mergeSubmission, updateItem,
+  acceptedOutcome, acceptSubmission, createItem, discardSubmission, ensureItemMessage, itemReports, mergeSubmission,
+  updateItem,
 } from "./operations.js";
 import { CLOSED_STATUSES, itemNumber, STATUSES, statusInfo } from "./tracker.js";
 
@@ -48,6 +49,7 @@ export const verifySignature = async (publicKeyHex, signatureHex, timestamp, bod
 
 const reply = (body) => new Response(JSON.stringify(body), { headers: { "Content-Type": "application/json" } });
 const notice = (content) => reply({ type: REPLY.message, data: { content, flags: EPHEMERAL, allowed_mentions: { parse: [] } } });
+const ephemeral = (message) => reply({ type: REPLY.message, data: { ...message, flags: EPHEMERAL } });
 const update = (data) => reply({ type: REPLY.update, data });
 
 const textInput = (custom_id, label, { value = "", style = 1, required = true, min = 0, max = 4000, placeholder } = {}) => ({
@@ -69,9 +71,11 @@ const modalValues = (components, values = {}) => {
   return values;
 };
 
-const wordingInputs = (title, summary) => [
+// Public wording only: the report itself is never copied in, so it can't be published by accident.
+const wordingInputs = (title, summary, description = "") => [
   textInput("title", "Public title", { value: title, min: 3, max: 120 }),
   textInput("summary", "Public summary (optional)", { value: summary, style: 2, required: false, max: 600, placeholder: "Shown on the roadmap under the title." }),
+  textInput("description", "Public details (optional)", { value: description, style: 2, required: false, max: 2000, placeholder: "Shown when someone opens the item on the roadmap. Write it fresh; don’t paste the report." }),
 ];
 
 const shipInputs = (item) => [
@@ -105,11 +109,18 @@ const component = async (interaction, env, deps) => {
       case "private": {
         const submission = await getSubmission(deps, submissionID);
         const item = await acceptSubmission(deps, submissionID, {}, silent);
-        return update(closedSubmissionMessage(submission, acceptedOutcome(item, env)));
+        return update(closedSubmissionMessage(submission, acceptedOutcome(item, env), { keepsReport: true }));
       }
       case "discard": {
         const submission = await discardSubmission(deps, submissionID, silent);
         return update(closedSubmissionMessage(submission, "Discarded."));
+      }
+      case "report": {
+        // Reopens a triaged report privately; the closed triage message only keeps the outcome.
+        const submission = await getSubmission(deps, submissionID);
+        const item = submission.itemID ? await deps.store.getItem(itemNumber(submission.itemID)) : null;
+        if (!item) return notice("This report isn’t linked to a roadmap item anymore.");
+        return ephemeral(reportsMessage(item, [submission]));
       }
       case "contact": {
         const submission = await getSubmission(deps, submissionID);
@@ -163,7 +174,11 @@ const component = async (interaction, env, deps) => {
       }
       case "edit": {
         const item = await getItem(deps, itemID);
-        return modal(`m:edit:${itemID}`, `Edit ${itemID}`, wordingInputs(item.title, item.summary));
+        return modal(`m:edit:${itemID}`, `Edit ${itemID}`, wordingInputs(item.title, item.summary, item.description));
+      }
+      case "reports": {
+        const item = await getItem(deps, itemID);
+        return ephemeral(reportsMessage(item, await itemReports(deps, itemID)));
       }
       case "visibility": {
         const item = await getItem(deps, itemID);
@@ -182,21 +197,24 @@ const modalSubmit = async (interaction, env, deps) => {
     case "approve": {
       const submission = await getSubmission(deps, rest[1]);
       const item = await acceptSubmission(deps, rest[1], {
-        status: rest[0], public: true, title: values.title, summary: values.summary ?? "",
+        status: rest[0], public: true, title: values.title, summary: values.summary ?? "", description: values.description ?? "",
       }, silent);
-      return update(closedSubmissionMessage(submission, acceptedOutcome(item, env)));
+      return update(closedSubmissionMessage(submission, acceptedOutcome(item, env), { keepsReport: true }));
     }
     case "create": {
       const [kind, status] = rest;
       const item = await createItem(deps, {
-        kind, status, public: true, title: values.title, summary: values.summary ?? "", shippedIn: values.shippedIn ?? "",
+        kind, status, public: true, title: values.title, summary: values.summary ?? "", description: values.description ?? "",
+        shippedIn: values.shippedIn ?? "",
       });
       ensureItemMessage(deps, env, item);
       const where = env.DISCORD_ROADMAP_CHANNEL_ID ? ` Its panel is in <#${env.DISCORD_ROADMAP_CHANNEL_ID}>.` : "";
       return notice(`Added **${item.id}** ${item.title} to the roadmap.${where}`);
     }
     case "edit":
-      return update(itemMessage(await updateItem(deps, rest[0], { title: values.title, summary: values.summary ?? "" }, silent)));
+      return update(itemMessage(await updateItem(deps, rest[0], {
+        title: values.title, summary: values.summary ?? "", description: values.description ?? "",
+      }, silent)));
     case "ship":
       return update(itemMessage(await updateItem(deps, rest[1], {
         status: rest[0], shippedIn: values.shippedIn ?? "", releaseURL: values.releaseURL ?? "",
