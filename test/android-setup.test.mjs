@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { randomUUID, webcrypto } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
 import { parseInvitation, makeCredentials, decodeSnapshot, commandEnvelope, editableRows, RELAY } from '../public/setup/model.mjs';
-import { bytesToBase64URL, sealEnvelope, openEnvelope } from '../public/link/cedar-sync.mjs';
+import { bytesToBase64URL, sealEnvelope, openEnvelope } from '../public/setup/cedar-sync.mjs';
 if (!globalThis.crypto) globalThis.crypto = webcrypto;
 const key = bytesToBase64URL(new Uint8Array(32).fill(4));
 function fixture() {

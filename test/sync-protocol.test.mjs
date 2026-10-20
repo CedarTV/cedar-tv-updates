@@ -25,7 +25,7 @@ import {
   parseCompanionInvitationFragment,
   sealEnvelope,
   validateCompanionClaimResult,
-} from "../public/link/cedar-sync.mjs";
+} from "../public/setup/cedar-sync.mjs";
 
 if (!globalThis.crypto) globalThis.crypto = webcrypto;
 

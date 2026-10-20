@@ -183,10 +183,10 @@ const normalizedWebRelay = (value) => {
   try {
     relay = new URL(value);
   } catch {
-    fail("invalid_relay", "The Cedar Link relay is invalid.");
+    fail("invalid_relay", "The setup relay is invalid.");
   }
   if (relay.protocol !== "https:" || relay.username || relay.password || relay.search || relay.hash) {
-    fail("invalid_relay", "The Cedar Link relay is invalid.");
+    fail("invalid_relay", "The setup relay is invalid.");
   }
   relay.pathname = relay.pathname.replace(/\/$/, "");
   return relay.href.replace(/\/$/, "");
@@ -194,23 +194,23 @@ const normalizedWebRelay = (value) => {
 
 export const parseWebInvitationFragment = (fragment, now = Date.now()) => {
   if (typeof fragment !== "string" || fragment.length <= 1 || fragment.length > 2_048) {
-    fail("invalid_invitation", "This Cedar Link invitation is invalid.");
+    fail("invalid_invitation", "This setup invitation is invalid.");
   }
   const values = new URLSearchParams(fragment.startsWith("#") ? fragment.slice(1) : fragment);
   const allowed = new Set(["v", "scope", "relay", "space", "owner", "invitation", "enrollment", "key", "expires"]);
   const seen = new Set();
   for (const field of values.keys()) {
     if (!allowed.has(field) || seen.has(field)) {
-      fail("invalid_invitation", "This Cedar Link invitation contains unsupported fields.");
+      fail("invalid_invitation", "This setup invitation contains unsupported fields.");
     }
     seen.add(field);
   }
   if (seen.size !== allowed.size || values.get("v") !== "1" || values.get("scope") !== "companion") {
-    fail("invalid_invitation", "This Cedar Link invitation is not a companion link.");
+    fail("invalid_invitation", "This setup invitation is not a companion link.");
   }
   const expiresAt = Number(values.get("expires"));
   if (!Number.isSafeInteger(expiresAt) || expiresAt <= now) {
-    fail("expired_invitation", "This Cedar Link invitation has expired.");
+    fail("expired_invitation", "This setup invitation has expired.");
   }
   return {
     scope: "companion",

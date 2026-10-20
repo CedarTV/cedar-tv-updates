@@ -12,19 +12,12 @@ const requiredFiles = [
   "public/privacy/index.html",
   "public/accessibility/index.html",
   "public/content-policy/index.html",
-  "public/cedar-link/index.html",
   "public/demo/cedar-review.m3u",
-  "public/link/index.html",
-  "public/link/link.css",
-  "public/link/link.js",
-  "public/link/companion-draft.mjs",
-  "public/link/cedar-sync.mjs",
-  "public/link/companion-ui.mjs",
-  "public/link/vendor/fflate-inflate.mjs",
-  "public/link/vendor/fflate-LICENSE.txt",
+  "public/setup/cedar-sync.mjs",
+  "public/setup/vendor/fflate-inflate.mjs",
+  "public/setup/vendor/fflate-LICENSE.txt",
   "public/catalogs/avatars.json",
   "public/catalogs/badges.json",
-  "public/sync-config.json",
 ];
 
 await Promise.all(requiredFiles.map((path) => access(path)));
@@ -35,7 +28,6 @@ const policyPages = [
   "privacy",
   "accessibility",
   "content-policy",
-  "cedar-link",
 ];
 for (const route of policyPages) {
   const policyPage = await readFile(`public/${route}/index.html`, "utf8");
@@ -61,7 +53,6 @@ const privacyPage = await readFile("public/privacy/index.html", "utf8");
 for (const requiredPrivacyTopic of [
   "Data on your device",
   "Services you connect",
-  "Cedar Link retention and deletion",
   "Tracking and advertising",
   "Your choices and contact",
 ]) {
@@ -73,67 +64,6 @@ for (const requiredPrivacyTopic of [
 const demoPlaylist = await readFile("public/demo/cedar-review.m3u", "utf8");
 if (!demoPlaylist.startsWith("#EXTM3U\n") || !demoPlaylist.includes("Big Buck Bunny") || !demoPlaylist.includes("https://")) {
   throw new Error("The App Review demo playlist is incomplete");
-}
-
-const config = JSON.parse(await readFile("public/sync-config.json", "utf8"));
-if (config.schemaVersion !== 1 || typeof config.relayBaseURL !== "string") {
-  throw new Error("sync-config.json must contain the version 1 Cedar Link configuration");
-}
-
-const relay = new URL(config.relayBaseURL);
-if (
-  relay.protocol !== "https:"
-  || relay.username
-  || relay.password
-  || relay.search
-  || relay.hash
-) {
-  throw new Error("Cedar Link requires a clean HTTPS relay origin");
-}
-
-const page = await readFile("public/link/index.html", "utf8");
-if (!page.includes(`connect-src 'self' ${relay.origin}`)) {
-  throw new Error("The Cedar Link CSP must allow its configured relay origin");
-}
-if (
-  !page.includes('href="link.css?v=workspace-1"')
-  || !page.includes('type="module" src="link.js?v=workspace-2"')
-  || !page.includes('id="link-button"')
-  || !page.includes('id="link-companion"')
-  || !page.includes('id="profile-selector"')
-  || !page.includes('id="profile-editor"')
-  || !page.includes('id="save-profile"')
-  || !page.includes('id="settings-editor"')
-  || !page.includes('id="branches-editor"')
-  || !page.includes('id="device-list"')
-  || !page.includes('id="forget-browser"')
-  || !page.includes('id="remote-controls"')
-  || !page.includes('id="companion-savebar"')
-  || !page.includes('role="tablist"')
-) {
-  throw new Error("The Cedar Link page is missing its required script or primary action");
-}
-if (/<(?:video|audio|iframe|canvas)\b/i.test(page)) {
-  throw new Error("Cedar Link must remain a configuration and remote-control companion, not a player");
-}
-
-const script = await readFile("public/link/link.js", "utf8");
-if (!script.includes('from "./cedar-sync.mjs?v=companion-6"')) {
-  throw new Error("The Cedar Link protocol module needs the current cache token");
-}
-if (!script.includes('from "./companion-draft.mjs?v=workspace-1"')) {
-  throw new Error("The Cedar Link draft module needs the current cache token");
-}
-if (
-  script.indexOf("history.replaceState") < 0
-  || script.indexOf("history.replaceState") > script.indexOf("parseWebInvitationFragment(fragment)")
-) {
-  throw new Error("The Cedar Link fragment must be removed before invitation parsing continues");
-}
-for (const requiredPath of ["/v1/health", "/claim", "../sync-config.json", "../catalogs/avatars.json", "../catalogs/badges.json"]) {
-  if (!script.includes(requiredPath)) {
-    throw new Error(`The Cedar Link client is missing ${requiredPath}`);
-  }
 }
 
 const badges = JSON.parse(await readFile("public/catalogs/badges.json", "utf8"));
@@ -156,7 +86,7 @@ for (const set of badges.sets) {
   }
 }
 
-const protocol = await readFile("public/link/cedar-sync.mjs", "utf8");
+const protocol = await readFile("public/setup/cedar-sync.mjs", "utf8");
 for (const requiredProtocol of [
   "cedar-sync-v1:",
   "/changes",
@@ -172,8 +102,8 @@ for (const requiredProtocol of [
   "browser-device-action",
 ]) {
   if (!protocol.includes(requiredProtocol)) {
-    throw new Error(`The Cedar Link protocol client is missing ${requiredProtocol}`);
+    throw new Error(`The setup relay protocol client is missing ${requiredProtocol}`);
   }
 }
 
-console.log(`Verified Cedar Link for ${relay.origin}`);
+console.log("Verified the public site");

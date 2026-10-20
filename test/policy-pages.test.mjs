@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
-const routes = ["apple", "support", "privacy", "accessibility", "content-policy", "cedar-link"];
+const routes = ["apple", "support", "privacy", "accessibility", "content-policy"];
 
 test("Apple policy pages are static, public, and scoped to the GitHub Pages project", async () => {
   for (const route of routes) {
@@ -25,7 +25,6 @@ test("privacy policy identifies collection, use, retention, deletion, and contac
     "YouTube trailers",
     "Optional AI search",
     "Payments",
-    "Cedar Link retention and deletion",
     "Your choices and contact",
   ]) {
     assert.ok(source.includes(phrase), `privacy policy should include ${phrase}`);
