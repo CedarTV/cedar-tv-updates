@@ -403,7 +403,7 @@ h1 {
   .release-history-controls button:hover { border-color: var(--cedar); }
 }
 
-/* Roadmap: release status columns, filled from the release catalog. */
+/* Roadmap: feature and known-issue columns, filled from the live roadmap feed. */
 .roadmap-header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 32px; max-width: none; }
 .roadmap-header > div { max-width: 720px; }
 .roadmap-header .inline-action { margin-top: 0; }
@@ -428,6 +428,7 @@ h1 {
 }
 .roadmap-board-three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .tracker-section { margin-top: clamp(40px, 6vw, 64px); }
+.roadmap-header + .tracker-section { margin-top: 0; }
 .tracker-heading { max-width: 720px; margin-bottom: 16px; }
 .tracker-heading h2 { margin-bottom: 6px; }
 .tracker-heading p { margin: 0; color: var(--muted); }

@@ -1,8 +1,9 @@
 // Triage and item changes shared by the admin API (Cedar Tracker) and Discord, with the Discord
-// side effects that keep the triage channel and the original forum threads in step.
+// side effects that keep the triage channel, the roadmap channel's item panels and the original
+// forum threads in step.
 import { closedSubmissionMessage, FORUM_TAGS, itemMessage, shippedNotice, submissionMessage } from "./discord-render.js";
 import { FeedbackError } from "./errors.js";
-import { changesItem, itemFromSubmission, itemNumber, normalizeItem, today } from "./tracker.js";
+import { changesItem, isPublished, itemFromSubmission, itemNumber, normalizeItem, statusInfo, today } from "./tracker.js";
 
 const notFound = (code = "not_found") => new FeedbackError(404, code);
 
@@ -23,6 +24,26 @@ const editSubmissionMessage = (deps, submission, message) => later(deps, async (
     await deps.discord.edit(submission.discordChannelID, submission.discordMessageID, message);
   }
 });
+
+// Reports that never reached Discord (posted before it was set up, or during an outage). Only
+// reports older than two minutes, so one whose own post is still in flight isn't doubled.
+export const announcePending = async (deps, env) => {
+  if (!deps.discord || !env.DISCORD_TRIAGE_CHANNEL_ID) return 0;
+  const pending = await deps.store.unannounced(deps.now - 2 * 60 * 1000, 10);
+  for (const submission of pending) {
+    const message = await deps.discord.send(env.DISCORD_TRIAGE_CHANNEL_ID, submissionMessage(submission));
+    await deps.store.setSubmissionMessage(submission.submissionID, env.DISCORD_TRIAGE_CHANNEL_ID, message.id);
+  }
+  return pending.length;
+};
+
+const panelChannel = (env) => env.DISCORD_ROADMAP_CHANNEL_ID || env.DISCORD_TRIAGE_CHANNEL_ID;
+
+export const acceptedOutcome = (item, env) => {
+  const where = env.DISCORD_ROADMAP_CHANNEL_ID ? ` Its panel is in <#${env.DISCORD_ROADMAP_CHANNEL_ID}>.` : "";
+  const status = statusInfo(item.kind, item.status)?.label ?? item.status;
+  return `${isPublished(item) ? "Approved" : "Kept private"} as **${item.id}** (${status}).${where}`;
+};
 
 const findTag = async (deps, threadID, status) => {
   const name = FORUM_TAGS[status];
@@ -61,7 +82,10 @@ export const acceptSubmission = async (deps, submissionID, overrides = {}, optio
   const fields = itemFromSubmission(submission, overrides);
   const item = await deps.store.acceptSubmission(submissionID, fields, today(deps.now), deps.now);
   if (!item) throw new FeedbackError(409, "already_triaged");
-  itemChanged(deps, null, item, options);
+  // The report's triage message closes; the item gets its own panel in the roadmap channel.
+  if (options.refreshMessage !== false) editSubmissionMessage(deps, submission, closedSubmissionMessage(submission, acceptedOutcome(item, deps.env)));
+  ensureItemMessage(deps, deps.env, item);
+  itemChanged(deps, null, item, { refreshMessage: false });
   return item;
 };
 
@@ -111,9 +135,10 @@ export const deleteItem = async (deps, itemID) => {
   return existing;
 };
 
-// Posts an item's control panel when it has none yet (items created in Cedar Tracker).
+// Posts an item's control panel in the roadmap channel when it has none yet.
 export const ensureItemMessage = (deps, env, item) => later(deps, async () => {
-  if (item.discordMessageID || !env.DISCORD_TRIAGE_CHANNEL_ID) return;
-  const message = await deps.discord.send(env.DISCORD_TRIAGE_CHANNEL_ID, itemMessage(item));
-  await deps.store.setItemMessage(itemNumber(item.id), env.DISCORD_TRIAGE_CHANNEL_ID, message.id);
+  const channelID = panelChannel(env);
+  if (item.discordMessageID || !channelID) return;
+  const message = await deps.discord.send(channelID, itemMessage(item));
+  await deps.store.setItemMessage(itemNumber(item.id), channelID, message.id);
 });

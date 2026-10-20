@@ -236,7 +236,7 @@ const matchAdminRoute = (method, parts) => {
   return null;
 };
 
-// The public roadmap feed. Anyone may read it; it's cached briefly at the edge.
+// The public roadmap feed. Anyone may read it; it's cached for 10 seconds at the edge.
 const roadmap = async (request, deps) => {
   const cache = globalThis.caches?.default;
   const cached = await cache?.match(request);
@@ -244,7 +244,7 @@ const roadmap = async (request, deps) => {
   const response = new Response(JSON.stringify(publicFeed(await deps.store.listItems())), {
     headers: {
       "Content-Type": "application/json; charset=utf-8",
-      "Cache-Control": "public, max-age=30",
+      "Cache-Control": "public, max-age=10",
       "Access-Control-Allow-Origin": "*",
       "X-Content-Type-Options": "nosniff",
     },
@@ -276,6 +276,7 @@ export const handle = async (request, env, deps) => {
 };
 
 export const respond = async (request, env, deps) => {
+  deps.env ??= env;
   try {
     return await handle(request, env, deps);
   } catch (error) {

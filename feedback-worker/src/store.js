@@ -91,6 +91,16 @@ export const d1Store = (db) => ({
     ).bind(submissionID, channelID, messageID).run();
   },
 
+  async unannounced(createdBefore, limit) {
+    const result = await db.prepare(
+      `SELECT * FROM feedback_submissions
+        WHERE state = 'new' AND discord_message_id IS NULL AND created_at_ms < ?1
+        ORDER BY created_at_ms ASC
+        LIMIT ?2`,
+    ).bind(createdBefore, limit).all();
+    return (result.results || []).map(submissionFromRow);
+  },
+
   async discard(submissionID, now) {
     const result = await db.prepare(
       `UPDATE feedback_submissions
@@ -146,17 +156,16 @@ export const d1Store = (db) => ({
     return Number(result.meta?.changes ?? 0) > 0;
   },
 
-  // One transaction: number the item, create it with the submission's Discord links, and mark
-  // the submission accepted. Nothing happens unless the submission is still new.
+  // One transaction: number the item, create it (keeping the forum thread it came from), and
+  // mark the submission accepted. Nothing happens unless the submission is still new.
   async acceptSubmission(submissionID, item, date, now) {
     const stillNew = "EXISTS (SELECT 1 FROM feedback_submissions WHERE submission_id = ?1 AND state = 'new')";
     const [, inserted] = await db.batch([
       db.prepare(`UPDATE tracker_counters SET value = value + 1 WHERE name = 'item' AND ${stillNew}`).bind(submissionID),
       db.prepare(
-        `INSERT INTO tracker_items(number, ${ITEM_COLUMNS}, created, updated,
-                                   discord_channel_id, discord_message_id, source_channel_id)
+        `INSERT INTO tracker_items(number, ${ITEM_COLUMNS}, created, updated, source_channel_id)
          SELECT counter.value, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?13,
-                submission.discord_channel_id, submission.discord_message_id, submission.source_channel_id
+                submission.source_channel_id
            FROM tracker_counters AS counter
            JOIN feedback_submissions AS submission ON submission.submission_id = ?1 AND submission.state = 'new'
           WHERE counter.name = 'item'
