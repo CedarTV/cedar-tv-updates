@@ -52,6 +52,18 @@ repository; App Store and TestFlight remain the binary distribution channels.
 
 `public/radio/` contains the separate Cedar Radio product, support, and privacy pages. Its Radio Browser, music catalog, and lyrics integrations differ from the Cedar media player. App Store Connect uses `/radio/support/` and `/radio/privacy/` for `com.cedarplayer.app`.
 
+## Feedback, roadmap and known issues
+
+- `public/feedback/` is the public bug report and feature request form. It posts to the
+  `cedar-feedback` Worker in [`feedback-worker/`](feedback-worker/README.md), which keeps reports
+  private and is separate from the encrypted relay.
+- `public/roadmap/tracker.json` is published by Cedar Tracker, a local app in the private Cedar
+  repository. It holds only reviewed items marked public. `scripts/tracker_feed.mjs` defines the
+  schema and refuses private fields; `test/roadmap-tracker.test.mjs` and `verify_public_site.mjs`
+  enforce it. Edit roadmap items in Cedar Tracker rather than by hand.
+- The roadmap page renders release status from `releases.json` plus Features and Known issues
+  from `tracker.json`.
+
 ## Encrypted relay
 
 `worker/` contains the Cloudflare Worker/D1 ciphertext relay that browser setup uses. Cedar Link, the browser companion that also used it, has been retired. The relay stores device-token

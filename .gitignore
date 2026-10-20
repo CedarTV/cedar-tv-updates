@@ -4,3 +4,7 @@
 worker/node_modules/
 worker/.wrangler/
 worker/wrangler.toml
+feedback-worker/node_modules/
+feedback-worker/.wrangler/
+feedback-worker/wrangler.toml
+feedback-worker/.dev.vars
