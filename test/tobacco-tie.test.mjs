@@ -25,9 +25,16 @@ test('browser encryption interoperates with independent AES-GCM and preserves co
   assert.ok(!code.includes('example.com'));
 });
 test('rejects unsupported and malformed addresses', () => {
-  for (const address of ['', 'example.com/manifest.json', 'http://example.com', 'javascript:alert(1)', 'https://user:password@example.com', 'https://exam ple.com', 'https://example.com/\nmanifest.json', 'https://example.com/#fragment', 'https://example.com/#', 'https://example.com/other.json', 'https://example.com/\\path', 'https://example.com/'+ 'x'.repeat(4096)]) {
+  for (const address of ['', 'example.com/manifest.json', 'ftp://example.com/manifest.json', 'javascript:alert(1)', 'https://user:password@example.com', 'https://exam ple.com', 'https://example.com/\nmanifest.json', 'https://example.com/#fragment', 'https://example.com/#', 'https://example.com/other.json', 'https://example.com/\\path', 'https://example.com/'+ 'x'.repeat(4096)]) {
     assert.throws(() => validateAddress(address));
   }
+});
+test('accepts self-hosted HTTP addresses and reports them as insecure', async () => {
+  assert.deepEqual(validateAddress('http://192.168.1.20:7000/abc'), { address: 'http://192.168.1.20:7000/abc/manifest.json', host: '192.168.1.20', secure: false });
+  const tie = await createTie('http://192.168.1.20:7000/abc/manifest.json\nhttps://example.com/manifest.json');
+  assert.deepEqual(tie.insecureHosts, ['192.168.1.20']);
+  assert.deepEqual(decryptAll(tie.code).map(item => item.url), ['http://192.168.1.20:7000/abc/manifest.json', 'https://example.com/manifest.json']);
+  assert.deepEqual((await createTie('https://example.com/manifest.json')).insecureHosts, []);
 });
 test('normalizes base/configure addresses without rewriting encoded configuration', () => {
   for (const value of ['https://example.com', 'https://example.com/configure', 'https://example.com/']) {
@@ -97,7 +104,7 @@ test('several URLs share one key, keep their order, and drop repeats', async () 
   assert.equal(result.code, PREFIX + result.password.slice(PASSWORD_PREFIX.length) + '.' + result.username.slice(USERNAME_PREFIX.length));
 });
 test('bundles name the failing URL and enforce their limits', async () => {
-  await assert.rejects(createTie('https://a.example, http://b.example'), /^Error: URL 2:/);
+  await assert.rejects(createTie('https://a.example, https://user:pw@b.example'), /^Error: URL 2:/);
   const many = Array.from({ length: MAX_BUNDLE_COUNT + 1 }, (_, index) => `https://${index}.example`).join('\n');
   await assert.rejects(createTie(many), /up to 20/);
   const long = Array.from({ length: 20 }, (_, index) => `https://${index}.example/${'x'.repeat(3000)}/manifest.json`).join('\n');

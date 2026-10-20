@@ -1,4 +1,4 @@
-import { createTie, SERVER_URL } from './codec.mjs?v=4';
+import { createTie, SERVER_URL } from './codec.mjs?v=5';
 const form = document.querySelector('#tie-form');
 const input = document.querySelector('#addon-url');
 const error = document.querySelector('#address-error');
@@ -54,6 +54,9 @@ form.addEventListener('submit', async event => {
     status.textContent = result.count > 1
       ? `Your username and password are ready. They install all ${result.count} URLs together.`
       : 'Your Tobacco Tie username and password are ready.';
+    if (result.insecureHosts.length) {
+      status.textContent += ` ${result.insecureHosts.join(', ')} uses unencrypted HTTP, so its address and anything it sends can be read on the network. Cedar will ask before installing it, and needs the latest app version.`;
+    }
     username.focus({ preventScroll: true });
   } catch (issue) {
     if (current !== revision) return;

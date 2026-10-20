@@ -17,8 +17,9 @@ export function validateAddress(value) {
   if (encoder.encode(input).length > 4096) throw new Error('This address is too long. Use an address under 4,096 bytes.');
   if (/\s|\\/.test(input)) throw new Error('The address contains a space, line break, or backslash. Check it and try again.');
   let url;
-  try { url = new URL(input); } catch { throw new Error('Enter a complete address beginning with https://.'); }
-  if (url.protocol !== 'https:') throw new Error('Use an HTTPS address beginning with https://.');
+  try { url = new URL(input); } catch { throw new Error('Enter a complete address beginning with https:// or http://.'); }
+  // Self-hosted servers may only offer HTTP. Cedar asks before installing one; HTTPS stays preferred.
+  if (url.protocol !== 'https:' && url.protocol !== 'http:') throw new Error('Use an address beginning with https:// or http://.');
   if (url.username || url.password) throw new Error('Use your Cedar Library’s configured address rather than a URL with a username and password before the hostname.');
   if (input.includes('#')) throw new Error('Remove the fragment after # from this address.');
   let path = url.pathname.replace(/\/+$/, '');
@@ -29,7 +30,7 @@ export function validateAddress(value) {
   }
   url.pathname = path;
   if (encoder.encode(url.href).length > 4096) throw new Error('This address is too long. Use an address under 4,096 bytes.');
-  return { address: url.href, host: url.hostname };
+  return { address: url.href, host: url.hostname, secure: url.protocol === 'https:' };
 }
 // Separate addresses with line breaks, spaces, or commas. A comma only separates when the next
 // address starts right after it: configured paths can contain commas themselves.
@@ -70,5 +71,6 @@ export async function createTie(value) {
   }
   const code = `${PREFIX}${password.slice(PASSWORD_PREFIX.length)}.${username.slice(USERNAME_PREFIX.length)}`;
   const hosts = unique.map(item => item.host);
-  return { username, password, server: SERVER_URL, code, link: `${LINK_PREFIX}${code}`, host: hosts[0], hosts, count: unique.length };
+  const insecureHosts = [...new Set(unique.filter(item => !item.secure).map(item => item.host))];
+  return { username, password, server: SERVER_URL, code, link: `${LINK_PREFIX}${code}`, host: hosts[0], hosts, insecureHosts, count: unique.length };
 }
