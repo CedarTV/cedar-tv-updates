@@ -47,7 +47,7 @@ const applyRelease = (manifest) => {
     });
   }
   document.querySelectorAll("[data-release-link]").forEach((link) => {
-    link.href = `https://github.com/CedarTV/cedar-tv-updates/releases/tag/v${encodeURIComponent(version)}`;
+    link.href = `https://github.com/CedarTV/cedar-tv-updates/releases/tag/android-tv-${encodeURIComponent(version)}`;
   });
 
   const fileSize = formatBytes(Number(manifest.apkSize));
@@ -65,6 +65,9 @@ const statusLabels = new Map([
 const applyPlatformReleases = (catalog) => {
   if (!catalog || catalog.schemaVersion !== 1 || !Array.isArray(catalog.platforms)) return;
   const releases = new Map(catalog.platforms.map((release) => [release.id, release]));
+  // Android TV cards describe the current Cedar app, which the catalog lists as its newer line.
+  const current = Array.isArray(catalog.previews) ? catalog.previews.find((release) => release.id === "android-tv-preview") : null;
+  if (current) releases.set("android-tv", { ...current, id: "android-tv", status: "released" });
 
   document.querySelectorAll("[data-platform-version]").forEach((node) => {
     const release = releases.get(node.dataset.platformVersion);
@@ -106,7 +109,9 @@ const applyPlatformReleases = (catalog) => {
   }
 };
 
-fetch("update-v1.json", { cache: "no-store", credentials: "omit" })
+// The homepage offers the current Cedar app for Android TV (app.cedar.android.tv). The root update-v1.json
+// stays the update feed of the original 1.2.85 app and is not used here.
+fetch("android-preview/update-v1.json", { cache: "no-store", credentials: "omit" })
   .then((response) => response.ok ? response.json() : Promise.reject(new Error("Manifest unavailable")))
   .then(applyRelease)
   .catch(() => {});
