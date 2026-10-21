@@ -6,12 +6,27 @@ export const OWNER = "111111111111111111";
 export const memoryStore = () => {
   const rows = [];
   const items = [];
+  const threads = new Map();
+  const forumStarts = new Map();
   let counter = 0;
   const copy = (value) => (value ? structuredClone(value) : value);
   const pending = (id) => rows.find((row) => row.submissionID === id && row.state === "new");
   return {
     rows,
     items,
+    threads,
+    async forumSince(forumID, now) {
+      if (!forumStarts.has(forumID)) forumStarts.set(forumID, now);
+      return forumStarts.get(forumID);
+    },
+    async importedThreads(ids) { return new Set(ids.filter((id) => threads.has(id))); },
+    async claimThread(id, forumID) {
+      if (threads.has(id)) return false;
+      threads.set(id, { forumID, submissionID: null });
+      return true;
+    },
+    async setThreadSubmission(id, submissionID) { threads.get(id).submissionID = submissionID; },
+    async releaseThread(id) { if (threads.get(id)?.submissionID == null) threads.delete(id); },
     async countForClientDay(clientHash) { return rows.filter((row) => row.clientHash === clientHash).length; },
     async insert(row) {
       rows.push({
@@ -85,8 +100,14 @@ export const fakeDiscord = () => {
     thread1: { id: "thread1", parent_id: "forum1", applied_tags: ["tagPlayer"] },
     forum1: { id: "forum1", available_tags: [{ id: "tagPlayer", name: "Player" }, { id: "tagPlanned", name: "Planned" }, { id: "tagShipped", name: "Shipped" }, { id: "tagFixed", name: "Fixed" }] },
   };
+  const forum = { active: [], archived: [], messages: {} };
   return {
     calls,
+    channels,
+    forum,
+    async activeThreads(guildID) { calls.push({ op: "active", guildID }); return { threads: structuredClone(forum.active) }; },
+    async archivedThreads(channelID) { return { threads: structuredClone(forum.archived.filter((thread) => thread.parent_id === channelID)) }; },
+    async message(channelID, messageID) { return structuredClone(forum.messages[`${channelID}/${messageID}`] ?? null); },
     async send(channelID, message) { calls.push({ op: "send", channelID, message }); next += 1; return { id: String(next) }; },
     async edit(channelID, messageID, message) { calls.push({ op: "edit", channelID, messageID, message }); return {}; },
     async channel(id) { return structuredClone(channels[id]); },

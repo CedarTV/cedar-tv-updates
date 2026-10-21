@@ -111,6 +111,37 @@ export const d1Store = (db) => ({
     return Number(result.meta?.changes ?? 0) > 0;
   },
 
+  // When importing from a forum began; set once, the first time the forum is polled.
+  async forumSince(forumID, now) {
+    await db.prepare("INSERT OR IGNORE INTO discord_forum_state(forum_id, since_ms) VALUES (?1, ?2)").bind(forumID, now).run();
+    const row = await db.prepare("SELECT since_ms FROM discord_forum_state WHERE forum_id = ?1").bind(forumID).first();
+    return Number(row.since_ms);
+  },
+
+  async importedThreads(threadIDs) {
+    if (!threadIDs.length) return new Set();
+    const result = await db.prepare(
+      `SELECT thread_id FROM discord_forum_threads WHERE thread_id IN (${threadIDs.map((_, index) => `?${index + 1}`).join(", ")})`,
+    ).bind(...threadIDs).all();
+    return new Set((result.results || []).map((row) => row.thread_id));
+  },
+
+  // Claims a thread before importing it, so overlapping runs can't import it twice.
+  async claimThread(threadID, forumID, now) {
+    const result = await db.prepare(
+      "INSERT OR IGNORE INTO discord_forum_threads(thread_id, forum_id, imported_at_ms) VALUES (?1, ?2, ?3)",
+    ).bind(threadID, forumID, now).run();
+    return Number(result.meta?.changes ?? 0) > 0;
+  },
+
+  async setThreadSubmission(threadID, submissionID) {
+    await db.prepare("UPDATE discord_forum_threads SET submission_id = ?2 WHERE thread_id = ?1").bind(threadID, submissionID).run();
+  },
+
+  async releaseThread(threadID) {
+    await db.prepare("DELETE FROM discord_forum_threads WHERE thread_id = ?1 AND submission_id IS NULL").bind(threadID).run();
+  },
+
   // The original reports behind an item: the one it was accepted from and any merged into it.
   async reportsForItem(itemID) {
     const result = await db.prepare(

@@ -37,13 +37,26 @@ A cron every five minutes posts any untriaged report that never reached Discord 
 was configured, or during an outage), skipping reports less than two minutes old. The daily cron
 handles retention.
 
+New posts in the public bug and feature-request forums (`DISCORD_BUG_FORUM_ID`,
+`DISCORD_FEATURE_FORUM_ID`) are imported by the same five-minute cron, at most ten a run, oldest
+first. Each thread becomes one report, formatted by fixed rules: the post title is the title,
+the first message is the text (a very short one is prefixed with the title), the first device
+tag (Apple TV, iPhone / iPad, Mac, Android TV) is the platform, other tags and `https`
+attachment links are appended, and the poster's display name is kept as the reporter. The
+triage message links back to the post. Posts from before the first poll, posts by bots and posts
+whose first message was deleted are skipped; imported threads are remembered in
+`discord_forum_threads` so retention can't cause re-imports. Discord returns empty text unless
+the application has the **Message Content** intent, which `configure-discord.mjs --apply` turns
+on; posts read as empty are retried on later runs and logged. Edits and replies after a post is
+imported aren't copied.
+
 The **Track as bug** and **Track as feature** message commands turn any Discord post into a
 report. For forum threads, status changes apply the matching moderated tag (Planned, Shipped,
 Not planned, Fixed) and a shipped or fixed item posts a thank-you in the thread.
 
 `scripts/configure-discord.mjs` registers those commands and sets the application's
 interactions endpoint; it runs with `DISCORD_BOT_TOKEN` and `GUILD_ID` and prints the public key
-and owner ID for `wrangler.toml`. Discord sends a signed PING before accepting the endpoint, so
+and owner ID, and the two forum IDs, for `wrangler.toml`. Discord sends a signed PING before accepting the endpoint, so
 deploy the Worker with `DISCORD_PUBLIC_KEY` first.
 
 ## Abuse limits

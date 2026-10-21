@@ -32,6 +32,7 @@ const reportEmbed = (submission, { detailsMaximum = 3500, footer = "" } = {}) =>
       field("Version", submission.appVersion),
       field("System", submission.osVersion),
       field("Device", submission.deviceModel),
+      field("Post", submission.sourceChannelID ? `<#${submission.sourceChannelID}>` : null),
     ].filter(Boolean),
     footer: { text: `Reference ${submission.submissionID.slice(0, 8)}${footer}` },
   };
@@ -161,6 +162,13 @@ export const discordClient = (token, fetcher = fetch) => {
     send: (channelID, message) => call("POST", `/channels/${channelID}/messages`, message),
     edit: (channelID, messageID, message) => call("PATCH", `/channels/${channelID}/messages/${messageID}`, message),
     channel: (channelID) => call("GET", `/channels/${channelID}`),
+    activeThreads: (guildID) => call("GET", `/guilds/${guildID}/threads/active`),
+    archivedThreads: (channelID) => call("GET", `/channels/${channelID}/threads/archived/public?limit=25`),
+    // Null when the message is gone (a forum post whose first message was deleted).
+    message: (channelID, messageID) => call("GET", `/channels/${channelID}/messages/${messageID}`).catch((error) => {
+      if (/ 404$/.test(error.message)) return null;
+      throw error;
+    }),
     setTags: (channelID, tagIDs) => call("PATCH", `/channels/${channelID}`, { applied_tags: tagIDs }),
   };
 };
