@@ -3458,6 +3458,40 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Android TV, Google TV and Fire TV
 
+### 1.4.0 · build 10 · 2026-10-21 · public release
+
+October 21, 2026 · Public release for Android TV and Google TV.
+
+- Branch Groups gain Saga and Collection folders.
+- Describe a whole Branch Group, such as “a Halloween group for the whole family”, and Cedar builds its folders and Branches. Uses AI Search when it is on for the profile.
+- Seasonal Groups: ready-made Halloween, Christmas & Holidays, Valentine’s Day and Summer Branch Groups.
+- Trakt smart lists appear in My Lists and can be added to Home.
+- Media servers can add a Home row for each library.
+- Hide Watched only hides series you have finished, not every series you started.
+- What Should I Watch: answer a few questions for ranked picks you can save as a Home row.
+- My Taste Home content and Live Rewind on live channels, with a local buffer of up to 60 minutes.
+- Home opens before large catalogs finish loading.
+- Cedar Overlays Style: Default, Glass or Native, where badges sit flush with the poster as edge tabs and corner flags.
+- Cedar Posters labels now vary per title, with new labels such as True Story, Hidden Gem, ’80s Classic and “X Saga”, and award labels like “2× Oscar Winner”.
+- XRDB posters, with eight styles and no key needed.
+- Watched Posters: dim watched artwork or show it in black and white.
+- Pure Black for OLED screens in Settings › Appearance.
+- Hero Style: detail pages can match a Super Hero Home.
+- Enhanced Posters, Cedar Overlays and card appearance rebuilt to match Apple TV, including posters drawn on textless artwork and a Watching Now label.
+- Page backgrounds, rating icons and enhanced landscape artwork in Settings.
+- Each media server has a Tracking choice, so the server or Cedar records your plays without counting them twice.
+- Prewarm Debrid Links, a preferred Tobacco Tie metadata source, per-field episode metadata sources and Refresh Library Metadata.
+- Import profile .cedar files, including their watch history.
+- Program details show XMLTV artwork, cast and crew, ratings, premiere and last-chance flags, and audio and subtitle details.
+- Follow leagues outside ESPN, starting with the Albanian Superliga. Requested by Para.192 on Discord.
+- A Multiview Presets page, Embedded Subtitles and the Sports Bar playlist in Settings.
+- Default Profile, Auto-Rotate Hero, Home restore, source preferences, and About, privacy and storage pages in Settings.
+
+Update from Settings → Software Update, or install the APK over your current Cedar app from this release line. The original Cedar Android app (version 1.2.85) uses a separate package and does not receive this update.
+
+[Install Cedar 1.4.0](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.4.0/Cedar-TV-1.4.0.apk) · [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-4-0-build-10) · [Teletext decoder source](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.4.0/Cedar-Teletext-Source-1.4.0.tar.gz)
+
+
 ### 1.3.0 · build 9 · 2026-10-17 · public release
 
 October 17, 2026 · Public release for Android TV and Google TV.

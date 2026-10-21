@@ -5,13 +5,13 @@
       "id": "android-tv-preview",
       "platform": "android-tv",
       "name": "New Cedar app for Android TV",
-      "version": "1.3.0",
-      "build": "9",
-      "date": "2026-10-17",
+      "version": "1.4.0",
+      "build": "10",
+      "date": "2026-10-21",
       "status": "preview",
-      "summary": "Normal version numbers and the Cedar app name, a new Explore tab, hold-to-scrub, watching recordings in progress, series recording, Audio Boost and automatic backup feeds.",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-3-0-build-9",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.3.0/Cedar-TV-1.3.0.apk"
+      "summary": "What Should I Watch, Live Rewind, My Taste Home, Trakt smart lists, Pure Black, Watched Posters and Enhanced Posters that match Apple TV.",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-4-0-build-10",
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.4.0/Cedar-TV-1.4.0.apk"
     }
   ],
   "platforms": [

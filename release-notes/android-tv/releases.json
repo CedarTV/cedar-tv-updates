@@ -176,6 +176,15 @@
   "previews": [
     {
       "platform": "android-tv",
+      "version": "1.4.0",
+      "build": "10",
+      "date": "2026-10-21",
+      "status": "preview",
+      "summary": "What Should I Watch, Live Rewind, My Taste Home, Trakt smart lists, Pure Black, Watched Posters and Enhanced Posters that match Apple TV.",
+      "notes": "release-notes/android-tv/1.4.0.md"
+    },
+    {
+      "platform": "android-tv",
       "version": "1.3.0",
       "build": "9",
       "date": "2026-10-17",
