@@ -46,7 +46,7 @@ for (const route of policyPages) {
 }
 
 const supportPage = await readFile("public/support/index.html", "utf8");
-if (!supportPage.includes("https://discord.gg/TFTx7j86v") || !supportPage.includes("/issues")) {
+if (!supportPage.includes("https://discord.gg/FDjx57bjdE") || !supportPage.includes("/issues")) {
   throw new Error("The public Support URL must contain working contact options");
 }
 

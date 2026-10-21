@@ -23,7 +23,7 @@ test("every public page uses the shared Cedar footer", async () => {
     assert.equal((source.match(/<footer\b/g) ?? []).length, 1, `${page} should have one footer`);
     assert.equal((source.match(/class="site-footer"/g) ?? []).length, 1, `${page} should use the shared footer`);
     assert.match(source, /href="\/cedar-tv-updates\/footer\.css"/);
-    assert.match(source, /<li><a href="https:\/\/discord\.gg\/TFTx7j86v">Discord<\/a><\/li>/);
+    assert.match(source, /<li><a href="https:\/\/discord\.gg\/FDjx57bjdE">Discord<\/a><\/li>/);
     assert.doesNotMatch(source, /discord-symbol|site-footer-social/);
     assert.match(source, /href="\/cedar-tv-updates\/releases\/"/);
     assert.match(source, /href="\/cedar-tv-updates\/accessibility\/"/);
