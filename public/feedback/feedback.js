@@ -33,6 +33,13 @@ const localProblem = () => {
   return null;
 };
 
+// Links such as feedback/?kind=feature open the form on that choice.
+const requestedKind = new URLSearchParams(location.search).get("kind");
+if (requestedKind === "bug" || requestedKind === "feature") {
+  form.elements.kind.value = requestedKind;
+  syncKind();
+}
+
 form.addEventListener("change", (event) => {
   if (event.target.name === "kind") syncKind();
 });
