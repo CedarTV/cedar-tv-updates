@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "69",
+      "date": "2026-10-21",
+      "status": "testflight",
+      "summary": "External TestFlight. Edge-swipe sidebar, redesigned widgets, deeper Branch Groups, Cedar Overlays Style, Pure Black and a new player engine.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-69.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "69",
+      "date": "2026-10-21",
+      "status": "testflight",
+      "summary": "External TestFlight. Cinematic and Super Hero Home layouts, deeper Branch Groups, Cedar Overlays Style, Pure Black and a new player engine.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-69.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "69",
+      "date": "2026-10-21",
+      "status": "testflight",
+      "summary": "External TestFlight. Smoother Home scrolling, Hero Style, deeper Branch Groups, Cedar Overlays Style, Pure Black and a new player engine.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-69.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "69",
+      "date": "2026-10-21",
+      "status": "testflight",
+      "summary": "External TestFlight. Cinematic and Super Hero Home layouts, Picture in Picture that hides Cedar, deeper Branch Groups and a new player engine.",
+      "notes": "release-notes/apple/mac/1.0.0-build-69.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "68",
       "date": "2026-10-13",
       "status": "testflight",

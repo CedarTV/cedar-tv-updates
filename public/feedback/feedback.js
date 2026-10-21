@@ -11,7 +11,7 @@ const errorMessages = {
   invalid_title: "Add a short summary (at least 3 characters).",
   invalid_details: "Add a few more details (at least 10 characters).",
   invalid_platform: "Choose which app this is about.",
-  invalid_app_version: "The app version should look like 1.0.0 (68).",
+  invalid_app_version: "The app version should look like 1.0.0 (69).",
   invalid_contact: "That email address doesn’t look right.",
   rate_limited: "That was quick. Wait a minute, then try again.",
   daily_limit_reached: "You’ve sent a lot today. Please try again tomorrow.",

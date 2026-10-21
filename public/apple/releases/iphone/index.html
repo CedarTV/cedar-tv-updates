@@ -57,52 +57,95 @@
         </header>
 
         <div class="release-stack">
-        <article class="release-entry" id="version-1-0-0-build-68">
+        <article class="release-entry" id="version-1-0-0-build-69">
           <header>
             <p class="eyebrow">Latest iPhone build</p>
-            <h2>Cedar iPhone 1.0.0 · build 68</h2>
-            <p class="release-summary">External TestFlight. Radio with CarPlay, What Should I Watch, Customize Live, Jellyfin and Emby Live TV, and .cedar setup files.</p>
+            <h2>Cedar iPhone 1.0.0 · build 69</h2>
+            <p class="release-summary">External TestFlight. Edge-swipe sidebar, redesigned widgets, deeper Branch Groups, Cedar Overlays Style, Pure Black and a new player engine.</p>
             <div class="release-metadata">
               <span class="release-status release-status-testflight">TestFlight</span>
               <span>Version 1.0.0</span>
-              <span>Build 68</span>
-              <time datetime="2026-10-13">October 13, 2026</time>
+              <span>Build 69</span>
+              <time datetime="2026-10-21">October 21, 2026</time>
             </div>
           </header>
           <div class="release-notes-body">
-            <p>October 13, 2026 · Released to External TestFlight for iPhone.</p>
-            <h3>Highlights</h3>
+            <p>October 21, 2026 · Released to External TestFlight for iPhone.</p>
+            <h3>Home and Branches</h3>
             <ul>
-            <li>Customize Live shelves, with programme pages showing where a show airs.</li>
-            <li>Radio in CarPlay.</li>
-            <li>Network shares re-index only changed folders.</li>
-            <li>Radio: stations by country and genre, synced lyrics and Shazam. Add it in Settings › Navigation.</li>
-            <li>What Should I Watch in Search returns ranked picks you can save as a Home row.</li>
-            <li>Jellyfin and Emby Live TV join Live TV, with lineups, multiview and Cedar DVR.</li>
-            <li>Share and import .cedar setup files with passphrase-locked passwords, plus Strand, Xperience, Fusion and Nuvio imports.</li>
-            <li>Detail pages: press and hold a section to reorder or hide it. New sections include Tagline, Themes and Box Office.</li>
-            <li>Mark Segments sends intro, recap and credits times to IntroDB and SkipDB.</li>
-            <li>Top 10 Charts, public MDBList lists and Sports Bar scores on Home.</li>
-            <li>Faster Cedar Posters, with new styles, presets and per-title styles.</li>
-            <li>Watched movies show Watch Again instead of Play. Requested by godzilladad on Discord.</li>
-            <li>Guide: open past or upcoming programme details, or press and hold for more actions. Requested by mazzi526 on Discord.</li>
-            <li>Custom Range release years, such as 1996–2003, for branches and custom channels. Requested by mazzi526 on Discord.</li>
-            <li>Tobacco Ties: one login for several Cedar Library URLs. Requested by MrT on Discord.</li>
-            <li>Faster HEVC live channel starts, and no more live audio stutter with Live rewind off.</li>
+            <li>Branch Groups go deeper: hub rows inside folders, sagas and cinematic universes with their own logos, Cross With… to combine two folders, and new presets for Directors, Actors, World Cinema &amp; TV, Formats and Awards &amp; Festivals. Decades now reach back to the 1920s.</li>
+            <li>Branches inside Branch Groups get the same Describe and full filters as standalone Branches, including keywords, people and several genres at once. Requested by neayhey on Discord.</li>
+            <li>Describe a whole Branch Group, such as “a Halloween group for the whole family”, and Cedar builds its folders and Branches. Apple Intelligence on iPhone, iPad and Mac.</li>
+            <li>Seasonal Groups: ready-made Halloween, Christmas &amp; Holidays, Valentine’s Day and Summer Branch Groups.</li>
+            <li>Each Branch Group now uses one card shape for all its folders.</li>
+            <li>Branch Group folders open with a full-screen hero, category label and logo.</li>
+            <li>Sort, Hide Watched and Filters are combined into one menu on Branch pages.</li>
+            <li>The Home hero can follow a saved Branch or one of its folders.</li>
+            <li>Trakt smart lists appear in My Lists and can be added to Home.</li>
+            <li>Media servers can add a Home row for each library.</li>
+            <li>Hide Watched only hides series you have finished, not every series you started.</li>
+            <li>When discovery is limited to playable titles, Trending, Genre and Service rows keep filling instead of showing one title, and Home explains the setting once. Reported by HungDaddy on Discord.</li>
+            </ul>
+            <h3>Posters and appearance</h3>
+            <ul>
+            <li>Cedar Overlays Style: Default, Glass or Native, where badges sit flush with the poster as edge tabs and corner flags.</li>
+            <li>Cedar Posters labels now vary per title, with new labels such as True Story, Hidden Gem, ’80s Classic and “X Saga”, and award labels like “2× Oscar Winner”.</li>
+            <li>XRDB posters, with eight styles and no key needed.</li>
+            <li>Watched Posters: dim watched artwork or show it in black and white.</li>
+            <li>Pure Black for OLED screens in Settings › Appearance.</li>
+            <li>A simpler Cedar Posters editor, with saved styles in the style strip.</li>
+            </ul>
+            <h3>Playback</h3>
+            <ul>
+            <li>Updated player engine with a rebuilt FFmpeg. Adds RealMedia (.rm/.rmvb), 3GP, Theora (.ogv), VobSub subtitles and DVD LPCM audio.</li>
+            <li>More reliable live channels and catch-up on slow or busy IPTV servers.</li>
+            <li>The player shows the selected badge pack for a stream’s resolution, HDR and audio.</li>
+            </ul>
+            <h3>Libraries, sources and tracking</h3>
+            <ul>
+            <li>Large Plex libraries sync faster, and very large Plex, Jellyfin and Emby libraries no longer fail partway through.</li>
+            <li>Each media server has a Tracking choice, so the server or Cedar records your plays without counting them twice.</li>
+            <li>Tobacco Ties without streams are offered as Branches instead of joining Cedar Library.</li>
+            <li>Tobacco Ties can use self-hosted http addresses, with a warning before install.</li>
+            </ul>
+            <h3>.cedar files and profiles</h3>
+            <ul>
+            <li>Profile .cedar files: export a profile with the parts you choose, including sealed media servers and watch history, and import it on any device.</li>
+            <li>Imported files keep your hero when they have none, and can set the profile photo and a source badge pack.</li>
+            <li>Cedar now imports only .cedar files. Use the converters on the Cedar website for files from other apps.</li>
+            </ul>
+            <h3>Live TV and sports</h3>
+            <ul>
+            <li>Program details show XMLTV artwork, cast and crew, ratings, premiere and last-chance flags, and audio and subtitle details.</li>
+            <li>Follow leagues outside ESPN, starting with the Albanian Superliga. Requested by Para.192 on Discord.</li>
+            </ul>
+            <h3>Radio</h3>
+            <ul>
+            <li>Artist stations from your listening history, played through Apple Music. Requested by mazzi526 on Discord.</li>
+            <li>Radio rows on Home show favourite, recent and library stations with the current song.</li>
+            <li>Each profile has its own Radio stations, and Kids profiles have their own approved list.</li>
+            <li>Synced lyrics line up with what you hear.</li>
+            <li>CarPlay: add the playing song to Apple Music.</li>
+            </ul>
+            <h3>Navigation, widgets and settings</h3>
+            <ul>
+            <li>Swipe from the left edge to open a sidebar with the pages you choose.</li>
+            <li>Redesigned widgets: Tonight with six modes, Radio with controls, My Teams and Recordings, plus Live Activities.</li>
+            <li>Complete German, Spanish, French, Brazilian Portuguese and Arabic translations.</li>
+            <li>Cedar Link has been retired. Nearby profile copy, Cedar Remote and channel share links still work.</li>
             </ul>
             <h3>Fixes</h3>
             <ul>
-            <li>Decade filters show their real years behind UTC.</li>
-            <li>Ambient channels stay out of Continue Watching.</li>
-            <li>Poster labels no longer collide with badges.</li>
-            <li>Closing a media-server channel releases its tuner.</li>
+            <li>With Parental Controls on, the profile menu no longer opens Customize Navigation or profile settings without the PIN.</li>
+            <li>A household Trakt connection that was replaced on another device no longer leaves tracking stuck; Cedar asks you to connect it again.</li>
+            <li>Library’s Recently Watched row no longer disappears after Mark as Unwatched.</li>
             </ul>
             <h3>Known issues</h3>
             <ul>
-            <li>Media-server Live TV has no catch-up; Plex Live TV isn&#39;t supported yet.</li>
+            <li>Media-server Live TV has no catch-up; Plex Live TV isn’t supported yet.</li>
             <li>Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.</li>
             </ul>
-            <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a> <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-68">Matching library source and platform relinking kits</a></p>
+            <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a> <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-69">Matching library source and platform relinking kits</a></p>
           </div>
         </article>
         <div class="release-history-heading">
@@ -112,6 +155,55 @@
             <button type="button" data-release-expand="close">Collapse all</button>
           </div>
         </div>
+        <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-68">
+          <details>
+            <summary>
+              <h2>Cedar iPhone 1.0.0 · build 68</h2>
+              <p class="release-summary">External TestFlight. Radio with CarPlay, What Should I Watch, Customize Live, Jellyfin and Emby Live TV, and .cedar setup files.</p>
+              <div class="release-metadata">
+              <span class="release-status release-status-testflight">TestFlight</span>
+              <span>Version 1.0.0</span>
+              <span>Build 68</span>
+              <time datetime="2026-10-13">October 13, 2026</time>
+            </div>
+            </summary>
+            <div class="release-notes-body">
+              <p>October 13, 2026 · Released to External TestFlight for iPhone.</p>
+              <h3>Highlights</h3>
+              <ul>
+              <li>Customize Live shelves, with programme pages showing where a show airs.</li>
+              <li>Radio in CarPlay.</li>
+              <li>Network shares re-index only changed folders.</li>
+              <li>Radio: stations by country and genre, synced lyrics and Shazam. Add it in Settings › Navigation.</li>
+              <li>What Should I Watch in Search returns ranked picks you can save as a Home row.</li>
+              <li>Jellyfin and Emby Live TV join Live TV, with lineups, multiview and Cedar DVR.</li>
+              <li>Share and import .cedar setup files with passphrase-locked passwords, plus Strand, Xperience, Fusion and Nuvio imports.</li>
+              <li>Detail pages: press and hold a section to reorder or hide it. New sections include Tagline, Themes and Box Office.</li>
+              <li>Mark Segments sends intro, recap and credits times to IntroDB and SkipDB.</li>
+              <li>Top 10 Charts, public MDBList lists and Sports Bar scores on Home.</li>
+              <li>Faster Cedar Posters, with new styles, presets and per-title styles.</li>
+              <li>Watched movies show Watch Again instead of Play. Requested by godzilladad on Discord.</li>
+              <li>Guide: open past or upcoming programme details, or press and hold for more actions. Requested by mazzi526 on Discord.</li>
+              <li>Custom Range release years, such as 1996–2003, for branches and custom channels. Requested by mazzi526 on Discord.</li>
+              <li>Tobacco Ties: one login for several Cedar Library URLs. Requested by MrT on Discord.</li>
+              <li>Faster HEVC live channel starts, and no more live audio stutter with Live rewind off.</li>
+              </ul>
+              <h3>Fixes</h3>
+              <ul>
+              <li>Decade filters show their real years behind UTC.</li>
+              <li>Ambient channels stay out of Continue Watching.</li>
+              <li>Poster labels no longer collide with badges.</li>
+              <li>Closing a media-server channel releases its tuner.</li>
+              </ul>
+              <h3>Known issues</h3>
+              <ul>
+              <li>Media-server Live TV has no catch-up; Plex Live TV isn&#39;t supported yet.</li>
+              <li>Sports Bar, Home DVR, Play on TV, Poster Studio and AI Search remain experimental.</li>
+              </ul>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/releases/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a> <a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-68">Matching library source and platform relinking kits</a></p>
+            </div>
+          </details>
+        </article>
         <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-65">
           <details>
             <summary>
