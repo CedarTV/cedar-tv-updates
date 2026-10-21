@@ -33,7 +33,7 @@ test("privacy policy identifies collection, use, retention, deletion, and contac
 
 test("support page exposes public contact paths without leaking private information", async () => {
   const source = await readFile("public/support/index.html", "utf8");
-  assert.match(source, /https:\/\/discord\.gg\/TFTx7j86v/);
+  assert.match(source, /https:\/\/discord\.gg\/FDjx57bjdE/);
   assert.match(source, /https:\/\/github\.com\/CedarTV\/cedar-tv-updates\/issues/);
   assert.doesNotMatch(source, /mailto:|\+\d{6,}|\d+ [A-Za-z]+ (?:Street|St\.|Road|Rd\.)/i);
 });
