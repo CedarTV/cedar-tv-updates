@@ -31,3 +31,12 @@ test("privacy policy explains feedback retention and the form links to it", asyn
   assert.match(privacy, /deleted after 30 days/);
   assert.match(page, /href="\/cedar-tv-updates\/privacy\/#feedback"/);
 });
+
+test("help links open the feedback form on a kind it accepts", async () => {
+  const home = await readFile("public/index.html", "utf8");
+  const script = await readFile("public/feedback/feedback.js", "utf8");
+  const linked = [...home.matchAll(/href="feedback\/\?kind=([a-z]+)"/g)].map((match) => match[1]);
+  assert.deepEqual(linked, [...KINDS]);
+  assert.match(script, /new URLSearchParams\(location\.search\)\.get\("kind"\)/);
+  assert.doesNotMatch(home, /github\.com\/CedarTV\/cedar-tv-updates\/issues/);
+});
