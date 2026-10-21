@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
     <link rel="stylesheet" href="tie.css?v=4">
     <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
-    <script type="module" src="tie.mjs?v=4"></script>
+    <script type="module" src="tie.mjs?v=5"></script>
     <script src="/cedar-tv-updates/theme.js"></script>
     <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
   </head>
@@ -59,7 +59,7 @@
             <form id="tie-form" novalidate>
               <label for="addon-url">Cedar Library URLs</label>
               <div class="address-field"><textarea id="addon-url" name="addon-url" rows="3" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="address-hint bundle-note address-error" maxlength="65536"></textarea><button class="clear-input" id="clear-input" type="button" aria-label="Clear URLs" hidden>×</button></div>
-              <div class="field-meta"><p id="address-hint">Use complete HTTPS addresses. Put each on its own line or separate them with commas — up to 20 per tie.</p></div>
+              <div class="field-meta"><p id="address-hint">Use complete HTTPS addresses, or HTTP for a self-hosted server. Put each on its own line or separate them with commas — up to 20 per tie.</p></div>
               <p class="bundle-note" id="bundle-note">A tie made from several URLs needs the latest Cedar app. Older versions install one URL per tie. Multiple-URL ties suggested by MrT on Discord.</p>
               <p id="address-error" class="field-error" role="alert" hidden></p>
               <button class="create-button" id="create-tie" type="submit"><span>Create Tobacco Tie</span><span aria-hidden="true">→</span></button>
