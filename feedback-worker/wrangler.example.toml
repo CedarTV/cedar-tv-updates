@@ -9,6 +9,9 @@ DISCORD_PUBLIC_KEY = ""
 DISCORD_TRIAGE_CHANNEL_ID = ""
 DISCORD_ROADMAP_CHANNEL_ID = ""
 DISCORD_OWNER_ID = ""
+# Public forums whose new posts the five-minute cron imports into triage (optional).
+DISCORD_BUG_FORUM_ID = ""
+DISCORD_FEATURE_FORUM_ID = ""
 
 # Secrets (set with `wrangler secret put`, never committed):
 #   ADMIN_TOKEN      bearer token the local Cedar Tracker uses to read and triage the inbox
