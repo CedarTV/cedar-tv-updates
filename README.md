@@ -176,8 +176,11 @@ as a `hero-carousel` Branch placed first: Card, Fullscreen or Fade, one source (
 viewer's watchlist or Up Next, the same source as one of the Home's Branches, or a source built in
 the Branch builder), the details it shows and up to 20 titles. Following another row by reference,
 a second source and their combination only exist in Cedar's profile-level hero, so Creator doesn't
-offer them. A profile file replaces the viewer's hero; Cedar shows the first hero on Home, so a
-Branches file's hero sits after the one a viewer already has.
+offer them. A profile file carries it as its first row, since importing one replaces the viewer's
+Home. A shared Branches file carries it in a top-level `hero` field beside `branches`, never as a
+row: Cedar shows the first hero on Home, so a hero row would only add a hidden second one. Current
+Cedar ignores the field; a later version can ask before using it. A hero alone can't make a
+Branches file.
 
 The Home preview (`public/creator/home-preview.mjs`) draws the same Branch JSON that export
 writes, so a picked setup shows every row it publishes. Rows take their real style (poster, wide,

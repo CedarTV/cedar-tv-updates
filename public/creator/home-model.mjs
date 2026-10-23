@@ -324,9 +324,15 @@ const onlyPicks=draft=>!draft.hero&&draft.rows.length>0&&draft.rows.every(r=>r.k
 export function exportCedar(value,now=new Date(),items={}){
  const draft=validateDraft(value),picksOnly=onlyPicks(draft),bundleID=picksOnly?creatorBundleID:draft.bundleID||uid().toUpperCase();
  const {branches,issues,groups,credits,titles,hero}=cedarBranches(draft,bundleID,undefined,items);
+ // A shared file's hero sits beside its rows, not among them. Cedar shows the first hero on Home,
+ // so a hero row would only add a second, hidden one; Cedar versions that don't read `hero` skip
+ // it, and later ones can ask before replacing the viewer's own (CEDAR_FILE_FORMAT.md §3).
+ const heroBranch=hero?branches.shift():null;
+ if(!branches.length)throw Error('A shared Branches file needs at least one row besides the hero. To share only a hero, choose the profile file.');
  const title=picksOnly&&titles.length===1?titles[0]:picksOnly&&draft.title==='My Home'?'Cedar Creator selection':draft.title;
- const document=branchesFile({bundleID,title,createdAt:cedarDate(now),generator,branches,avatarURL:draft.avatar?avatarURL(draft.avatar):null,badgePackURL:draft.badgePack?badgePackURL(draft.badgePack):null,extra:credits.length?{credits:credits.length===1?credits[0]:credits}:{}});
- return {document,issues,bundleID:picksOnly?draft.bundleID:bundleID,branchCount:branches.length-groups-(hero?1:0),groupCount:groups,hero};
+ const extra={...(credits.length?{credits:credits.length===1?credits[0]:credits}:{}),...(heroBranch?{hero:heroBranch}:{})};
+ const document=branchesFile({bundleID,title,createdAt:cedarDate(now),generator,branches,avatarURL:draft.avatar?avatarURL(draft.avatar):null,badgePackURL:draft.badgePack?badgePackURL(draft.badgePack):null,extra});
+ return {document,issues,bundleID:picksOnly?draft.bundleID:bundleID,branchCount:branches.length-groups,groupCount:groups,hero};
 }
 /** A row that reads one catalog of a Tobacco Tie in the same profile file (CEDAR_FILE_FORMAT.md §9.2). */
 function tieSource(s,tie){const type=s.type||(s.mediaType==='tv'?'series':s.mediaType)||'movie';return {dataSource:{kind:'manifestAddon',identifier:tie.id.toLowerCase(),parameters:{}},query:{kind:'addonCatalog',identifier:`${tie.manifestID}|${type}|${s.catalogId}`,parameters:{}},filters:cedarFilters(cedarContent(type))};}

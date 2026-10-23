@@ -79,7 +79,7 @@ function heroEditor(){const box=el('div','hero-editor'),h=draft.hero;
  const details=el('div','detail-chips');for(const f of heroFields){const on=h.fields.includes(f),b=button(heroFieldNames[f],()=>set(x=>{x.fields=on?x.fields.filter(v=>v!==f):heroFields.filter(v=>v===f||x.fields.includes(v));}),'chip');b.setAttribute('aria-pressed',String(on));details.append(b);}
  box.append(field('Details',details));
  const src=heroSource(draft);if(src.problem)box.append(el('p','compatibility',`${src.problem} Choose another source, or Cedar keeps each viewer’s own hero.`));
- box.append(el('p','quiet','A locked profile file replaces the viewer’s hero with this one. A shared Branches file adds it after the viewer’s own hero, which Cedar keeps showing first.'));
+ box.append(el('p','quiet','A locked profile file replaces the viewer’s hero with this one. A shared Branches file carries it alongside the rows without touching the viewer’s own hero; a later Cedar update will ask whether to use it.'));
  return box;}
 /** A hero source from the Branch builder. Only sources with titles Cedar can look up can feed it. */
 function buildHeroSource(current){const build=current?{title:current.title,titleMode:'custom',style:'poster',platforms:null,source:current.cedar}:undefined;openBranchBuilder({mode:'source',build,creating:!current,onSave:result=>{let cedar;try{cedar=cleanCedarSource(result.source);}catch(e){say(e.message);return;}if(!heroEligible(cedar)){say('The hero can’t show that source. Choose titles from a feed, list or service.');return;}change(()=>{draft.hero.source={kind:'custom',title:result.title||'Custom source',cedar};},'The hero shows your source.');}});}
