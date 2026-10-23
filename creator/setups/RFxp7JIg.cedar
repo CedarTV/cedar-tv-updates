@@ -67,7 +67,7 @@
                   "provider": "tmdb"
                 }
               },
-              "title": "Nuvio Spotlight: The Headliner"
+              "title": "Spotlight: The Headliner"
             }
           ],
           "tileShape": "landscape",
@@ -120,7 +120,7 @@
                   "provider": "tmdb"
                 }
               },
-              "title": "Nuvio Spotlight: The Visionary"
+              "title": "Spotlight: The Visionary"
             }
           ],
           "tileShape": "landscape",
@@ -173,7 +173,7 @@
                   "provider": "tmdb"
                 }
               },
-              "title": "Nuvio Spotlight: The Powerhouse"
+              "title": "Spotlight: The Powerhouse"
             }
           ],
           "tileShape": "landscape",
@@ -226,7 +226,7 @@
                   "provider": "tmdb"
                 }
               },
-              "title": "Nuvio Spotlight: The Saga"
+              "title": "Spotlight: The Saga"
             }
           ],
           "tileShape": "landscape",
@@ -279,7 +279,7 @@
                   "provider": "tmdb"
                 }
               },
-              "title": "Nuvio Spotlight: The Cultural Pulse"
+              "title": "Spotlight: The Cultural Pulse"
             }
           ],
           "tileShape": "landscape",
@@ -332,7 +332,7 @@
                   "provider": "tmdb"
                 }
               },
-              "title": "Nuvio Spotlight: The Prestige Darling"
+              "title": "Spotlight: The Prestige Darling"
             }
           ],
           "tileShape": "landscape",
@@ -385,7 +385,7 @@
                   "provider": "tmdb"
                 }
               },
-              "title": "Nuvio Spotlight: The Living Legend"
+              "title": "Spotlight: The Living Legend"
             }
           ],
           "tileShape": "landscape",
@@ -438,7 +438,7 @@
                   "provider": "tmdb"
                 }
               },
-              "title": "Nuvio Spotlight: Retro Rewind"
+              "title": "Spotlight: Retro Rewind"
             }
           ],
           "tileShape": "landscape",
@@ -65190,5 +65190,5 @@
   },
   "kind": "branches",
   "schemaVersion": 1,
-  "title": "Kaptain's Complete Collection (Strand Edition)"
+  "title": "Kaptain's Complete Collection"
 }

@@ -43,17 +43,35 @@ test("every setup credits its creator, and every published file carries that cre
   const { setups } = JSON.parse(await readFile("public/catalogs/creator.json", "utf8"));
   for (const entry of setups) {
     assert.ok(entry.creator, `${entry.id} names its creator`);
-    assert.ok(["Cedar", "Strand", "Fusion", "Nuvio"].includes(entry.credit.platform));
-    if (entry.credit.platform !== "Cedar") assert.match(entry.credit.sourceURL || "", /^https:\/\//, `${entry.id} links to its source`);
+    assert.ok(["Cedar", "Community"].includes(entry.credit.platform));
+    assert.ok(!("sourceURL" in entry.credit), `${entry.id} doesn't link to another site`);
     for (const id of [entry.id, ...entry.groups.map(group => group.id)]) {
       const bundle = JSON.parse(await readFile(`public/creator/items/${id}.cedar`, "utf8"));
       assert.equal(bundle.credits.creator, entry.creator);
       assert.equal(bundle.credits.platform, entry.credit.platform);
+      assert.ok(!("sourceURL" in bundle.credits));
     }
   }
 });
 
-test("the custom Strand setup with a provider login is never published", async () => {
+test("Creator never names another app in what visitors see", async () => {
+  const otherApps = /\b(strand|stranded|nuvio|fusion|xperience|stremio)\b/i;
+  const { setups } = JSON.parse(await readFile("public/catalogs/creator.json", "utf8"));
+  for (const entry of setups) {
+    const visible = [entry.title, entry.creator, entry.description, entry.credit.via, entry.credit.conversion, ...entry.tags,
+      ...entry.groups.flatMap(group => [group.title, ...group.rows])];
+    for (const text of visible.filter(Boolean)) assert.doesNotMatch(text, otherApps, `${entry.id}: ${text}`);
+    for (const text of [entry.description, entry.credit.conversion].filter(Boolean)) assert.doesNotMatch(text, /https?:\/\//, `${entry.id} links to another site`);
+  }
+  for (const page of ["public/creator/index.html", "public/creator/creator.js", "public/setup/index.html"]) {
+    assert.doesNotMatch(await readFile(page, "utf8"), otherApps, page);
+  }
+  for (const catalog of ["public/catalogs/avatars.json", "public/catalogs/badges.json"]) {
+    assert.doesNotMatch(await readFile(catalog, "utf8"), /xperience|nuvio/i, catalog);
+  }
+});
+
+test("a converted custom setup with a provider login is never published", async () => {
   const { setups } = JSON.parse(await readFile("public/catalogs/creator.json", "utf8"));
   assert.ok(!setups.some(entry => /custom/i.test(entry.title)));
   assert.ok(!JSON.stringify(setups).match(/xtream|password/i));
@@ -130,8 +148,7 @@ test("setup browsing filters by text and category without changing featured orde
   assert.deepEqual(setupOptions(rows, { sort: "newest" }).map(row => row.id), ["a", "b"]);
   assert.deepEqual(setupOptions(rows, { sort: "name" }).map(row => row.id), ["a", "b"]);
   assert.deepEqual(setupOptions(rows).map(row => row.id), ["b", "a"]);
-  rows[0].credit = { platform: "Strand" };
-  rows[1].credit = { platform: "Cedar" };
-  assert.deepEqual(setupOptions(rows, { platform: "Strand" }).map(row => row.id), ["b"]);
-  assert.deepEqual(setupOptions(rows, { query: "strand" }).map(row => row.id), ["b"]);
+  rows[0].credit = { platform: "Community", via: null };
+  rows[1].credit = { platform: "Cedar", via: "TMDB collections" };
+  assert.deepEqual(setupOptions(rows, { query: "tmdb" }).map(row => row.id), ["a"]);
 });

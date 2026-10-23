@@ -45,7 +45,8 @@ function sourceDescriptor(sourceURL, collection) {
   }
 
   const decodedPathname = decodeURIComponent(url.pathname);
-  const relativePath = decodedPathname.slice(1);
+  // The site names collections for what's in them, not the app they came from.
+  const relativePath = decodedPathname.slice(1).replace(/^avatars\/nuvio\//, "avatars/community/");
   const pathParts = relativePath.split("/");
   const extension = path.extname(relativePath).toLowerCase();
 
@@ -59,7 +60,7 @@ function sourceDescriptor(sourceURL, collection) {
   return {
     collection,
     extension,
-    localURL: url.pathname,
+    localURL: `/${relativePath.split("/").map(encodeURIComponent).join("/")}`,
     outputPath: path.join(publicRoot, relativePath),
     path: relativePath,
     sourceURL,
@@ -280,12 +281,14 @@ const localURLBySource = new Map(
   descriptors.map((descriptor) => [descriptor.sourceURL, descriptor.localURL]),
 );
 
+// The published catalogs name no other app and link nowhere else; where each file came from is
+// kept in creator/artwork-sources.json, which isn't published.
+const { sourcePage: _avatarSourcePage, ...avatarCatalogFields } = avatarCatalog;
 const localAvatarCatalog = {
-  ...avatarCatalog,
-  sourcePage: "https://xperience-app.com/avatars",
+  ...avatarCatalogFields,
   avatars: avatarCatalog.avatars.map((avatar) => ({
     ...avatar,
-    originalURL: avatar.url,
+    source: avatar.source === "nuvio" ? "community" : avatar.source,
     url: localURLBySource.get(avatar.url),
   })),
 };
@@ -319,18 +322,19 @@ const badgePackByIdentifier = new Map(
   badgePackManifests.map((value) => [value.identifier, value]),
 );
 
+const { sourcePage: _badgeSourcePage, ...badgeCatalogFields } = badgeCatalog;
 const localBadgeCatalog = {
-  ...badgeCatalog,
+  ...badgeCatalogFields,
   sets: badgeCatalog.sets.map((set) => {
     const identifier = badgeSetIdentifier(set);
     const manifest = badgePackByIdentifier.get(identifier);
     return {
       ...set,
+      creator: /xperience/i.test(set.creator || "") ? null : set.creator,
       id: identifier,
       sourceURL: manifest.sourceURL,
       badges: set.badges.map((badge) => ({
         ...badge,
-        originalImageURL: badge.imageURL,
         imageURL: localURLBySource.get(badge.imageURL),
       })),
     };
@@ -362,7 +366,7 @@ await Promise.all([
   writeFile(path.join(catalogsDirectory, "avatars.json"), json(localAvatarCatalog)),
   writeFile(path.join(catalogsDirectory, "badges.json"), json(localBadgeCatalog)),
   writeFile(
-    path.join(catalogsDirectory, "xperience-assets.json"),
+    path.join(repositoryRoot, "creator/artwork-sources.json"),
     json(manifest),
   ),
   ...badgePackManifests.map(({ identifier, pack }) => writeFile(

@@ -20,6 +20,17 @@ const previewImageHostSuffixes = [".github.io"];
 const secretKeyPattern = /(api[-_]?key|token|secret|password|passwd|auth|session|cookie|credential)/i;
 // Cedar's BranchLeafKind. An unknown value makes Cedar reject the whole file.
 const categoryKinds = new Set(["network", "studio", "company", "genre", "decade", "director", "actor", "award"]);
+// Creator names the people who made a setup, never another app. URLs are left alone: artwork
+// addresses can name a curator's repository.
+const otherAppName = /\b(strand|stranded|nuvio|fusion|xperience|stremio)\b/i;
+function visibleNames(value, path, found = []) {
+  if (Array.isArray(value)) value.forEach((item, index) => visibleNames(item, `${path}[${index}]`, found));
+  else if (value && typeof value === "object") for (const [key, child] of Object.entries(value)) {
+    if (typeof child === "string" && /^(title|name|groupName|displayName)$/.test(key) && otherAppName.test(child)) found.push(`${path}.${key} "${child}"`);
+    else visibleNames(child, `${path}.${key}`, found);
+  }
+  return found;
+}
 const uuidPattern = /^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$/i;
 
 const argumentsList = process.argv.slice(2);
@@ -86,15 +97,21 @@ for (const entry of manifest.setups) {
   }
   if (!/^\d{4}-\d{2}-\d{2}$/.test(entry.addedAt)) fail(`${entry.id} addedAt must be YYYY-MM-DD`);
   const credit = entry.credit;
-  if (!credit || !["Cedar", "Strand", "Fusion", "Nuvio"].includes(credit.platform)) fail(`${entry.id} needs credit.platform (Cedar, Strand, Fusion or Nuvio)`);
-  if (credit.sourceURL != null && !/^https:\/\/[^\s"<>]+$/.test(credit.sourceURL)) fail(`${entry.id} credit.sourceURL must be an https link`);
+  if (!credit || !["Cedar", "Community"].includes(credit.platform)) fail(`${entry.id} needs credit.platform (Cedar or Community)`);
+  if ("sourceURL" in credit) fail(`${entry.id} credit.sourceURL: Creator setups don't link to other sites`);
+  for (const text of [entry.title, entry.creator, entry.description, credit.via, credit.conversion]) {
+    if (text && otherAppName.test(text)) fail(`${entry.id} names another app: "${text}"`);
+    if (text && /https?:\/\//i.test(text)) fail(`${entry.id} links to another site: "${text}"`);
+  }
   // Credits travel inside every published file, so a downloaded setup still says who made it.
-  const credits = { creator: entry.creator, platform: credit.platform, via: credit.via || null, sourceURL: credit.sourceURL || null };
+  const credits = { creator: entry.creator, platform: credit.platform, via: credit.via || null };
   const document = JSON.parse(await readFile(resolve(root, "creator/setups", entry.file), "utf8"));
   const branches = readBranches(document, entry.file)
     .filter(branch => branch.isEnabled !== false)
     .sort((a, b) => a.position - b.position);
   if (!branches.length) fail(`${entry.id} has no enabled branches`);
+  const named = visibleNames({ title: document.title, branches }, entry.file);
+  if (named.length) fail(`${entry.id} names another app: ${named.slice(0, 3).join(", ")}`);
 
   const groups = [];
   for (const branch of branches) {
@@ -136,7 +153,7 @@ for (const entry of manifest.setups) {
     description: entry.description,
     tags: entry.tags || [],
     addedAt: entry.addedAt,
-    credit: { platform: credit.platform, via: credit.via || null, sourceURL: credit.sourceURL || null, conversion: credit.conversion || null },
+    credit: { platform: credit.platform, via: credit.via || null, conversion: credit.conversion || null },
     groupCount: groups.length,
     branchCount: groups.reduce((total, group) => total + group.branchCount, 0),
     covers: groups.flatMap(group => group.covers).slice(0, 4),

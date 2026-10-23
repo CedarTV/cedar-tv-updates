@@ -116,7 +116,8 @@ The companion's recovered Xperience artwork is stored directly in Git and served
 - `public/badges/` contains 1,581 unique badge images across 33 sets.
 - `public/catalogs/avatars.json` and `public/catalogs/badges.json` power the Creator and artwork selectors.
 - `public/badge-packs/` contains 33 bounded Cedar-compatible manifests whose images stay on GitHub Pages.
-- `public/catalogs/xperience-assets.json` records byte sizes, source URLs, and SHA-256 checksums for every mirrored file.
+- `creator/artwork-sources.json` records byte sizes, source URLs, and SHA-256 checksums for every mirrored file. It isn't published: the public catalogs name no other app and link nowhere else.
+- `public/avatars/community/` holds the photos that came from the old `nuvio` collection, which the catalog now uses. `public/avatars/nuvio/` stays so profiles that already chose one of those photos keep it.
 
 Run `node scripts/import-xperience-assets.mjs` to verify the local copies and regenerate the catalogs from the recovery reports. Existing valid files are reused.
 
