@@ -1334,7 +1334,7 @@
           "title": "Action"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9tYXgtc3RyZWFtcy5nbGVlemUuY29tL2ltYWdlcy9hbmltYXRpb24uanBn",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/9494e5c5a819c19ee8f6.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
