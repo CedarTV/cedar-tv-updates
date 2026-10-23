@@ -23,8 +23,7 @@
         {
           "coverImageURL": "https://i.postimg.cc/K8thgJBX/Katherine-Heigl.jpg",
           "dataSource": {
-            "identifier": "mdblist-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
@@ -39,17 +38,16 @@
           "hidesTitle": false,
           "id": "7EA9AB28-460F-47EA-9F4C-3CE815CF9A22",
           "query": {
-            "identifier": "nobnobz|actor-katherine-heigl",
-            "kind": "curatedList",
+            "identifier": "25541",
+            "kind": "personCredits",
             "parameters": {
-              "listID": "159089"
+              "role": "actor"
             }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "mdblist-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
@@ -63,18 +61,17 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "nobnobz|actor-katherine-heigl",
-                "kind": "curatedList",
+                "identifier": "25541",
+                "kind": "personCredits",
                 "parameters": {
-                  "listID": "159089"
+                  "role": "actor"
                 }
               },
               "title": "[Actor] Katherine Heigl"
             },
             {
               "dataSource": {
-                "identifier": "mdblist-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
@@ -88,10 +85,10 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "nobnobz|actor-katherine-heigl",
-                "kind": "curatedList",
+                "identifier": "25541",
+                "kind": "personCredits",
                 "parameters": {
-                  "listID": "159090"
+                  "role": "actor"
                 }
               },
               "title": "[Actor] Katherine Heigl"

@@ -18,7 +18,7 @@
         "platform": "Cedar",
         "via": "Trakt & MDBList Community Curators",
         "sourceURL": null,
-        "conversion": "Assembled from 47 community lists by snoak, travis_mcnelly, nobnobz, RavynLoony, jarvis, JasKraus, lish408, exoduso, and others; modified for Cedar."
+        "conversion": "Assembled from 47 community lists by snoak, travis_mcnelly, nobnobz, RavynLoony, jarvis, JasKraus, lish408, exoduso, and others; modified for Cedar. Lists repaired 2026-10-20 after their originals went private or were renamed: 34 moved to the curator’s current MDBList list, 7 switched to TMDB collections, 5 replaced with a similar public list."
       },
       "groupCount": 7,
       "branchCount": 54,
@@ -190,7 +190,7 @@
         "platform": "Cedar",
         "via": "TMDB Movie Collections & exoduso",
         "sourceURL": null,
-        "conversion": "Assembled from TMDB franchise collections and community timeline curation by exoduso; modified for Cedar."
+        "conversion": "Assembled from TMDB franchise collections and community timeline curation by exoduso; modified for Cedar. Lists repaired 2026-10-20 after their originals went private or were renamed: 1 switched to TMDB collections."
       },
       "groupCount": 4,
       "branchCount": 14,
@@ -286,7 +286,7 @@
         "platform": "Cedar",
         "via": "Community Curators (lish408, travis_mcnelly, hdlists) & TMDB",
         "sourceURL": null,
-        "conversion": "Assembled from community lists by lish408, travis_mcnelly, and hdlists alongside TMDB collections; modified for Cedar."
+        "conversion": "Assembled from community lists by lish408, travis_mcnelly, and hdlists alongside TMDB collections; modified for Cedar. Lists repaired 2026-10-20 after their originals went private or were renamed: 2 moved to the curator’s current MDBList list, 1 replaced with a similar public list."
       },
       "groupCount": 5,
       "branchCount": 18,
@@ -1458,7 +1458,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/0nnVrtpB",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 41 moved to the curator’s current MDBList list."
       },
       "groupCount": 2,
       "branchCount": 22,
@@ -1633,7 +1633,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/s3ucrahf",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 8 moved to the curator’s current MDBList list."
       },
       "groupCount": 7,
       "branchCount": 62,
@@ -1805,7 +1805,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/fOWik7fI",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 2 moved to the curator’s current MDBList list, 2 replaced with a similar public list."
       },
       "groupCount": 5,
       "branchCount": 38,
@@ -1921,7 +1921,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/Zv4dOfUo",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 18 moved to the curator’s current MDBList list."
       },
       "groupCount": 6,
       "branchCount": 47,
@@ -2090,7 +2090,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/c1oMmBym",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 17 moved to the curator’s current MDBList list."
       },
       "groupCount": 6,
       "branchCount": 68,
@@ -2375,7 +2375,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/xtqPyRNo",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 24 moved to the curator’s current MDBList list, 1 switched to TMDB collections."
       },
       "groupCount": 5,
       "branchCount": 51,
@@ -2540,7 +2540,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/S2KPMHwS",
-        "conversion": "Converted from Strand. 279 parts that Cedar can’t show yet were left out."
+        "conversion": "Converted from Strand. 279 parts that Cedar can’t show yet were left out. Lists repaired 2026-10-20: the Katherine Heigl row, whose MDBList lists are empty, now shows her TMDB acting credits."
       },
       "groupCount": 3,
       "branchCount": 8,
@@ -2763,7 +2763,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/no8a6Rul",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 1 moved to the curator’s current MDBList list."
       },
       "groupCount": 8,
       "branchCount": 60,
@@ -2966,7 +2966,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/UrZxjxLa",
-        "conversion": "Converted from Strand. 4 parts that Cedar can’t show yet were left out; 213 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "conversion": "Converted from Strand. 4 parts that Cedar can’t show yet were left out; 213 filters Cedar doesn’t support were relaxed, so some rows may show more titles. Lists repaired 2026-10-20 after their originals went private or were renamed: 9 moved to the curator’s current MDBList list."
       },
       "groupCount": 9,
       "branchCount": 315,
@@ -3446,7 +3446,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/t8cCYHb8",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 19 moved to the curator’s current MDBList list."
       },
       "groupCount": 5,
       "branchCount": 46,
@@ -3592,7 +3592,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/eijjF6Zi",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 34 moved to the curator’s current MDBList list, 3 removed."
       },
       "groupCount": 4,
       "branchCount": 34,
@@ -3718,7 +3718,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/BSUrQaZ1",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 7 moved to the curator’s current MDBList list."
       },
       "groupCount": 8,
       "branchCount": 96,
@@ -3944,7 +3944,7 @@
         "platform": "Strand",
         "via": "Get Stranded",
         "sourceURL": "https://get-stranded.fabriceleven.com/p/29vU8UI3",
-        "conversion": "Converted from Strand."
+        "conversion": "Converted from Strand. Lists repaired 2026-10-20 after their originals went private or were renamed: 1 removed."
       },
       "groupCount": 4,
       "branchCount": 28,
@@ -4054,7 +4054,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#setup",
-        "conversion": "Converted from Fusion. 18 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "conversion": "Converted from Fusion. 18 filters Cedar doesn’t support were relaxed, so some rows may show more titles. Lists repaired 2026-10-20 after their originals went private or were renamed: 8 moved to the curator’s current MDBList list, 1 rebuilt as Cedar streaming-service rows, 8 switched to TMDB collections."
       },
       "groupCount": 15,
       "branchCount": 60,
@@ -4283,7 +4283,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#setup",
-        "conversion": "Converted from Fusion. 1 filter Cedar doesn’t support was relaxed, so some rows may show more titles."
+        "conversion": "Converted from Fusion. 1 filter Cedar doesn’t support was relaxed, so some rows may show more titles. Lists repaired 2026-10-20 after their originals went private or were renamed: 60 moved to the curator’s current MDBList list, 12 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 17,
       "branchCount": 48,
@@ -4608,7 +4608,7 @@
         "platform": "Nuvio",
         "via": "Nuvio community",
         "sourceURL": "https://github.com/ImKaptain/nuvio-art",
-        "conversion": "Converted from Nuvio. 2 parts that Cedar can’t show yet were left out."
+        "conversion": "Converted from Nuvio. 2 parts that Cedar can’t show yet were left out. Lists repaired 2026-10-20: TMDB removed the Eastrail 177 collection, so it is now a fixed list of Unbreakable, Split and Glass, and Margot Robbie’s series rows, whose Trakt list has no shows, use her TMDB credits."
       },
       "groupCount": 18,
       "branchCount": 756,
@@ -5742,7 +5742,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 7 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 7,
@@ -5792,7 +5792,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 7 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 10,
@@ -5845,7 +5845,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 7 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 7,
@@ -5895,7 +5895,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 5 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 5,
@@ -5995,7 +5995,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 33 moved to the curator’s current MDBList list, 2 replaced with a similar public list."
       },
       "groupCount": 1,
       "branchCount": 21,
@@ -6059,7 +6059,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 15 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 10,
@@ -6112,7 +6112,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 19 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 14,
@@ -6169,7 +6169,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 18 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 13,
@@ -6225,7 +6225,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 25 moved to the curator’s current MDBList list, 1 replaced with a similar public list."
       },
       "groupCount": 1,
       "branchCount": 56,
@@ -6324,7 +6324,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 15 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 10,
@@ -6377,7 +6377,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet was left out."
+        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet was left out. Lists repaired 2026-10-20 after their originals went private or were renamed: 16 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 16,
@@ -6436,7 +6436,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 2 parts that Cedar can’t show yet were left out."
+        "conversion": "Converted from Fusion. 2 parts that Cedar can’t show yet were left out. Lists repaired 2026-10-20 after their originals went private or were renamed: 14 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 9,
@@ -6488,7 +6488,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet was left out."
+        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet was left out. Lists repaired 2026-10-20 after their originals went private or were renamed: 16 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 16,
@@ -6547,7 +6547,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 2 parts that Cedar can’t show yet were left out."
+        "conversion": "Converted from Fusion. 2 parts that Cedar can’t show yet were left out. Lists repaired 2026-10-20 after their originals went private or were renamed: 3 moved to the curator’s current MDBList list, 20 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 15,
@@ -6605,7 +6605,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 2 moved to the curator’s current MDBList list, 14 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 10,
@@ -6658,7 +6658,7 @@
         "platform": "Fusion",
         "via": "Fusion Starter Kit by itsrenoria",
         "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "conversion": "Converted from Fusion. Lists repaired 2026-10-20 after their originals went private or were renamed: 2 moved to the curator’s current MDBList list, 16 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 12,

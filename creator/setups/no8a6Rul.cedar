@@ -4230,7 +4230,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "atb001|academy-award-best-actor-actress-director-picture-cinematography",
+                "identifier": "atb001|academy-award-best-actor-actress-director-picture",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "10821"

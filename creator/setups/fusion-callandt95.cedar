@@ -2,7 +2,7 @@
   "branches": [
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -29,9 +29,11 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|trending-shows",
+        "identifier": "snoak|trakt-s-trending-shows",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "88434"
+        }
       },
       "schemaVersion": 2,
       "title": "Trending Shows"
@@ -116,7 +118,7 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -143,16 +145,18 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|latest-netflix-shows",
+        "identifier": "snoak|latest-netflix-tv-shows",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "86751"
+        }
       },
       "schemaVersion": 2,
       "title": "Latest Netflix Shows"
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -179,16 +183,18 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|latest-disney-shows",
+        "identifier": "snoak|latest-disney-plus-tv-shows",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "86758"
+        }
       },
       "schemaVersion": 2,
       "title": "Latest Disney+ Shows"
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -215,16 +221,18 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|latest-hbo-max-shows",
+        "identifier": "snoak|latest-max-tv-shows",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "89649"
+        }
       },
       "schemaVersion": 2,
       "title": "Latest HBO Max Shows"
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -251,16 +259,18 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|latest-apple-tv-shows",
+        "identifier": "snoak|latest-apple-tv-plus-tv-shows",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "86756"
+        }
       },
       "schemaVersion": 2,
       "title": "Latest Apple TV+ Shows"
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -287,16 +297,18 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|latest-amazon-prime-shows",
+        "identifier": "snoak|latest-amazon-prime-tv-shows",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "86753"
+        }
       },
       "schemaVersion": 2,
       "title": "Latest Amazon Prime Shows"
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -323,27 +335,31 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|latest-paramount-shows",
+        "identifier": "snoak|latest-paramount-plus-tv-shows",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "86761"
+        }
       },
       "schemaVersion": 2,
       "title": "Latest Paramount+ Shows"
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
-        "kind": "trackingService",
+        "kind": "preferredMetadata",
         "parameters": {}
       },
       "defaultFilters": {
-        "contentType": "both",
+        "contentType": "shows",
         "countryCodes": [],
         "genreIDs": [],
         "networkIDs": [],
         "originalLanguageCodes": [],
         "productionCompanyIDs": [],
-        "streamingProviderIDs": []
+        "streamingProviderIDs": [
+          "15"
+        ],
+        "sortOrder": "releaseDate"
       },
       "folderOptions": [],
       "id": "AD788753-B92B-5740-9D84-0C9D3E96C637",
@@ -359,8 +375,7 @@
       },
       "profileID": "00000000-0000-0000-0000-000000000000",
       "query": {
-        "identifier": "snoak|latest-hulu-shows",
-        "kind": "curatedList",
+        "kind": "popular",
         "parameters": {}
       },
       "schemaVersion": 2,
@@ -368,7 +383,7 @@
     },
     {
       "dataSource": {
-        "identifier": "trakt-public",
+        "identifier": "mdblist-public",
         "kind": "trackingService",
         "parameters": {}
       },
@@ -397,7 +412,9 @@
       "query": {
         "identifier": "snoak|trending-movies",
         "kind": "curatedList",
-        "parameters": {}
+        "parameters": {
+          "listID": "87667"
+        }
       },
       "schemaVersion": 2,
       "title": "Trending Movies"
@@ -1445,12 +1462,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/Callandt/Fusion2-Content/main/posters/collections/collection-007.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -1461,19 +1477,18 @@
           "hidesTitle": true,
           "id": "E2EEC0FC-29C0-4D71-9975-ADA177E1F4FB",
           "query": {
-            "identifier": "drjenkins|james-bond",
-            "kind": "curatedList",
+            "identifier": "645",
+            "kind": "metadataCollection",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -1483,8 +1498,8 @@
               },
               "id": "CABE8B6E-E27C-5F49-8DE3-E52FDECB46F3",
               "query": {
-                "identifier": "drjenkins|james-bond",
-                "kind": "curatedList",
+                "identifier": "645",
+                "kind": "metadataCollection",
                 "parameters": {}
               },
               "title": "James Bond"
@@ -1496,12 +1511,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/Callandt/Fusion2-Content/main/posters/collections/collection-alien.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -1512,19 +1526,18 @@
           "hidesTitle": true,
           "id": "alien",
           "query": {
-            "identifier": "drjenkins|alien",
-            "kind": "curatedList",
+            "identifier": "8091",
+            "kind": "metadataCollection",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -1534,8 +1547,8 @@
               },
               "id": "3E422BDD-B838-57A5-856D-D3C6282892D7",
               "query": {
-                "identifier": "drjenkins|alien",
-                "kind": "curatedList",
+                "identifier": "8091",
+                "kind": "metadataCollection",
                 "parameters": {}
               },
               "title": "Alien"
@@ -1598,12 +1611,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/Callandt/Fusion2-Content/main/posters/collections/collection-back-to-the-future.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -1614,19 +1626,18 @@
           "hidesTitle": true,
           "id": "back-to-the-future",
           "query": {
-            "identifier": "drjenkins|back-to-the-future",
-            "kind": "curatedList",
+            "identifier": "264",
+            "kind": "metadataCollection",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -1636,8 +1647,8 @@
               },
               "id": "9B0E33F0-AE91-5125-A5B7-5412CBEB3F77",
               "query": {
-                "identifier": "drjenkins|back-to-the-future",
-                "kind": "curatedList",
+                "identifier": "264",
+                "kind": "metadataCollection",
                 "parameters": {}
               },
               "title": "Back to the Future"
@@ -1700,12 +1711,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/Callandt/Fusion2-Content/main/posters/collections/collection-conjuring.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -1716,19 +1726,18 @@
           "hidesTitle": true,
           "id": "conjuring",
           "query": {
-            "identifier": "drjenkins|the-conjuring-universe",
-            "kind": "curatedList",
+            "identifier": "313086",
+            "kind": "metadataCollection",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -1738,11 +1747,55 @@
               },
               "id": "B62BCA8D-772E-5451-AA8A-14F5F6A5FB97",
               "query": {
-                "identifier": "drjenkins|the-conjuring-universe",
-                "kind": "curatedList",
+                "identifier": "313086",
+                "kind": "metadataCollection",
                 "parameters": {}
               },
-              "title": "The Conjuring Universe"
+              "title": "The Conjuring Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "B62BCA8D-772E-5451-AA8A-14F5F6A5FB97-2",
+              "query": {
+                "identifier": "402074",
+                "kind": "metadataCollection",
+                "parameters": {}
+              },
+              "title": "Annabelle Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "B62BCA8D-772E-5451-AA8A-14F5F6A5FB97-3",
+              "query": {
+                "identifier": "968052",
+                "kind": "metadataCollection",
+                "parameters": {}
+              },
+              "title": "The Nun Collection"
             }
           ],
           "tileShape": "poster",
@@ -1904,12 +1957,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/Callandt/Fusion2-Content/main/posters/collections/collection-expendables.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -1920,19 +1972,18 @@
           "hidesTitle": true,
           "id": "expendables",
           "query": {
-            "identifier": "drjenkins|the-expendables",
-            "kind": "curatedList",
+            "identifier": "126125",
+            "kind": "metadataCollection",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -1942,8 +1993,8 @@
               },
               "id": "1467ED25-778E-529B-9472-CC0146793F6D",
               "query": {
-                "identifier": "drjenkins|the-expendables",
-                "kind": "curatedList",
+                "identifier": "126125",
+                "kind": "metadataCollection",
                 "parameters": {}
               },
               "title": "The Expendables"
@@ -2822,12 +2873,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/Callandt/Fusion2-Content/main/posters/collections/collection-the-hunger-games.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -2838,19 +2888,18 @@
           "hidesTitle": true,
           "id": "the-hunger-games",
           "query": {
-            "identifier": "drjenkins|the-hunger-games",
-            "kind": "curatedList",
+            "identifier": "131635",
+            "kind": "metadataCollection",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -2860,8 +2909,8 @@
               },
               "id": "B67781AA-45BC-59DD-9A8B-73016D5AD237",
               "query": {
-                "identifier": "drjenkins|the-hunger-games",
-                "kind": "curatedList",
+                "identifier": "131635",
+                "kind": "metadataCollection",
                 "parameters": {}
               },
               "title": "The Hunger Games"
@@ -2873,12 +2922,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/Callandt/Fusion2-Content/main/posters/collections/collection-the-lord-of-the-rings.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -2889,19 +2937,18 @@
           "hidesTitle": true,
           "id": "the-lord-of-the-rings",
           "query": {
-            "identifier": "drjenkins|middle-earth",
-            "kind": "curatedList",
+            "identifier": "119",
+            "kind": "metadataCollection",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -2911,11 +2958,33 @@
               },
               "id": "8644DB8A-1124-52CC-ADA9-6DF3A330B606",
               "query": {
-                "identifier": "drjenkins|middle-earth",
-                "kind": "curatedList",
+                "identifier": "119",
+                "kind": "metadataCollection",
                 "parameters": {}
               },
-              "title": "Middle Earth"
+              "title": "The Lord of the Rings Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "8644DB8A-1124-52CC-ADA9-6DF3A330B606-2",
+              "query": {
+                "identifier": "121938",
+                "kind": "metadataCollection",
+                "parameters": {}
+              },
+              "title": "The Hobbit Collection"
             }
           ],
           "tileShape": "poster",
@@ -2924,12 +2993,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/Callandt/Fusion2-Content/main/posters/collections/collection-transformers.png",
           "dataSource": {
-            "identifier": "trakt-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -2940,19 +3008,18 @@
           "hidesTitle": true,
           "id": "transformers",
           "query": {
-            "identifier": "drjenkins|transformers",
-            "kind": "curatedList",
+            "identifier": "8650",
+            "kind": "metadataCollection",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -2962,8 +3029,8 @@
               },
               "id": "A181E61F-9C6B-508B-B221-BB643EB5EAC5",
               "query": {
-                "identifier": "drjenkins|transformers",
-                "kind": "curatedList",
+                "identifier": "8650",
+                "kind": "metadataCollection",
                 "parameters": {}
               },
               "title": "Transformers"

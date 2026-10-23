@@ -39,7 +39,7 @@
           "hidesTitle": true,
           "id": "A2FE558B-5F8B-45CE-B807-965C42A260EB",
           "query": {
-            "identifier": "snoak|latest-streaming-movies",
+            "identifier": "snoak|latest-movies-digital-release",
             "kind": "curatedList",
             "parameters": {
               "listID": "86934"
@@ -63,7 +63,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|latest-streaming-movies",
+                "identifier": "snoak|latest-movies-digital-release",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86934"
@@ -94,7 +94,7 @@
           "hidesTitle": true,
           "id": "1915BF27-71DE-4F54-919F-2F612F4CE1B0",
           "query": {
-            "identifier": "snoak|latest-shows",
+            "identifier": "snoak|latest-tv-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "86710"
@@ -118,7 +118,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|latest-shows",
+                "identifier": "snoak|latest-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86710"
@@ -149,7 +149,7 @@
           "hidesTitle": true,
           "id": "54A9CFAC-26DD-48D7-BB21-1BD50A5F7F9E",
           "query": {
-            "identifier": "snoak|trakt-s-trending-movies",
+            "identifier": "snoak|trending-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "87667"
@@ -173,7 +173,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|trakt-s-trending-movies",
+                "identifier": "snoak|trending-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "87667"
@@ -1129,7 +1129,7 @@
           "hidesTitle": true,
           "id": "64829503-CE3F-4E0A-9C3F-960832118B25",
           "query": {
-            "identifier": "snoak|popular-action-movies",
+            "identifier": "snoak|action-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91211"
@@ -1153,7 +1153,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-action-movies",
+                "identifier": "snoak|action-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91211"
@@ -1178,7 +1178,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-action-shows",
+                "identifier": "snoak|action-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91213"
@@ -1210,7 +1210,7 @@
           "hidesTitle": true,
           "id": "AFBF8CBF-7282-4388-9DBB-1EB2385F356A",
           "query": {
-            "identifier": "snoak|popular-comedy-movies",
+            "identifier": "snoak|comedy-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91223"
@@ -1234,7 +1234,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-comedy-movies",
+                "identifier": "snoak|comedy-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91223"
@@ -1259,7 +1259,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-comedy-shows",
+                "identifier": "snoak|comedy-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91224"
@@ -1291,7 +1291,7 @@
           "hidesTitle": true,
           "id": "AF9B461C-6DF4-473D-B745-679055067578",
           "query": {
-            "identifier": "snoak|popular-sci-fi-movies",
+            "identifier": "snoak|science-fiction-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91220"
@@ -1315,7 +1315,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-sci-fi-movies",
+                "identifier": "snoak|science-fiction-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91220"
@@ -1340,7 +1340,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-sci-fi-shows",
+                "identifier": "snoak|science-fiction-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91221"
@@ -1453,7 +1453,7 @@
           "hidesTitle": true,
           "id": "DEDD427B-34D8-431B-ACE3-3801ADB68B7A",
           "query": {
-            "identifier": "snoak|popular-thriller-movies",
+            "identifier": "snoak|thriller-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91893"
@@ -1477,7 +1477,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-thriller-movies",
+                "identifier": "snoak|thriller-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91893"
@@ -1502,7 +1502,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-thriller-shows",
+                "identifier": "snoak|thriller-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91894"
@@ -1534,7 +1534,7 @@
           "hidesTitle": true,
           "id": "09CF4944-38C1-4F53-86C6-C8078CCA142E",
           "query": {
-            "identifier": "snoak|popular-drama-movies",
+            "identifier": "snoak|drama-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91296"
@@ -1558,7 +1558,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-drama-movies",
+                "identifier": "snoak|drama-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91296"
@@ -1583,7 +1583,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-drama-shows",
+                "identifier": "snoak|drama-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91297"
@@ -1615,7 +1615,7 @@
           "hidesTitle": true,
           "id": "5118E001-F37B-4F28-92AC-C25BBD04AE98",
           "query": {
-            "identifier": "snoak|popular-horror-movies",
+            "identifier": "snoak|horror-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91215"
@@ -1639,7 +1639,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-horror-movies",
+                "identifier": "snoak|horror-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91215"
@@ -1664,7 +1664,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-horror-shows",
+                "identifier": "snoak|horror-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91217"
@@ -2173,7 +2173,7 @@
           "hidesTitle": true,
           "id": "6D01C4C2-3F6B-403B-A714-5CEA3419EC5A",
           "query": {
-            "identifier": "snoak|popular-animation-anime-movies",
+            "identifier": "snoak|animationanime-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "121922"
@@ -2197,7 +2197,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-animation-anime-movies",
+                "identifier": "snoak|animationanime-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "121922"
@@ -2222,7 +2222,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-animation-anime-shows",
+                "identifier": "snoak|animationanime-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "121921"
@@ -2253,7 +2253,7 @@
           "hidesTitle": true,
           "id": "7239FCE5-5E51-48E3-A180-C6DA58AE48C2",
           "query": {
-            "identifier": "snoak|popular-reality-shows",
+            "identifier": "snoak|top-reality-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "128054"
@@ -2277,7 +2277,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-reality-shows",
+                "identifier": "snoak|top-reality-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "128054"
@@ -2358,7 +2358,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "familytv133|family-kids-english-tv-shows-rated-g-pg",
+                "identifier": "familytv133|family-kids-english-tv-showsrated-g-pg",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "43251"
@@ -2485,7 +2485,7 @@
           "hidesTitle": true,
           "id": "FB5294B2-280F-4007-A45C-435109A74549",
           "query": {
-            "identifier": "snoak|popular-2020s-movies",
+            "identifier": "snoak|top-2020s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91304"
@@ -2509,7 +2509,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-2020s-movies",
+                "identifier": "snoak|top-2020s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91304"
@@ -2540,7 +2540,7 @@
           "hidesTitle": true,
           "id": "19470F20-2EF2-442D-A322-4A9A089C21DA",
           "query": {
-            "identifier": "snoak|popular-2010s-movies",
+            "identifier": "snoak|top-2010s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91303"
@@ -2564,7 +2564,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-2010s-movies",
+                "identifier": "snoak|top-2010s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91303"
@@ -2595,7 +2595,7 @@
           "hidesTitle": true,
           "id": "3F159ADB-B77A-48E4-A6B0-626F097C3334",
           "query": {
-            "identifier": "snoak|popular-2000s-movies",
+            "identifier": "snoak|top-2000s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91302"
@@ -2619,7 +2619,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-2000s-movies",
+                "identifier": "snoak|top-2000s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91302"
@@ -2650,7 +2650,7 @@
           "hidesTitle": true,
           "id": "14A5C39F-C6EA-498B-98F9-99ACFE172B48",
           "query": {
-            "identifier": "snoak|popular-1990s-movies",
+            "identifier": "snoak|top-1990s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91300"
@@ -2674,7 +2674,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-1990s-movies",
+                "identifier": "snoak|top-1990s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91300"
@@ -2705,7 +2705,7 @@
           "hidesTitle": true,
           "id": "55D10C8F-9830-4FBD-9B52-5A916D44CB6F",
           "query": {
-            "identifier": "snoak|popular-1980s-movies",
+            "identifier": "snoak|top-1980s-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91301"
@@ -2729,7 +2729,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-1980s-movies",
+                "identifier": "snoak|top-1980s-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91301"
@@ -3162,12 +3162,11 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/elucidationvortex-source/nuviotemplate/refs/heads/main/images/avp.jpg",
           "dataSource": {
-            "identifier": "mdblist-public",
-            "kind": "trackingService",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "countryCodes": [],
             "genreIDs": [],
             "networkIDs": [],
@@ -3178,21 +3177,18 @@
           "hidesTitle": true,
           "id": "24563A8F-1DA5-4279-8774-62CE8580DE28",
           "query": {
-            "identifier": "exoduso|alien-vs-predator-timeline",
-            "kind": "curatedList",
-            "parameters": {
-              "listID": "101434"
-            }
+            "identifier": "8091",
+            "kind": "metadataCollection",
+            "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "mdblist-public",
-                "kind": "trackingService",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "countryCodes": [],
                 "genreIDs": [],
                 "networkIDs": [],
@@ -3202,13 +3198,55 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "exoduso|alien-vs-predator-timeline",
-                "kind": "curatedList",
-                "parameters": {
-                  "listID": "101434"
-                }
+                "identifier": "8091",
+                "kind": "metadataCollection",
+                "parameters": {}
               },
-              "title": "Alien vs Predator Timeline"
+              "title": "Alien Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1-2",
+              "query": {
+                "identifier": "399",
+                "kind": "metadataCollection",
+                "parameters": {}
+              },
+              "title": "Predator Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "countryCodes": [],
+                "genreIDs": [],
+                "networkIDs": [],
+                "originalLanguageCodes": [],
+                "productionCompanyIDs": [],
+                "streamingProviderIDs": []
+              },
+              "id": "source-1-3",
+              "query": {
+                "identifier": "115762",
+                "kind": "metadataCollection",
+                "parameters": {}
+              },
+              "title": "AVP Collection"
             }
           ],
           "tileShape": "landscape",

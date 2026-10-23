@@ -760,7 +760,7 @@
           "hidesTitle": true,
           "id": "05105748-A398-4197-B424-E0D120FE212F",
           "query": {
-            "identifier": "snoak|trakt-s-trending-movies",
+            "identifier": "snoak|trending-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "87667"
@@ -784,7 +784,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|trakt-s-trending-movies",
+                "identifier": "snoak|trending-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "87667"
@@ -840,7 +840,7 @@
           "hidesTitle": true,
           "id": "77A9B742-8F10-4A1A-AB63-D568BF61CCFE",
           "query": {
-            "identifier": "snoak|latest-streaming-movies",
+            "identifier": "snoak|latest-movies-digital-release",
             "kind": "curatedList",
             "parameters": {
               "listID": "86934"
@@ -864,7 +864,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|latest-streaming-movies",
+                "identifier": "snoak|latest-movies-digital-release",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86934"
@@ -889,7 +889,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|latest-shows",
+                "identifier": "snoak|latest-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86710"
@@ -970,7 +970,7 @@
           "hidesTitle": true,
           "id": "B6AA76D6-550D-41C8-A4E5-46874FA54676",
           "query": {
-            "identifier": "linaspurinis|top-watched-movies-of-the-week-60",
+            "identifier": "linaspurinis|top-watched-movies-of-the-week",
             "kind": "curatedList",
             "parameters": {
               "listID": "14"
@@ -994,7 +994,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "linaspurinis|top-watched-movies-of-the-week-60",
+                "identifier": "linaspurinis|top-watched-movies-of-the-week",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "14"
@@ -1044,7 +1044,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|top-250-movies-imdb",
+                "identifier": "snoak|imdb-top-250-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "101881"
@@ -1069,7 +1069,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "snoak|top-250-shows-imdb",
+                "identifier": "snoak|imdb-top-250-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "101882"
@@ -1100,7 +1100,7 @@
           "hidesTitle": true,
           "id": "78520CF0-9535-4FD9-83CA-7A0E5B92C80C",
           "query": {
-            "identifier": "atb001|academy-award-best-actor-actress-director-picture-cinematography",
+            "identifier": "atb001|academy-award-best-actor-actress-director-picture",
             "kind": "curatedList",
             "parameters": {
               "listID": "10821"
@@ -1124,7 +1124,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "atb001|academy-award-best-actor-actress-director-picture-cinematography",
+                "identifier": "atb001|academy-award-best-actor-actress-director-picture",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "10821"
@@ -1197,10 +1197,10 @@
           "hidesTitle": true,
           "id": "B0CCD45D-1F38-4244-B247-97DA940C4312",
           "query": {
-            "identifier": "acheslow|trending-action-adventure",
+            "identifier": "snoak|action-movies",
             "kind": "curatedList",
             "parameters": {
-              "listID": "115082"
+              "listID": "91211"
             }
           },
           "sources": [
@@ -1219,59 +1219,9 @@
                 "productionCompanyIDs": [],
                 "streamingProviderIDs": []
               },
-              "id": "source-1",
-              "query": {
-                "identifier": "acheslow|trending-action-adventure",
-                "kind": "curatedList",
-                "parameters": {
-                  "listID": "115082"
-                }
-              },
-              "title": "Trending Action/Adventure"
-            },
-            {
-              "dataSource": {
-                "identifier": "mdblist-public",
-                "kind": "trackingService",
-                "parameters": {}
-              },
-              "filters": {
-                "contentType": "shows",
-                "countryCodes": [],
-                "genreIDs": [],
-                "networkIDs": [],
-                "originalLanguageCodes": [],
-                "productionCompanyIDs": [],
-                "streamingProviderIDs": []
-              },
-              "id": "source-2",
-              "query": {
-                "identifier": "acheslow|trending-action-adventure",
-                "kind": "curatedList",
-                "parameters": {
-                  "listID": "115083"
-                }
-              },
-              "title": "Trending Action/Adventure"
-            },
-            {
-              "dataSource": {
-                "identifier": "mdblist-public",
-                "kind": "trackingService",
-                "parameters": {}
-              },
-              "filters": {
-                "contentType": "movies",
-                "countryCodes": [],
-                "genreIDs": [],
-                "networkIDs": [],
-                "originalLanguageCodes": [],
-                "productionCompanyIDs": [],
-                "streamingProviderIDs": []
-              },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-action-movies",
+                "identifier": "snoak|action-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91211"
@@ -1296,7 +1246,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "snoak|popular-action-shows",
+                "identifier": "snoak|action-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91213"
@@ -1321,7 +1271,7 @@
               },
               "id": "source-5",
               "query": {
-                "identifier": "hdlists|action-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-action-movies-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2407"
@@ -1352,7 +1302,7 @@
           "hidesTitle": true,
           "id": "094ABBA2-1F2E-458C-9F94-13D99584E1AB",
           "query": {
-            "identifier": "snoak|popular-animation-anime-movies",
+            "identifier": "snoak|animationanime-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "121922"
@@ -1376,7 +1326,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-animation-anime-movies",
+                "identifier": "snoak|animationanime-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "121922"
@@ -1401,7 +1351,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-animation-anime-shows",
+                "identifier": "snoak|animationanime-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "121921"
@@ -1532,7 +1482,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-comedy-movies",
+                "identifier": "snoak|comedy-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91223"
@@ -1557,7 +1507,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "snoak|popular-comedy-shows",
+                "identifier": "snoak|comedy-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91224"
@@ -1582,7 +1532,7 @@
               },
               "id": "source-5",
               "query": {
-                "identifier": "hdlists|comedy-movies-top-rated-from-1960-to-today",
+                "identifier": "hdlists|comedy-movies-2001-2020",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2195"
@@ -1713,7 +1663,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "hdlists|crime-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-crime-movies-top-rated-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2411"
@@ -1819,7 +1769,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "hdlists|documentary-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-documentary-movies-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2406"
@@ -1900,7 +1850,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-drama-movies",
+                "identifier": "snoak|drama-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91296"
@@ -1925,7 +1875,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-drama-shows",
+                "identifier": "snoak|drama-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91297"
@@ -1950,7 +1900,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "hdlists|drama-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-drama-movies-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2408"
@@ -1982,7 +1932,7 @@
           "hidesTitle": true,
           "id": "BEB7C9AA-A0E5-4588-868B-B04184AD445E",
           "query": {
-            "identifier": "renatabplus3|trending-family-movies",
+            "identifier": "renatabplus3|trending-family-movies-dynamic",
             "kind": "curatedList",
             "parameters": {
               "listID": "6150"
@@ -2006,7 +1956,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "renatabplus3|trending-family-movies",
+                "identifier": "renatabplus3|trending-family-movies-dynamic",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "6150"
@@ -2106,7 +2056,7 @@
               },
               "id": "source-5",
               "query": {
-                "identifier": "hdlists|family-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-family-movies-top-rated-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2415"
@@ -2131,7 +2081,7 @@
               },
               "id": "source-6",
               "query": {
-                "identifier": "hdlists|children-s-animated-movies-from-1950-to-today",
+                "identifier": "hdlists|latest-hd-animated-movies-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2409"
@@ -2236,38 +2186,13 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "hdlists|fantasy-sci-fi-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-fantasy-sci-fi-movies-top-rated-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2412"
                 }
               },
               "title": "Fantasy/Sci-Fi Movies (Top Rated From 1980 to Today)"
-            },
-            {
-              "dataSource": {
-                "identifier": "mdblist-public",
-                "kind": "trackingService",
-                "parameters": {}
-              },
-              "filters": {
-                "contentType": "both",
-                "countryCodes": [],
-                "genreIDs": [],
-                "networkIDs": [],
-                "originalLanguageCodes": [],
-                "productionCompanyIDs": [],
-                "streamingProviderIDs": []
-              },
-              "id": "source-4",
-              "query": {
-                "identifier": "sysops|post-apocalyptic",
-                "kind": "curatedList",
-                "parameters": {
-                  "listID": "90232"
-                }
-              },
-              "title": "Post Apocalyptic"
             }
           ],
           "tileShape": "landscape",
@@ -2417,7 +2342,7 @@
               },
               "id": "source-5",
               "query": {
-                "identifier": "llanfairpwllgwyngyll3|imdb-top-250-films-history-collected",
+                "identifier": "llanfairpwllgwyngyll3|imdb-top-250-collections",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "32976"
@@ -2474,7 +2399,7 @@
           "hidesTitle": true,
           "id": "FC3D6018-3EA5-47CD-A6BF-03D71E55163E",
           "query": {
-            "identifier": "cenunix|trending-horror",
+            "identifier": "cenunix|horror-imdb-desc",
             "kind": "curatedList",
             "parameters": {
               "listID": "46449"
@@ -2498,7 +2423,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "cenunix|trending-horror",
+                "identifier": "cenunix|horror-imdb-desc",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "46449"
@@ -2523,7 +2448,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-horror-movies",
+                "identifier": "snoak|horror-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91215"
@@ -2548,7 +2473,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|popular-horror-shows",
+                "identifier": "snoak|horror-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91217"
@@ -2573,7 +2498,7 @@
               },
               "id": "source-4",
               "query": {
-                "identifier": "hdlists|horror-movies-top-rated-from-1960-to-today",
+                "identifier": "hdlists|latest-hd-horror-movies-top-rated-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2410"
@@ -2759,7 +2684,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "hdlists|mystery-movies-top-rated-from-1980-to-today",
+                "identifier": "hdlists|latest-hd-mystery-movies-top-rated-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2416"
@@ -2790,7 +2715,7 @@
           "hidesTitle": true,
           "id": "D091EB1B-6F83-4007-A9CB-26358427F47C",
           "query": {
-            "identifier": "snoak|popular-reality-shows",
+            "identifier": "snoak|top-reality-shows",
             "kind": "curatedList",
             "parameters": {
               "listID": "128054"
@@ -2814,7 +2739,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-reality-shows",
+                "identifier": "snoak|top-reality-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "128054"
@@ -2952,7 +2877,7 @@
           "hidesTitle": true,
           "id": "27DF7B2A-8352-44CB-90BD-D58E71DA898F",
           "query": {
-            "identifier": "snoak|popular-thriller-movies",
+            "identifier": "snoak|thriller-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "91893"
@@ -2976,7 +2901,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "snoak|popular-thriller-movies",
+                "identifier": "snoak|thriller-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91893"
@@ -3001,7 +2926,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|popular-thriller-shows",
+                "identifier": "snoak|thriller-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "91894"
@@ -3365,7 +3290,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "scnet1619|dreamworks",
+                "identifier": "scnet1619|disney-pixar-and-dreamworks",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "89187"

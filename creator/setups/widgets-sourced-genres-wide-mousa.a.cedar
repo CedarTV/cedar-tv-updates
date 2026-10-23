@@ -23,7 +23,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/mousa.a/action-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -39,14 +39,16 @@
           "hidesTitle": true,
           "id": "7286E56D-6E90-43D3-8370-1C48327796CB",
           "query": {
-            "identifier": "snoak|popular-action-movies",
+            "identifier": "snoak|action-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91211"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -61,15 +63,17 @@
               },
               "id": "45BD8293-985B-56B6-AAA7-D07EB34C611C",
               "query": {
-                "identifier": "snoak|popular-action-movies",
+                "identifier": "snoak|action-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91211"
+                }
               },
               "title": "Popular Action Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -84,9 +88,11 @@
               },
               "id": "DB0367BB-BB9F-56B3-BE08-627EDB10B031",
               "query": {
-                "identifier": "snoak|popular-action-shows",
+                "identifier": "snoak|action-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91213"
+                }
               },
               "title": "Popular Action Shows"
             }
@@ -97,7 +103,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/mousa.a/comedy-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -113,14 +119,16 @@
           "hidesTitle": true,
           "id": "B23A949F-29E4-4E58-8181-7E2267FAE275",
           "query": {
-            "identifier": "snoak|popular-comedy-movies",
+            "identifier": "snoak|comedy-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91223"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -135,15 +143,17 @@
               },
               "id": "796A30EE-E8C2-5B54-999B-FD92B90F849E",
               "query": {
-                "identifier": "snoak|popular-comedy-movies",
+                "identifier": "snoak|comedy-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91223"
+                }
               },
               "title": "Popular Comedy Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -158,9 +168,11 @@
               },
               "id": "4BD2AEA0-8F0A-5F49-8B90-CF3B7E6DCDBB",
               "query": {
-                "identifier": "snoak|popular-comedy-shows",
+                "identifier": "snoak|comedy-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91224"
+                }
               },
               "title": "Popular Comedy Shows"
             }
@@ -245,7 +257,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/mousa.a/drama-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -261,14 +273,16 @@
           "hidesTitle": true,
           "id": "B84A9DB2-2843-4085-8AFE-662870E2A766",
           "query": {
-            "identifier": "snoak|popular-drama-movies",
+            "identifier": "snoak|drama-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91296"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -283,15 +297,17 @@
               },
               "id": "92895EA4-250F-5D63-BF25-DE57950E2259",
               "query": {
-                "identifier": "snoak|popular-drama-movies",
+                "identifier": "snoak|drama-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91296"
+                }
               },
               "title": "Popular Drama Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -306,9 +322,11 @@
               },
               "id": "C045A406-8656-5BE0-A9B1-02C3106E03BE",
               "query": {
-                "identifier": "snoak|popular-drama-shows",
+                "identifier": "snoak|drama-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91297"
+                }
               },
               "title": "Popular Drama Shows"
             }
@@ -370,7 +388,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/mousa.a/horror-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -386,14 +404,16 @@
           "hidesTitle": true,
           "id": "6EF1DACD-ABA9-4FBC-A053-30185F8CC9A6",
           "query": {
-            "identifier": "snoak|popular-horror-movies",
+            "identifier": "snoak|horror-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91215"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -408,15 +428,17 @@
               },
               "id": "6F82EDCC-F8C2-5A0A-B6C6-BC08A32CC3D0",
               "query": {
-                "identifier": "snoak|popular-horror-movies",
+                "identifier": "snoak|horror-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91215"
+                }
               },
               "title": "Popular Horror Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -431,9 +453,11 @@
               },
               "id": "A5744292-15BA-5E7F-8A41-97ADA4E5323D",
               "query": {
-                "identifier": "snoak|popular-horror-shows",
+                "identifier": "snoak|horror-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91217"
+                }
               },
               "title": "Popular Horror Shows"
             }
@@ -444,7 +468,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/mousa.a/kids-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -462,12 +486,14 @@
           "query": {
             "identifier": "snoak|trending-kids-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "88467"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -484,7 +510,9 @@
               "query": {
                 "identifier": "snoak|trending-kids-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "88467"
+                }
               },
               "title": "Trending Kids Movies"
             },
@@ -518,7 +546,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/mousa.a/romance-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -536,12 +564,14 @@
           "query": {
             "identifier": "snoak|popular-romance-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128262"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -558,13 +588,15 @@
               "query": {
                 "identifier": "snoak|popular-romance-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128262"
+                }
               },
               "title": "Popular Romance Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -581,7 +613,9 @@
               "query": {
                 "identifier": "snoak|popular-romance-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128265"
+                }
               },
               "title": "Popular Romance Shows"
             }
@@ -592,7 +626,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/mousa.a/scifi-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -608,14 +642,16 @@
           "hidesTitle": true,
           "id": "51F1B8C1-EF4C-4DB6-89A1-7E1726756658",
           "query": {
-            "identifier": "snoak|popular-sci-fi-movies",
+            "identifier": "snoak|science-fiction-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91220"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -630,15 +666,17 @@
               },
               "id": "3B5C8E86-A0B4-5D8E-99EC-5B41634C1348",
               "query": {
-                "identifier": "snoak|popular-sci-fi-movies",
+                "identifier": "snoak|science-fiction-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91220"
+                }
               },
               "title": "Popular Sci-Fi Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -653,9 +691,11 @@
               },
               "id": "569A712B-3446-542B-AFC9-50DB51913ED5",
               "query": {
-                "identifier": "snoak|popular-sci-fi-shows",
+                "identifier": "snoak|science-fiction-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91221"
+                }
               },
               "title": "Popular Sci-Fi Shows"
             }
@@ -666,7 +706,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/mousa.a/thriller-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -682,14 +722,16 @@
           "hidesTitle": true,
           "id": "0A118744-1059-43CA-A76F-0918EAE2EDB1",
           "query": {
-            "identifier": "snoak|popular-thriller-movies",
+            "identifier": "snoak|thriller-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91893"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -704,15 +746,17 @@
               },
               "id": "4FDC0013-E50C-5B89-8982-28183AA7C42F",
               "query": {
-                "identifier": "snoak|popular-thriller-movies",
+                "identifier": "snoak|thriller-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91893"
+                }
               },
               "title": "Popular Thriller Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -727,9 +771,11 @@
               },
               "id": "9D31EDA7-3103-592E-9995-16522A01E714",
               "query": {
-                "identifier": "snoak|popular-thriller-shows",
+                "identifier": "snoak|thriller-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91894"
+                }
               },
               "title": "Popular Thriller Shows"
             }

@@ -89,7 +89,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "tvgeniekodi|netflix-shows",
+                "identifier": "tvgeniekodi|netflix-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "88329"
@@ -170,7 +170,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "tvgeniekodi|prime-shows",
+                "identifier": "tvgeniekodi|prime-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "88333"
@@ -251,7 +251,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "tvgeniekodi|disney-shows",
+                "identifier": "tvgeniekodi|disney-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "88323"
@@ -283,7 +283,7 @@
           "hidesTitle": true,
           "id": "6595B35D-F753-42F5-B130-99395044DD19",
           "query": {
-            "identifier": "tvgeniekodi|max-movies",
+            "identifier": "tvgeniekodi|hbo-max-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "88324"
@@ -307,7 +307,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "tvgeniekodi|max-movies",
+                "identifier": "tvgeniekodi|hbo-max-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "88324"
@@ -332,7 +332,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "tvgeniekodi|max-shows",
+                "identifier": "tvgeniekodi|hbo-max-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "88325"
@@ -413,7 +413,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "tvgeniekodi|apple-shows",
+                "identifier": "tvgeniekodi|apple-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "88319"
@@ -494,7 +494,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "tvgeniekodi|paramount-shows",
+                "identifier": "tvgeniekodi|paramount-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "88331"
@@ -575,7 +575,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "tvgeniekodi|hulu-shows",
+                "identifier": "tvgeniekodi|hulu-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "88327"
@@ -656,7 +656,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "tvgeniekodi|peacock-shows",
+                "identifier": "tvgeniekodi|peacock-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "83484"

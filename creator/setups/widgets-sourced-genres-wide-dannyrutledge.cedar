@@ -23,7 +23,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/action-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -39,14 +39,16 @@
           "hidesTitle": true,
           "id": "8BF04294-5E17-4A3F-AA76-78AEDCCB3F08",
           "query": {
-            "identifier": "snoak|popular-action-movies",
+            "identifier": "snoak|action-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91211"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -61,15 +63,17 @@
               },
               "id": "D80E83C7-6627-564D-8E4B-6DEB79B75947",
               "query": {
-                "identifier": "snoak|popular-action-movies",
+                "identifier": "snoak|action-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91211"
+                }
               },
               "title": "Popular Action Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -84,9 +88,11 @@
               },
               "id": "A1F6F3A2-912D-535A-A11C-A78ED138854C",
               "query": {
-                "identifier": "snoak|popular-action-shows",
+                "identifier": "snoak|action-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91213"
+                }
               },
               "title": "Popular Action Shows"
             }
@@ -352,7 +358,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/animated-comedies-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -370,12 +376,14 @@
           "query": {
             "identifier": "snoak|popular-animated-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "116037"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -392,13 +400,15 @@
               "query": {
                 "identifier": "snoak|popular-animated-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "116037"
+                }
               },
               "title": "Popular Animated Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -415,7 +425,9 @@
               "query": {
                 "identifier": "snoak|popular-animated-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "116038"
+                }
               },
               "title": "Popular Animated Shows"
             }
@@ -426,7 +438,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/animation-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -444,12 +456,14 @@
           "query": {
             "identifier": "snoak|popular-animated-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "116037"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -466,13 +480,15 @@
               "query": {
                 "identifier": "snoak|popular-animated-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "116037"
+                }
               },
               "title": "Popular Animated Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -489,7 +505,9 @@
               "query": {
                 "identifier": "snoak|popular-animated-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "116038"
+                }
               },
               "title": "Popular Animated Shows"
             }
@@ -500,7 +518,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/anime-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -516,14 +534,16 @@
           "hidesTitle": true,
           "id": "5FA73C08-A3E9-4FF0-839D-990A14D04FDF",
           "query": {
-            "identifier": "snoak|popular-animation-anime-movies",
+            "identifier": "snoak|animationanime-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "121922"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -538,15 +558,17 @@
               },
               "id": "314E274F-3BFF-55B7-99D6-BE3C869E5E31",
               "query": {
-                "identifier": "snoak|popular-animation-anime-movies",
+                "identifier": "snoak|animationanime-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "121922"
+                }
               },
               "title": "Popular Animation/Anime Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -561,9 +583,11 @@
               },
               "id": "C5409E3C-06A5-57FC-B778-BA71F28DF5F6",
               "query": {
-                "identifier": "snoak|popular-animation-anime-shows",
+                "identifier": "snoak|animationanime-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "121921"
+                }
               },
               "title": "Popular Animation/Anime Shows"
             }
@@ -676,7 +700,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/comedy-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -692,14 +716,16 @@
           "hidesTitle": true,
           "id": "9CC9FF96-9A5B-4DF8-A406-56FF1F2D5C08",
           "query": {
-            "identifier": "snoak|popular-comedy-movies",
+            "identifier": "snoak|comedy-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91223"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -714,15 +740,17 @@
               },
               "id": "C4FF3908-320E-5031-B9CA-50061D48BB8F",
               "query": {
-                "identifier": "snoak|popular-comedy-movies",
+                "identifier": "snoak|comedy-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91223"
+                }
               },
               "title": "Popular Comedy Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -737,9 +765,11 @@
               },
               "id": "87F7C716-0531-5BF6-BD12-CA4860458374",
               "query": {
-                "identifier": "snoak|popular-comedy-shows",
+                "identifier": "snoak|comedy-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91224"
+                }
               },
               "title": "Popular Comedy Shows"
             }
@@ -977,7 +1007,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/documentary-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -995,12 +1025,14 @@
           "query": {
             "identifier": "snoak|popular-documentary-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128051"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1017,13 +1049,15 @@
               "query": {
                 "identifier": "snoak|popular-documentary-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128051"
+                }
               },
               "title": "Popular Documentary Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1040,7 +1074,9 @@
               "query": {
                 "identifier": "snoak|popular-documentary-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128052"
+                }
               },
               "title": "Popular Documentary Shows"
             }
@@ -1051,7 +1087,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/drama-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1067,14 +1103,16 @@
           "hidesTitle": true,
           "id": "07948710-CE33-41DA-B504-1409F72EFA60",
           "query": {
-            "identifier": "snoak|popular-drama-movies",
+            "identifier": "snoak|drama-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91296"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1089,15 +1127,17 @@
               },
               "id": "3EF44596-FA92-5360-B2D5-AAF4779D7F9A",
               "query": {
-                "identifier": "snoak|popular-drama-movies",
+                "identifier": "snoak|drama-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91296"
+                }
               },
               "title": "Popular Drama Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1112,9 +1152,11 @@
               },
               "id": "824D5F2D-A82B-574D-908B-94F8E60FF04F",
               "query": {
-                "identifier": "snoak|popular-drama-shows",
+                "identifier": "snoak|drama-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91297"
+                }
               },
               "title": "Popular Drama Shows"
             }
@@ -1533,7 +1575,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/horror-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1549,14 +1591,16 @@
           "hidesTitle": true,
           "id": "414C3A8A-0291-4149-83F9-FD75A2493B7F",
           "query": {
-            "identifier": "snoak|popular-horror-movies",
+            "identifier": "snoak|horror-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91215"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1571,15 +1615,17 @@
               },
               "id": "3332BF48-EA5F-5A02-ACF2-0930D258350C",
               "query": {
-                "identifier": "snoak|popular-horror-movies",
+                "identifier": "snoak|horror-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91215"
+                }
               },
               "title": "Popular Horror Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1594,9 +1640,11 @@
               },
               "id": "C8C4864B-46B6-5757-BD25-82147C323EE1",
               "query": {
-                "identifier": "snoak|popular-horror-shows",
+                "identifier": "snoak|horror-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91217"
+                }
               },
               "title": "Popular Horror Shows"
             }
@@ -1709,7 +1757,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/kids-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1727,12 +1775,14 @@
           "query": {
             "identifier": "snoak|trending-kids-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "88467"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1749,7 +1799,9 @@
               "query": {
                 "identifier": "snoak|trending-kids-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "88467"
+                }
               },
               "title": "Trending Kids Movies"
             },
@@ -2140,7 +2192,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/reality-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2156,14 +2208,16 @@
           "hidesTitle": true,
           "id": "9AF0572F-7AB8-44CA-BE4F-1DDEFF2F349F",
           "query": {
-            "identifier": "snoak|popular-reality-shows",
+            "identifier": "snoak|top-reality-shows",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128054"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2178,9 +2232,11 @@
               },
               "id": "CB74438B-A9DA-5175-AC13-A3D965552F7F",
               "query": {
-                "identifier": "snoak|popular-reality-shows",
+                "identifier": "snoak|top-reality-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128054"
+                }
               },
               "title": "Popular Reality Shows"
             }
@@ -2242,7 +2298,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/romance-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2260,12 +2316,14 @@
           "query": {
             "identifier": "snoak|popular-romance-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128262"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2282,13 +2340,15 @@
               "query": {
                 "identifier": "snoak|popular-romance-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128262"
+                }
               },
               "title": "Popular Romance Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2305,7 +2365,9 @@
               "query": {
                 "identifier": "snoak|popular-romance-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128265"
+                }
               },
               "title": "Popular Romance Shows"
             }
@@ -2316,7 +2378,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/sci-fi-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2332,14 +2394,16 @@
           "hidesTitle": true,
           "id": "9C3C2050-5874-4695-8FF1-6CB5159A08C3",
           "query": {
-            "identifier": "snoak|popular-sci-fi-movies",
+            "identifier": "snoak|science-fiction-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91220"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2354,15 +2418,17 @@
               },
               "id": "659CC025-1674-5410-BA5D-6D8569C2388E",
               "query": {
-                "identifier": "snoak|popular-sci-fi-movies",
+                "identifier": "snoak|science-fiction-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91220"
+                }
               },
               "title": "Popular Sci-Fi Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2377,9 +2443,11 @@
               },
               "id": "7A2F1EB1-4E67-5B7D-8230-03A17DB67D2B",
               "query": {
-                "identifier": "snoak|popular-sci-fi-shows",
+                "identifier": "snoak|science-fiction-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91221"
+                }
               },
               "title": "Popular Sci-Fi Shows"
             }
@@ -2712,7 +2780,7 @@
           "hidesTitle": true,
           "id": "5AED48FB-4FBC-404B-809C-FB0523592292",
           "query": {
-            "identifier": "acanas|recommended-techno-cyber-thrillers",
+            "identifier": "rzepkowski|hacker-movies",
             "kind": "curatedList",
             "parameters": {}
           },
@@ -2734,11 +2802,11 @@
               },
               "id": "B891A3FE-0F9B-5914-9E02-B7252BE15BD6",
               "query": {
-                "identifier": "acanas|recommended-techno-cyber-thrillers",
+                "identifier": "rzepkowski|hacker-movies",
                 "kind": "curatedList",
                 "parameters": {}
               },
-              "title": "Recommended Techno & Cyber Thrillers"
+              "title": "Hacker Movies"
             }
           ],
           "tileShape": "landscape",
@@ -2747,7 +2815,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/wide/dannyrutledge/thriller-wide.png",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -2763,14 +2831,16 @@
           "hidesTitle": true,
           "id": "3E1D726B-2AB5-409A-8AAE-43F59C4F8DB3",
           "query": {
-            "identifier": "snoak|popular-thriller-movies",
+            "identifier": "snoak|thriller-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91893"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2785,15 +2855,17 @@
               },
               "id": "1AC1A85C-442F-5CC3-A334-0CD0CFDD90B5",
               "query": {
-                "identifier": "snoak|popular-thriller-movies",
+                "identifier": "snoak|thriller-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91893"
+                }
               },
               "title": "Popular Thriller Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2808,9 +2880,11 @@
               },
               "id": "9A06AD14-E573-5FC0-8DC5-8D5D418AFE82",
               "query": {
-                "identifier": "snoak|popular-thriller-shows",
+                "identifier": "snoak|thriller-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91894"
+                }
               },
               "title": "Popular Thriller Shows"
             }
@@ -2969,7 +3043,7 @@
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -2986,7 +3060,9 @@
               "query": {
                 "identifier": "Azodath|popular-war-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "144888"
+                }
               },
               "title": "Popular War Shows"
             }

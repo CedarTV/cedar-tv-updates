@@ -50,7 +50,7 @@
           "title": "Midnight Vault: Latest Movies",
           "query": {
             "kind": "curatedList",
-            "identifier": "snoak|128045",
+            "identifier": "snoak|latest-horror-movies",
             "parameters": {
               "listID": "128045"
             }
@@ -78,7 +78,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "snoak|128045",
+                "identifier": "snoak|latest-horror-movies",
                 "parameters": {
                   "listID": "128045"
                 }
@@ -129,7 +129,7 @@
           "title": "Midnight Vault: Latest Shows",
           "query": {
             "kind": "curatedList",
-            "identifier": "snoak|128046",
+            "identifier": "snoak|latest-horror-shows",
             "parameters": {
               "listID": "128046"
             }
@@ -157,7 +157,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "snoak|128046",
+                "identifier": "snoak|latest-horror-shows",
                 "parameters": {
                   "listID": "128046"
                 }
@@ -182,7 +182,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "jarvis-16255551|172541",
+                "identifier": "jarvis-16255551|latest-top-horror-shows",
                 "parameters": {
                   "listID": "172541"
                 }
@@ -260,7 +260,7 @@
           "title": "All-Time Fright Club",
           "query": {
             "kind": "curatedList",
-            "identifier": "hdlists|2410",
+            "identifier": "hdlists|latest-hd-horror-movies-top-rated-from-1980-to-today",
             "parameters": {
               "listID": "2410"
             }
@@ -288,7 +288,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "hdlists|2410",
+                "identifier": "hdlists|latest-hd-horror-movies-top-rated-from-1980-to-today",
                 "parameters": {
                   "listID": "2410"
                 }
@@ -313,7 +313,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "jarvis-16255551|172565",
+                "identifier": "jarvis-16255551|best-horror-movies",
                 "parameters": {
                   "listID": "172565"
                 }
@@ -340,7 +340,7 @@
           "title": "Bingeable Nightmares",
           "query": {
             "kind": "curatedList",
-            "identifier": "jarvis-16255551|172563",
+            "identifier": "jarvis-16255551|best-horror-shows",
             "parameters": {
               "listID": "172563"
             }
@@ -368,7 +368,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "jarvis-16255551|172563",
+                "identifier": "jarvis-16255551|best-horror-shows",
                 "parameters": {
                   "listID": "172563"
                 }
@@ -443,7 +443,7 @@
           "title": "Slasher Vault",
           "query": {
             "kind": "curatedList",
-            "identifier": "agentsar|107568",
+            "identifier": "agentsar|slasher",
             "parameters": {
               "listID": "107568"
             }
@@ -471,7 +471,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "agentsar|107568",
+                "identifier": "agentsar|slasher",
                 "parameters": {
                   "listID": "107568"
                 }
@@ -576,7 +576,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "lish408|cosmic-horror-lovecraftian",
+                "identifier": "thetryingscotsman|cosmic-horror",
                 "parameters": {}
               },
               "filters": {
@@ -589,7 +589,7 @@
                 "productionCompanyIDs": []
               },
               "id": "source-2",
-              "title": "Cosmic Horror & Lovecraftian"
+              "title": "Cosmic Horror"
             }
           ],
           "coverImageURL": "https://image.tmdb.org/t/p/original/r9leYNa8nTRCceZrZhP1DXkgKVb.jpg",
@@ -652,7 +652,7 @@
           "title": "Found Footage & Analog Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "sysops|25504",
+            "identifier": "sysops|found-footage",
             "parameters": {
               "listID": "25504"
             }
@@ -680,7 +680,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "sysops|25504",
+                "identifier": "sysops|found-footage",
                 "parameters": {
                   "listID": "25504"
                 }
@@ -855,15 +855,13 @@
             {
               "dataSource": {
                 "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "identifier": "trakt-public",
                 "parameters": {}
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "atalante421|132038",
-                "parameters": {
-                  "listID": "132038"
-                }
+                "identifier": "29zombies|zombies",
+                "parameters": {}
               },
               "filters": {
                 "contentType": "movies",
@@ -875,7 +873,7 @@
                 "productionCompanyIDs": []
               },
               "id": "source-2",
-              "title": "Zombies & Living Dead"
+              "title": "Zombies"
             }
           ],
           "coverImageURL": "https://image.tmdb.org/t/p/original/1zs8iKZMKrtIh2MulIwwU6Gs9EK.jpg",
@@ -938,10 +936,8 @@
           "title": "Zombies & The Living Dead",
           "query": {
             "kind": "curatedList",
-            "identifier": "atalante421|132038",
-            "parameters": {
-              "listID": "132038"
-            }
+            "identifier": "29zombies|zombies",
+            "parameters": {}
           },
           "filters": {
             "contentType": "movies",
@@ -954,22 +950,20 @@
           },
           "dataSource": {
             "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "identifier": "trakt-public",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
                 "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "identifier": "trakt-public",
                 "parameters": {}
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "atalante421|132038",
-                "parameters": {
-                  "listID": "132038"
-                }
+                "identifier": "29zombies|zombies",
+                "parameters": {}
               },
               "filters": {
                 "contentType": "movies",
@@ -981,7 +975,7 @@
                 "productionCompanyIDs": []
               },
               "id": "source-1",
-              "title": "Zombies & Living Dead"
+              "title": "Zombies"
             },
             {
               "dataSource": {
@@ -1266,7 +1260,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "nobnobz|159693",
+                "identifier": "nobnobz|studio-a24",
                 "parameters": {
                   "listID": "159693"
                 }
@@ -1503,7 +1497,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "snoak|86752",
+                "identifier": "snoak|latest-netflix-movies",
                 "parameters": {
                   "listID": "86752"
                 }
@@ -1528,7 +1522,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "snoak|86751",
+                "identifier": "snoak|latest-netflix-tv-shows",
                 "parameters": {
                   "listID": "86751"
                 }
@@ -1604,7 +1598,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "snoak|89647",
+                "identifier": "snoak|latest-max-movies",
                 "parameters": {
                   "listID": "89647"
                 }
@@ -1629,7 +1623,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "snoak|89649",
+                "identifier": "snoak|latest-max-tv-shows",
                 "parameters": {
                   "listID": "89649"
                 }
@@ -1656,7 +1650,7 @@
           "title": "Tubi Horror Vault",
           "query": {
             "kind": "curatedList",
-            "identifier": "jarvis-16255551|171129",
+            "identifier": "jarvis-16255551|tubi-horror-shows",
             "parameters": {
               "listID": "171129"
             }
@@ -1684,7 +1678,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "jarvis-16255551|171129",
+                "identifier": "jarvis-16255551|tubi-horror-shows",
                 "parameters": {
                   "listID": "171129"
                 }
@@ -1866,7 +1860,7 @@
           "title": "Halloween",
           "query": {
             "kind": "curatedList",
-            "identifier": "fuzi0n|58591",
+            "identifier": "fuzi0n|halloween-movies",
             "parameters": {
               "listID": "58591"
             }
@@ -1894,7 +1888,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "fuzi0n|58591",
+                "identifier": "fuzi0n|halloween-movies",
                 "parameters": {
                   "listID": "58591"
                 }
@@ -1920,14 +1914,12 @@
           "id": "folder-3",
           "title": "Friday the 13th",
           "query": {
-            "kind": "curatedList",
-            "identifier": "nobnobz|159951",
-            "parameters": {
-              "listID": "159951"
-            }
+            "kind": "metadataCollection",
+            "identifier": "9735",
+            "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "genreIDs": [],
             "originalLanguageCodes": [],
             "countryCodes": [],
@@ -1936,26 +1928,22 @@
             "productionCompanyIDs": []
           },
           "dataSource": {
-            "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "query": {
-                "kind": "curatedList",
-                "identifier": "nobnobz|159951",
-                "parameters": {
-                  "listID": "159951"
-                }
+                "kind": "metadataCollection",
+                "identifier": "9735",
+                "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "genreIDs": [],
                 "originalLanguageCodes": [],
                 "countryCodes": [],
@@ -1976,7 +1964,7 @@
           "title": "A Nightmare on Elm Street",
           "query": {
             "kind": "curatedList",
-            "identifier": "whitemagica|134963",
+            "identifier": "whitemagica|a-nightmare-on-elm-street-collection",
             "parameters": {
               "listID": "134963"
             }
@@ -2004,7 +1992,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "whitemagica|134963",
+                "identifier": "whitemagica|a-nightmare-on-elm-street-collection",
                 "parameters": {
                   "listID": "134963"
                 }
@@ -2031,7 +2019,7 @@
           "title": "Scream",
           "query": {
             "kind": "curatedList",
-            "identifier": "nobnobz|159929",
+            "identifier": "nobnobz|collection-scream",
             "parameters": {
               "listID": "159929"
             }
@@ -2059,7 +2047,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "nobnobz|159929",
+                "identifier": "nobnobz|collection-scream",
                 "parameters": {
                   "listID": "159929"
                 }
@@ -2085,14 +2073,12 @@
           "id": "folder-6",
           "title": "Saw",
           "query": {
-            "kind": "curatedList",
-            "identifier": "jarvis-16255551|170291",
-            "parameters": {
-              "listID": "170291"
-            }
+            "kind": "metadataCollection",
+            "identifier": "656",
+            "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "genreIDs": [],
             "originalLanguageCodes": [],
             "countryCodes": [],
@@ -2101,26 +2087,22 @@
             "productionCompanyIDs": []
           },
           "dataSource": {
-            "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "query": {
-                "kind": "curatedList",
-                "identifier": "jarvis-16255551|170291",
-                "parameters": {
-                  "listID": "170291"
-                }
+                "kind": "metadataCollection",
+                "identifier": "656",
+                "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "genreIDs": [],
                 "originalLanguageCodes": [],
                 "countryCodes": [],
@@ -2140,14 +2122,12 @@
           "id": "folder-7",
           "title": "The Texas Chainsaw Massacre",
           "query": {
-            "kind": "curatedList",
-            "identifier": "nxsxs|155090",
-            "parameters": {
-              "listID": "155090"
-            }
+            "kind": "metadataCollection",
+            "identifier": "111751",
+            "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "genreIDs": [],
             "originalLanguageCodes": [],
             "countryCodes": [],
@@ -2156,26 +2136,22 @@
             "productionCompanyIDs": []
           },
           "dataSource": {
-            "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "query": {
-                "kind": "curatedList",
-                "identifier": "nxsxs|155090",
-                "parameters": {
-                  "listID": "155090"
-                }
+                "kind": "metadataCollection",
+                "identifier": "111751",
+                "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "genreIDs": [],
                 "originalLanguageCodes": [],
                 "countryCodes": [],
@@ -2195,14 +2171,12 @@
           "id": "folder-8",
           "title": "The Conjuring Universe",
           "query": {
-            "kind": "curatedList",
-            "identifier": "nobnobz|159945",
-            "parameters": {
-              "listID": "159945"
-            }
+            "kind": "metadataCollection",
+            "identifier": "313086",
+            "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "genreIDs": [],
             "originalLanguageCodes": [],
             "countryCodes": [],
@@ -2211,26 +2185,22 @@
             "productionCompanyIDs": []
           },
           "dataSource": {
-            "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "query": {
-                "kind": "curatedList",
-                "identifier": "nobnobz|159945",
-                "parameters": {
-                  "listID": "159945"
-                }
+                "kind": "metadataCollection",
+                "identifier": "313086",
+                "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "genreIDs": [],
                 "originalLanguageCodes": [],
                 "countryCodes": [],
@@ -2239,7 +2209,51 @@
                 "productionCompanyIDs": []
               },
               "id": "source-1",
-              "title": "[Collection] Conjuring-Verse"
+              "title": "The Conjuring Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "402074",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1-2",
+              "title": "Annabelle Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "968052",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1-3",
+              "title": "The Nun Collection"
             }
           ],
           "coverImageURL": "https://wepiii2.github.io/strand-backgrounds/full/24e77e38-9988-4a9c-be93-286fc8411077.jpg",
@@ -2250,14 +2264,12 @@
           "id": "folder-9",
           "title": "Alien vs Predator Timeline",
           "query": {
-            "kind": "curatedList",
-            "identifier": "exoduso|101434",
-            "parameters": {
-              "listID": "101434"
-            }
+            "kind": "metadataCollection",
+            "identifier": "8091",
+            "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "genreIDs": [],
             "originalLanguageCodes": [],
             "countryCodes": [],
@@ -2266,26 +2278,22 @@
             "productionCompanyIDs": []
           },
           "dataSource": {
-            "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "query": {
-                "kind": "curatedList",
-                "identifier": "exoduso|101434",
-                "parameters": {
-                  "listID": "101434"
-                }
+                "kind": "metadataCollection",
+                "identifier": "8091",
+                "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "genreIDs": [],
                 "originalLanguageCodes": [],
                 "countryCodes": [],
@@ -2294,7 +2302,51 @@
                 "productionCompanyIDs": []
               },
               "id": "source-1",
-              "title": "Alien vs Predator Timeline"
+              "title": "Alien Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "399",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1-2",
+              "title": "Predator Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "115762",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1-3",
+              "title": "AVP Collection"
             }
           ],
           "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzBsMTMxZy53ZWJw",
@@ -2305,14 +2357,12 @@
           "id": "folder-10",
           "title": "Child’s Play / Chucky",
           "query": {
-            "kind": "curatedList",
-            "identifier": "nobnobz|159943",
-            "parameters": {
-              "listID": "159943"
-            }
+            "kind": "metadataCollection",
+            "identifier": "10455",
+            "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "genreIDs": [],
             "originalLanguageCodes": [],
             "countryCodes": [],
@@ -2321,26 +2371,22 @@
             "productionCompanyIDs": []
           },
           "dataSource": {
-            "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "query": {
-                "kind": "curatedList",
-                "identifier": "nobnobz|159943",
-                "parameters": {
-                  "listID": "159943"
-                }
+                "kind": "metadataCollection",
+                "identifier": "10455",
+                "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "genreIDs": [],
                 "originalLanguageCodes": [],
                 "countryCodes": [],
@@ -2361,14 +2407,12 @@
           "id": "folder-11",
           "title": "28 Days Later",
           "query": {
-            "kind": "curatedList",
-            "identifier": "jarvis-16255551|172542",
-            "parameters": {
-              "listID": "172542"
-            }
+            "kind": "metadataCollection",
+            "identifier": "1565",
+            "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "genreIDs": [],
             "originalLanguageCodes": [],
             "countryCodes": [],
@@ -2377,26 +2421,22 @@
             "productionCompanyIDs": []
           },
           "dataSource": {
-            "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "query": {
-                "kind": "curatedList",
-                "identifier": "jarvis-16255551|172542",
-                "parameters": {
-                  "listID": "172542"
-                }
+                "kind": "metadataCollection",
+                "identifier": "1565",
+                "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "genreIDs": [],
                 "originalLanguageCodes": [],
                 "countryCodes": [],
@@ -2465,7 +2505,7 @@
           "title": "1980s Horror: Synths & Slashers",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|41060",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-1980s",
             "parameters": {
               "listID": "41060"
             }
@@ -2497,7 +2537,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|41060",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-1980s",
                 "parameters": {
                   "listID": "41060"
                 }
@@ -2555,7 +2595,7 @@
           "title": "1970s Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|41059",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-1970s",
             "parameters": {
               "listID": "41059"
             }
@@ -2587,7 +2627,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|41059",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-1970s",
                 "parameters": {
                   "listID": "41059"
                 }
@@ -2645,7 +2685,7 @@
           "title": "1990s Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|37338",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-1970-1999",
             "parameters": {
               "listID": "37338"
             }
@@ -2677,7 +2717,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|37338",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-1970-1999",
                 "parameters": {
                   "listID": "37338"
                 }
@@ -2708,7 +2748,7 @@
           "title": "2000s Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|41062",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-2000s",
             "parameters": {
               "listID": "41062"
             }
@@ -2740,7 +2780,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|41062",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-2000s",
                 "parameters": {
                   "listID": "41062"
                 }
@@ -2771,7 +2811,7 @@
           "title": "2010s Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|37339",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-2000-2019",
             "parameters": {
               "listID": "37339"
             }
@@ -2803,7 +2843,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|37339",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-2000-2019",
                 "parameters": {
                   "listID": "37339"
                 }
@@ -2861,7 +2901,7 @@
           "title": "2020s Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|37341",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-2020s",
             "parameters": {
               "listID": "37341"
             }
@@ -2893,7 +2933,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|37341",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-2020s",
                 "parameters": {
                   "listID": "37341"
                 }
@@ -2924,7 +2964,7 @@
           "title": "1960s Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|37337",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-1900-1969",
             "parameters": {
               "listID": "37337"
             }
@@ -2956,7 +2996,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|37337",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-1900-1969",
                 "parameters": {
                   "listID": "37337"
                 }
@@ -2987,7 +3027,7 @@
           "title": "1950s & Vintage Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|41048",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-1900-1949",
             "parameters": {
               "listID": "41048"
             }
@@ -3019,7 +3059,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|41048",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-1900-1949",
                 "parameters": {
                   "listID": "41048"
                 }
@@ -3098,7 +3138,7 @@
           "title": "J-Horror (Japan)",
           "query": {
             "kind": "curatedList",
-            "identifier": "travis_mcnelly-hotmail-com|41528",
+            "identifier": "travis_mcnelly-hotmail-com|top-japanese-horror",
             "parameters": {
               "listID": "41528"
             }
@@ -3126,7 +3166,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|41528",
+                "identifier": "travis_mcnelly-hotmail-com|top-japanese-horror",
                 "parameters": {
                   "listID": "41528"
                 }
@@ -3174,7 +3214,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "kris.felscher|japanese-splatter-bizarro",
+                "identifier": "ravynloony|j-horror",
                 "parameters": {}
               },
               "filters": {
@@ -3187,7 +3227,7 @@
                 "productionCompanyIDs": []
               },
               "id": "source-3",
-              "title": "Japanese Splatter & Bizarro"
+              "title": "J-Horror"
             }
           ],
           "coverImageURL": "https://image.tmdb.org/t/p/original/sGhbO6muh1Fnpa7nkxYCfvmgWCo.jpg",
@@ -3248,7 +3288,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "travis_mcnelly-hotmail-com|41529",
+                "identifier": "travis_mcnelly-hotmail-com|top-south-korean-horror",
                 "parameters": {
                   "listID": "41529"
                 }
@@ -3381,7 +3421,7 @@
           "title": "Spanish & Latin Horror",
           "query": {
             "kind": "curatedList",
-            "identifier": "auwboyz|36795",
+            "identifier": "auwboyz|horror-latino",
             "parameters": {
               "listID": "36795"
             }
@@ -3409,7 +3449,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "auwboyz|36795",
+                "identifier": "auwboyz|horror-latino",
                 "parameters": {
                   "listID": "36795"
                 }
@@ -3485,7 +3525,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "jason-postrel|11144",
+                "identifier": "jason-postrel|top-rated-german-movies",
                 "parameters": {
                   "listID": "11144"
                 }
@@ -3560,7 +3600,7 @@
           "title": "Quick & Lethal (Under 90 Mins)",
           "query": {
             "kind": "curatedList",
-            "identifier": "danaramapyjama|119609",
+            "identifier": "danaramapyjama|90-minute-films-for-pyjama-wearers",
             "parameters": {
               "listID": "119609"
             }
@@ -3588,7 +3628,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "danaramapyjama|119609",
+                "identifier": "danaramapyjama|90-minute-films-for-pyjama-wearers",
                 "parameters": {
                   "listID": "119609"
                 }
@@ -3613,7 +3653,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "lendricklamar|18751",
+                "identifier": "lendricklamar|90-minute-hits",
                 "parameters": {
                   "listID": "18751"
                 }
@@ -3640,7 +3680,7 @@
           "title": "Mind Bending & Crazy Twists",
           "query": {
             "kind": "curatedList",
-            "identifier": "gijs11|81967",
+            "identifier": "gijs11|best-horrormysterymindfucksci-fi",
             "parameters": {
               "listID": "81967"
             }
@@ -3668,7 +3708,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "gijs11|81967",
+                "identifier": "gijs11|best-horrormysterymindfucksci-fi",
                 "parameters": {
                   "listID": "81967"
                 }
@@ -3693,7 +3733,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "hdlists|3923",
+                "identifier": "hdlists|crazy-plot-twists",
                 "parameters": {
                   "listID": "3923"
                 }
@@ -3720,7 +3760,7 @@
           "title": "Not Scary / Spooky Halloween Fun",
           "query": {
             "kind": "curatedList",
-            "identifier": "bbrodka1963|71619",
+            "identifier": "bbrodka1963|kid-friendly-halloween-movies",
             "parameters": {
               "listID": "71619"
             }
@@ -3748,7 +3788,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "bbrodka1963|71619",
+                "identifier": "bbrodka1963|kid-friendly-halloween-movies",
                 "parameters": {
                   "listID": "71619"
                 }
@@ -3847,7 +3887,7 @@
               },
               "query": {
                 "kind": "curatedList",
-                "identifier": "kris.felscher|japanese-splatter-bizarro",
+                "identifier": "ravynloony|j-horror",
                 "parameters": {}
               },
               "filters": {
@@ -3860,7 +3900,7 @@
                 "productionCompanyIDs": []
               },
               "id": "source-2",
-              "title": "Japanese Splatter & Bizarro"
+              "title": "J-Horror"
             },
             {
               "dataSource": {

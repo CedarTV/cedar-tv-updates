@@ -299,7 +299,7 @@
           "hidesTitle": true,
           "id": "6212AC88-BFFA-4E0D-867A-BA052A10195F",
           "query": {
-            "identifier": "hdlists|horror-movies-top-rated-from-1960-to-today",
+            "identifier": "hdlists|latest-hd-horror-movies-top-rated-from-1980-to-today",
             "kind": "curatedList",
             "parameters": {
               "listID": "2410"
@@ -323,7 +323,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "hdlists|horror-movies-top-rated-from-1960-to-today",
+                "identifier": "hdlists|latest-hd-horror-movies-top-rated-from-1980-to-today",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "2410"
@@ -1473,7 +1473,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|latest-netflix-shows",
+                "identifier": "snoak|latest-netflix-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "86751"
@@ -1549,7 +1549,7 @@
               },
               "id": "source-2",
               "query": {
-                "identifier": "snoak|latest-hbo-max-movies",
+                "identifier": "snoak|latest-max-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "89647"
@@ -1574,7 +1574,7 @@
               },
               "id": "source-3",
               "query": {
-                "identifier": "snoak|latest-hbo-max-shows",
+                "identifier": "snoak|latest-max-tv-shows",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "89649"
@@ -1797,7 +1797,7 @@
           "hidesTitle": true,
           "id": "48F2BB51-76F1-48E6-9445-58CB7579D2FC",
           "query": {
-            "identifier": "jarvis-16255551|screambox-horror-movies",
+            "identifier": "jarvis-16255551|screambox-movies",
             "kind": "curatedList",
             "parameters": {
               "listID": "173127"
@@ -1821,7 +1821,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "jarvis-16255551|screambox-horror-movies",
+                "identifier": "jarvis-16255551|screambox-movies",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "173127"
@@ -2278,7 +2278,7 @@
           "hidesTitle": true,
           "id": "9E280144-6B57-4582-AF21-79626E04EE70",
           "query": {
-            "identifier": "travis_mcnelly-hotmail-com|top-horror-1950-1969",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-1900-1969",
             "kind": "curatedList",
             "parameters": {
               "listID": "37337"
@@ -2302,7 +2302,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "travis_mcnelly-hotmail-com|top-horror-1950-1969",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-1900-1969",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "37337"
@@ -2599,7 +2599,7 @@
           "hidesTitle": true,
           "id": "B504152E-479B-401D-B8D5-B8CB90C1AE27",
           "query": {
-            "identifier": "travis_mcnelly-hotmail-com|top-horror-2010s",
+            "identifier": "travis_mcnelly-hotmail-com|top-horror-2000-2019",
             "kind": "curatedList",
             "parameters": {
               "listID": "37339"
@@ -2623,7 +2623,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "travis_mcnelly-hotmail-com|top-horror-2010s",
+                "identifier": "travis_mcnelly-hotmail-com|top-horror-2000-2019",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "37339"
@@ -4009,7 +4009,7 @@
           "hidesTitle": true,
           "id": "92BF9DDA-2A3E-4C10-AC3B-9F1DF30DACF8",
           "query": {
-            "identifier": "gijs11|best-horror-mystery-mindfuck",
+            "identifier": "gijs11|best-horrormysterymindfucksci-fi",
             "kind": "curatedList",
             "parameters": {
               "listID": "81967"
@@ -4033,7 +4033,7 @@
               },
               "id": "source-1",
               "query": {
-                "identifier": "gijs11|best-horror-mystery-mindfuck",
+                "identifier": "gijs11|best-horrormysterymindfucksci-fi",
                 "kind": "curatedList",
                 "parameters": {
                   "listID": "81967"

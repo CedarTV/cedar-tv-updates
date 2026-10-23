@@ -203,6 +203,21 @@ Verify with `node --test test/*.test.mjs` and `node scripts/verify_creator_brows
 and Chrome required). Set `CEDAR_STUDIO_URL` to a served project root or the live Pages root, and
 `CEDAR_STUDIO_ARTIFACTS` to a disposable directory under the parent workspace's `tmp` symlink.
 
+### Keeping setup lists alive
+
+Setups read community Trakt and MDBList lists that their owners can make private, rename or delete.
+`node scripts/verify_creator_lists.mjs` checks every list as a signed-out viewer would and exits 1
+when a row loses one. It needs `TRAKT_CLIENT_ID` and `TMDB_API_KEY`; without them those lists are
+reported as unchecked. `--report <path>` writes a per-setup health report. The **Check Creator
+setup lists** workflow runs it weekly and on pull requests that touch `creator/`, separately from
+the Pages deploy, using the `TRAKT_CLIENT_ID` and `TMDB_API_KEY` repository secrets. Trakt allows
+about 1,000 reads per 5 minutes, so the script reads Trakt one list at a time.
+
+When a list breaks, prefer, in order: the same MDBList list under its current slug (keep its
+`listID`), the curator's own MDBList copy of a Trakt list, a TMDB collection for franchises, a Cedar
+streaming-service row (`popular` with `streamingProviderIDs`), then a similar public list. Note
+the repair in the setup's `credit.conversion` and in `creator/CREDITS.md`.
+
 ## Tobacco Ties
 
 `public/create-tobacco-tie/` generates a portable username and password locally in the browser.

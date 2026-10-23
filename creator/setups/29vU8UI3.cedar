@@ -196,31 +196,6 @@
                 }
               },
               "title": "Toy Story"
-            },
-            {
-              "dataSource": {
-                "identifier": "mdblist-public",
-                "kind": "trackingService",
-                "parameters": {}
-              },
-              "filters": {
-                "contentType": "movies",
-                "countryCodes": [],
-                "genreIDs": [],
-                "networkIDs": [],
-                "originalLanguageCodes": [],
-                "productionCompanyIDs": [],
-                "streamingProviderIDs": []
-              },
-              "id": "source-2",
-              "query": {
-                "identifier": "thinredline|toy-story-franchise-shorts",
-                "kind": "curatedList",
-                "parameters": {
-                  "listID": "95599"
-                }
-              },
-              "title": "Toy Story Franchise Shorts"
             }
           ],
           "tileShape": "landscape",

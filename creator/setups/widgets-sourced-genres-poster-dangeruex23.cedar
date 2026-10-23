@@ -23,7 +23,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/action-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -39,14 +39,16 @@
           "hidesTitle": true,
           "id": "4C3C5CB2-43D0-4CF6-A351-CD66069D2EEB",
           "query": {
-            "identifier": "snoak|popular-action-movies",
+            "identifier": "snoak|action-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91211"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -61,15 +63,17 @@
               },
               "id": "DA4F8852-0402-5D32-8650-3132677FED10",
               "query": {
-                "identifier": "snoak|popular-action-movies",
+                "identifier": "snoak|action-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91211"
+                }
               },
               "title": "Popular Action Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -84,9 +88,11 @@
               },
               "id": "267436C4-0AE0-5C47-9B11-12015FA86E7D",
               "query": {
-                "identifier": "snoak|popular-action-shows",
+                "identifier": "snoak|action-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91213"
+                }
               },
               "title": "Popular Action Shows"
             }
@@ -97,7 +103,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/animation-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -115,12 +121,14 @@
           "query": {
             "identifier": "snoak|popular-animated-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "116037"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -137,13 +145,15 @@
               "query": {
                 "identifier": "snoak|popular-animated-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "116037"
+                }
               },
               "title": "Popular Animated Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -160,7 +170,9 @@
               "query": {
                 "identifier": "snoak|popular-animated-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "116038"
+                }
               },
               "title": "Popular Animated Shows"
             }
@@ -171,7 +183,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/animation2-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -189,12 +201,14 @@
           "query": {
             "identifier": "snoak|popular-animated-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "116037"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -211,13 +225,15 @@
               "query": {
                 "identifier": "snoak|popular-animated-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "116037"
+                }
               },
               "title": "Popular Animated Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -234,7 +250,9 @@
               "query": {
                 "identifier": "snoak|popular-animated-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "116038"
+                }
               },
               "title": "Popular Animated Shows"
             }
@@ -245,7 +263,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/comedy-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -261,14 +279,16 @@
           "hidesTitle": true,
           "id": "0FC5C20C-3788-4A2A-923E-4ACF121EB386",
           "query": {
-            "identifier": "snoak|popular-comedy-movies",
+            "identifier": "snoak|comedy-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91223"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -283,15 +303,17 @@
               },
               "id": "37C68625-5748-5D41-97B2-F937002265DF",
               "query": {
-                "identifier": "snoak|popular-comedy-movies",
+                "identifier": "snoak|comedy-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91223"
+                }
               },
               "title": "Popular Comedy Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -306,9 +328,11 @@
               },
               "id": "7A29B128-9607-5246-A797-B1C7A4422C84",
               "query": {
-                "identifier": "snoak|popular-comedy-shows",
+                "identifier": "snoak|comedy-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91224"
+                }
               },
               "title": "Popular Comedy Shows"
             }
@@ -319,7 +343,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/documentary-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -337,12 +361,14 @@
           "query": {
             "identifier": "snoak|popular-documentary-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128051"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -359,13 +385,15 @@
               "query": {
                 "identifier": "snoak|popular-documentary-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128051"
+                }
               },
               "title": "Popular Documentary Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -382,7 +410,9 @@
               "query": {
                 "identifier": "snoak|popular-documentary-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128052"
+                }
               },
               "title": "Popular Documentary Shows"
             }
@@ -393,7 +423,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/drama-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -409,14 +439,16 @@
           "hidesTitle": true,
           "id": "52F23963-964D-47E9-AC5D-057061D685D7",
           "query": {
-            "identifier": "snoak|popular-drama-movies",
+            "identifier": "snoak|drama-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91296"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -431,15 +463,17 @@
               },
               "id": "EAF6C8F4-DA93-5302-9B9A-E39A1A2E462C",
               "query": {
-                "identifier": "snoak|popular-drama-movies",
+                "identifier": "snoak|drama-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91296"
+                }
               },
               "title": "Popular Drama Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -454,9 +488,11 @@
               },
               "id": "1EB87FD7-BC60-5A57-846E-F85F9ECF4201",
               "query": {
-                "identifier": "snoak|popular-drama-shows",
+                "identifier": "snoak|drama-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91297"
+                }
               },
               "title": "Popular Drama Shows"
             }
@@ -518,7 +554,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/horror-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -534,14 +570,16 @@
           "hidesTitle": true,
           "id": "92AF155B-0C63-4774-AA14-89FCC8E186D4",
           "query": {
-            "identifier": "snoak|popular-horror-movies",
+            "identifier": "snoak|horror-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91215"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -556,15 +594,17 @@
               },
               "id": "C47E7458-306E-5DAA-8157-A679745A38DC",
               "query": {
-                "identifier": "snoak|popular-horror-movies",
+                "identifier": "snoak|horror-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91215"
+                }
               },
               "title": "Popular Horror Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -579,9 +619,11 @@
               },
               "id": "31D17FC4-51F3-549F-93B5-91DBA8B22BF1",
               "query": {
-                "identifier": "snoak|popular-horror-shows",
+                "identifier": "snoak|horror-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91217"
+                }
               },
               "title": "Popular Horror Shows"
             }
@@ -592,7 +634,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/imdb-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -608,14 +650,16 @@
           "hidesTitle": true,
           "id": "D7DF019E-25CB-4239-A404-E5D2D1531DBF",
           "query": {
-            "identifier": "snoak|top-250-movies-imdb",
+            "identifier": "snoak|imdb-top-250-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "101881"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -630,15 +674,17 @@
               },
               "id": "F2240071-8C2F-541E-B297-1F4ECB9D9B74",
               "query": {
-                "identifier": "snoak|top-250-movies-imdb",
+                "identifier": "snoak|imdb-top-250-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "101881"
+                }
               },
               "title": "Top 250 Movies (iMDB)"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -653,9 +699,11 @@
               },
               "id": "706F8346-919B-5EF3-B96C-867068C82131",
               "query": {
-                "identifier": "snoak|top-250-shows-imdb",
+                "identifier": "snoak|imdb-top-250-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "101882"
+                }
               },
               "title": "Top 250 Shows (iMDB)"
             }
@@ -666,7 +714,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/imdb2-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -682,14 +730,16 @@
           "hidesTitle": true,
           "id": "C92A447E-37E8-4C1A-AC94-321AB14F5CF5",
           "query": {
-            "identifier": "snoak|top-250-movies-imdb",
+            "identifier": "snoak|imdb-top-250-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "101881"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -704,15 +754,17 @@
               },
               "id": "628ECACA-7ED5-592E-91E4-564F8198F57C",
               "query": {
-                "identifier": "snoak|top-250-movies-imdb",
+                "identifier": "snoak|imdb-top-250-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "101881"
+                }
               },
               "title": "Top 250 Movies (iMDB)"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -727,9 +779,11 @@
               },
               "id": "38173C98-43E4-5483-AD1E-4AC7207E5A19",
               "query": {
-                "identifier": "snoak|top-250-shows-imdb",
+                "identifier": "snoak|imdb-top-250-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "101882"
+                }
               },
               "title": "Top 250 Shows (iMDB)"
             }
@@ -740,7 +794,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/imdb3-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -756,14 +810,16 @@
           "hidesTitle": true,
           "id": "7BEEA5A6-5DED-409F-8BC6-38F2C4BD0D30",
           "query": {
-            "identifier": "snoak|top-250-movies-imdb",
+            "identifier": "snoak|imdb-top-250-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "101881"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -778,15 +834,17 @@
               },
               "id": "FA416C50-56A6-5DD6-9185-68259489B31C",
               "query": {
-                "identifier": "snoak|top-250-movies-imdb",
+                "identifier": "snoak|imdb-top-250-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "101881"
+                }
               },
               "title": "Top 250 Movies (iMDB)"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -801,9 +859,11 @@
               },
               "id": "D250444B-FEB5-55CB-9C77-17768E8C0C39",
               "query": {
-                "identifier": "snoak|top-250-shows-imdb",
+                "identifier": "snoak|imdb-top-250-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "101882"
+                }
               },
               "title": "Top 250 Shows (iMDB)"
             }
@@ -814,7 +874,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/korean-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -832,12 +892,14 @@
           "query": {
             "identifier": "snoak|popular-kdrama-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "130778"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -854,13 +916,15 @@
               "query": {
                 "identifier": "snoak|popular-kdrama-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130778"
+                }
               },
               "title": "Popular KDrama Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -877,7 +941,9 @@
               "query": {
                 "identifier": "snoak|popular-kdrama-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130775"
+                }
               },
               "title": "Popular KDrama Shows"
             }
@@ -888,7 +954,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/korean2-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -906,12 +972,14 @@
           "query": {
             "identifier": "snoak|popular-kdrama-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "130778"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -928,13 +996,15 @@
               "query": {
                 "identifier": "snoak|popular-kdrama-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130778"
+                }
               },
               "title": "Popular KDrama Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -951,7 +1021,9 @@
               "query": {
                 "identifier": "snoak|popular-kdrama-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130775"
+                }
               },
               "title": "Popular KDrama Shows"
             }
@@ -962,7 +1034,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/miniseries-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -980,12 +1052,14 @@
           "query": {
             "identifier": "snoak|popular-miniseries",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "130153"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1002,7 +1076,9 @@
               "query": {
                 "identifier": "snoak|popular-miniseries",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130153"
+                }
               },
               "title": "Popular Miniseries"
             }
@@ -1013,7 +1089,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/miniseries2-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1031,12 +1107,14 @@
           "query": {
             "identifier": "snoak|popular-miniseries",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "130153"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1053,7 +1131,9 @@
               "query": {
                 "identifier": "snoak|popular-miniseries",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130153"
+                }
               },
               "title": "Popular Miniseries"
             }
@@ -1064,7 +1144,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/miniseries3-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1082,12 +1162,14 @@
           "query": {
             "identifier": "snoak|popular-miniseries",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "130153"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1104,7 +1186,9 @@
               "query": {
                 "identifier": "snoak|popular-miniseries",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "130153"
+                }
               },
               "title": "Popular Miniseries"
             }
@@ -1131,7 +1215,7 @@
           "hidesTitle": true,
           "id": "9E250473-8832-4994-B952-23DA887261B4",
           "query": {
-            "identifier": "snoak|top-250-narrative-feature-films-letterboxd-official",
+            "identifier": "onuryasar|letterboxd-top-250-narrative-feature-films",
             "kind": "curatedList",
             "parameters": {}
           },
@@ -1153,11 +1237,11 @@
               },
               "id": "05ACC162-18AC-5F0E-8169-FCA673F03D08",
               "query": {
-                "identifier": "snoak|top-250-narrative-feature-films-letterboxd-official",
+                "identifier": "onuryasar|letterboxd-top-250-narrative-feature-films",
                 "kind": "curatedList",
                 "parameters": {}
               },
-              "title": "Top 250 Narrative Feature Films (Letterboxd Official)"
+              "title": "Letterboxd Top 250 Narrative Feature Films"
             }
           ],
           "tileShape": "poster",
@@ -1182,7 +1266,7 @@
           "hidesTitle": true,
           "id": "3192CDA0-65EF-42FF-9034-CC84F5D4538B",
           "query": {
-            "identifier": "snoak|top-250-narrative-feature-films-letterboxd-official",
+            "identifier": "onuryasar|letterboxd-top-250-narrative-feature-films",
             "kind": "curatedList",
             "parameters": {}
           },
@@ -1204,11 +1288,11 @@
               },
               "id": "6D8E5F29-8745-5BB4-8FE4-5EA2604F5D42",
               "query": {
-                "identifier": "snoak|top-250-narrative-feature-films-letterboxd-official",
+                "identifier": "onuryasar|letterboxd-top-250-narrative-feature-films",
                 "kind": "curatedList",
                 "parameters": {}
               },
-              "title": "Top 250 Narrative Feature Films (Letterboxd Official)"
+              "title": "Letterboxd Top 250 Narrative Feature Films"
             }
           ],
           "tileShape": "poster",
@@ -1217,7 +1301,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/romance-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1235,12 +1319,14 @@
           "query": {
             "identifier": "snoak|popular-romance-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "128262"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1257,13 +1343,15 @@
               "query": {
                 "identifier": "snoak|popular-romance-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128262"
+                }
               },
               "title": "Popular Romance Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1280,7 +1368,9 @@
               "query": {
                 "identifier": "snoak|popular-romance-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "128265"
+                }
               },
               "title": "Popular Romance Shows"
             }
@@ -1291,7 +1381,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/scifi-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1307,14 +1397,16 @@
           "hidesTitle": true,
           "id": "527A5C05-7C1B-49F3-B801-DF703F6C3041",
           "query": {
-            "identifier": "snoak|popular-sci-fi-movies",
+            "identifier": "snoak|science-fiction-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91220"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1329,15 +1421,17 @@
               },
               "id": "8FD91782-AE41-59D5-87D5-57B04C8C50E7",
               "query": {
-                "identifier": "snoak|popular-sci-fi-movies",
+                "identifier": "snoak|science-fiction-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91220"
+                }
               },
               "title": "Popular Sci-Fi Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1352,9 +1446,11 @@
               },
               "id": "965623A4-F81C-5522-8340-C665924AA6EC",
               "query": {
-                "identifier": "snoak|popular-sci-fi-shows",
+                "identifier": "snoak|science-fiction-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91221"
+                }
               },
               "title": "Popular Sci-Fi Shows"
             }
@@ -1365,7 +1461,7 @@
         {
           "coverImageURL": "https://raw.githubusercontent.com/itsrenoria/fusion-starter-kit/refs/heads/main/resources/widgets/genres/poster/dangeruex23/thriller-poster.jpg",
           "dataSource": {
-            "identifier": "trakt-public",
+            "identifier": "mdblist-public",
             "kind": "trackingService",
             "parameters": {}
           },
@@ -1381,14 +1477,16 @@
           "hidesTitle": true,
           "id": "54238770-FDC3-419A-AA45-3AF78C082B1E",
           "query": {
-            "identifier": "snoak|popular-thriller-movies",
+            "identifier": "snoak|thriller-movies",
             "kind": "curatedList",
-            "parameters": {}
+            "parameters": {
+              "listID": "91893"
+            }
           },
           "sources": [
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1403,15 +1501,17 @@
               },
               "id": "1B22E830-32CA-51B9-BEAF-500A9B1EEEAB",
               "query": {
-                "identifier": "snoak|popular-thriller-movies",
+                "identifier": "snoak|thriller-movies",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91893"
+                }
               },
               "title": "Popular Thriller Movies"
             },
             {
               "dataSource": {
-                "identifier": "trakt-public",
+                "identifier": "mdblist-public",
                 "kind": "trackingService",
                 "parameters": {}
               },
@@ -1426,9 +1526,11 @@
               },
               "id": "5724491F-3287-5C9E-A8F9-6199CABF96C8",
               "query": {
-                "identifier": "snoak|popular-thriller-shows",
+                "identifier": "snoak|thriller-shows",
                 "kind": "curatedList",
-                "parameters": {}
+                "parameters": {
+                  "listID": "91894"
+                }
               },
               "title": "Popular Thriller Shows"
             }

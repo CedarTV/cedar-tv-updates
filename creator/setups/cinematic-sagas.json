@@ -248,14 +248,12 @@
           "id": "folder-4",
           "title": "Alien & Predator Universe",
           "query": {
-            "kind": "curatedList",
-            "identifier": "exoduso|101434",
-            "parameters": {
-              "listID": "101434"
-            }
+            "kind": "metadataCollection",
+            "identifier": "8091",
+            "parameters": {}
           },
           "filters": {
-            "contentType": "both",
+            "contentType": "movies",
             "genreIDs": [],
             "originalLanguageCodes": [],
             "countryCodes": [],
@@ -264,26 +262,22 @@
             "productionCompanyIDs": []
           },
           "dataSource": {
-            "kind": "trackingService",
-            "identifier": "mdblist-public",
+            "kind": "preferredMetadata",
             "parameters": {}
           },
           "sources": [
             {
               "dataSource": {
-                "kind": "trackingService",
-                "identifier": "mdblist-public",
+                "kind": "preferredMetadata",
                 "parameters": {}
               },
               "query": {
-                "kind": "curatedList",
-                "identifier": "exoduso|101434",
-                "parameters": {
-                  "listID": "101434"
-                }
+                "kind": "metadataCollection",
+                "identifier": "8091",
+                "parameters": {}
               },
               "filters": {
-                "contentType": "both",
+                "contentType": "movies",
                 "genreIDs": [],
                 "originalLanguageCodes": [],
                 "countryCodes": [],
@@ -292,7 +286,51 @@
                 "productionCompanyIDs": []
               },
               "id": "source-1",
-              "title": "Alien vs Predator Timeline"
+              "title": "Alien Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "399",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1-2",
+              "title": "Predator Collection"
+            },
+            {
+              "dataSource": {
+                "kind": "preferredMetadata",
+                "parameters": {}
+              },
+              "query": {
+                "kind": "metadataCollection",
+                "identifier": "115762",
+                "parameters": {}
+              },
+              "filters": {
+                "contentType": "movies",
+                "genreIDs": [],
+                "originalLanguageCodes": [],
+                "countryCodes": [],
+                "streamingProviderIDs": [],
+                "networkIDs": [],
+                "productionCompanyIDs": []
+              },
+              "id": "source-1-3",
+              "title": "AVP Collection"
             }
           ],
           "coverImageURL": "https://image.tmdb.org/t/p/original/6X42JnSMdo3dPAswOHUuvebdTq7.jpg",
