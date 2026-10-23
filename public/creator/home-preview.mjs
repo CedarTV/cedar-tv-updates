@@ -150,8 +150,8 @@ export function renderHome(out,{blocks,device,deviceName,entry,parentTitle},on){
   return false;
  }
  for(const block of blocks){
-  const box=el('div',`preview-block${block.selected?' selected':''}`);box.dataset.id=block.id;
-  if(block.label){const label=el('div','preview-block-label');label.append(el('span','',block.label),button('Edit',()=>on.select(block.id)));box.append(label);}
+  const box=el('div',`preview-block${block.selected?' selected':''}${block.preview?' previewing':''}`);box.dataset.id=block.id;
+  if(block.label){const label=el('div','preview-block-label');label.append(el('span','',block.label));if(!block.preview)label.append(button('Edit',()=>on.select(block.id)));box.append(label);}
   if(block.branches===null)box.append(el('p','empty',`Loading ${block.title}…`));
   else if(block.branches instanceof Error)box.append(el('p','empty',block.branches.message));
   else{
@@ -161,9 +161,72 @@ export function renderHome(out,{blocks,device,deviceName,entry,parentTitle},on){
   }
   out.append(box);
  }
- if(!out.children.length)out.append(el('p','empty','Your Home starts here. Add a setup from Setups, import a collection, or add a Branch.'));
+ if(!out.children.length)out.append(el('p','empty','Your Home starts here. Add a setup from the library, import a collection, or build a Branch.'));
  return true;
 }
 
 /** One Branch as it would sit on Home, for the Branch builder's Layout preview. */
 export function renderBranchPreview(out,branch){out.replaceChildren(homeRow(branch,null,null));}
+
+// MARK: Hero and the other preview screens
+
+const heroFacts={mediaType:'Movie',genre:'Science Fiction',releaseDate:'2026',ageRating:'PG-13'};
+/**
+ * The hero as Cedar draws it at the top of Home, in its style, with the details it's set to show.
+ * hero: {style, fields, limit, source, art: [url], badges: [url]} or null when each viewer keeps
+ * their own hero. `edit()` opens the hero's settings.
+ */
+export function renderHeroPreview(hero,edit){
+ if(!hero){const kept=button('',edit,'hero-kept');kept.append(el('strong','','Hero'),el('span','','Each viewer keeps the hero they already have. Give this Home its own'));return kept;}
+ const box=button('',edit,`preview-hero hero-${hero.style}`);box.setAttribute('aria-label','Edit the hero');
+ const art=hero.art[0];if(art)box.append(image(art,'preview-hero-art'));else box.classList.add('no-art');
+ const copy=el('span','preview-hero-copy'),f=new Set(hero.fields);
+ copy.append(el('small','preview-hero-kicker',hero.source),el('strong','preview-hero-title','Featured title'));
+ const facts=['mediaType','genre','releaseDate','ageRating'].filter(k=>f.has(k)).map(k=>heroFacts[k]);
+ if(facts.length||f.has('ratings')){const line=el('span','preview-hero-facts',facts.join(' · '));if(f.has('ratings'))line.append(el('span','preview-hero-rating','★ 7.8'));copy.append(line);}
+ if(f.has('description'))copy.append(el('span','preview-hero-description','A short description of the title sits here, the way Cedar shows it.'));
+ if(hero.badges.length){const badges=el('span','preview-hero-badges');for(const u of hero.badges.slice(0,3))badges.append(image(u,''));copy.append(badges);}
+ const actions=el('span','preview-hero-actions');actions.append(el('span','','▶ Play'),el('span','','More'));copy.append(actions);
+ box.append(copy,el('span','preview-hero-edit','✎ Edit hero'));
+ const dots=el('span','preview-hero-dots');for(let i=0;i<Math.min(hero.limit,10);i++)dots.append(el('i',i===0?'on':''));box.append(dots);
+ return box;
+}
+
+const sampleSources=[
+ ['Best match','Movie.2026.2160p.UHD.BluRay.REMUX.DV.HDR10Plus.TrueHD.Atmos.7.1',5],
+ ['Smaller file','Movie.2026.2160p.WEB-DL.DV.HDR10Plus.DDP5.1.Atmos',4],
+ ['Fastest start','Movie.2026.1080p.BluRay.REMUX.TrueHD.Atmos',2],
+];
+/** A title page's sources with the chosen badges: where Cedar shows them. */
+export function renderTitlePage(out,{art,badges,badgeName,chooseBadges}){
+ out.replaceChildren();const page=el('div','preview-title-page');
+ if(art)page.append(image(art,'preview-title-art'));
+ const body=el('div','preview-title-body');body.append(el('p','eyebrow-dark','Title page · Sources'),el('h2','','Choose a source'));
+ if(!badges.length){body.append(el('p','',`No source badges yet. Pick a set to see how Cedar marks each source.`),button('Choose source badges',chooseBadges,'button'));}
+ else{body.append(el('p','',`${badgeName||'Your badges'}, matched to each source’s name.`));const list=el('div','preview-sources');
+  // The sample badges are 4K, Remux, Dolby Vision, HDR10+ and Atmos; each source gets what its name says.
+  const picks=[[0,1,2,3,4],[0,2,3,4],[1,4]];
+  sampleSources.forEach(([name,file],i)=>{const row=el('div','preview-source'),text=el('span');text.append(el('strong','',name),el('small','',file));const marks=el('span','preview-source-badges');for(const n of picks[i])if(badges[n])marks.append(image(badges[n],''));row.append(text,marks);list.append(row);});
+  body.append(list);}
+ page.append(body);out.append(page);
+}
+
+/** Who's watching, with the profile photo the file brings. */
+export function renderWhoIsWatching(out,{avatar,name,choosePhoto}){
+ out.replaceChildren();const page=el('div','preview-who');page.append(el('h2','','Who’s watching?'));
+ const people=el('div','preview-people'),me=el('span','preview-person you');
+ if(avatar)me.append(image(avatar,''));else me.append(el('span','preview-person-empty','?'));me.append(el('span','','You'));
+ const add=el('span','preview-person');add.append(el('span','preview-person-empty','+'),el('span','','Add profile'));
+ people.append(me,add);page.append(people);
+ if(avatar)page.append(el('p','',name||'Your profile photo'));else page.append(button('Choose a profile photo',choosePhoto,'button'));
+ out.append(page);
+}
+
+/** Rows scroll sideways; arrows page them for people without a trackpad. */
+export function addRailArrows(root){
+ for(const rail of root.querySelectorAll('.group-rail,.sample-rail:not(.poster-grid)')){
+  if(rail.parentElement?.classList.contains('rail-frame'))continue;
+  const frame=el('div','rail-frame');rail.replaceWith(frame);frame.append(rail);
+  for(const [cls,dir,label] of [['left',-1,'Scroll left'],['right',1,'Scroll right']]){const b=button(dir<0?'‹':'›',()=>rail.scrollBy({left:dir*rail.clientWidth*.8,behavior:'smooth'}),`rail-arrow ${cls}`);b.setAttribute('aria-label',label);b.tabIndex=-1;frame.append(b);}
+ }
+}
