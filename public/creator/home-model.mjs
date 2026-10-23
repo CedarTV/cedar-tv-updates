@@ -79,7 +79,7 @@ export function groupCardShape(row){return row.branches[0]?.tileShape||'landscap
 export function setGroupCardShape(row,shape){if(!cardShapes.includes(shape))throw Error('Unknown card shape.');for(const b of row.branches){if(shape==='landscape')delete b.tileShape;else b.tileShape=shape;}}
 export const presets=[{title:'Trending movies',kind:'TRENDING',media:'movie'},{title:'Trending TV shows',kind:'TRENDING',media:'tv'},{title:'Popular movies',kind:'POPULAR',media:'movie'},{title:'Top rated movies',kind:'TOP_RATED',media:'movie'},{title:'Science fiction',kind:'DISCOVER',media:'movie',genre:'878'},{title:'Documentaries',kind:'DISCOVER',media:'movie',genre:'99'},{title:'Family movies',kind:'DISCOVER',media:'movie',genre:'10751'}];
 export function newDraft(){return {version:2,title:'My Home',rows:[makeBranch('Trending movies'),makeBranch('Popular movies','POPULAR'),makeBranch('Top rated movies','TOP_RATED')]};}
-function cleanChild(v){if(!obj(v)||!Array.isArray(v.sources)||v.sources.length>1000)throw Error('Invalid branch sources.');const b={id:text(v.id,uid()),title:name(v.title,'Untitled branch'),enabled:v.enabled!==false,sources:v.sources.map(sanitizeSource)};for(const k of ['coverImageUrl','customCoverImageUrl','heroBackdropUrl','focusGifUrl','titleLogoUrl']){const u=safeArtworkURL(v[k]);if(u)b[k]=u;}if(typeof v.focusGifEnabled==='boolean')b.focusGifEnabled=v.focusGifEnabled;if(['landscape','poster','square'].includes(String(v.tileShape).toLowerCase()))b.tileShape=v.tileShape.toLowerCase();return b;}
+function cleanChild(v){if(!obj(v)||!Array.isArray(v.sources)||v.sources.length>1000)throw Error('Invalid branch sources.');const b={id:text(v.id,uid()),title:name(v.title,'Untitled branch'),enabled:v.enabled!==false,sources:v.sources.map(sanitizeSource)};for(const k of ['coverImageUrl','customCoverImageUrl','heroBackdropUrl','focusGifUrl','titleLogoUrl']){const u=safeArtworkURL(v[k]);if(u)b[k]=u;}if(typeof v.focusGifEnabled==='boolean')b.focusGifEnabled=v.focusGifEnabled;if(v.hidesTitle===true)b.hidesTitle=true;if(['landscape','poster','square'].includes(String(v.tileShape).toLowerCase()))b.tileShape=v.tileShape.toLowerCase();return b;}
 /** A setup or one of its groups from the Creator catalog. Its Branches are exported exactly as published. */
 function cleanPick(v){if(!obj(v)||!['setup','group'].includes(v.type)||!isItemID(v.id)||(v.type==='group')!==v.id.includes('.'))throw Error('Invalid Creator pick.');return {type:v.type,id:v.id};}
 export function makePick(item,title){return {id:`pick.${item.id}`,kind:'pick',title:name(title,'Creator setup'),enabled:true,item:cleanPick(item)};}
@@ -95,6 +95,78 @@ export function validateDraft(v){
 }
 const builtin={trending_movies:'TRENDING',trending_series:'TRENDING',trending_shows:'TRENDING',popular_movies:'POPULAR',popular_series:'POPULAR',popular_shows:'POPULAR',top_rated_movies:'TOP_RATED',toprated_movies:'TOP_RATED',top_rated_series:'TOP_RATED',top_rated_shows:'TOP_RATED',toprated_series:'TOP_RATED',toprated_shows:'TOP_RATED',upcoming_movies:'UPCOMING',now_playing_movies:'NOW_PLAYING',nowplaying_movies:'NOW_PLAYING',airing_today_series:'AIRING_TODAY',airing_today_shows:'AIRING_TODAY',on_the_air_series:'ON_THE_AIR',on_the_air_shows:'ON_THE_AIR'};
 function resolveCatalog(ref,config){const id=ref.catalogId||'',type=ref.type||(/series|shows/.test(id)?'series':'movie'),label=config.catalog_name_overrides?.[id]||config.custom_lists?.find(l=>l.id===id)?.label||id.replaceAll('_',' ');const common={id:`catalog:${id}`,title:label,mediaType:type};const discover=config.discover_catalogs?.[id];if(discover)return {...common,provider:'tmdb',tmdbSourceType:'DISCOVER',filters:discover.filters,sortBy:discover.sort_by};if(builtin[id])return {...common,provider:'tmdb',tmdbSourceType:builtin[id]};const list=config.custom_lists?.find(l=>l.id===id);if(list){const n=Number(id.match(/^(?:tmdb|trakt)_list_(\d+)/)?.[1]);return {...common,provider:list.provider,mediaType:list.kind||type,...(list.provider==='tmdb'?{tmdbSourceType:'LIST',tmdbId:n}:{traktListId:n})};}return {...ref,title:label,provider:ref.provider||'addon'};}
+// Home shelf exports: an array of rows shaped {title, style, isEnabled, sortOrder, source:{<kind>:{_0:…}}}.
+// A `group` row holds its folders in `contentSources`, each with its own art and list of sources.
+const one=v=>obj(v)&&Object.keys(v).length===1?Object.keys(v)[0]:'';
+const payload=v=>obj(v?._0)?v._0:obj(v)?v:{};
+const isShelfExport=data=>Array.isArray(data)&&data.length>0&&data.every(r=>obj(r)&&obj(r.source)&&!Array.isArray(r.folders))&&data.some(r=>typeof r.style==='string'&&one(r.source));
+const idList=v=>Array.isArray(v)?v.filter(positive).join(','):'';
+const shelfShape=v=>v==='poster'?'poster':v==='square'?'square':undefined;
+const shelfRowStyle=v=>/wide|landscape|backdrop/i.test(v||'')?'wide':/feature|hero|spotlight/i.test(v||'')?'feature':undefined;
+const shelfContent=v=>['movie','movies'].includes(v)?'movies':['tv','show','shows','series'].includes(v)?'shows':'both';
+const built=(title,dataSource,query,contentType='both')=>({title,provider:'cedar',cedar:{dataSource,query,filters:{contentType}}});
+const shelfFeeds={trending:'trending',popular:'popular',top_rated:'topRated',upcoming:'upcoming',now_playing:'nowPlaying',airing_today:'airingToday',on_the_air:'onTheAir'};
+/** MDBList serves anonymous lists by owner and slug, and its slugs are made from the list's name. */
+export const mdbListSlug=name=>String(name||'').toLowerCase().replace(/['’]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+/** One shelf source as a Creator source, or a note when Cedar has nothing like it. */
+function shelfSource(entry,folderTitle,notes){
+ const kind=one(entry),p=payload(entry[kind]);
+ if(kind==='tmdbDiscover'){
+  const filters={};for(const [from,to] of [['genres','withGenres'],['keywords','withKeywords'],['companies','withCompanies'],['networks','withNetworks']]){const v=idList(p[from]);if(v)filters[to]=v;}
+  if(typeof p.originalLanguage==='string'&&p.originalLanguage)filters.withOriginalLanguage=p.originalLanguage;
+  for(const k of ['releaseDateGte','releaseDateLte'])if(typeof p[k]==='string')filters[k]=p[k];
+  if(positive(p.year))filters.year=p.year;if(Number.isSafeInteger(p.voteCountGte))filters.voteCountGte=p.voteCountGte;if(typeof p.voteAverageGte==='number'&&p.voteAverageGte>0)filters.voteAverageGte=p.voteAverageGte;
+  if(idList(p.excludeGenres)||idList(p.excludeKeywords))notes.excluded++;
+  return {title:p.name,provider:'tmdb',tmdbSourceType:'DISCOVER',mediaType:media(p.mediaType),sortBy:p.sortBy,filters};
+ }
+ if(kind==='tmdbList')return {title:p.listName,provider:'tmdb',tmdbSourceType:'LIST',tmdbId:Number(p.listId),mediaType:media(p.mediaType)};
+ if(kind==='tmdbCollection')return {title:p.name,provider:'tmdb',tmdbSourceType:'COLLECTION',tmdbId:Number(p.collectionId)};
+ if(kind==='traktList'){
+  const user=text(p.username),slug=text(p.listSlug);
+  if(user&&slug&&!/^\d+$/.test(slug))return built(p.listName,{kind:'trackingService',identifier:'trakt-public',parameters:{}},{kind:'curatedList',identifier:`${user}|${slug}`,parameters:{}});
+  // A list without its owner is read by ID, one media type at a time; the folder's name says which.
+  return {title:p.listName,provider:'trakt',traktListId:Number(p.listId),mediaType:/series|shows?\b|\btv\b/i.test(folderTitle)?'tv':'movie'};
+ }
+ if(kind==='mdbListList'){
+  const owner=text(p.username).toLowerCase(),slug=mdbListSlug(p.listName),listID=positive(p.listId)?String(p.listId):'';
+  if(!owner||!slug)return {title:p.listName,provider:'mdblist'};
+  notes.mdbList++;
+  return built(p.listName,{kind:'trackingService',identifier:'mdblist-public',parameters:{}},{kind:'curatedList',identifier:`${owner}|${slug}`,parameters:listID?{listID}:{}},shelfContent(p.mediatype));
+ }
+ if(kind==='continueWatching')return built('Continue Watching',{kind:'local',parameters:{}},{kind:'continueWatching',parameters:{}});
+ if(/watchlist$/i.test(kind))return built('Watchlist',{kind:'trackingService',parameters:{}},{kind:'watchlist',parameters:{}});
+ if(kind==='tmdbCatalog'){
+  const m=/^tmdb_(trending|popular|top_rated|upcoming|now_playing|airing_today|on_the_air)_(movies?|shows?|tv|series)(?:_(day|week))?$/.exec(typeof entry[kind]?._0==='string'?entry[kind]._0:'');
+  if(m)return built('',{kind:'preferredMetadata',parameters:{}},{kind:shelfFeeds[m[1]],parameters:m[1]==='trending'?{window:m[3]||'week'}:{}},shelfContent(m[2]));
+ }
+ return {title:kind||'Unknown source',provider:kind||'unknown'};
+}
+function parseShelves(data){
+ const rows=[],notes={excluded:0,mdbList:0},rowIDs=new Set();
+ const shelves=data.map((r,i)=>({r,i})).sort((a,b)=>(Number.isFinite(a.r.sortOrder)?a.r.sortOrder:a.i)-(Number.isFinite(b.r.sortOrder)?b.r.sortOrder:b.i)).map(x=>x.r);
+ for(const shelf of shelves){
+  const kind=one(shelf.source),title=name(shelf.title,'Imported branch');let id=text(shelf.id,uid());if(rowIDs.has(id))id=uid();rowIDs.add(id);
+  if(kind==='group'){
+   const group=payload(shelf.source.group),g={...makeGroup(name(shelf.title||group.title,'Imported group')),id,enabled:shelf.isEnabled!==false},childIDs=new Set();
+   g.branches=(Array.isArray(group.contentSources)?group.contentSources:[]).filter(obj).map(c=>{
+    const b={id:text(c.id,uid()),title:name(c.title,'Untitled branch'),enabled:c.enabled!==false,sources:(Array.isArray(c.sources)?c.sources:[]).filter(obj).map((s,i)=>({id:`${one(s)||'source'}.${i}`,...shelfSource(s,c.title||'',notes)}))};
+    if(childIDs.has(b.id))b.id=uid();childIDs.add(b.id);
+    const cover=safeArtworkURL(c.coverImageURL),backdrop=safeArtworkURL(c.backgroundImageURL),shape=shelfShape(c.tileShape??group.tileShape);
+    if(cover)b.coverImageUrl=cover;if(backdrop)b.heroBackdropUrl=backdrop;if(shape)b.tileShape=shape;if(c.hideTitle===true&&cover)b.hidesTitle=true;
+    return b;});
+   rows.push(g);
+  }else{
+   const s=shelfSource(shelf.source,title,notes),row={id,kind:'branch',title,enabled:shelf.isEnabled!==false,source:{id:`${kind||'source'}.0`,...s,title:s.title||title}},style=shelfRowStyle(shelf.style);
+   if(style)row.rowStyle=style;rows.push(row);
+  }
+ }
+ const draft=validateDraft({version:2,title:'Imported Home',rows}),issues=sourceIssues(draft);
+ if(notes.excluded)issues.push(`${notes.excluded} discover ${notes.excluded===1?'source excludes':'sources exclude'} genres or keywords. Cedar doesn’t filter by exclusion, so those titles can appear.`);
+ if(notes.mdbList)issues.push(`${notes.mdbList} MDBList ${notes.mdbList===1?'list is':'lists are'} matched by name. If one shows nothing in Cedar, paste its MDBList link into that Branch.`);
+ return {draft,issues,format:'Home shelf export',ties:[]};
+}
+/** Why each imported source can't be exported yet. */
+function sourceIssues(draft){const issues=[];for(const r of draft.rows){if(r.kind==='pick')continue;const pairs=r.kind==='branch'?[[r.title,r.source,true]]:r.branches.flatMap(b=>b.sources.map(s=>[`${r.title} / ${b.title}`,s,false]));for(const [path,s,direct] of pairs){const problem=sourceProblem(s,direct);if(problem)issues.push(`${path} / ${s.title}: ${problem}`);}if(r.kind==='group'&&r.branches.some(b=>b.sources.length===0))issues.push(`${r.title}: branches without sources cannot be exported.`);}return issues;}
 export function parseImport(input){
  const serialized=typeof input==='string'?input:JSON.stringify(input);if(new TextEncoder().encode(serialized).length>MAX_BYTES)throw Error('Choose a JSON file smaller than 10 MB.');
  let data;try{data=typeof input==='string'?JSON.parse(input):input;}catch{throw Error('This is not valid JSON. Your current Home has not changed.');}
@@ -103,14 +175,15 @@ export function parseImport(input){
   const g=makeGroup(name(data.title,'Imported group'));g.id=text(data.id,uid());g.deviceLayout=validateDeviceLayout(data.deviceLayout||newDeviceLayout());g.branches=data.folders.map(f=>({id:text(f.id,uid()),title:name(f.title,'Untitled branch'),enabled:f.enabled!==false,sources:[sanitizeSource({title:f.title,provider:'tmdb',tmdbSourceType:f.kind,mediaType:f.media,tmdbId:f.tmdbID,filters:f.genre?{withGenres:f.genre}:{}})]}));return {draft:validateDraft({version:2,title:'My Home',rows:[g]}),issues:[],format:'Earlier saved draft'};
  }
  if(data?.formatIdentifier==='app.cedar.home-branches'||data?.formatIdentifier==='app.cedar.bundle')throw Error('This is already a Cedar file. Open it in Cedar. To keep editing here, open a saved Creator draft instead.');
+ if(isShelfExport(data))return parseShelves(data);
  const config=obj(data?.config)?data.config:obj(data)?data:{};const collections=Array.isArray(data)?data:Array.isArray(config.collections)?config.collections:obj(data)&&Array.isArray(data.folders)?[data]:[];
- if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose collection JSON, a Nuvio profile export, or a saved Creator draft.');
+ if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose collection JSON, a Nuvio profile export, a Home shelf export, or a saved Creator draft.');
  const rows=[],issues=[];const rowIDs=new Set();const byExternal=new Map();
  for(const c of collections){if(!obj(c)||!Array.isArray(c.folders))throw Error('A collection has no branch list.');const g=makeGroup(name(c.title,'Imported group'));g.id=text(c.id,uid());if(rowIDs.has(g.id)){issues.push(`Duplicate group ID in ${g.title}; a fresh ID was assigned.`);g.id=uid();}rowIDs.add(g.id);g.deviceLayout=validateDeviceLayout(c.cedarLayout||newDeviceLayout());const childIDs=new Set();g.branches=c.folders.map(f=>{const sources=Array.isArray(f.sources)?f.sources:Array.isArray(f.catalogSources)?f.catalogSources.map(s=>resolveCatalog(s,config)):[];const b=cleanChild({...f,sources});if(childIDs.has(b.id))b.id=uid();childIDs.add(b.id);return b;});rows.push(g);byExternal.set(`collection:${c.id}`,g);}
  for(const h of config.home_rows||[]){const refs=collections.flatMap(c=>c.folders||[]).flatMap(f=>f.catalogSources||[]);const ref=refs.find(s=>s.catalogId===h.catalog_id)||{catalogId:h.catalog_id};const s=sanitizeSource(resolveCatalog(ref,config));const b={id:uid(),kind:'branch',title:name(config.catalog_name_overrides?.[h.catalog_id]||s.title,'Imported branch'),enabled:h.enabled!==false,source:s};rows.push(b);byExternal.set(`catalog:${h.catalog_id}`,b);}
  const ordered=[];for(const entry of config.home_order||[]){const row=byExternal.get(`${entry.kind}:${entry.id}`);if(row&&!ordered.includes(row))ordered.push(row);}for(const row of rows)if(!ordered.includes(row))ordered.push(row);
  const draft=validateDraft({version:2,title:'Imported Home',rows:ordered});
- for(const r of draft.rows){const pairs=r.kind==='branch'?[[r.title,r.source,true]]:r.branches.flatMap(b=>b.sources.map(s=>[`${r.title} / ${b.title}`,s,false]));for(const [path,s,direct] of pairs){const problem=sourceProblem(s,direct);if(problem)issues.push(`${path} / ${s.title}: ${problem}`);}if(r.kind==='group'&&r.branches.some(b=>b.sources.length===0))issues.push(`${r.title}: branches without sources cannot be exported.`);}
+ issues.push(...sourceIssues(draft));
  return {draft,issues,format:data?.config?'Nuvio profile export':'Collection JSON',ties:findTobaccoTies(data)};
 }
 export function mergeImport(current,incoming,mode='append',selectedIDs=incoming.rows.map(r=>r.id)){
@@ -171,7 +244,7 @@ function cedarBranches(draft,bundleID,tieFor=()=>null,items={}){
   if(row.kind==='group'){
    const folders=[];for(const b of row.branches){if(!b.enabled)continue;const sources=[];for(const s of b.sources){if(!s.enabled)continue;const c=convert(s,false);if(c.problem){issues.push(`${row.title} / ${b.title} / ${s.title}: ${c.problem}`);continue;}sources.push({id:s.id,title:s.title,...c});}
     if(!sources.length){issues.push(`${row.title} / ${b.title}: no compatible enabled sources.`);continue;}
-    const folder={id:b.id,title:b.title,dataSource:sources[0].dataSource,query:sources[0].query,filters:sources[0].filters,sources,tileShape:b.tileShape||'landscape',hidesTitle:false};const cover=b.customCoverImageUrl||b.coverImageUrl;if(cover)folder.coverImageURL=cover;if(b.heroBackdropUrl)folder.heroBackdropURL=b.heroBackdropUrl;if(b.focusGifEnabled&&b.focusGifUrl)folder.focusedCoverImageURL=b.focusGifUrl;if(b.titleLogoUrl)folder.titleLogoURL=b.titleLogoUrl;folders.push(folder);}
+    const folder={id:b.id,title:b.title,dataSource:sources[0].dataSource,query:sources[0].query,filters:sources[0].filters,sources,tileShape:b.tileShape||'landscape',hidesTitle:b.hidesTitle===true};const cover=b.customCoverImageUrl||b.coverImageUrl;if(cover)folder.coverImageURL=cover;if(b.heroBackdropUrl)folder.heroBackdropURL=b.heroBackdropUrl;if(b.focusGifEnabled&&b.focusGifUrl)folder.focusedCoverImageURL=b.focusGifUrl;if(b.titleLogoUrl)folder.titleLogoURL=b.titleLogoUrl;folders.push(folder);}
    if(!folders.length){issues.push(`${row.title}: no compatible enabled branches.`);continue;}
    const platforms=platformConfiguration(row);if(platforms===false){issues.push(`${row.title}: turned off on every device.`);continue;}
    const shared=row.deviceLayout.shared,base={dataSource:{kind:'custom',identifier:'cedar.branch-group',parameters:{'cedar.home.displaysFolderCards':'true','cedar.home.folderRole':'folder','cedar.home.leafBrowseLayout':shared.browseLayout}},query:{kind:'custom',identifier:'cedar.branch-group',parameters:{}},filters:empty(groupContent(folders.flatMap(f=>f.sources)))};
