@@ -21,7 +21,7 @@
       },
       "folderOptions": [
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzRhamUxby53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/cfd029f7d9274a509b0b.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -99,7 +99,7 @@
           "title": "Latest horror movies"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzQ5bzh3ai53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/cae9d22d5cdd25f0b63f.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -179,7 +179,7 @@
           "title": "Latest horror shows"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3luMjF0MS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/2e6fb2c40062c65df7bd.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -230,7 +230,7 @@
           "title": "Popular horror Movies"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzd1d2xuYS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/721b739a91262240c4fb.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -281,7 +281,7 @@
           "title": "Popular Horror Shows"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3llcTk4My53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/a04e75e27ced6bcfdc3d.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -361,7 +361,7 @@
           "title": "Best Horror Movies"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2txeGJ1Zy53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/643238c9f8d755d76b4f.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -457,7 +457,7 @@
       },
       "folderOptions": [
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2sycTF3Yy53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/0845b7589b3a2ba04bc3.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -508,7 +508,7 @@
           "title": "Psychological"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzBzNmI3Mi53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/656400b49a359499d079.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -559,7 +559,7 @@
           "title": "Supernatural"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2U4aHBvdy5qcGVn",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/211f24c790116983e22f.jpg",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -637,7 +637,7 @@
           "title": "Found footage"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2RudmJobC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/6ef3378dc1a7321325a2.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -715,7 +715,7 @@
           "title": "Slasher"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3kwM215ci53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/4a9df7fa2052f7c648d5.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -766,7 +766,7 @@
           "title": "Disturbing Films"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3h6aXdscC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/8fbd95041d4f5f3701ba.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -844,7 +844,7 @@
           "title": "Zombies & Living Dead"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2J0cHMyMS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/d5aef78c836152c2ccac.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -895,7 +895,7 @@
           "title": "Horror Classics"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzIzbXoyZS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/a7e14ce25418c33e4c86.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -946,7 +946,7 @@
           "title": "Cult"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2t4cHA3My53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/8068b3c8cc797118f41e.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -1026,7 +1026,7 @@
           "title": "Comedy"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzIwOTVnei53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/b8aa01e1ea6c9e509644.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -1077,7 +1077,7 @@
           "title": "Haunted houses"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2RzaHZvby53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/1a5213ac4115145ef30e.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -1132,7 +1132,7 @@
           "title": "MindFuck"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3Q4ZTQwcS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/32c4638a87657dab4da5.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -1212,7 +1212,7 @@
           "title": "Halloween"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL20wdzhuci53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/5be3adacace8407ac88f.webp",
           "dataSource": {
             "kind": "preferredMetadata",
             "parameters": {}
@@ -1308,7 +1308,7 @@
       },
       "folderOptions": [
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3c2ZHBjcC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/a3ea202dae2fcff257e4.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -1385,7 +1385,7 @@
           "title": "A24"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3djZ2NheC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/ac143f7feb27fc2ca124.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -1486,7 +1486,7 @@
           "title": "Netflix"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL20wZHhmMS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/6c016d1767ab709bb7af.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -1587,7 +1587,7 @@
           "title": "HBO"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2swam0yZi53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/c37dfca71c8a89af220a.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -1642,7 +1642,7 @@
           "title": "Tubi"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzV1OG03cC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/517ba277abc77f46b801.webp",
           "dataSource": {
             "kind": "preferredMetadata",
             "parameters": {}
@@ -1699,7 +1699,7 @@
           "title": "Shudder"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2xpaDJrdi53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/08603162c410eb05c414.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -1779,7 +1779,7 @@
           "title": "FX horror"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL21vd3BpaS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/a709fce9530e6c83a274.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -1859,7 +1859,7 @@
           "title": "Screambox"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzkzeDRtaC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/8e60e62dfa1929d3b646.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -1910,7 +1910,7 @@
           "title": "Blumhouse"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2NpNmNqci53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/ab7f019375b947032ff7.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -1961,7 +1961,7 @@
           "title": "Disney"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2N5ZDN3Mi53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/ee27e59cc52e5e1cde26.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -2062,7 +2062,7 @@
           "title": "20th Century Horror"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3J6bWNjMS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/71cacc79b240f4e75efe.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -2113,7 +2113,7 @@
           "title": "Neon"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzNndTNsYy53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/7a403b2dd7f69e6a8d6a.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -2205,7 +2205,7 @@
       },
       "folderOptions": [
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3R0dXJwMi53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/043dccf82d08fb655afc.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2260,7 +2260,7 @@
           "title": "1950s"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3IwaDg2ai53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/92a6ed699e38f3e34229.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2315,7 +2315,7 @@
           "title": "1960s"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3IyY3Vydy53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/7d05fb7818cbb96361ba.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2393,7 +2393,7 @@
           "title": "1970s"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2g0M3ZjNC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/95d6e5de937385587379.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2471,7 +2471,7 @@
           "title": "1980s"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3VuandqMy53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/ceaf92e624a5382b0e2b.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2526,7 +2526,7 @@
           "title": "1990s"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzZrNGt5by53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/38daef8e9a95c85e9743.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2581,7 +2581,7 @@
           "title": "2000s"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2hoY3RjaC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/289b8db09ae77249746c.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2659,7 +2659,7 @@
           "title": "2010"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzc4cm9nNS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/65c19f3adbf943ff6c3b.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2755,7 +2755,7 @@
       },
       "folderOptions": [
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL211ZTcydC5qcGVn",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/cd61070da92c39e4f419.jpg",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2811,7 +2811,7 @@
           "title": "Halloween"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzhheDh1Ny53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/bc33b7227fe99622b6c5.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2867,7 +2867,7 @@
           "title": "Friday the 13th"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3docDJibC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/d81a9ef9d483b2eb74aa.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2922,7 +2922,7 @@
           "title": "A Nightmare on elm street"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3A0Z2cwbC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/32188e48a56a1e739baf.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -2978,7 +2978,7 @@
           "title": "Scream"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzRsdWhnZS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/d6c9e37e1cfcf63c2bd0.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -3089,7 +3089,7 @@
           "title": "Conjuring"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3I5ZGsxeS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/48efc5836f9196b755ea.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -3141,7 +3141,7 @@
           "title": "Insidious"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzl0Mno2cC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/2f8f08f949c6e51ec832.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -3193,7 +3193,7 @@
           "title": "Paranormal Activity"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzZ5MHFtNS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/683307d2f741772a8159.webp",
           "dataSource": {
             "kind": "preferredMetadata",
             "parameters": {}
@@ -3244,7 +3244,7 @@
           "title": "Final Destination"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzBsMTMxZy53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/ab94f06014e0be2987b2.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -3300,7 +3300,7 @@
           "title": "Child’s Play"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3lrcDJ4MC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/aa43640e111f7e68e985.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -3356,7 +3356,7 @@
           "title": "Saw"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL29qMm1tZi53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/1940e2a8ae4d6c0dd734.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -3452,7 +3452,7 @@
       },
       "folderOptions": [
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzB3MHlpcC53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/5caf1727198fd0ea2b22.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -3553,7 +3553,7 @@
           "title": "Japanese"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzR2eXEwaS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/000edc8fa43b46123302.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -3629,7 +3629,7 @@
           "title": "Korean"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2s5dTh3NS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/bce083fcd52b5c7d83fc.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -3705,7 +3705,7 @@
           "title": "German"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL29wOXBobS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/06c435625734a3a448d2.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -3756,7 +3756,7 @@
           "title": "French"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3RvY3Bnby53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/e4bbabee39b7f3b7d9cc.webp",
           "dataSource": {
             "kind": "preferredMetadata",
             "parameters": {}
@@ -3815,7 +3815,7 @@
           "title": "Italian"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL2N2aTFjbS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/a57024f176977013d19b.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -3911,7 +3911,7 @@
       },
       "folderOptions": [
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzgwZWtrMi53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/eed339894e973e998823.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -3991,7 +3991,7 @@
           "title": "Short and Scary"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL3YzZjk3dy53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/fac34d8deb91b5efae04.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -4071,7 +4071,7 @@
           "title": "Mind Bending"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzFrNnF5OS53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/c7fcb73a508a57113538.webp",
           "dataSource": {
             "identifier": "mdblist-public",
             "kind": "trackingService",
@@ -4149,7 +4149,7 @@
           "title": "Not Scary"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lLzh2NzdzZi53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/342adfcc2e6fa5cbe47a.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",
@@ -4246,7 +4246,7 @@
           "title": "Gory"
         },
         {
-          "coverImageURL": "https://get-stranded.fabriceleven.com/img/remote/aHR0cHM6Ly9maWxlcy5jYXRib3gubW9lL215ajhnci53ZWJw",
+          "coverImageURL": "https://cedartv.github.io/cedar-tv-updates/creator/art/6470969474ecfa115f27.webp",
           "dataSource": {
             "identifier": "trakt-public",
             "kind": "trackingService",

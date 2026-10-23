@@ -52,6 +52,7 @@ function inspectStrings(value, path) {
       const url = new URL(child);
       if (url.username || url.password) fail(`${path}.${key} carries sign-in details`);
       if ([...url.searchParams.keys()].some(name => secretKeyPattern.test(name))) fail(`${path}.${key} carries a credential in its query`);
+      if (url.host === "get-stranded.fabriceleven.com") fail(`${path}.${key} loads through another app's image proxy; run node scripts/rehost_creator_art.mjs`);
     }
     inspectStrings(child, `${path}.${key}`);
   }
