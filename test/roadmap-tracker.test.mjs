@@ -16,7 +16,8 @@ const feedItem = (overrides = {}) => ({
 const feed = (items) => ({ schemaVersion: 1, updated: "2026-10-20", items });
 
 test("the Worker's roadmap feed matches the public schema", () => {
-  const item = (id, fields) => ({ id, ...normalizeItem(fields), created: "2026-10-20", updated: "2026-10-20", discordMessageID: "1" });
+  // Requests are counted from the reports behind an entry's tickets, not edited.
+  const item = (id, { requests = 0, ...fields }) => ({ id, ...normalizeItem(fields), requests, created: "2026-10-20", updated: "2026-10-20", discordMessageID: "1" });
   const feed = publicFeed([
     item("CDR-1", { kind: "feature", title: "Picture in picture", status: "shipped", public: true, platforms: ["apple-tv", "radio", "website"], summary: "x", description: "Longer public detail.", notes: "private", priority: "high", requests: 4, shippedIn: "1.0.0 (70)", releaseURL: "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/" }),
     item("CDR-2", { kind: "bug", title: "Guide freeze", status: "in-progress", public: true }),

@@ -1,7 +1,7 @@
-// Registers the "Track as bug/feature" message commands in the Cedar server, points the Discord
-// application's interactions endpoint at this Worker, and turns on the Message Content intent
-// the forum import needs to read posts. Prints only non-secret IDs, including the bug and
-// feature-request forum IDs for wrangler.toml.
+// Registers the "Track as bug/feature" message commands and the /tracker, /ticket and /roadmap
+// slash commands in the Cedar server, points the Discord application's interactions endpoint at
+// this Worker, and turns on the Message Content intent the forum import needs to read posts.
+// Prints only non-secret IDs, including the public and staff forum IDs for wrangler.toml.
 //
 //   DISCORD_BOT_TOKEN=… GUILD_ID=… node scripts/configure-discord.mjs --endpoint https://…/v1/discord/interactions
 //
@@ -36,11 +36,15 @@ console.log(`DISCORD_PUBLIC_KEY ${application.verify_key}`);
 console.log(`DISCORD_OWNER_ID ${guild.owner_id} (owner of ${guild.name})`);
 console.log(`Interactions endpoint now: ${application.interactions_endpoint_url ?? "none"}`);
 
-// Forum channels (type 15) named like "🐞│bugs" and "✨│feature-requests".
+// Forum channels (type 15) named like "🐞│bugs" and "✨│feature-requests", and the private
+// "🐞│staff-bugs" and "✨│staff-features" that hold one thread per ticket.
 const FORUM = 15;
 const channels = await discord("GET", `/guilds/${guildID}/channels`);
-const forum = (suffix) => channels.find((channel) => channel.type === FORUM && channel.name.endsWith(suffix));
-for (const [variable, suffix] of [["DISCORD_BUG_FORUM_ID", "bugs"], ["DISCORD_FEATURE_FORUM_ID", "feature-requests"]]) {
+const forum = (suffix) => channels.find((channel) => channel.type === FORUM && channel.name.split("│").at(-1) === suffix);
+for (const [variable, suffix] of [
+  ["DISCORD_BUG_FORUM_ID", "bugs"], ["DISCORD_FEATURE_FORUM_ID", "feature-requests"],
+  ["DISCORD_STAFF_BUG_FORUM_ID", "staff-bugs"], ["DISCORD_STAFF_FEATURE_FORUM_ID", "staff-features"],
+]) {
   const match = forum(suffix);
   console.log(match ? `${variable} ${match.id} (${match.name})` : `${variable}: no forum ending in “${suffix}” found`);
 }

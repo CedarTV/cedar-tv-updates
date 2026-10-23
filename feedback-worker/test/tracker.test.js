@@ -1,8 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { changesItem, itemFromSubmission, normalizeItem, publicFeed } from "../src/tracker.js";
+import { changesItem, followedStatus, normalizeItem, publicFeed } from "../src/tracker.js";
 
-const item = (id, fields, updated = "2026-10-01") => ({ id, ...normalizeItem(fields), created: updated, updated });
+const item = (id, { requests = 0, ...fields }, updated = "2026-10-01") => ({ id, ...normalizeItem(fields), requests, created: updated, updated });
 
 const items = () => [
   item("CDR-1", { kind: "feature", title: "Picture in picture", status: "planned", platforms: ["apple-tv", "iphone"], public: true, summary: "Keep watching while you browse.", notes: "Needs AVKit work", priority: "high", requests: 3 }),
@@ -47,25 +47,21 @@ test("validation rejects statuses from the other kind and bad input", () => {
   assert.throws(() => normalizeItem({ kind: "bug", title: "Valid", contact: "a@b.c" }), /Unknown field contact/);
 });
 
-test("submissions become private items without contact details", () => {
-  const fields = itemFromSubmission({
-    submissionID: "12345678-aaaa-4bbb-8ccc-1234567890ab",
-    kind: "bug",
-    title: "Audio drifts",
-    details: "Audio drifts after an hour.",
-    platform: "apple-tv",
-    appVersion: "1.0.0 (68)",
-    osVersion: "tvOS 27.1",
-    deviceModel: "AppleTV14,1",
-    contact: "viewer@example.com",
-    channel: "discord",
-    reporter: "Sam",
-  });
-  assert.equal(fields.status, "new");
-  assert.equal(fields.public, false);
-  assert.equal(fields.requests, 1);
-  assert.deepEqual(fields.platforms, ["apple-tv"]);
-  assert.match(fields.notes, /tvOS 27\.1/);
-  assert.match(fields.notes, /Requested by Sam on Discord\./);
-  assert.doesNotMatch(JSON.stringify(fields), /viewer@example\.com/);
+test("an entry that follows its tickets takes its status from them", () => {
+  const feature = normalizeItem({ kind: "feature", title: "Mini player", status: "considering", statusMode: "follow" });
+  const bug = normalizeItem({ kind: "bug", title: "Guide freeze", status: "investigating", statusMode: "follow" });
+  const tickets = (...statuses) => statuses.map((status, index) => ({ status, releasedIn: status === "released" ? `1.0.${index} (7${index})` : "" }));
+  assert.equal(followedStatus(feature, []), null);
+  assert.deepEqual(followedStatus(feature, tickets("new", "considering")), { status: "considering" });
+  assert.deepEqual(followedStatus(feature, tickets("new", "planned")), { status: "planned" });
+  assert.deepEqual(followedStatus(feature, tickets("planned", "in-build")), { status: "in-progress" });
+  // Released only once every ticket still in play is; dropped tickets don't hold it back.
+  assert.deepEqual(followedStatus(feature, tickets("released", "planned")), { status: "in-progress" });
+  assert.deepEqual(followedStatus(feature, tickets("released", "declined", "released")), { status: "shipped", shippedIn: "1.0.2 (72)" });
+  assert.deepEqual(followedStatus(feature, tickets("declined", "duplicate")), { status: "declined" });
+  assert.deepEqual(followedStatus(bug, tickets("confirmed")), { status: "investigating" });
+  assert.deepEqual(followedStatus(bug, tickets("fixed")), { status: "in-progress" });
+  assert.deepEqual(followedStatus(bug, tickets("released")), { status: "fixed", shippedIn: "1.0.0 (70)" });
+  assert.deepEqual(followedStatus(bug, tickets("cant-reproduce")), { status: "wont-fix" });
+  assert.throws(() => normalizeItem({ statusMode: "auto" }, feature), /follow tickets/);
 });

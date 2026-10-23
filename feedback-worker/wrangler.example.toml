@@ -2,6 +2,11 @@ name = "cedar-feedback"
 main = "src/index.js"
 compatibility_date = "2026-08-01"
 
+# The hosted Cedar Tracker at /tracker/. Paths that aren't files (the API, /tracker/login) reach
+# the Worker; _headers sets the Tracker's CSP.
+[assets]
+directory = "./assets"
+
 [vars]
 CEDAR_WEB_ORIGIN = "https://cedartv.github.io"
 # Discord triage (optional; leave empty to run without Discord).
@@ -9,12 +14,18 @@ DISCORD_PUBLIC_KEY = ""
 DISCORD_TRIAGE_CHANNEL_ID = ""
 DISCORD_ROADMAP_CHANNEL_ID = ""
 DISCORD_OWNER_ID = ""
+# Private staff forums: one thread per ticket (optional; tickets work without them).
+DISCORD_STAFF_BUG_FORUM_ID = ""
+DISCORD_STAFF_FEATURE_FORUM_ID = ""
+# Only needed when no public forum is configured: the guild whose threads are watched for replies.
+DISCORD_GUILD_ID = ""
 # Public forums whose new posts the five-minute cron imports into triage (optional).
 DISCORD_BUG_FORUM_ID = ""
 DISCORD_FEATURE_FORUM_ID = ""
 
 # Secrets (set with `wrangler secret put`, never committed):
-#   ADMIN_TOKEN      bearer token the local Cedar Tracker uses to read and triage the inbox
+#   ADMIN_TOKEN      bearer token for scripts; also signs Tracker sessions unless
+#                    TRACKER_SESSION_SECRET is set
 #   CLIENT_HASH_SALT random string that keys the per-day abuse counter
 #   DISCORD_BOT_TOKEN bot token that posts and edits triage messages (optional)
 

@@ -90,71 +90,173 @@ test("admin routes need the token and no browser origin", async () => {
   assert.equal(submissions[0].contact, "viewer@example.com");
 });
 
-test("accepting a submission creates a private item, clears contact and updates Discord", async () => {
+const json = (request, deps, env = environment()) => send(request, env, deps).then(async (response) => ({ status: response.status, body: await response.json() }));
+const postJSON = (path, payload = {}) => admin(path, { method: "POST", body: JSON.stringify(payload) });
+
+test("a report opens a private ticket, clears its email and keeps the report attached", async () => {
   const deps = dependencies({ discord: fakeDiscord() });
   await send(post(body({ contact: "viewer@example.com" })), environment(), deps);
   await deps.settle();
   const id = deps.store.rows[0].submissionID;
-  const response = await send(admin(`/v1/inbox/${id}/accept`, { method: "POST", body: "{}" }), environment(), deps);
-  const { item } = await response.json();
-  assert.equal(item.id, "CDR-1");
-  assert.equal(item.status, "new");
-  assert.equal(item.public, false);
-  assert.equal(item.requests, 1);
-  assert.doesNotMatch(item.notes, /viewer@example\.com/);
+  const { body: opened } = await json(postJSON(`/v1/inbox/${id}/ticket`, { kind: "bug" }), deps);
+  assert.deepEqual([opened.ticket.id, opened.ticket.status, opened.ticket.reports, opened.ticket.brokeIn], ["BUG-1", "new", 1, "1.0.0 (68)"]);
+  assert.deepEqual(opened.ticket.platforms, ["apple-tv"]);
   assert.equal(deps.store.rows[0].contact, null);
+  assert.equal(deps.store.rows[0].ticketID, "BUG-1");
+  // Nothing reaches the roadmap until staff write an entry for it.
+  assert.equal(deps.store.items.length, 0);
   await deps.settle();
-  const edit = deps.discord.calls.find((call) => call.op === "edit");
-  assert.equal(edit.messageID, "1001");
-  assert.match(edit.message.embeds[0].description, /Kept private as \*\*CDR-1\*\*.*<#roadmap>/);
-  const panel = deps.discord.calls.find((call) => call.op === "send" && call.channelID === "roadmap");
-  assert.match(panel.message.embeds[0].author.name, /CDR-1/);
-  assert.equal(deps.store.items[0].discordChannelID, "roadmap");
-  assert.equal((await send(admin(`/v1/inbox/${id}/accept`, { method: "POST", body: "{}" }), environment(), deps)).status, 409);
+  const thread = deps.discord.calls.find((call) => call.op === "thread");
+  assert.equal(thread.forumID, "staffBugs");
+  assert.equal(thread.body.name, "BUG-1 · Guide freezes on scroll");
+  assert.deepEqual(thread.body.applied_tags.map((tag) => deps.discord.tagName(thread.id, tag)), ["New", "Apple TV"]);
+  assert.match(JSON.stringify(thread.body.message.components), /t:status:BUG-1/);
+  // The report is posted into the thread, and the triage message links to it.
+  const original = deps.discord.calls.find((call) => call.op === "send" && call.channelID === thread.id);
+  assert.equal(original.message.embeds[0].description, "Scrolling the guide past midnight freezes the Apple TV app.");
+  const closed = deps.discord.calls.filter((call) => call.op === "edit" && call.messageID === "1001").at(-1);
+  assert.match(closed.message.embeds[0].description, new RegExp(`Opened \\*\\*BUG-1\\*\\* Guide freezes on scroll · <#${thread.id}>`));
+  assert.equal(deps.store.tickets[0].discordThreadID, thread.id);
+  assert.equal((await json(postJSON(`/v1/inbox/${id}/ticket`, { kind: "bug" }), deps)).status, 409);
 });
 
-test("merging adds a request; discarding closes the report", async () => {
+test("a bug report can become a feature ticket, and reports of either kind attach to any ticket", async () => {
   const deps = dependencies();
   await send(post(body()), environment(), deps);
-  await send(post(body({ title: "Guide freeze again" })), environment(), deps);
-  await send(post(body({ kind: "feature", title: "Picture in picture" })), environment(), deps);
-  const [first, second, feature] = deps.store.rows.map((row) => row.submissionID);
-  await send(admin(`/v1/inbox/${first}/accept`, { method: "POST", body: "{}" }), environment(), deps);
-  const merged = await send(admin(`/v1/inbox/${second}/merge`, { method: "POST", body: JSON.stringify({ itemID: "CDR-1" }) }), environment(), deps);
-  assert.equal((await merged.json()).item.requests, 2);
-  const mismatch = await send(admin(`/v1/inbox/${feature}/merge`, { method: "POST", body: JSON.stringify({ itemID: "CDR-1" }) }), environment(), deps);
-  assert.equal((await mismatch.json()).error, "kind_mismatch");
-  assert.equal((await send(admin(`/v1/inbox/${feature}/discard`, { method: "POST", body: "{}" }), environment(), deps)).status, 200);
-  assert.deepEqual(deps.store.rows.map((row) => row.state), ["accepted", "merged", "discarded"]);
+  await send(post(body({ kind: "feature", title: "Guide should keep its place", details: "After a freeze the guide forgets where I was." })), environment(), deps);
+  await send(post(body({ title: "Junk", details: "asdfasdfasdf" })), environment(), deps);
+  const [first, second, junk] = deps.store.rows.map((row) => row.submissionID);
+  assert.equal((await json(postJSON(`/v1/inbox/${first}/ticket`, { kind: "feature" }), deps)).body.ticket.id, "FR-1");
+  const attached = await json(postJSON(`/v1/inbox/${second}/attach`, { ticketID: "FR-1" }), deps);
+  assert.equal(attached.body.ticket.reports, 2);
+  assert.equal((await json(postJSON(`/v1/inbox/${junk}/attach`, { ticketID: "BUG-9" }), deps)).status, 404);
+  assert.equal((await send(postJSON(`/v1/inbox/${junk}/discard`), environment(), deps)).status, 200);
+  assert.deepEqual(deps.store.rows.map((row) => [row.state, row.ticketID]), [["accepted", "FR-1"], ["merged", "FR-1"], ["discarded", null]]);
+  const detail = (await json(admin("/v1/tickets/FR-1"), deps)).body;
+  assert.deepEqual(detail.events.map((entry) => entry.type), ["created", "report"]);
+  assert.equal(detail.reports.length, 2);
 });
 
-test("an item's original reports stay readable to staff after triage, without email", async () => {
+test("ticket edits are validated and every change lands on the timeline", async () => {
+  const deps = dependencies();
+  const { body: created } = await json(postJSON("/v1/tickets", { kind: "bug", title: "Audio drifts after an hour", priority: "high" }), deps);
+  assert.equal(created.ticket.id, "BUG-1");
+  const put = (fields) => json(admin("/v1/tickets/BUG-1", { method: "PUT", body: JSON.stringify(fields) }), deps);
+  assert.equal((await put({ status: "planned" })).body.message, "“planned” isn’t a bug status");
+  assert.match((await put({ kind: "feature" })).body.message, /kind can’t change/);
+  // Feature-only fields don't stick to bugs.
+  assert.equal((await put({ decision: "Not for bugs" })).body.ticket.decision, "");
+  const edited = (await put({ status: "confirmed", steps: "1. Play a film\n2. Wait an hour", expected: "In sync. Actual: 300 ms late." })).body.ticket;
+  assert.deepEqual([edited.status, edited.decision], ["confirmed", ""]);
+  await json(postJSON("/v1/tickets/BUG-1/notes", { text: "Only with the HomePods." }), deps);
+  assert.equal((await json(postJSON("/v1/tickets/BUG-1/notes", { text: "  " }), deps)).status, 400);
+  const { events } = (await json(admin("/v1/tickets/BUG-1"), deps)).body;
+  assert.deepEqual(events.map((entry) => [entry.type, entry.body]), [
+    ["created", "Opened directly."],
+    ["status", "New → Confirmed"],
+    ["edit", "Edited steps to reproduce, expected vs actual"],
+    ["note", "Only with the HomePods."],
+  ]);
+  const listed = (await json(admin("/v1/tickets"), deps)).body;
+  assert.equal(listed.tickets.length, 1);
+  assert.ok(listed.vocabulary.tickets.statuses.bug.some((status) => status.id === "in-build"));
+});
+
+test("a ticket on the roadmap moves its entry, and releasing a build ships both", async () => {
+  const deps = dependencies();
+  await json(postJSON("/v1/tickets", { kind: "feature", title: "Mini player" }), deps);
+  await json(postJSON("/v1/tickets", { kind: "feature", title: "Mini player on Mac" }), deps);
+  const linked = (await json(postJSON("/v1/tickets/FR-1/roadmap", { create: { title: "A mini player", summary: "Keep watching while you browse." } }), deps)).body;
+  assert.deepEqual([linked.entry.id, linked.entry.status, linked.entry.statusMode, linked.entry.public], ["CDR-1", "considering", "follow", true]);
+  await json(postJSON("/v1/tickets/FR-2/roadmap", { entryID: "CDR-1" }), deps);
+  const put = (id, fields) => json(admin(`/v1/tickets/${id}`, { method: "PUT", body: JSON.stringify(fields) }), deps);
+  await put("FR-1", { status: "planned" });
+  assert.equal(deps.store.items[0].status, "planned");
+  await put("FR-1", { status: "in-build", fixedIn: "70" });
+  await put("FR-2", { status: "in-build", fixedIn: "70" });
+  assert.equal(deps.store.items[0].status, "in-progress");
+  const feedBefore = await (await send(new Request("https://feedback.test/v1/roadmap"), environment(), deps)).json();
+  assert.deepEqual(feedBefore.items.map((entry) => [entry.id, entry.status]), [["CDR-1", "in-progress"]]);
+
+  const release = (await json(postJSON("/v1/releases", { build: "70", version: "1.0.1", releaseURL: "https://cedartv.github.io/cedar-tv-updates/apple/releases/" }), deps)).body;
+  assert.deepEqual([release.releasedIn, release.tickets.map((ticket) => ticket.id)], ["1.0.1 (70)", ["FR-1", "FR-2"]]);
+  const [entry] = deps.store.items;
+  assert.deepEqual([entry.status, entry.shippedIn, entry.releaseURL], ["shipped", "1.0.1 (70)", "https://cedartv.github.io/cedar-tv-updates/apple/releases/"]);
+  const feed = await (await send(new Request("https://feedback.test/v1/roadmap"), environment(), deps)).json();
+  assert.equal(feed.items[0].shippedIn, "1.0.1 (70)");
+  assert.doesNotMatch(JSON.stringify(feed), /FR-1|Mini player on Mac/);
+  assert.equal((await json(postJSON("/v1/releases", { build: "70" }), deps)).body.tickets.length, 0);
+
+  // Setting the status by hand stops following; switching back recomputes it.
+  await json(admin("/v1/items/CDR-1", { method: "PUT", body: JSON.stringify({ statusMode: "manual", status: "planned" }) }), deps);
+  assert.equal(deps.store.items[0].status, "planned");
+  const followed = (await json(admin("/v1/items/CDR-1", { method: "PUT", body: JSON.stringify({ statusMode: "follow" }) }), deps)).body.item;
+  assert.equal(followed.status, "shipped");
+});
+
+test("an entry counts the reports behind its tickets, and staff can read them without email", async () => {
   const deps = dependencies();
   await send(post(body({ contact: "viewer@example.com" })), environment(), deps);
   await send(post(body({ title: "Guide freeze again", details: "It froze again on the second Apple TV." })), environment(), deps);
   const [first, second] = deps.store.rows.map((row) => row.submissionID);
-  await send(admin(`/v1/inbox/${first}/accept`, { method: "POST", body: "{}" }), environment(), deps);
-  await send(admin(`/v1/inbox/${second}/merge`, { method: "POST", body: JSON.stringify({ itemID: "CDR-1" }) }), environment(), deps);
-  // Staff can rewrite the item's notes without losing the report.
-  await send(admin("/v1/items/CDR-1", { method: "PUT", body: JSON.stringify({ notes: "" }) }), environment(), deps);
+  await json(postJSON(`/v1/inbox/${first}/ticket`, { kind: "bug" }), deps);
+  await json(postJSON(`/v1/inbox/${second}/attach`, { ticketID: "BUG-1" }), deps);
+  await json(postJSON("/v1/tickets/BUG-1/roadmap", { create: { title: "Guide freezes after midnight" } }), deps);
+  const feed = await (await send(new Request("https://feedback.test/v1/roadmap"), environment(), deps)).json();
+  assert.deepEqual([feed.items[0].status, feed.items[0].requests], ["investigating", 2]);
 
-  const response = await send(admin("/v1/items/CDR-1/reports"), environment(), deps);
-  assert.equal(response.status, 200);
-  const { reports } = await response.json();
-  assert.deepEqual(reports.map((report) => [report.state, report.details]), [
+  const { body: behind } = await json(admin("/v1/items/CDR-1/reports"), deps);
+  assert.deepEqual(behind.tickets.map((ticket) => ticket.id), ["BUG-1"]);
+  assert.deepEqual(behind.reports.map((report) => [report.state, report.details]), [
     ["accepted", "Scrolling the guide past midnight freezes the Apple TV app."],
     ["merged", "It froze again on the second Apple TV."],
   ]);
-  assert.equal(reports[0].appVersion, "1.0.0 (68)");
-  assert.doesNotMatch(JSON.stringify(reports), /viewer@example\.com|contact/);
+  assert.doesNotMatch(JSON.stringify(behind), /viewer@example\.com|contact/);
   assert.equal((await send(admin("/v1/items/CDR-9/reports"), environment(), deps)).status, 404);
   assert.equal((await send(new Request("https://feedback.test/v1/items/CDR-1/reports"), environment(), deps)).status, 401);
+});
+
+test("merging a duplicate ticket moves its reports and history", async () => {
+  const deps = dependencies();
+  await send(post(body()), environment(), deps);
+  await send(post(body({ title: "Guide frozen" })), environment(), deps);
+  const [first, second] = deps.store.rows.map((row) => row.submissionID);
+  await json(postJSON(`/v1/inbox/${first}/ticket`, { kind: "bug" }), deps);
+  await json(postJSON(`/v1/inbox/${second}/ticket`, { kind: "bug" }), deps);
+  await json(postJSON("/v1/tickets/BUG-2/notes", { text: "Happens on tvOS 27.1 only." }), deps);
+  assert.equal((await json(postJSON("/v1/tickets/BUG-2/merge", { into: "BUG-2" }), deps)).status, 400);
+  const merged = (await json(postJSON("/v1/tickets/BUG-2/merge", { into: "BUG-1" }), deps)).body.ticket;
+  assert.equal(merged.reports, 2);
+  const [one, two] = deps.store.tickets;
+  assert.deepEqual([one.status, two.status, two.duplicateOf], ["new", "duplicate", "BUG-1"]);
+  const { events } = (await json(admin("/v1/tickets/BUG-1"), deps)).body;
+  assert.ok(events.some((entry) => entry.body === "Happens on tvOS 27.1 only."));
+  assert.equal((await json(postJSON("/v1/inbox/" + first + "/attach", { ticketID: "BUG-2" }), deps)).status, 409);
+});
+
+test("asking for more keeps an emailed report in the inbox with its address", async () => {
+  const deps = dependencies();
+  await send(post(body({ contact: "viewer@example.com" })), environment(), deps);
+  await send(post(body({ title: "No way back" })), environment(), deps);
+  const [withEmail, without] = deps.store.rows.map((row) => row.submissionID);
+  const asked = (await json(postJSON(`/v1/inbox/${withEmail}/ask`, { question: "Which build?" }), deps)).body;
+  assert.deepEqual([asked.via, asked.contact], ["email", "viewer@example.com"]);
+  assert.equal((await json(postJSON(`/v1/inbox/${without}/ask`, {}), deps)).body.error, "no_way_to_reach");
+  const { submissions } = (await json(admin("/v1/inbox"), deps)).body;
+  assert.equal(submissions[0].contact, "viewer@example.com");
+  assert.ok(submissions[0].needsInfoAtEpochMilliseconds);
+  assert.deepEqual(submissions[0].events.map((entry) => entry.body), ["Asked by email: Which build?"]);
+  // The question stays with the report once it becomes a ticket.
+  await json(postJSON(`/v1/inbox/${withEmail}/ticket`, { kind: "bug" }), deps);
+  const { events } = (await json(admin("/v1/tickets/BUG-1"), deps)).body;
+  assert.deepEqual(events.map((entry) => entry.type), ["asked", "created"]);
 });
 
 test("items can be created, edited and deleted, and the roadmap shows only public ones", async () => {
   const deps = dependencies();
   const create = (fields) => send(admin("/v1/items", { method: "POST", body: JSON.stringify(fields) }), environment(), deps).then((response) => response.json());
   const { item } = await create({ kind: "feature", title: "Picture in picture", status: "planned", public: true, notes: "secret", priority: "high" });
+  assert.equal(item.statusMode, "manual");
   await create({ kind: "bug", title: "Private crash", status: "investigating" });
   const bad = await send(admin("/v1/items", { method: "POST", body: JSON.stringify({ kind: "feature", title: "x" }) }), environment(), deps);
   assert.equal(bad.status, 400);

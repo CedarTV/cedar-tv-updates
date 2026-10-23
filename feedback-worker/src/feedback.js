@@ -1,11 +1,15 @@
-// Request handling for the feedback inbox, roadmap items and Discord. Storage and the Discord
-// client are injected as `deps` so tests can run without D1 or Discord.
+// Request handling for the feedback inbox, staff tickets, roadmap entries, the hosted Tracker and
+// Discord. Storage and the Discord client are injected as `deps` so tests can run without D1 or
+// Discord.
 import { FeedbackError } from "./errors.js";
 import { handleInteraction } from "./discord.js";
 import {
-  acceptSubmission, announceSubmission, createItem, deleteItem, discardSubmission, ensureItemMessage,
-  itemReports, mergeSubmission, updateItem,
+  addNote, announceSubmission, askReporter, attachSubmission, createItem, createTicket, deleteItem, deleteTicket,
+  discardSubmission, exportAll, inbox, itemReports, linkRoadmap, mergeTicket, openTicketFromSubmission,
+  refreshPanels, releaseBuild, ticketDetail, unlinkRoadmap, updateItem, updateTicket,
 } from "./operations.js";
+import { clearCookie, completeLogin, readSession } from "./session.js";
+import { ticketVocabulary } from "./tickets.js";
 import { publicFeed, vocabulary } from "./tracker.js";
 
 export const LIMITS = Object.freeze({
@@ -151,10 +155,12 @@ const limit = async (limiter, key) => {
   if (!result.success) throw new FeedbackError(429, "rate_limited");
 };
 
-// Stores a validated submission and posts it to the Discord triage channel.
+// Stores a validated submission and posts it to the Discord triage channel. A report from a
+// Discord thread has that thread watched, so later replies reach its timeline.
 export const recordSubmission = async (deps, env, submission, meta) => {
   const record = { ...submission, ...meta, submissionID: crypto.randomUUID(), createdAtMs: deps.now };
   await deps.store.insert(record);
+  if (record.sourceChannelID) await deps.store.watchThread(record.sourceChannelID, record.submissionID, record.sourceMessageID ?? record.sourceChannelID);
   announceSubmission(deps, env, { ...record, state: "new" });
   return record;
 };
@@ -183,14 +189,27 @@ const timingSafeEqual = async (left, right) => {
   return difference === 0;
 };
 
-const requireAdmin = async (request, env) => {
-  if (request.headers.get("Origin")) throw new FeedbackError(403, "origin_not_allowed");
-  if (!env.ADMIN_TOKEN || env.ADMIN_TOKEN.length < 32) throw new FeedbackError(503, "not_configured");
-  const match = /^Bearer (\S+)$/.exec(request.headers.get("Authorization") || "");
-  await limit(env.ADMIN_RATE_LIMITER, `admin:${await sha256(match?.[1] ?? "none")}`);
-  if (!match || !(await timingSafeEqual(match[1], env.ADMIN_TOKEN))) {
-    throw new FeedbackError(401, "invalid_authorization");
+// Staff requests carry either the admin bearer token (scripts) or the hosted Tracker's session
+// cookie. Cookie requests must also send X-Cedar-Tracker, which a cross-site form can't, and
+// come from the Worker's own origin.
+const requireStaff = async (request, env, deps) => {
+  const authorization = request.headers.get("Authorization");
+  if (authorization) {
+    if (request.headers.get("Origin")) throw new FeedbackError(403, "origin_not_allowed");
+    if (!env.ADMIN_TOKEN || env.ADMIN_TOKEN.length < 32) throw new FeedbackError(503, "not_configured");
+    const match = /^Bearer (\S+)$/.exec(authorization);
+    await limit(env.ADMIN_RATE_LIMITER, `admin:${await sha256(match?.[1] ?? "none")}`);
+    if (!match || !(await timingSafeEqual(match[1], env.ADMIN_TOKEN))) {
+      throw new FeedbackError(401, "invalid_authorization");
+    }
+    return { actor: "Tracker", renew: null };
   }
+  const session = await readSession(request, env, deps.now);
+  if (!session) throw new FeedbackError(401, "signed_out");
+  const origin = request.headers.get("Origin");
+  if (request.headers.get("X-Cedar-Tracker") !== "1" || (origin && origin !== deps.origin)) throw new FeedbackError(403, "forbidden");
+  await limit(env.ADMIN_RATE_LIMITER, `session:${session.userID}`);
+  return { actor: "Tracker", renew: session.renew };
 };
 
 const submissionID = (value) => {
@@ -200,29 +219,64 @@ const submissionID = (value) => {
 
 const ok = (body) => jsonResponse(200, { schemaVersion: 1, ...body });
 
-// Admin routes for Cedar Tracker. Bodies are plain item fields.
+const SITE = "https://cedartv.github.io/cedar-tv-updates/";
+
+// Published releases, for the Tracker's release-notes link picker.
+const releaseCatalog = async () => {
+  try {
+    const response = await fetch(new URL("releases/releases.json", SITE), { signal: AbortSignal.timeout(8_000) });
+    const catalog = await response.json();
+    return [...(catalog.previews ?? []), ...(catalog.platforms ?? [])].map((release) => ({
+      label: `${release.name} ${release.version} (${release.build})`,
+      version: release.version,
+      build: String(release.build ?? ""),
+      releaseURL: release.notesURL ?? "",
+    }));
+  } catch {
+    return [];
+  }
+};
+
+// Staff routes for the hosted Tracker and scripts. Bodies are plain fields.
 const adminRoutes = {
+  "GET session": async () => ok({ signedIn: true }),
   "GET inbox": async (request, env, deps) => {
     const state = new URL(request.url).searchParams.get("state") || "new";
     if (state !== "new" && !TRIAGE_STATES.includes(state)) throw new FeedbackError(400, "invalid_state");
-    return ok({ submissions: await deps.store.list(state, LIMITS.inboxPage) });
+    return ok({ submissions: await inbox(deps, state, LIMITS.inboxPage) });
   },
-  "POST inbox/:id/accept": async (request, env, deps, id) => ok({ item: await acceptSubmission(deps, submissionID(id), await readJSON(request)) }),
-  "POST inbox/:id/merge": async (request, env, deps, id) => ok({ item: await mergeSubmission(deps, submissionID(id), (await readJSON(request)).itemID) }),
-  "POST inbox/:id/discard": async (request, env, deps, id) => {
+  "POST inbox/:id/ticket": async (request, env, deps, staff, id) => ok({ ticket: await openTicketFromSubmission(deps, submissionID(id), (await readJSON(request)).kind, staff) }),
+  "POST inbox/:id/attach": async (request, env, deps, staff, id) => ok({ ticket: await attachSubmission(deps, submissionID(id), (await readJSON(request)).ticketID, staff) }),
+  "POST inbox/:id/ask": async (request, env, deps, staff, id) => ok(await askReporter(deps, submissionID(id), (await readJSON(request)).question ?? "", staff)),
+  "POST inbox/:id/discard": async (request, env, deps, staff, id) => {
     await discardSubmission(deps, submissionID(id));
     return ok({});
   },
-  "GET items": async (request, env, deps) => ok({ items: await deps.store.listItems(), vocabulary: vocabulary() }),
-  "POST items": async (request, env, deps) => {
-    const item = await createItem(deps, await readJSON(request));
-    ensureItemMessage(deps, env, item);
-    return ok({ item });
+
+  "GET tickets": async (request, env, deps) => ok({ tickets: await deps.store.listTickets(), vocabulary: { ...vocabulary(), tickets: ticketVocabulary() } }),
+  "POST tickets": async (request, env, deps, staff) => ok({ ticket: await createTicket(deps, await readJSON(request), staff) }),
+  "GET tickets/:id": async (request, env, deps, staff, id) => ok(await ticketDetail(deps, id)),
+  "PUT tickets/:id": async (request, env, deps, staff, id) => {
+    const { releaseURL, ...fields } = await readJSON(request);
+    return ok({ ticket: await updateTicket(deps, id, fields, { ...staff, releaseURL }) });
   },
-  // Staff-only: the full original reports behind an item, kept for as long as the item exists.
-  "GET items/:id/reports": async (request, env, deps, id) => ok({ reports: await itemReports(deps, id) }),
-  "PUT items/:id": async (request, env, deps, id) => ok({ item: await updateItem(deps, id, await readJSON(request)) }),
-  "DELETE items/:id": async (request, env, deps, id) => ok({ item: await deleteItem(deps, id) }),
+  "DELETE tickets/:id": async (request, env, deps, staff, id) => ok({ ticket: await deleteTicket(deps, id) }),
+  "POST tickets/:id/notes": async (request, env, deps, staff, id) => ok({ ticket: await addNote(deps, id, (await readJSON(request)).text, staff) }),
+  "POST tickets/:id/merge": async (request, env, deps, staff, id) => ok({ ticket: await mergeTicket(deps, id, (await readJSON(request)).into, staff) }),
+  "POST tickets/:id/roadmap": async (request, env, deps, staff, id) => ok(await linkRoadmap(deps, id, await readJSON(request), staff)),
+  "DELETE tickets/:id/roadmap": async (request, env, deps, staff, id) => ok(await unlinkRoadmap(deps, id, staff)),
+  "POST releases": async (request, env, deps, staff) => ok(await releaseBuild(deps, await readJSON(request), staff)),
+  "GET releases": async () => ok({ releases: await releaseCatalog() }),
+
+  "GET items": async (request, env, deps) => ok({ items: await deps.store.listItems(), vocabulary: vocabulary() }),
+  "POST items": async (request, env, deps) => ok({ item: await createItem(deps, await readJSON(request)) }),
+  // Staff-only: the tickets and full original reports behind an entry.
+  "GET items/:id/reports": async (request, env, deps, staff, id) => ok(await itemReports(deps, id)),
+  "PUT items/:id": async (request, env, deps, staff, id) => ok({ item: await updateItem(deps, id, await readJSON(request)) }),
+  "DELETE items/:id": async (request, env, deps, staff, id) => ok({ item: await deleteItem(deps, id) }),
+
+  "GET export": async (request, env, deps) => ok(await exportAll(deps)),
+  "POST discord/refresh": async (request, env, deps) => ok(await refreshPanels(deps)),
 };
 
 const matchAdminRoute = (method, parts) => {
@@ -267,11 +321,19 @@ export const handle = async (request, env, deps) => {
   }
   if (url.pathname === "/v1/roadmap" && request.method === "GET") return roadmap(request, deps);
   if (url.pathname === "/v1/discord/interactions" && request.method === "POST") return handleInteraction(request, env, deps);
+  if (url.pathname === "/tracker/login" && request.method === "GET") return completeLogin(request, env, deps);
+  if (url.pathname === "/v1/session/logout" && request.method === "POST") {
+    const response = jsonResponse(200, { schemaVersion: 1 });
+    response.headers.set("Set-Cookie", clearCookie);
+    return response;
+  }
   if (parts[0] === "v1") {
     const match = matchAdminRoute(request.method, parts.slice(1));
     if (match) {
-      await requireAdmin(request, env);
-      return match.handler(request, env, deps, ...match.params);
+      const staff = await requireStaff(request, env, deps);
+      const response = await match.handler(request, env, deps, staff, ...match.params);
+      if (staff.renew) response.headers.set("Set-Cookie", staff.renew);
+      return response;
     }
   }
   throw new FeedbackError(404, "not_found");
@@ -279,6 +341,7 @@ export const handle = async (request, env, deps) => {
 
 export const respond = async (request, env, deps) => {
   deps.env ??= env;
+  deps.origin ??= new URL(request.url).origin;
   try {
     return await handle(request, env, deps);
   } catch (error) {
