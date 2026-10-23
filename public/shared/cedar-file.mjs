@@ -165,7 +165,7 @@ export function parseTobaccoTieLinks(text) {
 }
 
 /**
- * The add-on family behind an ID: Xperience and similar services add the owner's UUID
- * (`app.xperience.<uuid>`), so two owners' copies are the same Tobacco Tie with different IDs.
+ * The add-on family behind an ID: some services add the owner's UUID (`<family>.<uuid>`), so
+ * two owners' copies are the same Tobacco Tie with different IDs.
  */
 export const addonFamily = id => String(id || '').toLowerCase().replace(/[.\-_]?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/, '');

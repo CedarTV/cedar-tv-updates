@@ -17,7 +17,6 @@
       "credit": {
         "platform": "Cedar",
         "via": "Trakt & MDBList Community Curators",
-        "sourceURL": null,
         "conversion": "Assembled from 47 community lists by snoak, travis_mcnelly, nobnobz, RavynLoony, jarvis, JasKraus, lish408, exoduso, and others; modified for Cedar."
       }
     },
@@ -35,7 +34,6 @@
       "credit": {
         "platform": "Cedar",
         "via": "TMDB Movie Collections & exoduso",
-        "sourceURL": null,
         "conversion": "Assembled from TMDB franchise collections and community timeline curation by exoduso; modified for Cedar."
       }
     },
@@ -54,7 +52,6 @@
       "credit": {
         "platform": "Cedar",
         "via": "Community Curators (lish408, travis_mcnelly, hdlists) & TMDB",
-        "sourceURL": null,
         "conversion": "Assembled from community lists by lish408, travis_mcnelly, and hdlists alongside TMDB collections; modified for Cedar."
       }
     },
@@ -72,7 +69,6 @@
       "credit": {
         "platform": "Cedar",
         "via": "TMDB Historical Catalog & Community Decades",
-        "sourceURL": null,
         "conversion": "Adapted from classic community decade structures using TMDB historical decade queries; modified for Cedar."
       }
     },
@@ -88,10 +84,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/96XPwo6G",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -99,7 +94,7 @@
       "file": "3wamHWIx.cedar",
       "title": "Directors in BW",
       "creator": "mousa.a",
-      "description": "Popular directors imported from fusion.",
+      "description": "Popular directors in black and white.",
       "tags": [
         "Directors",
         "Movies",
@@ -107,10 +102,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/3wamHWIx",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -118,25 +112,24 @@
       "file": "H6I00U0E.cedar",
       "title": "Decades (rdnoni)",
       "creator": "rdnoni",
-      "description": "Thanks to collection from https://itsrenoria.github.io/fusion-starter-kit/ and Rdnoni.",
+      "description": "A decades collection by rdnoni.",
       "tags": [
         "Decades",
         "Movies"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/H6I00U0E",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
       "id": "kaptain-s-complete-collection-strand-edition",
       "file": "RFxp7JIg.cedar",
-      "title": "Kaptain's Complete Collection (Strand Edition)",
+      "title": "Kaptain's Complete Collection",
       "creator": "Kaptain",
-      "description": "Kaptain's Complete Collection, adapted for Strand. Shared with Kaptain's permission. Creator: Kaptain — https://www.reddit.com/r/KaptainsCollection/",
+      "description": "Kaptain's Complete Collection. Shared with Kaptain's permission.",
       "tags": [
         "Anime",
         "Awards",
@@ -150,10 +143,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/RFxp7JIg",
-        "conversion": "Converted from Strand. 254 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "platform": "Community",
+        "via": null,
+        "conversion": "254 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
       }
     },
     {
@@ -169,10 +161,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/0nnVrtpB",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -187,10 +178,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/NXCwhXLa",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -205,17 +195,16 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/uVV4iXMN",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
       "id": "ultimate-horror-collection",
       "file": "s3ucrahf.cedar",
       "title": "Ultimate Horror Collection",
-      "creator": "Anonymous (Nuvio)",
+      "creator": "Anonymous",
       "description": "Strictly horror only.",
       "tags": [
         "Decades",
@@ -226,10 +215,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/s3ucrahf",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -248,10 +236,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/fOWik7fI",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -259,7 +246,7 @@
       "file": "Zv4dOfUo.cedar",
       "title": "All In One Shelves",
       "creator": "Skynet",
-      "description": "Do you like shelves? Cause this thing has everything. Originally from this nuvio collection: https://is.gd/Fb3Cw7\nYou will have to link some of the categories manually as the author didn't link them",
+      "description": "Do you like shelves? Cause this thing has everything.\nYou will have to link some of the categories manually as the author didn't link them",
       "tags": [
         "Awards",
         "Decades",
@@ -272,10 +259,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/Zv4dOfUo",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -296,10 +282,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/c1oMmBym",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -307,17 +292,16 @@
       "file": "b7h0eekT.cedar",
       "title": "Decades (SkyNet)",
       "creator": "Skynet",
-      "description": "A decades collection from Fusion Starter kit: https://itsrenoria.github.io/fusion-starter-kit/",
+      "description": "A decades collection shared by Skynet.",
       "tags": [
         "Decades",
         "Movies"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/b7h0eekT",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -325,17 +309,16 @@
       "file": "E24Idxs4.cedar",
       "title": "Decades in Color",
       "creator": "Akram2130",
-      "description": "Decades in color from fusion starter kit.",
+      "description": "Decades in color.",
       "tags": [
         "Decades",
         "Movies"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/E24Idxs4",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -343,7 +326,7 @@
       "file": "xtqPyRNo.cedar",
       "title": "Everything Collection",
       "creator": "Skynet",
-      "description": "Big thanks to Rockball44 for sharing this with us on reddit: https://www.reddit.com/r/Nuvio/comments/1sl2323/comment/ohblgxd/?context=1\nWith his github for it:\nhttps://github.com/elucidationvortex-source/nuviotemplate",
+      "description": "Big thanks to Rockball44 for sharing this with us.",
       "tags": [
         "Anime",
         "Awards",
@@ -357,10 +340,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/xtqPyRNo",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -379,18 +361,17 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/S2KPMHwS",
-        "conversion": "Converted from Strand. 279 parts that Cedar can’t show yet were left out."
+        "platform": "Community",
+        "via": null,
+        "conversion": "279 parts that Cedar can’t show yet were left out."
       }
     },
     {
       "id": "kaptain-s-anime-collection-strand-edition",
       "file": "6wXnvKxj.cedar",
-      "title": "Kaptain's Anime Collection (Strand Edition)",
+      "title": "Kaptain's Anime Collection",
       "creator": "Kaptain",
-      "description": "Converted from Kaptain's Anime Collection, Nuvio community version 5. Shared with Kaptain's permission. Credit, collection details, and updates: https://www.reddit.com/r/KaptainsCollection/",
+      "description": "Kaptain's Anime Collection, version 5. Shared with Kaptain's permission.",
       "tags": [
         "Anime",
         "Movies",
@@ -398,10 +379,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/6wXnvKxj",
-        "conversion": "Converted from Strand. 36 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "platform": "Community",
+        "via": null,
+        "conversion": "36 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
       }
     },
     {
@@ -409,7 +389,7 @@
       "file": "zOZhH8GL.cedar",
       "title": "Kaptain's Discover Collection",
       "creator": "Kaptain",
-      "description": "Converted from Kaptain's Discover Collection, Nuvio community version 4. Shared with Kaptain's permission. Credit, collection details, and updates: https://www.reddit.com/r/KaptainsCollection/",
+      "description": "Kaptain's Discover Collection, version 4. Shared with Kaptain's permission.",
       "tags": [
         "Genres",
         "Movies",
@@ -417,10 +397,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/zOZhH8GL",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -428,17 +407,16 @@
       "file": "iKR9hWLq.cedar",
       "title": "Kaptain's Streaming Service Collection (Top Lists)",
       "creator": "Kaptain",
-      "description": "Converted from Kaptain's Streaming Service Collection, Nuvio community version 6. Shared with Kaptain's permission. Credit, collection details, and updates: https://www.reddit.com/r/KaptainsCollection/",
+      "description": "Kaptain's Streaming Service Collection, version 6. Shared with Kaptain's permission.",
       "tags": [
         "Series",
         "Streaming"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/iKR9hWLq",
-        "conversion": "Converted from Strand. 2 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "platform": "Community",
+        "via": null,
+        "conversion": "2 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
       }
     },
     {
@@ -446,7 +424,7 @@
       "file": "no8a6Rul.cedar",
       "title": "Mega Collection",
       "creator": "Akram2130",
-      "description": "A complete collection from: https://collections.stremiolabar.com thanks to Akram for making it public. Converted from Nuvio, ignore the arabic titles you can change that in the app, the catalogs are in english.",
+      "description": "A complete collection, thanks to Akram for making it public. Some titles are in Arabic; you can rename them in Cedar. The catalogs are in English.",
       "tags": [
         "Awards",
         "Decades",
@@ -459,10 +437,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/no8a6Rul",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -483,17 +460,16 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/UrZxjxLa",
-        "conversion": "Converted from Strand. 4 parts that Cedar can’t show yet were left out; 213 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "platform": "Community",
+        "via": null,
+        "conversion": "4 parts that Cedar can’t show yet were left out; 213 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
       }
     },
     {
       "id": "no-nonsense-classic-tv-collection",
       "file": "t8cCYHb8.cedar",
       "title": "No Nonsense Classic TV Collection",
-      "creator": "Anonymous (Nuvio)",
+      "creator": "Anonymous",
       "description": "Designed for the Classic TV layout, for those who just want to quickly and easily find what to watch. Big, bold, clean, no fuss, no nonsense. Includes Discovery, Streaming, Genres, Decades, and Directors.",
       "tags": [
         "Decades",
@@ -504,18 +480,17 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/t8cCYHb8",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
       "id": "nuvio-v3-setup",
       "file": "eijjF6Zi.cedar",
-      "title": "Nuvio V3 Setup",
+      "title": "DaVincisDomain’s V3 Setup",
       "creator": "DaVincisDomain",
-      "description": "Big thanks to DaVincisDomain on Nuvio reddit forum for this setup. Includes AIOMeta addon https://www.reddit.com/r/Nuvio/comments/1t05cp1/nuvio_setup_v3/",
+      "description": "Big thanks to DaVincisDomain for this setup.",
       "tags": [
         "Genres",
         "Movies",
@@ -525,10 +500,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/eijjF6Zi",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -544,17 +518,16 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/BSUrQaZ1",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
       "id": "simple-kids-profile",
       "file": "29vU8UI3.cedar",
       "title": "Simple Kids Profile",
-      "creator": "Anonymous (Nuvio)",
+      "creator": "Anonymous",
       "description": "Kid-friendly collection: popular franchises, cartoons, kid-friendly streaming picks, and family movies and shows by decade.",
       "tags": [
         "Decades",
@@ -565,18 +538,17 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Strand",
-        "via": "Get Stranded",
-        "sourceURL": "https://get-stranded.fabriceleven.com/p/29vU8UI3",
-        "conversion": "Converted from Strand."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
       "id": "fusion-callandt95",
       "file": "fusion-callandt95.cedar",
-      "title": "callandt95’s Fusion Home",
+      "title": "callandt95’s Home",
       "creator": "callandt95",
-      "description": "A complete Fusion home screen curated by callandt95, as 15 Cedar branches.",
+      "description": "A complete home screen curated by callandt95, as 15 Cedar branches.",
       "tags": [
         "Franchises",
         "Genres",
@@ -586,18 +558,17 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#setup",
-        "conversion": "Converted from Fusion. 18 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "platform": "Community",
+        "via": null,
+        "conversion": "18 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
       }
     },
     {
       "id": "fusion-snoak",
       "file": "fusion-snoak.cedar",
-      "title": "snoak’s Fusion Home",
+      "title": "snoak’s Home",
       "creator": "snoak 🐐",
-      "description": "A complete Fusion home screen curated by snoak 🐐, as 17 Cedar branches.",
+      "description": "A complete home screen curated by snoak 🐐, as 17 Cedar branches.",
       "tags": [
         "Decades",
         "Discover",
@@ -608,18 +579,17 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#setup",
-        "conversion": "Converted from Fusion. 1 filter Cedar doesn’t support was relaxed, so some rows may show more titles."
+        "platform": "Community",
+        "via": null,
+        "conversion": "1 filter Cedar doesn’t support was relaxed, so some rows may show more titles."
       }
     },
     {
       "id": "fusion-ttoadd",
       "file": "fusion-ttoadd.cedar",
-      "title": "ttoadd’s Fusion Home",
+      "title": "ttoadd’s Home",
       "creator": "ttoadd",
-      "description": "A complete Fusion home screen curated by ttoadd, as 8 Cedar branches.",
+      "description": "A complete home screen curated by ttoadd, as 8 Cedar branches.",
       "tags": [
         "Anime",
         "Movies",
@@ -628,18 +598,17 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#setup",
-        "conversion": "Converted from Fusion. 1 filter Cedar doesn’t support was relaxed, so some rows may show more titles."
+        "platform": "Community",
+        "via": null,
+        "conversion": "1 filter Cedar doesn’t support was relaxed, so some rows may show more titles."
       }
     },
     {
       "id": "nuvio-community-collection",
       "file": "nuvio-master-community-collection-2026-10-11.cedar",
-      "title": "Nuvio Community Collection",
-      "creator": "ImKaptain, bramst0ne, luckynumb3rs and the Nuvio community",
-      "description": "The Nuvio community’s master collection: spotlight, discover, streaming services, networks, genres, moods, franchises, actors, directors, studios, decades, anime, awards, world cinema and more.",
+      "title": "Community Master Collection",
+      "creator": "ImKaptain, bramst0ne, luckynumb3rs and the community",
+      "description": "The community’s master collection: spotlight, discover, streaming services, networks, genres, moods, franchises, actors, directors, studios, decades, anime, awards, world cinema and more.",
       "tags": [
         "Discover",
         "Genres",
@@ -649,10 +618,9 @@
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Nuvio",
-        "via": "Nuvio community",
-        "sourceURL": "https://github.com/ImKaptain/nuvio-art",
-        "conversion": "Converted from Nuvio. 2 parts that Cedar can’t show yet were left out."
+        "platform": "Community",
+        "via": null,
+        "conversion": "2 parts that Cedar can’t show yet were left out."
       }
     },
     {
@@ -660,16 +628,15 @@
       "file": "widgets-sourced-awards-poster-mousa.a.cedar",
       "title": "Awards (Poster)",
       "creator": "mousa.a",
-      "description": "An awards shelf with built-in sources, designed by mousa.a for Fusion.",
+      "description": "An awards shelf with built-in sources, designed by mousa.a.",
       "tags": [
         "Awards"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -677,16 +644,15 @@
       "file": "widgets-sourced-decades-poster-mousa.a.cedar",
       "title": "Decades (Poster)",
       "creator": "mousa.a",
-      "description": "A decades shelf with built-in sources, designed by mousa.a for Fusion.",
+      "description": "A decades shelf with built-in sources, designed by mousa.a.",
       "tags": [
         "Decades"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -694,16 +660,15 @@
       "file": "widgets-sourced-decades-square-orangebyte.cedar",
       "title": "Decades (Square)",
       "creator": "orangebyte",
-      "description": "A decades shelf with built-in sources, designed by orangebyte for Fusion.",
+      "description": "A decades shelf with built-in sources, designed by orangebyte.",
       "tags": [
         "Decades"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -711,16 +676,15 @@
       "file": "widgets-sourced-decades-wide-mousa.a.cedar",
       "title": "Decades (Wide)",
       "creator": "mousa.a",
-      "description": "A decades shelf with built-in sources, designed by mousa.a for Fusion.",
+      "description": "A decades shelf with built-in sources, designed by mousa.a.",
       "tags": [
         "Decades"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -728,16 +692,15 @@
       "file": "widgets-sourced-decades-wide-rdnoni.cedar",
       "title": "Decades (Wide)",
       "creator": "rdnoni",
-      "description": "A decades shelf with built-in sources, designed by rdnoni for Fusion.",
+      "description": "A decades shelf with built-in sources, designed by rdnoni.",
       "tags": [
         "Decades"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -745,16 +708,15 @@
       "file": "widgets-sourced-directors-wide-fexm92.cedar",
       "title": "Directors (Wide)",
       "creator": "fexm92",
-      "description": "A directors shelf with built-in sources, designed by fexm92 for Fusion.",
+      "description": "A directors shelf with built-in sources, designed by fexm92.",
       "tags": [
         "Directors"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -762,16 +724,15 @@
       "file": "widgets-sourced-genres-poster-dangeruex23.cedar",
       "title": "Genres (Poster)",
       "creator": "dangeruex23",
-      "description": "A genres shelf with built-in sources, designed by dangeruex23 for Fusion.",
+      "description": "A genres shelf with built-in sources, designed by dangeruex23.",
       "tags": [
         "Genres"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -779,16 +740,15 @@
       "file": "widgets-sourced-genres-poster-mousa.a.cedar",
       "title": "Genres (Poster)",
       "creator": "mousa.a",
-      "description": "A genres shelf with built-in sources, designed by mousa.a for Fusion.",
+      "description": "A genres shelf with built-in sources, designed by mousa.a.",
       "tags": [
         "Genres"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -796,33 +756,31 @@
       "file": "widgets-sourced-genres-square-orangebyte-color.cedar",
       "title": "Genres (Square, Color)",
       "creator": "orangebyte",
-      "description": "A genres shelf with built-in sources, designed by orangebyte for Fusion.",
+      "description": "A genres shelf with built-in sources, designed by orangebyte.",
       "tags": [
         "Genres"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
       "id": "fusion-genres-square-orangebyte-fusion",
       "file": "widgets-sourced-genres-square-orangebyte-fusion.cedar",
-      "title": "Genres (Square, Fusion)",
+      "title": "Genres (Square, Original)",
       "creator": "orangebyte",
-      "description": "A genres shelf with built-in sources, designed by orangebyte for Fusion.",
+      "description": "A genres shelf with built-in sources, designed by orangebyte.",
       "tags": [
         "Genres"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -830,16 +788,15 @@
       "file": "widgets-sourced-genres-wide-dannyrutledge.cedar",
       "title": "Genres (Wide)",
       "creator": "dannyrutledge",
-      "description": "A genres shelf with built-in sources, designed by dannyrutledge for Fusion.",
+      "description": "A genres shelf with built-in sources, designed by dannyrutledge.",
       "tags": [
         "Genres"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -847,16 +804,15 @@
       "file": "widgets-sourced-genres-wide-mousa.a.cedar",
       "title": "Genres (Wide)",
       "creator": "mousa.a",
-      "description": "A genres shelf with built-in sources, designed by mousa.a for Fusion.",
+      "description": "A genres shelf with built-in sources, designed by mousa.a.",
       "tags": [
         "Genres"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -864,33 +820,31 @@
       "file": "widgets-sourced-streaming-square-orangebyte-color.cedar",
       "title": "Streaming (Square, Color)",
       "creator": "orangebyte",
-      "description": "A streaming shelf with built-in sources, designed by orangebyte for Fusion.",
+      "description": "A streaming shelf with built-in sources, designed by orangebyte.",
       "tags": [
         "Streaming"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet was left out."
+        "platform": "Community",
+        "via": null,
+        "conversion": "1 part that Cedar can’t show yet was left out."
       }
     },
     {
       "id": "fusion-streaming-square-orangebyte-fusion",
       "file": "widgets-sourced-streaming-square-orangebyte-fusion.cedar",
-      "title": "Streaming (Square, Fusion)",
+      "title": "Streaming (Square, Original)",
       "creator": "orangebyte",
-      "description": "A streaming shelf with built-in sources, designed by orangebyte for Fusion.",
+      "description": "A streaming shelf with built-in sources, designed by orangebyte.",
       "tags": [
         "Streaming"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 2 parts that Cedar can’t show yet were left out."
+        "platform": "Community",
+        "via": null,
+        "conversion": "2 parts that Cedar can’t show yet were left out."
       }
     },
     {
@@ -898,16 +852,15 @@
       "file": "widgets-sourced-streaming-square-orangebyte.cedar",
       "title": "Streaming (Square)",
       "creator": "orangebyte",
-      "description": "A streaming shelf with built-in sources, designed by orangebyte for Fusion.",
+      "description": "A streaming shelf with built-in sources, designed by orangebyte.",
       "tags": [
         "Streaming"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 1 part that Cedar can’t show yet was left out."
+        "platform": "Community",
+        "via": null,
+        "conversion": "1 part that Cedar can’t show yet was left out."
       }
     },
     {
@@ -915,16 +868,15 @@
       "file": "widgets-sourced-streaming-wide-rdnoni-color.cedar",
       "title": "Streaming (Wide, Color)",
       "creator": "rdnoni",
-      "description": "A streaming shelf with built-in sources, designed by rdnoni for Fusion.",
+      "description": "A streaming shelf with built-in sources, designed by rdnoni.",
       "tags": [
         "Streaming"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion. 2 parts that Cedar can’t show yet were left out."
+        "platform": "Community",
+        "via": null,
+        "conversion": "2 parts that Cedar can’t show yet were left out."
       }
     },
     {
@@ -932,16 +884,15 @@
       "file": "widgets-sourced-streaming-wide-rdnoni-tinted.cedar",
       "title": "Streaming (Wide, Tinted)",
       "creator": "rdnoni",
-      "description": "A streaming shelf with built-in sources, designed by rdnoni for Fusion.",
+      "description": "A streaming shelf with built-in sources, designed by rdnoni.",
       "tags": [
         "Streaming"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     },
     {
@@ -949,16 +900,15 @@
       "file": "widgets-sourced-streaming-wide-rdnoni-transparent.cedar",
       "title": "Streaming (Wide, Transparent)",
       "creator": "rdnoni",
-      "description": "A streaming shelf with built-in sources, designed by rdnoni for Fusion.",
+      "description": "A streaming shelf with built-in sources, designed by rdnoni.",
       "tags": [
         "Streaming"
       ],
       "addedAt": "2026-10-11",
       "credit": {
-        "platform": "Fusion",
-        "via": "Fusion Starter Kit by itsrenoria",
-        "sourceURL": "https://kit.betterer.cc/#widgets",
-        "conversion": "Converted from Fusion."
+        "platform": "Community",
+        "via": null,
+        "conversion": null
       }
     }
   ]

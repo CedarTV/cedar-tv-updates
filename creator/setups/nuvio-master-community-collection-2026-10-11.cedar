@@ -116675,5 +116675,5 @@
   },
   "kind": "branches",
   "schemaVersion": 1,
-  "title": "Nuvio Master Community Collection (2026-10-11)"
+  "title": "Community Master Collection (2026-10-11)"
 }

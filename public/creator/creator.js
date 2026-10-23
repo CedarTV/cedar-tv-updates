@@ -1,6 +1,6 @@
 // Creator: the setup catalog, profile photos and source badges, all feeding one Home built in the
 // Your Home tab (home-builder.mjs).
-import { isBadgePackID, parseCart, setupOf, setupOptions, setupPlatforms, setupTags } from "./creator-model.mjs";
+import { isBadgePackID, parseCart, setupOf, setupOptions, setupTags } from "./creator-model.mjs";
 import { artworkURL, appURL, matchingOptions, avatarCategories, avatarOptions } from "./artwork-model.mjs";
 import { home } from "./home-builder.mjs";
 
@@ -91,31 +91,16 @@ function renderHomeButton() {
 
 function renderSetupFilters() {
   $("setup-tag").replaceChildren(new Option("All categories", ""), ...setupTags(setups).map(tag => new Option(tag, tag)));
-  $("setup-platform").replaceChildren(new Option("Everywhere", ""), ...setupPlatforms(setups).map(platform => new Option(platform, platform)));
 }
 
-/// "By Kaptain · Strand": who made it and the app it was made for.
-const byline = setup => setup.credit?.platform && setup.credit.platform !== "Cedar"
-  ? `By ${setup.creator} · ${setup.credit.platform}` : `By ${setup.creator}`;
+const byline = setup => `By ${setup.creator}`;
 
+/// Who made a setup. Creator credits the people behind it, never the app it was first made for.
 function creditDetails(setup) {
   const credit = setup.credit || {};
-  const made = credit.platform === "Cedar"
-    ? element("p", {}, [
-      "Curated by ", element("strong", { text: setup.creator }),
-      ...(credit.via ? [`, via ${credit.via}`] : []),
-      ", modified for Cedar.",
-    ])
-    : element("p", {}, [
-      "Made by ", element("strong", { text: setup.creator }), ` for ${credit.platform}`,
-      ...(credit.via ? [`, shared on ${credit.via}`] : []), ".",
-    ]);
-  const parts = [made];
-  if (credit.sourceURL) {
-    parts.push(element("p", {}, [element("a", {
-      href: credit.sourceURL, target: "_blank", rel: "noopener noreferrer", text: "View the original ↗",
-    })]));
-  }
+  const parts = [credit.platform === "Cedar"
+    ? element("p", {}, ["Curated by ", element("strong", { text: setup.creator }), ...(credit.via ? [`, via ${credit.via}`] : []), ", modified for Cedar."])
+    : element("p", {}, ["Made by ", element("strong", { text: setup.creator }), "."])];
   if (credit.conversion) parts.push(element("p", { class: "setup-conversion", text: credit.conversion }));
   return parts;
 }
@@ -128,9 +113,9 @@ function coverMosaic(covers, label) {
 }
 
 function renderSetups() {
-  const options = setupOptions(setups, { query: $("setup-search").value, tag: $("setup-tag").value, platform: $("setup-platform").value, sort: $("setup-sort").value });
+  const options = setupOptions(setups, { query: $("setup-search").value, tag: $("setup-tag").value, sort: $("setup-sort").value });
   $("setup-status").textContent = setups.length
-    ? `${plural(options.length, "setup")}${$("setup-search").value || $("setup-tag").value || $("setup-platform").value ? " found" : ""}`
+    ? `${plural(options.length, "setup")}${$("setup-search").value || $("setup-tag").value ? " found" : ""}`
     : $("setup-status").textContent;
   $("setup-grid").replaceChildren(...options.map(setup => {
     const details = element("button", { type: "button", class: "button button-secondary", text: "View groups" });
@@ -234,7 +219,7 @@ function renderGallery() {
   $("status").textContent = `${options.length} ${gallery.kind === "avatars" ? "profile photos" : "badge sets"}${$("search").value ? " found" : " available"}`;
   $("gallery").replaceChildren(...options.slice(0, gallery.visible).map(option => {
     const button = element("button", { type: "button", class: "artwork-choice", "aria-pressed": String(gallery.selected === option) });
-    const detail = gallery.kind === "avatars" ? (option.category || option.source || "Profile photo") : `${option.badges.length} badges · ${option.creator}`;
+    const detail = gallery.kind === "avatars" ? (option.category || "Profile photo") : [`${option.badges.length} badges`, option.creator || option.style].filter(Boolean).join(" · ");
     button.append(galleryImage(option.url || option.badges[0]?.imageURL || "", ""), element("span", { text: option.name || option.label }), element("small", { text: detail }));
     button.addEventListener("click", () => selectArtwork(option));
     return button;
@@ -312,7 +297,6 @@ home.onChange(() => {
 });
 $("setup-search").addEventListener("input", renderSetups);
 $("setup-tag").addEventListener("change", renderSetups);
-$("setup-platform").addEventListener("change", renderSetups);
 $("setup-sort").addEventListener("change", renderSetups);
 $("search").addEventListener("input", () => { gallery.visible = 48; renderGallery(); });
 for (const control of [$("category"), $("sort")]) control.addEventListener("change", () => { gallery.visible = 48; renderGallery(); });

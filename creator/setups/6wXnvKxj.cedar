@@ -1296,5 +1296,5 @@
   },
   "kind": "branches",
   "schemaVersion": 1,
-  "title": "Kaptain's Anime Collection (Strand Edition)"
+  "title": "Kaptain's Anime Collection"
 }

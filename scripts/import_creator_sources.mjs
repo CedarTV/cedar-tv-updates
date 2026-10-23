@@ -19,23 +19,21 @@ const catalog = JSON.parse(await readFile(manifestPath, "utf8"));
 const source = JSON.parse(await readFile(resolve(sourceFolder, "manifest.json"), "utf8"));
 const report = new Map(JSON.parse(await readFile(resolve(convertedFolder, "report.json"), "utf8")).map(item => [item.id, item]));
 
-const origins = {
-  Strand: { platform: "Strand", via: "Get Stranded", viaURL: "https://get-stranded.fabriceleven.com" },
-  Fusion: { platform: "Fusion", via: "Fusion Starter Kit by itsrenoria", viaURL: "https://kit.betterer.cc" },
-  Nuvio: { platform: "Nuvio", via: "Nuvio community", viaURL: null },
-};
-// The Nuvio master collection credits several curators and artists (CREDITS.md §3).
-const nuvioCreators = "ImKaptain, bramst0ne, luckynumb3rs and the Nuvio community";
+// Creator credits the people who made a setup, never the app it came from, and doesn't link to
+// other sites (the build rejects both).
+// The community master collection credits several curators and artists (CREDITS.md §3).
+const masterCollectionCreators = "ImKaptain, bramst0ne, luckynumb3rs and the community";
 const tagWords = { genres: "Genres", decades: "Decades", streaming: "Streaming", studios: "Studios", awards: "Awards", directors: "Directors", anime: "Anime", movies: "Movies", series: "Series", spotlight: "Spotlight", discover: "Discover", networks: "Networks", kids: "Kids" };
 
 const slug = text => text.normalize("NFKD").replace(/[^\w\s-]/g, " ").toLowerCase().replace(/[_\s.]+/g, "-").replace(/-+/g, "-").replace(/^-|-$/g, "");
 const title = text => text.replace(/\b\w/g, letter => letter.toUpperCase());
-const firstParagraph = text => (text || "").split(/\n\s*\n/)[0].trim().slice(0, 320);
+const firstParagraph = text => (text || "").split(/\n\s*\n/)[0].replace(/https?:\/\/\S+/g, "").replace(/[ \t]+$/gm, "").trim().slice(0, 320);
 
 /// Fusion shelf files name their topic, layout, designer and variant: widgets-sourced-genres-square-orangebyte-color.
 function fusionShelf(id) {
   const [topic, layout, designer, ...variant] = id.replace(/^widgets-sourced-/, "").split("-");
-  const name = `${title(topic)} (${[title(layout), ...variant.map(title)].join(", ")})`;
+  // The "fusion" art variant is the shelf's original look.
+  const name = `${title(topic)} (${[title(layout), ...variant.map(v => v === "fusion" ? "Original" : title(v))].join(", ")})`;
   return { name, designer, topic };
 }
 
@@ -44,8 +42,7 @@ function entryFor(item) {
   if (item.id.startsWith("collections-")) return null;
   const result = report.get(item.id);
   if (!result || result.error || result.branches === 0) return null;
-  const origin = origins[item.platform];
-  let name = item.title;
+  let name = item.title.replace(/\s*\(Strand Edition\)$/i, "");
   let creator = item.creator;
   let description = firstParagraph(item.description);
   const tags = new Set((item.tags || []).map(tag => tagWords[tag.replace(/^shelves:/, "").toLowerCase()]).filter(Boolean));
@@ -53,15 +50,15 @@ function entryFor(item) {
     const shelf = fusionShelf(item.id);
     name = shelf.name;
     creator = shelf.designer;
-    description = `A ${shelf.topic} shelf with built-in sources, designed by ${shelf.designer} for Fusion.`;
+    description = `A ${shelf.topic} shelf with built-in sources, designed by ${shelf.designer}.`;
     if (tagWords[shelf.topic]) tags.add(tagWords[shelf.topic]);
   } else if (item.platform === "Fusion") {
-    name = `${item.creator.replace(/\s*\p{Extended_Pictographic}/gu, "").trim()}’s Fusion Home`;
-    description = `A complete Fusion home screen curated by ${item.creator}, as ${result.branches} Cedar branches.`;
+    name = `${item.creator.replace(/\s*\p{Extended_Pictographic}/gu, "").trim()}’s Home`;
+    description = `A complete home screen curated by ${item.creator}, as ${result.branches} Cedar branches.`;
   } else if (item.platform === "Nuvio") {
-    name = "Nuvio Community Collection";
-    creator = nuvioCreators;
-    description = "The Nuvio community’s master collection: spotlight, discover, streaming services, networks, genres, moods, franchises, actors, directors, studios, decades, anime, awards, world cinema and more.";
+    name = "Community Master Collection";
+    creator = masterCollectionCreators;
+    description = "The community’s master collection: spotlight, discover, streaming services, networks, genres, moods, franchises, actors, directors, studios, decades, anime, awards, world cinema and more.";
   }
   if (/kids/i.test(name)) tags.add("Kids");
 
@@ -77,14 +74,13 @@ function entryFor(item) {
     file: `${item.id}.cedar`,
     title: name,
     creator,
-    description: description || `${result.branches} ${result.branches === 1 ? "branch" : "branches"} converted from ${origin.platform}.`,
+    description: description || `${result.branches} ${result.branches === 1 ? "branch" : "branches"}.`,
     tags: [...tags].sort(),
     addedAt: source.generatedAt.slice(0, 10),
     credit: {
-      platform: origin.platform,
-      via: origin.via,
-      sourceURL: item.sourceUrl || origin.viaURL,
-      ...(notes.length ? { conversion: `Converted from ${origin.platform}. ${notes.join("; ")}.` } : { conversion: `Converted from ${origin.platform}.` }),
+      platform: "Community",
+      via: null,
+      conversion: notes.length ? `${notes.join("; ").replace(/^./, letter => letter.toUpperCase())}.` : null,
     },
     rank: item.upvotes ?? 0,
     // Strand setups, then Fusion homes, the Nuvio collection, and single Fusion shelves last.

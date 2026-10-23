@@ -52,8 +52,9 @@ export function describeSource(s){
 
 const el=(tag,cls,text)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n;};
 const button=(text,action,cls='text-button')=>{const b=el('button',cls,text);b.type='button';b.addEventListener('click',action);return b;};
-/** Strand's image proxy refuses other sites (Cross-Origin-Resource-Policy: same-origin), though Cedar
- loads it fine. Its path is the original image URL in base64, which the preview loads instead.
+/** One image proxy found in imported files refuses other sites (Cross-Origin-Resource-Policy:
+ same-origin), though Cedar loads it fine. Its path is the original image URL in base64, which the
+ preview loads instead.
  TMDB originals are swapped for a card-sized copy. */
 export function previewImageURL(url){const tmdb=/^https:\/\/(?:image\.tmdb\.org|media\.themoviedb\.org)\/t\/p\/original\//;if(tmdb.test(url||''))return url.replace(tmdb,'https://image.tmdb.org/t/p/w780/');const m=/^https:\/\/get-stranded\.fabriceleven\.com\/img\/remote\/([A-Za-z0-9_-]+=*)$/.exec(url||'');if(!m)return url;try{const original=atob(m[1].replace(/-/g,'+').replace(/_/g,'/'));return /^https:\/\/[^\s"'<>]+$/.test(original)?original:url;}catch{return url;}}
 function image(url,cls,failed){const i=el('img',cls);i.src=previewImageURL(url);i.alt='';i.loading='lazy';i.decoding='async';i.referrerPolicy='no-referrer';i.addEventListener('error',()=>{i.remove();failed?.();},{once:true});return i;}

@@ -43,15 +43,13 @@ export function setupTags(setups) {
   return [...new Set(setups.flatMap(setup => setup.tags || []))].sort((a, b) => a.localeCompare(b));
 }
 
-export const setupPlatforms = setups => [...new Set(setups.map(setup => setup.credit?.platform).filter(Boolean))];
 
-export function setupOptions(setups, { query = "", tag = "", platform = "", sort = "featured" } = {}) {
+export function setupOptions(setups, { query = "", tag = "", sort = "featured" } = {}) {
   const text = query.trim().toLowerCase();
   const matches = setups.filter(setup => {
     if (tag && !(setup.tags || []).includes(tag)) return false;
-    if (platform && setup.credit?.platform !== platform) return false;
     if (!text) return true;
-    const haystack = [setup.title, setup.creator, setup.description, setup.credit?.platform, setup.credit?.via, ...(setup.tags || []),
+    const haystack = [setup.title, setup.creator, setup.description, setup.credit?.via, ...(setup.tags || []),
       ...setup.groups.flatMap(group => [group.title, ...group.rows])].join(" ").toLowerCase();
     return haystack.includes(text);
   });
