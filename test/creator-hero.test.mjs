@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {openProfileFile} from '../public/shared/cedar-file.mjs';
 import {newDraft, newHero, validateDraft, exportCedar, exportCedarProfile, draftCart, heroSource, heroSourceName, makeBranch, makePick} from '../public/creator/home-model.mjs';
 
 const draft = (extra = {}) => validateDraft({...newDraft(), ...extra});
@@ -7,15 +8,19 @@ const draft = (extra = {}) => validateDraft({...newDraft(), ...extra});
 test('a draft without a hero leaves the viewer’s own hero alone', () => {
   const {document, hero} = exportCedar(draft());
   assert.equal(hero, false);
+  assert.equal(document.hero, undefined);
   assert.ok(!document.branches.some(b => b.presentation.templateID === 'hero-carousel'));
 });
 
-test('the hero exports first, as a hero-carousel Branch with its style, details and title count', () => {
+test('a shared file carries the hero beside its rows, as a hero-carousel Branch with its style, details and title count', () => {
   const d = draft({hero: {...newHero(), style: 'fade', fields: ['genre', 'ratings'], limit: 6}});
   const {document, hero, branchCount} = exportCedar(d);
-  const [first] = document.branches;
+  const first = document.hero;
   assert.equal(hero, true);
   assert.equal(branchCount, 3);
+  assert.equal(document.branches.length, 3);
+  assert.ok(!document.branches.some(b => b.presentation.templateID === 'hero-carousel'), 'no hero row for Cedar to add as a hidden second hero');
+  assert.deepEqual(document.branches.map(b => b.position), [0, 1, 2]);
   assert.equal(first.position, 0);
   assert.equal(first.presentation.templateID, 'hero-carousel');
   assert.deepEqual(first.presentation.hero.style, 'fullscreen');
@@ -52,4 +57,10 @@ test('a Home with its own hero is no longer a picks-only link, and profile files
   const {document, hero} = await exportCedarProfile(draft({hero: newHero()}));
   assert.equal(hero, true);
   assert.equal(document.kind, 'profile');
+  // Importing a profile file replaces the viewer's Home, so its hero stays an ordinary first row.
+  assert.equal((await openProfileFile(document, '')).home.branches[0].presentation.templateID, 'hero-carousel');
+});
+
+test('a hero alone can’t make a shared Branches file', () => {
+  assert.throws(() => exportCedar(draft({rows: [], hero: newHero()})), /profile file/);
 });
