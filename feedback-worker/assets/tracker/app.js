@@ -762,8 +762,8 @@ $("[data-action='export']").addEventListener("click", async () => {
 
 $("[data-action='refresh-panels']").addEventListener("click", async () => {
   try {
-    const { entries, tickets } = await api("/discord/refresh", { method: "POST" });
-    settingsStatus(`Refreshed ${plural(tickets, "ticket panel")} and ${plural(entries, "roadmap panel")}.`);
+    const { entries, tickets, failed } = await api("/discord/refresh", { method: "POST" });
+    settingsStatus(`Refreshed ${plural(tickets, "ticket panel")} and ${plural(entries, "roadmap panel")}.${failed.length ? ` Couldn’t refresh: ${failed.join("; ")}` : ""}`, failed.length > 0);
   } catch (error) {
     settingsStatus(error.message, true);
   }

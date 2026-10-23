@@ -240,15 +240,30 @@ export const releasedNotice = (ticket) => ({
   allowed_mentions: { parse: [] },
 });
 
-export const discordClient = (token, fetcher = fetch) => {
+const RATE_LIMIT_RETRIES = 3;
+const LONGEST_WAIT_MS = 15_000;
+
+// Rate-limited calls (429) wait as long as Discord asks, up to 15 seconds, and try again.
+// Ticket changes make several calls in a row, and edits to older messages are limited tightly.
+export const discordClient = (token, fetcher = fetch, sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))) => {
   const call = async (method, path, body) => {
-    const response = await fetcher(`https://discord.com/api/v10${path}`, {
-      method,
-      headers: { Authorization: `Bot ${token}`, "Content-Type": "application/json" },
-      body: body ? JSON.stringify(body) : undefined,
-    });
-    if (!response.ok) throw new Error(`Discord ${method} ${path.split("/").slice(0, 3).join("/")} answered ${response.status}`);
-    return response.status === 204 ? null : response.json();
+    for (let attempt = 0; ; attempt += 1) {
+      const response = await fetcher(`https://discord.com/api/v10${path}`, {
+        method,
+        headers: { Authorization: `Bot ${token}`, "Content-Type": "application/json" },
+        body: body ? JSON.stringify(body) : undefined,
+      });
+      if (response.status === 429 && attempt < RATE_LIMIT_RETRIES) {
+        const limit = await response.json().catch(() => ({}));
+        const waitMs = Math.ceil((Number(limit.retry_after) || Number(response.headers.get("Retry-After")) || 1) * 1000);
+        if (waitMs <= LONGEST_WAIT_MS) {
+          await sleep(waitMs + 100);
+          continue;
+        }
+      }
+      if (!response.ok) throw new Error(`Discord ${method} ${path.split("/").slice(0, 3).join("/")} answered ${response.status}`);
+      return response.status === 204 ? null : response.json();
+    }
   };
   return {
     send: (channelID, message) => call("POST", `/channels/${channelID}/messages`, message),
