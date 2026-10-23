@@ -1,12 +1,71 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled October 21, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled October 23, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 70 · 2026-10-23
+
+October 23, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Play on TV — send a movie or episode to your Apple TV from its menu, through iCloud. Cedar Remote and the Devices page are gone.
+- Branch row designs — Marquee, VHS, Logo and Spine Numbers give any Branch row a new look.
+- Sleep Timer — stop a video or Radio after a set time, or at the end of the episode or programme.
+- Catalog bridge servers — servers that serve streaming catalogs over the Jellyfin API are recognised and browsed live, with rows that load as you scroll.
+
+#### Home and Branches
+
+- Next Episodes — choose whether next episodes appear in Continue Watching, on their own Next Up row, or not at all.
+- Episode Heat Map — an optional series section that shows every episode at a glance, shaded by what you have watched or by rating.
+- Channel logo cards — channels without artwork show their logo on a glass card.
+- Wide View All — landscape groups and wide rows open into wide grids.
+- Poster menu — a redesigned press-and-hold menu, with Play Options and Next Up grouped together.
+
+#### Playback
+
+- Cedar badges — a built-in badge pack shows resolution, HDR and audio in the player, with nothing to install.
+- Jellyfin scrub previews — thumbnails while scrubbing, on Jellyfin servers that create trickplay images.
+
+#### Sources and libraries
+
+- WebDAV under Media Servers — WebDAV shares now sit with your media servers, and their passwords sync to your devices through iCloud.
+- Source Settings — the separate Sources page is gone. Only Show Titles I Can Play is in Source Settings, and Home offers Add Playlist and Media Servers.
+- Lighter Xtream syncs — series episodes load when you open a series, not during every sync.
+- Connected Lists — paste a list link, search every connected service at once, and preview posters before adding.
+- Source problems explained — when a source fails, Cedar says what probably went wrong and what to try.
+
+#### Live TV, sports and DVR
+
+- On Now — everything airing right now, by genre, from the Guide.
+- Game Alerts — a notification before your teams play, set from the Sports Bar.
+- Expiry Reminders — a reminder before an IPTV subscription runs out.
+
+#### Profiles and system
+
+- Who’s Watching — Cedar waits until you pick a profile before connecting its accounts and sources.
+- Search Settings — find any setting by name.
+- Siri, Spotlight and Handoff — Cedar titles work with Siri, appear in Spotlight and hand off between devices.
+
+#### Fixes
+
+- Home no longer crashes at launch on iOS 18.
+- Signing in to Jellyfin on one profile no longer signs the other profiles out.
+- Jellyfin-compatible servers that ignore change dates no longer re-read the whole library on every sync.
+- Profiles can be deleted while household credentials are still downloading.
+- Library Recently Watched keeps its titles after you mark something unwatched.
+
+#### Known issues
+
+- Watch Together (SharePlay) appears in the player options but is not ready yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-70)
 
 ### 1.0.0 · build 69 · 2026-10-21
 
@@ -1003,6 +1062,67 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## iPad
 
+### 1.0.0 · build 70 · 2026-10-23
+
+October 23, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Play on TV — send a movie or episode to your Apple TV from its menu, through iCloud. Cedar Remote and the Devices page are gone.
+- Branch row designs — Marquee, VHS, Logo and Spine Numbers give any Branch row a new look.
+- Sleep Timer — stop a video or Radio after a set time, or at the end of the episode or programme.
+- Catalog bridge servers — servers that serve streaming catalogs over the Jellyfin API are recognised and browsed live, with rows that load as you scroll.
+
+#### Home and Branches
+
+- Next Episodes — choose whether next episodes appear in Continue Watching, on their own Next Up row, or not at all.
+- Episode Heat Map — an optional series section that shows every episode at a glance, shaded by what you have watched or by rating.
+- Channel logo cards — channels without artwork show their logo on a glass card.
+- Wide View All — landscape groups and wide rows open into wide grids.
+- Poster menu — a redesigned press-and-hold menu, with Play Options and Next Up grouped together.
+- Hero Style — Match Home now follows your Home hero details.
+
+#### Playback
+
+- Cedar badges — a built-in badge pack shows resolution, HDR and audio in the player, with nothing to install.
+- Jellyfin scrub previews — thumbnails while scrubbing, on Jellyfin servers that create trickplay images.
+
+#### Sources and libraries
+
+- WebDAV under Media Servers — WebDAV shares now sit with your media servers, and their passwords sync to your devices through iCloud.
+- Source Settings — the separate Sources page is gone. Only Show Titles I Can Play is in Source Settings, and Home offers Add Playlist and Media Servers.
+- Lighter Xtream syncs — series episodes load when you open a series, not during every sync.
+- Connected Lists — paste a list link, search every connected service at once, and preview posters before adding.
+- Source problems explained — when a source fails, Cedar says what probably went wrong and what to try.
+
+#### Live TV, sports and DVR
+
+- On Now — everything airing right now, by genre, from the Guide.
+- Game Alerts — a notification before your teams play, set from the Sports Bar.
+- Expiry Reminders — a reminder before an IPTV subscription runs out.
+
+#### Profiles and system
+
+- Who’s Watching — Cedar waits until you pick a profile before connecting its accounts and sources.
+- Search Settings — find any setting by name.
+- Siri, Spotlight and Handoff — Cedar titles work with Siri, appear in Spotlight and hand off between devices.
+- Keyboard shortcuts — player shortcuts on iPad with a hardware keyboard.
+
+#### Fixes
+
+- Home no longer crashes at launch on iOS 18.
+- Signing in to Jellyfin on one profile no longer signs the other profiles out.
+- Jellyfin-compatible servers that ignore change dates no longer re-read the whole library on every sync.
+- Profiles can be deleted while household credentials are still downloading.
+- Library Recently Watched keeps its titles after you mark something unwatched.
+
+#### Known issues
+
+- Watch Together (SharePlay) appears in the player options but is not ready yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-70)
+
 ### 1.0.0 · build 69 · 2026-10-21
 
 October 21, 2026 · Released to External TestFlight for iPad.
@@ -1997,6 +2117,66 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 70 · 2026-10-23
+
+October 23, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Play on TV — iPhone, iPad and Mac send a movie or episode to this Apple TV through iCloud. Cedar Remote and the Devices page are gone.
+- Branch row designs — Marquee, VHS, Logo and Spine Numbers give any Branch row a new look.
+- Sleep Timer — stop a video or Radio after a set time, or at the end of the episode or programme.
+- Catalog bridge servers — servers that serve streaming catalogs over the Jellyfin API are recognised and browsed live, with rows that load as you scroll.
+- Player timeline — a new Apple TV timeline with markers for intros and recaps, and chapter ticks.
+
+#### Home and Branches
+
+- Next Episodes — choose whether next episodes appear in Continue Watching, on their own Next Up row, or not at all.
+- Episode Heat Map — an optional series section that shows every episode at a glance, shaded by what you have watched or by rating.
+- Channel logo cards — channels without artwork show their logo on a glass card.
+- Wide View All — landscape groups and wide rows open into wide grids.
+
+#### Playback
+
+- Cedar badges — a built-in badge pack shows resolution, HDR and audio in the player, with nothing to install.
+- Jellyfin scrub previews — thumbnails while scrubbing, on Jellyfin servers that create trickplay images.
+
+#### Sources and libraries
+
+- WebDAV under Media Servers — WebDAV shares now sit with your media servers, and their passwords sync to your devices through iCloud.
+- Source Settings — the separate Sources page is gone. Only Show Titles I Can Play is in Source Settings, and Home offers Add Playlist and Media Servers.
+- Lighter Xtream syncs — series episodes load when you open a series, not during every sync.
+- Connected Lists — paste a list link, search every connected service at once, and preview posters before adding.
+- Source problems explained — when a source fails, Cedar says what probably went wrong and what to try.
+
+#### Live TV, sports and DVR
+
+- On Now — everything airing right now, by genre, from the Guide.
+- Leagues & Teams — follow leagues and teams from the Sports Bar.
+- DVR pairing — Apple TV pairs with your Mac DVR through iCloud, and DVR connections recover on their own.
+
+#### Profiles and system
+
+- Who’s Watching — Cedar waits until you pick a profile before connecting its accounts and sources.
+- Settings on Apple TV — clearer rows and predictable focus.
+- Faster series pages — series pages open much faster on Apple TV.
+
+#### Fixes
+
+- Signing in to Jellyfin on one profile no longer signs the other profiles out.
+- Jellyfin-compatible servers that ignore change dates no longer re-read the whole library on every sync.
+- Profiles can be deleted while household credentials are still downloading.
+- Library Recently Watched keeps its titles after you mark something unwatched.
+- Live channels with a deep buffer now start, and image-based subtitles no longer cause dropped frames on high-bitrate 4K files.
+- WebDAV indexing errors are shown, and Explore, filter Apply and Who’s Watching navigation behave as expected.
+
+#### Known issues
+
+- Watch Together (SharePlay) appears in the player options but is not ready yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-70)
+
 ### 1.0.0 · build 69 · 2026-10-21
 
 October 21, 2026 · Released to External TestFlight for Apple TV.
@@ -2888,6 +3068,65 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 70 · 2026-10-23
+
+October 23, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Play on TV — send a movie or episode to your Apple TV from its menu, through iCloud. Cedar Remote and the Devices page are gone.
+- Branch row designs — Marquee, VHS, Logo and Spine Numbers give any Branch row a new look.
+- Sleep Timer — stop a video or Radio after a set time, or at the end of the episode or programme.
+- Catalog bridge servers — servers that serve streaming catalogs over the Jellyfin API are recognised and browsed live, with rows that load as you scroll.
+
+#### Home and Branches
+
+- Next Episodes — choose whether next episodes appear in Continue Watching, on their own Next Up row, or not at all.
+- Episode Heat Map — an optional series section that shows every episode at a glance, shaded by what you have watched or by rating.
+- Channel logo cards — channels without artwork show their logo on a glass card.
+- Wide View All — landscape groups and wide rows open into wide grids.
+- Poster menu — a redesigned press-and-hold menu, with Play Options and Next Up grouped together.
+- Hero Style — Match Home now follows your Home hero details.
+
+#### Playback
+
+- Cedar badges — a built-in badge pack shows resolution, HDR and audio in the player, with nothing to install.
+- Jellyfin scrub previews — thumbnails while scrubbing, on Jellyfin servers that create trickplay images.
+
+#### Sources and libraries
+
+- WebDAV under Media Servers — WebDAV shares now sit with your media servers, and their passwords sync to your devices through iCloud.
+- Source Settings — the separate Sources page is gone. Only Show Titles I Can Play is in Source Settings, and Home offers Add Playlist and Media Servers.
+- Lighter Xtream syncs — series episodes load when you open a series, not during every sync.
+- Connected Lists — paste a list link, search every connected service at once, and preview posters before adding.
+- Source problems explained — when a source fails, Cedar says what probably went wrong and what to try.
+
+#### Live TV, sports and DVR
+
+- On Now — everything airing right now, by genre, from the Guide.
+- Game Alerts — a notification before your teams play, set from the Sports Bar.
+- Expiry Reminders — a reminder before an IPTV subscription runs out.
+- DVR pairing — Apple TV pairs with your Mac DVR through iCloud, and DVR connections recover on their own.
+
+#### Profiles and system
+
+- Who’s Watching — Cedar waits until you pick a profile before connecting its accounts and sources.
+- Search Settings — find any setting by name.
+
+#### Fixes
+
+- Signing in to Jellyfin on one profile no longer signs the other profiles out.
+- Jellyfin-compatible servers that ignore change dates no longer re-read the whole library on every sync.
+- Profiles can be deleted while household credentials are still downloading.
+- Library Recently Watched keeps its titles after you mark something unwatched.
+
+#### Known issues
+
+- Watch Together (SharePlay) appears in the player options but is not ready yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-70)
 
 ### 1.0.0 · build 69 · 2026-10-21
 

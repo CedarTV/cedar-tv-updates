@@ -4,6 +4,42 @@
     {
       "platform": "iphone",
       "version": "1.0.0",
+      "build": "70",
+      "date": "2026-10-23",
+      "status": "testflight",
+      "summary": "External TestFlight. Play on TV, new Branch row designs, Sleep Timer, catalog bridge servers and an iOS 18 launch fix.",
+      "notes": "release-notes/apple/iphone/1.0.0-build-70.md"
+    },
+    {
+      "platform": "ipad",
+      "version": "1.0.0",
+      "build": "70",
+      "date": "2026-10-23",
+      "status": "testflight",
+      "summary": "External TestFlight. Play on TV, new Branch row designs, Sleep Timer, catalog bridge servers and an iOS 18 launch fix.",
+      "notes": "release-notes/apple/ipad/1.0.0-build-70.md"
+    },
+    {
+      "platform": "apple-tv",
+      "version": "1.0.0",
+      "build": "70",
+      "date": "2026-10-23",
+      "status": "testflight",
+      "summary": "External TestFlight. A new player timeline, Play on TV from your other devices, new Branch row designs, Sleep Timer and faster series pages.",
+      "notes": "release-notes/apple/apple-tv/1.0.0-build-70.md"
+    },
+    {
+      "platform": "mac",
+      "version": "1.0.0",
+      "build": "70",
+      "date": "2026-10-23",
+      "status": "testflight",
+      "summary": "External TestFlight. Play on TV, new Branch row designs, Sleep Timer, catalog bridge servers and DVR pairing with Apple TV.",
+      "notes": "release-notes/apple/mac/1.0.0-build-70.md"
+    },
+    {
+      "platform": "iphone",
+      "version": "1.0.0",
       "build": "69",
       "date": "2026-10-21",
       "status": "testflight",
