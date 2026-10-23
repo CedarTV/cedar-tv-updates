@@ -357,3 +357,18 @@ test("the slash commands offer only public roadmap statuses and the ticket subco
   assert.deepEqual(COMMANDS.find((entry) => entry.name === "ticket").options.map((option) => option.name), ["bug", "feature", "released"]);
   assert.ok(COMMANDS.every((entry) => entry.default_member_permissions === "0"));
 });
+
+test("the Discord client waits out rate limits and retries", async () => {
+  const { discordClient } = await import("../src/discord-render.js");
+  const answers = [
+    new Response(JSON.stringify({ message: "Maximum number of edits", retry_after: 2.5, code: 30046 }), { status: 429 }),
+    new Response(JSON.stringify({ id: "1" }), { status: 200 }),
+  ];
+  const waits = [];
+  const client = discordClient("token", async () => answers.shift(), async (ms) => { waits.push(ms); });
+  assert.deepEqual(await client.edit("c", "m", { content: "x" }), { id: "1" });
+  assert.deepEqual(waits, [2600]);
+  // A wait longer than 15 seconds isn't worth holding a request for.
+  const long = discordClient("token", async () => new Response(JSON.stringify({ retry_after: 60 }), { status: 429 }), async () => {});
+  await assert.rejects(long.send("c", {}), /answered 429/);
+});

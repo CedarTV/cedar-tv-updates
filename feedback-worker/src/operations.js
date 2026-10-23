@@ -511,22 +511,30 @@ export const ensureItemMessage = (deps, env, item) => later(deps, async () => {
   await deps.store.setItemMessage(itemNumber(item.id), channelID, message.id);
 });
 
-// Re-renders every panel and triage message with the current layout (after a deploy changes it).
+// Re-renders every panel with the current layout (after a deploy changes it). One panel that
+// can't be edited is reported and skipped rather than stopping the rest.
 export const refreshPanels = async (deps) => {
-  if (!deps.discord) return { entries: 0, tickets: 0 };
-  let entries = 0;
-  let tickets = 0;
+  const result = { entries: 0, tickets: 0, failed: [] };
+  if (!deps.discord) return result;
   for (const item of await deps.store.listItems()) {
     if (!item.discordChannelID || !item.discordMessageID) continue;
-    await deps.discord.edit(item.discordChannelID, item.discordMessageID, itemMessage(item, await deps.store.ticketsForEntry(itemNumber(item.id))));
-    entries += 1;
+    try {
+      await deps.discord.edit(item.discordChannelID, item.discordMessageID, itemMessage(item, await deps.store.ticketsForEntry(itemNumber(item.id))));
+      result.entries += 1;
+    } catch (error) {
+      result.failed.push(`${item.id}: ${error.message}`);
+    }
   }
   for (const ticket of await deps.store.listTickets()) {
     if (!ticket.discordThreadID) continue;
-    await inThread(deps, isClosed(ticket), isClosed(ticket), ticket.discordThreadID, () => deps.discord.edit(ticket.discordThreadID, ticket.discordThreadID, ticketMessage(ticket)));
-    tickets += 1;
+    try {
+      await inThread(deps, isClosed(ticket), isClosed(ticket), ticket.discordThreadID, () => deps.discord.edit(ticket.discordThreadID, ticket.discordThreadID, ticketMessage(ticket)));
+      result.tickets += 1;
+    } catch (error) {
+      result.failed.push(`${ticket.id}: ${error.message}`);
+    }
   }
-  return { entries, tickets };
+  return result;
 };
 
 export const exportAll = async (deps) => {
