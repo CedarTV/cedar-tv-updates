@@ -149,38 +149,56 @@ Run `node --test test/*.test.mjs`, each renderer with `--check`, and
 ## Cedar Creator
 
 `public/creator/` is the one place to shape a Cedar Home on the website, at
-<https://cedartv.github.io/cedar-tv-updates/creator/>. It has four tabs:
+<https://cedartv.github.io/cedar-tv-updates/creator/>. It's one workspace (`workspace.css`): a
+library on the left feeds the Home on the right, so nothing needs a separate page.
+
+The library has four tabs:
 
 - **Setups**: the curated catalog (`creator/setups.json`, built into `public/creator/items/` by
-  `scripts/build_creator_catalog.mjs`). Adding a setup or one of its branch groups puts it on Your Home.
-- **Your Home**: the builder that used to be Cedar Studio. Catalog picks sit alongside Branches and
-  Branch Groups built by hand or imported, with a Home preview, quick editor, source filters, group
-  device layouts, undo, and a draft saved in the browser. No emoji controls are used.
+  `scripts/build_creator_catalog.mjs`). **Preview** puts a setup on the preview with a banner before
+  anything is added; **+ Add** puts it on Your Home. The setup's details still list its groups,
+  which can be added one at a time.
+- **Photos** and **Badges**: the artwork galleries. Picking one puts it on Your Home straight away
+  and switches the preview to where Cedar shows it (Who's watching, or a title page's sources).
+  Badge sets show five representative badges on a dark strip (`sampleBadges` in
+  `artwork-model.mjs`); photo names that are file names are shown readably (`avatarName`).
+- **Build**: import a collection file, **+ Branch**, **+ Branch Group**, quick starts and the
+  draft file.
 
-  The Home preview (`public/creator/home-preview.mjs`) draws the same Branch JSON that export
-  writes, so a picked setup shows every row it publishes. Rows take their real style (poster, wide,
-  featured or hero) and each Branch Group shows its folder cards in the group's one shape (poster,
-  landscape or square), as Cedar does on the chosen device. A folder card opens the folder's page:
-  its rows (or chips and grid), or the folders inside a hub. **See all** opens a Branch's titles or
-  a group's cards. Titles are sample posters; covers, heroes and logos are the setup's own artwork.
-  Card and poster titles sit below the artwork by default; the preview's Titles menu also offers
-  Cedar's other positions (on the artwork, or hidden) and is remembered in the browser only.
+The Home side (`home-builder.mjs`) has the Your Home bar (photo, badges, counts, undo and **Open in
+Cedar**, which opens the export sheet), the preview, and **Home rows**. The preview switches between
+Home, a title page and Who's watching, between title positions, and between devices. The rows list
+pins the hero first, then every row with a show switch; opening a row edits it in place, with the
+same inspector, group contents, source filters, device layouts and Branch builder as before.
 
-  **+ Branch** opens the Branch builder (`public/creator/branch-builder.mjs`), the website's version
-  of Cedar's New Branch page: Content (Discover, Your Library, Saved & Tracked, or a public Trakt,
-  MDBList or TMDB list link), Build Your Own with Refine Results, Layout with a live preview, an
-  automatic or custom Branch Title, and Devices. Its choices and title rules come from the app
-  (`branch-options.mjs`), and a built Branch is stored and exported as Cedar's own `dataSource`,
-  `query` and filters. The same builder edits a row inside a Branch Group folder, and opens imported
-  TMDB and Trakt sources too.
-- **Profile photos** and **Source badges**: the artwork galleries. A profile photo can be put on Your
-  Home so the exported file offers it.
+The **hero** is off by default, which leaves each viewer's own hero alone. Switched on, it exports
+as a `hero-carousel` Branch placed first: Card, Fullscreen or Fade, one source (a Cedar feed, the
+viewer's watchlist or Up Next, the same source as one of the Home's Branches, or a source built in
+the Branch builder), the details it shows and up to 20 titles. Following another row by reference,
+a second source and their combination only exist in Cedar's profile-level hero, so Creator doesn't
+offer them. A profile file replaces the viewer's hero; Cedar shows the first hero on Home, so a
+Branches file's hero sits after the one a viewer already has.
 
-Import accepts external collection arrays, collection envelopes, Nuvio profile exports, and saved
+The Home preview (`public/creator/home-preview.mjs`) draws the same Branch JSON that export
+writes, so a picked setup shows every row it publishes. Rows take their real style (poster, wide,
+featured or hero), scroll sideways with arrows, and each Branch Group shows its folder cards in the
+group's one shape (poster, landscape or square), as Cedar does on the chosen device. A folder card
+opens the folder's page: its rows (or chips and grid), or the folders inside a hub. **See all**
+opens a Branch's titles or a group's cards. Titles are sample posters; covers, heroes and logos are
+the setup's own artwork. The title position is remembered in the browser only.
+
+**+ Branch** opens the Branch builder (`public/creator/branch-builder.mjs`), the website's version
+of Cedar's New Branch page: Content (Discover, Your Library, Saved & Tracked, or a public Trakt,
+MDBList or TMDB list link), Build Your Own with Refine Results, Layout with a live preview, an
+automatic or custom Branch Title, and Devices. Its choices and title rules come from the app
+(`branch-options.mjs`), and a built Branch is stored and exported as Cedar's own `dataSource`,
+`query` and filters. The same builder edits a row inside a Branch Group folder, builds a hero
+source, and opens imported TMDB and Trakt sources too.
+
+Import accepts collection arrays, collection envelopes, profile exports, Home shelf exports and saved
 v1/v2 drafts, through files, pasted JSON or public HTTPS URLs (10 MB maximum). A review precedes
-append, replace or add-missing. Kaptain's public v0.92 collection can be loaded through the import
-dialog; its JSON and artwork remain hosted by their original authors. Creator is the only place other
-apps' collection formats are read; the Cedar apps import only `.cedar` files.
+append, replace or add-missing. Creator is the only place other apps' collection formats are read;
+the Cedar apps import only `.cedar` files. The page itself names no other app.
 
 Export writes Cedar's native `.cedar` file, as described in `CEDAR_FILE_FORMAT.md` in the Cedar
 repository, through `public/shared/cedar-file.mjs`:
@@ -196,7 +214,7 @@ repository, through `public/shared/cedar-file.mjs`:
   Any hand-made row makes it a file-only Home with its own stable bundle ID.
 
 The browser never sends a file to a paired device. The old Studio address, `public/customize/`,
-redirects to the Your Home tab, and Creator moves an old cart and an old Studio draft into Your Home.
+opens Creator at Your Home, and Creator moves an old cart and an old Studio draft into Your Home.
 `Tests/Fixtures/CedarFormat/studio-export.cedar` and `studio-profile.cedar` in the Cedar repository
 come from this exporter and are checked by Cedar's own importer.
 

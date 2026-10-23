@@ -1,7 +1,7 @@
-// Creator: the setup catalog, profile photos and source badges, all feeding one Home built in the
-// Your Home tab (home-builder.mjs).
+// Creator: one workspace. The library on the left (setups, profile photos, source badges and the
+// builders) feeds the Home on the right, which home-builder.mjs draws and edits.
 import { isBadgePackID, parseCart, setupOf, setupOptions, setupTags } from "./creator-model.mjs";
-import { artworkURL, appURL, matchingOptions, avatarCategories, avatarOptions } from "./artwork-model.mjs";
+import { artworkURL, appURL, matchingOptions, avatarCategories, avatarOptions, avatarName, sampleBadges } from "./artwork-model.mjs";
 import { home } from "./home-builder.mjs";
 
 const $ = id => document.getElementById(id);
@@ -71,18 +71,15 @@ function add(entry) {
 
 function addButton(entry, labels) {
   const state = home.pickState(entry);
-  const button = element("button", { type: "button", class: `button ${state === "available" ? "button-primary" : "button-secondary"}` });
-  button.textContent = state === "added" ? "On Your Home ✓" : state === "included" ? "Included in setup" : labels.add;
+  const button = element("button", { type: "button", class: `button ${state === "available" ? "button-primary" : "button-added"}` });
+  button.textContent = state === "added" ? "✓ Added" : state === "included" ? "In its setup" : labels.add;
   button.disabled = state !== "available";
   button.addEventListener("click", () => add(entry));
   return button;
 }
 
 function renderHomeButton() {
-  const count = home.counts().rows;
-  $("home-button-count").textContent = String(count);
-  $("home-button").setAttribute("aria-label", `Open Your Home, ${plural(count, "row")}`);
-  $("home-button").classList.toggle("has-items", count > 0);
+  const count = home.counts().picks;
   $("home-tab-count").textContent = String(count);
   $("home-tab-count").hidden = count === 0;
 }
@@ -115,22 +112,31 @@ function coverMosaic(covers, label) {
 function renderSetups() {
   const options = setupOptions(setups, { query: $("setup-search").value, tag: $("setup-tag").value, sort: $("setup-sort").value });
   $("setup-status").textContent = setups.length
-    ? `${plural(options.length, "setup")}${$("setup-search").value || $("setup-tag").value ? " found" : ""}`
+    ? `${plural(options.length, "setup")}${$("setup-search").value || $("setup-tag").value ? " found" : ""} · Preview shows one on the screen before you add it.`
     : $("setup-status").textContent;
+  const previewing = home.previewing();
   $("setup-grid").replaceChildren(...options.map(setup => {
-    const details = element("button", { type: "button", class: "button button-secondary", text: "View groups" });
-    details.addEventListener("click", () => openSetup(setup.id));
+    const entry = { type: "setup", id: setup.id };
+    const state = home.pickState(entry);
     const title = element("button", { type: "button", class: "setup-title-button", text: setup.title });
     title.addEventListener("click", () => openSetup(setup.id));
-    return element("article", { class: "setup-card" }, [
+    const actions = element("div", { class: "setup-actions" });
+    if (state === "available") {
+      const isPreviewing = previewing === setup.id;
+      const preview = element("button", { type: "button", class: "button button-secondary", text: isPreviewing ? "Previewing" : "Preview", "aria-pressed": String(isPreviewing) });
+      preview.addEventListener("click", () => home.preview(isPreviewing ? null : entry, setup.title));
+      actions.append(preview);
+    }
+    actions.append(addButton(entry, { add: "+ Add" }));
+    const details = element("button", { type: "button", class: "text-link", text: `${plural(setup.groupCount, "group")} · ${plural(setup.branchCount, "row")}` });
+    details.addEventListener("click", () => openSetup(setup.id));
+    return element("article", { class: `setup-card${previewing === setup.id ? " previewing" : ""}` }, [
       coverMosaic(setup.covers, setup.title),
       element("div", { class: "setup-body" }, [
-        element("p", { class: "setup-creator", text: byline(setup) }),
         element("h2", {}, [title]),
-        element("p", { class: "setup-description", text: setup.description }),
-        element("ul", { class: "setup-tags", "aria-label": "Categories" }, setup.tags.map(tag => element("li", { text: tag }))),
-        element("p", { class: "setup-meta", text: `${plural(setup.groupCount, "group")} · ${plural(setup.branchCount, "branch")}` }),
-        element("div", { class: "setup-actions" }, [addButton({ type: "setup", id: setup.id }, { add: "Add setup" }), details]),
+        element("p", { class: "setup-creator", text: byline(setup) }),
+        element("p", { class: "setup-meta" }, [details, setup.tags.length ? ` · ${setup.tags.slice(0, 3).join(", ")}` : ""]),
+        actions,
       ]),
     ]);
   }));
@@ -188,39 +194,52 @@ const galleryImage = (path, name) => {
   return image;
 };
 
-function selectArtwork(option) {
+const galleryName = option => gallery.kind === "avatars" ? avatarName(option) : option.label;
+const isChosen = option => gallery.kind === "avatars" ? home.avatar() === option.url.slice(1) : home.badgePack() === option.id;
+
+/** Puts a photo or badge set on Your Home and shows it where Cedar does. */
+function selectArtwork(option, { apply = true } = {}) {
   gallery.selected = option;
   const isAvatar = gallery.kind === "avatars";
-  const name = option.name || option.label;
+  const name = galleryName(option);
+  if (apply) {
+    if (isAvatar && option.url) { home.setAvatar(option.url.slice(1)); home.showScreen("who"); }
+    if (!isAvatar && isBadgePackID(option.id)) { home.setBadgePack(option.id); home.showScreen("title"); }
+  }
   const source = artworkURL(isAvatar ? option.url : option.sourceURL, gallery.kind);
   $("selection-title").textContent = name;
   $("selection-url").value = source;
   $("open-cedar").href = appURL(source, gallery.kind);
   $("manual-help").textContent = isAvatar
-    ? "Use it on Your Home so it travels in your .cedar file, or open it in Cedar now. To paste it yourself, edit your profile → avatar → Custom Image → Image Link."
-    : "Use it on Your Home so Cedar installs it with your .cedar file, or open it in Cedar now. To paste it yourself, open Source Badges in Cedar Settings, paste the URL and choose Add Badge Pack.";
+    ? "It travels in your .cedar file. A new profile made from it uses this photo; others are offered it."
+    : "Cedar installs these badges with your Home and draws them on each source of a title.";
   $("copy-status").textContent = "";
   $("preview").classList.toggle("avatar", isAvatar);
-  $("preview").replaceChildren(...(isAvatar ? [galleryImage(option.url, name)] : option.badges.slice(0, 4).map(badge => galleryImage(badge.imageURL, badge.name))));
+  $("preview").replaceChildren(...(isAvatar ? [galleryImage(option.url, name)] : sampleBadges(option).map(badge => galleryImage(badge.imageURL, badge.name))));
   $("full-set").open = false;
   $("full-set").hidden = isAvatar;
-  $("full-set-label").textContent = `View full set (${option.badges?.length || 0} badges)`;
+  $("full-set-label").textContent = `View all ${option.badges?.length || 0} badges`;
   $("full-set-grid").replaceChildren();
   $("selection").hidden = false;
   renderGallery();
-  $("selection").scrollIntoView({ block: "start", behavior: "instant" });
-  $("add-avatar").focus({ preventScroll: true });
 }
 
 function renderGallery() {
   const options = gallery.kind === "avatars"
     ? avatarOptions(gallery.catalogs.avatars || [], $("search").value, $("category").value, $("sort").value)
     : matchingOptions(gallery.catalogs.badges || [], $("search").value);
-  $("status").textContent = `${options.length} ${gallery.kind === "avatars" ? "profile photos" : "badge sets"}${$("search").value ? " found" : " available"}`;
+  $("status").textContent = `${options.length} ${gallery.kind === "avatars" ? "profile photos" : "badge sets"}${$("search").value ? " found" : ""} · ${gallery.kind === "avatars" ? "Pick one to see it on Who’s Watching." : "Pick one to see it on a title’s sources."}`;
+  $("gallery").classList.toggle("badge-sets", gallery.kind === "badges");
   $("gallery").replaceChildren(...options.slice(0, gallery.visible).map(option => {
-    const button = element("button", { type: "button", class: "artwork-choice", "aria-pressed": String(gallery.selected === option) });
-    const detail = gallery.kind === "avatars" ? (option.category || "Profile photo") : [`${option.badges.length} badges`, option.creator || option.style].filter(Boolean).join(" · ");
-    button.append(galleryImage(option.url || option.badges[0]?.imageURL || "", ""), element("span", { text: option.name || option.label }), element("small", { text: detail }));
+    const chosen = isChosen(option);
+    const button = element("button", { type: "button", class: `artwork-choice${chosen ? " chosen" : ""}`, "aria-pressed": String(chosen) });
+    if (gallery.kind === "avatars") {
+      button.append(galleryImage(option.url, ""), element("span", { text: avatarName(option) }), element("small", { text: option.category || "Profile photo" }));
+    } else {
+      const strip = element("span", { class: "badge-strip", "aria-hidden": "true" }, sampleBadges(option).map(badge => galleryImage(badge.imageURL, "")));
+      const text = element("span", { class: "badge-set-text" }, [element("span", { text: option.label }), element("small", { text: [`${option.badges.length} badges`, option.creator ? `by ${option.creator}` : option.style].filter(Boolean).join(" · ") })]);
+      button.append(strip, text, element("span", { class: "check", "aria-hidden": "true", text: "✓" }));
+    }
     button.addEventListener("click", () => selectArtwork(option));
     return button;
   }));
@@ -234,27 +253,35 @@ async function loadGallery(kind) {
   $("sort-control").hidden = kind !== "avatars";
   $("status").textContent = "Loading artwork…";
   try {
-    if (!gallery.catalogs[kind]) {
-      const response = await fetch(`../catalogs/${kind}.json`);
-      if (!response.ok) throw new Error("Unavailable");
-      const data = await response.json();
-      gallery.catalogs[kind] = data.avatars || data.sets;
-      if (kind === "avatars") avatarsByPath = new Map(data.avatars.map(avatar => [avatar.url.slice(1), avatar]));
-    }
+    await loadCatalog(kind);
     if (gallery.kind !== kind) return;
     if (kind === "avatars") {
       const previous = $("category").value;
       $("category").replaceChildren(new Option("All categories", ""), ...avatarCategories(gallery.catalogs.avatars).map(value => new Option(value, value)));
       $("category").value = previous;
     }
-    renderGallery();
+    // Whatever Your Home already uses is shown first as the selection.
+    const current = gallery.catalogs[kind].find(isChosen);
+    if (current) selectArtwork(current, { apply: false }); else renderGallery();
   } catch { if (gallery.kind === kind) $("status").textContent = "Artwork could not load. Refresh this page to try again."; }
+}
+
+async function loadCatalog(kind) {
+  if (gallery.catalogs[kind]) return gallery.catalogs[kind];
+  const response = await fetch(`../catalogs/${kind}.json`);
+  if (!response.ok) throw new Error("Unavailable");
+  const data = await response.json();
+  gallery.catalogs[kind] = data.avatars || data.sets;
+  if (kind === "avatars") avatarsByPath = new Map(data.avatars.map(avatar => [avatar.url.slice(1), avatar]));
+  return gallery.catalogs[kind];
 }
 
 // MARK: Tabs
 
 const tabs = [...document.querySelectorAll("[role=tab]")];
 function selectTab(name, { focus = false } = {}) {
+  if (name === "home") { $("panel-home").scrollIntoView({ block: "start", behavior: "smooth" }); return; }
+  if (!tabs.some(tab => tab.dataset.tab === name)) name = "setups";
   for (const tab of tabs) {
     const selected = tab.dataset.tab === name;
     tab.setAttribute("aria-selected", String(selected));
@@ -263,9 +290,8 @@ function selectTab(name, { focus = false } = {}) {
   }
   const isGallery = name === "avatars" || name === "badges";
   $("panel-setups").hidden = name !== "setups";
-  $("panel-home").hidden = name !== "home";
+  $("panel-build").hidden = name !== "build";
   $("panel-gallery").hidden = !isGallery;
-  $("home-button").hidden = name === "home";
   if (isGallery) $("panel-gallery").setAttribute("aria-labelledby", `tab-${name}`);
   if (isGallery && gallery.shown !== name) { $("search").value = ""; loadGallery(name); }
   const url = new URL(location.href);
@@ -289,10 +315,10 @@ for (const dialog of document.querySelectorAll(".creator-dialog")) {
     if (event.target === dialog || event.target.closest("[data-close]")) dialog.close();
   });
 }
-$("home-button").addEventListener("click", () => { selectTab("home"); $("panel-home").scrollIntoView({ block: "start" }); });
 home.onChange(() => {
   renderHomeButton();
   renderSetups();
+  if (gallery.shown && !$("panel-gallery").hidden && gallery.catalogs[gallery.kind]) renderGallery();
   if ($("setup-dialog").open) renderSetupDialog(currentSetup);
 });
 $("setup-search").addEventListener("input", renderSetups);
@@ -302,18 +328,6 @@ $("search").addEventListener("input", () => { gallery.visible = 48; renderGaller
 for (const control of [$("category"), $("sort")]) control.addEventListener("change", () => { gallery.visible = 48; renderGallery(); });
 $("more").addEventListener("click", () => { gallery.visible += 48; renderGallery(); });
 $("copy").addEventListener("click", () => copyText($("selection-url").value, $("copy-status"), $("selection-url"), "URL copied. Paste it into Cedar."));
-$("add-avatar").addEventListener("click", () => {
-  const option = gallery.selected;
-  if (gallery.kind === "badges") {
-    if (!isBadgePackID(option?.id)) return;
-    home.setBadgePack(option.id);
-    toast(`${option.label || "These source badges"} will be installed with Your Home.`);
-    return;
-  }
-  if (!option?.url) return;
-  home.setAvatar(option.url.slice(1));
-  toast(`${option.name || "Profile photo"} will travel with Your Home.`);
-});
 $("full-set").addEventListener("toggle", () => {
   if (!$("full-set").open || !gallery.selected?.badges || $("full-set-grid").childElementCount) return;
   $("full-set-grid").append(...gallery.selected.badges.map(badge =>
@@ -323,18 +337,13 @@ $("full-set").addEventListener("toggle", () => {
 async function start() {
   const query = new URLSearchParams(location.search);
   const requestedTab = query.get("tab") || ({ avatars: "avatars", badges: "badges" })[query.get("kind")];
-  if (["home", "avatars", "badges"].includes(requestedTab)) selectTab(requestedTab);
+  if (["avatars", "badges", "build"].includes(requestedTab)) selectTab(requestedTab);
   try {
-    const [catalogResponse, avatarResponse, badgeResponse] = await Promise.all([fetch("../catalogs/creator.json"), fetch("../catalogs/avatars.json"),
-      home.badgePack() ? fetch("../catalogs/badges.json") : null]);
+    const catalogResponse = await fetch("../catalogs/creator.json");
     if (!catalogResponse.ok) throw new Error("Unavailable");
-    if (badgeResponse?.ok) gallery.catalogs.badges ??= (await badgeResponse.json()).sets;
+    // Photos and badges also draw on the preview, so both catalogs load with the page.
+    await Promise.all([loadCatalog("avatars"), loadCatalog("badges")]).catch(() => {});
     setups = (await catalogResponse.json()).setups;
-    if (avatarResponse.ok) {
-      const data = await avatarResponse.json();
-      gallery.catalogs.avatars ??= data.avatars;
-      avatarsByPath = new Map(data.avatars.map(avatar => [avatar.url.slice(1), avatar]));
-    }
   } catch {
     $("setup-status").textContent = "Setups could not load. Refresh this page to try again.";
     return;
@@ -343,8 +352,10 @@ async function start() {
   groupsByID = new Map(setups.flatMap(setup => setup.groups.map(group => [group.id, group])));
   home.connect({
     describePick: describe,
-    describeAvatar: path => avatarsByPath.get(path)?.name,
+    describeAvatar: path => { const avatar = avatarsByPath.get(path); return avatar && avatarName(avatar); },
     describeBadgePack: id => gallery.catalogs.badges?.find(set => set.id === id)?.label,
+    badgeImages: id => { const set = gallery.catalogs.badges?.find(item => item.id === id); return set ? sampleBadges(set) : []; },
+    describeSetup: id => setupsByID.get(id),
     openSetup: item => openSetup(setupOf(item.id)),
     showTab: selectTab,
   });

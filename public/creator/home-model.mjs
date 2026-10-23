@@ -2,7 +2,7 @@
 // apps' collection JSON or built by hand. It writes Cedar's native .cedar files: a Branches file to
 // share, or a sealed profile file that keeps the owner's Tobacco Ties.
 import {branchesFile,profileFile,cedarDate,findTobaccoTies,addonFamily} from '../shared/cedar-file.mjs';
-import {cleanCedarSource,sourceIssue,families} from './branch-options.mjs';
+import {cleanCedarSource,cleanFilters,sourceIssue,families} from './branch-options.mjs';
 import {creatorBundleID,maximumCartItems,isItemID,isAvatarPath,avatarURL,isBadgePackID,badgePackURL,setupOf} from './creator-model.mjs';
 export const MAX_BYTES = 10 * 1024 * 1024;
 export const deviceFamilies = ['phone','tablet','desktop','television'];
@@ -84,14 +84,64 @@ function cleanChild(v){if(!obj(v)||!Array.isArray(v.sources)||v.sources.length>1
 function cleanPick(v){if(!obj(v)||!['setup','group'].includes(v.type)||!isItemID(v.id)||(v.type==='group')!==v.id.includes('.'))throw Error('Invalid Creator pick.');return {type:v.type,id:v.id};}
 export function makePick(item,title){return {id:`pick.${item.id}`,kind:'pick',title:name(title,'Creator setup'),enabled:true,item:cleanPick(item)};}
 /** The picks as a Creator cart, so a Home made only of enabled picks can still be shared as a link. */
-export function draftCart(draft){if(!draft.rows.length||draft.rows.some(r=>r.kind!=='pick'||!r.enabled))return null;const cart=draft.rows.map(r=>({...r.item}));if(draft.avatar)cart.push({type:'avatar',id:draft.avatar});if(draft.badgePack)cart.push({type:'badges',id:draft.badgePack});return cart;}
+export function draftCart(draft){if(draft.hero||!draft.rows.length||draft.rows.some(r=>r.kind!=='pick'||!r.enabled))return null;const cart=draft.rows.map(r=>({...r.item}));if(draft.avatar)cart.push({type:'avatar',id:draft.avatar});if(draft.badgePack)cart.push({type:'badges',id:draft.badgePack});return cart;}
 /** Adds a catalog pick. A whole setup replaces any of its groups already on Home; a group already inside a picked setup is not added again. */
 export function addPick(draft,item,title){const picks=draft.rows.filter(r=>r.kind==='pick');if(picks.some(r=>r.item.id===item.id))return 'duplicate';if(item.type==='group'&&picks.some(r=>r.item.type==='setup'&&r.item.id===setupOf(item.id)))return 'included';const row=makePick(item,title);if(item.type==='setup'){const isGroupOf=r=>r.kind==='pick'&&r.item.type==='group'&&setupOf(r.item.id)===item.id;const first=draft.rows.findIndex(isGroupOf);if(first>=0){draft.rows=draft.rows.flatMap((r,i)=>i===first?[row]:isGroupOf(r)?[]:[r]);return 'replaced';}}if(picks.length>=maximumCartItems)return 'full';draft.rows.push(row);return 'added';}
 export function pickState(draft,item){const picks=draft.rows.filter(r=>r.kind==='pick');if(picks.some(r=>r.item.id===item.id))return 'added';if(item.type==='group'&&picks.some(r=>r.item.type==='setup'&&r.item.id===setupOf(item.id)))return 'included';return 'available';}
+// MARK: Hero
+// The hero is the carousel at the top of Home. A draft without one leaves the viewer's own hero
+// alone. Exported, it's a hero-carousel Branch (CEDAR_FILE_FORMAT.md §7.1): one source, a style,
+// the details it shows and how many titles it pages through.
+export const heroStyles=['card','fullscreen','fade'];
+export const heroStyleNames={card:'Card',fullscreen:'Fullscreen',fade:'Fade'};
+export const heroFields=['genre','description','ratings','ageRating','releaseDate','mediaType'];
+export const heroFieldNames={genre:'Genre',description:'Description',ratings:'Ratings',ageRating:'Age rating',releaseDate:'Year',mediaType:'Movie or show'};
+const metadataSource={kind:'preferredMetadata',parameters:{}};
+/** The title feeds a hero can read. Cedar's own default is Trending this week. */
+export const heroFeeds={
+ 'trending-week':{title:'Trending this week',dataSource:metadataSource,query:{kind:'trending',parameters:{window:'week'}}},
+ 'trending-day':{title:'Trending today',dataSource:metadataSource,query:{kind:'trending',parameters:{window:'day'}}},
+ popular:{title:'Popular movies & shows',dataSource:metadataSource,query:{kind:'popular',parameters:{}}},
+ 'top-rated':{title:'Top rated',dataSource:metadataSource,query:{kind:'topRated',parameters:{}}},
+ watchlist:{title:'The viewer’s watchlist',dataSource:{kind:'trackingService',parameters:{}},query:{kind:'watchlist',parameters:{}}},
+ 'up-next':{title:'The viewer’s Up Next',dataSource:{kind:'local',parameters:{}},query:{kind:'upNext',parameters:{}}},
+};
+export const heroLimits={min:1,max:20,default:10};
+export function newHero(){return {style:'fullscreen',fields:[...heroFields],limit:heroLimits.default,source:{kind:'feed',feed:'trending-week'}};}
+/** Mirrors Cedar's ShelfSource.isHeroEligible: the hero needs titles it can look up, never playback rows. */
+export function heroEligible(src){const ds=src?.dataSource?.kind;if(['preferredMetadata','metadataProvider','trackingService','custom'].includes(ds))return true;return ds==='local'&&['upNext','watchlist','collection'].includes(src.query?.kind);}
+function cleanHero(v){
+ if(!obj(v))return null;
+ const h={style:heroStyles.includes(v.style)?v.style:'fullscreen',fields:heroFields.filter(f=>Array.isArray(v.fields)&&v.fields.includes(f)),limit:Number.isSafeInteger(v.limit)?Math.min(Math.max(v.limit,heroLimits.min),heroLimits.max):heroLimits.default};
+ const s=obj(v.source)?v.source:{};
+ if(s.kind==='row'&&typeof s.rowId==='string')h.source={kind:'row',rowId:text(s.rowId)};
+ else if(s.kind==='custom'){try{const cedar=cleanCedarSource(s.cedar);h.source=heroEligible(cedar)?{kind:'custom',title:name(s.title,'Custom source'),cedar}:{kind:'feed',feed:'trending-week'};}catch{h.source={kind:'feed',feed:'trending-week'};}}
+ else h.source={kind:'feed',feed:heroFeeds[s.feed]?s.feed:'trending-week'};
+ return h;
+}
+/** What the hero reads, as Cedar's dataSource/query/filters, or {problem}. */
+export function heroSource(draft){
+ const s=draft.hero?.source;if(!s)return {problem:'No hero source.'};
+ if(s.kind==='feed'){const f=heroFeeds[s.feed];return {dataSource:structuredClone(f.dataSource),query:structuredClone(f.query),filters:cleanFilters({contentType:'both'})};}
+ if(s.kind==='custom')return structuredClone(s.cedar);
+ const r=draft.rows.find(x=>x.id===s.rowId);
+ if(!r||r.kind!=='branch')return {problem:'The row the hero followed is no longer on Your Home.'};
+ const p=sourceProblem(r.source,true);if(p)return {problem:p};
+ const c=cedarSource(r.source);return heroEligible(c)?c:{problem:`${r.title} plays from a source the hero can’t show.`};
+}
+/** A short name for what the hero reads. */
+export function heroSourceName(draft){const s=draft.hero?.source;if(!s)return '';if(s.kind==='feed')return heroFeeds[s.feed].title;if(s.kind==='custom')return s.title||'Custom source';return draft.rows.find(r=>r.id===s.rowId)?.title||'A removed row';}
+function heroBranch(draft,bundleID){
+ const h=draft.hero,src=heroSource(draft);if(src.problem)return src;
+ const ratings={isEnabled:h.fields.includes('ratings'),providerIDs:[]};
+ // Fade travels as Fullscreen plus fadesArtwork, which older Cedar versions read as Fullscreen.
+ const hero={style:h.style==='fade'?'fullscreen':h.style,...(h.style==='fade'?{fadesArtwork:true}:{}),metadataFields:[...h.fields].sort(),ratings,automaticallyPlaysTrailer:false,trailerDelay:5,trailerAudioEnabled:false};
+ return {id:stableUUID(bundleID,'hero'),profileID:'00000000-0000-0000-0000-000000000000',schemaVersion:2,title:'Featured',titleMode:'custom',dataSource:src.dataSource,query:src.query,defaultFilters:src.filters,presentation:{templateID:'hero-carousel',enhancedPostersEnabled:false,ratings,hero},folderOptions:[],position:0,isEnabled:true,pageSize:h.limit};
+}
 export function validateDraft(v){
  if(!obj(v)||v.version!==2||!Array.isArray(v.rows)||v.rows.length>1000)throw Error('Choose a supported collection or saved Creator draft.');
  let total=0;const ids=new Set();const rows=v.rows.map(r=>{if(!obj(r)||!['branch','group','pick'].includes(r.kind))throw Error('Invalid Home row.');const row={id:text(r.id,uid()),kind:r.kind,title:name(r.title,'Untitled branch'),enabled:r.enabled!==false};if(ids.has(row.id))throw Error('The draft contains duplicate Home row IDs.');ids.add(row.id);if(r.kind==='branch'){row.source=sanitizeSource(r.source);if(rowStyles.includes(r.rowStyle))row.rowStyle=r.rowStyle;if(r.posterLook==='critic')row.posterLook='critic';if(r.titleMode==='automatic')row.titleMode='automatic';const platforms=Array.isArray(r.platforms)?families.filter(f=>r.platforms.includes(f)):[];if(platforms.length&&platforms.length<families.length)row.platforms=platforms;total++;}else if(r.kind==='pick'){row.item=cleanPick(r.item);}else{if(!Array.isArray(r.branches)||r.branches.length>2000)throw Error('Too many branches in this group.');row.branches=r.branches.map(cleanChild);row.deviceLayout=validateDeviceLayout(r.deviceLayout||newDeviceLayout());const childIDs=new Set();for(const b of row.branches){if(childIDs.has(b.id))throw Error('The group contains duplicate branch IDs.');childIDs.add(b.id);const sourceIDs=new Set();for(const s of b.sources){if(sourceIDs.has(s.id))s.id=uid();sourceIDs.add(s.id);}total+=b.sources.length;}}return row;});
- if(total>15000)throw Error('Choose a collection with fewer than 15,000 sources.');const draft={version:2,title:name(v.title,'My Home'),rows};if(isAvatarPath(v.avatar))draft.avatar=v.avatar;if(isBadgePackID(v.badgePack))draft.badgePack=v.badgePack;if(typeof v.bundleID==='string'&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v.bundleID))draft.bundleID=v.bundleID.toUpperCase();return draft;
+ if(total>15000)throw Error('Choose a collection with fewer than 15,000 sources.');const draft={version:2,title:name(v.title,'My Home'),rows};if(isAvatarPath(v.avatar))draft.avatar=v.avatar;if(isBadgePackID(v.badgePack))draft.badgePack=v.badgePack;{const hero=cleanHero(v.hero);if(hero)draft.hero=hero;}if(typeof v.bundleID==='string'&&/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(v.bundleID))draft.bundleID=v.bundleID.toUpperCase();return draft;
 }
 const builtin={trending_movies:'TRENDING',trending_series:'TRENDING',trending_shows:'TRENDING',popular_movies:'POPULAR',popular_series:'POPULAR',popular_shows:'POPULAR',top_rated_movies:'TOP_RATED',toprated_movies:'TOP_RATED',top_rated_series:'TOP_RATED',top_rated_shows:'TOP_RATED',toprated_series:'TOP_RATED',toprated_shows:'TOP_RATED',upcoming_movies:'UPCOMING',now_playing_movies:'NOW_PLAYING',nowplaying_movies:'NOW_PLAYING',airing_today_series:'AIRING_TODAY',airing_today_shows:'AIRING_TODAY',on_the_air_series:'ON_THE_AIR',on_the_air_shows:'ON_THE_AIR'};
 function resolveCatalog(ref,config){const id=ref.catalogId||'',type=ref.type||(/series|shows/.test(id)?'series':'movie'),label=config.catalog_name_overrides?.[id]||config.custom_lists?.find(l=>l.id===id)?.label||id.replaceAll('_',' ');const common={id:`catalog:${id}`,title:label,mediaType:type};const discover=config.discover_catalogs?.[id];if(discover)return {...common,provider:'tmdb',tmdbSourceType:'DISCOVER',filters:discover.filters,sortBy:discover.sort_by};if(builtin[id])return {...common,provider:'tmdb',tmdbSourceType:builtin[id]};const list=config.custom_lists?.find(l=>l.id===id);if(list){const n=Number(id.match(/^(?:tmdb|trakt)_list_(\d+)/)?.[1]);return {...common,provider:list.provider,mediaType:list.kind||type,...(list.provider==='tmdb'?{tmdbSourceType:'LIST',tmdbId:n}:{traktListId:n})};}return {...ref,title:label,provider:ref.provider||'addon'};}
@@ -236,7 +286,8 @@ const branch=(id,title,base,template,folderOptions=[],{posterLook,titleMode='cus
  an add-on source, so a profile export keeps rows a Branches file has to leave out. `items` holds the
  downloaded catalog file of each pick, by item ID; a pick's Branches are copied as published. */
 function cedarBranches(draft,bundleID,tieFor=()=>null,items={}){
- const branches=[],issues=[],credits=[],titles=[],seen=new Set();let groups=0;
+ const branches=[],issues=[],credits=[],titles=[],seen=new Set();let groups=0,hero=false;
+ if(draft.hero){const h=heroBranch(draft,bundleID);if(h.problem)issues.push(`Hero: ${h.problem} Cedar keeps the viewer’s own hero.`);else{branches.push(h);hero=true;}}
  const convert=(s,direct)=>{const tie=s.provider==='addon'?tieFor(s):null;if(tie)return tieSource(s,tie);const p=sourceProblem(s,direct);return p?{problem:p}:cedarSource(s);};
  for(const row of draft.rows){if(!row.enabled)continue;
   if(row.kind==='pick'){const file=items[row.item.id];if(!obj(file)||!Array.isArray(file.branches)){issues.push(`${row.title}: this setup could not be downloaded.`);continue;}titles.push(file.title||row.title);if(file.credits&&!credits.some(c=>JSON.stringify(c)===JSON.stringify(file.credits)))credits.push(file.credits);for(const b of file.branches){if(!obj(b)||seen.has(b.id))continue;seen.add(b.id);branches.push(structuredClone(b));if(isBranchGroupJSON(b))groups++;}continue;}
@@ -254,15 +305,17 @@ function cedarBranches(draft,bundleID,tieFor=()=>null,items={}){
   }
  }
  if(!branches.length)throw Error('Enable at least one compatible branch or source before exporting.');
- return {branches,issues,groups,credits,titles};
+ return {branches,issues,groups,credits,titles,hero};
 }
 /** The Cedar Branches one Home row becomes, exactly as export writes them: a pick's published
  Branches (shared, not copied: read them only), or the row converted. null while a pick's file
  isn't in `items` yet. */
-export function rowBranches(draft,row,items={}){if(!row.enabled)return [];if(row.kind==='pick'){const file=items[row.item.id];return file?(Array.isArray(file.branches)?file.branches.filter(obj):[]):null;}try{return cedarBranches({...draft,rows:[row]},draft.bundleID||creatorBundleID,undefined,items).branches;}catch{return [];}}
+export function rowBranches(draft,row,items={}){if(!row.enabled)return [];if(row.kind==='pick'){const file=items[row.item.id];return file?(Array.isArray(file.branches)?file.branches.filter(obj):[]):null;}try{return cedarBranches({...draft,hero:undefined,rows:[row]},draft.bundleID||creatorBundleID,undefined,items).branches;}catch{return [];}}
+/** The hero exactly as export writes it, or {problem}; null when the draft keeps the viewer’s hero. */
+export function previewHero(draft){return draft.hero?heroBranch(draft,draft.bundleID||creatorBundleID):null;}
 const isBranchGroupJSON=b=>b.dataSource?.kind==='custom'&&b.dataSource?.identifier==='cedar.branch-group';
 const generator={application:'Cedar Creator'};
-const onlyPicks=draft=>draft.rows.length>0&&draft.rows.every(r=>r.kind==='pick');
+const onlyPicks=draft=>!draft.hero&&draft.rows.length>0&&draft.rows.every(r=>r.kind==='pick');
 /**
  * The Home as a `.cedar` Branches file. A Home made only of catalog picks is written exactly as
  * Creator's own files are, under Creator's bundle ID, so it updates the same Branches in Cedar as
@@ -270,10 +323,10 @@ const onlyPicks=draft=>draft.rows.length>0&&draft.rows.every(r=>r.kind==='pick')
  */
 export function exportCedar(value,now=new Date(),items={}){
  const draft=validateDraft(value),picksOnly=onlyPicks(draft),bundleID=picksOnly?creatorBundleID:draft.bundleID||uid().toUpperCase();
- const {branches,issues,groups,credits,titles}=cedarBranches(draft,bundleID,undefined,items);
+ const {branches,issues,groups,credits,titles,hero}=cedarBranches(draft,bundleID,undefined,items);
  const title=picksOnly&&titles.length===1?titles[0]:picksOnly&&draft.title==='My Home'?'Cedar Creator selection':draft.title;
  const document=branchesFile({bundleID,title,createdAt:cedarDate(now),generator,branches,avatarURL:draft.avatar?avatarURL(draft.avatar):null,badgePackURL:draft.badgePack?badgePackURL(draft.badgePack):null,extra:credits.length?{credits:credits.length===1?credits[0]:credits}:{}});
- return {document,issues,bundleID:picksOnly?draft.bundleID:bundleID,branchCount:branches.length-groups,groupCount:groups};
+ return {document,issues,bundleID:picksOnly?draft.bundleID:bundleID,branchCount:branches.length-groups-(hero?1:0),groupCount:groups,hero};
 }
 /** A row that reads one catalog of a Tobacco Tie in the same profile file (CEDAR_FILE_FORMAT.md §9.2). */
 function tieSource(s,tie){const type=s.type||(s.mediaType==='tv'?'series':s.mediaType)||'movie';return {dataSource:{kind:'manifestAddon',identifier:tie.id.toLowerCase(),parameters:{}},query:{kind:'addonCatalog',identifier:`${tie.manifestID}|${type}|${s.catalogId}`,parameters:{}},filters:cedarFilters(cedarContent(type))};}
@@ -288,13 +341,13 @@ export async function exportCedarProfile(value,{passphrase='',ties=[],now=new Da
  const fileTies=ties.map(t=>({...t,id:stableUUID(bundleID,`tie.${t.url}`)}));
  const byID=new Map(),byFamily=new Map();for(const t of fileTies)if(t.manifestID){byID.set(t.manifestID.toLowerCase(),t);if(!byFamily.has(addonFamily(t.manifestID)))byFamily.set(addonFamily(t.manifestID),t);}
  const used=new Set();const tieFor=s=>{if(!s.addonId||!s.catalogId)return null;const t=byID.get(s.addonId.toLowerCase())||byFamily.get(addonFamily(s.addonId));if(t)used.add(t.id);return t||null;};
- const {branches,issues,groups}=cedarBranches(draft,bundleID,tieFor,items);
+ const {branches,issues,groups,hero}=cedarBranches(draft,bundleID,tieFor,items);
  const payload={home:{branches:branches.map((b,position)=>({...b,position})),shelves:[]}};
  // The photo and badge pack travel as the profile's identity. No name, so the profile keeps the one chosen in Cedar.
  if(draft.avatar||draft.badgePack)payload.identity={...(draft.avatar?{avatar:avatarURL(draft.avatar)}:{}),...(draft.badgePack?{badgePackURL:badgePackURL(draft.badgePack)}:{})};
  if(fileTies.length)payload.tobaccoTies={ties:fileTies.map(t=>({id:t.id,url:t.url,...(t.name?{name:t.name}:{}),enabledCatalogIDs:[]})),settings:[]};
  const document=await profileFile({bundleID,title:draft.title,createdAt:cedarDate(now),generator,payload,passphrase});
  const linkedRows=branches.flatMap(b=>[b,...b.folderOptions.flatMap(f=>f.sources||[])]).filter(x=>x.dataSource?.kind==='manifestAddon').length;
- return {document,issues,bundleID,branchCount:branches.length-groups,groupCount:groups,tieCount:fileTies.length,linkedRows,unusedTies:fileTies.filter(t=>!used.has(t.id)).length};
+ return {document,issues,bundleID,branchCount:branches.length-groups-(hero?1:0),groupCount:groups,hero,tieCount:fileTies.length,linkedRows,unusedTies:fileTies.filter(t=>!used.has(t.id)).length};
 }
 export function cedarFileName(title){return `${String(title||'').replace(/[^A-Za-z0-9 _-]+/g,'').trim().replace(/\s+/g,'-')||'Cedar-Home'}.cedar`;}
