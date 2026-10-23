@@ -1,8 +1,8 @@
 // Imports new posts from the public Discord bug and feature-request forums into triage. The
 // five-minute cron polls both forums over REST (a Worker can't hold a gateway connection); each
 // new thread becomes one report, formatted by fixed rules, and is posted to the triage channel
-// like any other. Approving it links the item back to the thread, so the existing status tags
-// and shipped notices apply.
+// like any other. The thread stays linked to the report and its ticket, so status tags, questions,
+// copied replies and the released notice all reach it.
 import { FeedbackError } from "./errors.js";
 import { recordSubmission, validateSubmission } from "./feedback.js";
 
@@ -109,6 +109,7 @@ export const importForumPosts = async (deps, env) => {
           channel: "discord",
           clientHash: "discord",
           reporter: reporterName(starter.author),
+          reporterUserID: starter.author?.id ?? null,
           sourceChannelID: thread.id,
         });
         await deps.store.setThreadSubmission(thread.id, record.submissionID);

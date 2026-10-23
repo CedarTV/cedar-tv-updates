@@ -1,8 +1,8 @@
-// Roadmap items: vocabulary, validation and the public projection the website shows.
-// publicFeed() is the only path from items to the public roadmap; it must stay in step with
-// the site's scripts/tracker_feed.mjs schema. Public detail is only what staff write for the
-// roadmap (title, summary, description) plus status facts; a report's own text, its reporter,
-// email and device details stay private.
+// Roadmap entries (CDR-n, stored as tracker items): vocabulary, validation and the public
+// projection the website shows. publicFeed() is the only path from entries to the public
+// roadmap; it must stay in step with the site's scripts/tracker_feed.mjs schema. Public detail is
+// only what staff write for the roadmap (title, summary, description) plus status facts; staff
+// tickets, a report's own text, its reporter, email and device details stay private.
 
 import { FeedbackError } from "./errors.js";
 
@@ -40,7 +40,7 @@ export const PLATFORMS = Object.freeze({
 
 export const PRIORITIES = Object.freeze(["low", "normal", "high", "urgent"]);
 
-export const vocabulary = () => ({ kinds: KINDS, statuses: STATUSES, platforms: PLATFORMS, priorities: PRIORITIES });
+export const vocabulary = () => ({ kinds: KINDS, statuses: STATUSES, platforms: PLATFORMS, priorities: PRIORITIES, statusModes: STATUS_MODES });
 
 const ID = /^CDR-([1-9]\d{0,6})$/;
 const RELEASE_URL_PREFIX = "https://cedartv.github.io/cedar-tv-updates/";
@@ -78,7 +78,9 @@ const block = (value, field, maximum) => {
 
 export const statusInfo = (kind, status) => STATUSES[kind]?.find((candidate) => candidate.id === status);
 
-const EDITABLE = ["kind", "title", "summary", "description", "notes", "status", "platforms", "priority", "public", "requests", "shippedIn", "releaseURL"];
+export const STATUS_MODES = Object.freeze(["follow", "manual"]);
+
+const EDITABLE = ["kind", "title", "summary", "description", "notes", "status", "statusMode", "platforms", "priority", "public", "shippedIn", "releaseURL"];
 
 // Validates editable fields over `existing` and returns the complete editable item.
 export const normalizeItem = (input, existing = null) => {
@@ -93,8 +95,8 @@ export const normalizeItem = (input, existing = null) => {
   if (!Array.isArray(platforms) || platforms.some((platform) => !PLATFORMS[platform])) throw invalid("Unknown platform");
   const priority = input.priority ?? existing?.priority ?? "normal";
   if (!PRIORITIES.includes(priority)) throw invalid("Unknown priority");
-  const requests = input.requests ?? existing?.requests ?? 0;
-  if (!Number.isSafeInteger(requests) || requests < 0 || requests > 1_000_000) throw invalid("Requests must be a whole number");
+  const statusMode = input.statusMode ?? existing?.statusMode ?? "manual";
+  if (!STATUS_MODES.includes(statusMode)) throw invalid("Status must follow tickets or be set by hand");
   const releaseURL = line(input.releaseURL ?? existing?.releaseURL, "Release link", { maximum: 300 });
   if (releaseURL && !releaseURL.startsWith(RELEASE_URL_PREFIX)) throw invalid("Release link must be a Cedar website page");
   return {
@@ -104,10 +106,10 @@ export const normalizeItem = (input, existing = null) => {
     description: block(input.description ?? existing?.description, "Public details", 2_000),
     notes: block(input.notes ?? existing?.notes, "Private notes", 20_000),
     status,
+    statusMode,
     platforms: Object.keys(PLATFORMS).filter((platform) => platforms.includes(platform)),
     priority,
     public: Boolean(input.public ?? existing?.public ?? false),
-    requests,
     shippedIn: line(input.shippedIn ?? existing?.shippedIn, "Shipped in", { maximum: 40 }),
     releaseURL,
   };
@@ -140,25 +142,21 @@ export const publicFeed = (items) => {
   return { schemaVersion: 1, updated: updated || null, items: published };
 };
 
-const CHANNEL_NAMES = { app: "the app", website: "the website", discord: "Discord" };
+const ACTIVE = new Set(["in-progress", "fixed", "in-build", "verified"]);
+const DROPPED = new Set(["declined", "wont-fix", "cant-reproduce", "duplicate"]);
 
-// Builds an item from a submission. Contact details are never copied.
-export const itemFromSubmission = (submission, overrides = {}) => {
-  const context = [
-    submission.appVersion && `App version: ${submission.appVersion}`,
-    submission.osVersion && `System: ${submission.osVersion}`,
-    submission.deviceModel && `Device: ${submission.deviceModel}`,
-    submission.reporter && `Requested by ${submission.reporter} on Discord.`,
-    `From ${CHANNEL_NAMES[submission.channel] ?? submission.channel}, reference ${submission.submissionID.slice(0, 8)}`,
-  ].filter(Boolean).join("\n");
-  return normalizeItem({
-    kind: submission.kind,
-    title: submission.title.slice(0, 120),
-    notes: `${submission.details}\n\n${context}`,
-    status: "new",
-    platforms: PLATFORMS[submission.platform] ? [submission.platform] : [],
-    requests: 1,
-    public: false,
-    ...overrides,
-  });
+// The public status an entry gets from its linked tickets when it follows them: shipped (or
+// fixed) once every ticket still in play is released, in progress while any is being worked on.
+// Null when the tickets don't decide it (none linked, or all dropped and the entry is a bug).
+export const followedStatus = (entry, tickets) => {
+  const live = tickets.filter((ticket) => !DROPPED.has(ticket.status));
+  if (!tickets.length) return null;
+  if (!live.length) return entry.kind === "feature" ? { status: "declined" } : { status: "wont-fix" };
+  if (live.every((ticket) => ticket.status === "released")) {
+    const latest = live.map((ticket) => ticket.releasedIn).filter(Boolean).sort().at(-1) ?? "";
+    return { status: entry.kind === "feature" ? "shipped" : "fixed", shippedIn: latest };
+  }
+  if (live.some((ticket) => ACTIVE.has(ticket.status) || ticket.status === "released")) return { status: "in-progress" };
+  if (entry.kind === "feature" && live.some((ticket) => ticket.status === "planned")) return { status: "planned" };
+  return { status: entry.kind === "feature" ? "considering" : "investigating" };
 };

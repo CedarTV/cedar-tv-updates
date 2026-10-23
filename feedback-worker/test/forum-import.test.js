@@ -20,7 +20,7 @@ const setup = () => {
   return { deps, discord };
 };
 
-const post = (discord, { id, forum = "bugsForum", name, content, tags = [], author = { username: "viewer", global_name: "Viewer" }, attachments = [], archived = false }) => {
+const post = (discord, { id, forum = "bugsForum", name, content, tags = [], author = { id: "222222222222222222", username: "viewer", global_name: "Viewer" }, attachments = [], archived = false }) => {
   (archived ? discord.forum.archived : discord.forum.active).push({ id, parent_id: forum, name, applied_tags: tags });
   discord.forum.messages[`${id}/${id}`] = { id, content, author, attachments };
 };
@@ -49,8 +49,8 @@ test("new forum posts become formatted triage reports linked to their thread", a
 
   const [bug, feature] = deps.store.rows;
   assert.deepEqual(
-    [bug.kind, bug.title, bug.platform, bug.channel, bug.reporter, bug.sourceChannelID, bug.contact],
-    ["bug", "Guide freezes after midnight", "apple-tv", "discord", "Viewer", snowflake(1), null],
+    [bug.kind, bug.title, bug.platform, bug.channel, bug.reporter, bug.reporterUserID, bug.sourceChannelID, bug.contact],
+    ["bug", "Guide freezes after midnight", "apple-tv", "discord", "Viewer", "222222222222222222", snowflake(1), null],
   );
   assert.equal(bug.details, "Scrolling the guide past midnight freezes the app.\n\nSteps: open Guide, scroll right.\n\nForum tags: Playback\nAttachments:\nhttps://cdn.discordapp.com/a/shot.png");
   // A short post leans on its title.
@@ -59,8 +59,10 @@ test("new forum posts become formatted triage reports linked to their thread", a
   const triage = discord.calls.filter((call) => call.op === "send" && call.channelID === "triage");
   assert.equal(triage.length, 2);
   assert.match(JSON.stringify(triage[0].message.embeds[0].fields), new RegExp(`"Post","value":"<#${snowflake(1)}>"`));
-  assert.match(JSON.stringify(triage[0].message.components), /s:approve:investigating/);
+  assert.match(JSON.stringify(triage[0].message.components), /s:ticket:bug:/);
   assert.equal(deps.store.threads.get(snowflake(1)).submissionID, bug.submissionID);
+  // The thread is watched from its first message, so later replies reach the timeline.
+  assert.deepEqual(deps.store.watched.map((row) => [row.thread_id, row.last_seen_id]), [[snowflake(1), snowflake(1)], [snowflake(2), snowflake(2)]].sort());
 
   // Nothing is imported twice.
   assert.equal(await run(deps, 10), 0);

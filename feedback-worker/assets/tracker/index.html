@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
+    <title>Cedar Tracker</title>
+    <link rel="stylesheet" href="app.css">
+    <script src="app.js" type="module"></script>
+  </head>
+  <body>
+    <div class="signed-out" data-signed-out hidden>
+      <h1>Sign in to Cedar Tracker</h1>
+      <p>Type <code>/tracker</code> in the Cedar Discord. It answers privately with a link that signs this browser in for 30 days.</p>
+    </div>
+
+    <div class="shell" data-shell hidden>
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span>Cedar Tracker</div>
+        <nav aria-label="Sections">
+          <button type="button" data-view="inbox">Inbox <span class="count count-accent" data-count="inbox"></span></button>
+          <button type="button" data-view="bug">Bugs <span class="count" data-count="bug"></span></button>
+          <button type="button" data-view="feature">Features <span class="count" data-count="feature"></span></button>
+          <button type="button" data-view="roadmap">Roadmap <span class="count" data-count="roadmap"></span></button>
+          <button type="button" data-view="settings">Settings</button>
+        </nav>
+        <div class="sidebar-foot">
+          <p class="sidebar-note">Tickets are private. Only roadmap entries marked public, with a public status, reach the website.</p>
+          <button type="button" data-action="sign-out">Sign out</button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <p class="offline" role="alert" data-banner hidden></p>
+
+        <section data-panel="tickets" hidden>
+          <header class="toolbar">
+            <h1 data-tickets-title>Bugs</h1>
+            <input type="search" placeholder="Search" aria-label="Search" data-filter="query">
+            <select aria-label="Status" data-filter="status"></select>
+            <select aria-label="Platform" data-filter="platform"></select>
+            <button type="button" data-action="release">Release a build…</button>
+            <button type="button" class="primary" data-action="new-ticket">New</button>
+          </header>
+          <div class="split">
+            <div class="list" data-ticket-list role="list"></div>
+            <div data-ticket-pane>
+              <p class="placeholder" data-ticket-placeholder>Select a ticket, or press New.</p>
+              <form class="editor" data-ticket-editor hidden novalidate></form>
+            </div>
+          </div>
+        </section>
+
+        <section data-panel="inbox" hidden>
+          <header class="toolbar">
+            <h1>Inbox</h1>
+            <button type="button" data-action="refresh-inbox">Refresh</button>
+          </header>
+          <p class="hint">New reports from the website, the apps and Discord. Open one as a bug or feature ticket (whatever it was sent as), attach it to a ticket that already covers it, or ask the reporter for more. Email addresses are deleted once a report is triaged.</p>
+          <p class="error" role="alert" data-inbox-error></p>
+          <div class="inbox" data-inbox></div>
+        </section>
+
+        <section data-panel="roadmap" hidden>
+          <header class="toolbar">
+            <h1>Roadmap</h1>
+            <a class="button" href="https://cedartv.github.io/cedar-tv-updates/roadmap/" target="_blank" rel="noopener">Open public roadmap</a>
+            <button type="button" class="primary" data-action="new-entry">New entry</button>
+          </header>
+          <p class="hint">What the website shows. An entry can follow its linked tickets, so its status moves on its own, or have its status set by hand. Public wording is written here, never copied from a report.</p>
+          <div class="split roadmap">
+            <div class="list" data-entry-list role="list"></div>
+            <div>
+              <p class="placeholder" data-entry-placeholder>Select an entry.</p>
+              <form class="editor" data-entry-editor hidden novalidate></form>
+            </div>
+          </div>
+        </section>
+
+        <section data-panel="settings" hidden>
+          <header class="toolbar"><h1>Settings</h1></header>
+          <div class="settings">
+            <p class="hint">Cedar Tracker runs on the cedar-feedback Worker; tickets, reports and the roadmap live in its D1 database, which Cloudflare can restore to any point in the last 30 days.</p>
+            <div class="editor-actions">
+              <button type="button" data-action="export">Download a backup (JSON)</button>
+              <button type="button" data-action="refresh-panels">Refresh Discord panels</button>
+            </div>
+            <p class="success" role="status" data-settings-status></p>
+            <p class="error" role="alert" data-settings-error></p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="merge-dialog" data-pick-dialog>
+      <form method="dialog">
+        <h2 data-pick-title>Choose</h2>
+        <input type="search" placeholder="Search" aria-label="Search" data-pick-query>
+        <div class="merge-list" data-pick-list></div>
+        <div class="editor-actions"><button value="cancel">Cancel</button></div>
+      </form>
+    </dialog>
+
+    <dialog class="release-dialog" data-release-dialog>
+      <form method="dialog" data-release-form>
+        <h2>Release a build</h2>
+        <p class="hint">Every ticket whose Fixed in build matches, and that’s Fixed in code, In a build or Verified, moves to Released. Roadmap entries following them ship, and reporters’ Discord threads are thanked.</p>
+        <label class="field"><span>Published release <small>Fills in the fields below</small></span><select data-release-pick><option value="">Choose…</option></select></label>
+        <div class="field-row">
+          <label class="field"><span>Build</span><input name="build" maxlength="40" required placeholder="70"></label>
+          <label class="field"><span>Version</span><input name="version" maxlength="20" placeholder="1.0.1"></label>
+        </div>
+        <label class="field"><span>Release notes link</span><input name="releaseURL" maxlength="300" placeholder="https://cedartv.github.io/cedar-tv-updates/…"></label>
+        <p class="hint" data-release-preview></p>
+        <p class="error" role="alert" data-release-error></p>
+        <div class="editor-actions">
+          <button type="submit" class="primary" value="release">Release</button>
+          <button value="cancel" formnovalidate>Cancel</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>

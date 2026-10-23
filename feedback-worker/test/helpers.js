@@ -1,117 +1,73 @@
-// In-memory stand-ins for D1 and Discord with the same shapes the Worker uses.
+// Test stand-ins: the Worker's real D1 store over Node's SQLite, and a fake Discord with the same
+// shape the Worker uses.
+import { STAFF_TAG_NAMES } from "../src/discord-render.js";
+import { d1Store, itemFromRow, submissionFromRow, ticketFromRow } from "../src/store.js";
+import { sqliteD1 } from "./d1.js";
+
 export const WEB = "https://cedartv.github.io";
 export const ADMIN = "a".repeat(40);
 export const OWNER = "111111111111111111";
 
+// The real store, plus synchronous views of its tables for assertions.
 export const memoryStore = () => {
-  const rows = [];
-  const items = [];
-  const threads = new Map();
-  const forumStarts = new Map();
-  let counter = 0;
-  const copy = (value) => (value ? structuredClone(value) : value);
-  const pending = (id) => rows.find((row) => row.submissionID === id && row.state === "new");
-  return {
-    rows,
-    items,
-    threads,
-    async forumSince(forumID, now) {
-      if (!forumStarts.has(forumID)) forumStarts.set(forumID, now);
-      return forumStarts.get(forumID);
-    },
-    async importedThreads(ids) { return new Set(ids.filter((id) => threads.has(id))); },
-    async claimThread(id, forumID) {
-      if (threads.has(id)) return false;
-      threads.set(id, { forumID, submissionID: null });
-      return true;
-    },
-    async setThreadSubmission(id, submissionID) { threads.get(id).submissionID = submissionID; },
-    async releaseThread(id) { if (threads.get(id)?.submissionID == null) threads.delete(id); },
-    async countForClientDay(clientHash) { return rows.filter((row) => row.clientHash === clientHash).length; },
-    async insert(row) {
-      rows.push({
-        reporter: null, sourceChannelID: null, ...row, createdAtEpochMilliseconds: row.createdAtMs,
-        state: "new", itemID: null, discordChannelID: null, discordMessageID: null,
-      });
-    },
-    async list(state) { return rows.filter((row) => row.state === state).map(copy); },
-    async get(id) { return copy(rows.find((row) => row.submissionID === id)); },
-    async setSubmissionMessage(id, channelID, messageID) {
-      Object.assign(rows.find((row) => row.submissionID === id), { discordChannelID: channelID, discordMessageID: messageID });
-    },
-    async unannounced(createdBefore, limit) {
-      return rows.filter((row) => row.state === "new" && !row.discordMessageID && row.createdAtMs < createdBefore).slice(0, limit).map(copy);
-    },
-    async discard(id) {
-      const row = pending(id);
-      if (!row) return false;
-      Object.assign(row, { state: "discarded", contact: null });
-      return true;
-    },
-    async reportsForItem(itemID) {
-      return rows.filter((row) => row.itemID === itemID && ["accepted", "merged"].includes(row.state)).map(copy);
-    },
-    async listItems() { return items.map(copy); },
-    async getItem(number) { return copy(items.find((item) => item.id === `CDR-${number}`)); },
-    async createItem(fields, date, links = {}) {
-      counter += 1;
-      const item = { id: `CDR-${counter}`, ...fields, created: date, updated: date, discordChannelID: null, discordMessageID: null, sourceChannelID: null, ...links };
-      items.push(item);
-      return copy(item);
-    },
-    async updateItem(number, fields, date) {
-      const item = items.find((candidate) => candidate.id === `CDR-${number}`);
-      if (!item) return null;
-      Object.assign(item, fields, { updated: date });
-      return copy(item);
-    },
-    async setItemMessage(number, channelID, messageID) {
-      Object.assign(items.find((item) => item.id === `CDR-${number}`), { discordChannelID: channelID, discordMessageID: messageID });
-    },
-    async deleteItem(number) {
-      const index = items.findIndex((item) => item.id === `CDR-${number}`);
-      if (index < 0) return false;
-      items.splice(index, 1);
-      return true;
-    },
-    async acceptSubmission(id, fields, date) {
-      const row = pending(id);
-      if (!row) return null;
-      const item = await this.createItem(fields, date, { sourceChannelID: row.sourceChannelID });
-      Object.assign(row, { state: "accepted", itemID: item.id, contact: null });
-      return item;
-    },
-    async mergeSubmission(id, number, date) {
-      const row = pending(id);
-      const item = items.find((candidate) => candidate.id === `CDR-${number}`);
-      if (!row || !item) return null;
-      item.requests += 1;
-      item.updated = date;
-      Object.assign(row, { state: "merged", itemID: item.id, contact: null });
-      return copy(item);
-    },
-  };
+  const db = sqliteD1();
+  const store = d1Store(db);
+  const all = (sql) => db.raw.prepare(sql).all();
+  Object.defineProperties(store, {
+    db: { value: db },
+    rows: { get: () => all("SELECT * FROM feedback_submissions ORDER BY created_at_ms, rowid").map(submissionFromRow) },
+    items: { get: () => all("SELECT * FROM tracker_items ORDER BY number").map(itemFromRow) },
+    tickets: { get: () => all("SELECT * FROM tickets ORDER BY created_ms, rowid").map(ticketFromRow) },
+    events: { get: () => all("SELECT * FROM ticket_events ORDER BY event_id") },
+    threads: { get: () => new Map(all("SELECT * FROM discord_forum_threads").map((row) => [row.thread_id, { forumID: row.forum_id, submissionID: row.submission_id }])) },
+    watched: { get: () => all("SELECT * FROM watched_threads ORDER BY thread_id") },
+  });
+  return store;
 };
+
+const staffForum = (id, kind) => ({
+  id, guild_id: "guild", type: 15,
+  available_tags: STAFF_TAG_NAMES[kind].map((name, index) => ({ id: `${id}-tag${index}`, name })),
+});
 
 export const fakeDiscord = () => {
   const calls = [];
   let next = 1000;
   const channels = {
-    thread1: { id: "thread1", parent_id: "forum1", applied_tags: ["tagPlayer"] },
-    forum1: { id: "forum1", available_tags: [{ id: "tagPlayer", name: "Player" }, { id: "tagPlanned", name: "Planned" }, { id: "tagShipped", name: "Shipped" }, { id: "tagFixed", name: "Fixed" }] },
+    thread1: { id: "thread1", parent_id: "forum1", guild_id: "guild", applied_tags: ["tagPlayer"] },
+    forum1: { id: "forum1", guild_id: "guild", available_tags: [{ id: "tagPlayer", name: "Player" }, { id: "tagPlanned", name: "Planned" }, { id: "tagShipped", name: "Shipped" }, { id: "tagFixed", name: "Fixed" }, { id: "tagNeedsInfo", name: "Needs info" }] },
+    staffBugs: staffForum("staffBugs", "bug"),
+    staffIdeas: staffForum("staffIdeas", "feature"),
   };
-  const forum = { active: [], archived: [], messages: {} };
+  // `messages` holds single messages by "channel/message"; `threadMessages` a thread's history.
+  const forum = { active: [], archived: [], messages: {}, threadMessages: {} };
   return {
     calls,
     channels,
     forum,
+    tagName: (channelID, tagID) => channels[channels[channelID]?.parent_id]?.available_tags.find((tag) => tag.id === tagID)?.name,
     async activeThreads(guildID) { calls.push({ op: "active", guildID }); return { threads: structuredClone(forum.active) }; },
     async archivedThreads(channelID) { return { threads: structuredClone(forum.archived.filter((thread) => thread.parent_id === channelID)) }; },
     async message(channelID, messageID) { return structuredClone(forum.messages[`${channelID}/${messageID}`] ?? null); },
+    async messages(channelID, { after = null } = {}) {
+      calls.push({ op: "messages", channelID, after });
+      return structuredClone((forum.threadMessages[channelID] ?? []).filter((message) => !after || BigInt(message.id) > BigInt(after)));
+    },
     async send(channelID, message) { calls.push({ op: "send", channelID, message }); next += 1; return { id: String(next) }; },
     async edit(channelID, messageID, message) { calls.push({ op: "edit", channelID, messageID, message }); return {}; },
     async channel(id) { return structuredClone(channels[id]); },
-    async setTags(channelID, tags) { calls.push({ op: "tags", channelID, tags }); channels[channelID].applied_tags = tags; return {}; },
+    async createThread(forumID, body) {
+      next += 1;
+      const id = String(next);
+      calls.push({ op: "thread", forumID, id, body });
+      channels[id] = { id, parent_id: forumID, guild_id: "guild", name: body.name, applied_tags: body.applied_tags ?? [] };
+      return { id, guild_id: "guild" };
+    },
+    async updateThread(channelID, patch) {
+      calls.push({ op: "update", channelID, patch });
+      Object.assign(channels[channelID] ??= { id: channelID }, patch);
+      return {};
+    },
   };
 };
 
@@ -125,18 +81,25 @@ export const environment = (overrides = {}) => ({
   ADMIN_RATE_LIMITER: allowAll,
   DISCORD_TRIAGE_CHANNEL_ID: "triage",
   DISCORD_ROADMAP_CHANNEL_ID: "roadmap",
+  DISCORD_STAFF_BUG_FORUM_ID: "staffBugs",
+  DISCORD_STAFF_FEATURE_FORUM_ID: "staffIdeas",
   DISCORD_OWNER_ID: OWNER,
   ...overrides,
 });
 
 // Collects waitUntil work so tests can await Discord side effects.
-export const dependencies = ({ store = memoryStore(), discord = null, now = Date.UTC(2026, 9, 20) } = {}) => {
+export const dependencies = ({ store = memoryStore(), discord = null, now = Date.UTC(2026, 9, 20), env = null } = {}) => {
   const background = [];
-  return {
+  const deps = {
     store, discord, now, background,
     waitUntil: (promise) => background.push(promise),
-    settle: () => Promise.all(background.splice(0)),
+    // Side effects can queue more side effects, so this drains until nothing is left.
+    settle: async () => {
+      while (background.length) await Promise.all(background.splice(0));
+    },
   };
+  if (env) deps.env = env;
+  return deps;
 };
 
 export const submissionBody = (overrides = {}) => ({
