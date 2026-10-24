@@ -36,6 +36,8 @@ export function sanitizeSource(v){
  if(s.provider==='tmdb')s.tmdbSourceType=(s.tmdbSourceType||'DISCOVER').toUpperCase();
  // Built in Creator's Branch builder: Cedar's own dataSource, query and filters.
  if(s.provider==='cedar'){try{s.cedar=cleanCedarSource(v.cedar);}catch{delete s.cedar;}}
+ // Read from a manifest link (parseManifest): Cedar's catalog-link Branch.
+ if(s.provider==='catalog'){const base=linkBase(v.base);if(base)s.base=base;s.addonName=name(v.addonName,'Catalog');s.extras={};if(obj(v.extras))for(const [k,x] of Object.entries(v.extras).slice(0,8))if(/^[A-Za-z0-9_.-]{1,80}$/.test(k)&&typeof x==='string'&&x)s.extras[k]=x.slice(0,200);if(v.pageable===true)s.pageable=true;}
  return s;
 }
 export function sourceProblem(s,direct=false){
@@ -46,6 +48,7 @@ export function sourceProblem(s,direct=false){
  }
  if(s.provider==='trakt')return !positive(s.traktListId)||!['movie','movies','tv','series','show','shows'].includes(s.mediaType) ? 'A public Trakt list ID and media type are required.' : '';
  if(s.provider==='cedar')return s.cedar?sourceIssue(s.cedar):'This source can’t be read.';
+ if(s.provider==='catalog')return s.base&&s.catalogId&&['movie','series'].includes(String(s.type).toLowerCase())?'':'This catalog link is incomplete.';
  if(s.provider==='addon')return ['trakt.upnext','trakt.watchlist.movies','trakt.watchlist.series'].includes(s.catalogId) ? '' : 'Tobacco Tie catalogs can’t travel in a .cedar file, so Cedar leaves this source out.';
  return `Cedar does not support the ${s.provider||'unknown'} source provider.`;
 }
@@ -120,19 +123,20 @@ function cleanHero(v){
  return h;
 }
 /** What the hero reads, as Cedar's dataSource/query/filters, or {problem}. */
-export function heroSource(draft){
+export function heroSource(draft,links=true){
  const s=draft.hero?.source;if(!s)return {problem:'No hero source.'};
  if(s.kind==='feed'){const f=heroFeeds[s.feed];return {dataSource:structuredClone(f.dataSource),query:structuredClone(f.query),filters:cleanFilters({contentType:'both'})};}
  if(s.kind==='custom')return structuredClone(s.cedar);
  const r=draft.rows.find(x=>x.id===s.rowId);
  if(!r||r.kind!=='branch')return {problem:'The row the hero followed is no longer on Your Home.'};
  const p=sourceProblem(r.source,true);if(p)return {problem:p};
+ if(r.source.provider==='catalog'&&!links)return {problem:catalogLinkNote};
  const c=cedarSource(r.source);return heroEligible(c)?c:{problem:`${r.title} plays from a source the hero can’t show.`};
 }
 /** A short name for what the hero reads. */
 export function heroSourceName(draft){const s=draft.hero?.source;if(!s)return '';if(s.kind==='feed')return heroFeeds[s.feed].title;if(s.kind==='custom')return s.title||'Custom source';return draft.rows.find(r=>r.id===s.rowId)?.title||'A removed row';}
-function heroBranch(draft,bundleID){
- const h=draft.hero,src=heroSource(draft);if(src.problem)return src;
+function heroBranch(draft,bundleID,links=true){
+ const h=draft.hero,src=heroSource(draft,links);if(src.problem)return src;
  const ratings={isEnabled:h.fields.includes('ratings'),providerIDs:[]};
  // Fade travels as Fullscreen plus fadesArtwork, which older Cedar versions read as Fullscreen.
  const hero={style:h.style==='fade'?'fullscreen':h.style,...(h.style==='fade'?{fadesArtwork:true}:{}),metadataFields:[...h.fields].sort(),ratings,automaticallyPlaysTrailer:false,trailerDelay:5,trailerAudioEnabled:false};
@@ -217,7 +221,100 @@ function parseShelves(data){
 }
 /** Why each imported source can't be exported yet. */
 function sourceIssues(draft){const issues=[];for(const r of draft.rows){if(r.kind==='pick')continue;const pairs=r.kind==='branch'?[[r.title,r.source,true]]:r.branches.flatMap(b=>b.sources.map(s=>[`${r.title} / ${b.title}`,s,false]));for(const [path,s,direct] of pairs){const problem=sourceProblem(s,direct);if(problem)issues.push(`${path} / ${s.title}: ${problem}`);}if(r.kind==='group'&&r.branches.some(b=>b.sources.length===0))issues.push(`${r.title}: branches without sources cannot be exported.`);}return issues;}
-export function parseImport(input){
+// MARK: Catalog links
+// A manifest link's catalogs as Cedar's catalog-link Branches (CatalogLinkBranch.swift in the Cedar
+// repo): each row reads one catalog straight from the link, and Cedar looks its titles up by IMDb,
+// TMDB or TVDB ID. The link can carry its owner's access token, so these rows travel only in a
+// locked profile file (CEDAR_FILE_FORMAT.md §4.2).
+export const catalogLinkID='cedar.catalog-link';
+export const catalogLinkNote='Catalog links can carry your access token, so they travel only in a locked profile file.';
+/** A stored catalog-link base: an https address without login, query or fragment. */
+function linkBase(v){try{const u=new URL(v);return u.protocol==='https:'&&u.hostname&&!u.username&&!u.password&&!u.search&&!u.hash?u.origin+u.pathname.replace(/\/+$/,''):'';}catch{return '';}}
+/** `https://host/path/manifest.json` → `https://host/path`, as Cedar's CatalogLinkBranch.baseURL(ofManifest:); '' otherwise. */
+export function catalogBase(value){let u;try{u=new URL(value);}catch{return '';}if(!u.pathname.endsWith('/manifest.json')||u.search||u.hash||u.username||u.password)return '';return linkBase(u.origin+u.pathname.slice(0,-'/manifest.json'.length));}
+/** A pasted link as Load URL should fetch it: `stremio://` becomes https and a configure page its manifest. */
+export function importLink(value){let v=String(value||'').trim().replace(/^stremio:\/\//i,'https://');try{const u=new URL(v);if(/\/configure\/?$/i.test(u.pathname)){u.pathname=u.pathname.replace(/\/configure\/?$/i,'/manifest.json');v=u.href;}}catch{}return v;}
+/** Mirrors the app's manifest check: an ID and a `resources` entry, so other JSON isn't mistaken for one. */
+const isManifest=data=>obj(data)&&typeof data.id==='string'&&!!data.id.trim()&&Object.hasOwn(data,'resources')&&!Array.isArray(data.folders)&&!obj(data.config);
+export const catalogArrangements=['grouped','group','rows'];
+const nameSeparators=[' · ',' | ',' – ',' — ',' - ',': '];
+/** "Shahid · Top 10 Movies" → ["Shahid", "Top 10 Movies"]; ["", name] without a prefix. */
+function splitName(n){for(const sep of nameSeparators){const i=n.indexOf(sep);if(i>0&&i+sep.length<n.length)return [n.slice(0,i).trim(),n.slice(i+sep.length).trim()];}return ['',n];}
+/** Every movie and series catalog Cedar can read without typed input, with what Cedar's importer
+ would send: a required extra starts on its first option. `choice` is the first extra with listed
+ options, which "grouped" splits into one Branch per option. */
+function manifestCatalogs(manifest){
+ const out=[];let typed=0,other=0;
+ for(const c of Array.isArray(manifest.catalogs)?manifest.catalogs:[]){
+  if(!obj(c)||typeof c.id!=='string'||!c.id||typeof c.type!=='string')continue;
+  if(!['movie','series'].includes(c.type.toLowerCase())){other++;continue;}
+  const extras=Array.isArray(c.extra)?c.extra.filter(e=>obj(e)&&typeof e.name==='string'&&e.name):[];
+  const options=n=>[...new Set((extras.find(e=>e.name===n)?.options||[]).filter(o=>typeof o==='string'&&o))];
+  const required=[...new Set([...(Array.isArray(c.extraRequired)?c.extraRequired.filter(n=>typeof n==='string'):[]),...extras.filter(e=>e.isRequired===true).map(e=>e.name)])];
+  const fixed={};let needsInput=false;for(const n of required){const first=options(n)[0];if(n==='search'||!first){needsInput=true;break;}fixed[n]=first;}
+  if(needsInput){typed++;continue;}
+  const pageable=(Array.isArray(c.extraSupported)&&c.extraSupported.includes('skip'))||extras.some(e=>e.name==='skip');
+  const choice=extras.find(e=>!['search','skip'].includes(e.name)&&options(e.name).length>1&&options(e.name).length<=100);
+  out.push({id:c.id,type:c.type,name:name(c.name,c.id),fixed,pageable,home:c.showInHome!==false&&!required.length,choice:choice?{name:choice.name,values:options(choice.name),required:required.includes(choice.name)}:null});
+ }
+ return {catalogs:out,typed,other};
+}
+/** A movie and a series catalog often share a name ("Trending"); keep them apart, as Cedar does. */
+function distinctTitles(items){const seen=new Map();for(const i of items)seen.set(i.title,(seen.get(i.title)||0)+1);for(const i of items)if(seen.get(i.title)>1&&i.mediaType)i.title+=i.mediaType==='series'?' Shows':' Movies';return items;}
+/**
+ * A manifest's catalogs as Home rows. `grouped` (the default) puts catalogs that share a name prefix
+ * ("Shahid · …") in one Branch Group, splits a catalog with listed options (countries, genres,
+ * years) into a Branch Group of its own, and gathers small prefixes and catalogs the manifest keeps
+ * off Home into "More from …" with one folder per prefix. `group` is one Branch Group of every
+ * catalog; `rows` is one Branch per catalog.
+ */
+export function parseManifest(manifest,sourceURL,arrange='grouped'){
+ const base=catalogBase(sourceURL);
+ if(!base)throw Error('Load this manifest from its https link ending in /manifest.json, without a ?query, so Cedar knows where to read its catalogs.');
+ const addonName=name(manifest.name,'Catalogs'),key=text(manifest.id).slice(0,120);
+ const {catalogs,typed,other}=manifestCatalogs(manifest);
+ if(!catalogs.length)throw Error('This link has no movie or show catalogs Cedar can show as Branches.');
+ const source=(c,title,extras=c.fixed,suffix='')=>({id:`${c.type}.${c.id}${suffix}`,title,enabled:true,provider:'catalog',base,addonName,type:c.type,catalogId:c.id,extras:{...extras},...(c.pageable?{pageable:true}:{})});
+ const child=(id,title,sources,mediaType)=>({id,title,mediaType,enabled:true,sources});
+ const group=(id,title)=>{const g={...makeGroup(title),id:`${key}.${id}`};g.deviceLayout.shared.browseLayout='chips-and-grid';return g;};
+ const row=c=>({id:`${key}.${c.type}.${c.id}`,kind:'branch',title:c.name,mediaType:c.type,enabled:true,source:source(c,c.name)});
+ let rows=[];
+ if(arrange==='rows')rows=distinctTitles(catalogs.map(row));
+ else if(arrange==='group'){const g=group('all',addonName);g.branches=distinctTitles(catalogs.map(c=>child(`${c.type}.${c.id}`,c.name,[source(c,c.name)],c.type)));rows=[g];}
+ else{
+  const prefixCount=new Map();for(const c of catalogs)if(!c.choice){const [p]=splitName(c.name);if(p)prefixCount.set(p,(prefixCount.get(p)||0)+1);}
+  const prefixGroups=new Map(),moreFolders=new Map();let more=null;
+  for(const c of catalogs){
+   const [p,rest]=splitName(c.name),grouped=p&&prefixCount.get(p)>=3;
+   if(c.choice){
+    const g=group(`${c.type}.${c.id}`,grouped?rest:c.name),{name:extra,values,required}=c.choice;
+    if(!required)g.branches.push(child('all','All',[source(c,'All')],c.type));
+    for(const [i,v] of values.entries())g.branches.push(child(`option.${i}`,v,[source(c,v,{...c.fixed,[extra]:v},`.${i}`)],c.type));
+    rows.push(g);continue;
+   }
+   if(grouped){let g=prefixGroups.get(p);if(!g){g=group(`prefix.${p}`,p);prefixGroups.set(p,g);rows.push(g);}g.branches.push(child(`${c.type}.${c.id}`,rest,[source(c,rest)],c.type));continue;}
+   if(p||!c.home){
+    if(!more){more=group('more',`More from ${addonName}`);rows.push(more);}
+    const folder=p||c.name;let f=moreFolders.get(folder);
+    if(!f){f=child(`folder.${folder}`,folder,[],c.type);moreFolders.set(folder,f);more.branches.push(f);}
+    else if(f.mediaType!==c.type)delete f.mediaType;
+    f.sources.push(source(c,c.name));continue;
+   }
+   rows.push(row(c));
+  }
+  if(more&&rows.length===1)more.title=addonName;
+  for(const g of prefixGroups.values())distinctTitles(g.branches);
+  distinctTitles(rows.filter(r=>r.kind==='branch'));
+ }
+ for(const r of rows){delete r.mediaType;for(const b of r.branches||[])delete b.mediaType;}
+ const issues=[];
+ if(typed)issues.push(`Left out ${typed} ${typed===1?'catalog that needs':'catalogs that need'} a search term or other typed input.`);
+ if(other)issues.push(`Left out ${other} ${other===1?'catalog that isn’t':'catalogs that aren’t'} movies or shows.`);
+ issues.push(`These rows read ${addonName} from your link. ${catalogLinkNote} Choose Profile file when you export.`);
+ return {draft:validateDraft({version:2,title:addonName,rows}),issues,format:`${addonName} catalogs`,ties:[],catalog:{name:addonName,count:catalogs.length,arrange:catalogArrangements.includes(arrange)?arrange:'grouped'}};
+}
+/** `sourceURL` is where Load URL read the JSON; a manifest needs it. `arrange` lays out a manifest's catalogs (parseManifest). */
+export function parseImport(input,{sourceURL='',arrange='grouped'}={}){
  const serialized=typeof input==='string'?input:JSON.stringify(input);if(new TextEncoder().encode(serialized).length>MAX_BYTES)throw Error('Choose a JSON file smaller than 10 MB.');
  let data;try{data=typeof input==='string'?JSON.parse(input):input;}catch{throw Error('This is not valid JSON. Your current Home has not changed.');}
  if(data?.version===2)return {draft:validateDraft(data),issues:[],format:'Saved Creator draft'};
@@ -226,8 +323,9 @@ export function parseImport(input){
  }
  if(data?.formatIdentifier==='app.cedar.home-branches'||data?.formatIdentifier==='app.cedar.bundle')throw Error('This is already a Cedar file. Open it in Cedar. To keep editing here, open a saved Creator draft instead.');
  if(isShelfExport(data))return parseShelves(data);
+ if(isManifest(data)){if(!sourceURL)throw Error('This is a manifest. Paste its link (ending in /manifest.json) into Collection URL and choose Load URL, so Cedar knows where to read its catalogs.');return parseManifest(data,sourceURL,arrange);}
  const config=obj(data?.config)?data.config:obj(data)?data:{};const collections=Array.isArray(data)?data:Array.isArray(config.collections)?config.collections:obj(data)&&Array.isArray(data.folders)?[data]:[];
- if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose a collection file, a profile export, a Home shelf export, or a saved Creator draft.');
+ if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose a collection file, a profile export, a Home shelf export or a saved Creator draft, or load a manifest.json link.');
  const rows=[],issues=[];const rowIDs=new Set();const byExternal=new Map();
  for(const c of collections){if(!obj(c)||!Array.isArray(c.folders))throw Error('A collection has no branch list.');const g=makeGroup(name(c.title,'Imported group'));g.id=text(c.id,uid());if(rowIDs.has(g.id)){issues.push(`Duplicate group ID in ${g.title}; a fresh ID was assigned.`);g.id=uid();}rowIDs.add(g.id);g.deviceLayout=validateDeviceLayout(c.cedarLayout||newDeviceLayout());const childIDs=new Set();g.branches=c.folders.map(f=>{const sources=Array.isArray(f.sources)?f.sources:Array.isArray(f.catalogSources)?f.catalogSources.map(s=>resolveCatalog(s,config)):[];const b=cleanChild({...f,sources});if(childIDs.has(b.id))b.id=uid();childIDs.add(b.id);return b;});rows.push(g);byExternal.set(`collection:${c.id}`,g);}
  for(const h of config.home_rows||[]){const refs=collections.flatMap(c=>c.folders||[]).flatMap(f=>f.catalogSources||[]);const ref=refs.find(s=>s.catalogId===h.catalog_id)||{catalogId:h.catalog_id};const s=sanitizeSource(resolveCatalog(ref,config));const b={id:uid(),kind:'branch',title:name(config.catalog_name_overrides?.[h.catalog_id]||s.title,'Imported branch'),enabled:h.enabled!==false,source:s};rows.push(b);byExternal.set(`catalog:${h.catalog_id}`,b);}
@@ -244,6 +342,8 @@ export function mergeImport(current,incoming,mode='append',selectedIDs=incoming.
  return validateDraft(next);
 }
 export function moveItem(items,id,position){const index=items.findIndex(i=>i.id===id);if(index<0||position<0||position>=items.length)return;items.splice(position,0,...items.splice(index,1));}
+/** Enabled catalog-link sources on enabled rows: what only a locked profile file can carry. */
+export function catalogLinkCount(draft){let n=0;const on=s=>s.enabled&&s.provider==='catalog';for(const r of draft.rows){if(!r.enabled)continue;if(r.kind==='branch'&&on(r.source))n++;else if(r.kind==='group')for(const b of r.branches)if(b.enabled)n+=b.sources.filter(on).length;}return n;}
 export function counts(draft){let branches=0,sources=0,unsupported=0;let picks=0;for(const r of draft.rows){if(r.kind==='pick'){picks++;continue;}if(r.kind==='branch'){branches++;sources++;if(sourceProblem(r.source,true))unsupported++;}else for(const b of r.branches){branches++;sources+=b.sources.length;unsupported+=b.sources.filter(s=>sourceProblem(s)).length;}}return {rows:draft.rows.length,picks,branches,sources,unsupported};}
 // Creator writes Cedar's own `.cedar` Branches file (CEDAR_FILE_FORMAT.md in the Cedar repo).
 const uuidPattern=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
@@ -263,6 +363,8 @@ export function cedarSource(s){
  if(s.provider==='cedar')return structuredClone(s.cedar);
  if(s.provider==='trakt'){const type=cedarContent(s.mediaType);return {dataSource:{kind:'trackingService',identifier:'trakt-public',parameters:{}},query:{kind:'curatedList',identifier:`global:${s.traktListId}:${type==='shows'?'show':'movie'}`,parameters:{}},filters:cedarFilters(type,{},traktSort(s.sortBy,s.sortHow))};}
  if(s.provider==='addon')return {dataSource:{kind:'local',parameters:{}},query:{kind:s.catalogId==='trakt.upnext'?'upNext':'watchlist',parameters:{}},filters:cedarFilters(cedarContent(s.type||s.mediaType))};
+ // CatalogLinkBranch.Reference's dataSource and query.
+ if(s.provider==='catalog'){const parameters={type:s.type};if(s.pageable)parameters.pageable='1';for(const [k,v] of Object.entries(s.extras||{}))parameters[`extra.${k}`]=v;return {dataSource:{kind:'custom',identifier:catalogLinkID,parameters:{base:s.base,name:s.addonName||'Catalog'}},query:{kind:'custom',identifier:s.catalogId,parameters},filters:cedarFilters(cedarContent(s.type))};}
  const k=s.tmdbSourceType,parameters={};if(s.filters?.watchRegion)parameters.region=s.filters.watchRegion;let query;
  if(feeds[k])query={kind:feeds[k],parameters};
  else if(k==='LIST')query={kind:'curatedList',identifier:String(s.tmdbId),parameters:{provider:'tmdb'}};
@@ -284,11 +386,12 @@ function platformConfiguration(row){const shared=row.deviceLayout.shared,overrid
 const branch=(id,title,base,template,folderOptions=[],{posterLook,titleMode='custom'}={})=>({id,profileID:'00000000-0000-0000-0000-000000000000',schemaVersion:2,title,titleMode,dataSource:base.dataSource,query:base.query,defaultFilters:base.filters,presentation:presentation(template,posterLook),folderOptions,position:0,isEnabled:true});
 /** Every enabled row as Cedar Branches. `tieFor(source)` returns the profile file's Tobacco Tie for
  an add-on source, so a profile export keeps rows a Branches file has to leave out. `items` holds the
- downloaded catalog file of each pick, by item ID; a pick's Branches are copied as published. */
-function cedarBranches(draft,bundleID,tieFor=()=>null,items={}){
+ downloaded catalog file of each pick, by item ID; a pick's Branches are copied as published.
+ `links` keeps catalog-link rows, which only a locked profile file may carry. */
+function cedarBranches(draft,bundleID,tieFor=()=>null,items={},links=false){
  const branches=[],issues=[],credits=[],titles=[],seen=new Set();let groups=0,hero=false;
- if(draft.hero){const h=heroBranch(draft,bundleID);if(h.problem)issues.push(`Hero: ${h.problem} Cedar keeps the viewer’s own hero.`);else{branches.push(h);hero=true;}}
- const convert=(s,direct)=>{const tie=s.provider==='addon'?tieFor(s):null;if(tie)return tieSource(s,tie);const p=sourceProblem(s,direct);return p?{problem:p}:cedarSource(s);};
+ if(draft.hero){const h=heroBranch(draft,bundleID,links);if(h.problem)issues.push(`Hero: ${h.problem} Cedar keeps the viewer’s own hero.`);else{branches.push(h);hero=true;}}
+ const convert=(s,direct)=>{const tie=s.provider==='addon'?tieFor(s):null;if(tie)return tieSource(s,tie);if(s.provider==='catalog'&&!links)return {problem:catalogLinkNote};const p=sourceProblem(s,direct);return p?{problem:p}:cedarSource(s);};
  for(const row of draft.rows){if(!row.enabled)continue;
   if(row.kind==='pick'){const file=items[row.item.id];if(!obj(file)||!Array.isArray(file.branches)){issues.push(`${row.title}: this setup could not be downloaded.`);continue;}titles.push(file.title||row.title);if(file.credits&&!credits.some(c=>JSON.stringify(c)===JSON.stringify(file.credits)))credits.push(file.credits);for(const b of file.branches){if(!obj(b)||seen.has(b.id))continue;seen.add(b.id);branches.push(structuredClone(b));if(isBranchGroupJSON(b))groups++;}continue;}
   const id=stableUUID(bundleID,row.id);
@@ -310,7 +413,9 @@ function cedarBranches(draft,bundleID,tieFor=()=>null,items={}){
 /** The Cedar Branches one Home row becomes, exactly as export writes them: a pick's published
  Branches (shared, not copied: read them only), or the row converted. null while a pick's file
  isn't in `items` yet. */
-export function rowBranches(draft,row,items={}){if(!row.enabled)return [];if(row.kind==='pick'){const file=items[row.item.id];return file?(Array.isArray(file.branches)?file.branches.filter(obj):[]):null;}try{return cedarBranches({...draft,hero:undefined,rows:[row]},draft.bundleID||creatorBundleID,undefined,items).branches;}catch{return [];}}
+export function rowBranches(draft,row,items={}){if(!row.enabled)return [];if(row.kind==='pick'){const file=items[row.item.id];return file?(Array.isArray(file.branches)?file.branches.filter(obj):[]):null;}try{return cedarBranches({...draft,hero:undefined,rows:[row]},draft.bundleID||creatorBundleID,undefined,items,true).branches;}catch{return [];}}
+/** What a profile file would leave out. Rows matched to a Tobacco Tie at export are still listed. */
+export function profileIssues(value,items={}){try{return cedarBranches(validateDraft(value),creatorBundleID,undefined,items,true).issues;}catch{return [];}}
 /** The hero exactly as export writes it, or {problem}; null when the draft keeps the viewer’s hero. */
 export function previewHero(draft){return draft.hero?heroBranch(draft,draft.bundleID||creatorBundleID):null;}
 const isBranchGroupJSON=b=>b.dataSource?.kind==='custom'&&b.dataSource?.identifier==='cedar.branch-group';
@@ -347,13 +452,15 @@ export async function exportCedarProfile(value,{passphrase='',ties=[],now=new Da
  const fileTies=ties.map(t=>({...t,id:stableUUID(bundleID,`tie.${t.url}`)}));
  const byID=new Map(),byFamily=new Map();for(const t of fileTies)if(t.manifestID){byID.set(t.manifestID.toLowerCase(),t);if(!byFamily.has(addonFamily(t.manifestID)))byFamily.set(addonFamily(t.manifestID),t);}
  const used=new Set();const tieFor=s=>{if(!s.addonId||!s.catalogId)return null;const t=byID.get(s.addonId.toLowerCase())||byFamily.get(addonFamily(s.addonId));if(t)used.add(t.id);return t||null;};
- const {branches,issues,groups,hero}=cedarBranches(draft,bundleID,tieFor,items);
+ const {branches,issues,groups,hero}=cedarBranches(draft,bundleID,tieFor,items,true);
+ const catalogRows=branches.flatMap(b=>[b,...b.folderOptions.flatMap(f=>f.sources||[])]).filter(x=>x.dataSource?.identifier===catalogLinkID).length;
+ if(catalogRows&&!passphrase)throw Error('Catalog links can carry your access token, so a file with them is always locked. Choose a passphrase.');
  const payload={home:{branches:branches.map((b,position)=>({...b,position})),shelves:[]}};
  // The photo and badge pack travel as the profile's identity. No name, so the profile keeps the one chosen in Cedar.
  if(draft.avatar||draft.badgePack)payload.identity={...(draft.avatar?{avatar:avatarURL(draft.avatar)}:{}),...(draft.badgePack?{badgePackURL:badgePackURL(draft.badgePack)}:{})};
  if(fileTies.length)payload.tobaccoTies={ties:fileTies.map(t=>({id:t.id,url:t.url,...(t.name?{name:t.name}:{}),enabledCatalogIDs:[]})),settings:[]};
  const document=await profileFile({bundleID,title:draft.title,createdAt:cedarDate(now),generator,payload,passphrase});
  const linkedRows=branches.flatMap(b=>[b,...b.folderOptions.flatMap(f=>f.sources||[])]).filter(x=>x.dataSource?.kind==='manifestAddon').length;
- return {document,issues,bundleID,branchCount:branches.length-groups-(hero?1:0),groupCount:groups,hero,tieCount:fileTies.length,linkedRows,unusedTies:fileTies.filter(t=>!used.has(t.id)).length};
+ return {document,issues,bundleID,branchCount:branches.length-groups-(hero?1:0),groupCount:groups,hero,tieCount:fileTies.length,linkedRows,catalogRows,unusedTies:fileTies.filter(t=>!used.has(t.id)).length};
 }
 export function cedarFileName(title){return `${String(title||'').replace(/[^A-Za-z0-9 _-]+/g,'').trim().replace(/\s+/g,'-')||'Cedar-Home'}.cedar`;}

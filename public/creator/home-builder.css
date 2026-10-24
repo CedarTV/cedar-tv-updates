@@ -190,6 +190,10 @@ dialog ul{padding-left:20px;font-size:12px;color:var(--muted);max-height:180px;o
 .import-choice span{flex:1}
 .import-choice small{font-size:11px;color:var(--muted);display:block}
 #import-choices{max-height:260px;overflow:auto;border:1px solid var(--line);border-radius:8px}
+.import-arrange{display:grid;gap:6px;margin:0 0 12px}
+.import-arrange .segmented{justify-self:start;flex-wrap:wrap}
+.import-arrange p{margin:0}
+.export-kind .import-choice:has(input:disabled){opacity:.5}
 .preset-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
 .preset-grid button{text-align:left;display:block;padding:17px;border:1px solid var(--line);background:var(--bg);border-radius:9px;color:var(--text)}
 .preset-grid button:hover{border-color:var(--cedar)}
