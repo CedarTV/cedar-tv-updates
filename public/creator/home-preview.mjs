@@ -37,6 +37,7 @@ export function describeSource(s){
  if(ds.identifier==='mdblist-public')return `MDBList · ${id.replace('|','/')}`;
  if(ds.kind==='trackingService')return `Your ${services[ds.identifier]||'tracking service'} list`;
  if(ds.kind==='manifestAddon')return 'Tobacco Tie catalog';
+ if(ds.identifier==='cedar.catalog-link')return `${ds.parameters?.name||'Catalog'} · ${content}`;
  if(q.kind==='upNext')return 'Your Up Next';
  if(q.kind==='watchlist')return 'Your watchlist';
  if(q.kind==='curatedList'){const p=q.parameters||{};if(p.provider==='cedar-titles'){const n=listCount(p.movies)+listCount(p.shows);return `Hand-picked · ${n} ${n===1?'title':'titles'}`;}return p.provider==='tmdb'?`TMDB list · ${id}`:'Curated list';}
