@@ -237,13 +237,45 @@ export function importLink(value){let v=String(value||'').trim().replace(/^strem
 /** Mirrors the app's manifest check: an ID and a `resources` entry, so other JSON isn't mistaken for one. */
 const isManifest=data=>obj(data)&&typeof data.id==='string'&&!!data.id.trim()&&Object.hasOwn(data,'resources')&&!Array.isArray(data.folders)&&!obj(data.config);
 export const catalogArrangements=['grouped','group','rows'];
+// MARK: Catalog probes
+// Before importing, Creator reads one page of a few catalogs, as Cedar does
+// (CedarBranchImport.catalogProbes): manifests never describe card shapes, and a choice a
+// manifest calls optional is sometimes needed in practice, returning nothing without it.
+const emptyProbes=Object.freeze({needsChoice:new Set(),worksWithoutChoice:new Set(),shape:null});
+const maximumChoiceProbes=24,shapeSamples=3;
+const encodePart=v=>encodeURIComponent(v);
+/** A catalog page's address, as Cedar's TobaccoTieProviderClient builds it: extras sorted by name, as one path segment. */
+export function catalogPageURL(base,type,id,extras={}){const parts=Object.entries(extras).filter(([k,v])=>k&&v).sort(([a],[b])=>a<b?-1:a>b?1:0).map(([k,v])=>`${encodePart(k)}=${encodePart(v)}`);return `${base}/catalog/${encodePart(type)}/${encodePart(id)}${parts.length?`/${parts.join('&')}`:''}.json`;}
+/** The requests to make for a manifest from `sourceURL`: each catalog with an optional choice, read without it, and a few plain ones for the card shape. */
+export function catalogProbes(manifest,sourceURL){
+ const base=catalogBase(sourceURL);if(!base||!isManifest(manifest))return [];
+ const {catalogs}=manifestCatalogs(manifest),choices=[],plain=[],samples=[];
+ for(const c of catalogs){
+  if(c.choice){if(choices.length<maximumChoiceProbes)choices.push({key:c.key,url:catalogPageURL(base,c.type,c.id,c.fixed),checksChoice:true});if(samples.length<shapeSamples)samples.push({key:c.key,url:catalogPageURL(base,c.type,c.id,{...c.fixed,[c.choice.name]:c.choice.values[0]}),checksChoice:false});}
+  else if(plain.length<shapeSamples)plain.push({key:c.key,url:catalogPageURL(base,c.type,c.id,c.fixed),checksChoice:false});
+ }
+ // A manifest of nothing but choice catalogs learns its shape from their first choices.
+ return [...choices,...(plain.length?plain:samples)];
+}
+/** What the probes found. `outcomes`: [{probe, shapes}] for each probe that answered, `shapes`
+ holding every returned title's posterShape (undefined where a title declares none). */
+export function probeResult(outcomes){
+ const needsChoice=new Set(),worksWithoutChoice=new Set(),votes=new Map();
+ for(const {probe,shapes} of outcomes){
+  if(probe.checksChoice)(shapes.length?worksWithoutChoice:needsChoice).add(probe.key);
+  // The add-on format's default shape is poster.
+  for(const v of shapes){const shape=['poster','landscape','square'].includes(String(v).toLowerCase())?String(v).toLowerCase():'poster';votes.set(shape,(votes.get(shape)||0)+1);}
+ }
+ const shape=[...votes].sort((a,b)=>b[1]-a[1]||(a[0]<b[0]?-1:1))[0]?.[0]||null;
+ return {needsChoice,worksWithoutChoice,shape};
+}
 const nameSeparators=[' · ',' | ',' – ',' — ',' - ',': '];
 /** "Shahid · Top 10 Movies" → ["Shahid", "Top 10 Movies"]; ["", name] without a prefix. */
 function splitName(n){for(const sep of nameSeparators){const i=n.indexOf(sep);if(i>0&&i+sep.length<n.length)return [n.slice(0,i).trim(),n.slice(i+sep.length).trim()];}return ['',n];}
 /** Every movie and series catalog Cedar can read without typed input, with what Cedar's importer
  would send: a required extra starts on its first option. `choice` is the first extra with listed
  options, which "grouped" splits into one Branch per option. */
-function manifestCatalogs(manifest){
+function manifestCatalogs(manifest,probes=emptyProbes){
  const out=[];let typed=0,other=0;
  for(const c of Array.isArray(manifest.catalogs)?manifest.catalogs:[]){
   if(!obj(c)||typeof c.id!=='string'||!c.id||typeof c.type!=='string')continue;
@@ -254,8 +286,14 @@ function manifestCatalogs(manifest){
   const fixed={};let needsInput=false;for(const n of required){const first=options(n)[0];if(n==='search'||!first){needsInput=true;break;}fixed[n]=first;}
   if(needsInput){typed++;continue;}
   const pageable=(Array.isArray(c.extraSupported)&&c.extraSupported.includes('skip'))||extras.some(e=>e.name==='skip');
-  const choice=extras.find(e=>!['search','skip'].includes(e.name)&&options(e.name).length>1&&options(e.name).length<=100);
-  out.push({id:c.id,type:c.type,name:name(c.name,c.id),fixed,pageable,home:c.showInHome!==false&&!required.length,choice:choice?{name:choice.name,values:options(choice.name),required:required.includes(choice.name)}:null});
+  // Only an optional choice is split into branches; a required one keeps its first option, as
+  // Xperience's "None" genre expects (Cedar's AddonManifestImporter does the same).
+  const choice=extras.find(e=>!['search','skip'].includes(e.name)&&!required.includes(e.name)&&options(e.name).length>1&&options(e.name).length<=100);
+  const key=`${c.type}|${c.id}`,needed=!!choice&&probes.needsChoice.has(key);
+  // `fixed` holds the required extras; `start` is what the catalog's rows send. A choice the
+  // catalog needs in practice starts on its first option, like a required one.
+  const start=needed?{...fixed,[choice.name]:options(choice.name)[0]}:fixed;
+  out.push({id:c.id,key,type:c.type,name:name(c.name,c.id),fixed,start,pageable,home:c.showInHome!==false&&!required.length,choice:choice?{name:choice.name,values:options(choice.name),needed}:null});
  }
  return {catalogs:out,typed,other};
 }
@@ -268,16 +306,18 @@ function distinctTitles(items){const seen=new Map();for(const i of items)seen.se
  * off Home into "More from …" with one folder per prefix. `group` is one Branch Group of every
  * catalog; `rows` is one Branch per catalog.
  */
-export function parseManifest(manifest,sourceURL,arrange='grouped'){
+export function parseManifest(manifest,sourceURL,arrange='grouped',probes=emptyProbes){
  const base=catalogBase(sourceURL);
  if(!base)throw Error('Load this manifest from its https link ending in /manifest.json, without a ?query, so Cedar knows where to read its catalogs.');
  const addonName=name(manifest.name,'Catalogs'),key=text(manifest.id).slice(0,120);
- const {catalogs,typed,other}=manifestCatalogs(manifest);
+ const {catalogs,typed,other}=manifestCatalogs(manifest,probes);
  if(!catalogs.length)throw Error('This link has no movie or show catalogs Cedar can show as Branches.');
- const source=(c,title,extras=c.fixed,suffix='')=>({id:`${c.type}.${c.id}${suffix}`,title,enabled:true,provider:'catalog',base,addonName,type:c.type,catalogId:c.id,extras:{...extras},...(c.pageable?{pageable:true}:{})});
- const child=(id,title,sources,mediaType)=>({id,title,mediaType,enabled:true,sources});
+ // Folder cards take the shape the catalog's titles declare; landscape is Cedar's default.
+ const tileShape=['poster','square'].includes(probes.shape)?probes.shape:undefined;
+ const source=(c,title,extras=c.start,suffix='')=>({id:`${c.type}.${c.id}${suffix}`,title,enabled:true,provider:'catalog',base,addonName,type:c.type,catalogId:c.id,extras:{...extras},...(c.pageable?{pageable:true}:{})});
+ const child=(id,title,sources,mediaType)=>({id,title,mediaType,enabled:true,sources,...(tileShape?{tileShape}:{})});
  const group=(id,title)=>{const g={...makeGroup(title),id:`${key}.${id}`};g.deviceLayout.shared.browseLayout='chips-and-grid';return g;};
- const row=c=>({id:`${key}.${c.type}.${c.id}`,kind:'branch',title:c.name,mediaType:c.type,enabled:true,source:source(c,c.name)});
+ const row=c=>({id:`${key}.${c.type}.${c.id}`,kind:'branch',title:c.name,mediaType:c.type,enabled:true,source:source(c,c.name),...(probes.shape==='landscape'?{rowStyle:'wide'}:{})});
  let rows=[];
  if(arrange==='rows')rows=distinctTitles(catalogs.map(row));
  else if(arrange==='group'){const g=group('all',addonName);g.branches=distinctTitles(catalogs.map(c=>child(`${c.type}.${c.id}`,c.name,[source(c,c.name)],c.type)));rows=[g];}
@@ -287,8 +327,9 @@ export function parseManifest(manifest,sourceURL,arrange='grouped'){
   for(const c of catalogs){
    const [p,rest]=splitName(c.name),grouped=p&&prefixCount.get(p)>=3;
    if(c.choice){
-    const g=group(`${c.type}.${c.id}`,grouped?rest:c.name),{name:extra,values,required}=c.choice;
-    if(!required)g.branches.push(child('all','All',[source(c,'All')],c.type));
+    const g=group(`${c.type}.${c.id}`,grouped?rest:c.name),{name:extra,values,needed}=c.choice;
+    // All reads the catalog without its choice, so it's left out when that returns nothing.
+    if(!needed)g.branches.push(child('all','All',[source(c,'All')],c.type));
     for(const [i,v] of values.entries())g.branches.push(child(`option.${i}`,v,[source(c,v,{...c.fixed,[extra]:v},`.${i}`)],c.type));
     rows.push(g);continue;
    }
@@ -314,7 +355,7 @@ export function parseManifest(manifest,sourceURL,arrange='grouped'){
  return {draft:validateDraft({version:2,title:addonName,rows}),issues,format:`${addonName} catalogs`,ties:[],catalog:{name:addonName,count:catalogs.length,arrange:catalogArrangements.includes(arrange)?arrange:'grouped'}};
 }
 /** `sourceURL` is where Load URL read the JSON; a manifest needs it. `arrange` lays out a manifest's catalogs (parseManifest). */
-export function parseImport(input,{sourceURL='',arrange='grouped'}={}){
+export function parseImport(input,{sourceURL='',arrange='grouped',probes=emptyProbes}={}){
  const serialized=typeof input==='string'?input:JSON.stringify(input);if(new TextEncoder().encode(serialized).length>MAX_BYTES)throw Error('Choose a JSON file smaller than 10 MB.');
  let data;try{data=typeof input==='string'?JSON.parse(input):input;}catch{throw Error('This is not valid JSON. Your current Home has not changed.');}
  if(data?.version===2)return {draft:validateDraft(data),issues:[],format:'Saved Creator draft'};
@@ -323,7 +364,7 @@ export function parseImport(input,{sourceURL='',arrange='grouped'}={}){
  }
  if(data?.formatIdentifier==='app.cedar.home-branches'||data?.formatIdentifier==='app.cedar.bundle')throw Error('This is already a Cedar file. Open it in Cedar. To keep editing here, open a saved Creator draft instead.');
  if(isShelfExport(data))return parseShelves(data);
- if(isManifest(data)){if(!sourceURL)throw Error('This is a manifest. Paste its link (ending in /manifest.json) into Collection URL and choose Load URL, so Cedar knows where to read its catalogs.');return parseManifest(data,sourceURL,arrange);}
+ if(isManifest(data)){if(!sourceURL)throw Error('This is a manifest. Paste its link (ending in /manifest.json) into Collection URL and choose Load URL, so Cedar knows where to read its catalogs.');return parseManifest(data,sourceURL,arrange,probes);}
  const config=obj(data?.config)?data.config:obj(data)?data:{};const collections=Array.isArray(data)?data:Array.isArray(config.collections)?config.collections:obj(data)&&Array.isArray(data.folders)?[data]:[];
  if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose a collection file, a profile export, a Home shelf export or a saved Creator draft, or load a manifest.json link.');
  const rows=[],issues=[];const rowIDs=new Set();const byExternal=new Map();

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseImport, exportCedar, exportCedarProfile, catalogBase, importLink, catalogLinkCount, makeBranch, validateDraft, profileIssues } from '../public/creator/home-model.mjs';
+import { parseImport, exportCedar, exportCedarProfile, catalogBase, importLink, catalogLinkCount, makeBranch, validateDraft, profileIssues, catalogProbes, probeResult, catalogPageURL } from '../public/creator/home-model.mjs';
 import { openProfileFile } from '../public/shared/cedar-file.mjs';
 
 const link = 'https://catalogs.example.com/c/abc123/manifest.json';
@@ -35,10 +35,9 @@ test('a manifest link becomes grouped Branches: prefixes, option groups and More
   assert.deepEqual(titles(draft.rows), [
     ['Now Playing', ['All', 'Egypt', 'Lebanon']],
     ['Cinema', ['Featured', 'Latest Shows', 'Top Rated']],
-    ['More from Example Catalogs', ['Flix', 'Archive']],
+    ['More from Example Catalogs', ['Flix', 'By Decade', 'Archive']],
     'Trending Movies',
     'Trending Shows',
-    ['By Decade', ['1990s', '2000s']],
   ]);
   const flix = draft.rows[2].branches[0];
   assert.deepEqual(flix.sources.map(s => [s.catalogId, s.type]), [['flix-movies', 'movie'], ['flix-shows', 'series']]);
@@ -64,13 +63,13 @@ test('a manifest can also be one Branch Group or separate rows; required extras 
 
 test('catalog-link rows travel only in a locked profile file, written as Cedar’s CatalogLinkBranch', async () => {
   const { draft } = parseImport(raw, { sourceURL: link });
-  assert.equal(catalogLinkCount(draft), 13);
+  assert.equal(catalogLinkCount(draft), 12);
   assert.throws(() => exportCedar(draft), /at least one compatible branch/);
   await assert.rejects(exportCedarProfile(draft, {}), /always locked/);
   assert.deepEqual(profileIssues(draft), []);
 
   const result = await exportCedarProfile(draft, { passphrase: 'correct horse', now: new Date('2026-10-23T00:00:00Z') });
-  assert.equal(result.catalogRows, 13);
+  assert.equal(result.catalogRows, 12);
   assert.ok(result.document.sealed && !result.document.payload);
   const payload = await openProfileFile(result.document, 'correct horse');
   const [nowPlaying, cinema] = payload.home.branches;
@@ -114,4 +113,36 @@ test('a saved draft keeps catalog-link sources and drops a bad address', () => {
   assert.equal(bad.rows[0].source.base, undefined);
   assert.equal(catalogLinkCount(bad), 1);
   assert.match(profileIssues(validateDraft({ ...bad, rows: [...bad.rows, makeBranch('Trending movies')] }))[0], /incomplete/);
+});
+
+test('probes read each optional choice without it, and a few catalogs for the card shape', () => {
+  const probes = catalogProbes(manifest, link);
+  assert.deepEqual(probes.filter(p => p.checksChoice).map(p => [p.key, p.url]), [['movie|now', `${base}/catalog/movie/now.json`]]);
+  assert.deepEqual(probes.filter(p => !p.checksChoice).map(p => p.key), ['movie|featured', 'series|latest', 'movie|top']);
+  assert.deepEqual(catalogProbes(manifest, ''), []);
+  assert.equal(catalogPageURL(base, 'movie', 'now', { skip: '20', genre: 'Saudi Arabia' }), `${base}/catalog/movie/now/genre=Saudi%20Arabia&skip=20.json`);
+});
+
+test('probe answers: an empty catalog needs its choice, and most titles decide the card shape', () => {
+  const [choice, ...samples] = catalogProbes(manifest, link);
+  const result = probeResult([{ probe: choice, shapes: [] }, { probe: samples[0], shapes: [undefined, 'poster'] }, { probe: samples[1], shapes: ['landscape'] }]);
+  assert.deepEqual([...result.needsChoice], ['movie|now']);
+  assert.equal(result.shape, 'poster');
+  assert.equal(probeResult([{ probe: choice, shapes: ['Landscape', 'landscape'] }]).shape, 'landscape');
+  assert.deepEqual([...probeResult([{ probe: choice, shapes: ['poster'] }]).worksWithoutChoice], ['movie|now']);
+  assert.equal(probeResult([]).shape, null);
+});
+
+test('a needed choice drops All and starts other layouts on its first option; titles set the card shape', () => {
+  const probes = { needsChoice: new Set(['movie|now']), worksWithoutChoice: new Set(), shape: 'poster' };
+  const grouped = parseImport(raw, { sourceURL: link, probes }).draft;
+  assert.deepEqual(grouped.rows[0].branches.map(b => b.title), ['Egypt', 'Lebanon']);
+  assert.ok(grouped.rows.filter(r => r.kind === 'group').every(g => g.branches.every(b => b.tileShape === 'poster')));
+  assert.ok(grouped.rows.filter(r => r.kind === 'branch').every(r => !r.rowStyle));
+  const rows = parseImport(raw, { sourceURL: link, arrange: 'rows', probes }).draft;
+  assert.deepEqual(rows.rows.find(r => r.source.catalogId === 'now').source.extras, { genre: 'Egypt' });
+  const wide = parseImport(raw, { sourceURL: link, probes: { ...probes, needsChoice: new Set(), shape: 'landscape' } }).draft;
+  assert.equal(wide.rows[0].branches[0].title, 'All');
+  assert.ok(wide.rows.flatMap(r => r.branches || []).every(b => !b.tileShape));
+  assert.ok(wide.rows.filter(r => r.kind === 'branch').every(r => r.rowStyle === 'wide'));
 });
