@@ -82,10 +82,16 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 .cedar-header :focus-visible { outline: 3px solid var(--cedar); outline-offset: 3px; }
 .site-footer-intro > p, .site-footer-group a, .site-footer-meta { color: var(--muted); }
 .site-footer-group h2 { color: var(--text); }
+/* Below this width equal side columns can't hold the theme and Get Cedar
+   controls, so the capsule takes the space between them instead of centring. */
+@media (max-width: 1180px) {
+  .cedar-header { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .cedar-header .cedar-nav { justify-self: center; }
+}
 @media (max-width: 1080px) {
   .cedar-header .cedar-nav a { padding: 0 10px; }
 }
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .cedar-header { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px 0; }
   .cedar-header .cedar-nav { flex-wrap: wrap; justify-content: center; }
   .has-menu-toggle .cedar-brand { margin-right: auto; }
