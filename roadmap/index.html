@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="What’s being built for Cedar, what shipped recently, and the known issues being fixed.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; connect-src 'self' https://cedar-feedback.cedar-feedback.workers.dev; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+    <title>Roadmap — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/roadmap/">
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../policy.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/">Home</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/roadmap/">Roadmap</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Theme
+              <select aria-label="Color theme" data-theme-select>
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </label>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="document-page roadmap-page">
+        <header class="document-header roadmap-header">
+          <div>
+            <h1>Roadmap</h1>
+            <p>What’s being built for Cedar, what shipped recently, and the known issues being fixed. Every item here was reviewed by the Cedar developer, and the page stays current on its own.</p>
+          </div>
+          <a class="inline-action" href="/cedar-tv-updates/feedback/">Suggest or report something</a>
+        </header>
+
+        <section class="tracker-section" aria-labelledby="tracker-features">
+          <div class="tracker-heading">
+            <h2 id="tracker-features">Features</h2>
+            <p>What’s being considered, planned and built, and what shipped recently.</p>
+          </div>
+          <div class="roadmap-board" data-tracker>
+            <section class="roadmap-column" data-tracker-kind="feature" data-tracker-status="considering" aria-labelledby="tracker-considering">
+              <h3 id="tracker-considering"><span class="roadmap-dot dot-plum" aria-hidden="true"></span>Considering</h3>
+              <p class="roadmap-help">Requests being looked at. Not promised yet.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="feature" data-tracker-status="planned" aria-labelledby="tracker-planned">
+              <h3 id="tracker-planned"><span class="roadmap-dot dot-blue" aria-hidden="true"></span>Planned</h3>
+              <p class="roadmap-help">Decided on, and waiting for its turn.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="feature" data-tracker-status="in-progress" aria-labelledby="tracker-building">
+              <h3 id="tracker-building"><span class="roadmap-dot dot-amber" aria-hidden="true"></span>In progress</h3>
+              <p class="roadmap-help">Being built now.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="feature" data-tracker-status="shipped" aria-labelledby="tracker-shipped">
+              <h3 id="tracker-shipped"><span class="roadmap-dot dot-green" aria-hidden="true"></span>Recently shipped</h3>
+              <p class="roadmap-help">In a build you can install.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+          </div>
+        </section>
+
+        <section class="tracker-section" aria-labelledby="tracker-issues">
+          <div class="tracker-heading">
+            <h2 id="tracker-issues">Known issues</h2>
+            <p>Bugs we know about, so you don’t have to report them again.</p>
+          </div>
+          <div class="roadmap-board roadmap-board-three" data-tracker>
+            <section class="roadmap-column" data-tracker-kind="bug" data-tracker-status="investigating" aria-labelledby="tracker-investigating">
+              <h3 id="tracker-investigating"><span class="roadmap-dot dot-plum" aria-hidden="true"></span>Investigating</h3>
+              <p class="roadmap-help">Confirmed, and the cause is being tracked down.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="bug" data-tracker-status="in-progress" aria-labelledby="tracker-fixing">
+              <h3 id="tracker-fixing"><span class="roadmap-dot dot-amber" aria-hidden="true"></span>Fix in progress</h3>
+              <p class="roadmap-help">The fix is being built and tested.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+            <section class="roadmap-column" data-tracker-kind="bug" data-tracker-status="fixed" aria-labelledby="tracker-fixed">
+              <h3 id="tracker-fixed"><span class="roadmap-dot dot-green" aria-hidden="true"></span>Recently fixed</h3>
+              <p class="roadmap-help">Fixed in a build you can install.</p>
+              <div class="roadmap-cards"></div>
+            </section>
+          </div>
+        </section>
+        <dialog class="roadmap-dialog" data-roadmap-dialog aria-labelledby="roadmap-dialog-title">
+          <article>
+            <p class="roadmap-dialog-eyebrow" data-roadmap-detail="eyebrow"></p>
+            <h2 id="roadmap-dialog-title" data-roadmap-detail="title"></h2>
+            <p class="roadmap-meta" data-roadmap-detail="meta"></p>
+            <div class="roadmap-dialog-body" data-roadmap-detail="body"></div>
+            <p class="roadmap-dialog-footnote" data-roadmap-detail="footnote"></p>
+            <form method="dialog" class="roadmap-dialog-actions">
+              <button type="submit" class="inline-action">Close</button>
+            </form>
+          </article>
+        </dialog>
+        <noscript><p class="roadmap-help">Turn on JavaScript to see the roadmap, or read the <a class="inline-document-link" href="/cedar-tv-updates/releases/">release notes</a>.</p></noscript>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/feedback/">Send feedback</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
+              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+    </div>
+    <script src="roadmap.js" defer></script>
+  </body>
+</html>

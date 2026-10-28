@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Cedar Creator: add curated Home setups, import your collections, build Branches and Branch Groups, choose a hero, profile photo and source badges, and take it all to Cedar.">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https:; style-src 'self'; script-src 'self'; connect-src 'self' https:; base-uri 'self'; form-action 'none'">
+    <meta name="referrer" content="no-referrer">
+    <title>Creator — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/creator/">
+    <link rel="icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="creator.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+    <link rel="stylesheet" href="home-builder.css">
+    <link rel="stylesheet" href="workspace.css">
+  </head>
+  <body>
+      <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/">Home</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/roadmap/">Roadmap</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Theme
+              <select aria-label="Color theme" data-theme-select>
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </label>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </div>
+        </div>
+      </header>
+    <main id="main" class="section-shell creator-shell creator-workspace">
+      <div class="creator-heading">
+        <div>
+          <p class="eyebrow"><span></span>Cedar Creator</p>
+          <h1>Build your Home <em>in one place.</em></h1>
+          <p class="creator-lede">Pick setups, a profile photo and source badges on the left. Your Home updates on the right as you go. Take it to Cedar when it looks right.</p>
+        </div>
+        <ol class="creator-steps" aria-label="How it works"><li><b>1</b>Choose</li><li><b>2</b>Arrange</li><li><b>3</b>Open in Cedar</li></ol>
+      </div>
+
+      <div class="studio">
+        <aside class="library" aria-label="Library">
+          <div class="library-tabs" role="tablist" aria-label="Library">
+            <button type="button" role="tab" id="tab-setups" data-tab="setups" aria-controls="panel-setups" aria-selected="true">Setups <span id="home-tab-count" class="tab-count" hidden></span></button>
+            <button type="button" role="tab" id="tab-avatars" data-tab="avatars" aria-controls="panel-gallery" aria-selected="false" tabindex="-1">Photos</button>
+            <button type="button" role="tab" id="tab-badges" data-tab="badges" aria-controls="panel-gallery" aria-selected="false" tabindex="-1">Badges</button>
+            <button type="button" role="tab" id="tab-build" data-tab="build" aria-controls="panel-build" aria-selected="false" tabindex="-1">Build</button>
+          </div>
+
+          <section id="panel-setups" class="library-panel" role="tabpanel" aria-labelledby="tab-setups">
+            <div class="library-controls">
+              <label class="search"><span class="sr-only">Search setups</span><input id="setup-search" type="search" placeholder="Search setups, groups and rows" autocomplete="off"></label>
+              <div class="library-filters">
+                <label><span class="sr-only">Category</span><select id="setup-tag"><option value="">All categories</option></select></label>
+                <label><span class="sr-only">Sort by</span><select id="setup-sort"><option value="featured">Featured</option><option value="newest">Newest</option><option value="branches">Most rows</option><option value="name">Name A–Z</option></select></label>
+              </div>
+            </div>
+            <p id="setup-status" class="library-status" role="status">Loading setups…</p>
+            <div id="setup-grid" class="setup-list"></div>
+          </section>
+
+          <section id="panel-gallery" class="library-panel" role="tabpanel" aria-labelledby="tab-avatars" hidden>
+            <div class="library-controls">
+              <label class="search"><span class="sr-only">Search</span><input id="search" type="search" placeholder="Search names or collections" autocomplete="off"></label>
+              <div class="library-filters">
+                <label id="category-control"><span class="sr-only">Category</span><select id="category"><option value="">All categories</option></select></label>
+                <label id="sort-control"><span class="sr-only">Sort by</span><select id="sort"><option value="featured">Original order</option><option value="category">Category</option><option value="name">Name A–Z</option></select></label>
+              </div>
+            </div>
+            <p id="status" class="library-status" role="status"></p>
+            <section id="selection" class="selection" aria-labelledby="selection-title" hidden>
+              <div id="preview" class="selection-preview"></div>
+              <div class="selection-body">
+                <p class="eyebrow">On Your Home</p>
+                <h2 id="selection-title"></h2>
+                <p id="manual-help"></p>
+                <div class="selection-actions">
+                  <a id="open-cedar" class="text-link">Open in Cedar now</a>
+                  <button id="copy" class="text-link" type="button">Copy link</button>
+                  <button id="add-avatar" class="text-link" type="button" hidden>Use on Your Home</button>
+                </div>
+                <label class="sr-only">Selection URL<input id="selection-url" type="url" readonly spellcheck="false"></label>
+                <p id="copy-status" role="status"></p>
+              </div>
+              <details id="full-set" hidden>
+                <summary id="full-set-label">View full set</summary>
+                <div id="full-set-grid" class="full-set-grid"></div>
+              </details>
+            </section>
+            <div id="gallery" class="artwork-grid"></div>
+            <button id="more" class="button button-secondary" type="button" hidden>Show more</button>
+          </section>
+
+          <section id="panel-build" class="library-panel home-scope" role="tabpanel" aria-labelledby="tab-build" hidden>
+            <button id="open-import" type="button" class="build-drop"><strong>Import a collection file</strong><span>Collection files, profile exports, Home shelf exports, saved Creator drafts and manifest.json links. Read in this browser.</span></button>
+            <div class="build-choices">
+              <button id="add-branch" type="button"><strong>+ Branch</strong><span>One row of titles: trending, a genre, a list…</span></button>
+              <button id="add-group" type="button"><strong>+ Branch Group</strong><span>Folder cards that each open their own rows.</span></button>
+            </div>
+            <h3 class="build-heading">Quick starts</h3>
+            <div id="preset-list" class="preset-chips"></div>
+            <h3 class="build-heading">Your draft</h3>
+            <p class="quiet">Your Home saves in this browser as you go. Download a copy to keep it or move it to another browser.</p>
+            <button id="save-draft" type="button" class="button">Download draft file</button>
+          </section>
+        </aside>
+
+        <section id="panel-home" class="stage home-scope" aria-label="Your Home">
+          <div class="home-bar">
+            <div id="home-avatar" class="home-identity"></div>
+            <div class="home-bar-meta"><strong id="home-count">Your Home</strong><span id="home-summary"></span></div>
+            <span id="save-state" class="save-state">Saved in this browser</span>
+            <button id="undo" type="button" class="icon-button" disabled aria-label="Undo">↶</button>
+            <button id="export" type="button" class="button primary">Open in Cedar</button>
+          </div>
+          <p id="home-status" class="home-status" role="status" aria-live="polite"></p><input id="copy-fallback" aria-label="URL to copy" readonly hidden>
+          <div id="preview-banner"></div>
+          <div class="canvas-toolbar">
+            <div class="segmented" id="preview-screens" aria-label="Preview screen"><button type="button" data-screen="home" aria-pressed="true">Home</button><button type="button" data-screen="title" aria-pressed="false">Title page</button><button type="button" data-screen="who" aria-pressed="false">Who’s watching</button></div>
+            <div class="preview-options">
+              <div class="segmented" id="preview-titles" aria-label="Title position"><button type="button" data-titles="on" aria-pressed="false">Titles on art</button><button type="button" data-titles="below" aria-pressed="true">Below</button><button type="button" data-titles="hidden" aria-pressed="false">Hidden</button></div>
+              <div class="segmented" id="preview-device" aria-label="Preview device"><button type="button" data-device="television" aria-pressed="true">TV</button><button type="button" data-device="phone" aria-pressed="false">iPhone</button><button type="button" data-device="tablet" aria-pressed="false">iPad</button><button type="button" data-device="desktop" aria-pressed="false">Mac</button></div>
+            </div>
+          </div>
+          <div id="home-preview" class="home-preview" data-device="television" data-titles="below"><div id="preview-content"></div></div>
+          <p class="preview-caption" id="preview-caption">Rows show sample posters; Cedar fills them with each row’s real titles. Folder art is the curator’s.</p>
+
+          <section class="rows-panel" aria-labelledby="rows-heading">
+            <div class="rows-heading"><div><h2 id="rows-heading">Home rows</h2><span class="quiet">Drag to reorder. Open a row to change it.</span></div><label class="search-label"><span class="sr-only">Search rows</span><input id="branch-search" type="search" placeholder="Search rows"></label></div>
+            <ol id="home-outline"></ol>
+          </section>
+          <div id="row-editor" hidden><aside id="inspector" class="inspector" aria-label="Row editor"></aside><section id="branch-content" class="content-panel" aria-label="Selected row contents"></section></div>
+        </section>
+      </div>
+      <noscript><p>Enable JavaScript to use Creator. You can still choose artwork in the <a href="../artwork/">artwork gallery</a>.</p></noscript>
+    </main>
+    <p id="toast" class="creator-toast" role="status" aria-live="polite"></p>
+
+    <dialog id="setup-dialog" class="creator-dialog" aria-labelledby="setup-dialog-title">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow" id="setup-dialog-creator"></p>
+          <h2 id="setup-dialog-title"></h2>
+        </div>
+        <button type="button" class="icon-button" data-close aria-label="Close setup">×</button>
+      </div>
+      <p id="setup-dialog-description" class="dialog-lede"></p>
+      <div id="setup-dialog-credit" class="setup-credit"></div>
+      <div class="dialog-actions">
+        <button id="setup-dialog-add" class="button button-primary" type="button">Add whole setup</button>
+        <span id="setup-dialog-meta" class="setup-meta"></span>
+      </div>
+      <h3 class="dialog-subheading">Branch groups</h3>
+      <ol id="setup-dialog-groups" class="group-list"></ol>
+    </dialog>
+
+    <div class="home-scope">
+<dialog id="import-dialog"><div class="dialog-header"><div><p class="eyebrow">BRING YOUR COLLECTIONS</p><h2>Start with something you love.</h2></div><button class="icon-button" data-close="import-dialog" aria-label="Close import">×</button></div><p class="muted">Open a collection file, a profile export, a Home shelf export or a saved Creator draft, or load a manifest.json link to turn its catalogs into Branches. Review it before changing your Home.</p><div class="import-inputs"><label class="file-drop">Choose a JSON file<input id="import-file" type="file" accept=".json,application/json"><span>Up to 10 MB · Read locally</span></label><details><summary>Or paste JSON, a collection URL or a manifest link</summary><label>Collection URL or manifest link<input id="import-url" type="url" placeholder="https://…/collection.json or …/manifest.json"></label><button id="load-url" class="button">Load URL</button><p class="quiet">Public HTTPS JSON links only. A manifest.json link becomes Branches that read each catalog straight from that link. If the host blocks browser access, download the file and open it above.</p><label>Collection JSON<textarea id="import-json" rows="5" placeholder='{"collections": […]}'></textarea></label><button id="read-json" class="button">Read JSON</button></details></div><p id="import-status" role="status"></p><div id="import-review" hidden><div class="section-heading"><h3 id="import-summary">Review import</h3><div><button id="import-all" class="text-button">All</button><button id="import-none" class="text-button">None</button></div></div><div id="import-arrange" class="import-arrange" hidden></div><div id="import-link" class="import-arrange" hidden></div><div id="import-choices"></div><details id="import-issues"><summary id="issue-summary">Compatibility notes</summary><ul id="issue-list"></ul></details><label>How should this update your Home?<select id="import-mode"><option value="append">Add to current Home</option><option value="missing">Add only missing branches and sources</option><option value="replace">Replace current Home</option></select></label><p class="quiet">Replace changes this browser draft only. Undo restores your previous arrangement.</p><button id="apply-import" class="button primary">Use selected branches</button></div></dialog>
+
+<dialog id="branch-dialog" class="branch-dialog" aria-label="Branch builder"></dialog>
+<dialog id="export-dialog"><div class="dialog-header"><div><p class="eyebrow">READY FOR CEDAR</p><h2>Your Home, ready to take with you.</h2></div><button class="icon-button" data-close="export-dialog" aria-label="Close export">×</button></div><p id="export-summary"></p><div id="export-link" class="export-link" hidden><p class="quiet">Your Home is made only of Creator setups, so it can also travel as a link. On iPhone, iPad or Mac, Open in Cedar shows what will be added before anything changes. Apple TV receives the branches from your profile.</p><div class="toolbar-actions"><a id="export-open" class="button primary">Open in Cedar</a><button id="export-copy" type="button" class="button">Copy link</button></div><label>Link<input id="export-link-url" type="url" readonly spellcheck="false"></label></div><ol class="export-steps" id="export-steps-profile" hidden><li>Download your locked <strong>.cedar</strong> profile file.</li><li>In Cedar on iPhone, iPad, Mac or Apple TV, choose <strong>Settings → Profiles → Import Profile</strong>, or open the file.</li><li>Enter your passphrase and choose what to bring in. Cedar fetches each Tobacco Tie and adds it to Cedar Library, or turns a catalog-only one into Branches.</li></ol><ol class="export-steps" id="export-steps-branches"><li>Download your <strong>.cedar</strong> file.</li><li>Open it with Cedar on iPhone, iPad, or Mac, or choose <strong>Settings → Home Screen &amp; Branches → Import Branches</strong>.</li><li>Review the import in Cedar. Importing the same Home again updates those Branches instead of adding copies.</li></ol><p class="quiet">Direct Branches import as poster rows. Branch Group device layouts carry over to each device. This preview does not send changes directly to a device.</p><fieldset class="export-kind"><legend class="sr-only">File type</legend><label class="import-choice"><input type="radio" name="export-kind" value="branches" checked><span><strong>Branches file</strong><small>Safe to share with anyone. Rows that need a Tobacco Tie or a catalog link are left out.</small></span></label><label class="import-choice"><input type="radio" name="export-kind" value="profile"><span><strong>Profile file, just for you</strong><small>Locked with a passphrase. Keeps your own Tobacco Ties and catalog links so their rows come too. Import it in Cedar from Profiles → Import Profile.</small></span></label></fieldset><div id="export-profile" hidden><fieldset id="export-setup" class="export-kind" hidden><legend class="sr-only">Logins from the file you imported</legend><div id="export-setup-list"></div></fieldset><label>Tobacco Tie links<textarea id="export-ties" rows="4" spellcheck="false" autocomplete="off" placeholder="https://…/manifest.json, one per line"></textarea></label><p class="quiet" id="export-ties-note">These are your own addresses and may contain your access token. They are only ever saved inside the locked file, on this device. Nothing is uploaded.</p><div class="form-grid"><label>Passphrase<input id="export-passphrase" type="password" autocomplete="new-password" minlength="8"></label><label>Confirm<input id="export-confirm" type="password" autocomplete="new-password"></label></div><p class="quiet">Send the passphrase separately from the file. Cedar asks for it when you import.</p></div><details id="export-notes"><summary id="export-note-count">Items left out</summary><ul id="export-note-list"></ul></details><p id="export-error" class="quiet" role="alert"></p><button id="download-export" class="button primary">Download .cedar file</button></dialog>
+    </div>
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/feedback/">Send feedback</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
+              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+    <script type="module" src="creator.js"></script>
+  </body>
+</html>

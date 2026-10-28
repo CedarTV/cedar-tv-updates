@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0c0e0d">
+    <meta name="description" content="Turn your Cedar Library URL into a Tobacco Tie with Cedar. Create a username and password to import into Cedar.">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+    <title>Cedar Library — Cedar</title>
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="tie.css?v=4">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script type="module" src="tie.mjs?v=5"></script>
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/">Home</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/roadmap/">Roadmap</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Theme
+              <select aria-label="Color theme" data-theme-select>
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </label>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </div>
+        </div>
+      </header>
+      <main id="main">
+        <div class="page-heading">
+          <div><p class="eyebrow">CEDAR / TOOLS</p><h1>Cedar <em>Library.</em></h1><p class="intro">Your Cedar Library URL, tied into a username and password.</p></div>
+          <span class="preview-badge"><span aria-hidden="true"></span>Created privately</span>
+        </div>
+        <div class="creator">
+          <section class="input-panel" aria-labelledby="input-title">
+            <div class="section-label"><h2 id="input-title">Start with an address</h2></div>
+            <p class="section-description">Paste your Cedar Library URL. Add several to install them all at once.</p>
+            <form id="tie-form" novalidate>
+              <label for="addon-url">Cedar Library URLs</label>
+              <div class="address-field"><textarea id="addon-url" name="addon-url" rows="3" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="address-hint bundle-note address-error" maxlength="65536"></textarea><button class="clear-input" id="clear-input" type="button" aria-label="Clear URLs" hidden>×</button></div>
+              <div class="field-meta"><p id="address-hint">Use complete HTTPS addresses, or HTTP for a self-hosted server. Put each on its own line or separate them with commas — up to 20 per tie.</p></div>
+              <p class="bundle-note" id="bundle-note">A tie made from several URLs needs the latest Cedar app. Older versions install one URL per tie. Multiple-URL ties suggested by MrT on Discord.</p>
+              <p id="address-error" class="field-error" role="alert" hidden></p>
+              <button class="create-button" id="create-tie" type="submit"><span>Create Tobacco Tie</span><span aria-hidden="true">→</span></button>
+            </form>
+            <div class="local-note"><span class="local-dot" aria-hidden="true"></span><p>Made right here in your browser.<br><span>Your address is not uploaded or stored.</span></p></div>
+          </section>
+          <section class="output-panel" aria-labelledby="output-title">
+            <div class="section-label"><h2 id="output-title">Your Tobacco Tie</h2></div>
+            <p class="section-description">Enter these three values in Cedar Library, in your Cedar app.</p>
+            <label class="code-label" for="tie-server">Server URL</label>
+            <textarea class="credential-output" id="tie-server" readonly rows="2" spellcheck="false" autocomplete="off" aria-describedby="prototype-note"></textarea>
+            <button class="copy-button" id="copy-server" type="button" disabled>Copy server URL</button>
+            <label class="code-label credential-label" for="tie-username">Username</label>
+            <textarea class="credential-output" id="tie-username" readonly rows="4" placeholder="Your username will appear here." spellcheck="false" autocomplete="off" aria-describedby="prototype-note"></textarea>
+            <button class="copy-button" id="copy-username" type="button" disabled>Copy username</button>
+            <label class="code-label credential-label" for="tie-password">Password</label>
+            <textarea class="credential-output" id="tie-password" readonly rows="2" placeholder="Your password will appear here." spellcheck="false" autocomplete="off" aria-describedby="prototype-note"></textarea>
+            <button class="copy-button" id="copy-password" type="button" disabled>Copy password</button>
+            <p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+            <p class="prototype-note" id="prototype-note">In Cedar, open Settings → Connections &amp; Services → Media Servers → Add Connection → Cedar Library, then choose + Add a Tobacco Tie. Enter the server URL, username and password from this tie, and select Install.</p>
+            <details class="legacy-output">
+              <summary>Using an older Cedar app?</summary>
+              <p class="prototype-note">Use the complete code or open it in Cedar. In the Add a Tobacco Tie form, current apps accept it with “Use a code or link”.</p>
+              <label class="code-label credential-label" for="tie-code">Code</label>
+              <textarea class="credential-output" id="tie-code" readonly rows="4" placeholder="Your compatible code will appear here." spellcheck="false" autocomplete="off"></textarea>
+              <button class="copy-button" id="copy-tie" type="button" disabled>Copy Tobacco Tie</button>
+              <a id="open-cedar" hidden>Open code in Cedar ↗</a>
+            </details>
+          </section>
+        </div>
+        <section class="how-it-works" aria-label="How it works">
+          <div><span>PASTE</span><p>Bring your Cedar Library URL.</p></div><div><span>CREATE</span><p>Generate a username and password.</p></div><div><span>COPY</span><p>Enter all three values in Cedar.</p></div>
+        </section>
+        <details class="about-ties"><summary>What is a Tobacco Tie? <span aria-hidden="true">+</span></summary><div><p>A Tobacco Tie turns your Cedar Library URL into a portable username and password. These are generated import values, so you do not need a Cedar account. Anyone with both can install the tie. Keep them private when they contain account access.</p><p>Cedar creates both values locally without connecting to your Cedar Library. In the app, the server URL is used for a connection check; your username and password stay on your device while Cedar decodes the tie. Creating a tie does not check that your Cedar Library URL works or is compatible with Cedar. Only use sources you are authorized to access.</p></div></details>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/feedback/">Send feedback</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
+              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+    </div>
+    <noscript><p class="noscript-note">Enable JavaScript to create a Tobacco Tie in your browser. Your address stays on this page.</p></noscript>
+  </body>
+</html>

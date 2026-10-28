@@ -1,0 +1,41 @@
+/* Feedback form: one column of labelled fields, sized for phones first. */
+.feedback-form,
+.feedback-done { display: grid; gap: 22px; max-width: 720px; }
+.feedback-form[hidden],
+.feedback-done[hidden] { display: none; }
+.feedback-kind { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 0; padding: 0; border: 0; }
+.feedback-kind legend { margin-bottom: 10px; font-weight: 650; }
+.feedback-kind label { display: flex; gap: 10px; align-items: flex-start; padding: 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); cursor: pointer; }
+.feedback-kind label:has(input:checked) { border-color: var(--cedar); }
+.feedback-kind input { margin-top: 4px; accent-color: var(--cedar); }
+.feedback-kind span { color: var(--muted); font-size: 0.86rem; line-height: 1.45; }
+.feedback-kind strong { display: block; color: var(--text); font-size: 0.95rem; }
+.feedback-field { display: grid; gap: 6px; }
+.feedback-field > span { font-weight: 650; }
+.feedback-field em { color: var(--muted); font-style: normal; font-weight: 500; }
+.feedback-field small { color: var(--muted); font-size: 0.8rem; line-height: 1.45; }
+.feedback-field input,
+.feedback-field select,
+.feedback-field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--control-border);
+  border-radius: 10px;
+  background: var(--control-bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+}
+.feedback-field textarea { resize: vertical; line-height: 1.5; }
+.feedback-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.feedback-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.feedback-status { min-height: 1.4em; margin: 0; color: var(--cedar); font-weight: 600; }
+.feedback-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
+.feedback-actions .inline-action { margin-top: 0; border: 0; font: inherit; font-weight: 650; cursor: pointer; }
+.feedback-actions .inline-action:disabled { opacity: 0.6; cursor: progress; }
+.feedback-done .secondary-action { color: var(--text); font: inherit; font-weight: 650; cursor: pointer; }
+@media (max-width: 620px) {
+  .feedback-kind,
+  .feedback-row { grid-template-columns: 1fr; }
+}

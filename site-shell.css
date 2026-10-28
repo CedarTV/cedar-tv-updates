@@ -1,0 +1,177 @@
+/* Shared navigation and semantic colors, loaded after each page's styles. */
+:root { --control-bg: #1c1c1e; --control-border: #48484a; --on-accent: #172016; }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #000000;
+  --surface: #1c1c1e;
+  --surface-raised: #2c2c2e;
+  --control-bg: #1c1c1e;
+  --control-border: #545458;
+  --line: rgba(255, 255, 255, 0.1);
+  --text: #f5f5f7;
+  --muted: #a1a1a6;
+  --pill: rgba(255, 255, 255, 0.07);
+  --header-bg: rgba(0, 0, 0, 0.72);
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --surface-raised: #e8e8ed;
+  --control-bg: #ffffff;
+  --control-border: #86868b;
+  --line: rgba(0, 0, 0, 0.1);
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --cedar: #39552d;
+  --cedar-bright: #29451e;
+  --warm: #8e4b24;
+  --on-accent: #ffffff;
+  --pill: rgba(0, 0, 0, 0.05);
+  --header-bg: rgba(245, 245, 247, 0.78);
+}
+html { scroll-padding-top: 84px; }
+html, body { overflow-x: clip; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+:root[data-theme] body { background: var(--bg); }
+
+/* Header: brand, a capsule of page links, then theme and Get Cedar. */
+.cedar-header {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 12px 20px;
+  position: sticky; top: 0; z-index: 50; width: min(1200px, calc(100% - 40px));
+  margin: 0 auto; padding: 12px 0; color: var(--text);
+  font: 500 14px/1.4 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+}
+.cedar-header::before {
+  content: ""; position: absolute; inset: 0 -100vmax; z-index: -1;
+  border-bottom: 1px solid var(--line); background: var(--header-bg, var(--bg));
+  -webkit-backdrop-filter: saturate(180%) blur(20px); backdrop-filter: saturate(180%) blur(20px);
+}
+.site-frame > .cedar-header, .page-shell > .cedar-header { width: 100%; }
+.cedar-brand { display: inline-flex; align-items: center; gap: 10px; justify-self: start; min-height: 44px; color: var(--text); text-decoration: none; font-size: 17px; font-weight: 650; letter-spacing: -0.01em; }
+.cedar-brand img { display: block; width: 28px; height: 28px; border-radius: 7px; }
+.cedar-menu { display: contents; }
+.cedar-header .cedar-nav {
+  display: flex; align-items: center; gap: 2px; padding: 4px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--pill, var(--surface));
+}
+.cedar-header .cedar-nav a {
+  display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 999px;
+  color: var(--muted); font-size: 13px; font-weight: 500; text-decoration: none; white-space: nowrap;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+.cedar-header .cedar-nav a:hover { color: var(--text); background: var(--pill, var(--surface-raised)); }
+.cedar-header .cedar-nav a[aria-current] { color: var(--bg); background: var(--text); }
+.cedar-header-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+.cedar-header .cedar-download {
+  display: inline-flex; align-items: center; min-height: 36px; padding: 0 16px; border-radius: 999px;
+  background: var(--text); color: var(--bg); font-size: 13px; font-weight: 650; text-decoration: none; white-space: nowrap;
+}
+.cedar-header .cedar-download:hover { opacity: 0.86; }
+.cedar-header .cedar-download-compact, header.cedar-header button.cedar-menu-toggle { display: none; }
+header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; min-height: 36px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--pill, var(--control-bg)); color: var(--text); font: inherit; font-size: 13px; cursor: pointer; }
+.cedar-menu-toggle::before { content: ""; width: 14px; height: 10px; background: linear-gradient(currentColor 0 0) top / 100% 2px no-repeat, linear-gradient(currentColor 0 0) center / 100% 2px no-repeat, linear-gradient(currentColor 0 0) bottom / 100% 2px no-repeat; }
+.is-menu-open .cedar-menu-toggle::before { height: 14px; background: linear-gradient(45deg, transparent 45%, currentColor 45% 55%, transparent 55%), linear-gradient(-45deg, transparent 45%, currentColor 45% 55%, transparent 55%); }
+.cedar-theme { display: flex; align-items: center; margin: 0; color: var(--muted); font-size: 0; }
+.cedar-theme select { min-height: 36px; width: auto; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--pill, var(--control-bg)); color: var(--text); font: inherit; font-size: 13px; cursor: pointer; }
+.cedar-header .skip-link { position: absolute; top: 8px; left: 0; z-index: 2; padding: 10px 16px; border-radius: 12px; background: var(--cedar); color: var(--on-accent); font-weight: 700; text-decoration: none; transform: translateY(-200%); }
+.cedar-header .skip-link:focus { transform: none; }
+.cedar-header :focus-visible { outline: 3px solid var(--cedar); outline-offset: 3px; }
+.site-footer-intro > p, .site-footer-group a, .site-footer-meta { color: var(--muted); }
+.site-footer-group h2 { color: var(--text); }
+@media (max-width: 1080px) {
+  .cedar-header .cedar-nav a { padding: 0 10px; }
+}
+@media (max-width: 960px) {
+  .cedar-header { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px 0; }
+  .cedar-header .cedar-nav { flex-wrap: wrap; justify-content: center; }
+  .has-menu-toggle .cedar-brand { margin-right: auto; }
+  .cedar-header.has-menu-toggle .cedar-download-compact, header.has-menu-toggle button.cedar-menu-toggle { display: inline-flex; }
+  .cedar-menu { display: flex; flex-basis: 100%; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+  .has-menu-toggle .cedar-menu { display: none; }
+  .has-menu-toggle.is-menu-open .cedar-menu { display: flex; flex-direction: column; align-items: stretch; gap: 10px; padding: 6px 0 12px; }
+  .has-menu-toggle .cedar-nav { flex-direction: column; align-items: stretch; gap: 2px; padding: 6px; border-radius: 16px; }
+  .cedar-header.has-menu-toggle .cedar-nav a { min-height: 46px; padding: 0 14px; border-radius: 12px; font-size: 16px; }
+  .has-menu-toggle .cedar-header-actions { justify-content: space-between; }
+  .has-menu-toggle .cedar-header-actions .cedar-download { display: none; }
+  .has-menu-toggle .cedar-theme { flex: 1; justify-content: space-between; font-size: 14px; }
+}
+@media (max-width: 680px) {
+  .cedar-header { width: calc(100% - 32px); }
+}
+
+/* Light surfaces keep original screenshots and media artwork untouched. */
+[data-theme="light"] .button-primary, [data-theme="light"] .inline-action { color: var(--bg); }
+[data-theme="light"] .button-primary:hover { color: #fff; }
+[data-theme="light"] :is(.compatibility, .proof-strip a, .proof-strip span, .platform-release, .caption-number, .feature-index, .release-meta, .install-note) { color: var(--muted); }
+[data-theme="light"] :is(.orbit-tv, .orbit-profile, .release-card) { background: var(--surface); }
+[data-theme="light"] .release-status-testflight { color: #334d88; }
+[data-theme="light"] .release-card :is(p, time), [data-theme="light"] .release-metadata { color: var(--muted); }
+[data-theme="light"] .creator-shell :is(input, select, .artwork-choice) { color: var(--text); background: var(--surface); border-color: var(--control-border); }
+[data-theme="light"] .artwork-choice[aria-pressed="true"], [data-theme="light"] .selection { background: #e3eadc; border-color: var(--cedar); }
+[data-theme="light"] :is(.artwork-choice small, .full-set-grid figcaption) { color: var(--muted); }
+[data-theme="light"] #full-set summary { color: var(--cedar); }
+[data-theme="light"] .creator { background: var(--surface); }
+[data-theme="light"] :is(#addon-url, #tie-code) { background: var(--bg); border-color: var(--control-border); color: var(--text); }
+[data-theme="light"] .create-button { color: #fff; }
+[data-theme="light"] .create-button:hover { background: #29451e; }
+[data-theme="light"] :is(.preview-badge, .clear-input, .field-meta p, .local-note p, .local-note p span, .prototype-note, .how-it-works span, .how-it-works p, .about-ties summary, .about-ties p, .copy-button:disabled) { color: var(--muted); }
+[data-theme="light"] :is(#addon-url, #tie-code)::placeholder { color: var(--muted); }
+[data-theme="light"] .field-error { color: #a12c23; }
+[data-theme="light"] .release-entry, [data-theme="light"] .privacy-points p { background: var(--surface); }
+[data-theme="light"] .privacy-points p { color: var(--text); }
+[data-theme="light"] .inline-action:hover { color: #fff; }
+
+/* Readable secondary copy and distinguishable controls in either theme. */
+:is(.compatibility, .proof-strip a, .proof-strip span, .platform-release, .caption-number, .feature-index, .release-meta, .install-note) { color: var(--muted); }
+.cedar-theme select, .cedar-header .cedar-nav .cedar-download,
+.button-secondary, .creator-shell :is(input, select, .artwork-choice),
+#addon-url, #tie-code, .copy-button { border-color: var(--control-border); }
+:root .creator-shell :focus-visible, :root #addon-url:focus,
+:root :is(input, select, textarea, button, a, summary):focus-visible {
+  outline: 3px solid var(--cedar); outline-offset: 4px;
+}
+:root :is(input, textarea)::placeholder { color: var(--muted); opacity: 1; }
+[data-theme="light"] .download-card { background: var(--surface); border-color: var(--line); }
+[data-theme="light"] .skip-link { color: var(--on-accent); }
+[data-theme="light"] .about-ties summary span { color: var(--muted); }
+[data-theme="light"] .noscript-note { color: #a12c23; }
+[data-theme="light"] :is(.button-secondary, .platform-card):hover { border-color: var(--cedar); }
+[data-theme="light"] .status-pill { color: #2f5a1f; background: #e3eedb; border-color: #a9c49a; }
+[data-theme="light"] .status-pill[data-status="testflight"] { color: #7a4a0c; background: #f8ead2; border-color: #dcb57a; }
+[data-theme="light"] .status-pill[data-status="release-candidate"] { color: var(--muted); background: var(--surface-raised); border-color: var(--line); }
+[data-theme="light"] .install-help code { background: var(--surface-raised); }
+[data-theme="light"] .platform-action { background: var(--surface); }
+
+/* Halloween accent (October 1 – November 1, or ?halloween=on). Colours only; layout and copy are untouched. */
+:root[data-season="halloween"] {
+  --cedar: #ff9d42;
+  --cedar-bright: #ffc27a;
+  --warm: #b78cff;
+  --green: #ff9d42;
+  --on-accent: #1a0e04;
+}
+:root[data-season="halloween"][data-theme="light"] {
+  --cedar: #a8480c;
+  --cedar-bright: #823508;
+  --warm: #5b3a99;
+  --green: #a8480c;
+  --on-accent: #ffffff;
+}
+:root[data-season="halloween"][data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(255, 122, 24, 0.16), transparent 30rem),
+    radial-gradient(circle at 16% 52%, rgba(120, 70, 200, 0.14), transparent 30rem),
+    var(--bg);
+}
+:root[data-season="halloween"][data-theme="light"] body {
+  background:
+    radial-gradient(circle at 84% 10%, rgba(255, 140, 50, 0.14), transparent 30rem),
+    radial-gradient(circle at 16% 52%, rgba(120, 80, 200, 0.08), transparent 30rem),
+    var(--bg);
+}
+:root[data-season="halloween"] .cedar-header { border-bottom-color: color-mix(in srgb, var(--cedar) 45%, var(--line)); }
+:root[data-season="halloween"] :focus-visible { outline-color: var(--cedar-bright); }
