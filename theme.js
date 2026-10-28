@@ -1,5 +1,7 @@
 /* Shared by every page; runs before first paint. No account or network state. */
 (() => {
+  // Lets the header CSS collapse into the Menu button before first paint, so it doesn't jump on load.
+  document.documentElement.classList.add('cedar-js');
   const key = 'cedar-color-theme';
   const valid = value => ['light', 'dark', 'system'].includes(value);
   const system = window.matchMedia('(prefers-color-scheme: dark)');
@@ -49,8 +51,6 @@
         toggle.setAttribute('aria-expanded', String(open));
         header.classList.toggle('is-menu-open', open);
       };
-      header.classList.add('has-menu-toggle');
-      toggle.hidden = false;
       toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
       menu.addEventListener('click', event => { if (event.target.closest('a')) setOpen(false); });
       document.addEventListener('keydown', event => {

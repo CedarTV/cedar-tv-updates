@@ -216,6 +216,22 @@ h1 {
 }
 .brand-stage p { color: var(--muted); font-size: 0.72rem; font-weight: 650; letter-spacing: 0.12em; text-transform: uppercase; }
 
+/* Apple apps: real captures, one row per pair. Each figure grows by its aspect ratio, so a row
+   shares one height. */
+.apple-screens { margin: 0 0 56px; }
+.apple-screens h2 { margin-bottom: 12px; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.apple-screens > p:not(.eyebrow) { max-width: 720px; color: var(--muted); font-size: 1rem; line-height: 1.6; }
+.screens { display: grid; gap: 16px; margin-top: 28px; }
+.screens-row { display: flex; gap: 16px; }
+.screens figure { flex: var(--ratio) 1 0; min-width: 0; margin: 0; }
+.screen-tv { --ratio: 1.778; }
+.screen-mac { --ratio: 1.561; }
+.screen-ipad { --ratio: 0.75; }
+.screen-iphone { --ratio: 0.46; }
+.screens img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.screens .screen-iphone img { border-radius: 22px; }
+.screens figcaption { margin-top: 10px; color: var(--muted); font-size: 0.72rem; font-weight: 650; letter-spacing: 0.12em; text-transform: uppercase; }
+
 .policy-callout {
   margin: 56px 0 96px;
   padding: clamp(28px, 5vw, 48px);
@@ -366,6 +382,14 @@ h1 {
 }
 
 @media (max-width: 620px) {
+  /* Phones: TV and Mac full width, then iPad and iPhone side by side at one height. */
+  .screens { grid-template-columns: 0.75fr 0.46fr; gap: 14px 12px; }
+  .screens-row { display: contents; }
+  .screens .screen-tv, .screens .screen-mac { grid-column: 1 / -1; }
+  .screens .screen-tv { order: 1; }
+  .screens .screen-mac { order: 2; }
+  .screens .screen-ipad { order: 3; }
+  .screens .screen-iphone { order: 4; }
   .policy-header { align-items: flex-start; flex-direction: column; }
   .policy-header nav { width: 100%; gap: 14px 20px; }
   .apple-actions .inline-action,

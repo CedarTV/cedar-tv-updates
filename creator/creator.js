@@ -3,6 +3,7 @@
 import { isBadgePackID, parseCart, setupOf, setupOptions, setupTags } from "./creator-model.mjs";
 import { artworkURL, appURL, matchingOptions, avatarCategories, avatarOptions, avatarName, sampleBadges } from "./artwork-model.mjs";
 import { home } from "./home-builder.mjs";
+import { useThumbnails } from "./home-preview.mjs";
 
 const $ = id => document.getElementById(id);
 let setups = [];
@@ -115,6 +116,7 @@ function renderSetups() {
     ? `${plural(options.length, "setup")}${$("setup-search").value || $("setup-tag").value ? " found" : ""} · Preview shows one on the screen before you add it.`
     : $("setup-status").textContent;
   const previewing = home.previewing();
+  $("setup-grid").removeAttribute("aria-busy");
   $("setup-grid").replaceChildren(...options.map(setup => {
     const entry = { type: "setup", id: setup.id };
     const state = home.pickState(entry);
@@ -338,14 +340,22 @@ async function start() {
   const query = new URLSearchParams(location.search);
   const requestedTab = query.get("tab") || ({ avatars: "avatars", badges: "badges" })[query.get("kind")];
   if (["avatars", "badges", "build"].includes(requestedTab)) selectTab(requestedTab);
+  // The page holds the preview banner's place (is-reserved) because an empty Home gets the featured
+  // preview once the catalogs load. A saved Home or a requested tab won't, so give the space back now.
+  const willPreview = !home.counts().rows && !requestedTab;
+  if (!willPreview) $("preview-banner").classList.remove("is-reserved");
   try {
     const catalogResponse = await fetch("../catalogs/creator.json");
     if (!catalogResponse.ok) throw new Error("Unavailable");
     // Photos and badges also draw on the preview, so both catalogs load with the page.
     await Promise.all([loadCatalog("avatars"), loadCatalog("badges")]).catch(() => {});
-    setups = (await catalogResponse.json()).setups;
+    const catalog = await catalogResponse.json();
+    setups = catalog.setups;
+    useThumbnails(catalog.thumbnails);
   } catch {
     $("setup-status").textContent = "Setups could not load. Refresh this page to try again.";
+    $("setup-grid").removeAttribute("aria-busy");
+    $("preview-banner").classList.remove("is-reserved");
     return;
   }
   setupsByID = new Map(setups.map(setup => [setup.id, setup]));
@@ -375,6 +385,12 @@ async function start() {
     url.searchParams.delete("i"); url.searchParams.delete("a"); url.searchParams.delete("b");
     history.replaceState(null, "", url);
   }
+  // An empty Home shows the first featured setup as a preview, so the right side isn't a blank box.
+  if (willPreview && !home.counts().rows && !home.previewing()) {
+    const [first] = setupOptions(setups, { query: "", tag: "", sort: "featured" });
+    if (first) home.preview({ type: "setup", id: first.id }, first.title, { quiet: true });
+  }
+  $("preview-banner").classList.remove("is-reserved");
   renderSetupFilters();
   renderSetups();
   renderHomeButton();

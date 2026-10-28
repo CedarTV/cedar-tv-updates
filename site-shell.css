@@ -94,16 +94,16 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 @media (max-width: 1024px) {
   .cedar-header { display: flex; flex-wrap: wrap; gap: 10px; padding: 10px 0; }
   .cedar-header .cedar-nav { flex-wrap: wrap; justify-content: center; }
-  .has-menu-toggle .cedar-brand { margin-right: auto; }
-  .cedar-header.has-menu-toggle .cedar-download-compact, header.has-menu-toggle button.cedar-menu-toggle { display: inline-flex; }
+  .cedar-js .cedar-header .cedar-brand { margin-right: auto; }
+  .cedar-js .cedar-header .cedar-download-compact, .cedar-js header.cedar-header button.cedar-menu-toggle { display: inline-flex; }
   .cedar-menu { display: flex; flex-basis: 100%; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
-  .has-menu-toggle .cedar-menu { display: none; }
-  .has-menu-toggle.is-menu-open .cedar-menu { display: flex; flex-direction: column; align-items: stretch; gap: 10px; padding: 6px 0 12px; }
-  .has-menu-toggle .cedar-nav { flex-direction: column; align-items: stretch; gap: 2px; padding: 6px; border-radius: 16px; }
-  .cedar-header.has-menu-toggle .cedar-nav a { min-height: 46px; padding: 0 14px; border-radius: 12px; font-size: 16px; }
-  .has-menu-toggle .cedar-header-actions { justify-content: space-between; }
-  .has-menu-toggle .cedar-header-actions .cedar-download { display: none; }
-  .has-menu-toggle .cedar-theme { flex: 1; justify-content: space-between; font-size: 14px; }
+  .cedar-js .cedar-header .cedar-menu { display: none; }
+  .cedar-js .cedar-header.is-menu-open .cedar-menu { display: flex; flex-direction: column; align-items: stretch; gap: 10px; padding: 6px 0 12px; }
+  .cedar-js .cedar-header .cedar-nav { flex-direction: column; align-items: stretch; gap: 2px; padding: 6px; border-radius: 16px; }
+  .cedar-js .cedar-header .cedar-nav a { min-height: 46px; padding: 0 14px; border-radius: 12px; font-size: 16px; }
+  .cedar-js .cedar-header .cedar-header-actions { justify-content: space-between; }
+  .cedar-js .cedar-header .cedar-header-actions .cedar-download { display: none; }
+  .cedar-js .cedar-header .cedar-theme { flex: 1; justify-content: space-between; font-size: 14px; }
 }
 @media (max-width: 680px) {
   .cedar-header { width: calc(100% - 32px); }

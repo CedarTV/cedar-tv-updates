@@ -196,8 +196,8 @@ export const home={
  /** A source-badge pack by its `badge-packs/` file name. */
  setBadgePack(id){change(()=>{draft.badgePack=id;});},
  counts:()=>counts(draft),
- /** Shows a setup or group on the preview without adding it; null stops. */
- preview(item,title){previewItem=item?{item,title:title||item.id}:null;screen='home';nav=[];renderPreview();for(const f of listeners)f();if(item){$('home-preview').scrollTop=0;if(innerWidth<900)$('panel-home').scrollIntoView({block:'start',behavior:'smooth'});}},
+ /** Shows a setup or group on the preview without adding it; null stops. quiet keeps the page where it is. */
+ preview(item,title,{quiet=false}={}){previewItem=item?{item,title:title||item.id}:null;screen='home';nav=[];renderPreview();for(const f of listeners)f();if(item){$('home-preview').scrollTop=0;if(!quiet&&innerWidth<900)$('panel-home').scrollIntoView({block:'start',behavior:'smooth'});}},
  previewing:()=>previewItem?.item.id||null,
  /** Switches the preview to Home, a title page ("title") or Who's watching ("who"). */
  showScreen(name){if(['home','title','who'].includes(name)){screen=name;renderPreview();}},

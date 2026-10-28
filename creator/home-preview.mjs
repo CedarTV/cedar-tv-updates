@@ -56,8 +56,11 @@ const button=(text,action,cls='text-button')=>{const b=el('button',cls,text);b.t
 /** One image proxy found in imported files refuses other sites (Cross-Origin-Resource-Policy:
  same-origin), though Cedar loads it fine. Its path is the original image URL in base64, which the
  preview loads instead.
- TMDB originals are swapped for a card-sized copy. */
-export function previewImageURL(url){const tmdb=/^https:\/\/(?:image\.tmdb\.org|media\.themoviedb\.org)\/t\/p\/original\//;if(tmdb.test(url||''))return url.replace(tmdb,'https://image.tmdb.org/t/p/w780/');const m=/^https:\/\/get-stranded\.fabriceleven\.com\/img\/remote\/([A-Za-z0-9_-]+=*)$/.exec(url||'');if(!m)return url;try{const original=atob(m[1].replace(/-/g,'+').replace(/_/g,'/'));return /^https:\/\/[^\s"'<>]+$/.test(original)?original:url;}catch{return url;}}
+ TMDB originals are swapped for a card-sized copy, and art with a Creator thumbnail uses it. */
+let thumbnails=new Map();
+/** Original cover address → thumbnail, from the Creator catalog. */
+export function useThumbnails(map){thumbnails=new Map(Object.entries(map||{}));}
+export function previewImageURL(url){const tmdb=/^https:\/\/(?:image\.tmdb\.org|media\.themoviedb\.org)\/t\/p\/original\//;if(tmdb.test(url||''))url=url.replace(tmdb,'https://image.tmdb.org/t/p/w780/');if(thumbnails.has(url))return thumbnails.get(url);const m=/^https:\/\/get-stranded\.fabriceleven\.com\/img\/remote\/([A-Za-z0-9_-]+=*)$/.exec(url||'');if(!m)return url;try{const original=atob(m[1].replace(/-/g,'+').replace(/_/g,'/'));return /^https:\/\/[^\s"'<>]+$/.test(original)?original:url;}catch{return url;}}
 function image(url,cls,failed){const i=el('img',cls);i.src=previewImageURL(url);i.alt='';i.loading='lazy';i.decoding='async';i.referrerPolicy='no-referrer';i.addEventListener('error',()=>{i.remove();failed?.();},{once:true});return i;}
 /** Sample titles from Cedar's own screenshots: the preview shows shapes and order, not each list's titles. */
 const sampleTitles=['Mutiny','Toy Story 5','Lanterns','Spider-Man: Brand New Day','The Odyssey','Insidious: Out of the Further'];

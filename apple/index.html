@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#08090b">
     <meta name="description" content="Official product, support, privacy, and accessibility information for Cedar on iPhone, iPad, Apple TV, and Mac.">
     <meta name="robots" content="index,follow">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'">
     <title>Cedar for Apple devices</title>
     <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/apple/">
     <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
@@ -25,7 +25,7 @@
           <span>Cedar</span>
         </a>
         <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
-        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Menu</button>
         <div class="cedar-menu" id="cedar-menu">
           <nav class="cedar-nav" aria-label="Primary navigation">
             <a href="/cedar-tv-updates/">Home</a>
@@ -62,8 +62,24 @@
             </div>
           </div>
           <div class="brand-stage" aria-label="Cedar app mark">
-            <img src="../assets/cedar-app-icon.png" alt="" width="1024" height="1024" aria-hidden="true">
+            <img src="../assets/cedar-app-icon-600.webp" alt="" width="600" height="600" aria-hidden="true">
             <p>Local-first by design</p>
+          </div>
+        </section>
+
+        <section class="apple-screens" aria-labelledby="screens-title">
+          <p class="eyebrow">In the app</p>
+          <h2 id="screens-title">Made for each screen.</h2>
+          <p>Screens from Cedar itself, on each device it’s made for. The titles, artwork and channels are Cedar’s own made-up demo catalogue.</p>
+          <div class="screens">
+            <div class="screens-row">
+              <figure class="screen-tv"><img src="../assets/screens/apple-tv-home.webp" srcset="../assets/screens/apple-tv-home-960.webp 960w, ../assets/screens/apple-tv-home.webp 1920w" sizes="(max-width: 620px) 92vw, 860px" alt="Cedar Home on Apple TV, with a hero title and a row of posters" width="1920" height="1080" loading="lazy" decoding="async"><figcaption>Apple TV</figcaption></figure>
+              <figure class="screen-iphone"><img src="../assets/screens/iphone-home.webp" alt="Cedar Home on iPhone" width="660" height="1434" loading="lazy" decoding="async"><figcaption>iPhone</figcaption></figure>
+            </div>
+            <div class="screens-row">
+              <figure class="screen-mac"><img src="../assets/screens/mac-home.webp" srcset="../assets/screens/mac-home-800.webp 800w, ../assets/screens/mac-home.webp 1280w" sizes="(max-width: 620px) 92vw, 760px" alt="Cedar Home in a Mac window" width="1280" height="820" loading="lazy" decoding="async"><figcaption>Mac</figcaption></figure>
+              <figure class="screen-ipad"><img src="../assets/screens/ipad-home.webp" srcset="../assets/screens/ipad-home-760.webp 760w, ../assets/screens/ipad-home.webp 1032w" sizes="(max-width: 620px) 56vw, 370px" alt="Cedar Home on iPad" width="1032" height="1376" loading="lazy" decoding="async"><figcaption>iPad</figcaption></figure>
+            </div>
           </div>
         </section>
 
@@ -136,8 +152,7 @@
               <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
               <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
               <li><a href="/cedar-tv-updates/feedback/">Send feedback</a></li>
-              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
-              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
             </ul>
           </section>
         </nav>

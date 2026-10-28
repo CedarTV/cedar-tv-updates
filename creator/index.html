@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
     <script src="/cedar-tv-updates/theme.js"></script>
     <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+    <script src="early.js"></script>
     <link rel="stylesheet" href="home-builder.css">
     <link rel="stylesheet" href="workspace.css">
   </head>
@@ -26,7 +27,7 @@
           <span>Cedar</span>
         </a>
         <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
-        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu" hidden>Menu</button>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Menu</button>
         <div class="cedar-menu" id="cedar-menu">
           <nav class="cedar-nav" aria-label="Primary navigation">
             <a href="/cedar-tv-updates/">Home</a>
@@ -77,7 +78,7 @@
               </div>
             </div>
             <p id="setup-status" class="library-status" role="status">Loading setups…</p>
-            <div id="setup-grid" class="setup-list"></div>
+            <div id="setup-grid" class="setup-list" aria-busy="true"></div>
           </section>
 
           <section id="panel-gallery" class="library-panel" role="tabpanel" aria-labelledby="tab-avatars" hidden>
@@ -135,7 +136,7 @@
             <button id="export" type="button" class="button primary">Open in Cedar</button>
           </div>
           <p id="home-status" class="home-status" role="status" aria-live="polite"></p><input id="copy-fallback" aria-label="URL to copy" readonly hidden>
-          <div id="preview-banner"></div>
+          <div id="preview-banner" class="is-reserved"></div>
           <div class="canvas-toolbar">
             <div class="segmented" id="preview-screens" aria-label="Preview screen"><button type="button" data-screen="home" aria-pressed="true">Home</button><button type="button" data-screen="title" aria-pressed="false">Title page</button><button type="button" data-screen="who" aria-pressed="false">Who’s watching</button></div>
             <div class="preview-options">
@@ -216,8 +217,7 @@
               <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
               <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
               <li><a href="/cedar-tv-updates/feedback/">Send feedback</a></li>
-              <li><a href="https://github.com/CedarTV/cedar-tv-updates">GitHub</a></li>
-              <li><a href="/cedar-tv-updates/update-v1.json">Android manifest</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
             </ul>
           </section>
         </nav>

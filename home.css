@@ -82,12 +82,15 @@ img { max-width: 100%; }
 }
 
 /* Hero: full-bleed artwork under the header, copy in the lower left. */
+/* Starting header heights (site-shell.css) so the hero doesn't move when home.js measures the real one. */
+:root { --header-h: 68px; }
+@media (max-width: 1024px) { :root { --header-h: 64px; } }
 .home-hero {
   position: relative;
   display: flex;
   align-items: flex-end;
   min-height: min(88svh, 860px);
-  margin-top: calc(-1 * var(--header-h, 68px));
+  margin-top: calc(-1 * var(--header-h));
   padding: 120px max(20px, calc((100% - var(--page)) / 2)) 64px;
   overflow: hidden;
   isolation: isolate;
@@ -182,6 +185,10 @@ img { max-width: 100%; }
 .device-stage { position: relative; display: grid; gap: 28px; justify-items: center; padding: clamp(24px, 4vw, 48px); border-radius: 20px; background: radial-gradient(ellipse at 50% 30%, rgba(255, 255, 255, 0.08), transparent 70%), var(--surface); }
 .device-stage figure { width: 100%; margin: 0; }
 .device-stage figure[hidden] { display: none; }
+/* With JavaScript on, show only the first screen until home.js takes over, so the other
+   screenshots aren't downloaded alongside the hero. Without it, every screen stays visible. */
+.cedar-js #in-the-app:not(.is-enhanced) .device-panel:not([data-device-panel="apple-tv"]),
+.cedar-js #in-the-app:not(.is-enhanced) .device-stage figure:not([data-shot="home"]) { display: none; }
 .device-stage img { display: block; width: 100%; height: auto; }
 .device-stage figcaption { margin-top: 14px; color: var(--muted); font-size: 0.88rem; text-align: center; }
 .is-enhanced .device-stage figcaption { display: none; }

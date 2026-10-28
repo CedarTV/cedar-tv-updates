@@ -46,6 +46,8 @@
 .setup-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 8px; }
 .setup-actions .button { min-height: 46px; padding: 0 18px; }
 
+/* Holds the list's place while setups load, so the Home preview below it on phones doesn't jump. */
+.setup-list[aria-busy="true"] { min-height: 100vh; }
 .cover-mosaic { display: grid; aspect-ratio: 16 / 8; gap: 2px; background: var(--surface-raised); }
 .cover-mosaic.cover-count-2 { grid-template-columns: 1fr 1fr; }
 .cover-mosaic.cover-count-3 { grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; }
