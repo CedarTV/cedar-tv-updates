@@ -70,6 +70,15 @@ export const titlePositions={below:'Below artwork',on:'On artwork',hidden:'Hidde
 const sampleCounts={poster:12,wide:7,feature:3};
 function heading(title,caption,actions=[]){const h=el('div','preview-row-heading'),text=el('div');text.append(el('h3','',title));if(caption)text.append(el('small','',caption));h.append(text,...actions);return h;}
 
+/** Cedar shows a folder's focus art (often a GIF) while its card is focused. It downloads on the
+ first hover or focus, never with the page, and Reduce Motion leaves the regular cover. */
+const reducesMotion=()=>globalThis.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+function addFocusArt(card,box,url){
+ box.classList.add('has-focus-art');
+ const show=()=>{if(reducesMotion()||box.querySelector('.card-focus-art'))return;const art=image(url,'card-focus-art');art.loading='eager';box.insertBefore(art,box.querySelector('.card-overlay-title'));};
+ card.addEventListener('pointerenter',show);card.addEventListener('focus',show);
+}
+
 function folderCard(folder,shape,cardStyle,open){
  const art=folder.coverImageURL,logo=folder.titleLogoURL;
  const card=button('',open,`group-card shape-${shape}`),box=el('span','card-art');card.setAttribute('aria-label',`Open ${folder.title}`);
@@ -77,6 +86,7 @@ function folderCard(folder,shape,cardStyle,open){
  const overlay=el('span',`card-overlay-title${folder.hidesTitle&&(art||logo)?' title-hidden':''}`,folder.title),reveal=()=>{if(!box.querySelector('img'))overlay.classList.remove('title-hidden');};
  if(art)box.append(image(art,'',reveal));else if(cardStyle==='poster-wall'||folder.categoryCardStyle==='poster-wall')box.classList.add('poster-wall');
  if(logo)box.append(image(logo,'card-logo',reveal));
+ if(folder.focusedCoverImageURL)addFocusArt(card,box,folder.focusedCoverImageURL);
  box.append(overlay);
  if(folder.folderOptions?.length)box.append(el('small','card-badge',`${folder.folderOptions.length} inside`));
  card.append(box,el('span','card-title',folder.title));

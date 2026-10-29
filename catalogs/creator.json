@@ -26,6 +26,7 @@
       },
       "groupCount": 18,
       "branchCount": 756,
+      "focusArt": 495,
       "covers": [
         "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/634dc1078f4870796b51.webp",
         "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/fd239333a7f30721577d.webp",
@@ -49,6 +50,7 @@
             "Retro Rewind"
           ],
           "branchCount": 8,
+          "focusArt": 8,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/634dc1078f4870796b51.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/fd239333a7f30721577d.webp",
@@ -73,6 +75,7 @@
             "Top Series"
           ],
           "branchCount": 7,
+          "focusArt": 7,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/25ee5e3fe1144f56179f.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/4d5c2348060fa76cf681.webp",
@@ -112,6 +115,7 @@
             "Tubi TV"
           ],
           "branchCount": 22,
+          "focusArt": 22,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/3c73feb0011e6876be8c.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/fded28e64c78f430d24f.webp",
@@ -197,6 +201,7 @@
             "VH1"
           ],
           "branchCount": 68,
+          "focusArt": 68,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/0e1636bf266b5ff0cc13.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/d6862380d368a3b12f82.webp",
@@ -239,6 +244,7 @@
             "Western"
           ],
           "branchCount": 25,
+          "focusArt": 25,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/49c081d8c4f20a828362.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/c3d844f7c18deb6f57d8.webp",
@@ -266,6 +272,7 @@
             "Spooky & Creepy"
           ],
           "branchCount": 10,
+          "focusArt": 10,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/a76463a3fd68e69caf6b.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/72c64402af1179c0a170.webp",
@@ -293,6 +300,7 @@
             "Short Story"
           ],
           "branchCount": 10,
+          "focusArt": 10,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/c5dbb622536a54cd3963.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/76205ac8514f945956e0.webp",
@@ -559,6 +567,7 @@
             "Zoolander"
           ],
           "branchCount": 249,
+          "focusArt": 11,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/094984bd457defff6d87.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/4b77840d921868bae032.webp",
@@ -728,6 +737,7 @@
             "Zoe Saldaña"
           ],
           "branchCount": 152,
+          "focusArt": 152,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/fd38dc171c22645df9ff.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/eab2e5102a74205b8c16.webp",
@@ -829,6 +839,7 @@
             "Zack Snyder"
           ],
           "branchCount": 84,
+          "focusArt": 84,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/67ca9a847092824ed8a8.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/b10f7d7c8718bf3c558d.webp",
@@ -891,6 +902,7 @@
             "50s Movies"
           ],
           "branchCount": 8,
+          "focusArt": 8,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/a2948048301330a4e871.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/cc57580747f15970d814.webp",
@@ -914,6 +926,7 @@
             "Sports & Competition Anime"
           ],
           "branchCount": 6,
+          "focusArt": 6,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/4c94ffe586e70522f252.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/2fee67ea1c5545c0cb8d.webp",
@@ -1013,6 +1026,7 @@
             "Vietnamese Cinema"
           ],
           "branchCount": 65,
+          "focusArt": 65,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/96613866586b6e3d7f55.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/accdbf7c054d0fd7d93f.webp",
@@ -1037,6 +1051,7 @@
             "Investigative & Scandals"
           ],
           "branchCount": 7,
+          "focusArt": 7,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/89391c8a48c83a733aea.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/d6722fe4219017611472.webp",
@@ -1060,6 +1075,7 @@
             "Disney Channel & Family TV Series"
           ],
           "branchCount": 6,
+          "focusArt": 6,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/e528f60b2f1d94c8395f.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/d6b08b54615f7a1c9f91.webp",
@@ -1083,6 +1099,7 @@
             "Game Shows, Talent & Trivia"
           ],
           "branchCount": 6,
+          "focusArt": 6,
           "covers": [
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/6ba79c80f53b99cd2a28.webp",
             "https://cedartv.github.io/cedar-tv-updates/creator/thumbs/3642c2ae8b6267e27c16.webp",

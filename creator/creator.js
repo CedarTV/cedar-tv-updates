@@ -143,6 +143,7 @@ function setupCard(setup) {
       element("h2", {}, [title]),
       element("p", { class: "setup-creator", text: byline(setup) }),
       element("p", { class: "setup-meta" }, [setupSize(setup), setup.tags.length ? ` · ${setup.tags.slice(0, 3).join(", ")}` : ""]),
+      ...(setup.focusArt ? [focusArtNote(setup.focusArt)] : []),
       setupActions(setup),
     ]),
   ]);
@@ -191,6 +192,11 @@ function renderSetups() {
     ])));
 }
 
+/// Folder cards that switch to the curator's focus art (often a GIF) when focused in Cedar.
+function focusArtNote(count) {
+  return element("p", { class: "setup-focus-art", text: `Changes on focus · ${plural(count, "folder")}`, title: "These folder cards switch to animated or alternate art when you focus or hover them in Cedar." });
+}
+
 let currentSetup = null;
 function openSetup(id) {
   // A saved Home can still hold a retired setup; it has no details to show.
@@ -221,7 +227,7 @@ function renderSetupDialog(id) {
       strip,
       element("div", { class: "group-body" }, [
         element("h4", { text: group.title }),
-        element("p", { class: "group-kind", text: group.kind === "group" ? `Branch group · ${plural(group.branchCount, "branch")}` : "Single branch" }),
+        element("p", { class: "group-kind", text: group.kind === "group" ? `Branch group · ${plural(group.branchCount, "branch")}${group.focusArt ? ` · ${group.focusArt} change on focus` : ""}` : "Single branch" }),
         rows,
       ]),
       addButton({ type: "group", id: group.id }, { add: "Add group" }),
