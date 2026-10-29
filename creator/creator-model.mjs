@@ -44,22 +44,52 @@ export function setupTags(setups) {
 }
 
 
-export function setupOptions(setups, { query = "", tag = "", sort = "featured" } = {}) {
+/// The Setups tab's sections, in order. A setup's `section` is one of these IDs.
+export const setupSections = [
+  { id: "home", title: "Complete Homes", note: "Whole Homes, ready to use as they are." },
+  { id: "themed", title: "Themed", note: "Smaller setups built around one idea." },
+  { id: "style", title: "Styles", note: "One group in different artwork. Pick the look you like." },
+];
+/// Card shapes for the shape filter: the catalog's tileShape and its label.
+export const setupShapes = [["poster", "Poster"], ["landscape", "Wide"], ["square", "Square"]];
+
+export function setupOptions(setups, { query = "", tag = "", shape = "", sort = "featured" } = {}) {
   const text = query.trim().toLowerCase();
   const matches = setups.filter(setup => {
     if (tag && !(setup.tags || []).includes(tag)) return false;
+    if (shape && !(setup.shapes || []).includes(shape)) return false;
     if (!text) return true;
-    const haystack = [setup.title, setup.creator, setup.description, setup.credit?.via, ...(setup.tags || []),
+    const haystack = [setup.title, setup.creator, setup.description, setup.credit?.via, setup.style?.group, setup.style?.variant, ...(setup.tags || []),
       ...setup.groups.flatMap(group => [group.title, ...group.rows])].join(" ").toLowerCase();
     return haystack.includes(text);
   });
   const featured = new Map(setups.map((setup, index) => [setup.id, index]));
   const byFeatured = (a, b) => featured.get(a.id) - featured.get(b.id);
-  if (sort === "newest") matches.sort((a, b) => b.addedAt.localeCompare(a.addedAt) || byFeatured(a, b));
-  else if (sort === "branches") matches.sort((a, b) => b.branchCount - a.branchCount || byFeatured(a, b));
+  if (sort === "largest") matches.sort((a, b) => b.branchCount - a.branchCount || byFeatured(a, b));
+  else if (sort === "smallest") matches.sort((a, b) => a.branchCount - b.branchCount || byFeatured(a, b));
   else if (sort === "name") matches.sort((a, b) => a.title.localeCompare(b.title));
   else matches.sort(byFeatured);
   return matches;
+}
+
+/// Splits setups (already filtered and sorted) into the tab's sections. Style setups fold into one
+/// card per style group ("Genres"), its variants kept in the order given. Empty sections are left out.
+export function setupSectionsOf(options) {
+  return setupSections.map(section => {
+    const items = [];
+    const styles = new Map();
+    for (const setup of options.filter(item => (item.section || "home") === section.id)) {
+      if (!setup.style) { items.push({ type: "setup", setup }); continue; }
+      let card = styles.get(setup.style.group);
+      if (!card) {
+        card = { type: "style", group: setup.style.group, variants: [] };
+        styles.set(setup.style.group, card);
+        items.push(card);
+      }
+      card.variants.push(setup);
+    }
+    return { ...section, items };
+  }).filter(section => section.items.length);
 }
 
 // MARK: Cart
@@ -122,11 +152,13 @@ export function cartQuery(cart) {
 export const cartWebLink = cart => `${siteBase}creator/?${cartQuery(cart)}`;
 export const cartAppLink = cart => `${appCartBase}?${cartQuery(cart)}`;
 
-/// Reads a cart from a query string. Unknown or malformed items are dropped, never guessed.
-export function parseCart(search, knownItemIDs = null) {
+/// Reads a cart from a query string. Unknown or malformed items are dropped, never guessed. An item
+/// listed in `replaced` (the catalog's retired setups) is read as its replacement.
+export function parseCart(search, knownItemIDs = null, replaced = {}) {
   const query = new URLSearchParams(search);
   let cart = [];
-  for (const id of query.getAll("i")) {
+  for (const requested of query.getAll("i")) {
+    const id = Object.hasOwn(replaced, requested) ? replaced[requested] : requested;
     if (!isItemID(id) || (knownItemIDs && !knownItemIDs.has(id))) continue;
     cart = addToCart(cart, { type: id.includes(".") ? "group" : "setup", id }).cart;
   }

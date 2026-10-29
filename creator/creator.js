@@ -1,12 +1,13 @@
 // Creator: one workspace. The library on the left (setups, profile photos, source badges and the
 // builders) feeds the Home on the right, which home-builder.mjs draws and edits.
-import { isBadgePackID, parseCart, setupOf, setupOptions, setupTags } from "./creator-model.mjs";
+import { isBadgePackID, parseCart, setupOf, setupOptions, setupSectionsOf, setupShapes, setupTags } from "./creator-model.mjs";
 import { artworkURL, appURL, matchingOptions, avatarCategories, avatarOptions, avatarName, sampleBadges } from "./artwork-model.mjs";
 import { home } from "./home-builder.mjs";
 import { useThumbnails } from "./home-preview.mjs";
 
 const $ = id => document.getElementById(id);
 let setups = [];
+let replaced = {};
 let setupsByID = new Map();
 let groupsByID = new Map();
 let avatarsByPath = new Map();
@@ -89,6 +90,7 @@ function renderHomeButton() {
 
 function renderSetupFilters() {
   $("setup-tag").replaceChildren(new Option("All categories", ""), ...setupTags(setups).map(tag => new Option(tag, tag)));
+  $("setup-shape").replaceChildren(new Option("Any shape", ""), ...setupShapes.map(([shape, label]) => new Option(label, shape)));
 }
 
 const byline = setup => `By ${setup.creator}`;
@@ -110,42 +112,89 @@ function coverMosaic(covers, label) {
   return mosaic;
 }
 
-function renderSetups() {
-  const options = setupOptions(setups, { query: $("setup-search").value, tag: $("setup-tag").value, sort: $("setup-sort").value });
-  $("setup-status").textContent = setups.length
-    ? `${plural(options.length, "setup")}${$("setup-search").value || $("setup-tag").value ? " found" : ""} · Preview shows one on the screen before you add it.`
-    : $("setup-status").textContent;
-  const previewing = home.previewing();
-  $("setup-grid").removeAttribute("aria-busy");
-  $("setup-grid").replaceChildren(...options.map(setup => {
-    const entry = { type: "setup", id: setup.id };
-    const state = home.pickState(entry);
-    const title = element("button", { type: "button", class: "setup-title-button", text: setup.title });
-    title.addEventListener("click", () => openSetup(setup.id));
-    const actions = element("div", { class: "setup-actions" });
-    if (state === "available") {
-      const isPreviewing = previewing === setup.id;
-      const preview = element("button", { type: "button", class: "button button-secondary", text: isPreviewing ? "Previewing" : "Preview", "aria-pressed": String(isPreviewing) });
-      preview.addEventListener("click", () => home.preview(isPreviewing ? null : entry, setup.title));
-      actions.append(preview);
-    }
-    actions.append(addButton(entry, { add: "+ Add" }));
-    const details = element("button", { type: "button", class: "text-link", text: `${plural(setup.groupCount, "group")} · ${plural(setup.branchCount, "row")}` });
-    details.addEventListener("click", () => openSetup(setup.id));
-    return element("article", { class: `setup-card${previewing === setup.id ? " previewing" : ""}` }, [
-      coverMosaic(setup.covers, setup.title),
-      element("div", { class: "setup-body" }, [
-        element("h2", {}, [title]),
-        element("p", { class: "setup-creator", text: byline(setup) }),
-        element("p", { class: "setup-meta" }, [details, setup.tags.length ? ` · ${setup.tags.slice(0, 3).join(", ")}` : ""]),
-        actions,
-      ]),
-    ]);
+// The variant each Styles card shows, by style group. A card falls back to its first variant.
+const styleChoices = new Map();
+
+function setupActions(setup) {
+  const entry = { type: "setup", id: setup.id };
+  const actions = element("div", { class: "setup-actions" });
+  if (home.pickState(entry) === "available") {
+    const isPreviewing = home.previewing() === setup.id;
+    const preview = element("button", { type: "button", class: "button button-secondary", text: isPreviewing ? "Previewing" : "Preview", "aria-pressed": String(isPreviewing) });
+    preview.addEventListener("click", () => home.preview(isPreviewing ? null : entry, setup.title));
+    actions.append(preview);
+  }
+  actions.append(addButton(entry, { add: "+ Add" }));
+  return actions;
+}
+
+function setupSize(setup) {
+  const details = element("button", { type: "button", class: "text-link", text: `${plural(setup.groupCount, "group")} · ${plural(setup.branchCount, "row")}` });
+  details.addEventListener("click", () => openSetup(setup.id));
+  return details;
+}
+
+function setupCard(setup) {
+  const title = element("button", { type: "button", class: "setup-title-button", text: setup.title });
+  title.addEventListener("click", () => openSetup(setup.id));
+  return element("article", { class: `setup-card${home.previewing() === setup.id ? " previewing" : ""}` }, [
+    coverMosaic(setup.covers, setup.title),
+    element("div", { class: "setup-body" }, [
+      element("h2", {}, [title]),
+      element("p", { class: "setup-creator", text: byline(setup) }),
+      element("p", { class: "setup-meta" }, [setupSize(setup), setup.tags.length ? ` · ${setup.tags.slice(0, 3).join(", ")}` : ""]),
+      setupActions(setup),
+    ]),
+  ]);
+}
+
+/// One card for a style group ("Genres"): each variant is the same group in different artwork.
+function styleCard({ group, variants }) {
+  const previewing = variants.find(setup => setup.id === home.previewing());
+  const setup = variants.find(item => item.id === styleChoices.get(group)) || previewing || variants[0];
+  const title = element("button", { type: "button", class: "setup-title-button", text: group });
+  title.addEventListener("click", () => openSetup(setup.id));
+  const artists = [...new Set(variants.map(item => item.creator))];
+  const chips = element("div", { class: "style-variants", role: "group", "aria-label": `${group} styles` }, variants.map(variant => {
+    const chip = element("button", { type: "button", class: "chip", text: `${variant.style.variant} · ${variant.creator}`, "aria-pressed": String(variant === setup) });
+    chip.addEventListener("click", () => {
+      styleChoices.set(group, variant.id);
+      // A card that is on the preview keeps previewing whichever look is chosen.
+      if (previewing && variant !== previewing && home.pickState({ type: "setup", id: variant.id }) === "available") home.preview({ type: "setup", id: variant.id }, variant.title);
+      else renderSetups();
+    });
+    return chip;
   }));
+  return element("article", { class: `setup-card style-card${previewing ? " previewing" : ""}` }, [
+    coverMosaic(setup.covers, group),
+    element("div", { class: "setup-body" }, [
+      element("h2", {}, [title]),
+      element("p", { class: "setup-creator", text: `${plural(variants.length, "style")} · by ${artists.join(", ")}` }),
+      element("p", { class: "setup-meta" }, [setupSize(setup), ` · ${setup.style.variant} by ${setup.creator}`]),
+      setupActions(setup),
+      chips,
+    ]),
+  ]);
+}
+
+function renderSetups() {
+  const options = setupOptions(setups, { query: $("setup-search").value, tag: $("setup-tag").value, shape: $("setup-shape").value, sort: $("setup-sort").value });
+  const filtered = $("setup-search").value || $("setup-tag").value || $("setup-shape").value;
+  $("setup-status").textContent = setups.length
+    ? `${plural(options.length, "setup")}${filtered ? " found" : ""} · Preview shows one on the screen before you add it.`
+    : $("setup-status").textContent;
+  $("setup-grid").removeAttribute("aria-busy");
+  $("setup-grid").replaceChildren(...setupSectionsOf(options).map(section =>
+    element("section", { class: "setup-section", "aria-label": section.title }, [
+      element("div", { class: "setup-section-head" }, [element("h3", { text: section.title }), element("p", { text: section.note })]),
+      ...section.items.map(item => item.type === "style" ? styleCard(item) : setupCard(item.setup)),
+    ])));
 }
 
 let currentSetup = null;
 function openSetup(id) {
+  // A saved Home can still hold a retired setup; it has no details to show.
+  if (!setupsByID.has(id)) return;
   currentSetup = id;
   renderSetupDialog(id);
   if (!$("setup-dialog").open) $("setup-dialog").showModal();
@@ -325,6 +374,7 @@ home.onChange(() => {
 });
 $("setup-search").addEventListener("input", renderSetups);
 $("setup-tag").addEventListener("change", renderSetups);
+$("setup-shape").addEventListener("change", renderSetups);
 $("setup-sort").addEventListener("change", renderSetups);
 $("search").addEventListener("input", () => { gallery.visible = 48; renderGallery(); });
 for (const control of [$("category"), $("sort")]) control.addEventListener("change", () => { gallery.visible = 48; renderGallery(); });
@@ -351,6 +401,7 @@ async function start() {
     await Promise.all([loadCatalog("avatars"), loadCatalog("badges")]).catch(() => {});
     const catalog = await catalogResponse.json();
     setups = catalog.setups;
+    replaced = catalog.replaced || {};
     useThumbnails(catalog.thumbnails);
   } catch {
     $("setup-status").textContent = "Setups could not load. Refresh this page to try again.";
@@ -372,7 +423,7 @@ async function start() {
 
   // A shared Creator link (…/creator/?i=…&a=…) opened in a browser adds its picks to Your Home.
   if (query.has("i") || query.has("a") || query.has("b")) {
-    const shared = parseCart(location.search, knownItemIDs()).filter(entry => entry.type !== "avatar" || avatarsByPath.has(entry.id));
+    const shared = parseCart(location.search, knownItemIDs(), replaced).filter(entry => entry.type !== "avatar" || avatarsByPath.has(entry.id));
     if (shared.length && (!home.counts().rows || confirm("Add the shared setups to Your Home?"))) {
       for (const entry of shared) {
         if (entry.type === "avatar") home.setAvatar(entry.id);
@@ -385,9 +436,10 @@ async function start() {
     url.searchParams.delete("i"); url.searchParams.delete("a"); url.searchParams.delete("b");
     history.replaceState(null, "", url);
   }
-  // An empty Home shows the first featured setup as a preview, so the right side isn't a blank box.
+  // An empty Home previews Cedar's first own setup (the big community Homes take a while to
+  // download), so the right side isn't a blank box.
   if (willPreview && !home.counts().rows && !home.previewing()) {
-    const [first] = setupOptions(setups, { query: "", tag: "", sort: "featured" });
+    const first = setups.find(setup => setup.credit?.platform === "Cedar") || setups[0];
     if (first) home.preview({ type: "setup", id: first.id }, first.title, { quiet: true });
   }
   $("preview-banner").classList.remove("is-reserved");
