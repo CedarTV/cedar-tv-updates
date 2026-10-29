@@ -85,7 +85,9 @@ function folderCard(folder,shape,cardStyle,open){
  // On the artwork, a hidden title comes back if the artwork that stood in for it doesn't load.
  const overlay=el('span',`card-overlay-title${folder.hidesTitle&&(art||logo)?' title-hidden':''}`,folder.title),reveal=()=>{if(!box.querySelector('img'))overlay.classList.remove('title-hidden');};
  if(art)box.append(image(art,'',reveal));else if(cardStyle==='poster-wall'||folder.categoryCardStyle==='poster-wall')box.classList.add('poster-wall');
- if(logo)box.append(image(logo,'card-logo',reveal));
+ // A folder's title logo is for its page header. Cedar never lays it over a cover, which usually
+ // carries the name already; it only stands in for a missing one.
+ if(logo&&!art)box.append(image(logo,'card-logo',reveal));
  if(folder.focusedCoverImageURL)addFocusArt(card,box,folder.focusedCoverImageURL);
  box.append(overlay);
  if(folder.folderOptions?.length)box.append(el('small','card-badge',`${folder.folderOptions.length} inside`));
