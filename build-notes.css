@@ -1,0 +1,208 @@
+/* Visual Apple build notes: a poster-wall cover, highlight cards, typed rows and a fixes checklist. */
+.build-notes {
+  --note-new: #b9dd98;
+  --note-improved: #e9b276;
+  --note-fixed: #8fc7ff;
+  --note-known: #c4c4ca;
+  --note-tint: 0.14;
+  --note-card: var(--surface);
+  max-width: 980px;
+  margin: 0 auto;
+  padding: clamp(32px, 5vw, 56px) 0 96px;
+  color: var(--text);
+}
+:root[data-theme="light"] .build-notes {
+  --note-new: #3b6a26;
+  --note-improved: #93501f;
+  --note-fixed: #1f5f9e;
+  --note-known: #5c5c63;
+  --note-tint: 0.1;
+}
+.build-notes .release-back { margin-bottom: 28px; }
+.note-new { --note-color: var(--note-new); }
+.note-improved { --note-color: var(--note-improved); }
+.note-fixed { --note-color: var(--note-fixed); }
+.note-known { --note-color: var(--note-known); }
+.note-icon { flex: none; width: 15px; height: 15px; }
+
+/* Cover: Cedar's own showcase posters fade into the title; dark in both themes. */
+.note-cover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #0c100b;
+  color: #f2efe8;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.note-wall {
+  position: absolute;
+  inset: -60px -80px auto;
+  display: grid;
+  gap: 14px;
+  transform: rotate(-7deg);
+  opacity: 0.62;
+}
+.note-wall-row { display: flex; gap: 14px; }
+.note-wall-row:nth-child(2) { transform: translateX(-70px); }
+.note-wall-row:nth-child(3) { transform: translateX(-20px); }
+.note-wall img { flex: none; width: 128px; height: 192px; border-radius: 8px; object-fit: cover; }
+.note-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(12, 16, 11, 0.15) 0, rgba(12, 16, 11, 0.7) 210px, #0c100b 340px),
+    radial-gradient(ellipse 80% 40% at 0% 100%, rgba(126, 168, 105, 0.16), transparent 70%);
+}
+.note-cover-content { position: relative; z-index: 2; padding: clamp(28px, 5vw, 48px); padding-top: clamp(200px, 26vw, 260px); }
+.note-brand { display: flex; align-items: center; gap: 12px; margin: 0 0 26px; font-size: 1.3rem; font-weight: 720; letter-spacing: -0.02em; }
+.note-brand img { width: 40px; height: 40px; border-radius: 10px; }
+.note-brand-label { padding-left: 12px; border-left: 1px solid rgba(242, 239, 232, 0.25); color: rgba(242, 239, 232, 0.65); font-size: 1rem; font-weight: 560; letter-spacing: 0; }
+.note-cover-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 0 0 14px; color: rgba(242, 239, 232, 0.72); font-size: 0.85rem; font-weight: 600; }
+.note-audience { display: inline-flex; align-items: center; min-height: 26px; padding: 0 10px; border-radius: 6px; background: rgba(233, 178, 118, 0.16); color: #f1c48f; font-size: 0.7rem; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; }
+.note-audience-public { background: rgba(185, 221, 152, 0.16); color: #cbe8b0; }
+.note-audience-internal { background: rgba(255, 255, 255, 0.1); color: #e3e3e8; }
+.note-cover h1 { margin: 0; font-size: clamp(3.4rem, 10vw, 6.4rem); font-weight: 780; letter-spacing: -0.05em; line-height: 0.95; }
+.note-version { display: block; margin-bottom: 10px; color: #b9dd98; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 650; letter-spacing: 0; }
+.note-intro { max-width: 700px; margin: 22px 0 0; color: rgba(242, 239, 232, 0.8); font-size: clamp(1rem, 1.6vw, 1.1rem); line-height: 1.65; }
+.note-glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; margin: 30px 0 0; padding: 0; list-style: none; }
+.note-glance li { padding: 14px 16px; border: 1px solid rgba(242, 239, 232, 0.12); border-radius: 12px; background: rgba(255, 255, 255, 0.04); }
+.note-glance strong { display: block; font-size: 2rem; font-weight: 760; letter-spacing: -0.03em; line-height: 1; }
+.note-glance span { display: block; margin-top: 6px; color: rgba(242, 239, 232, 0.65); font-size: 0.8rem; font-weight: 600; }
+.note-glance-new strong { color: #b9dd98; }
+.note-glance-improved strong { color: #e9b276; }
+.note-glance-fixed strong { color: #8fc7ff; }
+.note-cover-devices { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 18px 0 0; padding: 0; list-style: none; color: rgba(242, 239, 232, 0.7); font-size: 0.82rem; font-weight: 600; }
+.note-cover .note-device { color: inherit; }
+.note-contents { margin-top: 30px; padding-top: 18px; border-top: 1px solid rgba(242, 239, 232, 0.14); }
+.note-contents ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; margin: 0; padding: 0; list-style: none; }
+.note-contents a { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; align-items: baseline; gap: 8px; padding: 9px 0; border-bottom: 1px solid rgba(242, 239, 232, 0.08); color: #f2efe8; text-decoration: none; }
+.note-contents-number { color: #b9dd98; font-size: 0.78rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.note-contents-title { font-size: 0.95rem; font-weight: 620; }
+.note-contents-count { color: rgba(242, 239, 232, 0.55); font-size: 0.78rem; font-weight: 560; white-space: nowrap; }
+.note-contents a:hover .note-contents-title { text-decoration: underline; text-underline-offset: 4px; }
+.note-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+.note-actions:empty { display: none; }
+.note-action { display: inline-flex; align-items: center; min-height: 36px; padding: 0 14px; border: 1px solid rgba(242, 239, 232, 0.2); border-radius: 999px; color: #f2efe8; font-size: 0.82rem; font-weight: 620; text-decoration: none; }
+.note-action:hover { border-color: rgba(242, 239, 232, 0.5); }
+.note-action-primary { border-color: transparent; background: #b9dd98; color: #13200c; }
+.note-action-primary:hover { opacity: 0.88; }
+.note-print-url { display: none; }
+
+/* Sections: a numbered header over a strong rule. */
+.note-section { margin-top: clamp(52px, 7vw, 76px); }
+.note-section-header { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: baseline; gap: 0 14px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid var(--text); }
+.note-section-number { color: var(--note-new); font-size: 0.95rem; font-weight: 760; font-variant-numeric: tabular-nums; }
+.note-section-header h2 { margin: 0; font-size: clamp(1.6rem, 3.2vw, 2.2rem); font-weight: 750; letter-spacing: -0.03em; line-height: 1.1; }
+.note-section-header p { grid-column: 2; margin: 4px 0 0; color: var(--muted); font-size: 0.86rem; }
+
+.note-tag { display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 8px; border-radius: 6px; background: color-mix(in srgb, var(--note-color) calc(var(--note-tint) * 100%), transparent); color: var(--note-color); font-size: 0.68rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+.note-tag .note-icon { width: 12px; height: 12px; }
+.note-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 12px; }
+.note-devices { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 0; padding: 0; list-style: none; }
+.note-device { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); font-size: 0.8rem; font-weight: 600; }
+.note-credit { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 0.8rem; text-decoration: none; }
+.note-credit strong { color: var(--text); font-weight: 650; }
+.note-credit .note-icon { width: 14px; height: 14px; color: var(--note-new); }
+a.note-credit:hover strong { text-decoration: underline; }
+
+/* Highlights: cards, with screenshot cards taking a full row. */
+.note-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.note-card { display: grid; gap: 20px; padding: 22px; border: 1px solid var(--line); border-top: 3px solid var(--note-color); border-radius: 12px; background: var(--note-card); }
+.note-card { align-content: start; }
+.note-card-wide { grid-column: 1 / -1; }
+.note-card .note-aside { justify-self: center; width: min(100%, 230px); margin-bottom: -22px; }
+.note-card .note-aside img { max-height: 300px; object-fit: cover; object-position: top; border-bottom: 0; border-radius: 18px 18px 0 0; -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent); mask-image: linear-gradient(180deg, #000 70%, transparent); }
+.note-card .note-aside figcaption { display: none; }
+.note-card h3 { margin: 12px 0 6px; font-size: 1.15rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.25; }
+.note-card p { margin: 0; color: var(--muted); font-size: 0.96rem; line-height: 1.6; }
+
+/* Topic rows: a coloured rule on the left marks the change type. */
+.note-row { display: grid; gap: 18px 28px; padding: 4px 0 4px 18px; border-left: 3px solid var(--note-color); }
+.note-row + .note-row { margin-top: 22px; }
+.note-has-aside { grid-template-columns: minmax(0, 1fr) minmax(150px, 200px); align-items: start; }
+.note-row-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; }
+.note-row h3 { margin: 0; font-size: 1.08rem; font-weight: 700; letter-spacing: -0.01em; }
+.note-row p { margin: 6px 0 0; color: var(--muted); font-size: 0.98rem; line-height: 1.6; }
+
+/* Fixes and known issues: a checklist. */
+.note-checklist { margin: 0; padding: 0; list-style: none; }
+.note-checklist-fixes { columns: 2 300px; column-gap: 36px; }
+.note-check { display: flex; gap: 10px; padding: 9px 0; break-inside: avoid; color: var(--muted); font-size: 0.95rem; line-height: 1.55; }
+.note-check .note-icon { margin-top: 4px; color: var(--note-color); }
+.note-check strong { color: var(--text); }
+.note-check-devices { display: inline-block; margin-left: 4px; padding: 0 6px; border-radius: 5px; background: var(--pill, rgba(255, 255, 255, 0.07)); color: var(--text); font-size: 0.74rem; font-weight: 620; white-space: nowrap; }
+.note-checklist-known { padding: 8px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--note-card); }
+
+/* Screenshots. */
+.note-figure { position: relative; margin: 0; }
+.note-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 12px; background: #000; }
+.note-figure-iphone img { border-radius: 18px; }
+.note-figure figcaption { margin-top: 8px; color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
+.note-gallery { display: grid; grid-column: 1 / -1; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 220px)); gap: 20px 28px; }
+.note-steps { position: relative; padding-top: 40px; }
+.note-steps::before { content: ""; position: absolute; top: 13px; left: 14px; right: 0; height: 2px; background: linear-gradient(90deg, var(--note-color), transparent); opacity: 0.45; }
+.note-step-number { position: absolute; top: -40px; left: 0; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: var(--note-color); color: var(--bg); font-size: 0.8rem; font-weight: 780; }
+
+.note-links { margin-top: clamp(48px, 7vw, 72px); padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.92rem; }
+.note-links p { margin: 0 0 8px; }
+.note-links a { color: var(--text); text-underline-offset: 4px; }
+
+/* Links from the platform pages. */
+.release-visual-link { margin: 16px 0 0; }
+.release-visual-callout { margin: 0 0 clamp(24px, 4vw, 36px); }
+
+@media (max-width: 720px) {
+  .note-contents ol, .note-cards { grid-template-columns: 1fr; }
+  .note-has-aside { grid-template-columns: 1fr; }
+  .note-aside { max-width: 220px; }
+  .note-wall img { width: 96px; height: 144px; }
+  .note-cover-content { padding-top: 170px; }
+}
+
+/* Printing produces the PDF: a full-bleed cover page, then white pages with a running header and page numbers. */
+@page {
+  size: A4;
+  margin: 18mm 15mm 18mm;
+  @top-left { content: "Cedar · Release notes"; color: #8a8a90; font: 600 7.5pt -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  @top-right { content: "cedartv.github.io/cedar-tv-updates"; color: #8a8a90; font: 500 7.5pt -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  @bottom-right { content: counter(page) " / " counter(pages); color: #8a8a90; font: 600 7.5pt -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+}
+@page :first {
+  margin: 0;
+  @top-left { content: none; }
+  @top-right { content: none; }
+  @bottom-right { content: none; }
+}
+@media print {
+  :root, :root[data-theme] { color-scheme: light !important; }
+  html, body, :root[data-theme] body { background: #ffffff !important; }
+  .build-notes {
+    --line: rgba(0, 0, 0, 0.12); --text: #1d1d1f; --muted: #48484e; --bg: #ffffff; --pill: rgba(0, 0, 0, 0.05);
+    --note-new: #3b6a26; --note-improved: #93501f; --note-fixed: #1f5f9e; --note-known: #5c5c63;
+    --note-tint: 0.1; --note-card: #f6f6f3;
+    max-width: none; padding: 0;
+  }
+  .site-frame { width: auto; padding: 0; }
+  .cedar-header, .site-footer, .release-back, .note-actions { display: none !important; }
+  .note-cover { display: flex; flex-direction: column; justify-content: flex-end; height: 297mm; border-radius: 0; break-after: page; }
+  .note-wall { inset: -40px -60px auto; }
+  .note-wall img { width: 150px; height: 225px; }
+  .note-cover::before { background: linear-gradient(180deg, rgba(12, 16, 11, 0.1) 0, rgba(12, 16, 11, 0.75) 330px, #0c100b 470px), radial-gradient(ellipse 80% 40% at 0% 100%, rgba(126, 168, 105, 0.16), transparent 70%); }
+  .note-cover-content { padding: 0 18mm 18mm; }
+  .note-print-url { display: block; margin: 18px 0 0; color: rgba(242, 239, 232, 0.5); font-size: 8pt; }
+  .note-contents a { padding: 6px 0; }
+  .note-contents-title { font-size: 10pt; }
+  .note-section { margin-top: 26pt; }
+  .note-section-header { break-inside: avoid; break-after: avoid; }
+  .note-card, .note-row, .note-check, .note-checklist-known { break-inside: avoid; }
+  .note-card p, .note-row p, .note-check { font-size: 10pt; }
+  .note-has-aside { grid-template-columns: minmax(0, 1fr) 150px; }
+  .note-card .note-aside { width: 180px; }
+  .note-card .note-aside img { max-height: 230px; }
+  .note-gallery { grid-template-columns: repeat(auto-fit, 170px); }
+  .note-links { break-inside: avoid; }
+  a { text-decoration: none; }
+}

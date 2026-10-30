@@ -295,6 +295,7 @@ h1 {
 }
 
 .release-card .inline-document-link { margin-top: auto; padding-top: 24px; }
+.release-card .inline-document-link + .inline-document-link { margin-top: 0; padding-top: 10px; }
 
 .release-metadata {
   display: flex;
