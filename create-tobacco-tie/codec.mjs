@@ -29,15 +29,19 @@ export function validateAddress(value) {
     path += '/manifest.json';
   }
   url.pathname = path;
-  if (encoder.encode(url.href).length > 4096) throw new Error('This address is too long. Use an address under 4,096 bytes.');
-  return { address: url.href, host: url.hostname, secure: url.protocol === 'https:' };
+  const address = url.origin + appleEncoded(url.pathname) + appleEncoded(url.search);
+  if (encoder.encode(address).length > 4096) throw new Error('This address is too long. Use an address under 4,096 bytes.');
+  return { address, host: url.hostname, secure: url.protocol === 'https:' };
 }
-// Separate addresses with line breaks, spaces, or commas. A comma only separates when the next
-// address starts right after it: configured paths can contain commas themselves.
+// Browsers leave characters such as Torrentio's `|` unescaped. Cedar's Apple and Android apps
+// store them escaped, so the tie carries the same address every app saves.
+function appleEncoded(part) {
+  return part.replace(/[^A-Za-z0-9\-._~!$&'()*+,;=:@\/?%]/g,
+    character => '%' + character.charCodeAt(0).toString(16).toUpperCase().padStart(2, '0'));
+}
+// A paste holding several addresses fills one box each. Addresses never contain whitespace.
 export function splitAddresses(value) {
-  return value.split(/\s+|,\s*(?=https?:\/\/)/i)
-    .map(part => part.replace(/^,+|,+$/g, ''))
-    .filter(Boolean);
+  return value.split(/\s+/).filter(Boolean);
 }
 async function seal(key, address) {
   const bytes = encoder.encode(JSON.stringify({ v: 1, kind: 'addon', url: address }));
@@ -49,22 +53,31 @@ async function seal(key, address) {
   return base64url(combined);
 }
 // Several URLs share one key, one sealed box each, so one username and password installs them all.
-export async function createTie(value) {
-  const parts = splitAddresses(value);
-  if (!parts.length) throw new Error('Paste your Cedar Library URL to create your tie.');
-  if (parts.length > MAX_BUNDLE_COUNT) throw new Error(`Add up to ${MAX_BUNDLE_COUNT} URLs to one tie. Create another tie for the rest.`);
-  const validated = parts.map((part, index) => {
-    try { return validateAddress(part); }
-    catch (issue) { throw parts.length > 1 ? new Error(`URL ${index + 1}: ${issue.message}`) : issue; }
+// Takes one entry per URL box; empty boxes are skipped, and errors name the box by its position.
+export async function createTie(values) {
+  const boxes = Array.isArray(values) ? values : [values];
+  const entries = boxes
+    .map((value, index) => ({ value: String(value ?? '').trim(), index }))
+    .filter(entry => entry.value);
+  if (!entries.length) throw new Error('Paste your Cedar Library URL to create your tie.');
+  if (entries.length > MAX_BUNDLE_COUNT) throw new Error(`Add up to ${MAX_BUNDLE_COUNT} URLs to one tie. Create another tie for the rest.`);
+  const numbered = boxes.length > 1;
+  const validated = entries.map(({ value, index }) => {
+    try { return validateAddress(value); }
+    catch (issue) {
+      const failure = new Error(numbered ? `URL ${index + 1}: ${issue.message}` : issue.message);
+      failure.index = index;
+      throw failure;
+    }
   });
   // Repeating a URL would only reinstall the same tie.
   const unique = [...new Map(validated.map(item => [item.address, item])).values()];
   const keyBytes = crypto.getRandomValues(new Uint8Array(32));
   const key = await crypto.subtle.importKey('raw', keyBytes, 'AES-GCM', false, ['encrypt']);
-  const boxes = [];
-  for (const { address } of unique) boxes.push(await seal(key, address));
+  const sealed = [];
+  for (const { address } of unique) sealed.push(await seal(key, address));
   const password = `${PASSWORD_PREFIX}${base64url(keyBytes)}`;
-  const username = `${USERNAME_PREFIX}${boxes.join('.')}`;
+  const username = `${USERNAME_PREFIX}${sealed.join('.')}`;
   keyBytes.fill(0);
   if (encoder.encode(username + password).length > MAX_BUNDLE_BYTES) {
     throw new Error('These URLs are too long to share one tie. Split them across two ties.');

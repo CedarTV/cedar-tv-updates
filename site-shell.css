@@ -121,11 +121,11 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 [data-theme="light"] :is(.artwork-choice small, .full-set-grid figcaption) { color: var(--muted); }
 [data-theme="light"] #full-set summary { color: var(--cedar); }
 [data-theme="light"] .creator { background: var(--surface); }
-[data-theme="light"] :is(#addon-url, #tie-code) { background: var(--bg); border-color: var(--control-border); color: var(--text); }
+[data-theme="light"] :is(.address-input, #tie-code) { background: var(--bg); border-color: var(--control-border); color: var(--text); }
 [data-theme="light"] .create-button { color: #fff; }
 [data-theme="light"] .create-button:hover { background: #29451e; }
-[data-theme="light"] :is(.preview-badge, .clear-input, .field-meta p, .local-note p, .local-note p span, .prototype-note, .how-it-works span, .how-it-works p, .about-ties summary, .about-ties p, .copy-button:disabled) { color: var(--muted); }
-[data-theme="light"] :is(#addon-url, #tie-code)::placeholder { color: var(--muted); }
+[data-theme="light"] :is(.preview-badge, .clear-input, .address-label, .field-meta p, .local-note p, .local-note p span, .prototype-note, .how-it-works span, .how-it-works p, .about-ties summary, .about-ties p, .copy-button:disabled) { color: var(--muted); }
+[data-theme="light"] :is(.address-input, #tie-code)::placeholder { color: var(--muted); }
 [data-theme="light"] .field-error { color: #a12c23; }
 [data-theme="light"] .release-entry, [data-theme="light"] .privacy-points p { background: var(--surface); }
 [data-theme="light"] .privacy-points p { color: var(--text); }
@@ -135,8 +135,8 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 :is(.compatibility, .proof-strip a, .proof-strip span, .platform-release, .caption-number, .feature-index, .release-meta, .install-note) { color: var(--muted); }
 .cedar-theme select, .cedar-header .cedar-nav .cedar-download,
 .button-secondary, .creator-shell :is(input, select, .artwork-choice),
-#addon-url, #tie-code, .copy-button { border-color: var(--control-border); }
-:root .creator-shell :focus-visible, :root #addon-url:focus,
+.address-input, #tie-code, .copy-button { border-color: var(--control-border); }
+:root .creator-shell :focus-visible, :root .address-input:focus,
 :root :is(input, select, textarea, button, a, summary):focus-visible {
   outline: 3px solid var(--cedar); outline-offset: 4px;
 }

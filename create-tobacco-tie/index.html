@@ -10,9 +10,9 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
     <title>Cedar Library — Cedar</title>
     <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
-    <link rel="stylesheet" href="tie.css?v=4">
+    <link rel="stylesheet" href="tie.css?v=5">
     <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
-    <script type="module" src="tie.mjs?v=5"></script>
+    <script type="module" src="tie.mjs?v=6"></script>
     <script src="/cedar-tv-updates/theme.js"></script>
     <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
   </head>
@@ -56,11 +56,16 @@
         <div class="creator">
           <section class="input-panel" aria-labelledby="input-title">
             <div class="section-label"><h2 id="input-title">Start with an address</h2></div>
-            <p class="section-description">Paste your Cedar Library URL. Add several to install them all at once.</p>
+            <p class="section-description">Paste your Cedar Library URL. Add more boxes to install several at once.</p>
             <form id="tie-form" novalidate>
-              <label for="addon-url">Cedar Library URLs</label>
-              <div class="address-field"><textarea id="addon-url" name="addon-url" rows="3" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="address-hint bundle-note address-error" maxlength="65536"></textarea><button class="clear-input" id="clear-input" type="button" aria-label="Clear URLs" hidden>×</button></div>
-              <div class="field-meta"><p id="address-hint">Use complete HTTPS addresses, or HTTP for a self-hosted server. Put each on its own line or separate them with commas — up to 20 per tie.</p></div>
+              <fieldset class="address-group" aria-describedby="address-hint bundle-note">
+                <legend>Cedar Library URLs</legend>
+                <ol class="address-list" id="address-list">
+                  <li class="address-row"><label class="address-label" for="address-1">URL 1</label><div class="address-field"><input class="address-input" id="address-1" type="url" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" aria-describedby="address-error"><button class="clear-input" type="button" aria-label="Clear URL 1" hidden>×</button></div></li>
+                </ol>
+                <button class="text-button add-address" id="add-address" type="button"><span aria-hidden="true">+</span> Add another URL</button>
+              </fieldset>
+              <div class="field-meta"><p id="address-hint">Use complete HTTPS addresses, or HTTP for a self-hosted server. Put one URL in each box — up to 20 per tie.</p></div>
               <p class="bundle-note" id="bundle-note">A tie made from several URLs needs the latest Cedar app. Older versions install one URL per tie. Multiple-URL ties suggested by MrT on Discord.</p>
               <p id="address-error" class="field-error" role="alert" hidden></p>
               <button class="create-button" id="create-tie" type="submit"><span>Create Tobacco Tie</span><span aria-hidden="true">→</span></button>
