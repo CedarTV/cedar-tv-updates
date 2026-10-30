@@ -1,12 +1,79 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled October 26, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
+Compiled October 29, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 79 · 2026-10-29
+
+October 29, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Movies and TV Shows pages — IPTV movies and series get their own pages, with Branches on top and category boxes with counts below. Rename, hide, rearrange or add any box to Home.
+- Streaming service folders — single-service folders gain Top 10, New on, Coming Soon, Originals and Hidden Gems Branches. Existing groups offer to add them once.
+- VPN — built-in WireGuard VPN with sign-in for popular providers or your own config. Movies and shows use it while live channels stay direct, with per-source choices.
+- Sports pages — games and teams open like posters, and the player’s sports button shows a row of game cards with your teams first.
+- Airplane Mode — with no network, Cedar shows your downloads in a full-screen Ready to Watch view.
+
+#### Home and Branches
+
+- Shuffle — a Shuffle sort for any Branch, including Top 10 and charts, with Shuffle Again. Requested by JamminJerome on Discord.
+- Live TV Branches — add IPTV categories, favourite or recent channels, custom channels and custom lineups to Home as Branches. Requested by flyboy787 on Discord.
+- Follow people — follow actors and directors from their page or a cast portrait, and build Branches from their work.
+- Enhanced Posters — Band Color matches a fog band to the artwork, plus Score Color, new labels such as In Cinemas, and starter styles.
+- Titles — Edit Branch has one Titles picker: Two Lines, One Line or Hide.
+
+#### Playback
+
+- Arrange Controls — put each player control in the top bar, bottom bar or Options menu, or hide it. In Settings › Playback › Player Controls.
+- Picture (Experimental) — brightness, contrast, saturation and gamma, with presets such as Cinema, Vivid and Anime, from the player’s Options. SDR video only. Requested by lionel on Discord.
+- Surround Sound — convert DTS and TrueHD audio to Dolby Digital Plus or lossless PCM for your receiver. In Settings › Audio & Subtitles.
+- Reuse Last Link — replays the last working stream for a title without searching again. In Source Settings › Memory.
+- Subtitle preview — plays a real clip, matches the player’s sizes and applies changes straight away.
+
+#### Network and downloads
+
+- Use VPN — the Blocked by This Network card can retry that source through the VPN.
+- Fit to Size — downloads pick the best copy under your size limit.
+
+#### Sports
+
+- Every sport — tennis draws, golf leaderboards, F1 weekends, cricket scorecards and team lineups.
+- Where to Watch — broadcast networks for your region, and Choose Source searches their other names.
+- Spoiler-free teams — hide one team’s scores and plays everywhere from its page.
+- Watch from Kickoff — catch-up for a finished game starts at kickoff.
+- Sports Bar — opens on Following and hides leagues with no games.
+
+#### Profiles and tracking
+
+- New device restore — Who’s Watching shows profiles arriving from iCloud, and restored profiles skip setup.
+- Drop Show — on Next Up cards for every tracking service, with a Dropped Shows list.
+
+#### Fixes
+
+- Playback no longer refreshes Home and the title page behind the player.
+- A playback error keeps the controls and offers Choose Another Source.
+- Long source lists no longer make the player stutter.
+- Xtream movie and series lists import in seconds instead of minutes.
+- IPTV episodes no longer leave a second Continue Watching card that won’t open.
+- AIOStreams bridge servers find sources again, and identical Tobacco Tie streams show once.
+- “No Tobacco Ties Installed” no longer shows after switching profiles.
+- Series missing from TMDB, or with extra provider episodes, list all their episodes.
+- Creating a Cedar Household no longer crashes.
+- Full Screen no longer closes a game started from Home.
+
+#### Known issues
+
+- Silo can be added under Media Servers, but its copies can’t play yet.
+- Watch Together (SharePlay) appears in the player options but is not ready yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-79)
 
 ### 1.0.0 · build 75 · 2026-10-26
 
@@ -1110,6 +1177,74 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 79 · 2026-10-29
+
+October 29, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Movies and TV Shows pages — IPTV movies and series get their own pages, with Branches on top and category boxes with counts below. Rename, hide, rearrange or add any box to Home.
+- Streaming service folders — single-service folders gain Top 10, New on, Coming Soon, Originals and Hidden Gems Branches. Existing groups offer to add them once.
+- VPN — built-in WireGuard VPN with sign-in for popular providers or your own config. Movies and shows use it while live channels stay direct, with per-source choices.
+- Sports pages — games and teams open like posters, and the player’s sports button shows a row of game cards with your teams first.
+- Airplane Mode — with no network, Cedar shows your downloads in a full-screen Ready to Watch view.
+
+#### Home and Branches
+
+- Shuffle — a Shuffle sort for any Branch, including Top 10 and charts, with Shuffle Again. Requested by JamminJerome on Discord.
+- Live TV Branches — add IPTV categories, favourite or recent channels, custom channels and custom lineups to Home as Branches. Requested by flyboy787 on Discord.
+- Follow people — follow actors and directors from their page or a cast portrait, and build Branches from their work.
+- Enhanced Posters — Band Color matches a fog band to the artwork, plus Score Color, new labels such as In Cinemas, and starter styles.
+- Titles — Edit Branch has one Titles picker: Two Lines, One Line or Hide.
+- Folder focus art — folders that carry focus art switch to it when highlighted.
+
+#### Playback
+
+- Arrange Controls — put each player control in the top bar, bottom bar or Options menu, or hide it. In Settings › Playback › Player Controls.
+- Picture (Experimental) — brightness, contrast, saturation and gamma, with presets such as Cinema, Vivid and Anime, from the player’s Options. SDR video only. Requested by lionel on Discord.
+- Surround Sound — convert DTS and TrueHD audio to Dolby Digital Plus or lossless PCM for your receiver. In Settings › Audio & Subtitles.
+- Reuse Last Link — replays the last working stream for a title without searching again. In Source Settings › Memory.
+- Subtitle preview — plays a real clip, matches the player’s sizes and applies changes straight away.
+
+#### Network and downloads
+
+- Use VPN — the Blocked by This Network card can retry that source through the VPN.
+- Fit to Size — downloads pick the best copy under your size limit.
+
+#### Sports
+
+- Every sport — tennis draws, golf leaderboards, F1 weekends, cricket scorecards and team lineups.
+- Where to Watch — broadcast networks for your region, and Choose Source searches their other names.
+- Spoiler-free teams — hide one team’s scores and plays everywhere from its page.
+- Watch from Kickoff — catch-up for a finished game starts at kickoff.
+- Sports Bar — opens on Following and hides leagues with no games.
+
+#### Profiles and tracking
+
+- New device restore — Who’s Watching shows profiles arriving from iCloud, and restored profiles skip setup.
+- Drop Show — on Next Up cards for every tracking service, with a Dropped Shows list.
+
+#### Fixes
+
+- Playback no longer refreshes Home and the title page behind the player.
+- A playback error keeps the controls and offers Choose Another Source.
+- Long source lists no longer make the player stutter.
+- Xtream movie and series lists import in seconds instead of minutes.
+- IPTV episodes no longer leave a second Continue Watching card that won’t open.
+- AIOStreams bridge servers find sources again, and identical Tobacco Tie streams show once.
+- “No Tobacco Ties Installed” no longer shows after switching profiles.
+- Series missing from TMDB, or with extra provider episodes, list all their episodes.
+- Creating a Cedar Household no longer crashes.
+- Full Screen no longer closes a game started from Home.
+
+#### Known issues
+
+- Silo can be added under Media Servers, but its copies can’t play yet.
+- Watch Together (SharePlay) appears in the player options but is not ready yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-79)
 
 ### 1.0.0 · build 75 · 2026-10-26
 
@@ -2221,6 +2356,75 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 79 · 2026-10-29
+
+October 29, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Movies and TV Shows pages — IPTV movies and series get their own pages, with Branches on top and category boxes with counts below. Rename, hide, rearrange or add any box to Home.
+- Streaming service folders — single-service folders gain Top 10, New on, Coming Soon, Originals and Hidden Gems Branches. Existing groups offer to add them once.
+- VPN — built-in WireGuard VPN with sign-in for popular providers or your own config. Movies and shows use it while live channels stay direct, with per-source choices.
+- Sports pages — games and teams open like posters, and the player’s sports button shows a row of game cards with your teams first.
+- Guide history — press Left on a programme to walk back through earlier programmes on any channel. Back returns to the logo and jumps to Now.
+
+#### Home and Branches
+
+- Shuffle — a Shuffle sort for any Branch, including Top 10 and charts, with Shuffle Again. Requested by JamminJerome on Discord.
+- Live TV Branches — add IPTV categories, favourite or recent channels, custom channels and custom lineups to Home as Branches. Requested by flyboy787 on Discord.
+- Follow people — follow actors and directors from their page or a cast portrait, and build Branches from their work.
+- Enhanced Posters — Band Color matches a fog band to the artwork, plus Score Color, new labels such as In Cinemas, and starter styles.
+- Titles — Edit Branch has one Titles picker: Two Lines, One Line or Hide.
+- Folder focus art — folders that carry focus art switch to it when highlighted.
+
+#### Playback
+
+- Arrange Controls — put each player control in the top bar, bottom bar or Options menu, or hide it. In Settings › Playback › Player Controls.
+- Picture (Experimental) — brightness, contrast, saturation and gamma, with presets such as Cinema, Vivid and Anime, from the player’s Options. SDR video only. Requested by lionel on Discord.
+- Surround Sound — convert DTS and TrueHD audio to Dolby Digital Plus or lossless PCM for your receiver. In Settings › Audio & Subtitles.
+- Reuse Last Link — replays the last working stream for a title without searching again. In Source Settings › Memory.
+- Play Using — Native Player and installed players such as Infuse and VLC now appear in Play Using.
+- Subtitle preview — plays a real clip, matches the player’s sizes and applies changes straight away.
+
+#### Network and downloads
+
+- Use VPN — the Blocked by This Network card can retry that source through the VPN.
+
+#### Sports
+
+- Every sport — tennis draws, golf leaderboards, F1 weekends, cricket scorecards and team lineups.
+- Where to Watch — broadcast networks for your region, and Choose Source searches their other names.
+- Spoiler-free teams — hide one team’s scores and plays everywhere from its page.
+- Watch from Kickoff — catch-up for a finished game starts at kickoff.
+- Sports Bar — opens on Following and hides leagues with no games.
+
+#### Profiles and tracking
+
+- New device restore — Who’s Watching shows profiles arriving from iCloud, and restored profiles skip setup.
+- Drop Show — on Next Up cards for every tracking service, with a Dropped Shows list.
+
+#### Fixes
+
+- Playback no longer refreshes Home and the title page behind the player.
+- A playback error keeps the controls and offers Choose Another Source.
+- Long source lists no longer make the player stutter.
+- Xtream movie and series lists import in seconds instead of minutes.
+- IPTV episodes no longer leave a second Continue Watching card that won’t open.
+- AIOStreams bridge servers find sources again, and identical Tobacco Tie streams show once.
+- “No Tobacco Ties Installed” no longer shows after switching profiles.
+- Series missing from TMDB, or with extra provider episodes, list all their episodes.
+- Creating a Cedar Household no longer crashes.
+- Choose Source in sports plays Tobacco Tie streams directly.
+- Large and wide posters no longer overlap when focused, and wide Branches no longer stop half off screen.
+
+#### Known issues
+
+- Silo can be added under Media Servers, but its copies can’t play yet.
+- Watch Together (SharePlay) appears in the player options but is not ready yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-79)
+
 ### 1.0.0 · build 75 · 2026-10-26
 
 October 26, 2026 · Released to External TestFlight for Apple TV.
@@ -3219,6 +3423,75 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 79 · 2026-10-29
+
+October 29, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Movies and TV Shows pages — IPTV movies and series get their own pages, with Branches on top and category boxes with counts below. Rename, hide, rearrange or add any box to Home.
+- Streaming service folders — single-service folders gain Top 10, New on, Coming Soon, Originals and Hidden Gems Branches. Existing groups offer to add them once.
+- VPN — built-in WireGuard VPN with sign-in for popular providers or your own config. Movies and shows use it while live channels stay direct, with per-source choices.
+- Sports pages — games and teams open like posters, and the player’s sports button shows a row of game cards with your teams first.
+- Airplane Mode — with no network, Cedar shows your downloads in a full-screen Ready to Watch view.
+
+#### Home and Branches
+
+- Shuffle — a Shuffle sort for any Branch, including Top 10 and charts, with Shuffle Again. Requested by JamminJerome on Discord.
+- Live TV Branches — add IPTV categories, favourite or recent channels, custom channels and custom lineups to Home as Branches. Requested by flyboy787 on Discord.
+- Follow people — follow actors and directors from their page or a cast portrait, and build Branches from their work.
+- Enhanced Posters — Band Color matches a fog band to the artwork, plus Score Color, new labels such as In Cinemas, and starter styles.
+- Titles — Edit Branch has one Titles picker: Two Lines, One Line or Hide.
+- Folder focus art — folders that carry focus art switch to it when highlighted.
+
+#### Playback
+
+- Arrange Controls — put each player control in the top bar, bottom bar or Options menu, or hide it. In Settings › Playback › Player Controls.
+- Picture (Experimental) — brightness, contrast, saturation and gamma, with presets such as Cinema, Vivid and Anime, from the player’s Options. SDR video only. Requested by lionel on Discord.
+- Surround Sound — convert DTS and TrueHD audio to Dolby Digital Plus or lossless PCM for your receiver. In Settings › Audio & Subtitles.
+- Reuse Last Link — replays the last working stream for a title without searching again. In Source Settings › Memory.
+- Cedar volume — the player has its own volume and mute, separate from the Mac’s, with ⌘↑, ⌘↓ and M.
+- Subtitle preview — plays a real clip, matches the player’s sizes and applies changes straight away.
+
+#### Network and downloads
+
+- Use VPN — the Blocked by This Network card can retry that source through the VPN.
+- Fit to Size — downloads pick the best copy under your size limit.
+
+#### Sports
+
+- Every sport — tennis draws, golf leaderboards, F1 weekends, cricket scorecards and team lineups.
+- Where to Watch — broadcast networks for your region, and Choose Source searches their other names.
+- Spoiler-free teams — hide one team’s scores and plays everywhere from its page.
+- Watch from Kickoff — catch-up for a finished game starts at kickoff.
+- Sports Bar — opens on Following and hides leagues with no games.
+
+#### Profiles and tracking
+
+- New device restore — Who’s Watching shows profiles arriving from iCloud, and restored profiles skip setup.
+- Drop Show — on Next Up cards for every tracking service, with a Dropped Shows list.
+
+#### Fixes
+
+- Playback no longer refreshes Home and the title page behind the player.
+- A playback error keeps the controls and offers Choose Another Source.
+- Long source lists no longer make the player stutter.
+- Xtream movie and series lists import in seconds instead of minutes.
+- IPTV episodes no longer leave a second Continue Watching card that won’t open.
+- AIOStreams bridge servers find sources again, and identical Tobacco Tie streams show once.
+- “No Tobacco Ties Installed” no longer shows after switching profiles.
+- Series missing from TMDB, or with extra provider episodes, list all their episodes.
+- Creating a Cedar Household no longer crashes.
+- Choose Source in sports opens the full player.
+
+#### Known issues
+
+- Silo can be added under Media Servers, but its copies can’t play yet.
+- Watch Together (SharePlay) appears in the player options but is not ready yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-79)
 
 ### 1.0.0 · build 75 · 2026-10-26
 

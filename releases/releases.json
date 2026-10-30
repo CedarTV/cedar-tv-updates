@@ -30,40 +30,40 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "75",
-      "date": "2026-10-26",
+      "build": "79",
+      "date": "2026-10-29",
       "status": "testflight",
-      "summary": "External TestFlight. A vertical player, When Resuming, Blocked by This Network, Theme Style and subtitle placement fixes.",
+      "summary": "External TestFlight. IPTV Movies and TV Shows pages, streaming service Branches, a built-in VPN, Airplane Mode and new sports pages.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "75",
-      "date": "2026-10-26",
+      "build": "79",
+      "date": "2026-10-29",
       "status": "testflight",
-      "summary": "External TestFlight. A new Live page and watch page, grouped sources, When Resuming, Blocked by This Network and Theme Style.",
+      "summary": "External TestFlight. IPTV Movies and TV Shows pages, streaming service Branches, a built-in VPN, Airplane Mode and new sports pages.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
       "id": "apple-tv",
       "name": "Cedar for Apple TV",
       "version": "1.0.0",
-      "build": "75",
-      "date": "2026-10-26",
+      "build": "79",
+      "date": "2026-10-29",
       "status": "testflight",
-      "summary": "External TestFlight. A reworked sports game page, When Resuming, Blocked by This Network, Theme Style and subtitle placement fixes.",
+      "summary": "External TestFlight. IPTV Movies and TV Shows pages, streaming service Branches, a built-in VPN, guide history and new sports pages.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
       "id": "mac",
       "name": "Cedar for Mac",
       "version": "1.0.0",
-      "build": "75",
-      "date": "2026-10-26",
+      "build": "79",
+      "date": "2026-10-29",
       "status": "testflight",
-      "summary": "External TestFlight. A new Live page and watch page, grouped sources, When Resuming, Blocked by This Network and Theme Style.",
+      "summary": "External TestFlight. IPTV Movies and TV Shows pages, streaming service Branches, a built-in VPN, Airplane Mode and Cedar volume.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]
