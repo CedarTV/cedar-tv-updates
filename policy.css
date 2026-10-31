@@ -317,6 +317,57 @@ h1 {
 .release-status-testflight { color: #c9d8ff; }
 .compact-callout { margin-bottom: 0; }
 
+/* Shared by the visual release notes cover and the release hub spotlight. */
+.note-icon { flex: none; width: 15px; height: 15px; }
+.note-wall {
+  position: absolute;
+  inset: -60px -80px auto;
+  display: grid;
+  gap: 14px;
+  transform: rotate(-7deg);
+  opacity: 0.62;
+}
+.note-wall-row { display: flex; gap: 14px; }
+.note-wall-row:nth-child(2) { transform: translateX(-70px); }
+.note-wall-row:nth-child(3) { transform: translateX(-20px); }
+.note-wall img { flex: none; width: 128px; height: 192px; border-radius: 8px; object-fit: cover; }
+.note-audience { display: inline-flex; align-items: center; min-height: 26px; padding: 0 10px; border-radius: 6px; background: rgba(233, 178, 118, 0.16); color: #f1c48f; font-size: 0.7rem; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; }
+.note-audience-public { background: rgba(185, 221, 152, 0.16); color: #cbe8b0; }
+.note-audience-internal { background: rgba(255, 255, 255, 0.1); color: #e3e3e8; }
+
+/* Release hub "What's new": posters on the right fade into the text; dark in both themes like the notes cover. */
+.release-spotlight {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+  border: 1px solid rgba(242, 239, 232, 0.1);
+  border-radius: 16px;
+  background: #0c100b;
+  color: #f2efe8;
+}
+.release-spotlight .note-wall { inset: -50px -60px auto 42%; }
+.release-spotlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, #0c100b 0, #0c100b 40%, rgba(12, 16, 11, 0.72) 62%, rgba(12, 16, 11, 0.2) 100%),
+    radial-gradient(ellipse 70% 60% at 0% 100%, rgba(126, 168, 105, 0.16), transparent 70%);
+}
+.release-spotlight-content { position: relative; z-index: 2; max-width: 640px; padding: clamp(24px, 4vw, 40px); }
+.release-spotlight-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 0 0 14px; color: rgba(242, 239, 232, 0.72); font-size: 0.85rem; font-weight: 600; }
+.release-spotlight h2 { margin: 0 0 10px; font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+.release-spotlight-intro { margin: 0; color: rgba(242, 239, 232, 0.72); font-size: 0.95rem; line-height: 1.6; }
+.release-spotlight-glance { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 18px 0 0; padding: 0; list-style: none; color: rgba(242, 239, 232, 0.72); font-size: 0.9rem; font-weight: 600; }
+.release-spotlight-glance strong { margin-right: 2px; font-size: 1.25rem; font-weight: 760; letter-spacing: -0.02em; }
+.release-spotlight-glance .note-glance-new strong { color: #b9dd98; }
+.release-spotlight-glance .note-glance-improved strong { color: #e9b276; }
+.release-spotlight-glance .note-glance-fixed strong { color: #8fc7ff; }
+.release-spotlight-devices { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 14px 0 22px; padding: 0; list-style: none; color: rgba(242, 239, 232, 0.6); font-size: 0.82rem; font-weight: 600; }
+.release-spotlight-devices .note-device { display: inline-flex; align-items: center; gap: 6px; }
+.release-spotlight .inline-action { margin-top: 0; background: #f2efe8; color: #0c100b; }
+
 .release-back {
   display: inline-flex;
   margin-bottom: 42px;
@@ -396,6 +447,12 @@ h1 {
   .apple-actions .inline-action,
   .apple-actions .secondary-action { width: 100%; }
   .policy-callout { border-radius: 14px; }
+  .release-spotlight { border-radius: 14px; }
+  .release-spotlight .note-wall { inset: -60px -80px auto; }
+  .release-spotlight .note-wall img { width: 96px; height: 144px; }
+  .release-spotlight::before { background: linear-gradient(180deg, rgba(12, 16, 11, 0.15) 0, rgba(12, 16, 11, 0.7) 130px, #0c100b 210px); }
+  .release-spotlight-content { padding-top: 160px; }
+  .release-spotlight .inline-action { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

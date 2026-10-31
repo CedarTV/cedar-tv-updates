@@ -23,7 +23,6 @@
 .note-improved { --note-color: var(--note-improved); }
 .note-fixed { --note-color: var(--note-fixed); }
 .note-known { --note-color: var(--note-known); }
-.note-icon { flex: none; width: 15px; height: 15px; }
 
 /* Cover: Cedar's own showcase posters fade into the title; dark in both themes. */
 .note-cover {
@@ -35,18 +34,6 @@
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
 }
-.note-wall {
-  position: absolute;
-  inset: -60px -80px auto;
-  display: grid;
-  gap: 14px;
-  transform: rotate(-7deg);
-  opacity: 0.62;
-}
-.note-wall-row { display: flex; gap: 14px; }
-.note-wall-row:nth-child(2) { transform: translateX(-70px); }
-.note-wall-row:nth-child(3) { transform: translateX(-20px); }
-.note-wall img { flex: none; width: 128px; height: 192px; border-radius: 8px; object-fit: cover; }
 .note-cover::before {
   content: "";
   position: absolute;
@@ -61,9 +48,6 @@
 .note-brand img { width: 40px; height: 40px; border-radius: 10px; }
 .note-brand-label { padding-left: 12px; border-left: 1px solid rgba(242, 239, 232, 0.25); color: rgba(242, 239, 232, 0.65); font-size: 1rem; font-weight: 560; letter-spacing: 0; }
 .note-cover-badges { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin: 0 0 14px; color: rgba(242, 239, 232, 0.72); font-size: 0.85rem; font-weight: 600; }
-.note-audience { display: inline-flex; align-items: center; min-height: 26px; padding: 0 10px; border-radius: 6px; background: rgba(233, 178, 118, 0.16); color: #f1c48f; font-size: 0.7rem; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; }
-.note-audience-public { background: rgba(185, 221, 152, 0.16); color: #cbe8b0; }
-.note-audience-internal { background: rgba(255, 255, 255, 0.1); color: #e3e3e8; }
 .note-cover h1 { margin: 0; font-size: clamp(3.4rem, 10vw, 6.4rem); font-weight: 780; letter-spacing: -0.05em; line-height: 0.95; }
 .note-version { display: block; margin-bottom: 10px; color: #b9dd98; font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 650; letter-spacing: 0; }
 .note-intro { max-width: 700px; margin: 22px 0 0; color: rgba(242, 239, 232, 0.8); font-size: clamp(1rem, 1.6vw, 1.1rem); line-height: 1.65; }
