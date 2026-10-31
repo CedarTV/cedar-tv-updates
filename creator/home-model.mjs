@@ -412,6 +412,8 @@ export function parseManifest(manifest,sourceURL,arrange='grouped',probes=emptyP
 // .cedar file. Given that tie's manifest link, its sources become catalog links instead, keeping
 // each source's genre (the catalog choice behind a genre, decade or season folder).
 /** `https://host/path/collection.json` → `https://host/path/manifest.json`, where a tie that publishes its own collection serves its manifest; '' otherwise. */
+/** `https://host/path/manifest.json` → `https://host/path/collection.json`, where a tie may publish its author's own collections; '' otherwise. */
+export function manifestCollectionLink(value){const base=catalogBase(value);return base?`${base}/collection.json`:'';}
 export function collectionManifestLink(value){let u;try{u=new URL(value);}catch{return '';}if(u.protocol!=='https:'||u.search||u.hash||u.username||u.password||!/\/collection\.json$/i.test(u.pathname))return '';u.pathname=u.pathname.replace(/\/collection\.json$/i,'/manifest.json');return u.href;}
 /** `{manifest, url}` for `parseImport`'s `catalogLinks`, or an error when `raw` isn't a manifest read from its manifest link. */
 export function readCatalogManifest(raw,url){let manifest;try{manifest=JSON.parse(raw);}catch{throw Error('That link isn’t a manifest.');}if(!isManifest(manifest))throw Error('That link isn’t a manifest.');if(!catalogBase(url))throw Error('Use the manifest’s https link ending in /manifest.json, without a ?query.');return {manifest,url};}
@@ -438,7 +440,15 @@ export function bindCatalogLinks(draft,manifest,sourceURL){
 }
 /** `sourceURL` is where Load URL read the JSON; a manifest needs it. `arrange` lays out a manifest's catalogs (parseManifest).
  `catalogLinks` ([{manifest, url}], from readCatalogManifest) turns a collection's Tobacco Tie sources into catalog links. */
-export function parseImport(input,{sourceURL='',arrange='grouped',probes=emptyProbes,catalogLinks=[]}={}){
+/** A manifest's own collection (`{raw, url}`, read from manifestCollectionLink) as Home rows bound to the manifest, or null when it isn't a collection of this tie's catalogs. */
+function manifestCollection(manifest,sourceURL,collection){
+ let result;try{result=parseImport(collection.raw,{sourceURL:collection.url,catalogLinks:[{manifest,url:sourceURL}]});}catch{return null;}
+ if(!result.bound)return null;
+ const addonName=name(manifest.name,'Catalogs');
+ return {...result,format:`${addonName} collections`,catalog:{name:addonName,count:manifestCatalogs(manifest).catalogs.length,arrange:'collections',arrangements:['collections',...catalogArrangements]}};
+}
+/** `collection` ({raw, url}) is the manifest's own collection: it opens on the `collections` arrangement unless `arrange` names another. */
+export function parseImport(input,{sourceURL='',arrange='',probes=emptyProbes,catalogLinks=[],collection=null}={}){
  const serialized=typeof input==='string'?input:JSON.stringify(input);if(new TextEncoder().encode(serialized).length>MAX_BYTES)throw Error('Choose a JSON file smaller than 10 MB.');
  let data;try{data=typeof input==='string'?JSON.parse(input):input;}catch{throw Error('This is not valid JSON. Your current Home has not changed.');}
  if(data?.version===2)return {draft:validateDraft(data),issues:[],format:'Saved Creator draft'};
@@ -448,7 +458,7 @@ export function parseImport(input,{sourceURL='',arrange='grouped',probes=emptyPr
  if(data?.formatIdentifier==='app.cedar.home-branches'||data?.formatIdentifier==='app.cedar.bundle')throw Error('This is already a Cedar file. Open it in Cedar. To keep editing here, open a saved Creator draft instead.');
  if(isSetupExport(data))return parseSetup(data);
  if(isShelfExport(data))return parseShelves(data);
- if(isManifest(data)){if(!sourceURL)throw Error('This is a manifest. Paste its link (ending in /manifest.json) into Collection URL and choose Load URL, so Cedar knows where to read its catalogs.');return parseManifest(data,sourceURL,arrange,probes);}
+ if(isManifest(data)){if(!sourceURL)throw Error('This is a manifest. Paste its link (ending in /manifest.json) into Collection URL and choose Load URL, so Cedar knows where to read its catalogs.');const own=collection?manifestCollection(data,sourceURL,collection):null;if(own&&(!arrange||arrange==='collections'))return own;const result=parseManifest(data,sourceURL,arrange||'grouped',probes);if(own)result.catalog.arrangements=own.catalog.arrangements;return result;}
  const config=obj(data?.config)?data.config:obj(data)?data:{};const collections=Array.isArray(data)?data:Array.isArray(config.collections)?config.collections:obj(data)&&Array.isArray(data.folders)?[data]:[];
  if(!collections.length&&!config.home_rows?.length)throw Error('No collections found. Choose a collection file, a profile export, a setup or Home shelf export, or a saved Creator draft, or load a manifest.json link.');
  const rows=[],issues=[];const rowIDs=new Set();const byExternal=new Map();
