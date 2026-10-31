@@ -2,7 +2,7 @@
 // apps' collection JSON or built by hand. It writes Cedar's native .cedar files: a Branches file to
 // share, or a sealed profile file that keeps the owner's Tobacco Ties and, from a setup export, their logins.
 import {branchesFile,profileFile,cedarDate,findTobaccoTies,addonFamily} from '../shared/cedar-file.mjs';
-import {cleanCedarSource,cleanFilters,sourceIssue,families,traktChartPattern} from './branch-options.mjs';
+import {cleanCedarSource,cleanFilters,sourceIssue,families,traktChartPattern,services} from './branch-options.mjs';
 import {creatorBundleID,maximumCartItems,isItemID,isAvatarPath,avatarURL,isBadgePackID,badgePackURL,setupOf} from './creator-model.mjs';
 export const MAX_BYTES = 10 * 1024 * 1024;
 export const deviceFamilies = ['phone','tablet','desktop','television'];
@@ -153,12 +153,25 @@ function resolveCatalog(ref,config){const id=ref.catalogId||'',type=ref.type||(/
 // A `group` row holds its folders in `contentSources`, each with its own art and list of sources.
 const one=v=>obj(v)&&Object.keys(v).length===1?Object.keys(v)[0]:'';
 const payload=v=>obj(v?._0)?v._0:obj(v)?v:{};
-const isShelfExport=data=>Array.isArray(data)&&data.length>0&&data.every(r=>obj(r)&&obj(r.source)&&!Array.isArray(r.folders))&&data.some(r=>typeof r.style==='string'&&one(r.source));
+const isShelfExport=data=>Array.isArray(data?.shelves)?isShelfExport(data.shelves):Array.isArray(data)&&data.length>0&&data.every(r=>obj(r)&&obj(r.source)&&!Array.isArray(r.folders))&&data.some(r=>typeof r.style==='string'&&one(r.source));
 const idList=v=>Array.isArray(v)?v.filter(positive).join(','):'';
 const shelfShape=v=>v==='poster'?'poster':v==='square'?'square':undefined;
 const shelfRowStyle=v=>/wide|landscape|backdrop/i.test(v||'')?'wide':/feature|hero|spotlight/i.test(v||'')?'feature':undefined;
 const shelfContent=v=>['movie','movies'].includes(v)?'movies':['tv','show','shows','series'].includes(v)?'shows':'both';
 const built=(title,dataSource,query,contentType='both')=>({title,provider:'cedar',cedar:{dataSource,query,filters:{contentType}}});
+// A media server collection only exists on its owner's server, so a folder named after a streaming
+// service is rebuilt from TMDB: that service's titles, in the order and type the collection's name gives.
+const serviceKey=v=>String(v||'').toLowerCase().replace(/\bplus\b/g,'+').replace(/[^a-z0-9+]/g,'');
+const serviceAliases={max:'1899',hbo:'1899',amazonprimevideo:'9',amazonprime:'9',prime:'9',appletv:'350',disney:'337',paramount:'531'};
+const serviceID=v=>services.find(x=>serviceKey(x.title)===serviceKey(v))?.id||serviceAliases[serviceKey(v)];
+function serverCollection(p,folderTitle,notes){
+ const collection=text(p.collectionName).replace(/[:\s]+$/,''),id=serviceID(folderTitle)||serviceID(collection);
+ if(!id){notes.serverDropped++;return null;}
+ notes.serverRebuilt++;
+ const contentType=/\b(series|shows?|tv|serie|séries|serien)\b/i.test(collection)?'shows':/\b(films?|movies?|pel[ií]culas?|filme)\b/i.test(collection)?'movies':'both';
+ const filters={contentType};if(/\b(new|newest|latest|recent|nieuw\w*|neu\w*|nouveau\w*|nuev\w*)\b/i.test(collection))filters.sortOrder='newest';
+ return {title:collection,provider:'cedar',cedar:{dataSource:{kind:'preferredMetadata',parameters:{}},query:{kind:'streamingProvider',identifier:id,parameters:{}},filters}};
+}
 const shelfFeeds={trending:'trending',popular:'popular',top_rated:'topRated',upcoming:'upcoming',now_playing:'nowPlaying',airing_today:'airingToday',on_the_air:'onTheAir'};
 /** MDBList serves anonymous lists by owner and slug, and its slugs are made from the list's name. */
 export const mdbListSlug=name=>String(name||'').toLowerCase().replace(/['’]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
@@ -187,6 +200,7 @@ function shelfSource(entry,folderTitle,notes){
   notes.mdbList++;
   return built(p.listName,{kind:'trackingService',identifier:'mdblist-public',parameters:{}},{kind:'curatedList',identifier:`${owner}|${slug}`,parameters:listID?{listID}:{}},shelfContent(p.mediatype));
  }
+ if(kind==='mediaServer')return serverCollection(p,folderTitle,notes);
  if(kind==='continueWatching')return built('Continue Watching',{kind:'local',parameters:{}},{kind:'continueWatching',parameters:{}});
  if(/watchlist$/i.test(kind))return built('Watchlist',{kind:'trackingService',parameters:{}},{kind:'watchlist',parameters:{}});
  if(kind==='tmdbCatalog'){
@@ -201,25 +215,28 @@ function shelfSource(entry,folderTitle,notes){
  return {title:kind||'Unknown source',provider:kind||'unknown'};
 }
 function parseShelves(data){
- const rows=[],notes={excluded:0,mdbList:0},rowIDs=new Set();
- const shelves=data.map((r,i)=>({r,i})).sort((a,b)=>(Number.isFinite(a.r.sortOrder)?a.r.sortOrder:a.i)-(Number.isFinite(b.r.sortOrder)?b.r.sortOrder:b.i)).map(x=>x.r);
+ const rows=[],notes={excluded:0,mdbList:0,serverRebuilt:0,serverDropped:0},rowIDs=new Set();
+ const shelves=(Array.isArray(data?.shelves)?data.shelves:data).map((r,i)=>({r,i})).sort((a,b)=>(Number.isFinite(a.r.sortOrder)?a.r.sortOrder:a.i)-(Number.isFinite(b.r.sortOrder)?b.r.sortOrder:b.i)).map(x=>x.r);
  for(const shelf of shelves){
   const kind=one(shelf.source),title=name(shelf.title,'Imported branch');let id=text(shelf.id,uid());if(rowIDs.has(id))id=uid();rowIDs.add(id);
   if(kind==='group'){
    const group=payload(shelf.source.group),g={...makeGroup(name(shelf.title||group.title,'Imported group')),id,enabled:shelf.isEnabled!==false},childIDs=new Set();
    g.branches=(Array.isArray(group.contentSources)?group.contentSources:[]).filter(obj).map(c=>{
-    const b={id:text(c.id,uid()),title:name(c.title,'Untitled branch'),enabled:c.enabled!==false,sources:(Array.isArray(c.sources)?c.sources:[]).filter(obj).map((s,i)=>({id:`${one(s)||'source'}.${i}`,...shelfSource(s,c.title||'',notes)}))};
+    const b={id:text(c.id,uid()),title:name(c.title,'Untitled branch'),enabled:c.enabled!==false,sources:(Array.isArray(c.sources)?c.sources:[]).filter(obj).map((s,i)=>{const r=shelfSource(s,c.title||'',notes);return r&&{id:`${one(s)||'source'}.${i}`,...r};}).filter(Boolean)};
     if(childIDs.has(b.id))b.id=uid();childIDs.add(b.id);
     const cover=safeArtworkURL(c.coverImageURL),backdrop=safeArtworkURL(c.backgroundImageURL),shape=shelfShape(c.tileShape??group.tileShape);
     if(cover)b.coverImageUrl=cover;if(backdrop)b.heroBackdropUrl=backdrop;if(shape)b.tileShape=shape;if(c.hideTitle===true&&cover)b.hidesTitle=true;
     return b;});
    rows.push(g);
   }else{
-   const s=shelfSource(shelf.source,title,notes),row={id,kind:'branch',title,enabled:shelf.isEnabled!==false,source:{id:`${kind||'source'}.0`,...s,title:s.title||title}},style=shelfRowStyle(shelf.style);
+   const s=shelfSource(shelf.source,title,notes);if(!s)continue;
+   const row={id,kind:'branch',title,enabled:shelf.isEnabled!==false,source:{id:`${kind||'source'}.0`,...s,title:s.title||title}},style=shelfRowStyle(shelf.style);
    if(style)row.rowStyle=style;rows.push(row);
   }
  }
  const draft=validateDraft({version:2,title:'Imported Home',rows}),issues=sourceIssues(draft);
+ if(notes.serverRebuilt)issues.push(`${notes.serverRebuilt} media server ${notes.serverRebuilt===1?'collection was':'collections were'} rebuilt from TMDB as titles on the streaming service ${notes.serverRebuilt===1?'its folder is':'their folders are'} named after. A server’s collections only work on that server.`);
+ if(notes.serverDropped)issues.push(`${notes.serverDropped} media server ${notes.serverDropped===1?'collection was':'collections were'} left out because ${notes.serverDropped===1?'it isn’t':'they aren’t'} named after a streaming service. Add server collections in Cedar.`);
  if(notes.excluded)issues.push(`${notes.excluded} discover ${notes.excluded===1?'source excludes':'sources exclude'} genres or keywords. Cedar doesn’t filter by exclusion, so those titles can appear.`);
  if(notes.mdbList)issues.push(`${notes.mdbList} MDBList ${notes.mdbList===1?'list is':'lists are'} matched by name. If one shows nothing in Cedar, paste its MDBList link into that Branch.`);
  return {draft,issues,format:'Home shelf export',ties:[]};
