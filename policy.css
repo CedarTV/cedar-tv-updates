@@ -296,6 +296,10 @@ h1 {
 
 .release-card .inline-document-link { margin-top: auto; padding-top: 24px; }
 .release-card .inline-document-link + .inline-document-link { margin-top: 0; padding-top: 10px; }
+.release-card-aside { margin: 12px 0 0; color: var(--muted); font-size: 0.82rem; line-height: 1.5; }
+.release-card-links { margin: auto 0 0; padding-top: 24px; color: var(--muted); font-size: 0.95rem; font-weight: 600; }
+.release-card-links a { color: var(--cedar); text-decoration: none; }
+.release-card-links + .inline-document-link { margin-top: 0; padding-top: 10px; }
 
 .release-metadata {
   display: flex;
