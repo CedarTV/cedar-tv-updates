@@ -1,12 +1,68 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled October 29, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
+Compiled October 31, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 80 · 2026-10-31
+
+October 31, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Cedar Server — pair Cedar with the free Cedar Server container on a NAS, mini PC or Raspberry Pi. Cedar sends it your Live TV sources and guides, and recordings run with every app closed.
+- Recordings — a new Recordings page with Recording Now, Recent and a Shows grid, plus a Recordings Branch in Library. Watch Live joins a recording in progress just behind live.
+- Watch Together — on a FaceTime call, play a title for everyone and keep it in sync. Pick the name others see in Settings › Playback.
+- Trailer previews — add a trailer Tobacco Tie such as Trailerio and trailers play muted behind the Home hero, with a mute button.
+- Apple control layout — choose Apple in Settings › Playback › Player Controls › Control Layout for large glass buttons, a volume control, and Info, Episodes and Continue Watching pills.
+
+#### Home and Search
+
+- People in Search — Search shows actors and directors in their own rail. It’s hidden on Kids profiles.
+- Search results — up to 40 results with exact title matches first, so regional versions of a show are no longer cut off.
+- Branch Group art — Portrait and Square Branch Groups show service and studio artwork with the logo, and portraits for people, instead of cropped lettering.
+- Long seasons — seasons with more than 150 episodes split into 100-episode ranges you can jump between.
+- Reset Progress — cards with a partial progress bar offer Reset Progress. Your watch history stays.
+
+#### Playback and sources
+
+- Source Settings — requirements now apply in Automatic mode too, resolutions and release types are single menus, and the Sorting Preset offers Custom.
+- Start Streams Early — replaces the old preload option and also warms the stream saved by Reuse Last Link.
+- Seeking — the timeline jumps to where you seeked and shows a spinner straight away, and repeated skips add up.
+
+#### Live TV and DVR
+
+- Recordable Sources — choose which Live TV sources Cedar Server can record from.
+- Refresh Progress — Settings › Notifications can hide the source and guide refresh pop-up on this device. Failed refreshes still show.
+
+#### Connections and tracking
+
+- Silo playback — Silo servers play their copies, with progress and watched state kept in sync both ways.
+- Requests — Seerr gains Quick Connect and a Requested state that avoids duplicate requests. Silo servers can take requests too.
+- Tobacco Tie switches — each installed Tobacco Tie has an on/off switch in Settings, so you can keep it without using it.
+- Catalog links — AIOMetadata and other catalog links load whole catalogs, import anime lists and answer Search.
+- MDBList — the Upcoming calendar fills again, and episodes released today show Out Today.
+
+#### Fixes
+
+- Seerr sign-in works again.
+- A phone call no longer leaves the movie frozen when you return.
+- 4K60 and HDR live channels no longer stall, and live HEVC uses hardware decoding.
+- Branches inside folders no longer reload when you scroll back to them.
+- Streaming folder Branches with nothing to show are hidden instead of saying No Titles.
+- Subtitle libraries include FreeType, FriBidi and HarfBuzz security fixes.
+
+#### Known issues
+
+- Picture adjustments don’t apply to 4K60 or HDR live channels, so those channels keep playing smoothly.
+- The player’s episode list still shows long seasons in full. Use the title page to jump by range.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-80/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-80)
 
 ### 1.0.0 · build 79 · 2026-10-29
 
@@ -1177,6 +1233,63 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 80 · 2026-10-31
+
+October 31, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Cedar Server — pair Cedar with the free Cedar Server container on a NAS, mini PC or Raspberry Pi. Cedar sends it your Live TV sources and guides, and recordings run with every app closed.
+- Recordings — a new Recordings page with Recording Now, Recent and a Shows grid, plus a Recordings Branch in Library. Watch Live joins a recording in progress just behind live.
+- Watch Together — on a FaceTime call, play a title for everyone and keep it in sync. Pick the name others see in Settings › Playback.
+- Trailer previews — add a trailer Tobacco Tie such as Trailerio and trailers play muted behind the Home hero, with a mute button.
+- Apple control layout — choose Apple in Settings › Playback › Player Controls › Control Layout for large glass buttons, a volume control, and Info, Episodes and Continue Watching pills.
+
+#### Home and Search
+
+- People in Search — Search shows actors and directors in their own rail. It’s hidden on Kids profiles.
+- Search results — up to 40 results with exact title matches first, so regional versions of a show are no longer cut off.
+- Search rails — results scroll sideways in rails instead of a tall grid.
+- Branch Group art — Portrait and Square Branch Groups show service and studio artwork with the logo, and portraits for people, instead of cropped lettering.
+- Long seasons — seasons with more than 150 episodes split into 100-episode ranges you can jump between.
+- Reset Progress — cards with a partial progress bar offer Reset Progress. Your watch history stays.
+
+#### Playback and sources
+
+- Source Settings — requirements now apply in Automatic mode too, resolutions and release types are single menus, and the Sorting Preset offers Custom.
+- Start Streams Early — replaces the old preload option and also warms the stream saved by Reuse Last Link.
+- Seeking — the timeline jumps to where you seeked and shows a spinner straight away, and repeated skips add up.
+
+#### Live TV and DVR
+
+- Recordable Sources — choose which Live TV sources Cedar Server can record from.
+- Refresh Progress — Settings › Notifications can hide the source and guide refresh pop-up on this device. Failed refreshes still show.
+
+#### Connections and tracking
+
+- Silo playback — Silo servers play their copies, with progress and watched state kept in sync both ways.
+- Requests — Seerr gains Quick Connect and a Requested state that avoids duplicate requests. Silo servers can take requests too.
+- Tobacco Tie switches — each installed Tobacco Tie has an on/off switch in Settings, so you can keep it without using it.
+- Catalog links — AIOMetadata and other catalog links load whole catalogs, import anime lists and answer Search.
+- MDBList — the Upcoming calendar fills again, and episodes released today show Out Today.
+
+#### Fixes
+
+- Seerr sign-in works again.
+- A phone call no longer leaves the movie frozen when you return.
+- 4K60 and HDR live channels no longer stall, and live HEVC uses hardware decoding.
+- Branches inside folders no longer reload when you scroll back to them.
+- Streaming folder Branches with nothing to show are hidden instead of saying No Titles.
+- Subtitle libraries include FreeType, FriBidi and HarfBuzz security fixes.
+
+#### Known issues
+
+- Picture adjustments don’t apply to 4K60 or HDR live channels, so those channels keep playing smoothly.
+- The player’s episode list still shows long seasons in full. Use the title page to jump by range.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-80/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-80)
 
 ### 1.0.0 · build 79 · 2026-10-29
 
@@ -2356,6 +2469,60 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 80 · 2026-10-31
+
+October 31, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Cedar Server — pair Cedar with the free Cedar Server container on a NAS, mini PC or Raspberry Pi. Cedar sends it your Live TV sources and guides, and recordings run with every app closed.
+- Recordings — a new Recordings page with Recording Now, Recent and a Shows grid, plus a Recordings Branch in Library. Watch Live joins a recording in progress just behind live.
+- Watch Together — on a FaceTime call, play a title for everyone and keep it in sync. Pick the name others see in Settings › Playback.
+- Trailer previews — add a trailer Tobacco Tie such as Trailerio and trailers play muted behind the Home hero, with a mute button.
+
+#### Home and Search
+
+- People in Search — Search shows actors and directors in their own rail. It’s hidden on Kids profiles.
+- Search results — up to 40 results with exact title matches first, so regional versions of a show are no longer cut off.
+- Branch Group art — Portrait and Square Branch Groups show service and studio artwork with the logo, and portraits for people, instead of cropped lettering.
+- Long seasons — seasons with more than 150 episodes split into 100-episode ranges you can jump between.
+- Reset Progress — cards with a partial progress bar offer Reset Progress. Your watch history stays.
+- Read Synopsis from the hero — hold Select on the hero’s Go to button and choose Read Synopsis.
+
+#### Playback and sources
+
+- Source Settings — requirements now apply in Automatic mode too, resolutions and release types are single menus, and the Sorting Preset offers Custom.
+- Start Streams Early — replaces the old preload option and also warms the stream saved by Reuse Last Link.
+- Seeking — the timeline jumps to where you seeked and shows a spinner straight away, and repeated skips add up.
+
+#### Live TV and DVR
+
+- Recordable Sources — choose which Live TV sources Cedar Server can record from.
+- Refresh Progress — Settings › Notifications can hide the source and guide refresh pop-up on this device. Failed refreshes still show.
+
+#### Connections and tracking
+
+- Silo playback — Silo servers play their copies, with progress and watched state kept in sync both ways.
+- Requests — Seerr gains Quick Connect and a Requested state that avoids duplicate requests. Silo servers can take requests too.
+- Catalog links — AIOMetadata and other catalog links load whole catalogs, import anime lists and answer Search.
+- MDBList — the Upcoming calendar fills again, and episodes released today show Out Today.
+
+#### Fixes
+
+- Seerr sign-in works again.
+- 4K60 and HDR live channels no longer stall, and live HEVC uses hardware decoding.
+- Branches inside folders no longer reload when you scroll back to them.
+- Streaming folder Branches with nothing to show are hidden instead of saying No Titles.
+- Subtitle libraries include FreeType, FriBidi and HarfBuzz security fixes.
+
+#### Known issues
+
+- Picture adjustments don’t apply to 4K60 or HDR live channels, so those channels keep playing smoothly.
+- The player’s episode list still shows long seasons in full. Use the title page to jump by range.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-80/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-80)
+
 ### 1.0.0 · build 79 · 2026-10-29
 
 October 29, 2026 · Released to External TestFlight for Apple TV.
@@ -3423,6 +3590,63 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 80 · 2026-10-31
+
+October 31, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Recordings — a new Recordings page with Recording Now, Recent and a Shows grid, plus a Recordings Branch in Library. Watch Live joins a recording in progress just behind live.
+- Watch Together — on a FaceTime call, play a title for everyone and keep it in sync. Pick the name others see in Settings › Playback.
+- Trailer previews — add a trailer Tobacco Tie such as Trailerio and trailers play muted behind the Home hero, with a mute button.
+
+#### Home and Search
+
+- People in Search — Search shows actors and directors in their own rail. It’s hidden on Kids profiles.
+- Search results — up to 40 results with exact title matches first, so regional versions of a show are no longer cut off.
+- Search rails — results scroll sideways in rails instead of a tall grid.
+- Branch Group art — Portrait and Square Branch Groups show service and studio artwork with the logo, and portraits for people, instead of cropped lettering.
+- Long seasons — seasons with more than 150 episodes split into 100-episode ranges you can jump between.
+- Reset Progress — cards with a partial progress bar offer Reset Progress. Your watch history stays.
+- Mac hover previews — rest the pointer on a poster to see its trailer in a floating card.
+
+#### Playback and sources
+
+- Source Settings — requirements now apply in Automatic mode too, resolutions and release types are single menus, and the Sorting Preset offers Custom.
+- Start Streams Early — replaces the old preload option and also warms the stream saved by Reuse Last Link.
+- Seeking — the timeline jumps to where you seeked and shows a spinner straight away, and repeated skips add up.
+- Player polish — the Next Episode pill stays at the bottom and the post-play tile shows only the video.
+
+#### Live TV and DVR
+
+- Refresh Progress — Settings › Notifications can hide the source and guide refresh pop-up on this device. Failed refreshes still show.
+
+#### Connections and tracking
+
+- Silo playback — Silo servers play their copies, with progress and watched state kept in sync both ways.
+- Requests — Seerr gains Quick Connect and a Requested state that avoids duplicate requests. Silo servers can take requests too.
+- Tobacco Tie switches — each installed Tobacco Tie has an on/off switch in Settings, so you can keep it without using it.
+- Catalog links — AIOMetadata and other catalog links load whole catalogs, import anime lists and answer Search.
+- MDBList — the Upcoming calendar fills again, and episodes released today show Out Today.
+
+#### Fixes
+
+- Seerr sign-in works again.
+- 4K60 and HDR live channels no longer stall, and live HEVC uses hardware decoding.
+- Branches inside folders no longer reload when you scroll back to them.
+- Streaming folder Branches with nothing to show are hidden instead of saying No Titles.
+- Subtitle language menus in the player no longer flicker.
+- Subtitle libraries include FreeType, FriBidi and HarfBuzz security fixes.
+
+#### Known issues
+
+- Picture adjustments don’t apply to 4K60 or HDR live channels, so those channels keep playing smoothly.
+- The player’s episode list still shows long seasons in full. Use the title page to jump by range.
+- Cedar for Mac can host its own Home DVR but can’t use Cedar Server yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-80/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-80)
 
 ### 1.0.0 · build 79 · 2026-10-29
 
