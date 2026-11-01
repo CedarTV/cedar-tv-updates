@@ -1,4 +1,5 @@
-// Posts bug reports and feature requests to the Cedar feedback inbox. Nothing is stored in the browser.
+// Sends bug reports and feature requests to the Cedar feedback service, which posts them in the Cedar
+// Discord's public forums. Staff-only details and the email stay private. Nothing is stored in the browser.
 const ENDPOINT = "https://cedar-feedback.cedar-feedback.workers.dev/v1/feedback";
 
 const form = document.querySelector("[data-feedback-form]");
@@ -13,6 +14,7 @@ const errorMessages = {
   invalid_platform: "Choose which app this is about.",
   invalid_app_version: "The app version should look like 1.0.0 (80).",
   invalid_contact: "That email address doesn’t look right.",
+  invalid_staff_only: "Shorten the staff-only details to 1,000 characters.",
   rate_limited: "That was quick. Wait a minute, then try again.",
   daily_limit_reached: "You’ve sent a lot today. Please try again tomorrow.",
 };
@@ -60,7 +62,9 @@ form.addEventListener("submit", async (event) => {
     title: value("title"),
     details: value("details"),
     elapsedMs: Date.now() - openedAt,
+    publicPost: true,
   };
+  if (value("staffOnly")) payload.staffOnly = value("staffOnly");
   if (value("appVersion")) payload.appVersion = value("appVersion");
   if (value("contact")) payload.contact = value("contact");
   if (form.elements.website.value) payload.website = form.elements.website.value;
@@ -82,6 +86,10 @@ form.addEventListener("submit", async (event) => {
     statusLine.textContent = "";
     form.hidden = true;
     done.querySelector("[data-feedback-reference]").textContent = result.reference ?? "";
+    // Only a Discord link from the service is offered as the post.
+    const post = typeof result.postURL === "string" && result.postURL.startsWith("https://discord.com/channels/") ? result.postURL : null;
+    done.querySelector("[data-feedback-post]").hidden = !post;
+    if (post) done.querySelector("[data-feedback-post-link]").href = post;
     done.hidden = false;
     done.focus();
   } catch (error) {

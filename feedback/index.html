@@ -53,7 +53,7 @@
         <header class="document-header">
           <p class="eyebrow">Send feedback</p>
           <h1>Tell us what broke, or what you’d like.</h1>
-          <p>Every report is read. Reports that become part of the plan show up on the <a class="inline-document-link" href="/cedar-tv-updates/roadmap/">roadmap</a>, worded so nothing personal is shared.</p>
+          <p>Every report is read, and posted without your name in the bugs or feature-requests forum of the <a class="inline-document-link" href="https://discord.gg/FDjx57bjdE">Cedar Discord</a>, so others can add to it and you can follow it.</p>
         </header>
 
         <form class="feedback-form" data-feedback-form novalidate hidden>
@@ -86,7 +86,13 @@
           <label class="feedback-field">
             <span data-kind-label-bug="What happened, and what did you expect?" data-kind-label-feature="What would you like, and how would you use it?">What happened, and what did you expect?</span>
             <textarea name="details" rows="7" minlength="10" maxlength="4000" required></textarea>
-            <small>Don’t include passwords, playlist or provider addresses, or other private details.</small>
+            <small>Posted publicly in the Cedar Discord. Don’t include passwords, playlist or provider addresses, or other private details.</small>
+          </label>
+
+          <label class="feedback-field">
+            <span>Staff-only details <em>(optional)</em></span>
+            <textarea name="staffOnly" rows="3" maxlength="1000"></textarea>
+            <small>Only Cedar staff see this, never the public post. No passwords, please.</small>
           </label>
 
           <div class="feedback-row">
@@ -98,7 +104,7 @@
             <label class="feedback-field">
               <span>Email <em>(optional)</em></span>
               <input name="contact" type="email" maxlength="254" autocomplete="email">
-              <small>Only if you’re happy to be asked a follow-up question. It’s deleted once your report is reviewed.</small>
+              <small>Private. Only if you’re happy to be asked a follow-up question. It’s deleted once your report is reviewed.</small>
             </label>
           </div>
 
@@ -114,6 +120,7 @@
         <section class="feedback-done" data-feedback-done hidden tabindex="-1">
           <h2>Thanks, it’s on its way.</h2>
           <p>Your reference is <strong data-feedback-reference></strong>. Mention it if you follow up on Discord.</p>
+          <p data-feedback-post hidden><a class="inline-action" data-feedback-post-link href="https://discord.gg/FDjx57bjdE">See your post in Discord</a></p>
           <p><button class="secondary-action" type="button" data-feedback-again>Send something else</button></p>
         </section>
 
