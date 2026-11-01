@@ -1,5 +1,5 @@
 // Sends bug reports and feature requests to the Cedar feedback service, which posts them in the Cedar
-// Discord's public forums. Staff-only details and the email stay private. Nothing is stored in the browser.
+// Discord's public forums. Staff-only details stay private. Nothing is stored in the browser.
 const ENDPOINT = "https://cedar-feedback.cedar-feedback.workers.dev/v1/feedback";
 
 const form = document.querySelector("[data-feedback-form]");
@@ -13,7 +13,6 @@ const errorMessages = {
   invalid_details: "Add a few more details (at least 10 characters).",
   invalid_platform: "Choose which app this is about.",
   invalid_app_version: "The app version should look like 1.0.0 (80).",
-  invalid_contact: "That email address doesn’t look right.",
   invalid_staff_only: "Shorten the staff-only details to 1,000 characters.",
   rate_limited: "That was quick. Wait a minute, then try again.",
   daily_limit_reached: "You’ve sent a lot today. Please try again tomorrow.",
@@ -27,11 +26,10 @@ const syncKind = () => {
 };
 
 const localProblem = () => {
-  const { platform, title, details, contact } = form.elements;
+  const { platform, title, details } = form.elements;
   if (!platform.value) return [platform, errorMessages.invalid_platform];
   if (title.value.trim().length < 3) return [title, errorMessages.invalid_title];
   if (details.value.trim().length < 10) return [details, errorMessages.invalid_details];
-  if (contact.value.trim() && !contact.validity.valid) return [contact, errorMessages.invalid_contact];
   return null;
 };
 
@@ -66,7 +64,6 @@ form.addEventListener("submit", async (event) => {
   };
   if (value("staffOnly")) payload.staffOnly = value("staffOnly");
   if (value("appVersion")) payload.appVersion = value("appVersion");
-  if (value("contact")) payload.contact = value("contact");
   if (form.elements.website.value) payload.website = form.elements.website.value;
 
   submitButton.disabled = true;
