@@ -1,0 +1,10 @@
+.document-grid.server-guide { grid-template-columns: minmax(0, 1fr); max-width: 860px; }
+.server-guide code { padding: 0.1em 0.35em; border-radius: 5px; background: var(--surface-raised); font: 0.9em/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+.server-guide pre { margin: 14px 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); overflow-x: auto; }
+.server-guide pre code { padding: 0; background: none; font-size: 0.85rem; white-space: pre; overflow-wrap: normal; }
+.server-table { overflow-x: auto; }
+.server-table table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.server-table th, .server-table td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.server-table th { color: var(--muted); font-weight: 650; }
+.server-table td:first-child { white-space: nowrap; }
+.server-guide ul + p, .server-guide ol + p { margin-top: 14px; }

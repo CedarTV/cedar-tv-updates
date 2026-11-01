@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- Unraid template for Cedar Server. Published at https://cedartv.github.io/cedar-tv-updates/server/cedar-server.xml -->
+<Container version="2">
+  <Name>cedar-server</Name>
+  <Repository>ghcr.io/cedartv/cedar-server:1</Repository>
+  <Registry>https://github.com/users/CedarTV/packages/container/package/cedar-server</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://cedartv.github.io/cedar-tv-updates/support/</Support>
+  <Project>https://cedartv.github.io/cedar-tv-updates/server/</Project>
+  <Overview>Cedar Server is the Cedar Home DVR without a Mac. Pair Cedar on iPhone, iPad or Apple TV with it to record Live TV from your M3U, Xtream or Stalker sources and watch the recordings on any paired device. The pairing code is in the container log.</Overview>
+  <Category>MediaServer:Video</Category>
+  <WebUI>http://[IP]:[PORT:8984]/</WebUI>
+  <Icon>https://cedartv.github.io/cedar-tv-updates/assets/cedar-app-icon.png</Icon>
+  <Config Name="Port" Target="8984" Default="8984" Mode="tcp" Description="Enter this port in Cedar when pairing." Type="Port" Display="always" Required="true" Mask="false">8984</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cedar-server" Mode="rw" Description="Pairings, schedules, sources and guide. Back this up." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cedar-server</Config>
+  <Config Name="Recordings" Target="/recordings" Default="/mnt/user/recordings" Mode="rw" Description="Where recordings are saved. HD recordings take about 3-6 GB an hour." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/recordings</Config>
+  <Config Name="Server name" Target="CEDAR_SERVER_NAME" Default="Cedar Server" Mode="" Description="Shown in Cedar." Type="Variable" Display="always" Required="false" Mask="false">Cedar Server</Config>
+  <Config Name="Simultaneous recordings" Target="CEDAR_MAX_RECORDINGS" Default="2" Mode="" Description="1 to 8. Keep within your provider's connection limit." Type="Variable" Display="always" Required="false" Mask="false">2</Config>
+  <Config Name="Away-from-home address" Target="CEDAR_REMOTE_URL" Default="" Mode="" Description="Optional https:// address for use away from home, such as a Tailscale serve name." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="User that owns the folders (nobody)." Type="Variable" Display="advanced" Required="true" Mask="false">99</Config>
+  <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Group that owns the folders (users)." Type="Variable" Display="advanced" Required="true" Mask="false">100</Config>
+</Container>
