@@ -319,6 +319,10 @@ h1 {
 
 .release-status-released { color: var(--cedar-bright); }
 .release-status-testflight { color: #c9d8ff; }
+.release-status-preview { color: #ffd39b; }
+.beta-callout { margin: 16px 0 20px; padding: 20px 24px; border-color: rgba(220, 160, 80, 0.45); }
+.beta-callout h2 { margin-bottom: 6px; font-size: 1.15rem; }
+.beta-callout p { margin: 0; }
 .compact-callout { margin-bottom: 0; }
 
 /* Shared by the visual release notes cover and the release hub spotlight. */

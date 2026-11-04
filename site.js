@@ -60,6 +60,7 @@ const statusLabels = new Map([
   ["release-candidate", "Coming soon"],
   ["testflight", "Public beta"],
   ["released", "Available now"],
+  ["preview", "Early beta"],
 ]);
 
 const applyPlatformReleases = (catalog) => {
@@ -67,7 +68,7 @@ const applyPlatformReleases = (catalog) => {
   const releases = new Map(catalog.platforms.map((release) => [release.id, release]));
   // Android TV cards describe the current Cedar app, which the catalog lists as its newer line.
   const current = Array.isArray(catalog.previews) ? catalog.previews.find((release) => release.id === "android-tv-preview") : null;
-  if (current) releases.set("android-tv", { ...current, id: "android-tv", status: "released" });
+  if (current) releases.set("android-tv", { ...current, id: "android-tv", status: "preview" });
 
   document.querySelectorAll("[data-platform-version]").forEach((node) => {
     const release = releases.get(node.dataset.platformVersion);

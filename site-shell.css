@@ -115,6 +115,7 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 [data-theme="light"] :is(.compatibility, .proof-strip a, .proof-strip span, .platform-release, .caption-number, .feature-index, .release-meta, .install-note) { color: var(--muted); }
 [data-theme="light"] :is(.orbit-tv, .orbit-profile, .release-card) { background: var(--surface); }
 [data-theme="light"] .release-status-testflight { color: #334d88; }
+[data-theme="light"] .release-status-preview { color: #7a4a0c; }
 [data-theme="light"] .release-card :is(p, time), [data-theme="light"] .release-metadata { color: var(--muted); }
 [data-theme="light"] .creator-shell :is(input, select, .artwork-choice) { color: var(--text); background: var(--surface); border-color: var(--control-border); }
 [data-theme="light"] .artwork-choice[aria-pressed="true"], [data-theme="light"] .selection { background: #e3eadc; border-color: var(--cedar); }
@@ -130,6 +131,8 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 [data-theme="light"] .release-entry, [data-theme="light"] .privacy-points p { background: var(--surface); }
 [data-theme="light"] .privacy-points p { color: var(--text); }
 [data-theme="light"] .inline-action:hover { color: #fff; }
+[data-theme="light"] .release-spotlight .inline-action { color: #0c100b; }
+[data-theme="light"] .release-spotlight .inline-action:hover { color: #0c100b; background: #ffffff; }
 
 /* Readable secondary copy and distinguishable controls in either theme. */
 :is(.compatibility, .proof-strip a, .proof-strip span, .platform-release, .caption-number, .feature-index, .release-meta, .install-note) { color: var(--muted); }
@@ -147,7 +150,8 @@ header.cedar-header button.cedar-menu-toggle { align-items: center; gap: 8px; mi
 [data-theme="light"] .noscript-note { color: #a12c23; }
 [data-theme="light"] :is(.button-secondary, .platform-card):hover { border-color: var(--cedar); }
 [data-theme="light"] .status-pill { color: #2f5a1f; background: #e3eedb; border-color: #a9c49a; }
-[data-theme="light"] .status-pill[data-status="testflight"] { color: #7a4a0c; background: #f8ead2; border-color: #dcb57a; }
+[data-theme="light"] .status-pill[data-status="testflight"],
+[data-theme="light"] .status-pill[data-status="preview"] { color: #7a4a0c; background: #f8ead2; border-color: #dcb57a; }
 [data-theme="light"] .status-pill[data-status="release-candidate"] { color: var(--muted); background: var(--surface-raised); border-color: var(--line); }
 [data-theme="light"] .install-help code { background: var(--surface-raised); }
 [data-theme="light"] .platform-action { background: var(--surface); }
