@@ -5,13 +5,13 @@
       "id": "android-tv-preview",
       "platform": "android-tv",
       "name": "New Cedar app for Android TV",
-      "version": "1.4.1",
-      "build": "11",
-      "date": "2026-10-25",
+      "version": "1.0.0",
+      "build": "12",
+      "date": "2026-11-04",
       "status": "preview",
-      "summary": "Bug fixes and improvements.",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-4-1-build-11",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.4.1/Cedar-TV-1.4.1.apk"
+      "summary": "A fresh early beta line with a new look that matches Apple TV, Viewing Stats, Live TV Branches, Follow people and When Resuming.",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-12",
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0/Cedar-TV-1.0.0.apk"
     }
   ],
   "platforms": [

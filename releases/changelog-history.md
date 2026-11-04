@@ -4720,6 +4720,77 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Android TV, Google TV and Fire TV
 
+### 1.0.0 · build 12 · 2026-11-04 · early beta
+
+November 4, 2026 · Early beta for Android TV and Google TV.
+
+Cedar for Android TV starts a fresh beta line at 1.0.0. It replaces 1.4.1, brings Android much closer to Apple TV, and reworks the look throughout.
+
+#### Highlights
+
+- New look — Settings, Explore, Library, Sources and detail pages are redesigned to match Apple TV.
+- Viewing Stats — see your watching in numbers. Experimental.
+- Live TV Branches — put live channels and what is on now on Home.
+- Follow people — follow actors and directors, and their work gathers in Your People folders on Home.
+- When Resuming — choose Ask, Always Resume or Always Start Over. Always Resume is the default. Requested by pH_low on Discord.
+
+#### Home and Branches
+
+- Branch Shuffle — shuffle a Branch, then Shuffle Again for a new order. Requested by JamminJerome on Discord.
+- Branch Titles — show titles on two lines, one line, or hide them.
+- Branch import review — check Branches before they are added from a file.
+- Empty Branches — Branches that load nothing are left out of folder pages.
+- Drop Show — drop a series from Next Up cards, whichever tracker you use.
+- Only Show Titles I Can Play — Search and Explore leave out titles your playlists and libraries don't have.
+- Search People — actors and directors appear in search results.
+
+#### Posters and appearance
+
+- Theme styles — Cyber and Halloween.
+- Country flags and sport icons — show or hide them on live channel names.
+- Spectrum badges — Cedar's built-in quality badges for the player.
+- Landscape artwork — each card loads one image, so Branches fill in faster.
+- Ratings — scores of 0.0 are hidden.
+
+#### Playback
+
+- Arrange player controls — put each player control in the top bar, bottom bar or options, or hide it.
+- Picture adjustments — brightness, contrast, saturation and gamma, with presets such as Cinema, Sports and Anime. Experimental. Requested by lionel on Discord.
+- Reuse Last Link — play the stream that worked last time for a title.
+- Refresh Progress — turn off the progress refresh pop-up.
+
+#### Sources and Live TV
+
+- IPTV playlist icons — playlists show their own icon, and titles show Playlist Availability badges.
+- Sports channel matching — the guide matches sports channels more accurately.
+- Long seasons — seasons with more than 150 episodes are split into ranges of 100.
+- MDBList calendars — calendar lists load, and Out Today uses the release date.
+
+#### Feedback
+
+- Send Feedback — post to the public tracker from Settings, with optional private diagnostics.
+- Requested — see the titles you have requested.
+
+#### Fixes
+
+- Holding Select no longer triggers the wrong action.
+- Up Next no longer jumps to the next episode early when an episode has wrong credits timing. Requested by Citharae on Discord.
+- Episodes that are only on your media server are no longer hidden when TMDB lists fewer.
+- Signing in to Jellyfin or Emby on one profile no longer signs out another.
+
+#### Not yet on Android
+
+- Cedar Tracking hub, Multiview layouts, Top 10 numbering and Match Logo colour.
+- Sports Branches in the shared editor, and hiding sports scores.
+- Stalker serial and device IDs, and the simplified poster menu.
+- Search Subtitles, and Infuse or external players for media server streams.
+- Surround Sound output.
+
+Update from Settings → Software Update, or install the APK over your current Cedar app from this release line. The original Cedar Android app (version 1.2.85) uses a separate package and does not receive this update.
+
+[Install Cedar 1.0.0](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0/Cedar-TV-1.0.0.apk) · [Full release notes](https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-12) · [Teletext decoder source](https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0/Cedar-Teletext-Source-1.0.0.tar.gz)
+
+
 ### 1.4.1 · build 11 · 2026-10-25 · public release
 
 October 25, 2026 · Public release for Android TV and Google TV.
