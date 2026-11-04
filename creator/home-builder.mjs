@@ -13,12 +13,12 @@ const button=(text,action,cls='text-button')=>{const b=el('button',cls,text);b.t
 const checkbox=(label,checked,action)=>{const c=el('input');c.type='checkbox';c.checked=checked;c.setAttribute('aria-label',label);c.addEventListener('change',()=>action(c.checked));return c;};
 const say=message=>{$('home-status').textContent=message;};
 const key='cedar-studio-home-v2';
-let draft={...newDraft(),rows:[]},selected=null,device='television',scope='shared',screen='home',titles='below',expanded=null,previewItem=null,nav=[],dragging=null,contentQuery='',contentLimit=40,pendingImport=null,importSource=null,importSelection=new Set(),preparedExport=null,preparedProfileIssues=[],importedTies=[],importedSetup=null,setupChoice=new Set();
+let draft={...newDraft(),rows:[]},selected=null,device=globalThis.matchMedia?.('(max-width: 520px)').matches?'phone':'television',scope='shared',screen='home',titles='below',expanded=null,previewItem=null,nav=[],dragging=null,contentQuery='',contentLimit=40,pendingImport=null,importSource=null,importSelection=new Set(),preparedExport=null,preparedProfileIssues=[],importedTies=[],importedSetup=null,setupChoice=new Set();
 const history=[],itemFiles=new Map(),itemLoads=new Map(),itemErrors=new Map();
 try{const raw=localStorage.getItem(key),legacy=localStorage.getItem('cedar-studio-draft-v1');if(raw)draft=validateDraft(JSON.parse(raw));else if(legacy){draft=parseImport(legacy).draft;say('Your earlier draft is ready as a Branch Group.');}selected=draft.rows[0]?.id;}catch{say('The saved draft could not be opened. Import a saved file or start with these branches.');}
 // Creator's old cart becomes picks on Your Home, once.
 try{const old=JSON.parse(localStorage.getItem('cedar-creator-cart')||'null');if(Array.isArray(old)){for(const e of old){if(e?.type==='avatar'&&isAvatarPath(e.id))draft.avatar??=e.id;else if(['setup','group'].includes(e?.type)){try{addPick(draft,e,e.id);}catch{}}}draft=validateDraft(draft);selected??=draft.rows[0]?.id;localStorage.setItem(key,JSON.stringify(draft));}localStorage.removeItem('cedar-creator-cart');}catch{}
-const listeners=new Set();let describePick=()=>null,describeAvatar=()=>null,describeBadgePack=()=>null,badgeImages=()=>[],openSetup=null,showTab=null;
+const listeners=new Set();let describePick=()=>null,describeAvatar=()=>null,describeBadgePack=()=>null,badgeImages=()=>[],openSetup=null,showTab=null,previewSteps=null,previewClosed=null,revealRow=null;
 const pickInfo=r=>describePick(r.item)||{title:r.title,detail:r.item.type==='setup'?'Creator setup':'Creator branch group',covers:[]};
 function save(){try{localStorage.setItem(key,JSON.stringify(validateDraft(draft)));$('save-state').textContent='Saved on this browser';}catch{$('save-state').textContent='Browser storage unavailable · Save a draft file';}}
 function change(action,message){const before=JSON.stringify(draft);try{action();draft=validateDraft(draft);history.push(before);if(history.length>5)history.shift();save();render();if(message)say(message);}catch(e){draft=JSON.parse(before);say(e.message);render();}}
@@ -26,7 +26,7 @@ function undo(){if(!history.length)return;draft=JSON.parse(history.pop());save()
 function row(){return draft.rows.find(r=>r.id===selected);}
 /** The title of the page a preview entry opens, for the back button. */
 function pageTitle(blocks,entry){const b=blocks.find(x=>x.id===entry.block)?.branches?.[entry.branch];return b&&entry.path.length?folderAt(b,entry.path)?.folder.title||b.title:b?.title||'Back';}
-function select(id,{reveal=false}={}){selected=id;expanded=id;nav=[];contentQuery='';contentLimit=40;render();if(reveal)document.querySelector(`#home-outline [data-id="${CSS.escape(id)}"]`)?.scrollIntoView({block:'center',behavior:'smooth'});else{const target=$('home-preview').querySelector('.preview-block.selected');if(target){const canvas=$('home-preview');canvas.scrollTop+=target.getBoundingClientRect().top-canvas.getBoundingClientRect().top-24;}}}
+function select(id,{reveal=false}={}){selected=id;expanded=id;nav=[];contentQuery='';contentLimit=40;render();if(reveal){revealRow?.();document.querySelector(`#home-outline [data-id="${CSS.escape(id)}"]`)?.scrollIntoView({block:'center',behavior:'smooth'});}else{const target=$('home-preview').querySelector('.preview-block.selected');if(target){const canvas=$('home-preview');canvas.scrollTop+=target.getBoundingClientRect().top-canvas.getBoundingClientRect().top-24;}}}
 /** Opens or closes a row's editor in the Home rows list. */
 function toggleRow(id){if(expanded===id){expanded=null;render();return;}select(id);}
 function segmented(options,value,action,label){const s=el('div','segmented');s.setAttribute('role','group');if(label)s.setAttribute('aria-label',label);for(const [v,t] of options){const b=button(t,()=>action(v),'');b.setAttribute('aria-pressed',String(v===value));s.append(b);}return s;}
@@ -55,15 +55,17 @@ function renderOutline(){const q=$('branch-search').value.toLowerCase(),list=$('
   const pick=button('',()=>toggleRow(r.id),'outline-select');pick.setAttribute('aria-expanded',String(open));pick.append(rowThumb(r),rowText(r.title,rowDetail(r)),el('span','chev',open?'▾':'▸'));
   const order=el('div','row-order');for(const [symbol,offset,word]of [['↑',-1,'up'],['↓',1,'down']]){const b=button(symbol,()=>{change(()=>moveItem(draft.rows,r.id,index+offset),'Home order updated.');[...document.querySelectorAll('[data-id]')].find(n=>n.dataset.id===r.id)?.querySelector('.outline-select')?.focus();});b.setAttribute('aria-label',`Move ${r.title} ${word}`);b.disabled=index+offset<0||index+offset>=draft.rows.length;order.append(b);}
   const show=checkbox(`Show ${r.title}`,r.enabled,v=>change(()=>r.enabled=v));show.className='switch';
-  li.append(el('span','drag-grip','⠿'),pick,order,show);if(open){li.append(editor);editor.hidden=false;}list.append(li);}
- if(!draft.rows.length)list.append(el('li','empty','Nothing here yet. Add a setup from the library, or build a Branch.'));}
+  li.append(el('span','drag-grip','⠿'),pick,order,show);if(open){li.append(rowSheet(r.title,editor));editor.hidden=false;}list.append(li);}
+ if(!draft.rows.length)list.append(el('li','empty','Nothing here yet. Add a setup from the library, or build a Branch.'));$('panel-home').dataset.sheet=list.querySelector('.row-sheet')?'open':'';}
+/** An open row's editor. Wide screens show it inline in the list; phones show it full screen with a Done button (workspace.css). */
+function rowSheet(title,editor){const sheet=el('div','row-sheet'),head=el('div','row-sheet-head');sheet.setAttribute('role','group');sheet.setAttribute('aria-label',`${title} options`);head.append(el('strong','',title),button('Done',()=>{expanded=null;render();},'button primary'));sheet.append(head,editor);return sheet;}
 /** The hero, pinned above every row: Cedar always shows it first. */
 function heroItem(){const open=expanded==='hero',h=draft.hero,li=el('li',`outline-row hero-row${open?' open':''}${h?'':' off'}`);li.dataset.id='hero';
  const pick=button('',()=>{expanded=open?null:'hero';render();},'outline-select');pick.setAttribute('aria-expanded',String(open));
  const thumb=el('span','outline-thumb hero-thumb'),art=heroArt()[0];if(h&&art)thumb.append(image(art,''));else thumb.textContent='★';
  pick.append(thumb,rowText('Hero',h?`${heroStyleNames[h.style]} · ${heroSourceName(draft)} · up to ${h.limit} ${h.limit===1?'title':'titles'}`:'Off · each viewer keeps the hero they already have'),el('span','chev',open?'▾':'▸'));
  const show=checkbox('Give this Home its own hero',!!h,v=>change(()=>{if(v)draft.hero=newHero();else delete draft.hero;expanded='hero';},v?'Hero on. Choose what it shows below.':'Hero off. Each viewer keeps their own.'));show.className='switch';
- li.append(el('span','drag-grip pinned','★'),pick,el('div','row-order'),show);if(open)li.append(heroEditor());return li;}
+ li.append(el('span','drag-grip pinned','★'),pick,el('div','row-order'),show);if(open)li.append(rowSheet('Hero',heroEditor()));return li;}
 function heroEditor(){const box=el('div','hero-editor'),h=draft.hero;
  if(!h){box.append(el('p','quiet','Each viewer keeps the hero they already have in Cedar. Give this Home its own to choose its style, what it shows and how many titles it pages through.'),button('Give this Home a hero',()=>change(()=>{draft.hero=newHero();},'Hero on. Choose what it shows below.'),'button'));return box;}
  const set=(fn,message)=>change(()=>fn(draft.hero),message);
@@ -86,7 +88,9 @@ function buildHeroSource(current){const build=current?{title:current.title,title
 /** Artwork the preview's hero can borrow: folder art and setup covers already on this Home. */
 function heroArt(){const out=[];for(const r of draft.rows){if(!r.enabled)continue;if(r.kind==='pick'){const file=itemFiles.get(r.item.id);for(const b of file?.branches||[])for(const f of b.folderOptions||[]){const u=f.heroBackdropURL||(String(f.tileShape||'landscape').toLowerCase()==='landscape'?f.coverImageURL:null);if(u)out.push(u);}out.push(...(pickInfo(r).covers||[]));}else if(r.kind==='group')for(const b of r.branches){const u=b.heroBackdropUrl||b.customCoverImageUrl||b.coverImageUrl;if(u)out.push(u);}}return [...new Set(out)].slice(0,12).map(previewImageURL);}
 function previewBlock(){const p=previewItem,block={id:'preview',title:p.title,label:`Previewing ${p.title}`,preview:true,selected:false};block.branches=itemErrors.get(p.item.id)||rowBranches(draft,{kind:'pick',enabled:true,item:p.item},Object.fromEntries(itemFiles));if(block.branches===null&&!itemLoads.has(p.item.id))loadItem(p.item.id).then(renderPreview,renderPreview);return block;}
-function renderBanner(){const box=$('preview-banner');box.replaceChildren();if(!previewItem)return;const p=previewItem,bar=el('div','preview-banner'),text=el('span');text.append('Previewing ',el('strong','',p.title),'. It isn’t on your Home yet.');bar.append(text,button('+ Add to Home',()=>{const item=p.item,title=p.title;previewItem=null;home.add(item,title);say(`${title} added to Your Home.`);},'button primary'),button('Close',()=>home.preview(null),'text-button'));box.append(bar);}
+/** Back to the top of the preview. On phones the preview is part of the page, so the page scrolls up to it instead. */
+function toCanvasTop(){const canvas=$('home-preview');canvas.scrollTop=0;const stage=$('panel-home').getBoundingClientRect(),offset=parseFloat(getComputedStyle(canvas).getPropertyValue('--sticky-top'))||0;if(stage.height&&canvas.getBoundingClientRect().top<offset)scrollBy({top:stage.top-offset-8,behavior:'instant'});}
+function renderBanner(){const box=$('preview-banner');box.replaceChildren();if(!previewItem)return;const p=previewItem,bar=el('div','preview-banner'),text=el('span');text.append('Previewing ',el('strong','',p.title),'. It isn’t on your Home yet.');bar.append(text,button('+ Add to Home',()=>{const item=p.item,title=p.title;previewItem=null;home.add(item,title);say(`${title} added to Your Home.`);},'button primary'),button('Close',()=>{home.preview(null);previewClosed?.();},'text-button'));const steps=previewSteps?.(p.item.id);if(steps){const stepper=el('div','preview-steps');for(const [symbol,go,word] of [['‹',steps.previous,'Previous'],['›',steps.next,'Next']]){const b=button(symbol,()=>go?.(),'icon-button');b.disabled=!go;b.setAttribute('aria-label',`${word} setup`);stepper.append(b);}text.after(stepper);}box.append(bar);}
 function renderPreview(){const out=$('preview-content'),canvas=$('home-preview');canvas.dataset.device=device;canvas.dataset.screen=screen;canvas.dataset.titles=titles;
  for(const [group,key,value] of [['preview-screens','screen',screen],['preview-device','device',device],['preview-titles','titles',titles]])for(const b of $(group).querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset[key]===value));
  renderBanner();canvas.querySelector('.corner-avatar')?.remove();
@@ -96,8 +100,8 @@ function renderPreview(){const out=$('preview-content'),canvas=$('home-preview')
  else{
   const blocks=[...(previewItem?[previewBlock()]:[]),...draft.rows.filter(r=>r.enabled).map(r=>{const block={id:r.id,title:r.title,selected:r.id===selected};if(r.kind==='pick'){block.label=`${pickInfo(r).title} · ${r.item.type==='setup'?'Creator setup':'Creator branch group'}`;block.branches=itemErrors.get(r.item.id)||rowBranches(draft,r,Object.fromEntries(itemFiles));if(block.branches===null&&!itemLoads.has(r.item.id))loadItem(r.item.id).then(renderPreview,renderPreview);}else block.branches=rowBranches(draft,r);return block;})];
   const entry=nav.at(-1)||null,parent=nav.length>1?pageTitle(blocks,nav.at(-2)):'Home';
-  if(!renderHome(out,{blocks,device,deviceName:deviceNames[device],entry,parentTitle:parent},{select:id=>select(id,{reveal:true}),back:()=>{nav.pop();renderPreview();canvas.scrollTop=0;},open:e=>{nav.push(e);if(selected!==e.block&&e.block!=='preview'){selected=e.block;renderOutline();renderInspector();renderContents();}renderPreview();canvas.scrollTop=0;},chip:i=>{nav.at(-1).chip=i;renderPreview();}})){nav=[];renderPreview();return;}
-  if(!entry){const hero=draft.hero?previewHero(draft):null;out.prepend(renderHeroPreview(hero&&!hero.problem?{style:draft.hero.style,fields:draft.hero.fields,limit:draft.hero.limit,source:heroSourceName(draft),art:heroArt(),badges}:null,()=>{expanded='hero';render();document.querySelector('#home-outline [data-id="hero"]')?.scrollIntoView({block:'center',behavior:'smooth'});}));}
+  if(!renderHome(out,{blocks,device,deviceName:deviceNames[device],entry,parentTitle:parent},{select:id=>select(id,{reveal:true}),back:()=>{nav.pop();renderPreview();toCanvasTop();},open:e=>{nav.push(e);if(selected!==e.block&&e.block!=='preview'){selected=e.block;renderOutline();renderInspector();renderContents();}renderPreview();toCanvasTop();},chip:i=>{nav.at(-1).chip=i;renderPreview();}})){nav=[];renderPreview();return;}
+  if(!entry){const hero=draft.hero?previewHero(draft):null;out.prepend(renderHeroPreview(hero&&!hero.problem?{style:draft.hero.style,fields:draft.hero.fields,limit:draft.hero.limit,source:heroSourceName(draft),art:heroArt(),badges}:null,()=>{expanded='hero';render();revealRow?.();document.querySelector('#home-outline [data-id="hero"]')?.scrollIntoView({block:'center',behavior:'smooth'});}));}
   addRailArrows(out);
  }
  if(avatar&&screen!=='who'){const a=image(avatar,'corner-avatar');a.alt='';canvas.append(a);}
@@ -197,11 +201,11 @@ export const home={
  setBadgePack(id){change(()=>{draft.badgePack=id;});},
  counts:()=>counts(draft),
  /** Shows a setup or group on the preview without adding it; null stops. quiet keeps the page where it is. */
- preview(item,title,{quiet=false}={}){previewItem=item?{item,title:title||item.id}:null;screen='home';nav=[];renderPreview();for(const f of listeners)f();if(item){$('home-preview').scrollTop=0;if(!quiet&&innerWidth<900)$('panel-home').scrollIntoView({block:'start',behavior:'smooth'});}},
+ preview(item,title,{quiet=false}={}){previewItem=item?{item,title:title||item.id}:null;screen='home';nav=[];renderPreview();for(const f of listeners)f();if(item)toCanvasTop();},
  previewing:()=>previewItem?.item.id||null,
  /** Switches the preview to Home, a title page ("title") or Who's watching ("who"). */
  showScreen(name){if(['home','title','who'].includes(name)){screen=name;renderPreview();}},
  onChange(f){listeners.add(f);},
  /** Lookups from the loaded catalog, so picks show their covers and current titles. */
- connect(hooks){({describePick=describePick,describeAvatar=describeAvatar,describeBadgePack=describeBadgePack,badgeImages=badgeImages,openSetup=openSetup,showTab=showTab}=hooks);for(const r of draft.rows)if(r.kind==='pick'){const t=describePick(r.item)?.title;if(t)r.title=t;}render();},
+ connect(hooks){({describePick=describePick,describeAvatar=describeAvatar,describeBadgePack=describeBadgePack,badgeImages=badgeImages,openSetup=openSetup,showTab=showTab,previewSteps=previewSteps,previewClosed=previewClosed,revealRow=revealRow}=hooks);for(const r of draft.rows)if(r.kind==='pick'){const t=describePick(r.item)?.title;if(t)r.title=t;}render();},
 };

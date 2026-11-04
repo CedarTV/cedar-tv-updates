@@ -1,5 +1,6 @@
 // Creator: one workspace. The library on the left (setups, profile photos, source badges and the
-// builders) feeds the Home on the right, which home-builder.mjs draws and edits.
+// builders) feeds the Home on the right, which home-builder.mjs draws and edits. On phones they are
+// separate views instead (see Phone views).
 import { isBadgePackID, parseCart, setupOf, setupOptions, setupSectionsOf, setupShapes, setupTags } from "./creator-model.mjs";
 import { artworkURL, appURL, matchingOptions, avatarCategories, avatarOptions, avatarName, sampleBadges } from "./artwork-model.mjs";
 import { home } from "./home-builder.mjs";
@@ -81,9 +82,11 @@ function addButton(entry, labels) {
 }
 
 function renderHomeButton() {
-  const count = home.counts().picks;
-  $("home-tab-count").textContent = String(count);
-  $("home-tab-count").hidden = count === 0;
+  const { picks, rows } = home.counts();
+  $("home-tab-count").textContent = String(picks);
+  $("home-tab-count").hidden = picks === 0;
+  $("nav-home-count").textContent = String(rows);
+  $("nav-home-count").hidden = rows === 0;
 }
 
 // MARK: Setups
@@ -121,7 +124,10 @@ function setupActions(setup) {
   if (home.pickState(entry) === "available") {
     const isPreviewing = home.previewing() === setup.id;
     const preview = element("button", { type: "button", class: "button button-secondary", text: isPreviewing ? "Previewing" : "Preview", "aria-pressed": String(isPreviewing) });
-    preview.addEventListener("click", () => home.preview(isPreviewing ? null : entry, setup.title));
+    preview.addEventListener("click", () => {
+      home.preview(isPreviewing ? null : entry, setup.title);
+      if (!isPreviewing && compact.matches) { previewReturnsTo = "browse"; showView("preview", { top: true }); }
+    });
     actions.append(preview);
   }
   actions.append(addButton(entry, { add: "+ Add" }));
@@ -152,7 +158,7 @@ function setupCard(setup) {
 /// One card for a style group ("Genres"): each variant is the same group in different artwork.
 function styleCard({ group, variants }) {
   const previewing = variants.find(setup => setup.id === home.previewing());
-  const setup = variants.find(item => item.id === styleChoices.get(group)) || previewing || variants[0];
+  const setup = chosenStyle({ group, variants });
   const title = element("button", { type: "button", class: "setup-title-button", text: group });
   title.addEventListener("click", () => openSetup(setup.id));
   const artists = [...new Set(variants.map(item => item.creator))];
@@ -178,6 +184,14 @@ function styleCard({ group, variants }) {
   ]);
 }
 
+/// The variant a Styles card shows: the one chosen on it, else the one on the preview, else its first.
+function chosenStyle({ group, variants }) {
+  return variants.find(item => item.id === styleChoices.get(group)) || variants.find(setup => setup.id === home.previewing()) || variants[0];
+}
+
+// Setups in the order the library lists them, for the preview's previous and next buttons.
+let previewOrder = [];
+
 function renderSetups() {
   const options = setupOptions(setups, { query: $("setup-search").value, tag: $("setup-tag").value, shape: $("setup-shape").value, sort: $("setup-sort").value });
   const filtered = $("setup-search").value || $("setup-tag").value || $("setup-shape").value;
@@ -185,7 +199,9 @@ function renderSetups() {
     ? `${plural(options.length, "setup")}${filtered ? " found" : ""} · Preview shows one on the screen before you add it.`
     : $("setup-status").textContent;
   $("setup-grid").removeAttribute("aria-busy");
-  $("setup-grid").replaceChildren(...setupSectionsOf(options).map(section =>
+  const sections = setupSectionsOf(options);
+  previewOrder = sections.flatMap(section => section.items.map(item => item.type === "style" ? chosenStyle(item) : item.setup));
+  $("setup-grid").replaceChildren(...sections.map(section =>
     element("section", { class: "setup-section", "aria-label": section.title }, [
       element("div", { class: "setup-section-head" }, [element("h3", { text: section.title }), element("p", { text: section.note })]),
       ...section.items.map(item => item.type === "style" ? styleCard(item) : setupCard(item.setup)),
@@ -333,12 +349,52 @@ async function loadCatalog(kind) {
   return gallery.catalogs[kind];
 }
 
+// MARK: Phone views
+
+// Below 900px the library (Browse), Your Home's rows and its preview each get the whole screen,
+// switched from the bar at the bottom, so nothing scrolls inside anything else. Each view keeps
+// its own scroll position. Wider screens show the library and Your Home side by side.
+const compact = matchMedia("(max-width: 900px)");
+const workspace = document.querySelector(".creator-workspace");
+const viewButtons = [...document.querySelectorAll(".studio-nav [data-view]")];
+const viewScroll = {};
+// The view a setup preview was opened from, so closing it goes back there.
+let previewReturnsTo = null;
+
+function showView(name, { top = false } = {}) {
+  const current = workspace.dataset.view;
+  if (current === name) { if (top && compact.matches) scrollTo({ top: 0, behavior: "instant" }); return; }
+  viewScroll[current] = scrollY;
+  workspace.dataset.view = name;
+  for (const button of viewButtons) button.setAttribute("aria-current", String(button.dataset.view === name));
+  if (name !== "preview") previewReturnsTo = null;
+  if (compact.matches) scrollTo({ top: top ? 0 : viewScroll[name] || 0, behavior: "instant" });
+}
+for (const button of viewButtons) button.addEventListener("click", () => showView(button.dataset.view));
+
+/// The setups before and after the one on the preview that can still be previewed (not yet added).
+function previewSteps(id) {
+  const list = previewOrder.filter(setup => setup.id === id || home.pickState({ type: "setup", id: setup.id }) === "available");
+  const index = list.findIndex(setup => setup.id === id);
+  if (index < 0) return null;
+  const go = setup => setup && (() => {
+    home.preview({ type: "setup", id: setup.id }, setup.title, { quiet: true });
+    if (compact.matches) scrollTo({ top: 0, behavior: "instant" });
+  });
+  return { previous: go(list[index - 1]), next: go(list[index + 1]) };
+}
+
 // MARK: Tabs
 
 const tabs = [...document.querySelectorAll("[role=tab]")];
 function selectTab(name, { focus = false } = {}) {
-  if (name === "home") { $("panel-home").scrollIntoView({ block: "start", behavior: "smooth" }); return; }
+  if (name === "home") {
+    if (compact.matches) showView("home", { top: true });
+    else $("panel-home").scrollIntoView({ block: "start", behavior: "smooth" });
+    return;
+  }
   if (!tabs.some(tab => tab.dataset.tab === name)) name = "setups";
+  if (compact.matches && workspace.dataset.view !== "browse") showView("browse", { top: true });
   for (const tab of tabs) {
     const selected = tab.dataset.tab === name;
     tab.setAttribute("aria-selected", String(selected));
@@ -425,6 +481,9 @@ async function start() {
     describeSetup: id => setupsByID.get(id),
     openSetup: item => openSetup(setupOf(item.id)),
     showTab: selectTab,
+    previewSteps,
+    previewClosed: () => { if (compact.matches && workspace.dataset.view === "preview" && previewReturnsTo) showView(previewReturnsTo); },
+    revealRow: () => { if (compact.matches) showView("home"); },
   });
 
   // A shared Creator link (…/creator/?i=…&a=…) opened in a browser adds its picks to Your Home.
@@ -442,6 +501,8 @@ async function start() {
     url.searchParams.delete("i"); url.searchParams.delete("a"); url.searchParams.delete("b");
     history.replaceState(null, "", url);
   }
+  renderSetupFilters();
+  renderSetups();
   // An empty Home previews Cedar's first own setup (the big community Homes take a while to
   // download), so the right side isn't a blank box.
   if (willPreview && !home.counts().rows && !home.previewing()) {
@@ -449,8 +510,6 @@ async function start() {
     if (first) home.preview({ type: "setup", id: first.id }, first.title, { quiet: true });
   }
   $("preview-banner").classList.remove("is-reserved");
-  renderSetupFilters();
-  renderSetups();
   renderHomeButton();
 }
 renderHomeButton();
