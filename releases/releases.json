@@ -30,40 +30,40 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "80",
-      "date": "2026-10-31",
+      "build": "81",
+      "date": "2026-11-04",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Server pairing, a new Recordings page, Watch Together, trailer previews and an Apple player layout.",
+      "summary": "External TestFlight. Cedar Tracking hub, Viewing Stats, Multiview layouts, Live TV Picture in Picture and Search Subtitles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "80",
-      "date": "2026-10-31",
+      "build": "81",
+      "date": "2026-11-04",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Server pairing, a new Recordings page, Watch Together, trailer previews and an Apple player layout.",
+      "summary": "External TestFlight. Cedar Tracking hub, Viewing Stats, Multiview layouts, Live TV Picture in Picture and Search Subtitles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
       "id": "apple-tv",
       "name": "Cedar for Apple TV",
       "version": "1.0.0",
-      "build": "80",
-      "date": "2026-10-31",
+      "build": "81",
+      "date": "2026-11-04",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Server pairing, a new Recordings page, Watch Together, trailer previews and Read Synopsis from the hero.",
+      "summary": "External TestFlight. Cedar Tracking hub, Viewing Stats, a smoother Live guide that keeps playing, Multiview layouts and Search Subtitles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
       "id": "mac",
       "name": "Cedar for Mac",
       "version": "1.0.0",
-      "build": "80",
-      "date": "2026-10-31",
+      "build": "81",
+      "date": "2026-11-04",
       "status": "testflight",
-      "summary": "External TestFlight. A new Recordings page, Watch Together, trailer previews with hover cards, and player fixes.",
+      "summary": "External TestFlight. Cedar Tracking hub, Viewing Stats, Multiview layouts, Live TV Picture in Picture and Search Subtitles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

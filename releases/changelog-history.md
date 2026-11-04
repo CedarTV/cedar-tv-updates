@@ -1,12 +1,81 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled October 31, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
+Compiled November 4, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 81 · 2026-11-04
+
+November 4, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Cedar Tracking — Settings › Connected Services › Cedar is now a full tracking hub with My Taste, imports from media servers and watch-history files, Cedar lists, Watching Now across your devices and Dropped Shows. Experimental.
+- Viewing Stats — insights, achievements and goals for what you watch, plus a Year in Review. Experimental.
+- Multiview layouts — choose Grid, Featured or Panel, and Arrange the channels. Experimental.
+- Picture in Picture for Live TV — keep a channel playing in a floating window while you use the rest of Cedar.
+
+#### Live TV, sports and DVR
+
+- Listen Only — listen to a Live TV channel without video, and play Live TV from CarPlay. Experimental.
+- Hide sports scores — choose Show, Hide While Live or Hide All. Requested by JaxxonDellabate on Discord.
+- Sports Branches — use the shared Branch editor. Showcase is sized like Feature, and the Sports Bar Poster Style is set per profile. Requested by JaxxonDellabate on Discord.
+- Sports channels — guide matching for sports channels is more accurate.
+- Stop Recording — end a Cedar Server recording early and keep what was recorded. Needs Cedar Server 1.1.0. Requested by RaidZilla on Discord.
+
+#### Home and posters
+
+- Top 10 numbering — number the titles in any Branch.
+- Poster details — posters can show N New episode counts, Time to Finish, Finale and Premiere labels, chart movement and spoiler-safe stills.
+- Poster menu — the long-press menu is simpler, and includes Remove from Continue Watching. Requested by youripeters on Discord.
+- Continue Watching — fills in more reliably.
+- Shuffle — syncs per profile, and Apple TV gets a Sort menu. Requested by JamminJerome on Discord.
+- Match Logo colour — the Play button can take its colour from the title's logo. It's off by default.
+- Hero — trailers play only when a Tobacco Tie can play them, and swiping between titles is smoother.
+- Detail actions — actions are stacked on iPhone, and Play shows the time left.
+
+#### Playback and subtitles
+
+- Search Subtitles — search from the player in any language, see every result, and pick another season or episode when the match is wrong. Experimental. Requested by mulderbog on Discord.
+- Subtitle translation — translate subtitles into your language. Experimental.
+- Subtitles — more languages are found, including German, sidecar files are picked up, and more providers are searched. Requested by youripeters on Discord.
+- External players — Jellyfin, Emby and Plex streams open in Infuse and other external players. Experimental. Requested by Citharae on Discord.
+- Kids screen time — set a daily viewing limit and a bedtime for Kids profiles. Experimental.
+- Lock icon — the player's lock icon stays hidden until you tap the screen. Requested by Para.192 on Discord.
+- Playback engine — updated, with better MKV handling and catch-up retries.
+
+#### Sources and connections
+
+- Stalker portals — enter a serial number and device ID for Stalker portals. Requested by LazzyEviil on Discord.
+- IPTV playlist icons — playlists show their own icon, and titles show Playlist Availability badges.
+- Silo menus — choose quality and audio track for Silo titles.
+- Soundtrack — a rebuilt Soundtrack section with Listen On links. Requested by Citharae on Discord.
+- Bridge servers — bridge-server streams use a single connection.
+
+#### Fixes
+
+- Up Next no longer jumps to the next episode about 30 seconds in when an episode has wrong credits timing. Requested by Citharae on Discord.
+- Continue Watching no longer disappears after Mark as Unwatched with Simkl. Requested by mazzi526 on Discord.
+- Home Branches no longer stop at 20 titles. Requested by garvkapur on Discord.
+- Folders no longer show as Wide. Requested by F on Discord.
+- Jellyfin bridge-server streams no longer freeze 15 to 20 minutes in. Requested by Rochoinoface on Discord.
+- DVR padding controls can be reached, and the record badge no longer lights on two channels with the same name. Requested by RaidZilla on Discord.
+- Tvheadend DVB-T2 streams no longer drop.
+- Silo signs in without a proxy, and Silo Library posters appear.
+- Switching audio tracks no longer flashes 0:00, and Dolby Vision no longer flashes twice when changing channel or episode.
+- A paused channel no longer stays paused on the next channel.
+- Taps on the Home title menu always register, ratings of 0.0 are hidden, and long overlay text is no longer cut off.
+
+#### Known issues
+
+- The player's episode list doesn't use season sections yet. Use the title page to jump between seasons.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-81/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-81)
 
 ### 1.0.0 · build 80 · 2026-10-31
 
@@ -1233,6 +1302,74 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 81 · 2026-11-04
+
+November 4, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Cedar Tracking — Settings › Connected Services › Cedar is now a full tracking hub with My Taste, imports from media servers and watch-history files, Cedar lists, Watching Now across your devices and Dropped Shows. Experimental.
+- Viewing Stats — insights, achievements and goals for what you watch, plus a Year in Review. Experimental.
+- Multiview layouts — choose Grid, Featured or Panel, and Arrange the channels. Experimental.
+- Picture in Picture for Live TV — keep a channel playing in a floating window while you use the rest of Cedar.
+
+#### Live TV, sports and DVR
+
+- Hide sports scores — choose Show, Hide While Live or Hide All. Requested by JaxxonDellabate on Discord.
+- Sports Branches — use the shared Branch editor. Showcase is sized like Feature, and the Sports Bar Poster Style is set per profile. Requested by JaxxonDellabate on Discord.
+- Sports channels — guide matching for sports channels is more accurate.
+- Stop Recording — end a Cedar Server recording early and keep what was recorded. Needs Cedar Server 1.1.0. Requested by RaidZilla on Discord.
+
+#### Home and posters
+
+- Top 10 numbering — number the titles in any Branch.
+- Poster details — posters can show N New episode counts, Time to Finish, Finale and Premiere labels, chart movement and spoiler-safe stills.
+- Poster menu — the long-press menu is simpler, and includes Remove from Continue Watching. Requested by youripeters on Discord.
+- Continue Watching — fills in more reliably.
+- Shuffle — syncs per profile, and Apple TV gets a Sort menu. Requested by JamminJerome on Discord.
+- Minimalist styles — Minimalist Home and Detail styles. Experimental.
+- Match Logo colour — the Play button can take its colour from the title's logo. It's off by default.
+- Hero — trailers play only when a Tobacco Tie can play them, and swiping between titles is smoother.
+
+#### Playback and subtitles
+
+- Search Subtitles — search from the player in any language, see every result, and pick another season or episode when the match is wrong. Experimental. Requested by mulderbog on Discord.
+- Subtitle translation — translate subtitles into your language. Experimental.
+- Subtitles — more languages are found, including German, sidecar files are picked up, and more providers are searched. Requested by youripeters on Discord.
+- External players — Jellyfin, Emby and Plex streams open in Infuse and other external players. Experimental. Requested by Citharae on Discord.
+- Kids screen time — set a daily viewing limit and a bedtime for Kids profiles. Experimental.
+- Lock icon — the player's lock icon stays hidden until you tap the screen. Requested by Para.192 on Discord.
+- Playback engine — updated, with better MKV handling and catch-up retries.
+
+#### Sources and connections
+
+- Stalker portals — enter a serial number and device ID for Stalker portals. Requested by LazzyEviil on Discord.
+- IPTV playlist icons — playlists show their own icon, and titles show Playlist Availability badges.
+- Silo menus — choose quality and audio track for Silo titles.
+- Soundtrack — a rebuilt Soundtrack section with Listen On links. Requested by Citharae on Discord.
+- Bridge servers — bridge-server streams use a single connection.
+
+#### Fixes
+
+- Up Next no longer jumps to the next episode about 30 seconds in when an episode has wrong credits timing. Requested by Citharae on Discord.
+- Continue Watching no longer disappears after Mark as Unwatched with Simkl. Requested by mazzi526 on Discord.
+- Home Branches no longer stop at 20 titles. Requested by garvkapur on Discord.
+- Folders no longer show as Wide. Requested by F on Discord.
+- Jellyfin bridge-server streams no longer freeze 15 to 20 minutes in. Requested by Rochoinoface on Discord.
+- DVR padding controls can be reached, and the record badge no longer lights on two channels with the same name. Requested by RaidZilla on Discord.
+- Tvheadend DVB-T2 streams no longer drop.
+- Silo signs in without a proxy, and Silo Library posters appear.
+- Switching audio tracks no longer flashes 0:00, and Dolby Vision no longer flashes twice when changing channel or episode.
+- A paused channel no longer stays paused on the next channel.
+- Taps on the Home title menu always register, ratings of 0.0 are hidden, and long overlay text is no longer cut off.
+
+#### Known issues
+
+- The player's episode list doesn't use season sections yet. Use the title page to jump between seasons.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-81/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-81)
 
 ### 1.0.0 · build 80 · 2026-10-31
 
@@ -2469,6 +2606,80 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 81 · 2026-11-04
+
+November 4, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Cedar Tracking — Settings › Connected Services › Cedar is now a full tracking hub with My Taste, imports from media servers and watch-history files, Cedar lists, Watching Now across your devices and Dropped Shows. Experimental.
+- Viewing Stats — insights, achievements and goals for what you watch, plus a Year in Review. Experimental.
+- Live TV guide — scrolls more smoothly with faded edges, and Play/Pause enlarges the player.
+- Multiview layouts — choose Grid, Featured or Panel, and Arrange the channels. Experimental.
+- Picture in Picture for Live TV — keep a channel playing in a floating window while you use the rest of Cedar.
+
+#### Live TV, sports and DVR
+
+- Keep Playing in Guide — Back opens the guide while the channel keeps playing. Requested by JaxxonDellabate on Discord.
+- Channel up and down — Up and Down on the remote change channel, and wrap around at the ends of the list. Requested by JaxxonDellabate on Discord.
+- Hide sports scores — choose Show, Hide While Live or Hide All. Requested by JaxxonDellabate on Discord.
+- Sports Branches — use the shared Branch editor. Showcase is sized like Feature, and the Sports Bar Poster Style is set per profile. Requested by JaxxonDellabate on Discord.
+- Sports channels — guide matching for sports channels is more accurate.
+- Stop Recording — end a Cedar Server recording early and keep what was recorded. Needs Cedar Server 1.1.0. Requested by RaidZilla on Discord.
+- DVR schedule — the schedule sheet is redesigned. Requested by RaidZilla on Discord.
+
+#### Home and posters
+
+- Top 10 numbering — number the titles in any Branch.
+- Poster details — posters can show N New episode counts, Time to Finish, Finale and Premiere labels, chart movement and spoiler-safe stills.
+- Continue Watching — fills in more reliably.
+- Shuffle — syncs per profile, and Apple TV gets a Sort menu. Requested by JamminJerome on Discord.
+- Minimalist styles — Minimalist Home and Detail styles. Experimental.
+- Screensaver — Cedar's own screensaver for Apple TV. Experimental.
+- Match Logo colour — the Play button can take its colour from the title's logo. It's off by default.
+- Hero — trailers play only when a Tobacco Tie can play them, and swiping between titles is smoother.
+
+#### Playback and subtitles
+
+- Search Subtitles — search from the player in any language, see every result, and pick another season or episode when the match is wrong. Experimental. Requested by mulderbog on Discord.
+- Subtitles — more languages are found, including German, sidecar files are picked up, and more providers are searched. Requested by youripeters on Discord.
+- External players — Jellyfin, Emby and Plex streams open in Infuse and other external players. Experimental. Requested by Citharae on Discord.
+- Kids screen time — set a daily viewing limit and a bedtime for Kids profiles. Experimental.
+- Playback engine — updated, with better MKV handling and catch-up retries.
+
+#### Sources and connections
+
+- Stalker portals — enter a serial number and device ID for Stalker portals. Requested by LazzyEviil on Discord.
+- IPTV playlist icons — playlists show their own icon, and titles show Playlist Availability badges.
+- Silo menus — choose quality and audio track for Silo titles.
+- Bridge servers — bridge-server streams use a single connection.
+
+#### Fixes
+
+- Up Next no longer jumps to the next episode about 30 seconds in when an episode has wrong credits timing. Requested by Citharae on Discord.
+- Continue Watching no longer disappears after Mark as Unwatched with Simkl. Requested by mazzi526 on Discord.
+- Home Branches no longer stop at 20 titles. Requested by garvkapur on Discord.
+- Folders no longer show as Wide. Requested by F on Discord.
+- Jellyfin bridge-server streams no longer freeze 15 to 20 minutes in. Requested by Rochoinoface on Discord.
+- Choosing a source for an episode no longer freezes. Requested by lubirimasaka on Discord.
+- The sports info page no longer overlaps, and its artwork is no longer zoomed. Requested by pH_low on Discord.
+- The episode Ratings heat map can be reached. Requested by Citharae on Discord.
+- DVR padding controls can be reached, and the record badge no longer lights on two channels with the same name. Requested by RaidZilla on Discord.
+- Tvheadend DVB-T2 streams no longer drop.
+- Silo signs in without a proxy, and Silo Library posters appear.
+- Switching audio tracks no longer flashes 0:00, and Dolby Vision no longer flashes twice when changing channel or episode.
+- A paused channel no longer stays paused on the next channel.
+- Down no longer skips the first Branch, an empty Continue Watching leaves no gap, and the source picker keeps focus.
+- The Live guide sidebar can be left again.
+- Taps on the Home title menu always register, ratings of 0.0 are hidden, and long overlay text is no longer cut off.
+
+#### Known issues
+
+- The player's episode list doesn't use season sections yet. Use the title page to jump between seasons.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-81/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-81)
+
 ### 1.0.0 · build 80 · 2026-10-31
 
 October 31, 2026 · Released to External TestFlight for Apple TV.
@@ -3590,6 +3801,74 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 81 · 2026-11-04
+
+November 4, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Cedar Tracking — Settings › Connected Services › Cedar is now a full tracking hub with My Taste, imports from media servers and watch-history files, Cedar lists, Watching Now across your devices and Dropped Shows. Experimental.
+- Viewing Stats — insights, achievements and goals for what you watch, plus a Year in Review. Experimental.
+- Multiview layouts — choose Grid, Featured or Panel, and Arrange the channels. Experimental.
+- Picture in Picture for Live TV — keep a channel playing in a floating window while you use the rest of Cedar.
+
+#### Live TV, sports and DVR
+
+- Hide sports scores — choose Show, Hide While Live or Hide All. Requested by JaxxonDellabate on Discord.
+- Sports Branches — use the shared Branch editor. Showcase is sized like Feature, and the Sports Bar Poster Style is set per profile. Requested by JaxxonDellabate on Discord.
+- Sports channels — guide matching for sports channels is more accurate.
+- Stop Recording — end a Cedar Server recording early and keep what was recorded. Needs Cedar Server 1.1.0. Requested by RaidZilla on Discord.
+
+#### Home and posters
+
+- Top 10 numbering — number the titles in any Branch.
+- Poster details — posters can show N New episode counts, Time to Finish, Finale and Premiere labels, chart movement and spoiler-safe stills.
+- Poster menu — the long-press menu is simpler, and includes Remove from Continue Watching. Requested by youripeters on Discord.
+- Continue Watching — fills in more reliably.
+- Shuffle — syncs per profile, and Apple TV gets a Sort menu. Requested by JamminJerome on Discord.
+- Minimalist styles — Minimalist Home and Detail styles. Experimental.
+- Match Logo colour — the Play button can take its colour from the title's logo. It's off by default.
+- Hero — trailers play only when a Tobacco Tie can play them, and swiping between titles is smoother.
+
+#### Playback and subtitles
+
+- Search Subtitles — search from the player in any language, see every result, and pick another season or episode when the match is wrong. Experimental. Requested by mulderbog on Discord.
+- Subtitle translation — translate subtitles into your language. Experimental.
+- Subtitles — more languages are found, including German, sidecar files are picked up, and more providers are searched. Requested by youripeters on Discord.
+- External players — Jellyfin, Emby and Plex streams open in Infuse and other external players. Experimental. Requested by Citharae on Discord.
+- Kids screen time — set a daily viewing limit and a bedtime for Kids profiles. Experimental.
+- Playback engine — updated, with better MKV handling and catch-up retries.
+
+#### Sources and connections
+
+- Stalker portals — enter a serial number and device ID for Stalker portals. Requested by LazzyEviil on Discord.
+- IPTV playlist icons — playlists show their own icon, and titles show Playlist Availability badges.
+- Silo menus — choose quality and audio track for Silo titles.
+- Soundtrack — a rebuilt Soundtrack section with Listen On links. Requested by Citharae on Discord.
+- Bridge servers — bridge-server streams use a single connection.
+
+#### Fixes
+
+- Up Next no longer jumps to the next episode about 30 seconds in when an episode has wrong credits timing. Requested by Citharae on Discord.
+- Continue Watching no longer disappears after Mark as Unwatched with Simkl. Requested by mazzi526 on Discord.
+- Home Branches no longer stop at 20 titles. Requested by garvkapur on Discord.
+- Folders no longer show as Wide. Requested by F on Discord.
+- Jellyfin bridge-server streams no longer freeze 15 to 20 minutes in. Requested by Rochoinoface on Discord.
+- DVR padding controls can be reached, and the record badge no longer lights on two channels with the same name. Requested by RaidZilla on Discord.
+- The scrollbar no longer sits slightly out of place. Requested by F on Discord.
+- Tvheadend DVB-T2 streams no longer drop.
+- Silo signs in without a proxy, and Silo Library posters appear.
+- Switching audio tracks no longer flashes 0:00, and Dolby Vision no longer flashes twice when changing channel or episode.
+- A paused channel no longer stays paused on the next channel.
+- Taps on the Home title menu always register, ratings of 0.0 are hidden, and long overlay text is no longer cut off.
+
+#### Known issues
+
+- The player's episode list doesn't use season sections yet. Use the title page to jump between seasons.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-81/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-81)
 
 ### 1.0.0 · build 80 · 2026-10-31
 
