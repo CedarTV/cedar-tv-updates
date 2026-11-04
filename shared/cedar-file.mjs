@@ -11,11 +11,11 @@ export const SEAL_ALGORITHM = 'AES-256-GCM/PBKDF2-SHA256';
 export const SEAL_ITERATIONS = 310000;
 
 /** Profile file sections, as Cedar's `ProfileImportCategory` raw values, in display order. */
-export const CATEGORIES = ['profile', 'sources', 'mediaServers', 'addons', 'apiKeys', 'branches', 'preferences', 'radio', 'watchHistory'];
+export const CATEGORIES = ['profile', 'sources', 'mediaServers', 'addons', 'apiKeys', 'branches', 'preferences', 'radio', 'watchHistory', 'vpn'];
 /** Categories that can hold a login, an address with a token, or personal activity. */
-export const SENSITIVE = new Set(['sources', 'mediaServers', 'addons', 'apiKeys', 'radio', 'watchHistory']);
+export const SENSITIVE = new Set(['sources', 'mediaServers', 'addons', 'apiKeys', 'radio', 'watchHistory', 'vpn']);
 /** Payload key for each category. */
-const SECTION = {profile: 'identity', sources: 'sources', mediaServers: 'mediaServers', addons: 'tobaccoTies', apiKeys: 'apiKeys', branches: 'home', preferences: 'preferences', radio: 'radio', watchHistory: 'watchHistory'};
+const SECTION = {profile: 'identity', sources: 'sources', mediaServers: 'mediaServers', addons: 'tobaccoTies', apiKeys: 'apiKeys', branches: 'home', preferences: 'preferences', radio: 'radio', watchHistory: 'watchHistory', vpn: 'vpn'};
 
 const encoder = new TextEncoder();
 const subtle = () => globalThis.crypto.subtle;
@@ -94,6 +94,7 @@ function countsOf(payload) {
   if (payload.preferences) counts.preferences = length(payload.preferences);
   if (payload.radio) counts.radio = length(payload.radio.stations);
   if (payload.watchHistory) counts.watchHistory = length(payload.watchHistory.titles);
+  if (payload.vpn) counts.vpn = payload.vpn.configuration ? 1 : 0;
   return counts;
 }
 
@@ -108,7 +109,7 @@ export async function profileFile({bundleID, title, createdAt, generator, payloa
   for (const key of Object.keys(payload)) if (!Object.values(SECTION).includes(key)) throw Error(`Unknown profile section ${key}.`);
   const categories = categoriesOf(payload);
   if (!categories.length) throw Error('Choose at least one thing to put in the profile file.');
-  if (!passphrase && categories.some(c => SENSITIVE.has(c))) throw Error('Tobacco Ties, logins and history are only ever saved locked. Choose a passphrase.');
+  if (!passphrase && categories.some(c => SENSITIVE.has(c))) throw Error('Tobacco Ties, logins, VPN keys and history are only ever saved locked. Choose a passphrase.');
   const file = {...header, contents: {categories: [...categories].sort(), counts: countsOf(payload)}};
   if (passphrase) file.sealed = await seal(JSON.stringify(payload), passphrase);
   else file.payload = payload;
@@ -120,6 +121,67 @@ export async function openProfileFile(file, passphrase = '') {
   if (file?.formatIdentifier !== FORMAT_IDENTIFIER || file.kind !== 'profile') throw Error('This is not a Cedar profile file.');
   if (file.payload) return file.payload;
   return JSON.parse(new TextDecoder().decode(await open(file.sealed, passphrase)));
+}
+
+// MARK: VPN
+
+/** Services whose bundled server lists Cedar uses to change location (§9.5). */
+export const VPN_SERVICES = ['protonvpn', 'mullvad', 'ivpn', 'nordvpn', 'surfshark', 'windscribe', 'airvpn'];
+
+const isWireGuardKey = value => { try { return /^[A-Za-z0-9+/]{43}=$/.test(value) && atob(value).length === 32; } catch { return false; } };
+
+/**
+ * Reads a wg-quick `.conf` the way Cedar does and returns its non-secret facts, or throws a
+ * sentence a person can act on. The private key is checked, never returned.
+ */
+export function parseWireGuardConfig(text) {
+  let section = '', privateKey = null, publicKey = null, endpoint = null, peers = 0, interfaces = 0, serverLabel = null;
+  const addresses = [], dns = [];
+  for (const raw of String(text ?? '').split(/\r?\n/)) {
+    const line = raw.trim();
+    if (line.startsWith('#')) { if (section === 'peer' && peers === 1 && !serverLabel) serverLabel = line.slice(1).trim() || null; continue; }
+    const header = /^\[(.+)\]$/.exec(line);
+    if (header) { section = header[1].trim().toLowerCase(); if (section === 'peer') peers++; if (section === 'interface') interfaces++; continue; }
+    const eq = line.indexOf('=');
+    if (eq < 0) continue;
+    const key = line.slice(0, eq).trim().toLowerCase(), value = line.slice(eq + 1).split('#')[0].trim();
+    const list = value.split(',').map(v => v.trim()).filter(Boolean);
+    if (section === 'interface' && key === 'privatekey') privateKey = value;
+    else if (section === 'interface' && key === 'address') addresses.push(...list);
+    else if (section === 'interface' && key === 'dns') dns.push(...list);
+    else if (section === 'peer' && peers === 1 && key === 'publickey') publicKey = value;
+    else if (section === 'peer' && peers === 1 && key === 'endpoint') endpoint = value;
+  }
+  if (!interfaces) throw Error('This file has no [Interface] section.');
+  if (!privateKey) throw Error('This file has no PrivateKey.');
+  if (/^[*•]+$/.test(privateKey)) throw Error('This file’s PrivateKey is hidden. Download the configuration again from your VPN service.');
+  if (!isWireGuardKey(privateKey)) throw Error('This file’s PrivateKey isn’t a WireGuard key.');
+  if (!addresses.length) throw Error('This file has no Address.');
+  if (!peers) throw Error('This file has no [Peer] section.');
+  if (!isWireGuardKey(publicKey ?? '')) throw Error('This file’s PublicKey isn’t a WireGuard key.');
+  if (!endpoint) throw Error('This file has no Endpoint.');
+  return {addresses, dns, endpoint, serverLabel};
+}
+
+/**
+ * The `vpn` section of a profile file (§9.2). `configuration` is the wg-quick text with its
+ * private key, so a payload holding this section is always sealed. `sourceOverrides` maps the
+ * file's own source, server and Tobacco Tie IDs to `always` or `never`.
+ */
+export function vpnSection({configuration = null, routesIPTV = false, routesEverythingElse = true, sourceOverrides = {}, service = null} = {}) {
+  if (configuration != null) parseWireGuardConfig(configuration);
+  for (const [id, choice] of Object.entries(sourceOverrides)) {
+    if (!/^[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{4}-[0-9A-F]{12}$/i.test(id)) throw Error(`VPN source choice ${id} needs a UUID.`);
+    if (!['always', 'never'].includes(choice)) throw Error(`VPN source choice for ${id} must be always or never.`);
+  }
+  if (service) {
+    if (!VPN_SERVICES.includes(service.serviceID)) throw Error(`Cedar has no server list for ${service.serviceID}.`);
+    if (!service.country) throw Error('A VPN service needs a country.');
+  }
+  const section = {routesIPTV: !!routesIPTV, routesEverythingElse: !!routesEverythingElse, sourceOverrides: {...sourceOverrides}};
+  if (service) section.service = {serviceID: service.serviceID, country: service.country, city: service.city ?? null, freeServersOnly: !!service.freeServersOnly};
+  if (configuration != null) section.configuration = configuration;
+  return section;
 }
 
 // MARK: Tobacco Ties found in other apps' exports
