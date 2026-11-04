@@ -22,7 +22,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "2 parts that Cedar can’t show yet were left out."
+        "conversion": "2 parts that Cedar can’t show yet were left out. Lists repaired 2026-10-20: TMDB removed the Eastrail 177 collection, so it is now a fixed list of Unbreakable, Split and Glass, and Margot Robbie’s series rows, whose Trakt list has no shows, use her TMDB credits."
       },
       "groupCount": 18,
       "branchCount": 756,
@@ -1134,7 +1134,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 17 moved to the curator’s current MDBList list. Repaired again 2026-11-04: the Star Wars shows list went private, so the Star Wars row now uses nobnobz’s Star Wars Universe list for its shows."
       },
       "groupCount": 6,
       "branchCount": 68,
@@ -1319,7 +1319,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 1 moved to the curator’s current MDBList list. Repaired again 2026-11-04: a DC animated movies list went private and was removed; the row keeps TMDB’s DC Animated Movies list."
       },
       "groupCount": 8,
       "branchCount": 60,
@@ -1525,7 +1525,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "4 parts that Cedar can’t show yet were left out; 213 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "conversion": "4 parts that Cedar can’t show yet were left out; 213 filters Cedar doesn’t support were relaxed, so some rows may show more titles. Lists repaired 2026-10-20 after their originals went private or were renamed: 9 moved to the curator’s current MDBList list."
       },
       "groupCount": 9,
       "branchCount": 315,
@@ -2013,7 +2013,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 24 moved to the curator’s current MDBList list, 1 switched to TMDB collections."
       },
       "groupCount": 5,
       "branchCount": 51,
@@ -2183,7 +2183,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 18 moved to the curator’s current MDBList list."
       },
       "groupCount": 6,
       "branchCount": 47,
@@ -2353,7 +2353,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "1 filter Cedar doesn’t support was relaxed, so some rows may show more titles."
+        "conversion": "1 filter Cedar doesn’t support was relaxed, so some rows may show more titles. Lists repaired 2026-10-20 after their originals went private or were renamed: 60 moved to the curator’s current MDBList list, 12 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 17,
       "branchCount": 48,
@@ -2575,7 +2575,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "18 filters Cedar doesn’t support were relaxed, so some rows may show more titles."
+        "conversion": "18 filters Cedar doesn’t support were relaxed, so some rows may show more titles. Lists repaired 2026-10-20 after their originals went private or were renamed: 8 moved to the curator’s current MDBList list, 1 rebuilt as Cedar streaming-service rows, 8 switched to TMDB collections."
       },
       "groupCount": 15,
       "branchCount": 60,
@@ -2915,7 +2915,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 34 moved to the curator’s current MDBList list, 3 removed."
       },
       "groupCount": 4,
       "branchCount": 34,
@@ -3047,7 +3047,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "279 parts that Cedar can’t show yet were left out."
+        "conversion": "279 parts that Cedar can’t show yet were left out. Lists repaired 2026-10-20: the Katherine Heigl row, whose MDBList lists are empty, now shows her TMDB acting credits."
       },
       "groupCount": 3,
       "branchCount": 8,
@@ -3114,7 +3114,7 @@
       "credit": {
         "platform": "Cedar",
         "via": "Trakt & MDBList Community Curators",
-        "conversion": "Assembled from 47 community lists by snoak, travis_mcnelly, nobnobz, RavynLoony, jarvis, JasKraus, lish408, exoduso, and others; modified for Cedar."
+        "conversion": "Assembled from 47 community lists by snoak, travis_mcnelly, nobnobz, RavynLoony, jarvis, JasKraus, lish408, exoduso, and others; modified for Cedar. Lists repaired 2026-10-20 after their originals went private or were renamed: 34 moved to the curator’s current MDBList list, 7 switched to TMDB collections, 5 replaced with a similar public list. Repaired again 2026-11-04: the Scream list was deleted, so its row now uses TMDB’s Scream collection."
       },
       "groupCount": 7,
       "branchCount": 54,
@@ -3315,7 +3315,7 @@
       "credit": {
         "platform": "Cedar",
         "via": "TMDB Movie Collections & exoduso",
-        "conversion": "Assembled from TMDB franchise collections and community timeline curation by exoduso; modified for Cedar."
+        "conversion": "Assembled from TMDB franchise collections and community timeline curation by exoduso; modified for Cedar. Lists repaired 2026-10-20 after their originals went private or were renamed: 1 switched to TMDB collections."
       },
       "groupCount": 4,
       "branchCount": 14,
@@ -3415,7 +3415,7 @@
       "credit": {
         "platform": "Cedar",
         "via": "Community Curators (lish408, travis_mcnelly, hdlists) & TMDB",
-        "conversion": "Assembled from community lists by lish408, travis_mcnelly, and hdlists alongside TMDB collections; modified for Cedar."
+        "conversion": "Assembled from community lists by lish408, travis_mcnelly, and hdlists alongside TMDB collections; modified for Cedar. Lists repaired 2026-10-20 after their originals went private or were renamed: 2 moved to the curator’s current MDBList list, 1 replaced with a similar public list."
       },
       "groupCount": 5,
       "branchCount": 18,
@@ -3597,7 +3597,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 2 moved to the curator’s current MDBList list, 2 replaced with a similar public list."
       },
       "groupCount": 5,
       "branchCount": 38,
@@ -3713,7 +3713,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 1 removed. Repaired again 2026-11-04: the Star Wars shows list went private, so the Star Wars row now uses nobnobz’s Star Wars Universe list for its shows."
       },
       "groupCount": 4,
       "branchCount": 28,
@@ -3827,7 +3827,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 19 moved to the curator’s current MDBList list."
       },
       "groupCount": 5,
       "branchCount": 46,
@@ -3975,7 +3975,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 41 moved to the curator’s current MDBList list."
       },
       "groupCount": 2,
       "branchCount": 22,
@@ -4046,7 +4046,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 8 moved to the curator’s current MDBList list. Repaired again 2026-11-04: the Scream list was deleted, so its row now uses TMDB’s Scream collection."
       },
       "groupCount": 7,
       "branchCount": 62,
@@ -4259,7 +4259,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 15 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 10,
@@ -4319,7 +4319,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 33 moved to the curator’s current MDBList list, 2 replaced with a similar public list."
       },
       "groupCount": 1,
       "branchCount": 21,
@@ -4390,7 +4390,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 15 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 10,
@@ -4450,7 +4450,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 25 moved to the curator’s current MDBList list, 1 replaced with a similar public list."
       },
       "groupCount": 1,
       "branchCount": 56,
@@ -4556,7 +4556,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 19 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 14,
@@ -4620,7 +4620,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 18 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 13,
@@ -4683,7 +4683,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "1 part that Cedar can’t show yet was left out."
+        "conversion": "1 part that Cedar can’t show yet was left out. Lists repaired 2026-10-20 after their originals went private or were renamed: 16 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 16,
@@ -4749,7 +4749,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "1 part that Cedar can’t show yet was left out."
+        "conversion": "1 part that Cedar can’t show yet was left out. Lists repaired 2026-10-20 after their originals went private or were renamed: 16 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 16,
@@ -4815,7 +4815,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "2 parts that Cedar can’t show yet were left out."
+        "conversion": "2 parts that Cedar can’t show yet were left out. Lists repaired 2026-10-20 after their originals went private or were renamed: 14 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 9,
@@ -4874,7 +4874,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": "2 parts that Cedar can’t show yet were left out."
+        "conversion": "2 parts that Cedar can’t show yet were left out. Lists repaired 2026-10-20 after their originals went private or were renamed: 3 moved to the curator’s current MDBList list, 20 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 15,
@@ -4939,7 +4939,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 2 moved to the curator’s current MDBList list, 14 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 10,
@@ -4999,7 +4999,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 2 moved to the curator’s current MDBList list, 16 rebuilt as Cedar streaming-service rows."
       },
       "groupCount": 1,
       "branchCount": 12,
@@ -5061,7 +5061,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 7 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 7,
@@ -5118,7 +5118,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 7 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 7,
@@ -5175,7 +5175,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 5 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 5,
@@ -5229,7 +5229,7 @@
       "credit": {
         "platform": "Community",
         "via": null,
-        "conversion": null
+        "conversion": "Lists repaired 2026-10-20 after their originals went private or were renamed: 7 moved to the curator’s current MDBList list."
       },
       "groupCount": 1,
       "branchCount": 10,
