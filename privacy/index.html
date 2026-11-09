@@ -52,7 +52,7 @@
 
       <main id="main" class="document-page">
         <header class="document-header">
-          <p class="eyebrow">Effective September 30, 2026</p>
+          <p class="eyebrow">Effective November 9, 2026</p>
           <h1>Privacy Policy</h1>
           <p>Cedar is local-first. Cedar requires no developer-operated user account and operates no advertising network, analytics backend, or media service. Optional sync and connected-service features are described below.</p>
         </header>
@@ -69,6 +69,8 @@
             <h2>Services you connect</h2>
             <p>Cedar contacts only services needed for features you choose: configured media sources, metadata and artwork providers, optional tracking or watchlist accounts, subtitle or add-on endpoints, and public sports-data providers. Requests go directly from your device to those services and are governed by their privacy policies.</p>
             <p>If you connect Trakt, Simkl, or MDBList, Cedar sends that service the connected account identifier and the title identifiers, progress, timestamps, history, watchlist changes, or ratings needed for the sync actions you enable.</p>
+            <p>If you link Discord and turn on Share What I’m Watching on iPhone, iPad or Mac, your device sends Discord the status your profile allows while Cedar plays: the title, episode, a public poster image and the elapsed time, or only that you are watching something in Cedar. It is sent straight from your device to Discord through Discord’s SDK, clears when playback stops, and is never available to Kids profiles. Your Discord sign-in is kept in the Keychain and syncs to your other Apple devices through iCloud Keychain; it is never added to a Cedar Household. Review the <a href="https://discord.com/privacy">Discord privacy policy</a>.</p>
+            <p>If you also turn on Share Ratings, the rating sheet offers to post your rating in the #ratings channel of Cedar’s Discord server. Only when you share, your device sends Cedar’s feedback service the title’s TMDB or IMDb identifier, the season and episode number, your score and your Discord sign-in. The service uses the sign-in once to look up your Discord account and confirm you are in the server, and does not keep it. It takes the title, year and poster from TMDB and posts them with your score, mentioning your Discord account, for everyone in the server to see. So that rating the same title again updates the same post, it keeps your Discord user ID, the title, your score and the post’s ID for up to a year. Removing the rating in Cedar deletes the post and that record. Share Ratings is off by default and is not offered to Kids profiles.</p>
           </section>
           <section>
             <h2>Cedar Link (retired)</h2>
@@ -104,7 +106,7 @@
           </section>
           <section>
             <h2>Permissions</h2>
-            <p>On supported iPhone and iPad devices, camera access is requested only when you choose to scan a one-time Cedar device-link QR code; manual code entry is available. Cedar does not capture or upload photos or video. Local-network access is used to discover and connect to Cedar devices, remotes, DVRs, and media servers you configure.</p>
+            <p>On supported iPhone and iPad devices, camera access is requested only when you choose to scan a one-time Cedar device-link QR code; manual code entry is available. Cedar does not capture or upload photos or video. Local-network access is used to discover and connect to Cedar devices, remotes, DVRs, and media servers you configure. On Apple TV, Cinema Lighting asks for Home access to dim and restore the lights in the room you choose, and, only if you choose a sunset schedule, for location access to look up the Apple TV’s approximate location once. The location and your HomeKit choices stay on that Apple TV and are never sent to Cedar.</p>
           </section>
           <section>
             <h2>Network security</h2>
@@ -116,7 +118,7 @@
           </section>
           <section>
             <h2 id="privacy-choices">Your choices and contact</h2>
-            <p>You can disconnect services, remove sources and profiles, disable optional sync features, revoke linked devices, export or delete local data, or delete the app. Cedar operates no user-account database, so there is no Cedar account to export or delete. Use the public support page for privacy questions and contact options.</p>
+            <p>You can disconnect services, remove sources and profiles, disable optional sync features, revoke linked devices, export or delete local data, or delete the app. Cedar operates no user-account database, so there is no Cedar account to export or delete. To take down a rating you shared to Cedar Discord, remove the rating in Cedar or ask through the support page. Use the public support page for privacy questions and contact options.</p>
             <a class="inline-document-link" href="/cedar-tv-updates/support/">Contact Cedar support</a>
           </section>
         </div>

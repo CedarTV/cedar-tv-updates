@@ -30,40 +30,40 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "81",
-      "date": "2026-11-04",
+      "build": "82",
+      "date": "2026-11-09",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Tracking hub, Viewing Stats, Multiview layouts, Live TV Picture in Picture and Search Subtitles.",
+      "summary": "External TestFlight. Right Now, Discord sharing, SMB network shares, richer sports game pages and settings that follow the profile.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "81",
-      "date": "2026-11-04",
+      "build": "82",
+      "date": "2026-11-09",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Tracking hub, Viewing Stats, Multiview layouts, Live TV Picture in Picture and Search Subtitles.",
+      "summary": "External TestFlight. Discord sharing, SMB network shares, richer sports game pages, Multiview full screen and settings that follow the profile.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
       "id": "apple-tv",
       "name": "Cedar for Apple TV",
       "version": "1.0.0",
-      "build": "81",
-      "date": "2026-11-04",
+      "build": "82",
+      "date": "2026-11-09",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Tracking hub, Viewing Stats, a smoother Live guide that keeps playing, Multiview layouts and Search Subtitles.",
+      "summary": "External TestFlight. Right Now, Cinema Lighting, SMB network shares, richer sports game pages and Focus Ring and Focus Color.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
       "id": "mac",
       "name": "Cedar for Mac",
       "version": "1.0.0",
-      "build": "81",
-      "date": "2026-11-04",
+      "build": "82",
+      "date": "2026-11-09",
       "status": "testflight",
-      "summary": "External TestFlight. Cedar Tracking hub, Viewing Stats, Multiview layouts, Live TV Picture in Picture and Search Subtitles.",
+      "summary": "External TestFlight. Discord sharing, SMB network shares, richer sports game pages, League Overview and settings that follow the profile.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

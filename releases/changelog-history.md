@@ -1,12 +1,81 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled November 4, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
+Compiled November 9, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 82 · 2026-11-09
+
+November 9, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Right Now — a Live page that opens with live games, favorite channels on air and your reminders. On Apple TV, choose it under Live TV View.
+- Share to Discord — show what you’re watching as your Discord status, and share your ratings to #ratings on Cedar’s Discord. Experimental.
+- SMB network shares — connect SMB shares as well as WebDAV, together under Network Shares.
+- Sports game pages — add head-to-head records, mini standings, recent form and officials, with better lineups and player photos.
+
+#### Live TV, sports and DVR
+
+- On Now — Favorites no longer repeat in On Now, and genres move to Browse by Genre.
+- Remove from Continue Watching — remove a live channel from Continue Watching.
+- Multiview full screen — play Multiview full screen.
+- Stalker portals — sign in the way MAG boxes do, with clearer errors when a portal refuses.
+- Recording status — channel and programme pages show what’s recording, with Stop Recording, Cancel Recording and Watch from Start.
+- Scheduled Recordings — the Scheduled Recordings shelf shows recordings as cards.
+- Home DVR — the Home DVR you pick is saved with the profile.
+- Preferred Channels — choose the sports networks Cedar should try first, found by scanning your guide.
+- Team pages — open with the live or next game.
+- Soccer clubs — a club’s games from every competition appear together.
+- League Overview — a league page opens on an Overview of games, standings and news.
+- Lineups — lineups are clearer, with rugby and baseball layouts.
+- Sports channels — guide matching for sports channels is more accurate.
+- Sports cards — follow your overlay style. Feature becomes Showcase Landscape, and Feature XL is new.
+
+#### Playback and sources
+
+- Only When Needed — subtitles turn on when the audio isn’t in one of your subtitle languages.
+- Trailer Language — choose the language trailers play in.
+- Season posters — choose where season posters come from, and swipe through them.
+- Stats for Nerds — a verdict row says whether playback is smooth, waiting on the source or dropping frames.
+- Continue Watching — shows with new episodes move back up.
+
+#### Home, profiles and settings
+
+- Social Home — a Home Layout with story rings for trailers, For You, services, networks and studios. Experimental.
+- Discord sign-in — syncs across your devices, and your Discord avatar can be your profile picture.
+- Reorder Profiles — put profiles in the order you want.
+- Profile settings — seek, gesture and player control settings follow the profile. Download limits stay with each device.
+- Always Use Posters — show landscape Branches and folders as posters when you open them.
+- Age Rating — Cedar Posters can show the age rating.
+- Poster Style — the editor is redesigned, with Poster Depth and a frosted Glass finish. The genre line is one size across a Branch.
+- Settings — pages are reorganised, with shorter footers.
+- Calendar — includes shows you’re watching, and unstarted titles say Start Watching.
+
+#### Fixes
+
+- Streams play again after Cedar returns from the background with the VPN on, without toggling the VPN.
+- Removed playlists no longer leave a guide behind that fails to refresh. Leftover guides can be removed in Live TV Playlists settings.
+- Game pages no longer stutter as they open, and the Preferred Channels scan no longer freezes.
+- Minimizing and expanding the player no longer flashes.
+- Availability marks show on Cedar Posters again.
+- Titles out on release day no longer appear twice in Upcoming and Continue Watching.
+- A deleted AI For You Branch no longer comes back.
+- A removed live channel no longer stays in Continue Watching.
+- Taps on the title menu always register, and focused posters no longer overlap their neighbours.
+- The content rating notice no longer jumps as it goes away.
+
+#### Known issues
+
+- Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar.
+- The player’s episode list doesn’t use season sections yet. Use the title page to jump between seasons.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-82/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-82)
 
 ### 1.0.0 · build 81 · 2026-11-04
 
@@ -1302,6 +1371,74 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 82 · 2026-11-09
+
+November 9, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Share to Discord — show what you’re watching as your Discord status, and share your ratings to #ratings on Cedar’s Discord. Experimental.
+- SMB network shares — connect SMB shares as well as WebDAV, together under Network Shares.
+- Sports game pages — add head-to-head records, mini standings, recent form and officials, with better lineups and player photos.
+
+#### Live TV, sports and DVR
+
+- On Now — Favorites no longer repeat in On Now, and genres move to Browse by Genre.
+- Remove from Continue Watching — remove a live channel from Continue Watching.
+- Multiview full screen — play Multiview full screen.
+- Stalker portals — sign in the way MAG boxes do, with clearer errors when a portal refuses.
+- Recording status — channel and programme pages show what’s recording, with Stop Recording, Cancel Recording and Watch from Start.
+- Scheduled Recordings — the Scheduled Recordings shelf shows recordings as cards.
+- Home DVR — the Home DVR you pick is saved with the profile.
+- Preferred Channels — choose the sports networks Cedar should try first, found by scanning your guide.
+- Team pages — open with the live or next game.
+- Soccer clubs — a club’s games from every competition appear together.
+- League Overview — a league page opens on an Overview of games, standings and news.
+- Lineups — lineups are clearer, with rugby and baseball layouts.
+- Sports channels — guide matching for sports channels is more accurate.
+- Sports cards — follow your overlay style. Feature becomes Showcase Landscape, and Feature XL is new.
+
+#### Playback and sources
+
+- Only When Needed — subtitles turn on when the audio isn’t in one of your subtitle languages.
+- Trailer Language — choose the language trailers play in.
+- Season posters — choose where season posters come from, and swipe through them.
+- Stats for Nerds — a verdict row says whether playback is smooth, waiting on the source or dropping frames.
+- Continue Watching — shows with new episodes move back up.
+
+#### Home, profiles and settings
+
+- Social Home — a Home Layout with story rings for trailers, For You, services, networks and studios. Experimental.
+- Discord sign-in — syncs across your devices, and your Discord avatar can be your profile picture.
+- Reorder Profiles — put profiles in the order you want.
+- Profile settings — seek, gesture and player control settings follow the profile. Download limits stay with each device.
+- Always Use Posters — show landscape Branches and folders as posters when you open them.
+- Age Rating — Cedar Posters can show the age rating.
+- Poster Style — the editor is redesigned, with Poster Depth and a frosted Glass finish. The genre line is one size across a Branch.
+- Settings — pages are reorganised, with shorter footers.
+- Calendar — includes shows you’re watching, and unstarted titles say Start Watching.
+
+#### Fixes
+
+- Streams play again after Cedar returns from the background with the VPN on, without toggling the VPN.
+- Removed playlists no longer leave a guide behind that fails to refresh. Leftover guides can be removed in Live TV Playlists settings.
+- Game pages no longer stutter as they open, and the Preferred Channels scan no longer freezes.
+- Minimizing and expanding the player no longer flashes.
+- Availability marks show on Cedar Posters again.
+- Titles out on release day no longer appear twice in Upcoming and Continue Watching.
+- A deleted AI For You Branch no longer comes back.
+- A removed live channel no longer stays in Continue Watching.
+- Taps on the title menu always register, and focused posters no longer overlap their neighbours.
+- The content rating notice no longer jumps as it goes away.
+
+#### Known issues
+
+- Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar.
+- The player’s episode list doesn’t use season sections yet. Use the title page to jump between seasons.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-82/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-82)
 
 ### 1.0.0 · build 81 · 2026-11-04
 
@@ -2606,6 +2743,75 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 82 · 2026-11-09
+
+November 9, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Right Now — a Live page that opens with live games, favorite channels on air and your reminders. On Apple TV, choose it under Live TV View.
+- Cinema Lighting — dims the lights in a HomeKit room while Cedar plays and puts them back when you stop. It can follow sunset. Experimental.
+- SMB network shares — connect SMB shares as well as WebDAV, together under Network Shares.
+- Sports game pages — add head-to-head records, mini standings, recent form and officials, with better lineups and player photos.
+
+#### Live TV, sports and DVR
+
+- On Now — Favorites no longer repeat in On Now, and genres move to Browse by Genre.
+- Remove from Continue Watching — remove a live channel from Continue Watching.
+- Live page — Custom Lineups appear in the category list, and the guide is taller.
+- Stalker portals — sign in the way MAG boxes do, with clearer errors when a portal refuses.
+- Recording status — channel and programme pages show what’s recording, with Stop Recording, Cancel Recording and Watch from Start.
+- Scheduled Recordings — the Scheduled Recordings shelf shows recordings as cards.
+- Home DVR — the Home DVR you pick is saved with the profile.
+- Preferred Channels — choose the sports networks Cedar should try first, found by scanning your guide.
+- Team pages — open with the live or next game.
+- Soccer clubs — a club’s games from every competition appear together.
+- Lineups — lineups are clearer, with rugby and baseball layouts.
+- Sports channels — guide matching for sports channels is more accurate.
+- Sports cards — follow your overlay style. Feature becomes Showcase Landscape, and Feature XL is new.
+
+#### Playback and sources
+
+- Only When Needed — subtitles turn on when the audio isn’t in one of your subtitle languages.
+- Trailer Language — choose the language trailers play in.
+- Season posters — choose where season posters come from, and swipe through them.
+- Stats for Nerds — a verdict row says whether playback is smooth, waiting on the source or dropping frames.
+- Up Next — the countdown is easier to read.
+- Continue Watching — shows with new episodes move back up.
+
+#### Home, profiles and settings
+
+- Reorder Profiles — put profiles in the order you want.
+- Profile settings — seek, gesture and player control settings follow the profile. Download limits stay with each device.
+- Always Use Posters — show landscape Branches and folders as posters when you open them.
+- Age Rating — Cedar Posters can show the age rating.
+- Focus Ring and Focus Color — choose how the focus highlight looks.
+- Poster Style — the editor is redesigned, with Poster Depth and a frosted Glass finish. The genre line is one size across a Branch.
+- Remote — holding Select opens the standard menu, and Left and Right move through the hero.
+- Settings — pages are reorganised, with shorter footers.
+- Calendar — includes shows you’re watching, and unstarted titles say Start Watching.
+
+#### Fixes
+
+- Streams play again after Cedar returns from the background with the VPN on, without toggling the VPN.
+- Removed playlists no longer leave a guide behind that fails to refresh. Leftover guides can be removed in Live TV Playlists settings.
+- Game pages no longer stutter as they open, and the Preferred Channels scan no longer freezes.
+- Minimizing and expanding the player no longer flashes.
+- Availability marks show on Cedar Posters again.
+- Titles out on release day no longer appear twice in Upcoming and Continue Watching.
+- A deleted AI For You Branch no longer comes back.
+- A removed live channel no longer stays in Continue Watching.
+- Taps on the title menu always register, and focused posters no longer overlap their neighbours.
+- The content rating notice no longer jumps as it goes away.
+
+#### Known issues
+
+- Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar.
+- The player’s episode list doesn’t use season sections yet. Use the title page to jump between seasons.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-82/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-82)
+
 ### 1.0.0 · build 81 · 2026-11-04
 
 November 4, 2026 · Released to External TestFlight for Apple TV.
@@ -3801,6 +4007,73 @@ Processed successfully. External TestFlight availability is not confirmed for th
 Apple rejected this build 1 upload during processing because required Top Shelf device capabilities and wide images were missing. It was not available to testers. Build 2 corrected these issues. The feature descriptions above record the intended initial baseline, not a successful release.
 
 ## Mac
+
+### 1.0.0 · build 82 · 2026-11-09
+
+November 9, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Share to Discord — show what you’re watching as your Discord status, and share your ratings to #ratings on Cedar’s Discord. Experimental.
+- SMB network shares — connect SMB shares as well as WebDAV, together under Network Shares.
+- Sports game pages — add head-to-head records, mini standings, recent form and officials, with better lineups and player photos.
+
+#### Live TV, sports and DVR
+
+- On Now — Favorites no longer repeat in On Now, and genres move to Browse by Genre.
+- Remove from Continue Watching — remove a live channel from Continue Watching.
+- Stalker portals — sign in the way MAG boxes do, with clearer errors when a portal refuses.
+- Recording status — channel and programme pages show what’s recording, with Stop Recording, Cancel Recording and Watch from Start.
+- Scheduled Recordings — the Scheduled Recordings shelf shows recordings as cards.
+- Home DVR — the Home DVR you pick is saved with the profile.
+- Preferred Channels — choose the sports networks Cedar should try first, found by scanning your guide.
+- Team pages — open with the live or next game.
+- Soccer clubs — a club’s games from every competition appear together.
+- League Overview — a league page opens on an Overview of games, standings and news.
+- Lineups — lineups are clearer, with rugby and baseball layouts.
+- Sports channels — guide matching for sports channels is more accurate.
+- Sports cards — follow your overlay style. Feature becomes Showcase Landscape, and Feature XL is new.
+
+#### Playback and sources
+
+- Only When Needed — subtitles turn on when the audio isn’t in one of your subtitle languages.
+- Trailer Language — choose the language trailers play in.
+- Season posters — choose where season posters come from, and swipe through them.
+- Stats for Nerds — a verdict row says whether playback is smooth, waiting on the source or dropping frames.
+- Continue Watching — shows with new episodes move back up.
+
+#### Home, profiles and settings
+
+- Social Home — a Home Layout with story rings for trailers, For You, services, networks and studios. Experimental.
+- Discord sign-in — syncs across your devices, and your Discord avatar can be your profile picture.
+- Reorder Profiles — put profiles in the order you want.
+- Profile settings — seek, gesture and player control settings follow the profile. Download limits stay with each device.
+- Always Use Posters — show landscape Branches and folders as posters when you open them.
+- Age Rating — Cedar Posters can show the age rating.
+- Poster Style — the editor is redesigned, with Poster Depth and a frosted Glass finish. The genre line is one size across a Branch.
+- Settings — pages are reorganised, with shorter footers.
+- Calendar — includes shows you’re watching, and unstarted titles say Start Watching.
+
+#### Fixes
+
+- Streams play again after Cedar returns from the background with the VPN on, without toggling the VPN.
+- Removed playlists no longer leave a guide behind that fails to refresh. Leftover guides can be removed in Live TV Playlists settings.
+- Game pages no longer stutter as they open, and the Preferred Channels scan no longer freezes.
+- Minimizing and expanding the player no longer flashes.
+- Availability marks show on Cedar Posters again.
+- Titles out on release day no longer appear twice in Upcoming and Continue Watching.
+- A deleted AI For You Branch no longer comes back.
+- A removed live channel no longer stays in Continue Watching.
+- Taps on the title menu always register, and focused posters no longer overlap their neighbours.
+- The content rating notice no longer jumps as it goes away.
+
+#### Known issues
+
+- Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar.
+- The player’s episode list doesn’t use season sections yet. Use the title page to jump between seasons.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-82/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-82)
 
 ### 1.0.0 · build 81 · 2026-11-04
 
