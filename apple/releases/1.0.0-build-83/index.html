@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Build 83 is the first Cedar build with one number on every platform: iPhone, iPad, Apple TV, Mac and Android TV. Source Cards puts card layout, fields and…">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Cedar 1.0.0 build 83 release notes</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-83/">
+    <link rel="icon" type="image/png" href="/cedar-tv-updates/assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="/cedar-tv-updates/assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="/cedar-tv-updates/policy.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/build-notes.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="cedar-header">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/#download">Get Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Primary navigation">
+            <a href="/cedar-tv-updates/">Home</a>
+            <a href="/cedar-tv-updates/apple/">Apple apps</a>
+            <a href="/cedar-tv-updates/server/">Cedar Server</a>
+            <a href="/cedar-tv-updates/releases/">What’s new</a>
+            <a href="/cedar-tv-updates/roadmap/">Roadmap</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/support/">Support</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Theme
+              <select aria-label="Color theme" data-theme-select>
+                <option value="system">System</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+              </select>
+            </label>
+            <a class="cedar-download" href="/cedar-tv-updates/#download">Get Cedar</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="build-notes">
+        <a class="release-back" href="/cedar-tv-updates/releases/">All release notes</a>
+        <header class="note-cover">
+          <div class="note-wall" aria-hidden="true"><div class="note-wall-row"><img src="/cedar-tv-updates/apple/releases/assets/posters/aster-vale.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-glass-harbor.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-paper-atlas.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/night-shift-at-the-nova.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/last-light-motel.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/pip-and-the-moon-engine.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-last-signal.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/one-more-sunday.webp" width="240" height="360" alt="" decoding="async"></div><div class="note-wall-row"><img src="/cedar-tv-updates/apple/releases/assets/posters/night-shift-at-the-nova.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/last-light-motel.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/pip-and-the-moon-engine.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-last-signal.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/one-more-sunday.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-velvet-exit.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/after-the-orchard.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/aster-vale.webp" width="240" height="360" alt="" decoding="async"></div><div class="note-wall-row"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-last-signal.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/one-more-sunday.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-velvet-exit.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/after-the-orchard.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/aster-vale.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-glass-harbor.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/the-paper-atlas.webp" width="240" height="360" alt="" decoding="async"><img src="/cedar-tv-updates/apple/releases/assets/posters/night-shift-at-the-nova.webp" width="240" height="360" alt="" decoding="async"></div></div>
+          <div class="note-cover-content">
+            <p class="note-brand"><img src="/cedar-tv-updates/assets/cedar-app-icon.png" width="40" height="40" alt=""><span>Cedar</span><span class="note-brand-label">Release notes</span></p>
+            <p class="note-cover-badges">
+              <span class="note-audience note-audience-external">External TestFlight · Apple devices</span>
+              <span class="note-audience note-audience-beta">Early beta · Android TV</span>
+              <time datetime="2026-11-11">November 11, 2026</time>
+            </p>
+            <h1><span class="note-version">Version 1.0.0</span> Build 83</h1>
+            <p class="note-intro">Build 83 is the first Cedar build with one number on every platform: iPhone, iPad, Apple TV, Mac and Android TV. Source Cards puts card layout, fields and tags on one page with a live preview. Jellyfin and Emby collections can become Branches, the source picker can filter its results, and SMB playback no longer stalls. On Android TV, Branch Groups arrive with every Apple TV preset, along with Top 10, For You, Upcoming and Home DVR Branches, Sleep Timer and Mark Segments.</p>
+            <ul class="note-glance" aria-label="At a glance"><li class="note-glance-new"><strong>9</strong><span>New</span></li><li class="note-glance-improved"><strong>11</strong><span>Improved</span></li><li class="note-glance-fixed"><strong>7</strong><span>Fixed</span></li><li class="note-glance-devices"><strong>5</strong><span>Devices</span></li></ul>
+            <ul class="note-cover-devices" aria-label="Devices in this build"><li class="note-device"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4.5" y="1.5" width="7" height="13" rx="1.8"/><path d="M7 3.4h2"/></svg>iPhone</li><li class="note-device"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="1.5" width="11" height="13" rx="1.6"/><path d="M7.3 12.6h1.4"/></svg>iPad</li><li class="note-device"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1.2"/><path d="M5.5 13.8h5M8 11v2.8"/></svg>Apple TV</li><li class="note-device"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="10" height="7.2" rx="1"/><path d="M1.5 12.8h13"/></svg>Mac</li><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul>
+            <nav class="note-contents" aria-label="Sections">
+              <ol>
+              <li><a href="#highlights"><span class="note-contents-number">1</span><span class="note-contents-title">Highlights</span><span class="note-contents-count">5 new</span></a></li>
+              <li><a href="#home-and-branches"><span class="note-contents-number">2</span><span class="note-contents-title">Home and Branches</span><span class="note-contents-count">2 new, 5 improved</span></a></li>
+              <li><a href="#playback-and-sources"><span class="note-contents-number">3</span><span class="note-contents-title">Playback and sources</span><span class="note-contents-count">2 new, 6 improved</span></a></li>
+              <li><a href="#fixes"><span class="note-contents-number">4</span><span class="note-contents-title">Fixes</span><span class="note-contents-count">7 fixed</span></a></li>
+              <li><a href="#known-issues"><span class="note-contents-number">5</span><span class="note-contents-title">Known issues</span><span class="note-contents-count">2 known issues</span></a></li>
+              </ol>
+            </nav>
+            <div class="note-actions"><a class="note-action note-action-primary" href="/cedar-tv-updates/apple/releases/1.0.0-build-83/Cedar-1.0.0-build-83.pdf" download>Download PDF</a><a class="note-action" href="/cedar-tv-updates/apple/releases/iphone/#version-1-0-0-build-83">iPhone notes</a><a class="note-action" href="/cedar-tv-updates/apple/releases/ipad/#version-1-0-0-build-83">iPad notes</a><a class="note-action" href="/cedar-tv-updates/apple/releases/apple-tv/#version-1-0-0-build-83">Apple TV notes</a><a class="note-action" href="/cedar-tv-updates/apple/releases/mac/#version-1-0-0-build-83">Mac notes</a><a class="note-action" href="/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-83">Android TV notes</a></div>
+            <p class="note-print-url">cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-83/</p>
+          </div>
+        </header>
+
+        <section class="note-section note-section-highlights" id="highlights" aria-labelledby="highlights-title">
+          <header class="note-section-header">
+            <span class="note-section-number" aria-hidden="true">1</span>
+            <h2 id="highlights-title">Highlights</h2>
+            <p>5 new</p>
+          </header>
+          <div class="note-cards">
+          <article class="note-card note-new">
+            <div class="note-card-copy">
+              <span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span>
+              <h3>Source Cards</h3>
+              <p>One page for card layout, fields and tags, with a preview of your last source search. New fields show video codec, bitrate, Dub · Sub and subtitles.</p>
+            </div>
+          </article>
+          <article class="note-card note-new">
+            <div class="note-card-copy">
+              <span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span>
+              <h3>Server Collections</h3>
+              <p>Jellyfin and Emby collections, including lists your server’s plugins sync, become Branches in the server’s order. Open a server’s page and choose Branches.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-apple"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="9" height="6.5" rx="1"/><rect x="10.5" y="5.5" width="4" height="8" rx="1"/><path d="M4 12h4.5"/></svg>Apple devices</li></ul></div>
+            </div>
+          </article>
+          <article class="note-card note-new">
+            <div class="note-card-copy">
+              <span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span>
+              <h3>Source picker filters</h3>
+              <p>Set Picker Top Bar to Filters for chips that narrow one picker without changing your saved rules.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-apple"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="9" height="6.5" rx="1"/><rect x="10.5" y="5.5" width="4" height="8" rx="1"/><path d="M4 12h4.5"/></svg>Apple devices</li></ul></div>
+            </div>
+          </article>
+          <article class="note-card note-new">
+            <div class="note-card-copy">
+              <span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span>
+              <h3>Branch Groups</h3>
+              <p>Every Branch Group preset from Apple TV, from streaming services, networks and studios to genres, decades, sagas, directors and actors, plus Cross With… to combine two folders.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          <article class="note-card note-new">
+            <div class="note-card-copy">
+              <span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span>
+              <h3>More Branches</h3>
+              <p>Top 10 Chart, Top Picks for You, Because You Watched, Upcoming, and Home DVR Branches for Recordings, Recording Now and Recorded Shows.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          </div>
+        </section>
+
+        <section class="note-section note-section-rows" id="home-and-branches" aria-labelledby="home-and-branches-title">
+          <header class="note-section-header">
+            <span class="note-section-number" aria-hidden="true">2</span>
+            <h2 id="home-and-branches-title">Home and Branches</h2>
+            <p>2 new, 5 improved</p>
+          </header>
+          <article class="note-row note-new">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Clean sports cards</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span></div>
+              <p>A sixth Sports Branch layout: a frosted card with the live clock, scores, records and the league.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-apple"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="9" height="6.5" rx="1"/><rect x="10.5" y="5.5" width="4" height="8" rx="1"/><path d="M4 12h4.5"/></svg>Apple devices</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Live Sports cards</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Scores sit along the bottom of the card, and live cards show the game clock.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-apple"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="9" height="6.5" rx="1"/><rect x="10.5" y="5.5" width="4" height="8" rx="1"/><path d="M4 12h4.5"/></svg>Apple devices</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-new">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>New streaming service Branches</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span></div>
+              <p>When a Branch Group preset gains services, Home offers to add them once.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Branch editor</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Pick genres, studios, services, networks, keywords, languages and countries by name, choose a Trending window, feature a person, and let new Branches name themselves from their filters.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Connected Lists</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Choose Trakt, MDBList or Simkl, then your Watchlist, Collection, Recommended, Favorites or your own lists.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Top 10</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Titles are numbered by chart place, with a number style per Branch and movement badges.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Folders</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Choose folder artwork and one card shape for the whole group. Seasonal Branches take a year.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="note-section note-section-rows" id="playback-and-sources" aria-labelledby="playback-and-sources-title">
+          <header class="note-section-header">
+            <span class="note-section-number" aria-hidden="true">3</span>
+            <h2 id="playback-and-sources-title">Playback and sources</h2>
+            <p>2 new, 6 improved</p>
+          </header>
+          <article class="note-row note-new">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Sleep Timer</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span></div>
+              <p>Stop playback after a set time or at the end of the episode, from the player’s options.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-new">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Mark Segments</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2.2v11.6M2.2 8h11.6"/></svg>New</span></div>
+              <p>Mark intros, recaps, previews and credits from the player and send them in.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>IPTV playlists</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Switch a playlist off and on, and turn every content type off.</p>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Tobacco Tie settings</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Switches for each capability, Replace Address, a Test button and Last Refreshed. On iPhone, iPad and Mac, Configure opens inside Cedar.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-apple"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="9" height="6.5" rx="1"/><rect x="10.5" y="5.5" width="4" height="8" rx="1"/><path d="M4 12h4.5"/></svg>Apple devices</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Server availability</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Badges fill in while a large server is still being read, with a progress notice.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-apple"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="2.5" width="9" height="6.5" rx="1"/><rect x="10.5" y="5.5" width="4" height="8" rx="1"/><path d="M4 12h4.5"/></svg>Apple devices</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Tag packs</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Read codecs, audio channels and streaming services more accurately.</p>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Stalker portals</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Sign-in explains blocked, login-required and refused-MAC profiles.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+          <article class="note-row note-improved">
+            <div class="note-row-copy">
+              <div class="note-row-head"><h3>Live categories</h3><span class="note-tag"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 11.5 6.5 7.5l2.5 2.5 4.5-5"/><path d="M10 5h3.5v3.5"/></svg>Improved</span></div>
+              <p>Choosing a category moves focus to the guide’s first channel.</p>
+              <div class="note-meta"><ul class="note-devices" aria-label="Devices"><li class="note-device note-device-android"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="8.5" rx="1.2"/><path d="M5.8 1.2 8 3.4l2.2-2.2M5 14.3h6"/></svg>Android TV</li></ul></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="note-section note-section-fixes" id="fixes" aria-labelledby="fixes-title">
+          <header class="note-section-header">
+            <span class="note-section-number" aria-hidden="true">4</span>
+            <h2 id="fixes-title">Fixes</h2>
+            <p>7 fixed</p>
+          </header>
+          <ul class="note-checklist note-checklist-fixes">
+            <li class="note-check note-fixed"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.4 6.3 11.6 13 4.6"/></svg><span>SMB playback no longer stalls partway through large files. <span class="note-check-devices">Apple devices</span></span></li>
+            <li class="note-check note-fixed"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.4 6.3 11.6 13 4.6"/></svg><span>AV1 files whose container reports the wrong bit depth now play. <span class="note-check-devices">Apple devices</span></span></li>
+            <li class="note-check note-fixed"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.4 6.3 11.6 13 4.6"/></svg><span>Xtream playlists that send TMDB IDs as tmdb_id show Playlist Availability badges after their next refresh.</span></li>
+            <li class="note-check note-fixed"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.4 6.3 11.6 13 4.6"/></svg><span>Game cards show AET and PEN for football, and OT and SO for other sports.</span></li>
+            <li class="note-check note-fixed"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.4 6.3 11.6 13 4.6"/></svg><span>On tvOS 26, the detail page’s Play button and info chips no longer look black. <span class="note-check-devices">Apple TV</span></span></li>
+            <li class="note-check note-fixed"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.4 6.3 11.6 13 4.6"/></svg><span>Swiping to delete a Branch in Home &amp; Branches no longer closes Settings. <span class="note-check-devices">iPhone, iPad</span></span></li>
+            <li class="note-check note-fixed"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.4 6.3 11.6 13 4.6"/></svg><span>Continue Watching and Next Up use the same order. <span class="note-check-devices">Android TV</span></span></li>
+          </ul>
+        </section>
+
+        <section class="note-section note-section-known" id="known-issues" aria-labelledby="known-issues-title">
+          <header class="note-section-header">
+            <span class="note-section-number" aria-hidden="true">5</span>
+            <h2 id="known-issues-title">Known issues</h2>
+            <p>2 known issues</p>
+          </header>
+          <ul class="note-checklist note-checklist-known">
+            <li class="note-check note-known"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v4M8 4.9v.1"/></svg><span>Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar. <span class="note-check-devices">Apple devices</span></span></li>
+            <li class="note-check note-known"><svg class="note-icon" viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6.2"/><path d="M8 7.2v4M8 4.9v.1"/></svg><span>Server Collections Branches, source picker filters and the redesigned Tobacco Tie settings aren’t on Android TV yet. <span class="note-check-devices">Android TV</span></span></li>
+          </ul>
+        </section>
+
+        <div class="note-links">
+          <p><a href="https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-83/">Full release notes</a> · <a href="https://testflight.apple.com/join/4A7sZ4q2">Join TestFlight</a> · <a href="https://cedartv.github.io/cedar-tv-updates/server/">Cedar Server setup</a></p>
+          <p><a href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-83">Matching library source and platform relinking kits</a></p>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/" aria-label="Cedar home">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>A focused media player and organizer for the screens you already own. Connect only sources and services you are authorized to use.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Footer navigation">
+          <section class="site-footer-group">
+            <h2>Products</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/">Apple apps</a></li>
+              <li><a href="/cedar-tv-updates/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Release notes</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Resources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/support/">Support</a></li>
+              <li><a href="/cedar-tv-updates/privacy/">Privacy</a></li>
+              <li><a href="/cedar-tv-updates/accessibility/">Accessibility</a></li>
+              <li><a href="/cedar-tv-updates/content-policy/">Content policy</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Community</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/feedback/">Send feedback</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar does not provide, host, or sell media content.</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

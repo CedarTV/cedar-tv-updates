@@ -6,12 +6,12 @@
       "platform": "android-tv",
       "name": "New Cedar app for Android TV",
       "version": "1.0.0",
-      "build": "12",
-      "date": "2026-11-04",
+      "build": "83",
+      "date": "2026-11-11",
       "status": "preview",
-      "summary": "A fresh early beta line with a new look that matches Apple TV, Viewing Stats, Live TV Branches, Follow people and When Resuming.",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-12",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0/Cedar-TV-1.0.0.apk"
+      "summary": "Branch Groups with every Apple TV preset, new Top 10, For You, Upcoming and Home DVR Branches, Source Cards, Sleep Timer and Mark Segments.",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-83",
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0-build-83/Cedar-TV-1.0.0-build-83.apk"
     }
   ],
   "platforms": [
@@ -30,40 +30,40 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "82",
-      "date": "2026-11-09",
+      "build": "83",
+      "date": "2026-11-11",
       "status": "testflight",
-      "summary": "External TestFlight. Right Now, Discord sharing, SMB network shares, richer sports game pages and settings that follow the profile.",
+      "summary": "External TestFlight. Source Cards, Server Collections Branches, source picker filters, Clean sports cards and an SMB playback fix.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "82",
-      "date": "2026-11-09",
+      "build": "83",
+      "date": "2026-11-11",
       "status": "testflight",
-      "summary": "External TestFlight. Discord sharing, SMB network shares, richer sports game pages, Multiview full screen and settings that follow the profile.",
+      "summary": "External TestFlight. Source Cards, Server Collections Branches, source picker filters, Clean sports cards and an SMB playback fix.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
       "id": "apple-tv",
       "name": "Cedar for Apple TV",
       "version": "1.0.0",
-      "build": "82",
-      "date": "2026-11-09",
+      "build": "83",
+      "date": "2026-11-11",
       "status": "testflight",
-      "summary": "External TestFlight. Right Now, Cinema Lighting, SMB network shares, richer sports game pages and Focus Ring and Focus Color.",
+      "summary": "External TestFlight. Source Cards with a live preview, Server Collections Branches, source picker filters and a tvOS 26 detail page fix.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
       "id": "mac",
       "name": "Cedar for Mac",
       "version": "1.0.0",
-      "build": "82",
-      "date": "2026-11-09",
+      "build": "83",
+      "date": "2026-11-11",
       "status": "testflight",
-      "summary": "External TestFlight. Discord sharing, SMB network shares, richer sports game pages, League Overview and settings that follow the profile.",
+      "summary": "External TestFlight. Source Cards, Server Collections Branches, source picker filters, Clean sports cards and an SMB playback fix.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

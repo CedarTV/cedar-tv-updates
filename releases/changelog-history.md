@@ -1,12 +1,49 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled November 9, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
+Compiled November 11, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 83 · 2026-11-11
+
+November 11, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Source Cards — one page for card layout, fields and tags, with a preview of your last source search. New fields show video codec, bitrate, Dub · Sub and subtitles.
+- Server Collections — Jellyfin and Emby collections, including lists your server’s plugins sync, become Branches in the server’s order. Open a server’s page and choose Branches.
+- Source picker filters — set Picker Top Bar to Filters for chips that narrow one picker without changing your saved rules.
+
+#### Home and Branches
+
+- Clean sports cards — a sixth Sports Branch layout: a frosted card with the live clock, scores, records and the league.
+- Live Sports cards — scores sit along the bottom of the card, and live cards show the game clock.
+
+#### Playback and sources
+
+- IPTV playlists — switch a playlist off and on, and turn every content type off.
+- Tobacco Tie settings — switches for each capability, Replace Address, a Test button and Last Refreshed. On iPhone, iPad and Mac, Configure opens inside Cedar.
+- Server availability — badges fill in while a large server is still being read, with a progress notice.
+- Tag packs — read codecs, audio channels and streaming services more accurately.
+
+#### Fixes
+
+- SMB playback no longer stalls partway through large files.
+- AV1 files whose container reports the wrong bit depth now play.
+- Xtream playlists that send TMDB IDs as tmdb_id show Playlist Availability badges after their next refresh.
+- Game cards show AET and PEN for football, and OT and SO for other sports.
+- Swiping to delete a Branch in Home & Branches no longer closes Settings.
+
+#### Known issues
+
+- Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-83/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-83)
 
 ### 1.0.0 · build 82 · 2026-11-09
 
@@ -1371,6 +1408,43 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 83 · 2026-11-11
+
+November 11, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Source Cards — one page for card layout, fields and tags, with a preview of your last source search. New fields show video codec, bitrate, Dub · Sub and subtitles.
+- Server Collections — Jellyfin and Emby collections, including lists your server’s plugins sync, become Branches in the server’s order. Open a server’s page and choose Branches.
+- Source picker filters — set Picker Top Bar to Filters for chips that narrow one picker without changing your saved rules.
+
+#### Home and Branches
+
+- Clean sports cards — a sixth Sports Branch layout: a frosted card with the live clock, scores, records and the league.
+- Live Sports cards — scores sit along the bottom of the card, and live cards show the game clock.
+
+#### Playback and sources
+
+- IPTV playlists — switch a playlist off and on, and turn every content type off.
+- Tobacco Tie settings — switches for each capability, Replace Address, a Test button and Last Refreshed. On iPhone, iPad and Mac, Configure opens inside Cedar.
+- Server availability — badges fill in while a large server is still being read, with a progress notice.
+- Tag packs — read codecs, audio channels and streaming services more accurately.
+
+#### Fixes
+
+- SMB playback no longer stalls partway through large files.
+- AV1 files whose container reports the wrong bit depth now play.
+- Xtream playlists that send TMDB IDs as tmdb_id show Playlist Availability badges after their next refresh.
+- Game cards show AET and PEN for football, and OT and SO for other sports.
+- Swiping to delete a Branch in Home & Branches no longer closes Settings.
+
+#### Known issues
+
+- Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-83/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-83)
 
 ### 1.0.0 · build 82 · 2026-11-09
 
@@ -2743,6 +2817,43 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 83 · 2026-11-11
+
+November 11, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Source Cards — one page for card layout, fields and tags, with a preview of your last source search. New fields show video codec, bitrate, Dub · Sub and subtitles.
+- Server Collections — Jellyfin and Emby collections, including lists your server’s plugins sync, become Branches in the server’s order. Open a server’s page and choose Branches.
+- Source picker filters — set Picker Top Bar to Filters for chips that narrow one picker without changing your saved rules.
+
+#### Home and Branches
+
+- Clean sports cards — a sixth Sports Branch layout: a frosted card with the live clock, scores, records and the league.
+- Live Sports cards — scores sit along the bottom of the card, and live cards show the game clock.
+
+#### Playback and sources
+
+- IPTV playlists — switch a playlist off and on, and turn every content type off.
+- Tobacco Tie settings — switches for each capability, Replace Address, a Test button and Last Refreshed. On iPhone, iPad and Mac, Configure opens inside Cedar.
+- Server availability — badges fill in while a large server is still being read, with a progress notice.
+- Tag packs — read codecs, audio channels and streaming services more accurately.
+
+#### Fixes
+
+- SMB playback no longer stalls partway through large files.
+- AV1 files whose container reports the wrong bit depth now play.
+- Xtream playlists that send TMDB IDs as tmdb_id show Playlist Availability badges after their next refresh.
+- Game cards show AET and PEN for football, and OT and SO for other sports.
+- On tvOS 26, the detail page’s Play button and info chips no longer look black.
+
+#### Known issues
+
+- Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-83/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-83)
+
 ### 1.0.0 · build 82 · 2026-11-09
 
 November 9, 2026 · Released to External TestFlight for Apple TV.
@@ -4008,6 +4119,42 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
+### 1.0.0 · build 83 · 2026-11-11
+
+November 11, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Source Cards — one page for card layout, fields and tags, with a preview of your last source search. New fields show video codec, bitrate, Dub · Sub and subtitles.
+- Server Collections — Jellyfin and Emby collections, including lists your server’s plugins sync, become Branches in the server’s order. Open a server’s page and choose Branches.
+- Source picker filters — set Picker Top Bar to Filters for chips that narrow one picker without changing your saved rules.
+
+#### Home and Branches
+
+- Clean sports cards — a sixth Sports Branch layout: a frosted card with the live clock, scores, records and the league.
+- Live Sports cards — scores sit along the bottom of the card, and live cards show the game clock.
+
+#### Playback and sources
+
+- IPTV playlists — switch a playlist off and on, and turn every content type off.
+- Tobacco Tie settings — switches for each capability, Replace Address, a Test button and Last Refreshed. On iPhone, iPad and Mac, Configure opens inside Cedar.
+- Server availability — badges fill in while a large server is still being read, with a progress notice.
+- Tag packs — read codecs, audio channels and streaming services more accurately.
+
+#### Fixes
+
+- SMB playback no longer stalls partway through large files.
+- AV1 files whose container reports the wrong bit depth now play.
+- Xtream playlists that send TMDB IDs as tmdb_id show Playlist Availability badges after their next refresh.
+- Game cards show AET and PEN for football, and OT and SO for other sports.
+
+#### Known issues
+
+- Titles from SMB shares don’t open in Infuse or other external players yet. Play them in Cedar.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-83/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-83)
+
 ### 1.0.0 · build 82 · 2026-11-09
 
 November 9, 2026 · Released to External TestFlight for native Apple silicon Mac.
@@ -5271,6 +5418,45 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## Android TV, Google TV and Fire TV
+
+### 1.0.0 · build 83 · 2026-11-11 · early beta
+
+November 11, 2026 · Early beta for Android TV and Google TV.
+
+#### Highlights
+
+- Source Cards — one page for card layout, fields and tags, with a preview of your last source search. New fields show video codec, bitrate, Dub · Sub and subtitles.
+- Branch Groups — every Branch Group preset from Apple TV, from streaming services, networks and studios to genres, decades, sagas, directors and actors, plus Cross With… to combine two folders.
+- More Branches — Top 10 Chart, Top Picks for You, Because You Watched, Upcoming, and Home DVR Branches for Recordings, Recording Now and Recorded Shows.
+
+#### Home and Branches
+
+- New streaming service Branches — when a Branch Group preset gains services, Home offers to add them once.
+- Branch editor — pick genres, studios, services, networks, keywords, languages and countries by name, choose a Trending window, feature a person, and let new Branches name themselves from their filters.
+- Connected Lists — choose Trakt, MDBList or Simkl, then your Watchlist, Collection, Recommended, Favorites or your own lists.
+- Top 10 — titles are numbered by chart place, with a number style per Branch and movement badges.
+- Folders — choose folder artwork and one card shape for the whole group. Seasonal Branches take a year.
+
+#### Playback and sources
+
+- Sleep Timer — stop playback after a set time or at the end of the episode, from the player’s options.
+- Mark Segments — mark intros, recaps, previews and credits from the player and send them in.
+- IPTV playlists — switch a playlist off and on, and turn every content type off.
+- Tag packs — read codecs, audio channels and streaming services more accurately.
+- Stalker portals — sign-in explains blocked, login-required and refused-MAC profiles.
+- Live categories — choosing a category moves focus to the guide’s first channel.
+
+#### Fixes
+
+- Xtream playlists that send TMDB IDs as tmdb_id show Playlist Availability badges after their next refresh.
+- Game cards show AET and PEN for football, and OT and SO for other sports.
+- Continue Watching and Next Up use the same order.
+
+#### Known issues
+
+- Server Collections Branches, source picker filters and the redesigned Tobacco Tie settings aren’t on Android TV yet.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-83/) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
 
 ### 1.0.0 · build 12 · 2026-11-04 · early beta
 

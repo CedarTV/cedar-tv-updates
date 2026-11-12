@@ -342,6 +342,7 @@ h1 {
 .note-audience { display: inline-flex; align-items: center; min-height: 26px; padding: 0 10px; border-radius: 6px; background: rgba(233, 178, 118, 0.16); color: #f1c48f; font-size: 0.7rem; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; }
 .note-audience-public { background: rgba(185, 221, 152, 0.16); color: #cbe8b0; }
 .note-audience-internal { background: rgba(255, 255, 255, 0.1); color: #e3e3e8; }
+.note-audience-beta { background: rgba(150, 200, 240, 0.16); color: #bcdcf4; }
 
 /* Release hub "What's new": posters on the right fade into the text; dark in both themes like the notes cover. */
 .release-spotlight {
