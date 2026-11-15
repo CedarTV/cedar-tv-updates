@@ -1,12 +1,64 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled November 11, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
+Compiled November 15, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 84 · 2026-11-15
+
+November 15, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Film Strip icons — two new app icons with art by armadillo from Cedar Discord, in light and dark. Choose them in Settings › App Icon.
+- Branch Group folders — pick a group’s folders, add more later, start from tiles, filter every folder at once, and copy Branches to other folders.
+- Stats for Nerds — redesigned with chips, five columns and three live graphs for the stream you’re watching.
+
+#### Home and Branches
+
+- Continue Watching hero — Continue Watching can fill the Home hero, so what you’re in the middle of is the first thing you see.
+- Folder Branch editor — a folder Branch opens straight away, with Choose Content and poster previews.
+- Remove Empty Folders — tidy a Branch Group in one step by removing folders with nothing in them.
+- Navigation editor — the editor for Cedar’s pages has been redesigned.
+
+#### Live TV and sports
+
+- Reorder custom channels — put your custom channels in the order you want.
+- Show in Categories — list a Custom Lineup alongside the Live categories.
+- Multiview from Tobacco Ties — add a Tobacco Tie live stream to Multiview.
+- Fixtures order — league fixtures follow the league’s order, with the home side first for soccer and similar sports.
+- Fight posters — feature the current bout, and title fights get a gold Title Fight label.
+- Fight results — Hide While Live keeps bouts that are already decided on the card.
+
+#### Playback and sources
+
+- Subtitles above the controls — subtitles move up while the player controls are showing, so the controls never cover them.
+- Emby Connect — sign in to Emby with your Emby Connect account.
+- Live reconnects — a live stream that plays cleanly for a minute gets its full reconnect allowance back.
+- Arabic search — search and title matching treat Arabic spelling variants as the same, such as أحمد and احمد.
+- Downloads — downloads show their speed and the time left.
+- Dolby Vision Profile 7 — Dolby Vision Profile 7 files with a full enhancement layer show their colour more accurately.
+
+#### Fixes
+
+- Home no longer stays on Loading Home… with a large Xtream playlist and Only Show Titles I Can Play.
+- Media server search covers the whole library, and a large import no longer holds up detail pages.
+- Large Plex imports retry and resume where they stopped.
+- Silo plays Dolby Vision Profile 7 originals, and seeking in remuxed files lands in the right place.
+- Simkl numbers anime episodes correctly, and Trakt renews its sign-in before it expires.
+- Dexter: Resurrection opens the right show, and titles match by their original title too.
+- TMDB air dates no longer show a day early or late.
+- The search field keeps its text after Back, and tapping Search again focuses it.
+- A grey oval no longer appears in the middle of the player.
+- Trailers no longer crash on Mac, and opening in Infuse no longer crashes on iPhone.
+- Branch captions no longer leave a gap when a title has no year.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-84/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-84)
 
 ### 1.0.0 · build 83 · 2026-11-11
 
@@ -1408,6 +1460,57 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 84 · 2026-11-15
+
+November 15, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Film Strip icons — two new app icons with art by armadillo from Cedar Discord, in light and dark. Choose them in Settings › App Icon.
+- Branch Group folders — pick a group’s folders, add more later, start from tiles, filter every folder at once, and copy Branches to other folders.
+- Stats for Nerds — redesigned with chips, five columns and three live graphs for the stream you’re watching.
+
+#### Home and Branches
+
+- Continue Watching hero — Continue Watching can fill the Home hero, so what you’re in the middle of is the first thing you see.
+- Folder Branch editor — a folder Branch opens straight away, with Choose Content and poster previews.
+- Remove Empty Folders — tidy a Branch Group in one step by removing folders with nothing in them.
+- Navigation editor — the editor for Cedar’s pages has been redesigned.
+
+#### Live TV and sports
+
+- Reorder custom channels — put your custom channels in the order you want.
+- Show in Categories — list a Custom Lineup alongside the Live categories.
+- Multiview from Tobacco Ties — add a Tobacco Tie live stream to Multiview.
+- Fixtures order — league fixtures follow the league’s order, with the home side first for soccer and similar sports.
+- Fight posters — feature the current bout, and title fights get a gold Title Fight label.
+- Fight results — Hide While Live keeps bouts that are already decided on the card.
+- Sports on iPad — a wide game page that uses the whole iPad screen.
+
+#### Playback and sources
+
+- Subtitles above the controls — subtitles move up while the player controls are showing, so the controls never cover them.
+- Emby Connect — sign in to Emby with your Emby Connect account.
+- Live reconnects — a live stream that plays cleanly for a minute gets its full reconnect allowance back.
+- Arabic search — search and title matching treat Arabic spelling variants as the same, such as أحمد and احمد.
+- Downloads — downloads show their speed and the time left.
+- Dolby Vision Profile 7 — Dolby Vision Profile 7 files with a full enhancement layer show their colour more accurately.
+
+#### Fixes
+
+- Home no longer stays on Loading Home… with a large Xtream playlist and Only Show Titles I Can Play.
+- Media server search covers the whole library, and a large import no longer holds up detail pages.
+- Large Plex imports retry and resume where they stopped.
+- Silo plays Dolby Vision Profile 7 originals, and seeking in remuxed files lands in the right place.
+- Simkl numbers anime episodes correctly, and Trakt renews its sign-in before it expires.
+- Dexter: Resurrection opens the right show, and titles match by their original title too.
+- TMDB air dates no longer show a day early or late.
+- A grey oval no longer appears in the middle of the player.
+- Branch captions no longer leave a gap when a title has no year.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-84/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-84)
 
 ### 1.0.0 · build 83 · 2026-11-11
 
@@ -2817,6 +2920,59 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 84 · 2026-11-15
+
+November 15, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Branch Group folders — pick a group’s folders, add more later, start from tiles, filter every folder at once, and copy Branches to other folders.
+- Stats for Nerds — redesigned with chips, five columns and three live graphs for the stream you’re watching.
+
+#### Home and Branches
+
+- Continue Watching hero — Continue Watching can fill the Home hero, so what you’re in the middle of is the first thing you see.
+- Folder Branch editor — a folder Branch opens straight away, with Choose Content and poster previews.
+- Remove Empty Folders — tidy a Branch Group in one step by removing folders with nothing in them.
+- Navigation editor — the editor for Cedar’s pages has been redesigned.
+- Poster Play/Pause — choose whether Play/Pause on a poster plays the title or opens its Branch.
+
+#### Live TV and sports
+
+- Reorder custom channels — put your custom channels in the order you want.
+- Show in Categories — list a Custom Lineup alongside the Live categories.
+- Multiview from Tobacco Ties — add a Tobacco Tie live stream to Multiview.
+- Fixtures order — league fixtures follow the league’s order, with the home side first for soccer and similar sports.
+- Fight posters — feature the current bout, and title fights get a gold Title Fight label.
+- Fight results — Hide While Live keeps bouts that are already decided on the card.
+
+#### Playback and sources
+
+- Subtitles above the controls — subtitles move up while the player controls are showing, so the controls never cover them.
+- Emby Connect — sign in to Emby with your Emby Connect account.
+- Live reconnects — a live stream that plays cleanly for a minute gets its full reconnect allowance back.
+- Arabic search — search and title matching treat Arabic spelling variants as the same, such as أحمد and احمد.
+- Dolby Vision Profile 7 — Dolby Vision Profile 7 files with a full enhancement layer show their colour more accurately.
+
+#### Fixes
+
+- Home no longer stays on Loading Home… with a large Xtream playlist and Only Show Titles I Can Play.
+- Media server search covers the whole library, and a large import no longer holds up detail pages.
+- Large Plex imports retry and resume where they stopped.
+- Silo plays Dolby Vision Profile 7 originals, and seeking in remuxed files lands in the right place.
+- Simkl numbers anime episodes correctly, and Trakt renews its sign-in before it expires.
+- Dexter: Resurrection opens the right show, and titles match by their original title too.
+- TMDB air dates no longer show a day early or late.
+- Switching profile from the Apple TV sidebar asks for the PIN.
+- Branch captions no longer leave a gap when a title has no year.
+
+#### Known issues
+
+- Film Strip icons come in a later build. Until then, App Icon is hidden in Settings.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-84/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-84)
+
 ### 1.0.0 · build 83 · 2026-11-11
 
 November 11, 2026 · Released to External TestFlight for Apple TV.
@@ -4119,6 +4275,55 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
+### 1.0.0 · build 84 · 2026-11-15
+
+November 15, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Branch Group folders — pick a group’s folders, add more later, start from tiles, filter every folder at once, and copy Branches to other folders.
+- Stats for Nerds — redesigned with chips, five columns and three live graphs for the stream you’re watching.
+
+#### Home and Branches
+
+- Continue Watching hero — Continue Watching can fill the Home hero, so what you’re in the middle of is the first thing you see.
+- Folder Branch editor — a folder Branch opens straight away, with Choose Content and poster previews.
+- Remove Empty Folders — tidy a Branch Group in one step by removing folders with nothing in them.
+- Navigation editor — the editor for Cedar’s pages has been redesigned.
+
+#### Live TV and sports
+
+- Reorder custom channels — put your custom channels in the order you want.
+- Show in Categories — list a Custom Lineup alongside the Live categories.
+- Multiview from Tobacco Ties — add a Tobacco Tie live stream to Multiview.
+- Fixtures order — league fixtures follow the league’s order, with the home side first for soccer and similar sports.
+- Fight posters — feature the current bout, and title fights get a gold Title Fight label.
+- Fight results — Hide While Live keeps bouts that are already decided on the card.
+
+#### Playback and sources
+
+- Subtitles above the controls — subtitles move up while the player controls are showing, so the controls never cover them.
+- Emby Connect — sign in to Emby with your Emby Connect account.
+- Live reconnects — a live stream that plays cleanly for a minute gets its full reconnect allowance back.
+- Arabic search — search and title matching treat Arabic spelling variants as the same, such as أحمد and احمد.
+- Downloads — downloads show their speed and the time left.
+- Dolby Vision Profile 7 — Dolby Vision Profile 7 files with a full enhancement layer show their colour more accurately.
+
+#### Fixes
+
+- Home no longer stays on Loading Home… with a large Xtream playlist and Only Show Titles I Can Play.
+- Media server search covers the whole library, and a large import no longer holds up detail pages.
+- Large Plex imports retry and resume where they stopped.
+- Silo plays Dolby Vision Profile 7 originals, and seeking in remuxed files lands in the right place.
+- Simkl numbers anime episodes correctly, and Trakt renews its sign-in before it expires.
+- Dexter: Resurrection opens the right show, and titles match by their original title too.
+- TMDB air dates no longer show a day early or late.
+- Trailers no longer crash on Mac, and opening in Infuse no longer crashes on iPhone.
+- Branch captions no longer leave a gap when a title has no year.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-84/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-84)
+
 ### 1.0.0 · build 83 · 2026-11-11
 
 November 11, 2026 · Released to External TestFlight for native Apple silicon Mac.
@@ -5418,6 +5623,65 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## Android TV, Google TV and Fire TV
+
+### 1.0.0 · build 84 · 2026-11-15 · early beta
+
+November 15, 2026 · Early beta for Android TV and Google TV.
+
+#### Highlights
+
+- Film Strip icons — two new app icons with art by armadillo from Cedar Discord, in light and dark. Choose them in Settings › App Icon.
+- Branch Group folders — pick a group’s folders, add more later, start from tiles, filter every folder at once, and copy Branches to other folders.
+- Stats for Nerds — redesigned with chips, five columns and three live graphs for the stream you’re watching.
+- Radio — listen to radio stations on your TV and keep your favourites, as on Apple TV.
+- DTS and TrueHD audio — these soundtracks play on any TV or soundbar, with a Downmix setting for stereo and 5.1 speakers.
+
+#### Home and Branches
+
+- Folder Branch editor — a folder Branch opens straight away, with Choose Content and poster previews.
+- Remove Empty Folders — tidy a Branch Group in one step by removing folders with nothing in them.
+- Navigation editor — the editor for Cedar’s pages has been redesigned.
+- Poster Play/Pause — choose whether Play/Pause on a poster plays the title or opens its Branch.
+- Kids Screen Time and Rating Limit — set Screen Time and a Rating Limit for each Kids profile.
+- Import a Profile — bring a profile from a .cedar file onto your TV.
+- More from Apple TV — Cedar Lists, Year in Review, the Minimalist look, a Screensaver, Poster Studio and Pop-out Top 10 arrive from Apple TV.
+
+#### Live TV and sports
+
+- Reorder custom channels — put your custom channels in the order you want.
+- Show in Categories — list a Custom Lineup alongside the Live categories.
+- Multiview from Tobacco Ties — add a Tobacco Tie live stream to Multiview.
+- Fixtures order — league fixtures follow the league’s order, with the home side first for soccer and similar sports.
+- Fight posters — feature the current bout, and title fights get a gold Title Fight label.
+- Fight results — Hide While Live keeps bouts that are already decided on the card.
+- Live TV — rebuilt around Right Now, with what’s on across your channels.
+- Sports on Home — sports Branches on Home, with fight cards for fight nights.
+
+#### Playback and sources
+
+- Subtitles above the controls — subtitles move up while the player controls are showing, so the controls never cover them.
+- Emby Connect — sign in to Emby with your Emby Connect account.
+- Live reconnects — a live stream that plays cleanly for a minute gets its full reconnect allowance back.
+- Arabic search — search and title matching treat Arabic spelling variants as the same, such as أحمد and احمد.
+- Large files — very large files keep playing: a stalled connection reconnects instead of buffering forever.
+- Large playlists — huge Xtream playlists import in about a minute instead of several.
+- Profile loading — profiles load and switch faster, most noticeably on Fire TV Stick.
+
+#### Fixes
+
+- Huge playlists no longer stop with “catalog exceeded its safety limit”.
+- Continue Watching offers the next episode without a tracking service, and Trakt no longer asks to reconnect.
+- Poster overlays draw at full size, focus rings are no longer dimmed, and Back works in the guide.
+
+#### Known issues
+
+- Kids Rating Limit blocks titles above the limit when they’re played, but doesn’t hide them from Home rows, Search or Explore yet.
+- DTS:X and DTS Express aren’t decoded yet, and TrueHD Atmos plays as 7.1.
+- Search is no longer on the Live page. Use the main Search to find channels.
+- Search rebuilds its index after the update, so results may be incomplete for a few minutes.
+- A new app icon appears after you leave Cedar.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-84/) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
 
 ### 1.0.0 · build 83 · 2026-11-11 · early beta
 
