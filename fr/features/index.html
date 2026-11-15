@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/cedar-tv-updates/features/">
+    <script type="application/json" id="cedar-strings">{"Download for Android TV":"Télécharger pour Android TV","Coming soon":"Bientôt disponible","Public beta":"Bêta publique","Available now":"Disponible maintenant","Early beta":"Bêta précoce","Updated {date}":"Mis à jour le {date}","Join the {device} beta":"Rejoindre la bêta {device}","What’s on":"À l’antenne","ON NOW":"EN COURS","{minutes}m left":"{minutes} min restantes","EARLIER":"AVANT","LATER":"APRÈS","Today":"Aujourd’hui","Add a short summary (at least 3 characters).":"Ajoutez un bref résumé (au moins 3 caractères).","Add a few more details (at least 10 characters).":"Ajoutez quelques détails de plus (au moins 10 caractères).","Choose which app this is about.":"Choisissez l’app concernée.","The app version should look like 1.0.0 (81).":"La version de l’app doit ressembler à 1.0.0 (81).","Shorten the staff-only details to 1,000 characters.":"Raccourcissez les détails réservés à l’équipe à 1 000 caractères.","That was quick. Wait a minute, then try again.":"C’était rapide. Attendez une minute, puis réessayez.","You’ve sent a lot today. Please try again tomorrow.":"Vous en avez beaucoup envoyé aujourd’hui. Réessayez demain.","Sending…":"Envoi en cours…","That didn’t send. Please try again, or post it on Discord.":"L’envoi a échoué. Réessayez, ou publiez-le sur Discord.","Couldn’t reach the feedback service. Check your connection and try again.":"Impossible de joindre le service de commentaires. Vérifiez votre connexion et réessayez."}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Ce que fait Cedar sur Android TV, Google TV, Fire TV, iPhone, iPad, Apple TV et Mac : accueil, TV en direct, lecture, découverte, sources et confidentialité.">
+    <meta name="robots" content="index,follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cedar">
+    <meta property="og:title" content="Fonctionnalités de Cedar">
+    <meta property="og:description" content="Tout ce que fait Cedar, sur chaque écran.">
+    <meta property="og:url" content="https://cedartv.github.io/cedar-tv-updates/fr/features/">
+    <meta property="og:image" content="https://cedartv.github.io/cedar-tv-updates/og.jpg">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Fonctionnalités de Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/fr/features/">
+    <link rel="alternate" hreflang="en" href="https://cedartv.github.io/cedar-tv-updates/features/">
+    <link rel="alternate" hreflang="de" href="https://cedartv.github.io/cedar-tv-updates/de/features/">
+    <link rel="alternate" hreflang="es" href="https://cedartv.github.io/cedar-tv-updates/es/features/">
+    <link rel="alternate" hreflang="es-419" href="https://cedartv.github.io/cedar-tv-updates/es-419/features/">
+    <link rel="alternate" hreflang="fr" href="https://cedartv.github.io/cedar-tv-updates/fr/features/">
+    <link rel="alternate" hreflang="it" href="https://cedartv.github.io/cedar-tv-updates/it/features/">
+    <link rel="alternate" hreflang="pt-BR" href="https://cedartv.github.io/cedar-tv-updates/pt-br/features/">
+    <link rel="alternate" hreflang="pl" href="https://cedartv.github.io/cedar-tv-updates/pl/features/">
+    <link rel="alternate" hreflang="tr" href="https://cedartv.github.io/cedar-tv-updates/tr/features/">
+    <link rel="alternate" hreflang="ru" href="https://cedartv.github.io/cedar-tv-updates/ru/features/">
+    <link rel="alternate" hreflang="ar" href="https://cedartv.github.io/cedar-tv-updates/ar/features/">
+    <link rel="alternate" hreflang="ja" href="https://cedartv.github.io/cedar-tv-updates/ja/features/">
+    <link rel="alternate" hreflang="x-default" href="https://cedartv.github.io/cedar-tv-updates/features/">
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../home.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body class="features-page">
+      <header class="cedar-header">
+        <a class="skip-link" href="/cedar-tv-updates/fr/features/#main">Aller au contenu</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/fr/" aria-label="Accueil de Cedar">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/fr/#download">Obtenir Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Navigation principale">
+            <a href="/cedar-tv-updates/fr/">Accueil</a>
+            <a href="/cedar-tv-updates/fr/features/">Fonctionnalités</a>
+            <a href="/cedar-tv-updates/releases/">Nouveautés</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/fr/support/">Assistance</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Thème
+              <select aria-label="Thème de couleur" data-theme-select>
+                <option value="system">Système</option>
+                <option value="light">Clair</option>
+                <option value="dark">Sombre</option>
+              </select>
+            </label>
+            <details class="cedar-language" data-i18n-skip>
+              <summary aria-label="Langue: Français"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></svg><span lang="fr" dir="ltr">Français</span></summary>
+              <ul class="cedar-language-menu" translate="no">
+                <li><a href="/cedar-tv-updates/features/" hreflang="en" lang="en" dir="ltr" data-available>English</a></li>
+                <li><a href="/cedar-tv-updates/de/features/" hreflang="de" lang="de" dir="ltr" data-available data-offer="Diese Seite auf Deutsch lesen" data-dismiss="Schließen">Deutsch</a></li>
+                <li><a href="/cedar-tv-updates/es/features/" hreflang="es" lang="es" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (España)</a></li>
+                <li><a href="/cedar-tv-updates/es-419/features/" hreflang="es-419" lang="es-419" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (Latinoamérica)</a></li>
+                <li><a href="/cedar-tv-updates/fr/features/" hreflang="fr" lang="fr" dir="ltr" aria-current="true" data-available data-offer="Lire cette page en français" data-dismiss="Fermer">Français</a></li>
+                <li><a href="/cedar-tv-updates/it/features/" hreflang="it" lang="it" dir="ltr" data-available data-offer="Leggi questa pagina in italiano" data-dismiss="Chiudi">Italiano</a></li>
+                <li><a href="/cedar-tv-updates/pt-br/features/" hreflang="pt-BR" lang="pt-BR" dir="ltr" data-available data-offer="Ler esta página em português" data-dismiss="Fechar">Português (Brasil)</a></li>
+                <li><a href="/cedar-tv-updates/pl/features/" hreflang="pl" lang="pl" dir="ltr" data-available data-offer="Przeczytaj tę stronę po polsku" data-dismiss="Zamknij">Polski</a></li>
+                <li><a href="/cedar-tv-updates/tr/features/" hreflang="tr" lang="tr" dir="ltr" data-available data-offer="Bu sayfayı Türkçe okuyun" data-dismiss="Kapat">Türkçe</a></li>
+                <li><a href="/cedar-tv-updates/ru/features/" hreflang="ru" lang="ru" dir="ltr" data-available data-offer="Читать эту страницу на русском" data-dismiss="Закрыть">Русский</a></li>
+                <li><a href="/cedar-tv-updates/ar/features/" hreflang="ar" lang="ar" dir="rtl" data-available data-offer="اقرأ هذه الصفحة بالعربية" data-dismiss="إغلاق">العربية</a></li>
+                <li><a href="/cedar-tv-updates/ja/features/" hreflang="ja" lang="ja" dir="ltr" data-available data-offer="このページを日本語で読む" data-dismiss="閉じる">日本語</a></li>
+              </ul>
+            </details>
+            <a class="cedar-download" href="/cedar-tv-updates/fr/#download">Obtenir Cedar</a>
+          </div>
+        </div>
+      </header>
+
+    <main id="main">
+      <section class="band features-intro" aria-labelledby="features-title">
+        <div>
+          <p class="eyebrow">Fonctionnalités</p>
+          <h1 id="features-title">Tout ce que fait Cedar, sur chaque écran.</h1>
+          <p class="features-lede">Cedar réunit des sources multimédias autorisées, des chaînes en direct, des bibliothèques personnelles et votre progression dans un lecteur privé qui fonctionne en local. Voici ce qu’il sait faire, et où.</p>
+          <p class="features-platforms">Android TV · Google TV · Fire TV · iPhone · iPad · Apple TV · Mac</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/cedar-tv-updates/fr/#download">Obtenir Cedar</a>
+            <a class="button button-secondary" href="../releases/">Nouveautés</a>
+          </div>
+        </div>
+        <img class="features-icon" src="../assets/cedar-app-icon-600.webp" alt="" width="600" height="600">
+      </section>
+
+      <section class="band" id="everything" aria-labelledby="everything-title">
+        <div class="row-head">
+          <h2 class="row-title" id="everything-title">Ce que contient Cedar</h2>
+          <p class="row-sub">Certaines fonctionnalités dépendent de l’appareil et de ce que proposent vos sources et serveurs.</p>
+        </div>
+        <div class="feature-groups">
+          <section class="feature-group" id="home" aria-labelledby="home-title">
+            <div class="feature-group-head">
+              <span class="tile-icon tint-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9H4zM10 20v-5h4v5"/></svg></span>
+              <h3 id="home-title">Accueil</h3>
+              <p>Branches et bannière principale</p>
+            </div>
+            <ul class="feature-list">
+              <li><h4>Des branches à votre façon</h4><p>L’Accueil est construit avec des branches que vous contrôlez. Ajoutez-les, renommez-les, réorganisez-les, masquez-les ou restaurez-les, et choisissez des rangées d’affiches, en format large ou en bannière principale.</p></li>
+              <li><h4>La bannière principale</h4><p>Choisissez son style et ses détails, les sources de notes qu’elle affiche, et si une bande-annonce démarre après un instant.</p></li>
+              <li><h4>Des Accueils prêts à l’emploi</h4><p>Parcourez des configurations et des groupes de branches sélectionnés dans Cedar Creator, ajoutez une photo de profil et ouvrez-les dans Cedar.</p><a href="../creator/">Ouvrir Cedar Creator</a></li>
+            </ul>
+          </section>
+          <section class="feature-group" id="live-tv" aria-labelledby="live-tv-title">
+            <div class="feature-group-head">
+              <span class="tile-icon tint-red"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2zM8.5 3l3.5 4 3.5-4"/></svg></span>
+              <h3 id="live-tv-title">TV en direct</h3>
+              <p>Guide, rattrapage, DVR</p>
+            </div>
+            <ul class="feature-list">
+              <li><h4>Le guide</h4><p>L’ordre de la playlist, les données de programmes XMLTV, un guide en grille épuré et un lecteur d’aperçu intégré au guide gardent la navigation entre les chaînes rapide.</p></li>
+              <li><h4>Rattrapage</h4><p>Lisez des programmes déjà diffusés, dans la fenêtre d’archive que conserve votre fournisseur.</p></li>
+              <li><h4>Multivue et DVR</h4><p>La TV en direct de Jellyfin et d’Emby rejoint la TV en direct sur les appareils Apple, avec grilles de chaînes, multivue et le DVR de Cedar.</p><a href="/cedar-tv-updates/fr/server/">À propos de Cedar Server</a></li>
+              <li><h4>Personnaliser En direct</h4><p>Organisez la page En direct en étagères sur iPhone, avec des pages de programme qui indiquent où une émission est diffusée.</p></li>
+            </ul>
+          </section>
+          <section class="feature-group" id="playback" aria-labelledby="playback-title">
+            <div class="feature-group-head">
+              <span class="tile-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zM10.2 9.2v5.6l4.6-2.8z"/></svg></span>
+              <h3 id="playback-title">Lecture</h3>
+              <p>Image et son</p>
+            </div>
+            <ul class="feature-list">
+              <li><h4>Vos langues</h4><p>Audio dans la langue du système, sous-titres désactivés par défaut, et langues d’audio et de sous-titres préférées, y compris les pistes forcées et SDH.</p></li>
+              <li><h4>Passer le générique et À suivre</h4><p>Passez les génériques quand des données de segments existent, avec une carte À suivre facultative et un compte à rebours avant l’épisode suivant.</p></li>
+              <li><h4>Dolby Vision</h4><p>Convertissez si vous le souhaitez le contenu Dolby Vision Profil 7 compatible en Profil 8.1 pendant la lecture.</p></li>
+            </ul>
+          </section>
+          <section class="feature-group" id="discover" aria-labelledby="discover-title">
+            <div class="feature-group-head">
+              <span class="tile-icon tint-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM20 20l-4-4"/></svg></span>
+              <h3 id="discover-title">Découvrir</h3>
+              <p>Recherche et sélections</p>
+            </div>
+            <ul class="feature-list">
+              <li><h4>Que regarder ?</h4><p>Des sélections classées dans la recherche sur les appareils Apple, que vous pouvez enregistrer comme rangée de l’Accueil.</p></li>
+              <li><h4>Classements Top 10</h4><p>Des classements Top 10 et des listes MDBList publiques, directement sur l’Accueil.</p></li>
+              <li><h4>Sports Bar</h4><p>Les scores sur l’Accueil, avec autant de détails que les données de chaque compétition le permettent.</p></li>
+            </ul>
+          </section>
+          <section class="feature-group" id="sources" aria-labelledby="sources-title">
+            <div class="feature-group-head">
+              <span class="tile-icon tint-slate"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 4h13A1.5 1.5 0 0 1 20 5.5v4a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 9.5v-4A1.5 1.5 0 0 1 5.5 4zM5.5 13h13a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-4A1.5 1.5 0 0 1 5.5 13zM8 7.5h.01M8 16.5h.01"/></svg></span>
+              <h3 id="sources-title">Sources</h3>
+              <p>Serveurs et partages</p>
+            </div>
+            <ul class="feature-list">
+              <li><h4>Plex, Emby et Jellyfin</h4><p>Connectez vos serveurs multimédias et parcourez leurs films, séries, saisons et épisodes avec leurs propres illustrations.</p></li>
+              <li><h4>Partages WebDAV</h4><p>Parcourez et lisez les dossiers que vous êtes autorisé à utiliser, avec des rangées de films et de séries créées à partir des noms de fichiers.</p></li>
+              <li><h4>Playlists et guides</h4><p>Ajoutez une playlist M3U et un guide XMLTV distants, ou choisissez des fichiers locaux sur iPhone et iPad.</p><a href="../setup/">Ouvrir la configuration par navigateur</a></li>
+            </ul>
+          </section>
+          <section class="feature-group" id="extras" aria-labelledby="extras-title">
+            <div class="feature-group-head">
+              <span class="tile-icon tint-plum"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></svg></span>
+              <h3 id="extras-title">En plus</h3>
+              <p>Et le reste</p>
+            </div>
+            <ul class="feature-list">
+              <li><h4>Cedar Radio</h4><p>Des stations de radio par pays et par genre, avec paroles synchronisées et Shazam.</p><a href="/cedar-tv-updates/fr/radio/">À propos de Cedar Radio</a></li>
+              <li><h4>Fichiers .cedar</h4><p>Partagez et importez des fichiers de configuration .cedar, avec mots de passe verrouillés par phrase secrète.</p><a href="../creator/">Ouvrir Cedar Creator</a></li>
+              <li><h4>Marquer les segments</h4><p>Envoyez les horaires des génériques, des résumés et des crédits à IntroDB et SkipDB depuis les appareils Apple.</p></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="band" id="experience" aria-labelledby="experience-title">
+        <div class="row-head">
+          <h2 class="row-title" id="experience-title">Pensé pour chaque écran</h2>
+          <p class="row-sub">Cedar garde un seul langage de produit, puis laisse chaque appareil faire ce qu’il fait de mieux.</p>
+        </div>
+        <div class="tile-grid">
+          <article class="tile">
+            <span class="tile-icon tint-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span>
+            <h3>Téléchargements</h3>
+            <p>Enregistrez des films et des épisodes compatibles pour plus tard, avec un Centre de téléchargements pour les gérer, sur iPhone et iPad.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM12 12h7v5h-7z"/></svg></span>
+            <h3>Picture in Picture et AirPlay</h3>
+            <p>Sur iPhone et iPad, continuez à regarder dans un coin de l’écran ou envoyez la lecture vers un autre écran, quand le flux le permet.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-teal"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v12H3zM8 20h8M7 8h4M7 12h10"/></svg></span>
+            <h3>Top Shelf et Watch Next</h3>
+            <p>Reprenez où vous en étiez depuis le Top Shelf d’Apple TV, ou depuis la rangée Watch Next sur Android TV quand elle est disponible.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-red"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16l1.5-6A2 2 0 0 1 8.4 8.5h7.2a2 2 0 0 1 1.9 1.5L19 16M4 16h16v3H4zM7.5 19v1.5M16.5 19v1.5"/></svg></span>
+            <h3>Radio dans CarPlay</h3>
+            <p>Les stations de Cedar Radio vous suivent en voiture, depuis l’iPhone.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20a6 6 0 0 1 12 0M17 11a2.5 2.5 0 1 0 0-5M16 14.5a5 5 0 0 1 5 5.5"/></svg></span>
+            <h3>Un profil pour chacun</h3>
+            <p>Des profils séparés à la maison, et des profils Enfants avec la limite de classification que vous choisissez.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-plum"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/></svg></span>
+            <h3>Tous vos appareils Apple en phase</h3>
+            <p>Les profils, favoris, listes et la progression se synchronisent via votre propre iCloud. Les mots de passe restent hors de la synchronisation ordinaire.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="more" aria-labelledby="more-title">
+        <div class="row-head">
+          <h2 class="row-title" id="more-title">Aussi par Cedar</h2>
+        </div>
+        <div class="tile-grid tile-grid-2">
+          <a class="tile tile-link" href="/cedar-tv-updates/fr/server/">
+            <span class="tile-icon tint-slate"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5.5 4h13A1.5 1.5 0 0 1 20 5.5v4a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 9.5v-4A1.5 1.5 0 0 1 5.5 4zM5.5 13h13a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-4A1.5 1.5 0 0 1 5.5 13zM8 7.5h.01M8 16.5h.01"/></svg></span>
+            <h3>Cedar Server</h3>
+            <p>Cedar Server enregistre la TV en direct sur un NAS, un mini-PC, un Raspberry Pi ou un VPS, afin que Cedar sur iPhone, iPad et Apple TV puisse enregistrer sans Mac.</p>
+            <span class="tile-more">À propos de Cedar Server</span>
+          </a>
+          <a class="tile tile-link" href="/cedar-tv-updates/fr/radio/">
+            <span class="tile-icon tint-red"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16v11H4zM7 9l10-5M9 13a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM14 13h3M14 16h3"/></svg></span>
+            <h3>Cedar Radio</h3>
+            <p>Cedar Radio apporte la découverte de stations, une bibliothèque personnelle, les détails des morceaux et CarPlay sur iPhone.</p>
+            <span class="tile-more">À propos de Cedar Radio</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="band" id="privacy" aria-labelledby="privacy-title">
+        <div class="row-head">
+          <p class="eyebrow">Vos médias. Vos appareils. Votre contrôle.</p>
+          <h2 class="row-title" id="privacy-title">Confidentiel par conception</h2>
+        </div>
+        <div class="tile-grid tile-grid-2">
+          <article class="tile">
+            <span class="tile-icon tint-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM9 20h6"/></svg></span>
+            <h3>Apportez des sources autorisées</h3>
+            <p>Connectez des serveurs multimédias, des playlists et des services que vous possédez, exploitez ou êtes autorisé à utiliser. Cedar ne contient aucun média, abonnement ni identifiant de fournisseur.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11V8a5 5 0 0 1 10 0v3M5 11h14v10H5zM12 15v2"/></svg></span>
+            <h3>Gardez vos identifiants protégés</h3>
+            <p>Les mots de passe, jetons et clés d’API des fournisseurs sont conservés dans le trousseau du système plutôt que dans les préférences ordinaires. Cedar n’exige aucun compte utilisateur géré par le développeur.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/></svg></span>
+            <h3>Choisissez ce qui se synchronise</h3>
+            <p>Utilisez Cedar entièrement sur l’appareil, ou activez la synchronisation privée d’Apple. Le Foyer Cedar ajoute une façon chiffrée, facultative, de partager certaines données de profil.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-plum"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></span>
+            <h3>Sans suivi ni publicité</h3>
+            <p>Cedar n’a ni SDK publicitaire, ni suivi entre apps, ni serveur d’analyse géré par le développeur. Les services que vous connectez volontairement ne reçoivent que les requêtes nécessaires aux fonctionnalités que vous activez.</p>
+          </article>
+        </div>
+        <div class="creator-band features-policy">
+          <div>
+            <p class="eyebrow">Des règles claires</p>
+            <h2 class="row-title">Cedar fournit le lecteur, pas le contenu.</h2>
+            <p class="row-sub">Ne connectez que des sources et services que vous êtes autorisé à utiliser. Les pages publiques de confidentialité, de contenu et d’accessibilité expliquent le comportement de l’app avant son installation.</p>
+          </div>
+          <div class="creator-actions">
+            <a class="button button-primary" href="/cedar-tv-updates/fr/privacy/">Politique de confidentialité</a>
+            <a class="button button-secondary" href="/cedar-tv-updates/fr/content-policy/">Politique de contenu</a>
+            <a class="button button-secondary" href="/cedar-tv-updates/fr/accessibility/">Accessibilité</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/fr/" aria-label="Accueil de Cedar">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>Un lecteur et organisateur multimédia épuré pour les écrans que vous possédez déjà. Ne connectez que des sources et services que vous êtes autorisé à utiliser.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Navigation du pied de page">
+          <section class="site-footer-group">
+            <h2>Produits</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/fr/features/">Fonctionnalités</a></li>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/apple/releases/">Apps Apple</a></li>
+              <li><a href="/cedar-tv-updates/fr/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/fr/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Notes de version</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Ressources</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/fr/support/">Assistance</a></li>
+              <li><a href="/cedar-tv-updates/fr/privacy/">Confidentialité</a></li>
+              <li><a href="/cedar-tv-updates/fr/accessibility/">Accessibilité</a></li>
+              <li><a href="/cedar-tv-updates/fr/content-policy/">Politique de contenu</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Communauté</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/fr/feedback/">Envoyer des commentaires</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar ne fournit, n’héberge ni ne vend aucun contenu multimédia.</span>
+        </p>
+      </footer>
+  </body>
+</html>
