@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/cedar-tv-updates/privacy/">
+    <script type="application/json" id="cedar-strings">{"Download for Android TV":"Android TV için indir","Coming soon":"Yakında","Public beta":"Herkese açık beta","Available now":"Şimdi mevcut","Early beta":"Erken beta","Version {version} · Build {build}":"Sürüm {version} · Derleme {build}","Updated {date}":"Güncellendi: {date}","Join the {device} beta":"{device} betasına katıl","What’s on":"Şimdi yayında","ON NOW":"ŞİMDİ","{minutes}m left":"{minutes} dk kaldı","EARLIER":"ÖNCE","LATER":"SONRA","Today":"Bugün","Add a short summary (at least 3 characters).":"Kısa bir özet ekleyin (en az 3 karakter).","Add a few more details (at least 10 characters).":"Biraz daha ayrıntı ekleyin (en az 10 karakter).","Choose which app this is about.":"Bunun hangi uygulamayla ilgili olduğunu seçin.","The app version should look like 1.0.0 (81).":"Uygulama sürümü 1.0.0 (81) gibi görünmelidir.","Shorten the staff-only details to 1,000 characters.":"Yalnızca ekibe özel ayrıntıları 1.000 karaktere kısaltın.","That was quick. Wait a minute, then try again.":"Bu çok hızlıydı. Bir dakika bekleyin, sonra tekrar deneyin.","You’ve sent a lot today. Please try again tomorrow.":"Bugün çok fazla gönderdiniz. Lütfen yarın tekrar deneyin.","Sending…":"Gönderiliyor…","That didn’t send. Please try again, or post it on Discord.":"Gönderilemedi. Lütfen tekrar deneyin veya Discord’da paylaşın.","Couldn’t reach the feedback service. Check your connection and try again.":"Geri bildirim hizmetine ulaşılamadı. Bağlantınızı kontrol edip tekrar deneyin."}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Cedar medya oynatıcısının verileri nasıl sakladığı, eşitlediği ve koruduğu.">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Gizlilik Politikası — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/tr/privacy/">
+    <link rel="alternate" hreflang="en" href="https://cedartv.github.io/cedar-tv-updates/privacy/">
+    <link rel="alternate" hreflang="de" href="https://cedartv.github.io/cedar-tv-updates/de/privacy/">
+    <link rel="alternate" hreflang="es" href="https://cedartv.github.io/cedar-tv-updates/es/privacy/">
+    <link rel="alternate" hreflang="es-419" href="https://cedartv.github.io/cedar-tv-updates/es-419/privacy/">
+    <link rel="alternate" hreflang="fr" href="https://cedartv.github.io/cedar-tv-updates/fr/privacy/">
+    <link rel="alternate" hreflang="it" href="https://cedartv.github.io/cedar-tv-updates/it/privacy/">
+    <link rel="alternate" hreflang="pt-BR" href="https://cedartv.github.io/cedar-tv-updates/pt-br/privacy/">
+    <link rel="alternate" hreflang="pl" href="https://cedartv.github.io/cedar-tv-updates/pl/privacy/">
+    <link rel="alternate" hreflang="tr" href="https://cedartv.github.io/cedar-tv-updates/tr/privacy/">
+    <link rel="alternate" hreflang="ru" href="https://cedartv.github.io/cedar-tv-updates/ru/privacy/">
+    <link rel="alternate" hreflang="ar" href="https://cedartv.github.io/cedar-tv-updates/ar/privacy/">
+    <link rel="alternate" hreflang="ja" href="https://cedartv.github.io/cedar-tv-updates/ja/privacy/">
+    <link rel="alternate" hreflang="x-default" href="https://cedartv.github.io/cedar-tv-updates/privacy/">
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../policy.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="cedar-header">
+        <a class="skip-link" href="/cedar-tv-updates/tr/privacy/#main">İçeriğe geç</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/tr/" aria-label="Cedar ana sayfası">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/tr/#download">Cedar’ı edinin</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Menü</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Ana gezinme">
+            <a href="/cedar-tv-updates/tr/">Ana Sayfa</a>
+            <a href="/cedar-tv-updates/tr/apple/">Apple uygulamaları</a>
+            <a href="/cedar-tv-updates/tr/server/">Cedar Server</a>
+            <a href="/cedar-tv-updates/releases/">Yenilikler</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/tr/support/">Destek</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Tema
+              <select aria-label="Renk teması" data-theme-select>
+                <option value="system">Sistem</option>
+                <option value="light">Açık</option>
+                <option value="dark">Koyu</option>
+              </select>
+            </label>
+            <details class="cedar-language" data-i18n-skip>
+              <summary aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></svg><span lang="tr" dir="ltr">Türkçe</span></summary>
+              <ul class="cedar-language-menu" translate="no">
+                <li><a href="/cedar-tv-updates/privacy/" hreflang="en" lang="en" dir="ltr" data-available>English</a></li>
+                <li><a href="/cedar-tv-updates/de/privacy/" hreflang="de" lang="de" dir="ltr" data-available data-offer="Diese Seite auf Deutsch lesen" data-dismiss="Schließen">Deutsch</a></li>
+                <li><a href="/cedar-tv-updates/es/privacy/" hreflang="es" lang="es" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (España)</a></li>
+                <li><a href="/cedar-tv-updates/es-419/privacy/" hreflang="es-419" lang="es-419" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (Latinoamérica)</a></li>
+                <li><a href="/cedar-tv-updates/fr/privacy/" hreflang="fr" lang="fr" dir="ltr" data-available data-offer="Lire cette page en français" data-dismiss="Fermer">Français</a></li>
+                <li><a href="/cedar-tv-updates/it/privacy/" hreflang="it" lang="it" dir="ltr" data-available data-offer="Leggi questa pagina in italiano" data-dismiss="Chiudi">Italiano</a></li>
+                <li><a href="/cedar-tv-updates/pt-br/privacy/" hreflang="pt-BR" lang="pt-BR" dir="ltr" data-available data-offer="Ler esta página em português" data-dismiss="Fechar">Português (Brasil)</a></li>
+                <li><a href="/cedar-tv-updates/pl/privacy/" hreflang="pl" lang="pl" dir="ltr" data-available data-offer="Przeczytaj tę stronę po polsku" data-dismiss="Zamknij">Polski</a></li>
+                <li><a href="/cedar-tv-updates/tr/privacy/" hreflang="tr" lang="tr" dir="ltr" aria-current="true" data-available data-offer="Bu sayfayı Türkçe okuyun" data-dismiss="Kapat">Türkçe</a></li>
+                <li><a href="/cedar-tv-updates/ru/privacy/" hreflang="ru" lang="ru" dir="ltr" data-available data-offer="Читать эту страницу на русском" data-dismiss="Закрыть">Русский</a></li>
+                <li><a href="/cedar-tv-updates/ar/privacy/" hreflang="ar" lang="ar" dir="rtl" data-available data-offer="اقرأ هذه الصفحة بالعربية" data-dismiss="إغلاق">العربية</a></li>
+                <li><a href="/cedar-tv-updates/ja/privacy/" hreflang="ja" lang="ja" dir="ltr" data-available data-offer="このページを日本語で読む" data-dismiss="閉じる">日本語</a></li>
+              </ul>
+            </details>
+            <a class="cedar-download" href="/cedar-tv-updates/tr/#download">Cedar’ı edinin</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="document-page">
+        <p class="translation-notice">Bu çeviri kolaylık sağlamak amacıyla sunulmuştur. İngilizce sürümden farklılık olması durumunda İngilizce sürüm geçerlidir. <a href="/cedar-tv-updates/privacy/" hreflang="en" lang="en">İngilizce sürümü oku</a></p>
+        <header class="document-header">
+          <p class="eyebrow">Yürürlük tarihi: 9 Kasım 2026</p>
+          <h1>Gizlilik Politikası</h1>
+          <p>Cedar yerel önceliklidir. Cedar, geliştirici tarafından işletilen bir kullanıcı hesabı gerektirmez ve bir reklam ağı, analiz altyapısı veya medya hizmeti işletmez. İsteğe bağlı eşitleme ve bağlı hizmet özellikleri aşağıda açıklanmıştır.</p>
+        </header>
+        <div class="document-grid">
+          <section>
+            <h2>Cihazınızdaki veriler</h2>
+            <p>Profiller, kütüphane kayıtları, izleme ilerlemesi, kaynak yapılandırması, indirmeler ve tercihler yerel olarak saklanır. Sağlayıcı parolaları, erişim belirteçleri ve API anahtarları, sıradan tercihlerde değil sistem Anahtar Zinciri’nde saklanır. Bir kaynağı veya bağlı hesabı kaldırmak, Cedar’ın sakladığı kimlik bilgisi referansını kaldırır. Cedar’ı silmek uygulama kapsayıcısı verilerini kaldırır; Anahtar Zinciri’nde kalma durumu da işletim sisteminin davranışına bağlı olabilir.</p>
+          </section>
+          <section>
+            <h2>İsteğe bağlı Apple eşitlemesi</h2>
+            <p>iCloud eşitlemesini etkinleştirirseniz Cedar, cihazlarınızı tutarlı tutmak için gereken profil, kütüphane, oynatma durumu ve tercihleri özel CloudKit kapsayıcınızda saklar. Bir Cedar Hanehalkı, taşınabilir sağlayıcı kimlik bilgilerini özel bir CloudKit paylaşımına koymadan önce cihazınızda şifreler. Davet edilen hane üyeleri, Apple’ın davetini kabul ettikten sonra desteklenen taşınabilir değerleri kullanabilir. Cihaz yönetimi sırları yerel kalır.</p>
+          </section>
+          <section>
+            <h2>Bağladığınız hizmetler</h2>
+            <p>Cedar yalnızca seçtiğiniz özellikler için gereken hizmetlerle iletişim kurar: yapılandırılmış medya kaynakları, meta veri ve görsel sağlayıcıları, isteğe bağlı takip veya izleme listesi hesapları, altyazı veya eklenti uç noktaları ve herkese açık spor verisi sağlayıcıları. İstekler doğrudan cihazınızdan bu hizmetlere gider ve onların gizlilik politikalarına tabidir.</p>
+            <p>Trakt, Simkl veya MDBList’i bağlarsanız Cedar, o hizmete bağlı hesap tanımlayıcısını ve etkinleştirdiğiniz eşitleme eylemleri için gereken başlık tanımlayıcılarını, ilerlemeyi, zaman damgalarını, geçmişi, izleme listesi değişikliklerini veya puanlamaları gönderir.</p>
+            <p>Discord’u bağlar ve iPhone, iPad veya Mac’te İzlediğimi Paylaş’ı açarsanız cihazınız, Cedar oynatırken profilinizin izin verdiği durumu Discord’a gönderir: başlığı, bölümü, herkese açık bir poster görselini ve geçen süreyi ya da yalnızca Cedar’da bir şey izlediğinizi. Bu bilgi Discord’un SDK’sı aracılığıyla doğrudan cihazınızdan Discord’a gönderilir, oynatma durduğunda temizlenir ve Çocuklar profillerinde asla kullanılamaz. Discord oturumunuz Anahtar Zinciri’nde saklanır ve iCloud Anahtar Zinciri üzerinden diğer Apple cihazlarınıza eşitlenir; bir Cedar Hanehalkı’na asla eklenmez. <a href="https://discord.com/privacy">Discord gizlilik politikasını</a> inceleyin.</p>
+            <p>Puanları Paylaş’ı da açarsanız puanlama sayfası, puanınızı Cedar’ın Discord sunucusunun #ratings kanalında paylaşmayı önerir. Yalnızca siz paylaştığınızda cihazınız, Cedar’ın geri bildirim hizmetine başlığın TMDB veya IMDb tanımlayıcısını, sezon ve bölüm numarasını, puanınızı ve Discord oturumunuzu gönderir. Hizmet oturumu Discord hesabınızı bulmak ve sunucuda olduğunuzu doğrulamak için bir kez kullanır ve saklamaz. Başlığı, yılı ve posteri TMDB’den alır ve puanınızla birlikte, Discord hesabınızı etiketleyerek sunucudaki herkesin görmesi için paylaşır. Aynı başlığı yeniden puanlamak aynı gönderiyi güncellesin diye Discord kullanıcı kimliğinizi, başlığı, puanınızı ve gönderinin kimliğini en fazla bir yıl saklar. Cedar’da puanlamayı kaldırmak gönderiyi ve bu kaydı siler. Puanları Paylaş varsayılan olarak kapalıdır ve Çocuklar profillerine sunulmaz.</p>
+          </section>
+          <section>
+            <h2>Cedar Link (kullanımdan kaldırıldı)</h2>
+            <p>Bir Apple profilini diğer Cedar cihazlarına ve bir tarayıcıya bağlayan isteğe bağlı şifreli aktarıcı Cedar Link kullanımdan kaldırılmıştır. Güncellenmiş Cedar uygulamaları cihazdan artık kullanılmayan Cedar Link oturumlarını kaldırır. Aktarıcı kapatılana kadar yalnızca zaten sahip olduğu şifreli kayıtları ve sınırlı yönlendirme meta verilerini tutar; bunları okuyamaz.</p>
+          </section>
+          <section>
+            <h2>YouTube fragmanları</h2>
+            <p>Bu onay denetimleri App Store sürümü için hazırlanıyor; önceki TestFlight derlemelerinde henüz bulunmayabilir.</p>
+            <p>iPhone, iPad ve Mac’te seçili fragmanlar YouTube’un gömülü oynatıcısını kullanır. Google; oynatma, kişiselleştirme, analiz ve reklamcılık için tanımlayıcıları, IP’den türetilen yaklaşık konumu, izleme ve reklam etkileşimlerini ve teknik kullanım verilerini alır. App Store sürümündeki uygulama, her oturumu yüklemeden önce sorar, geçici web depolaması kullanır ve otomatik oynatmayı devre dışı bırakır. iPhone ve iPad ayrıca Apple takip izni gerektirir; reddedilirse kullanıcı YouTube’u harici olarak açabilir. Gömülü YouTube, Çocuklar profillerinde kullanılamaz. Oynatıcıyı kapatmak yerel oturumu sonlandırır ancak Google’ın elinde hâlihazırda bulunan bilgileri silmez. Apple TV, YouTube’u harici olarak açar. Oynatıcıyı kullanmak YouTube’un şartlarına tabidir: <a href="https://www.youtube.com/t/terms">https://www.youtube.com/t/terms</a> ve Google’ın gizlilik politikası: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+          </section>
+          <section>
+            <h2>İsteğe bağlı yapay zekâ araması</h2>
+            <p>Yapay Zekâ Araması kendi Gemini API anahtarınızı kullanır. Google; anahtarı, ağ bilginizi ve gönderdiğiniz açıklamaları alır; Cedar medya kaynağı kimlik bilgilerini veya izleme geçmişini eklemez. Google şu anda istemleri ve yanıtları kötüye kullanım denetimi için 55 gün saklar. Ücretsiz isteklere insan incelemesi yapılabilir ve bunlar ürün veya model iyileştirmesine katkı sağlayabilir. Ücretli hizmetin veri koşulları farklıdır. Hassas bilgi girmeyin. App Store sürümündeki uygulama, doğrulama veya arama öncesinde her profil için cihaz yerelinde bir gizlilik tercihi, bir yetişkin onayı ve Google’ın bölgesel ve faturalandırma gerekliliklerinin onayını ister. Çocuklar profilleri Yapay Zekâ Aramasını kullanamaz. Gelecekteki istekleri durdurmak için Gemini ayarlarında veri paylaşımını kapatıp kaydedin veya bağlantıyı kaldırın. Bu onaylar yaşı, konumu veya faturalandırmayı doğrulamaz. Gemini koşulları: <a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a> ; saklama: <a href="https://ai.google.dev/gemini-api/docs/usage-policies">https://ai.google.dev/gemini-api/docs/usage-policies</a> ; desteklenen bölgeler: <a href="https://ai.google.dev/gemini-api/docs/available-regions">https://ai.google.dev/gemini-api/docs/available-regions</a></p>
+          </section>
+          <section>
+            <h2>Ödemeler</h2>
+            <p>Planlanan App Store sürümü, kozmetik seçenekler dâhil tamamen ücretsizdir ve satın alma sunmaz. Önceki TestFlight önizlemeleri bitmemiş Destekçi satın alma ekranları gösterebilir. Cedar ödeme kartı veya banka bilgilerini toplamaz. Ayrıca abone olduğunuz hizmetler kendi koşullarına tabi kalır.</p>
+          </section>
+          <section>
+            <h2 id="feedback">Geri bildirim ve hata raporları</h2>
+            <p>Cedar web sitesinden veya uygulamasından bir hata raporu ya da özellik isteği gönderdiğinizde Cedar botu bunu, adınız olmadan, Cedar Discord’unun hata veya özellik isteği forumunda herkese açık olarak paylaşır: özetiniz ve açıklamanız, seçtiğiniz uygulama veya cihaz ve eklediyseniz Cedar sürümü. Uygulamanın sistem sürümü ve cihaz modeli ile yalnızca ekibe açık kutuya yazdığınız her şey asla paylaşılmaz; bunlar yalnızca Cedar’ın Cloudflare üzerindeki geri bildirim hizmetinde özel raporla birlikte tutulur. Raporları Cedar geliştiricisi okur ve asla satılmaz veya reklam için kullanılmaz. Eski uygulama sürümlerinden gelen raporlar otomatik olarak paylaşılmaz.</p>
+            <p>Uygulamanın Geri Bildirim Gönder bölümünde tanılama bilgisi eklerseniz uygulamanın gizlenmiş tanılama dışa aktarımı, Cedar Discord’undaki yalnızca Cedar ekibinin görebildiği özel bir ekip kanalına dosya olarak yüklenir ve özel raporunuz ona bağlanır. Ekip silene kadar orada kalır.</p>
+            <p>Cedar Discord’undaki rapor formu; başlığınızı, cihazınızı, Cedar sürümünüzü ve açıklamanızı, Discord adınızla sunucunun hata veya özellik isteği forumunda herkese açık olarak paylaşır ve aynı raporu Cedar’ın geri bildirim hizmetine gönderir. Yalnızca ekibe açık kutuya yazdığınız her şey asla paylaşılmaz; yalnızca özel raporla birlikte tutulur. Bu formun günlük sınırı, her gün değişen, Discord kullanıcı kimliğinizin tuzlanmış tek yönlü bir özetiyle sayılır. Cedar Discord’unda rapor verdiğinizde Cedar botu, ekip raporunuzu ele aldığında ve durumu değiştiğinde size doğrudan mesaj gönderir. Bu Güncellemeleri Durdur’u seçerseniz Cedar size yeniden mesaj atmamak için Discord kullanıcı kimliğinizi saklar; Güncellemeleri Yeniden Aç’ı seçmek onu kaldırır.</p>
+            <p>Web sitesi ve güncel uygulama sürümleri e-posta adresi istemez. Eski bir uygulama sürümü bir adres gönderdiyse bu adres asla paylaşılmaz, yalnızca özel raporla birlikte tutulur ve rapor incelenir incelenmez silinir. Özel bir iş kaydıyla birlikte tutulmayan incelenmiş bir rapor 30 gün sonra silinir; tutulan bir rapor ise o kayıt var olduğu sürece Cedar geliştiricisi için özel olarak saklanır ve kaydın kaldırılmasından sonraki 30 gün içinde silinir. Raporunuzun Cedar Discord’unda bir gönderisi varsa o gönderideki sonraki yanıtlar aynı özel kayda kopyalanır. İncelenmemiş raporlar bir yıl sonra silinir. Günlük kötüye kullanım sayacı, her gün değişen, ağ adresinizin tuzlanmış tek yönlü bir özetini kullanır; adresin kendisi saklanmaz. Cedar geliştiricisi bir rapora Cedar Discord’unda herkese açık bir gönderi verirse gönderi, raporunuz, adınız veya e-postanız olmadan yeniden yazılır.</p>
+          </section>
+          <section>
+            <h2>Tanılama</h2>
+            <p>Cedar, yerel uygulama tanılama bilgilerini bir Cedar sunucusuna otomatik olarak yüklemez. İsteğe bağlı yerel raporlar cihazdan yalnızca siz bunları dışa aktarıp paylaştığınızda veya uygulamadaki Geri Bildirim Gönder’e ekleyip yalnızca Cedar ekibine gönderdiğinizde ayrılır. Google hizmetleri, isteklerine bağlı performans ve teknik tanılama bilgilerini işletim, güvenlik ve analiz için saklayabilir. Apple tanılama bilgileri Apple ayarlarınızı ve politikalarını izler.</p>
+          </section>
+          <section>
+            <h2>Takip ve reklam</h2>
+            <p>Cedar bir reklam ağı işletmez ve kişisel bilgileri satmaz. Gömülü YouTube hizmeti, reklam ve ölçüm için uygulamalar ve web siteleri genelinde tanımlayıcıları, yaklaşık konumu ve video veya reklam etkileşimlerini kullanabilir. Bu nedenle Cedar üçüncü taraf takibini beyan eder. App Store sürümü oynatıcıyı yalnızca oturum onayından ve iPhone ile iPad’de Apple takip yetkilendirmesinden sonra yükler. Gemini arama metni, reklam verisi olarak değil; işlevsellik, analiz ve ücretsiz model geliştirme gibi diğer amaçlar için beyan edilir.</p>
+          </section>
+          <section>
+            <h2>İzinler</h2>
+            <p>Desteklenen iPhone ve iPad cihazlarında kamera erişimi yalnızca tek kullanımlık bir Cedar cihaz bağlantısı QR kodunu taramayı seçtiğinizde istenir; kodu elle girmek de mümkündür. Cedar fotoğraf veya video çekmez ya da yüklemez. Yerel ağ erişimi, yapılandırdığınız Cedar cihazlarını, kumandaları, DVR’ları ve medya sunucularını bulmak ve bunlara bağlanmak için kullanılır. Apple TV’de Sinema Aydınlatması, seçtiğiniz odadaki ışıkları karartıp geri yüklemek için Ev erişimi ve yalnızca bir gün batımı programı seçerseniz Apple TV’nin yaklaşık konumunu bir kez aramak için konum erişimi ister. Konum ve HomeKit seçimleriniz o Apple TV’de kalır ve Cedar’a asla gönderilmez.</p>
+          </section>
+          <section>
+            <h2>Ağ güvenliği</h2>
+            <p>Cedar HTTPS’i tercih eder. Bazı kullanıcı tarafından işletilen medya sunucuları yalnızca HTTP’yi destekler; bu nedenle Cedar, şifrelenmemiş bağlantıların kimlik bilgilerini, rehber verilerini ve izleme etkinliğini açığa çıkarabileceği uyarısı yapıldıktan sonra yalnızca sizin verdiğiniz bir adrese bağlanabilir. Cedar, HTTPS’ten HTTP’ye yönlendirmeleri reddeder.</p>
+          </section>
+          <section>
+            <h2>Çocuklar ve içerik</h2>
+            <p>Cedar 13 yaşın altındaki çocuklara yönelik değildir. Cedar’da görünen medya, kullanıcının yapılandırdığı kaynaklarca belirlenir. Cedar hiçbir film, dizi, kanal, oynatma listesi, eklenti, medya sağlayıcı aboneliği veya sağlayıcı kimlik bilgisi sağlamaz.</p>
+          </section>
+          <section>
+            <h2 id="privacy-choices">Seçenekleriniz ve iletişim</h2>
+            <p>Hizmetlerin bağlantısını kesebilir, kaynakları ve profilleri kaldırabilir, isteğe bağlı eşitleme özelliklerini devre dışı bırakabilir, bağlı cihazların yetkisini iptal edebilir, yerel verileri dışa aktarabilir veya silebilir ya da uygulamayı silebilirsiniz. Cedar bir kullanıcı hesabı veritabanı işletmez; dolayısıyla dışa aktarılacak veya silinecek bir Cedar hesabı yoktur. Cedar Discord’unda paylaştığınız bir puanlamayı kaldırmak için puanlamayı Cedar’da kaldırın veya destek sayfası üzerinden isteyin. Gizlilik soruları ve iletişim seçenekleri için herkese açık destek sayfasını kullanın.</p>
+            <a class="inline-document-link" href="/cedar-tv-updates/tr/support/">Cedar desteğiyle iletişime geçin</a>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/tr/" aria-label="Cedar ana sayfası">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>Sahip olduğunuz ekranlar için odaklı bir medya oynatıcı ve düzenleyici. Yalnızca kullanma yetkiniz olan kaynakları ve hizmetleri bağlayın.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Alt bilgi gezinmesi">
+          <section class="site-footer-group">
+            <h2>Ürünler</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/tr/apple/">Apple uygulamaları</a></li>
+              <li><a href="/cedar-tv-updates/tr/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/tr/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Sürüm notları</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Kaynaklar</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/tr/support/">Destek</a></li>
+              <li><a href="/cedar-tv-updates/tr/privacy/">Gizlilik</a></li>
+              <li><a href="/cedar-tv-updates/tr/accessibility/">Erişilebilirlik</a></li>
+              <li><a href="/cedar-tv-updates/tr/content-policy/">İçerik politikası</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Topluluk</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/tr/feedback/">Geri bildirim gönder</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar medya içeriği sağlamaz, barındırmaz veya satmaz.</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

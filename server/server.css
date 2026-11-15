@@ -4,7 +4,7 @@
 .server-guide pre code { padding: 0; background: none; font-size: 0.85rem; white-space: pre; overflow-wrap: normal; }
 .server-table { overflow-x: auto; }
 .server-table table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
-.server-table th, .server-table td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.server-table th, .server-table td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: start; vertical-align: top; }
 .server-table th { color: var(--muted); font-weight: 650; }
 .server-table td:first-child { white-space: nowrap; }
 .server-guide ul + p, .server-guide ol + p { margin-top: 14px; }

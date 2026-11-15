@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/cedar-tv-updates/privacy/">
+    <script type="application/json" id="cedar-strings">{"Download for Android TV":"Скачать для Android TV","Coming soon":"Скоро","Public beta":"Публичная бета","Available now":"Доступно сейчас","Early beta":"Ранняя бета","Version {version} · Build {build}":"Версия {version} · Сборка {build}","Updated {date}":"Обновлено: {date}","Join the {device} beta":"Присоединиться к бете {device}","What’s on":"В эфире","ON NOW":"СЕЙЧАС","{minutes}m left":"осталось {minutes} мин","EARLIER":"РАНЬШЕ","LATER":"ПОЗЖЕ","Today":"Сегодня","Add a short summary (at least 3 characters).":"Добавьте краткое описание (не менее 3 символов).","Add a few more details (at least 10 characters).":"Добавьте ещё немного подробностей (не менее 10 символов).","Choose which app this is about.":"Выберите, к какому приложению это относится.","The app version should look like 1.0.0 (81).":"Версия приложения должна выглядеть так: 1.0.0 (81).","Shorten the staff-only details to 1,000 characters.":"Сократите подробности для сотрудников до 1000 символов.","That was quick. Wait a minute, then try again.":"Слишком быстро. Подождите минуту и повторите попытку.","You’ve sent a lot today. Please try again tomorrow.":"Вы сегодня отправили слишком много. Повторите попытку завтра.","Sending…":"Отправка…","That didn’t send. Please try again, or post it on Discord.":"Не удалось отправить. Повторите попытку или опубликуйте это в Discord.","Couldn’t reach the feedback service. Check your connection and try again.":"Не удалось связаться с сервисом обратной связи. Проверьте подключение и повторите попытку."}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Как медиаплеер Cedar хранит, синхронизирует и защищает данные.">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Политика конфиденциальности — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/ru/privacy/">
+    <link rel="alternate" hreflang="en" href="https://cedartv.github.io/cedar-tv-updates/privacy/">
+    <link rel="alternate" hreflang="de" href="https://cedartv.github.io/cedar-tv-updates/de/privacy/">
+    <link rel="alternate" hreflang="es" href="https://cedartv.github.io/cedar-tv-updates/es/privacy/">
+    <link rel="alternate" hreflang="es-419" href="https://cedartv.github.io/cedar-tv-updates/es-419/privacy/">
+    <link rel="alternate" hreflang="fr" href="https://cedartv.github.io/cedar-tv-updates/fr/privacy/">
+    <link rel="alternate" hreflang="it" href="https://cedartv.github.io/cedar-tv-updates/it/privacy/">
+    <link rel="alternate" hreflang="pt-BR" href="https://cedartv.github.io/cedar-tv-updates/pt-br/privacy/">
+    <link rel="alternate" hreflang="pl" href="https://cedartv.github.io/cedar-tv-updates/pl/privacy/">
+    <link rel="alternate" hreflang="tr" href="https://cedartv.github.io/cedar-tv-updates/tr/privacy/">
+    <link rel="alternate" hreflang="ru" href="https://cedartv.github.io/cedar-tv-updates/ru/privacy/">
+    <link rel="alternate" hreflang="ar" href="https://cedartv.github.io/cedar-tv-updates/ar/privacy/">
+    <link rel="alternate" hreflang="ja" href="https://cedartv.github.io/cedar-tv-updates/ja/privacy/">
+    <link rel="alternate" hreflang="x-default" href="https://cedartv.github.io/cedar-tv-updates/privacy/">
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../policy.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="cedar-header">
+        <a class="skip-link" href="/cedar-tv-updates/ru/privacy/#main">Перейти к содержимому</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/ru/" aria-label="Cedar — главная">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/ru/#download">Получить Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Меню</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Основная навигация">
+            <a href="/cedar-tv-updates/ru/">Главная</a>
+            <a href="/cedar-tv-updates/ru/apple/">Приложения для Apple</a>
+            <a href="/cedar-tv-updates/ru/server/">Cedar Server</a>
+            <a href="/cedar-tv-updates/releases/">Что нового</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/ru/support/">Поддержка</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Тема
+              <select aria-label="Цветовая тема" data-theme-select>
+                <option value="system">Системная</option>
+                <option value="light">Светлая</option>
+                <option value="dark">Тёмная</option>
+              </select>
+            </label>
+            <details class="cedar-language" data-i18n-skip>
+              <summary aria-label="Язык: Русский"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></svg><span lang="ru" dir="ltr">Русский</span></summary>
+              <ul class="cedar-language-menu" translate="no">
+                <li><a href="/cedar-tv-updates/privacy/" hreflang="en" lang="en" dir="ltr" data-available>English</a></li>
+                <li><a href="/cedar-tv-updates/de/privacy/" hreflang="de" lang="de" dir="ltr" data-available data-offer="Diese Seite auf Deutsch lesen" data-dismiss="Schließen">Deutsch</a></li>
+                <li><a href="/cedar-tv-updates/es/privacy/" hreflang="es" lang="es" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (España)</a></li>
+                <li><a href="/cedar-tv-updates/es-419/privacy/" hreflang="es-419" lang="es-419" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (Latinoamérica)</a></li>
+                <li><a href="/cedar-tv-updates/fr/privacy/" hreflang="fr" lang="fr" dir="ltr" data-available data-offer="Lire cette page en français" data-dismiss="Fermer">Français</a></li>
+                <li><a href="/cedar-tv-updates/it/privacy/" hreflang="it" lang="it" dir="ltr" data-available data-offer="Leggi questa pagina in italiano" data-dismiss="Chiudi">Italiano</a></li>
+                <li><a href="/cedar-tv-updates/pt-br/privacy/" hreflang="pt-BR" lang="pt-BR" dir="ltr" data-available data-offer="Ler esta página em português" data-dismiss="Fechar">Português (Brasil)</a></li>
+                <li><a href="/cedar-tv-updates/pl/privacy/" hreflang="pl" lang="pl" dir="ltr" data-available data-offer="Przeczytaj tę stronę po polsku" data-dismiss="Zamknij">Polski</a></li>
+                <li><a href="/cedar-tv-updates/tr/privacy/" hreflang="tr" lang="tr" dir="ltr" data-available data-offer="Bu sayfayı Türkçe okuyun" data-dismiss="Kapat">Türkçe</a></li>
+                <li><a href="/cedar-tv-updates/ru/privacy/" hreflang="ru" lang="ru" dir="ltr" aria-current="true" data-available data-offer="Читать эту страницу на русском" data-dismiss="Закрыть">Русский</a></li>
+                <li><a href="/cedar-tv-updates/ar/privacy/" hreflang="ar" lang="ar" dir="rtl" data-available data-offer="اقرأ هذه الصفحة بالعربية" data-dismiss="إغلاق">العربية</a></li>
+                <li><a href="/cedar-tv-updates/ja/privacy/" hreflang="ja" lang="ja" dir="ltr" data-available data-offer="このページを日本語で読む" data-dismiss="閉じる">日本語</a></li>
+              </ul>
+            </details>
+            <a class="cedar-download" href="/cedar-tv-updates/ru/#download">Получить Cedar</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="document-page">
+        <p class="translation-notice">Этот перевод предоставлен для удобства. Если он отличается от английской версии, действует английская версия. <a href="/cedar-tv-updates/privacy/" hreflang="en" lang="en">Прочитать английскую версию</a></p>
+        <header class="document-header">
+          <p class="eyebrow">Действует с 9 ноября 2026 г.</p>
+          <h1>Политика конфиденциальности</h1>
+          <p>Cedar работает по принципу «сначала локально». Для Cedar не нужен аккаунт, которым управляет разработчик, и у него нет ни рекламной сети, ни серверной аналитики, ни медиасервиса. Необязательные функции синхронизации и подключённых сервисов описаны ниже.</p>
+        </header>
+        <div class="document-grid">
+          <section>
+            <h2>Данные на вашем устройстве</h2>
+            <p>Профили, записи библиотеки, прогресс просмотра, настройки источников, загрузки и предпочтения хранятся локально. Пароли провайдеров, токены доступа и ключи API хранятся в системной связке ключей, а не в обычных настройках. При удалении источника или подключённого аккаунта удаляется и сохранённая в Cedar ссылка на учётные данные. При удалении Cedar удаляются данные его контейнера приложения; сохранение данных в связке ключей может также зависеть от поведения операционной системы.</p>
+          </section>
+          <section>
+            <h2>Необязательная синхронизация Apple</h2>
+            <p>Если вы включаете синхронизацию через iCloud, Cedar хранит в вашем личном контейнере CloudKit профиль, библиотеку, состояние воспроизведения и настройки, необходимые для согласованной работы ваших устройств. Домохозяйство Cedar шифрует переносимые учётные данные провайдеров на вашем устройстве, прежде чем поместить их в личный общий доступ CloudKit. Приглашённые участники домохозяйства могут использовать поддерживаемые переносимые значения после принятия приглашения Apple. Секреты для администрирования устройств остаются локальными.</p>
+          </section>
+          <section>
+            <h2>Сервисы, которые вы подключаете</h2>
+            <p>Cedar обращается только к тем сервисам, которые нужны для выбранных вами функций: настроенным медиаисточникам, поставщикам метаданных и обложек, необязательным аккаунтам отслеживания или списков для просмотра, конечным точкам субтитров или дополнений и общедоступным поставщикам спортивных данных. Запросы идут напрямую с вашего устройства к этим сервисам и регулируются их политиками конфиденциальности.</p>
+            <p>Если вы подключаете Trakt, Simkl или MDBList, Cedar отправляет этому сервису идентификатор подключённого аккаунта, а также идентификаторы названий, прогресс, отметки времени, историю, изменения списка для просмотра или оценки, необходимые для включённых вами действий синхронизации.</p>
+            <p>Если вы привязываете Discord и включаете «Делиться тем, что я смотрю» на iPhone, iPad или Mac, ваше устройство отправляет в Discord статус, который разрешает ваш профиль, пока Cedar воспроизводит видео: название, эпизод, общедоступное изображение постера и прошедшее время — либо только то, что вы что-то смотрите в Cedar. Он отправляется напрямую с вашего устройства в Discord через SDK Discord, очищается при остановке воспроизведения и никогда не доступен профилям «Дети». Данные для входа в Discord хранятся в связке ключей и синхронизируются с другими вашими устройствами Apple через связку ключей iCloud; они никогда не добавляются в Домохозяйство Cedar. Ознакомьтесь с <a href="https://discord.com/privacy">политикой конфиденциальности Discord</a>.</p>
+            <p>Если вы также включаете «Делиться оценками», окно оценки предлагает опубликовать вашу оценку в канале #ratings на сервере Cedar в Discord. Только когда вы делитесь, ваше устройство отправляет сервису обратной связи Cedar идентификатор названия в TMDB или IMDb, номер сезона и эпизода, вашу оценку и данные для входа в Discord. Сервис один раз использует эти данные, чтобы найти ваш аккаунт Discord и убедиться, что вы есть на сервере, и не сохраняет их. Он берёт название, год и постер из TMDB и публикует их вместе с вашей оценкой, упоминая ваш аккаунт Discord, на виду у всех на сервере. Чтобы повторная оценка того же названия обновляла ту же публикацию, сервис хранит ваш идентификатор пользователя Discord, название, вашу оценку и идентификатор публикации до одного года. Удаление оценки в Cedar удаляет публикацию и эту запись. «Делиться оценками» по умолчанию выключено и не предлагается профилям «Дети».</p>
+          </section>
+          <section>
+            <h2>Cedar Link (закрыт)</h2>
+            <p>Cedar Link — необязательное зашифрованное реле, которое связывало профиль Apple с другими устройствами Cedar и браузером, — закрыт. Обновлённые приложения Cedar удаляют с устройства оставшиеся данные для входа в Cedar Link. До отключения реле оно хранит только те зашифрованные записи и ограниченные метаданные маршрутизации, которые у него уже были и которые оно не может прочитать.</p>
+          </section>
+          <section>
+            <h2>Трейлеры YouTube</h2>
+            <p>Эти элементы управления согласием готовятся к выпуску в App Store; в более ранних сборках TestFlight их может ещё не быть.</p>
+            <p>На iPhone, iPad и Mac выбранные трейлеры воспроизводятся во встроенном плеере YouTube. Google получает идентификаторы, примерное местоположение по IP-адресу, данные о просмотрах и взаимодействии с рекламой, а также технические данные об использовании — для воспроизведения, персонализации, аналитики и рекламы. Реализация для запуска в App Store спрашивает разрешение перед загрузкой каждого сеанса, использует временное веб-хранилище и отключает автовоспроизведение. На iPhone и iPad также требуется разрешение Apple на отслеживание; если пользователь его отклоняет, он может открыть YouTube во внешнем приложении. Во встроенном виде YouTube недоступен в профилях «Дети». Закрытие плеера завершает локальный сеанс, но не удаляет информацию, уже полученную Google. На Apple TV YouTube открывается во внешнем приложении. Использование плеера регулируется условиями YouTube: <a href="https://www.youtube.com/t/terms">https://www.youtube.com/t/terms</a> и политикой конфиденциальности Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+          </section>
+          <section>
+            <h2>Необязательный ИИ-поиск</h2>
+            <p>Поиск с ИИ использует ваш собственный ключ Gemini API. Google получает ключ, сведения о вашей сети и описания, которые вы отправляете; Cedar не добавляет учётные данные медиаисточников или историю просмотров. В настоящее время Google хранит запросы и ответы 55 дней для выявления злоупотреблений. Запросы без оплаты могут просматриваться людьми и использоваться для улучшения продукта или модели. Условия для данных платного сервиса отличаются. Не вводите конфиденциальную информацию. Реализация для запуска в App Store требует для каждого профиля локального на устройстве выбора в отношении конфиденциальности до проверки или поиска, подтверждения совершеннолетия и подтверждения региональных и платёжных требований Google. Профили «Дети» не могут использовать поиск с ИИ. Чтобы остановить будущие запросы, отключите передачу данных и сохраните настройки в Gemini либо удалите подключение. Эти подтверждения не проверяют возраст, местоположение или платёжные данные. Условия Gemini: <a href="https://ai.google.dev/gemini-api/terms">https://ai.google.dev/gemini-api/terms</a> ; хранение: <a href="https://ai.google.dev/gemini-api/docs/usage-policies">https://ai.google.dev/gemini-api/docs/usage-policies</a> ; поддерживаемые регионы: <a href="https://ai.google.dev/gemini-api/docs/available-regions">https://ai.google.dev/gemini-api/docs/available-regions</a></p>
+          </section>
+          <section>
+            <h2>Платежи</h2>
+            <p>Запланированный запуск в App Store полностью бесплатный, включая косметические опции, и не предлагает покупок. В более ранних превью в TestFlight могут отображаться незавершённые экраны покупки для сторонников. Cedar не собирает данные платёжных карт и банковские реквизиты. Сервисы, на которые вы подписываетесь отдельно, остаются предметом их собственных условий.</p>
+          </section>
+          <section>
+            <h2 id="feedback">Отзывы и сообщения об ошибках</h2>
+            <p>Когда вы отправляете сообщение об ошибке или запрос функции с сайта или из приложения Cedar, бот Cedar публикует его открыто на форуме ошибок или запросов функций в Discord Cedar, без вашего имени: ваше краткое описание и подробности, выбранное вами приложение или устройство и, если вы его указали, версию Cedar. Версия системы и модель устройства из приложения, а также всё, что вы пишете в поле только для сотрудников, никогда не публикуются; они хранятся только в закрытом отчёте в сервисе обратной связи Cedar на Cloudflare. Отчёты читает разработчик Cedar, их никогда не продают и не используют для рекламы. Отчёты из старых версий приложения автоматически не публикуются.</p>
+            <p>Если вы прикрепляете диагностику в разделе «Отправить отзыв» приложения, экспорт диагностики приложения с удалёнными конфиденциальными данными загружается как файл в закрытый канал сотрудников в Discord Cedar, который видит только команда Cedar, а ваш закрытый отчёт ссылается на него. Он хранится там, пока сотрудники его не удалят.</p>
+            <p>Форма отчёта в Discord Cedar публикует ваше название, устройство, версию Cedar и описание открыто на форуме ошибок или запросов функций сервера под вашим именем в Discord и отправляет тот же отчёт в сервис обратной связи Cedar. Всё, что вы пишете в поле только для сотрудников, никогда не публикуется; оно хранится только в закрытом отчёте. Суточный лимит этой формы считается по односторонней хеш-сумме вашего идентификатора пользователя Discord с солью, которая меняется каждый день. Когда вы сообщаете о проблеме в Discord Cedar, бот Cedar отправляет вам личное сообщение, когда сотрудники берут ваш отчёт в работу и когда меняется его статус. Если вы выбираете «Больше не получать уведомления», Cedar сохраняет ваш идентификатор пользователя Discord, чтобы больше не писать вам; выбор «Снова включить уведомления» удаляет его.</p>
+            <p>Сайт и текущие версии приложения не запрашивают адрес электронной почты. Если старая версия приложения отправила его, он никогда не публикуется, хранится только в закрытом отчёте и удаляется сразу после рассмотрения отчёта. Рассмотренный отчёт, который не хранится вместе с закрытой рабочей заявкой, удаляется через 30 дней; отчёт, который хранится, остаётся закрытым для разработчика Cedar, пока существует эта заявка, и удаляется в течение 30 дней после её удаления. Если у вашего отчёта есть публикация в Discord Cedar, последующие ответы в ней копируются в ту же закрытую заявку. Нерассмотренные отчёты удаляются через год. Суточный счётчик злоупотреблений использует одностороннюю хеш-сумму вашего сетевого адреса с солью, которая меняется каждый день; сам адрес не хранится. Если разработчик Cedar создаёт для отчёта публичную публикацию в Discord Cedar, она пишется заново, без вашего отчёта, имени и адреса электронной почты.</p>
+          </section>
+          <section>
+            <h2>Диагностика</h2>
+            <p>Cedar не загружает автоматически диагностику нативного приложения на сервер Cedar. Необязательные локальные отчёты покидают устройство, только когда вы экспортируете и отправляете их сами или прикрепляете к «Отправить отзыв» в приложении, которое отправляет их только сотрудникам Cedar. Сервисы Google могут хранить сведения о производительности и техническую диагностику, связанные с их запросами, для работы, безопасности и аналитики. Диагностика Apple подчиняется вашим настройкам и политикам Apple.</p>
+          </section>
+          <section>
+            <h2>Отслеживание и реклама</h2>
+            <p>Cedar не управляет рекламной сетью и не продаёт персональные данные. Встроенный сервис YouTube может использовать идентификаторы, примерное местоположение и данные о просмотре видео и взаимодействии с рекламой в разных приложениях и на разных сайтах для рекламы и измерений. Поэтому Cedar сообщает об отслеживании третьими сторонами. Версия для запуска в App Store загружает плеер только после согласия на сеанс и, на iPhone и iPad, после авторизации отслеживания Apple. Текст поиска Gemini раскрывается как используемый для функциональности, аналитики и других целей, таких как разработка модели без оплаты, а не как рекламные данные.</p>
+          </section>
+          <section>
+            <h2>Разрешения</h2>
+            <p>На поддерживаемых iPhone и iPad доступ к камере запрашивается только тогда, когда вы решаете отсканировать одноразовый QR-код для связи устройств Cedar; доступен и ручной ввод кода. Cedar не снимает и не загружает фото или видео. Доступ к локальной сети используется для обнаружения устройств Cedar, пультов, DVR и медиасерверов, которые вы настроили, и подключения к ним. На Apple TV функция «Кинематографическое освещение» запрашивает доступ к «Дому», чтобы приглушать и восстанавливать свет в выбранной вами комнате, и, только если вы выбираете расписание по закату, доступ к геопозиции, чтобы один раз определить примерное местоположение Apple TV. Местоположение и ваш выбор в HomeKit остаются на этом Apple TV и никогда не отправляются в Cedar.</p>
+          </section>
+          <section>
+            <h2>Безопасность сети</h2>
+            <p>Cedar отдаёт предпочтение HTTPS. Некоторые медиасерверы, которыми управляют сами пользователи, поддерживают только HTTP, поэтому Cedar может подключиться к указанному вами адресу, только предупредив, что соединения без шифрования могут раскрыть учётные данные, данные программы передач и историю просмотров. Cedar отказывается следовать перенаправлениям с HTTPS на HTTP.</p>
+          </section>
+          <section>
+            <h2>Дети и контент</h2>
+            <p>Cedar не предназначен для детей младше 13 лет. Медиаконтент, который виден в Cedar, определяется источниками, которые настраивает пользователь. Cedar не предоставляет ни фильмов, ни шоу, ни каналов, ни плейлистов, ни дополнений, ни подписок у медиапровайдеров, ни учётных данных провайдеров.</p>
+          </section>
+          <section>
+            <h2 id="privacy-choices">Ваш выбор и контакты</h2>
+            <p>Вы можете отключать сервисы, удалять источники и профили, отключать необязательные функции синхронизации, отзывать связанные устройства, экспортировать или удалять локальные данные либо удалить приложение. Cedar не ведёт базу данных учётных записей, поэтому аккаунта Cedar, который можно экспортировать или удалить, нет. Чтобы удалить оценку, которой вы поделились в Discord Cedar, удалите её в Cedar или попросите об этом через страницу поддержки. По вопросам конфиденциальности и для связи используйте общедоступную страницу поддержки.</p>
+            <a class="inline-document-link" href="/cedar-tv-updates/ru/support/">Связаться с поддержкой Cedar</a>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/ru/" aria-label="Cedar — главная">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>Медиаплеер и органайзер для экранов, которые у вас уже есть. Подключайте только те источники и сервисы, которыми вам разрешено пользоваться.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Навигация в нижней части страницы">
+          <section class="site-footer-group">
+            <h2>Продукты</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/ru/apple/">Приложения для Apple</a></li>
+              <li><a href="/cedar-tv-updates/ru/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/ru/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Примечания к выпускам</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Ресурсы</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/ru/support/">Поддержка</a></li>
+              <li><a href="/cedar-tv-updates/ru/privacy/">Конфиденциальность</a></li>
+              <li><a href="/cedar-tv-updates/ru/accessibility/">Универсальный доступ</a></li>
+              <li><a href="/cedar-tv-updates/ru/content-policy/">Правила в отношении контента</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Сообщество</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/ru/feedback/">Отправить отзыв</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar не предоставляет, не размещает и не продаёт медиаконтент.</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

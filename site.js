@@ -1,3 +1,4 @@
+const { cedarT } = window;
 const allowedRepositoryPath = "/CedarTV/cedar-tv-updates/releases/download/";
 const appleBetaURL = "https://testflight.apple.com/join/4A7sZ4q2";
 
@@ -17,7 +18,7 @@ const formatDate = (value) => {
   if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return null;
   const date = new Date(`${value}T00:00:00Z`);
   if (Number.isNaN(date.getTime())) return null;
-  return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
+  return new Intl.DateTimeFormat(window.cedarLocale, { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
 };
 
 const formatBytes = (bytes) => {
@@ -43,7 +44,7 @@ const applyRelease = (manifest) => {
   if (visitorDevice === "android-tv") {
     document.querySelectorAll("[data-get-cedar]").forEach((link) => {
       link.href = download.href;
-      link.textContent = "Download for Android TV";
+      link.textContent = cedarT("Download for Android TV");
     });
   }
   document.querySelectorAll("[data-release-link]").forEach((link) => {
@@ -57,10 +58,10 @@ const applyRelease = (manifest) => {
 };
 
 const statusLabels = new Map([
-  ["release-candidate", "Coming soon"],
-  ["testflight", "Public beta"],
-  ["released", "Available now"],
-  ["preview", "Early beta"],
+  ["release-candidate", cedarT("Coming soon")],
+  ["testflight", cedarT("Public beta")],
+  ["released", cedarT("Available now")],
+  ["preview", cedarT("Early beta")],
 ]);
 
 const applyPlatformReleases = (catalog) => {
@@ -75,7 +76,7 @@ const applyPlatformReleases = (catalog) => {
     if (!release || typeof release.version !== "string" || !/^\d+\.\d+\.\d+$/.test(release.version)) return;
     const build = String(release.build ?? "");
     if (!/^[1-9]\d*$/.test(build)) return;
-    node.textContent = `Version ${release.version} · Build ${build}`;
+    node.textContent = cedarT("Version {version} · Build {build}", { version: release.version, build });
   });
 
   document.querySelectorAll("[data-platform-status]").forEach((node) => {
@@ -93,7 +94,8 @@ const applyPlatformReleases = (catalog) => {
     const time = document.createElement("time");
     time.dateTime = release.date;
     time.textContent = label;
-    node.replaceChildren("Updated ", time);
+    const [before, after = ""] = cedarT("Updated {date}").split("{date}");
+    node.replaceChildren(before, time, after);
   });
 
   document.querySelectorAll("[data-beta-link]").forEach((link) => {
@@ -105,7 +107,7 @@ const applyPlatformReleases = (catalog) => {
   if (deviceNames.has(visitorDevice) && visitorRelease?.status === "testflight") {
     document.querySelectorAll("[data-get-cedar]").forEach((link) => {
       link.href = appleBetaURL;
-      link.textContent = `Join the ${deviceNames.get(visitorDevice)} beta`;
+      link.textContent = cedarT("Join the {device} beta", { device: deviceNames.get(visitorDevice) });
     });
   }
 };

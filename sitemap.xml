@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://cedartv.github.io/cedar-tv-updates/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/accessibility/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/accessibility/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/apple/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/apple/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-79/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-80/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-81/</loc></url>
@@ -13,15 +35,114 @@
   <url><loc>https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/content-policy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/content-policy/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/creator/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/feedback/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/feedback/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/privacy/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/radio/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/radio/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/radio/privacy/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/radio/privacy/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/radio/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/radio/support/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/releases/android-tv/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/releases/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/server/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/server/</loc></url>
   <url><loc>https://cedartv.github.io/cedar-tv-updates/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/de/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/es-419/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/fr/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/it/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pt-br/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/pl/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/tr/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ru/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ar/support/</loc></url>
+  <url><loc>https://cedartv.github.io/cedar-tv-updates/ja/support/</loc></url>
 </urlset>

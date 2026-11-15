@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/cedar-tv-updates/">
+    <script type="application/json" id="cedar-strings">{"Download for Android TV":"Android TV 版をダウンロード","Coming soon":"近日公開","Public beta":"公開ベータ","Available now":"公開中","Early beta":"早期ベータ","Version {version} · Build {build}":"バージョン {version} · ビルド {build}","Updated {date}":"{date} 更新","Join the {device} beta":"{device} のベータに参加","What’s on":"放送中の番組","ON NOW":"放送中","{minutes}m left":"残り {minutes} 分","EARLIER":"前","LATER":"後","Today":"今日","Add a short summary (at least 3 characters).":"短い概要を入力してください(3文字以上)。","Add a few more details (at least 10 characters).":"もう少し詳しく入力してください(10文字以上)。","Choose which app this is about.":"どのアプリについてか選択してください。","The app version should look like 1.0.0 (81).":"アプリのバージョンは 1.0.0 (81) の形式で入力してください。","Shorten the staff-only details to 1,000 characters.":"スタッフ専用の詳細は1,000文字以内にしてください。","That was quick. Wait a minute, then try again.":"早すぎます。1分ほど待ってから、もう一度お試しください。","You’ve sent a lot today. Please try again tomorrow.":"本日は多数ご送信いただきました。明日もう一度お試しください。","Sending…":"送信中…","That didn’t send. Please try again, or post it on Discord.":"送信できませんでした。もう一度お試しいただくか、Discord に投稿してください。","Couldn’t reach the feedback service. Check your connection and try again.":"フィードバックサービスに接続できませんでした。接続を確認して、もう一度お試しください。"}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Cedar は、Android TV、Google TV、Fire TV、iPhone、iPad、Apple TV、Mac で使える、軸のぶれないメディア体験です。">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="Cedar">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cedar">
+    <meta property="og:title" content="Cedar — あなたのメディアを、映画のように">
+    <meta property="og:description" content="Android TV、iPhone、iPad、Apple TV、Mac で使える、軸のぶれないメディア体験。">
+    <meta property="og:url" content="https://cedartv.github.io/cedar-tv-updates/ja/">
+    <meta property="og:image" content="https://cedartv.github.io/cedar-tv-updates/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cedar — あなたのメディアを、映画のように。">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cedar — あなたのメディアを、映画のように">
+    <meta name="twitter:description" content="Android TV、iPhone、iPad、Apple TV、Mac で使える、軸のぶれないメディア体験。">
+    <meta name="twitter:image" content="https://cedartv.github.io/cedar-tv-updates/og.jpg">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Cedar — あなたのメディアを、映画のように</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/ja/">
+    <link rel="alternate" hreflang="en" href="https://cedartv.github.io/cedar-tv-updates/">
+    <link rel="alternate" hreflang="de" href="https://cedartv.github.io/cedar-tv-updates/de/">
+    <link rel="alternate" hreflang="es" href="https://cedartv.github.io/cedar-tv-updates/es/">
+    <link rel="alternate" hreflang="es-419" href="https://cedartv.github.io/cedar-tv-updates/es-419/">
+    <link rel="alternate" hreflang="fr" href="https://cedartv.github.io/cedar-tv-updates/fr/">
+    <link rel="alternate" hreflang="it" href="https://cedartv.github.io/cedar-tv-updates/it/">
+    <link rel="alternate" hreflang="pt-BR" href="https://cedartv.github.io/cedar-tv-updates/pt-br/">
+    <link rel="alternate" hreflang="pl" href="https://cedartv.github.io/cedar-tv-updates/pl/">
+    <link rel="alternate" hreflang="tr" href="https://cedartv.github.io/cedar-tv-updates/tr/">
+    <link rel="alternate" hreflang="ru" href="https://cedartv.github.io/cedar-tv-updates/ru/">
+    <link rel="alternate" hreflang="ar" href="https://cedartv.github.io/cedar-tv-updates/ar/">
+    <link rel="alternate" hreflang="ja" href="https://cedartv.github.io/cedar-tv-updates/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://cedartv.github.io/cedar-tv-updates/">
+    <link rel="icon" type="image/png" href="assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body class="home-page">
+      <header class="cedar-header">
+        <a class="skip-link" href="/cedar-tv-updates/ja/#main">コンテンツへスキップ</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/ja/" aria-label="Cedar ホーム">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/ja/#download">Cedar を入手</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">メニュー</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="メインナビゲーション">
+            <a href="/cedar-tv-updates/ja/">ホーム</a>
+            <a href="/cedar-tv-updates/ja/apple/">Apple アプリ</a>
+            <a href="/cedar-tv-updates/ja/server/">Cedar Server</a>
+            <a href="/cedar-tv-updates/releases/">新着情報</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/ja/support/">サポート</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">テーマ
+              <select aria-label="カラーテーマ" data-theme-select>
+                <option value="system">システム</option>
+                <option value="light">ライト</option>
+                <option value="dark">ダーク</option>
+              </select>
+            </label>
+            <details class="cedar-language" data-i18n-skip>
+              <summary aria-label="言語: 日本語"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></svg><span lang="ja" dir="ltr">日本語</span></summary>
+              <ul class="cedar-language-menu" translate="no">
+                <li><a href="/cedar-tv-updates/" hreflang="en" lang="en" dir="ltr" data-available>English</a></li>
+                <li><a href="/cedar-tv-updates/de/" hreflang="de" lang="de" dir="ltr" data-available data-offer="Diese Seite auf Deutsch lesen" data-dismiss="Schließen">Deutsch</a></li>
+                <li><a href="/cedar-tv-updates/es/" hreflang="es" lang="es" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (España)</a></li>
+                <li><a href="/cedar-tv-updates/es-419/" hreflang="es-419" lang="es-419" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (Latinoamérica)</a></li>
+                <li><a href="/cedar-tv-updates/fr/" hreflang="fr" lang="fr" dir="ltr" data-available data-offer="Lire cette page en français" data-dismiss="Fermer">Français</a></li>
+                <li><a href="/cedar-tv-updates/it/" hreflang="it" lang="it" dir="ltr" data-available data-offer="Leggi questa pagina in italiano" data-dismiss="Chiudi">Italiano</a></li>
+                <li><a href="/cedar-tv-updates/pt-br/" hreflang="pt-BR" lang="pt-BR" dir="ltr" data-available data-offer="Ler esta página em português" data-dismiss="Fechar">Português (Brasil)</a></li>
+                <li><a href="/cedar-tv-updates/pl/" hreflang="pl" lang="pl" dir="ltr" data-available data-offer="Przeczytaj tę stronę po polsku" data-dismiss="Zamknij">Polski</a></li>
+                <li><a href="/cedar-tv-updates/tr/" hreflang="tr" lang="tr" dir="ltr" data-available data-offer="Bu sayfayı Türkçe okuyun" data-dismiss="Kapat">Türkçe</a></li>
+                <li><a href="/cedar-tv-updates/ru/" hreflang="ru" lang="ru" dir="ltr" data-available data-offer="Читать эту страницу на русском" data-dismiss="Закрыть">Русский</a></li>
+                <li><a href="/cedar-tv-updates/ar/" hreflang="ar" lang="ar" dir="rtl" data-available data-offer="اقرأ هذه الصفحة بالعربية" data-dismiss="إغلاق">العربية</a></li>
+                <li><a href="/cedar-tv-updates/ja/" hreflang="ja" lang="ja" dir="ltr" aria-current="true" data-available data-offer="このページを日本語で読む" data-dismiss="閉じる">日本語</a></li>
+              </ul>
+            </details>
+            <a class="cedar-download" href="/cedar-tv-updates/ja/#download">Cedar を入手</a>
+          </div>
+        </div>
+      </header>
+
+    <main id="main">
+      <section class="home-hero" aria-labelledby="hero-title">
+        <img class="home-hero-art" src="assets/aster-vale-hero.webp" alt="" width="1672" height="941" fetchpriority="high">
+        <div class="home-hero-inner">
+          <p class="eyebrow">すべての画面で Cedar を</p>
+          <div class="hero-title-row">
+            <img class="hero-icon" src="assets/cedar-app-icon.png" alt="" width="96" height="96">
+            <h1 id="hero-title"><img class="hero-wordmark" src="assets/cedar-wordmark.png" alt="Cedar" width="858" height="301"></h1>
+          </div>
+          <p class="hero-meta">
+            <span>映画、シリーズ、ライブTV</span>
+            <span class="hero-badges"><span>無料</span><span>広告なし</span><span>アカウント不要</span></span>
+          </p>
+          <p class="hero-lede">いつも使っているテレビ、スマートフォン、タブレット、パソコンで、軸のぶれないメディア体験を。ご自身が利用を許可されているソースを追加すれば、Cedar が映画、シリーズ、ライブTV、プロファイル、再生をほどよくつなげます。</p>
+          <p class="compatibility">Android TV · Google TV · Fire TV · iPhone · iPad · Apple TV · Mac</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/cedar-tv-updates/ja/#download" data-get-cedar>Cedar を入手</a>
+            <a class="button button-glass" href="/cedar-tv-updates/ja/#whats-on"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>放送中の番組</a>
+            <a class="button button-glass" href="/cedar-tv-updates/ja/#in-the-app"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM9 20h6"/></svg>アプリ画面</a>
+          </div>
+        </div>
+        <p class="hero-credit">Aster Vale · Cedar のデモカタログより</p>
+      </section>
+
+      <section class="band" id="in-the-app" aria-labelledby="in-the-app-title">
+        <div class="row-head">
+          <h2 class="row-title" id="in-the-app-title">アプリ画面</h2>
+          <p class="row-sub">Cedar 自身の画面を、対応する各デバイスでご覧いただけます。Apple デバイスのタイトル、アートワーク、チャンネルは、Cedar のデモ用に作られた架空のカタログです。</p>
+        </div>
+
+        <div class="device-tabs" role="tablist" aria-label="デバイス" data-device-tabs hidden>
+          <button type="button" role="tab" id="tab-apple-tv" aria-controls="device-apple-tv" aria-selected="true" data-device="apple-tv">Apple TV</button>
+          <button type="button" role="tab" id="tab-mac" aria-controls="device-mac" aria-selected="false" data-device="mac">Mac</button>
+          <button type="button" role="tab" id="tab-ipad" aria-controls="device-ipad" aria-selected="false" data-device="ipad">iPad</button>
+          <button type="button" role="tab" id="tab-iphone" aria-controls="device-iphone" aria-selected="false" data-device="iphone">iPhone</button>
+          <button type="button" role="tab" id="tab-android-tv" aria-controls="device-android-tv" aria-selected="false" data-device="android-tv">Android TV</button>
+        </div>
+
+        <div class="device-panel" id="device-apple-tv" role="tabpanel" aria-labelledby="tab-apple-tv" data-device-panel="apple-tv">
+          <h3 class="device-name">Apple TV</h3>
+          <div class="device-stage frame-tv">
+            <figure data-shot="home"><img src="assets/screens/apple-tv-home.webp" srcset="assets/screens/apple-tv-home-960.webp 960w, assets/screens/apple-tv-home.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV の Cedar ホーム。ヒーロータイトルとポスターの列" width="1920" height="1080" loading="lazy"><figcaption>ホーム: 上にヒーロー、その下にあなたのブランチ。</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/screens/apple-tv-detail.webp" srcset="assets/screens/apple-tv-detail-960.webp 960w, assets/screens/apple-tv-detail.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV の Cedar のシリーズページ" width="1920" height="1080" loading="lazy"><figcaption>タイトルのページ: アートワーク、詳細、シーズン、エピソード。</figcaption></figure>
+            <figure data-shot="guide"><img src="assets/screens/apple-tv-guide.webp" srcset="assets/screens/apple-tv-guide-960.webp 960w, assets/screens/apple-tv-guide.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV の Cedar ライブTV番組表" width="1920" height="1080" loading="lazy"><figcaption>番組表: すべてのチャンネルの、いまとこのあとの番組。</figcaption></figure>
+            <figure data-shot="search"><img src="assets/screens/apple-tv-search.webp" srcset="assets/screens/apple-tv-search-960.webp 960w, assets/screens/apple-tv-search.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV の Cedar 検索" width="1920" height="1080" loading="lazy"><figcaption>検索: 入力する前から、話題の映画とシリーズが並びます。</figcaption></figure>
+            <figure data-shot="branches"><img src="assets/screens/apple-tv-branches.webp" srcset="assets/screens/apple-tv-branches-960.webp 960w, assets/screens/apple-tv-branches.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV の Cedar でホームのブランチを編集しているところ" width="1920" height="1080" loading="lazy"><figcaption>ブランチ: ホームの列に何をどう表示するかを選べます。</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="device-panel" id="device-mac" role="tabpanel" aria-labelledby="tab-mac" data-device-panel="mac">
+          <h3 class="device-name">Mac</h3>
+          <div class="device-stage frame-mac">
+            <figure data-shot="home"><img src="assets/screens/mac-home.webp" srcset="assets/screens/mac-home-800.webp 800w, assets/screens/mac-home.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Mac のウインドウに表示された Cedar ホーム" width="1280" height="820" loading="lazy"><figcaption>ホーム: 上にヒーロー、その下にあなたのブランチ。</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/screens/mac-detail.webp" srcset="assets/screens/mac-detail-800.webp 800w, assets/screens/mac-detail.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Mac の Cedar のシリーズページ。エピソードの列つき" width="1280" height="820" loading="lazy"><figcaption>タイトルのページ: アートワーク、詳細、シーズン、エピソード。</figcaption></figure>
+            <figure data-shot="guide"><img src="assets/screens/mac-guide.webp" srcset="assets/screens/mac-guide-800.webp 800w, assets/screens/mac-guide.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Mac の Cedar ライブTV番組表" width="1280" height="820" loading="lazy"><figcaption>番組表: すべてのチャンネルの、いまとこのあとの番組。</figcaption></figure>
+            <figure data-shot="search"><img src="assets/screens/mac-search.webp" srcset="assets/screens/mac-search-800.webp 800w, assets/screens/mac-search.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Mac の Cedar 検索" width="1280" height="820" loading="lazy"><figcaption>検索: 入力する前から、話題の映画とシリーズが並びます。</figcaption></figure>
+            <figure data-shot="branches"><img src="assets/screens/mac-branches.webp" srcset="assets/screens/mac-branches-800.webp 800w, assets/screens/mac-branches.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Mac の Cedar でホームのブランチを編集しているところ" width="1280" height="820" loading="lazy"><figcaption>ブランチ: ホームの列に何をどう表示するかを選べます。</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="device-panel" id="device-ipad" role="tabpanel" aria-labelledby="tab-ipad" data-device-panel="ipad">
+          <h3 class="device-name">iPad</h3>
+          <div class="device-stage frame-tablet">
+            <figure data-shot="home"><img src="assets/screens/ipad-home.webp" srcset="assets/screens/ipad-home-760.webp 760w, assets/screens/ipad-home.webp 1032w" sizes="(max-width: 500px) 88vw, 440px" alt="iPad の Cedar ホーム" width="1032" height="1376" loading="lazy"><figcaption>ホーム: 上にヒーロー、その下にあなたのブランチ。</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/screens/ipad-detail.webp" srcset="assets/screens/ipad-detail-760.webp 760w, assets/screens/ipad-detail.webp 1032w" sizes="(max-width: 500px) 88vw, 440px" alt="iPad の Cedar のシリーズページ" width="1032" height="1376" loading="lazy"><figcaption>タイトルのページ: アートワーク、詳細、シーズン、エピソード。</figcaption></figure>
+            <figure data-shot="guide"><img src="assets/screens/ipad-guide.webp" srcset="assets/screens/ipad-guide-760.webp 760w, assets/screens/ipad-guide.webp 1032w" sizes="(max-width: 500px) 88vw, 440px" alt="iPad の Cedar ライブTV番組表" width="1032" height="1376" loading="lazy"><figcaption>番組表: すべてのチャンネルの、いまとこのあとの番組。</figcaption></figure>
+            <figure data-shot="search" class="is-landscape"><img src="assets/screens/ipad-search.webp" srcset="assets/screens/ipad-search-800.webp 800w, assets/screens/ipad-search.webp 1376w" sizes="(max-width: 730px) 88vw, 640px" alt="横向きの iPad の Cedar 検索" width="1376" height="1032" loading="lazy"><figcaption>検索: 入力する前から、話題の映画とシリーズが並びます。</figcaption></figure>
+            <figure data-shot="branches"><img src="assets/screens/ipad-branches.webp" srcset="assets/screens/ipad-branches-760.webp 760w, assets/screens/ipad-branches.webp 1032w" sizes="(max-width: 500px) 88vw, 440px" alt="iPad の Cedar でホームのブランチを編集しているところ" width="1032" height="1376" loading="lazy"><figcaption>ブランチ: ホームの列に何をどう表示するかを選べます。</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="device-panel" id="device-iphone" role="tabpanel" aria-labelledby="tab-iphone" data-device-panel="iphone">
+          <h3 class="device-name">iPhone</h3>
+          <div class="device-stage frame-phone">
+            <figure data-shot="home"><img src="assets/screens/iphone-home.webp" alt="iPhone の Cedar ホーム" width="660" height="1434" loading="lazy"><figcaption>ホーム: 上にヒーロー、その下にあなたのブランチ。</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/screens/iphone-detail.webp" alt="iPhone の Cedar のシリーズページ。「再開」とエピソードつき" width="660" height="1434" loading="lazy"><figcaption>タイトルのページ: アートワーク、詳細、シーズン、エピソード。</figcaption></figure>
+            <figure data-shot="guide"><img src="assets/screens/iphone-guide.webp" alt="iPhone の Cedar ライブTV番組表" width="660" height="1434" loading="lazy"><figcaption>番組表: すべてのチャンネルの、いまとこのあとの番組。</figcaption></figure>
+            <figure data-shot="search"><img src="assets/screens/iphone-search.webp" alt="iPhone の Cedar 検索" width="660" height="1434" loading="lazy"><figcaption>検索: 入力する前から、話題の映画とシリーズが並びます。</figcaption></figure>
+            <figure data-shot="branches"><img src="assets/screens/iphone-branches.webp" alt="iPhone の Cedar でホームのブランチを編集しているところ" width="660" height="1434" loading="lazy"><figcaption>ブランチ: ホームの列に何をどう表示するかを選べます。</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="device-panel" id="device-android-tv" role="tabpanel" aria-labelledby="tab-android-tv" data-device-panel="android-tv">
+          <h3 class="device-name">Android TV</h3>
+          <div class="device-stage frame-tv">
+            <figure data-shot="home"><img src="assets/cedar-home.webp" srcset="assets/cedar-home-960.webp 960w, assets/cedar-home.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="充実したメタデータとメディアアートワークを表示する、Cedar の映画のようなホーム画面" width="1920" height="1080" loading="lazy"><figcaption>Android TV のホーム: アートワーク中心の列に、評価と詳細を表示。</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/cedar-detail.webp" srcset="assets/cedar-detail-960.webp 960w, assets/cedar-detail.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="充実したアートワーク、メタデータ、再生操作を備えた Cedar の映画詳細ページ" width="1920" height="1080" loading="lazy"><figcaption>どのタイトルにも、アートワーク、評価、キャスト、シーズン、ソースがそろいます。</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="shot-tabs" role="tablist" aria-label="画面" data-shot-tabs hidden>
+          <button type="button" role="tab" aria-selected="true" data-shot="home">ホーム</button>
+          <button type="button" role="tab" aria-selected="false" data-shot="detail">タイトルのページ</button>
+          <button type="button" role="tab" aria-selected="false" data-shot="guide">番組表</button>
+          <button type="button" role="tab" aria-selected="false" data-shot="search">検索</button>
+          <button type="button" role="tab" aria-selected="false" data-shot="branches">ブランチ</button>
+        </div>
+        <p class="shot-caption" aria-live="polite" data-shot-caption></p>
+      </section>
+
+      <section class="band" id="experience" aria-labelledby="experience-title">
+        <div class="row-head">
+          <h2 class="row-title" id="experience-title">画面ごとに最適化</h2>
+          <p class="row-sub">Cedar は共通のプロダクト言語を保ちつつ、各デバイスがいちばん得意なことを活かします。</p>
+        </div>
+        <div class="tile-grid">
+          <article class="tile">
+            <span class="tile-icon tint-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span>
+            <h3>ダウンロード</h3>
+            <p>対応する映画やエピソードを、あとで見るために保存できます。管理用の「ダウンロードセンター」つきで、iPhone と iPad で使えます。</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM12 12h7v5h-7z"/></svg></span>
+            <h3>ピクチャ・イン・ピクチャと AirPlay</h3>
+            <p>iPhone と iPad では、ストリームが対応していれば、画面の隅で見続けたり、別の画面に送ったりできます。</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-teal"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v12H3zM8 20h8M7 8h4M7 12h10"/></svg></span>
+            <h3>Top Shelf と Watch Next</h3>
+            <p>Apple TV の Top Shelf から、または対応する Android TV の Watch Next の列から、続きをすぐに再生できます。</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-red"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16l1.5-6A2 2 0 0 1 8.4 8.5h7.2a2 2 0 0 1 1.9 1.5L19 16M4 16h16v3H4zM7.5 19v1.5M16.5 19v1.5"/></svg></span>
+            <h3>CarPlay のラジオ</h3>
+            <p>iPhone なら、Cedar Radio のステーションを車にも持ち出せます。</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20a6 6 0 0 1 12 0M17 11a2.5 2.5 0 1 0 0-5M16 14.5a5 5 0 0 1 5 5.5"/></svg></span>
+            <h3>みんなにプロファイルを</h3>
+            <p>家族それぞれのプロファイルと、選んだ年齢制限の範囲で使えるキッズプロファイル。</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-plum"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/></svg></span>
+            <h3>すべての Apple デバイスを同期</h3>
+            <p>プロファイル、お気に入り、リスト、進捗は、ご自身の iCloud で同期されます。パスワードは通常の同期には含まれません。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="whats-on" aria-labelledby="whats-on-title">
+        <div class="row-head">
+          <h2 class="row-title" id="whats-on-title">放送中の番組</h2>
+          <p class="row-sub">Cedar の機能を、専用のテレビ番組表のように並べました。番組を選ぶと詳しく読めます。</p>
+        </div>
+        <div class="epg" data-epg>
+          <ol class="epg-source">
+            <li data-tint="green" data-icon="home">
+              <h3>ホーム</h3>
+              <p>ブランチとヒーロー</p>
+              <ol>
+                <li data-span="3"><h4>あなた好みのブランチ</h4><p>ホームは、あなたが管理するブランチで構成されます。追加、名前変更、並べ替え、非表示、復元ができ、ポスター、ワイド、ヒーローの列も選べます。</p></li>
+                <li data-span="2"><h4>ヒーロー</h4><p>ヒーローのスタイルと詳細、表示する評価ソース、しばらくして予告編を再生するかどうかを選べます。</p></li>
+                <li data-span="2"><h4>できあがりのホーム</h4><p>Cedar Creator で、厳選されたセットアップやブランチグループを見たり、プロフィール写真を追加したり、Cedar で開いたりできます。</p><a href="creator/">Cedar Creator を開く</a></li>
+              </ol>
+            </li>
+            <li data-tint="red" data-icon="tv">
+              <h3>ライブTV</h3>
+              <p>番組表、見逃し配信、DVR</p>
+              <ol>
+                <li data-span="2"><h4>番組表</h4><p>プレイリストの順序、XMLTV の番組データ、使いやすいグリッド番組表、番組表内のプレビュープレーヤーで、チャンネルをすばやく見て回れます。</p></li>
+                <li data-span="1"><h4>見逃し配信</h4><p>すでに放送された番組を、プロバイダーがアーカイブを保持している期間内であれば再生できます。</p></li>
+                <li data-span="2"><h4>マルチビューと DVR</h4><p>Apple デバイスでは、Jellyfin と Emby のライブTVも、ラインナップ、マルチビュー、Cedar DVR とともにライブTVに加わります。</p><a href="apple/releases/">Apple リリースノート</a></li>
+                <li data-span="2"><h4>ライブをカスタマイズ</h4><p>iPhone ではライブのページをシェルフとして並べ替えられ、番組ページには放送予定が表示されます。</p></li>
+              </ol>
+            </li>
+            <li data-tint="amber" data-icon="play">
+              <h3>再生</h3>
+              <p>映像と音声</p>
+              <ol>
+                <li data-span="2"><h4>言語</h4><p>音声はシステムの言語、字幕はデフォルトでオフ。優先する音声と字幕の言語も設定でき、強制字幕や SDH トラックにも対応します。</p></li>
+                <li data-span="2"><h4>イントロをスキップと次に再生</h4><p>セグメントデータがあるタイトルではイントロをスキップできます。次のエピソードの前に、カウントダウンつきの「次に再生」カードを表示することもできます。</p></li>
+                <li data-span="3"><h4>Dolby Vision</h4><p>対応する Dolby Vision プロファイル 7 の素材を、再生時にプロファイル 8.1 へ変換することもできます(任意)。</p></li>
+              </ol>
+            </li>
+            <li data-tint="blue" data-icon="search">
+              <h3>見つける</h3>
+              <p>検索とおすすめ</p>
+              <ol>
+                <li data-span="2"><h4>何を見よう？</h4><p>Apple デバイスの検索にランキング形式のおすすめが表示され、ホームの列として保存できます。</p></li>
+                <li data-span="2"><h4>トップ10チャート</h4><p>トップ10チャートと公開 MDBList のリストを、ホームにそのまま表示。</p></li>
+                <li data-span="3"><h4>スポーツバー</h4><p>スコアをホームに表示。各大会のデータが許す限り、詳細まで確認できます。</p></li>
+              </ol>
+            </li>
+            <li data-tint="slate" data-icon="server">
+              <h3>ソース</h3>
+              <p>サーバーと共有</p>
+              <ol>
+                <li data-span="3"><h4>Plex、Emby、Jellyfin</h4><p>メディアサーバーを接続して、映画、シリーズ、シーズン、エピソードを、それぞれのアートワークつきで閲覧できます。</p></li>
+                <li data-span="2"><h4>WebDAV 共有</h4><p>利用が許可されているフォルダを閲覧して再生できます。映画とシリーズの列は、ファイル名から作られます。</p></li>
+                <li data-span="2"><h4>プレイリストと番組表</h4><p>リモートの M3U プレイリストと XMLTV 番組表を追加するか、iPhone と iPad ではローカルファイルを選べます。</p><a href="setup/">ブラウザでセットアップを開く</a></li>
+              </ol>
+            </li>
+            <li data-tint="plum" data-icon="sparkle">
+              <h3>おまけ</h3>
+              <p>ほかにも</p>
+              <ol>
+                <li data-span="3"><h4>Cedar Radio</h4><p>国やジャンル別のラジオ局。同期歌詞と Shazam にも対応。</p><a href="/cedar-tv-updates/ja/radio/">Cedar Radio について</a></li>
+                <li data-span="2"><h4>.cedar ファイル</h4><p>.cedar セットアップファイルを共有・インポートできます。パスワードはパスフレーズでロックされます。</p><a href="creator/">Cedar Creator を開く</a></li>
+                <li data-span="2"><h4>セグメントをマーク</h4><p>Apple デバイスから、イントロ、あらすじ、クレジットの時間を IntroDB と SkipDB に送信できます。</p></li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="band platforms" id="platforms" aria-labelledby="platforms-title">
+        <div class="row-head">
+          <p class="eyebrow">画面を選ぶ</p>
+          <h2 class="row-title" id="platforms-title">ひとつの Cedar。デバイスごとに最適化。</h2>
+          <p class="row-sub">Cedar は、すべてのデバイスを同じ形に押し込めることなく、明快なプロダクト言語を共有します。どのアプリも、画面、入力方法、家の中での役割を大切にしています。</p>
+        </div>
+
+        <div class="platform-grid">
+          <article class="platform-card platform-card-primary">
+            <span class="platform-device">Android TV · Google TV · Fire TV</span>
+            <h3><a class="platform-link" href="releases/android-tv/">Android TV</a></h3>
+            <p>リモコン中心のリビング体験。映画のような閲覧、ライブ番組表の操作、署名つきの直接アップデートに対応します。</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="preview" data-platform-status="android-tv">早期ベータ</span>
+              <span data-platform-version="android-tv">バージョン 1.4.0 · ビルド 10</span>
+              <span data-platform-date="android-tv"><time datetime="2026-10-21">2026年10月21日</time>更新</span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">リリースノート ›</span>
+              <a class="platform-action" href="/cedar-tv-updates/ja/#download">ダウンロード</a>
+            </span>
+          </article>
+
+          <article class="platform-card">
+            <span class="platform-device">リビング</span>
+            <h3><a class="platform-link" href="apple/releases/apple-tv/">Apple TV</a></h3>
+            <p>ネイティブのフォーカス操作、世帯プロファイル、本格的なライブ番組表、Siri Remote を前提にした再生。</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="testflight" data-platform-status="apple-tv">公開ベータ</span>
+              <span data-platform-version="apple-tv">バージョン 1.0.0 · ビルド 68</span>
+              <span data-platform-date="apple-tv"><time datetime="2026-10-13">2026年10月13日</time>更新</span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">リリースノート ›</span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="apple-tv">ベータに参加</a>
+            </span>
+          </article>
+
+          <article class="platform-card">
+            <span class="platform-device">ポケットの中で</span>
+            <h3><a class="platform-link" href="apple/releases/iphone/">iPhone</a></h3>
+            <p>すばやい閲覧、ダウンロード、ライブTV。大画面から離れても使える再生体験。</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="testflight" data-platform-status="iphone">公開ベータ</span>
+              <span data-platform-version="iphone">バージョン 1.0.0 · ビルド 68</span>
+              <span data-platform-date="iphone"><time datetime="2026-10-13">2026年10月13日</time>更新</span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">リリースノート ›</span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="iphone">ベータに参加</a>
+            </span>
+          </article>
+
+          <article class="platform-card">
+            <span class="platform-device">ゆったり閲覧</span>
+            <h3><a class="platform-link" href="apple/releases/ipad/">iPad</a></h3>
+            <p>広々としたライブラリ、タッチ中心の探索、ダウンロード、ライブTVを、柔軟なタブレットレイアウトで。</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="testflight" data-platform-status="ipad">公開ベータ</span>
+              <span data-platform-version="ipad">バージョン 1.0.0 · ビルド 68</span>
+              <span data-platform-date="ipad"><time datetime="2026-10-13">2026年10月13日</time>更新</span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">リリースノート ›</span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="ipad">ベータに参加</a>
+            </span>
+          </article>
+
+          <article class="platform-card">
+            <span class="platform-device">デスクトップで</span>
+            <h3><a class="platform-link" href="apple/releases/mac/">Mac</a></h3>
+            <p>ネイティブのファイル操作、接続したソース、ライブTV、集中できる再生を、デスクトップで。</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="testflight" data-platform-status="mac">公開ベータ</span>
+              <span data-platform-version="mac">バージョン 1.0.0 · ビルド 68</span>
+              <span data-platform-date="mac"><time datetime="2026-10-13">2026年10月13日</time>更新</span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">リリースノート ›</span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="mac">ベータに参加</a>
+            </span>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="personalize" aria-labelledby="personalize-title">
+        <div class="creator-band">
+          <div>
+            <p class="eyebrow">Cedar Creator</p>
+            <h2 class="row-title" id="personalize-title">できあがりのホームを、自分好みに。</h2>
+            <p class="row-sub">厳選されたセットアップやブランチグループを見て、プロフィール写真を追加し、好きな順に並べられます。そのあと Cedar でカートを開く、リンクをコピーする、.cedar ファイルとしてダウンロードする、のいずれかを選べます。</p>
+          </div>
+          <div class="creator-actions">
+            <a class="button button-primary" href="creator/">セットアップを見る ›</a>
+            <a class="button button-secondary" href="creator/?tab=avatars">プロフィール写真を選ぶ ›</a>
+            <a class="button button-secondary" href="creator/?tab=badges">ソースバッジを選ぶ ›</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="pricing" aria-labelledby="pricing-title">
+        <div class="pricing-card">
+          <div class="pricing-copy">
+            <img class="pricing-icon" src="assets/cedar-app-icon.png" alt="" width="72" height="72">
+            <p class="eyebrow">Cedar Pro</p>
+            <h2 id="pricing-title">Cedar を7日間無料でお試しください。その後も、ずっと。</h2>
+            <p class="pricing-lede">お手持ちのすべてを、すべての画面で再生。Cedar Pro というものはありません。これがすべてです。</p>
+            <ul class="pricing-perks">
+              <li><span class="perk-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM9 20h6"/></svg></span><strong>ライブラリまるごと</strong><span>ご利用が許可されているメディアサーバー、共有、プレイリストを、アートワークと詳細つきで。</span></li>
+              <li><span class="perk-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><strong>本格的な番組表で見るライブTV</strong><span>使いやすいグリッド番組表、プロバイダーが対応していれば見逃し配信、番組表内のプレビュー。</span></li>
+              <li><span class="perk-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v12H3zM8 20h8"/></svg></span><strong>すべての画面で</strong><span>Android TV、Google TV、Fire TV、iPhone、iPad、Apple TV、Mac。</span></li>
+              <li><span class="perk-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></span><strong>広告なし、トラッキングなし</strong><span>アプリをまたぐトラッキングはなく、Cedar アカウントの登録も不要です。</span></li>
+            </ul>
+          </div>
+          <div class="pricing-plans">
+            <div class="plan-list" role="group" aria-label="プラン" data-plans>
+              <button type="button" class="plan" aria-pressed="true">
+                <span class="plan-name">年額 <span class="plan-save">100%お得</span></span>
+                <span class="plan-note">月額たったの 0 円、請求は一切なし</span>
+                <span class="plan-price">年額 0 円</span>
+                <span class="plan-trial">ずっと無料</span>
+              </button>
+              <button type="button" class="plan" aria-pressed="false">
+                <span class="plan-name">月額</span>
+                <span class="plan-note">月ごとの請求(ごくゆるい意味で)</span>
+                <span class="plan-price">月額 0 円</span>
+                <span class="plan-trial">ずっと無料</span>
+              </button>
+              <button type="button" class="plan" aria-pressed="false">
+                <span class="plan-name">買い切り</span>
+                <span class="plan-note">一度だけお支払い(しなくて大丈夫です)· ファミリー共有はどなたでも</span>
+                <span class="plan-price">一度だけ 0 円</span>
+              </button>
+            </div>
+            <p class="pricing-fine">価格は米ドル表記ですが、0 ドルはどの通貨にもきれいに換算できます。請求がないので、更新もありません。お支払いをしなければ、いつでも解約できます。Cedar はメディアを販売しません。接続するサービスやサーバーには、それぞれ独自の料金がかかる場合があります。</p>
+            <div class="pricing-links">
+              <a class="button button-primary" href="/cedar-tv-updates/ja/#download">Cedar を入手 · 0 円</a>
+              <details class="restore-purchase">
+                <summary>購入の復元</summary>
+                <p>購入したことがないので、すでに復元済みです。どうぞお楽しみください。</p>
+              </details>
+              <a class="button button-secondary" href="/cedar-tv-updates/ja/privacy/">プライバシーポリシー</a>
+              <a class="button button-secondary" href="/cedar-tv-updates/ja/content-policy/">コンテンツポリシー</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band download-section" id="download" aria-labelledby="download-title">
+        <div class="download-card">
+          <div class="download-copy">
+            <p class="eyebrow">対応プラットフォーム</p>
+            <h2 class="row-title" id="download-title">お使いの環境に合わせて Cedar を選ぶ</h2>
+            <p class="row-sub">Android TV は完成版ではなく早期ベータで、署名つきの直接ダウンロードで提供しています。iPhone、iPad、Apple TV、Mac 向けの Cedar は、TestFlight で公開ベータです。</p>
+          </div>
+
+          <div class="download-options">
+            <div class="download-option">
+              <h3>Android TV · Google TV · Fire TV</h3>
+              <div class="release-meta" aria-live="polite">
+                <span><span class="status-pill" data-status="preview" data-platform-status="android-tv">早期ベータ</span></span>
+                <span>バージョン <strong data-version>1.4.0</strong></span>
+                <span>ビルド <strong data-build>10</strong></span>
+                <span data-file-size>73.6 MB</span>
+                <span data-platform-date="android-tv"><time datetime="2026-10-21">2026年10月21日</time>更新</span>
+              </div>
+              <div class="option-actions">
+                <a class="button button-primary" data-download-link href="https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.4.0/Cedar-TV-1.4.0.apk">Android TV 版をダウンロード</a>
+                <a class="button button-secondary" href="releases/">すべてのプラットフォームのリリース ›</a>
+              </div>
+              <details class="install-help">
+                <summary>テレビへのインストール方法</summary>
+                <ol>
+                  <li>テレビで、Amazon Appstore または Google Play から無料の <strong>Downloader</strong> アプリをインストールします。</li>
+                  <li>Downloader にアプリのインストールを許可します。Fire TV では、設定 › My Fire TV › 開発者オプション › 不明なアプリのインストール を開きます。開発者オプションが表示されていない場合は、「情報」を開いて、デバイス名を7回選択してください。Google TV と Android TV では、設定 › アプリ › セキュリティと制限 › 提供元不明のアプリ を開きます。</li>
+                  <li>Downloader を開き、<code>cedartv.github.io/cedar-tv-updates</code> を入力して、<strong>Android TV 版をダウンロード</strong>を選びます。</li>
+                  <li><strong>インストール</strong>を選び、Cedar を開きます。以降のアップデートはアプリ内でお知らせします。</li>
+                </ol>
+                <p>インストール済みですか?<a href="setup/">ブラウザセットアップ</a>を使うと、スマートフォンやパソコンからソースの追加やホームの並べ替えができます。</p>
+              </details>
+            </div>
+
+            <div class="download-option">
+              <h3>iPhone · iPad · Apple TV · Mac</h3>
+              <div class="release-meta">
+                <span><span class="status-pill" data-status="testflight" data-platform-status="iphone">公開ベータ</span></span>
+                <span data-platform-version="iphone">バージョン 1.0.0 · ビルド 68</span>
+                <span data-platform-date="iphone"><time datetime="2026-10-13">2026年10月13日</time>更新</span>
+              </div>
+              <div class="option-actions">
+                <a class="button button-primary" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="iphone">Apple のベータに参加 ›</a>
+              </div>
+              <p class="download-hint">はじめに Apple の無料アプリ TestFlight をインストールし、使いたいデバイスでリンクを開いてください。</p>
+            </div>
+          </div>
+        </div>
+        <p class="install-note">Android TV は早期ベータのため、まだ使えない機能やバグがある場合があります。Cedar が直接配布しており、アップデートのインストール前に毎回検証されます。Apple 版は、App Store でのリリースが可能になるまでベータ表記のままです。</p>
+      </section>
+
+      <section class="band" id="help" aria-labelledby="help-title">
+        <div class="row-head">
+          <h2 class="row-title" id="help-title">ヘルプとフィードバック</h2>
+          <p class="row-sub">Cedar はコミュニティによって支えられています。まずはこちらを確認し、そのうえでコミュニティに質問してください。</p>
+        </div>
+        <div class="hub-grid">
+          <ul class="hub-list">
+            <li><a href="/cedar-tv-updates/ja/support/"><span class="hub-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"/></svg></span><span class="hub-text"><strong>サポート</strong><span>試してほしい確認事項と、ヘルプの求め方</span></span></a></li>
+            <li><a href="releases/"><span class="hub-icon tint-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><span class="hub-text"><strong>新着情報</strong><span>すべてのプラットフォームのリリースノート</span></span></a></li>
+            <li><a href="setup/"><span class="hub-icon tint-teal"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM9 20h6M8 10h8"/></svg></span><span class="hub-text"><strong>ブラウザセットアップ</strong><span>別の画面からソースを追加し、ホームを並べ替え</span></span></a></li>
+            <li><a href="/cedar-tv-updates/ja/accessibility/"><span class="hub-icon tint-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5 8l7 1.5L19 8M12 9.5V14l-3 6M12 14l3 6"/></svg></span><span class="hub-text"><strong>アクセシビリティ</strong><span>Cedar が支援技術とどう連携するか</span></span></a></li>
+          </ul>
+          <ul class="hub-list">
+            <li><a href="/cedar-tv-updates/ja/feedback/?kind=bug"><span class="hub-icon tint-red"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 9a4 4 0 0 1 8 0v5a4 4 0 0 1-8 0zM12 9v9M4 13h4M16 13h4M5 7l3 2M19 7l-3 2M5 19l3-2M19 19l-3-2"/></svg></span><span class="hub-text"><strong>不具合を報告</strong><span>何が壊れたか教えてください</span></span></a></li>
+            <li><a href="/cedar-tv-updates/ja/feedback/?kind=feature"><span class="hub-icon tint-plum"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3z"/></svg></span><span class="hub-text"><strong>機能をリクエスト</strong><span>Cedar にしてほしいことを提案</span></span></a></li>
+            <li><a href="https://www.reddit.com/r/CedarApp/"><span class="hub-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8z"/></svg></span><span class="hub-text"><strong>Reddit</strong><span>r/CedarApp の会話に参加</span></span></a></li>
+            <li><a href="https://discord.gg/FDjx57bjdE"><span class="hub-icon tint-indigo"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8zM9 10h.01M15 10h.01"/></svg></span><span class="hub-text"><strong>Discord</strong><span>質問や機能の提案はこちら</span></span></a></li>
+          </ul>
+        </div>
+        <div class="discord-card">
+          <span class="hub-icon tint-indigo"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8zM9 10h.01M15 10h.01"/></svg></span>
+          <div>
+            <h3>Discord の Cedar</h3>
+            <p>ヘルプの依頼、不具合の報告、改善の提案ができます。プロバイダーの認証情報、非公開のプレイリストのアドレス、加工していないログは、絶対に投稿しないでください。</p>
+          </div>
+          <a class="button button-indigo" href="https://discord.gg/FDjx57bjdE">サーバーに参加</a>
+        </div>
+      </section>
+    </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/ja/" aria-label="Cedar ホーム">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>すでにお持ちの画面で使える、軸のぶれないメディアプレーヤー兼整理ツール。ご利用が許可されているソースとサービスだけを接続してください。</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="フッターナビゲーション">
+          <section class="site-footer-group">
+            <h2>製品</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/ja/apple/">Apple アプリ</a></li>
+              <li><a href="/cedar-tv-updates/ja/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/ja/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">リリースノート</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>リソース</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/ja/support/">サポート</a></li>
+              <li><a href="/cedar-tv-updates/ja/privacy/">プライバシー</a></li>
+              <li><a href="/cedar-tv-updates/ja/accessibility/">アクセシビリティ</a></li>
+              <li><a href="/cedar-tv-updates/ja/content-policy/">コンテンツポリシー</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>コミュニティ</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/ja/feedback/">フィードバックを送信</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar は、メディアコンテンツの提供、ホスト、販売を行いません。</span>
+        </p>
+      </footer>
+
+    <script src="site.js" defer></script>
+    <script src="home.js" defer></script>
+  </body>
+</html>

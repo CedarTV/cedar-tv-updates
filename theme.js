@@ -2,6 +2,16 @@
 (() => {
   // Lets the header CSS collapse into the Menu button before first paint, so it doesn't jump on load.
   document.documentElement.classList.add('cedar-js');
+  // Translated pages carry their script strings in <script id="cedar-strings">; English pages have none.
+  let strings = null;
+  window.cedarT = (text, values) => {
+    if (strings === null) {
+      try { strings = JSON.parse(document.getElementById('cedar-strings')?.textContent || '{}'); } catch { strings = {}; }
+    }
+    const translated = typeof strings[text] === 'string' ? strings[text] : text;
+    return values ? translated.replace(/\{(\w+)\}/g, (match, name) => (name in values ? String(values[name]) : match)) : translated;
+  };
+  window.cedarLocale = document.documentElement.lang || 'en';
   const key = 'cedar-color-theme';
   const valid = value => ['light', 'dark', 'system'].includes(value);
   const system = window.matchMedia('(prefers-color-scheme: dark)');
@@ -57,6 +67,68 @@
         if (event.key === 'Escape' && header.classList.contains('is-menu-open')) { setOpen(false); toggle.focus(); }
       });
     });
+    // Language menu: remember the choice, close on Escape or an outside click.
+    const languageKey = 'cedar-language';
+    const languageMenus = [...document.querySelectorAll('.cedar-language')];
+    languageMenus.forEach(menu => {
+      menu.addEventListener('click', event => {
+        const link = event.target.closest('a[hreflang]');
+        if (link) { try { localStorage.setItem(languageKey, link.hreflang); } catch {} }
+      });
+    });
+    document.addEventListener('click', event => {
+      languageMenus.forEach(menu => { if (menu.open && !menu.contains(event.target)) menu.open = false; });
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      languageMenus.forEach(menu => { if (menu.open) { menu.open = false; menu.querySelector('summary')?.focus(); } });
+    });
+    // On an English page, offer a translation that matches the browser's language, once.
+    (() => {
+      if ((document.documentElement.lang || 'en') !== 'en') return;
+      let chosen = null;
+      try { chosen = localStorage.getItem(languageKey); } catch {}
+      if (chosen) return;
+      const offers = [...(languageMenus[0]?.querySelectorAll('a[data-available][data-offer]') ?? [])];
+      if (!offers.length) return;
+      const match = (wanted) => {
+        const tag = wanted.toLowerCase();
+        const [base, region] = tag.split('-');
+        const pick = code => offers.find(link => link.hreflang.toLowerCase() === code);
+        if (base === 'en') return 'english';
+        if (base === 'es') return pick(!region || region === 'es' ? 'es' : 'es-419') ?? pick('es');
+        if (base === 'pt') return pick('pt-br');
+        return pick(tag) ?? pick(base);
+      };
+      let offer = null;
+      for (const wanted of navigator.languages ?? [navigator.language]) {
+        if (!wanted) continue;
+        const found = match(wanted);
+        if (found === 'english') return;
+        if (found) { offer = found; break; }
+      }
+      const main = document.querySelector('main');
+      if (!offer || !main) return;
+      const banner = document.createElement('aside');
+      banner.className = 'language-offer';
+      banner.lang = offer.lang;
+      banner.dir = offer.dir;
+      const link = document.createElement('a');
+      link.href = offer.href;
+      link.hreflang = offer.hreflang;
+      link.textContent = offer.dataset.offer;
+      link.addEventListener('click', () => { try { localStorage.setItem(languageKey, offer.hreflang); } catch {} });
+      const close = document.createElement('button');
+      close.type = 'button';
+      close.textContent = '×';
+      close.setAttribute('aria-label', offer.dataset.dismiss || 'Close');
+      close.addEventListener('click', () => {
+        try { localStorage.setItem(languageKey, 'en'); } catch {}
+        banner.remove();
+      });
+      banner.append(link, close);
+      main.prepend(banner);
+    })();
     // Release notes keep earlier builds collapsed; open one when a link targets it.
     const openLinkedRelease = () => {
       let id = '';

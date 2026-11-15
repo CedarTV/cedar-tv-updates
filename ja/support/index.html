@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/cedar-tv-updates/support/">
+    <script type="application/json" id="cedar-strings">{"Download for Android TV":"Android TV 版をダウンロード","Coming soon":"近日公開","Public beta":"公開ベータ","Available now":"公開中","Early beta":"早期ベータ","Version {version} · Build {build}":"バージョン {version} · ビルド {build}","Updated {date}":"{date} 更新","Join the {device} beta":"{device} のベータに参加","What’s on":"放送中の番組","ON NOW":"放送中","{minutes}m left":"残り {minutes} 分","EARLIER":"前","LATER":"後","Today":"今日","Add a short summary (at least 3 characters).":"短い概要を入力してください(3文字以上)。","Add a few more details (at least 10 characters).":"もう少し詳しく入力してください(10文字以上)。","Choose which app this is about.":"どのアプリについてか選択してください。","The app version should look like 1.0.0 (81).":"アプリのバージョンは 1.0.0 (81) の形式で入力してください。","Shorten the staff-only details to 1,000 characters.":"スタッフ専用の詳細は1,000文字以内にしてください。","That was quick. Wait a minute, then try again.":"早すぎます。1分ほど待ってから、もう一度お試しください。","You’ve sent a lot today. Please try again tomorrow.":"本日は多数ご送信いただきました。明日もう一度お試しください。","Sending…":"送信中…","That didn’t send. Please try again, or post it on Discord.":"送信できませんでした。もう一度お試しいただくか、Discord に投稿してください。","Couldn’t reach the feedback service. Check your connection and try again.":"フィードバックサービスに接続できませんでした。接続を確認して、もう一度お試しください。"}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Cedar のセットアップ、トラブルシューティング、お問い合わせ先。">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>サポート — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/ja/support/">
+    <link rel="alternate" hreflang="en" href="https://cedartv.github.io/cedar-tv-updates/support/">
+    <link rel="alternate" hreflang="de" href="https://cedartv.github.io/cedar-tv-updates/de/support/">
+    <link rel="alternate" hreflang="es" href="https://cedartv.github.io/cedar-tv-updates/es/support/">
+    <link rel="alternate" hreflang="es-419" href="https://cedartv.github.io/cedar-tv-updates/es-419/support/">
+    <link rel="alternate" hreflang="fr" href="https://cedartv.github.io/cedar-tv-updates/fr/support/">
+    <link rel="alternate" hreflang="it" href="https://cedartv.github.io/cedar-tv-updates/it/support/">
+    <link rel="alternate" hreflang="pt-BR" href="https://cedartv.github.io/cedar-tv-updates/pt-br/support/">
+    <link rel="alternate" hreflang="pl" href="https://cedartv.github.io/cedar-tv-updates/pl/support/">
+    <link rel="alternate" hreflang="tr" href="https://cedartv.github.io/cedar-tv-updates/tr/support/">
+    <link rel="alternate" hreflang="ru" href="https://cedartv.github.io/cedar-tv-updates/ru/support/">
+    <link rel="alternate" hreflang="ar" href="https://cedartv.github.io/cedar-tv-updates/ar/support/">
+    <link rel="alternate" hreflang="ja" href="https://cedartv.github.io/cedar-tv-updates/ja/support/">
+    <link rel="alternate" hreflang="x-default" href="https://cedartv.github.io/cedar-tv-updates/support/">
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../policy.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="cedar-header">
+        <a class="skip-link" href="/cedar-tv-updates/ja/support/#main">コンテンツへスキップ</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/ja/" aria-label="Cedar ホーム">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/ja/#download">Cedar を入手</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">メニュー</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="メインナビゲーション">
+            <a href="/cedar-tv-updates/ja/">ホーム</a>
+            <a href="/cedar-tv-updates/ja/apple/">Apple アプリ</a>
+            <a href="/cedar-tv-updates/ja/server/">Cedar Server</a>
+            <a href="/cedar-tv-updates/releases/">新着情報</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/ja/support/">サポート</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">テーマ
+              <select aria-label="カラーテーマ" data-theme-select>
+                <option value="system">システム</option>
+                <option value="light">ライト</option>
+                <option value="dark">ダーク</option>
+              </select>
+            </label>
+            <details class="cedar-language" data-i18n-skip>
+              <summary aria-label="言語: 日本語"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></svg><span lang="ja" dir="ltr">日本語</span></summary>
+              <ul class="cedar-language-menu" translate="no">
+                <li><a href="/cedar-tv-updates/support/" hreflang="en" lang="en" dir="ltr" data-available>English</a></li>
+                <li><a href="/cedar-tv-updates/de/support/" hreflang="de" lang="de" dir="ltr" data-available data-offer="Diese Seite auf Deutsch lesen" data-dismiss="Schließen">Deutsch</a></li>
+                <li><a href="/cedar-tv-updates/es/support/" hreflang="es" lang="es" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (España)</a></li>
+                <li><a href="/cedar-tv-updates/es-419/support/" hreflang="es-419" lang="es-419" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (Latinoamérica)</a></li>
+                <li><a href="/cedar-tv-updates/fr/support/" hreflang="fr" lang="fr" dir="ltr" data-available data-offer="Lire cette page en français" data-dismiss="Fermer">Français</a></li>
+                <li><a href="/cedar-tv-updates/it/support/" hreflang="it" lang="it" dir="ltr" data-available data-offer="Leggi questa pagina in italiano" data-dismiss="Chiudi">Italiano</a></li>
+                <li><a href="/cedar-tv-updates/pt-br/support/" hreflang="pt-BR" lang="pt-BR" dir="ltr" data-available data-offer="Ler esta página em português" data-dismiss="Fechar">Português (Brasil)</a></li>
+                <li><a href="/cedar-tv-updates/pl/support/" hreflang="pl" lang="pl" dir="ltr" data-available data-offer="Przeczytaj tę stronę po polsku" data-dismiss="Zamknij">Polski</a></li>
+                <li><a href="/cedar-tv-updates/tr/support/" hreflang="tr" lang="tr" dir="ltr" data-available data-offer="Bu sayfayı Türkçe okuyun" data-dismiss="Kapat">Türkçe</a></li>
+                <li><a href="/cedar-tv-updates/ru/support/" hreflang="ru" lang="ru" dir="ltr" data-available data-offer="Читать эту страницу на русском" data-dismiss="Закрыть">Русский</a></li>
+                <li><a href="/cedar-tv-updates/ar/support/" hreflang="ar" lang="ar" dir="rtl" data-available data-offer="اقرأ هذه الصفحة بالعربية" data-dismiss="إغلاق">العربية</a></li>
+                <li><a href="/cedar-tv-updates/ja/support/" hreflang="ja" lang="ja" dir="ltr" aria-current="true" data-available data-offer="このページを日本語で読む" data-dismiss="閉じる">日本語</a></li>
+              </ul>
+            </details>
+            <a class="cedar-download" href="/cedar-tv-updates/ja/#download">Cedar を入手</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="document-page">
+        <header class="document-header">
+          <p class="eyebrow">Cedar サポート</p>
+          <h1>行き詰まったときは、こちらへ。</h1>
+          <p>まず、以下の確認事項をお試しください。問題が解決しない場合は、アプリのバージョン、プラットフォーム、起きたことを安全な形でまとめた説明を添えて、Cedar コミュニティにご連絡ください。</p>
+        </header>
+        <div class="document-grid">
+          <section>
+            <h2>サポートにご連絡いただく前に</h2>
+            <ol>
+              <li>そのソースが、公式のクライアントまたはウェブページで動作することを確認する。</li>
+              <li>Cedar のソースの更新と接続チェックを使う。</li>
+              <li>サーバーが対応している場合は HTTPS を試す。</li>
+              <li>Cedar のバージョン、プラットフォーム、失敗した操作を正確に記録する。</li>
+            </ol>
+          </section>
+          <section>
+            <h2>Cedar に連絡する</h2>
+            <p>不具合の報告や改善の提案はフィードバックフォームから、ヘルプのご依頼は Cedar の Discord コミュニティでどうぞ。プロバイダーの認証情報、非公開のプレイリストのアドレス、ペアリングコード、顧客データ、加工していないログは投稿しないでください。</p>
+            <p><a class="inline-document-link" href="/cedar-tv-updates/ja/feedback/?kind=bug">不具合を報告</a></p>
+            <p><a class="inline-document-link" href="/cedar-tv-updates/ja/feedback/?kind=feature">機能をリクエスト</a></p>
+          </section>
+          <section>
+            <h2>安全な診断情報を共有する</h2>
+            <p>診断は、問題を再現しているあいだだけ有効にし、そのあとご自身でレポートを書き出してください。Cedar は、既知のパスワード、トークン、署名つきの再生パス、機密性のある URL パラメータを伏せ字にします。共有する前に、書き出した内容を必ずご確認ください。</p>
+          </section>
+          <section>
+            <h2>コンテンツとアカウントに関するご質問</h2>
+            <p>Cedar は、プロバイダーのアカウント、サブスクリプション、プレイリスト、ストリームを復元できません。そのサービスに直接お問い合わせください。Cedar はメディアを提供しておらず、許可のないソースを探すお手伝いもできません。</p>
+          </section>
+          <section>
+            <h2>プライバシーに関するご要望</h2>
+            <p>Cedar には、開発者が運営するユーザーアカウントのデータベースがありません。ローカルのアプリコンテナのデータを管理するには、サービスの接続解除、ローカルプロファイルの削除、または Cedar の削除を行ってください。センシティブな内容については、公開チャンネルに個人情報を投稿せず、Cedar のモデレーターに非公開で連絡してください。</p>
+            <a class="inline-document-link" href="/cedar-tv-updates/ja/privacy/">Cedar のプライバシーポリシーを読む</a>
+          </section>
+          <section>
+            <h2>アクセシビリティのヘルプ</h2>
+            <p>Cedar のバージョン、Apple のプラットフォーム、使用している支援技術、バリアに遭遇した画面や作業を記載してください。アカウントやプロバイダーの認証情報は含めないでください。</p>
+            <a class="inline-document-link" href="/cedar-tv-updates/ja/accessibility/">Cedar のアクセシビリティ情報</a>
+          </section>
+          <section>
+            <h2>対応について</h2>
+            <p>Cedar はコミュニティによって支えられています。問題を再現できるだけの詳細を記載し、ボランティアからの返信まで時間の余裕をみてください。セキュリティやプライバシーに関する懸念はその旨をはっきり書き、有効な認証情報は決して含めないでください。</p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/ja/" aria-label="Cedar ホーム">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>すでにお持ちの画面で使える、軸のぶれないメディアプレーヤー兼整理ツール。ご利用が許可されているソースとサービスだけを接続してください。</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="フッターナビゲーション">
+          <section class="site-footer-group">
+            <h2>製品</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/ja/apple/">Apple アプリ</a></li>
+              <li><a href="/cedar-tv-updates/ja/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/ja/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">リリースノート</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>リソース</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/ja/support/">サポート</a></li>
+              <li><a href="/cedar-tv-updates/ja/privacy/">プライバシー</a></li>
+              <li><a href="/cedar-tv-updates/ja/accessibility/">アクセシビリティ</a></li>
+              <li><a href="/cedar-tv-updates/ja/content-policy/">コンテンツポリシー</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>コミュニティ</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/ja/feedback/">フィードバックを送信</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar は、メディアコンテンツの提供、ホスト、販売を行いません。</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

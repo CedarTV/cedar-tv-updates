@@ -8,14 +8,15 @@ const done = document.querySelector("[data-feedback-done]");
 const submitButton = form.querySelector('button[type="submit"]');
 const openedAt = Date.now();
 
+const { cedarT } = window;
 const errorMessages = {
-  invalid_title: "Add a short summary (at least 3 characters).",
-  invalid_details: "Add a few more details (at least 10 characters).",
-  invalid_platform: "Choose which app this is about.",
-  invalid_app_version: "The app version should look like 1.0.0 (81).",
-  invalid_staff_only: "Shorten the staff-only details to 1,000 characters.",
-  rate_limited: "That was quick. Wait a minute, then try again.",
-  daily_limit_reached: "You’ve sent a lot today. Please try again tomorrow.",
+  invalid_title: cedarT("Add a short summary (at least 3 characters)."),
+  invalid_details: cedarT("Add a few more details (at least 10 characters)."),
+  invalid_platform: cedarT("Choose which app this is about."),
+  invalid_app_version: cedarT("The app version should look like 1.0.0 (81)."),
+  invalid_staff_only: cedarT("Shorten the staff-only details to 1,000 characters."),
+  rate_limited: cedarT("That was quick. Wait a minute, then try again."),
+  daily_limit_reached: cedarT("You’ve sent a lot today. Please try again tomorrow."),
 };
 
 const syncKind = () => {
@@ -67,7 +68,7 @@ form.addEventListener("submit", async (event) => {
   if (form.elements.website.value) payload.website = form.elements.website.value;
 
   submitButton.disabled = true;
-  statusLine.textContent = "Sending…";
+  statusLine.textContent = cedarT("Sending…");
   try {
     const response = await fetch(ENDPOINT, {
       method: "POST",
@@ -77,7 +78,7 @@ form.addEventListener("submit", async (event) => {
       referrerPolicy: "no-referrer",
     });
     const result = await response.json().catch(() => ({}));
-    if (!response.ok) throw new Error(errorMessages[result.error] ?? "That didn’t send. Please try again, or post it on Discord.");
+    if (!response.ok) throw new Error(errorMessages[result.error] ?? cedarT("That didn’t send. Please try again, or post it on Discord."));
     form.reset();
     syncKind();
     statusLine.textContent = "";
@@ -91,7 +92,7 @@ form.addEventListener("submit", async (event) => {
     done.focus();
   } catch (error) {
     statusLine.textContent = error instanceof TypeError
-      ? "Couldn’t reach the feedback service. Check your connection and try again."
+      ? cedarT("Couldn’t reach the feedback service. Check your connection and try again.")
       : error.message;
   } finally {
     submitButton.disabled = false;

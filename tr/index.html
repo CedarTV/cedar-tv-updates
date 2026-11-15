@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/cedar-tv-updates/">
+    <script type="application/json" id="cedar-strings">{"Download for Android TV":"Android TV için indir","Coming soon":"Yakında","Public beta":"Herkese açık beta","Available now":"Şimdi mevcut","Early beta":"Erken beta","Version {version} · Build {build}":"Sürüm {version} · Derleme {build}","Updated {date}":"Güncellendi: {date}","Join the {device} beta":"{device} betasına katıl","What’s on":"Şimdi yayında","ON NOW":"ŞİMDİ","{minutes}m left":"{minutes} dk kaldı","EARLIER":"ÖNCE","LATER":"SONRA","Today":"Bugün","Add a short summary (at least 3 characters).":"Kısa bir özet ekleyin (en az 3 karakter).","Add a few more details (at least 10 characters).":"Biraz daha ayrıntı ekleyin (en az 10 karakter).","Choose which app this is about.":"Bunun hangi uygulamayla ilgili olduğunu seçin.","The app version should look like 1.0.0 (81).":"Uygulama sürümü 1.0.0 (81) gibi görünmelidir.","Shorten the staff-only details to 1,000 characters.":"Yalnızca ekibe özel ayrıntıları 1.000 karaktere kısaltın.","That was quick. Wait a minute, then try again.":"Bu çok hızlıydı. Bir dakika bekleyin, sonra tekrar deneyin.","You’ve sent a lot today. Please try again tomorrow.":"Bugün çok fazla gönderdiniz. Lütfen yarın tekrar deneyin.","Sending…":"Gönderiliyor…","That didn’t send. Please try again, or post it on Discord.":"Gönderilemedi. Lütfen tekrar deneyin veya Discord’da paylaşın.","Couldn’t reach the feedback service. Check your connection and try again.":"Geri bildirim hizmetine ulaşılamadı. Bağlantınızı kontrol edip tekrar deneyin."}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Cedar, Android TV, Google TV, Fire TV, iPhone, iPad, Apple TV ve Mac için odaklı bir medya deneyimidir.">
+    <meta name="robots" content="index,follow">
+    <meta name="application-name" content="Cedar">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cedar">
+    <meta property="og:title" content="Cedar — Medyanız, sinematik hâliyle">
+    <meta property="og:description" content="Android TV, iPhone, iPad, Apple TV ve Mac’te tek, odaklı bir medya deneyimi.">
+    <meta property="og:url" content="https://cedartv.github.io/cedar-tv-updates/tr/">
+    <meta property="og:image" content="https://cedartv.github.io/cedar-tv-updates/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Cedar — Medyanız. Sinematik hâliyle.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cedar — Medyanız, sinematik hâliyle">
+    <meta name="twitter:description" content="Android TV, iPhone, iPad, Apple TV ve Mac’te tek, odaklı bir medya deneyimi.">
+    <meta name="twitter:image" content="https://cedartv.github.io/cedar-tv-updates/og.jpg">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Cedar — Medyanız, sinematik hâliyle</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/tr/">
+    <link rel="alternate" hreflang="en" href="https://cedartv.github.io/cedar-tv-updates/">
+    <link rel="alternate" hreflang="de" href="https://cedartv.github.io/cedar-tv-updates/de/">
+    <link rel="alternate" hreflang="es" href="https://cedartv.github.io/cedar-tv-updates/es/">
+    <link rel="alternate" hreflang="es-419" href="https://cedartv.github.io/cedar-tv-updates/es-419/">
+    <link rel="alternate" hreflang="fr" href="https://cedartv.github.io/cedar-tv-updates/fr/">
+    <link rel="alternate" hreflang="it" href="https://cedartv.github.io/cedar-tv-updates/it/">
+    <link rel="alternate" hreflang="pt-BR" href="https://cedartv.github.io/cedar-tv-updates/pt-br/">
+    <link rel="alternate" hreflang="pl" href="https://cedartv.github.io/cedar-tv-updates/pl/">
+    <link rel="alternate" hreflang="tr" href="https://cedartv.github.io/cedar-tv-updates/tr/">
+    <link rel="alternate" hreflang="ru" href="https://cedartv.github.io/cedar-tv-updates/ru/">
+    <link rel="alternate" hreflang="ar" href="https://cedartv.github.io/cedar-tv-updates/ar/">
+    <link rel="alternate" hreflang="ja" href="https://cedartv.github.io/cedar-tv-updates/ja/">
+    <link rel="alternate" hreflang="x-default" href="https://cedartv.github.io/cedar-tv-updates/">
+    <link rel="icon" type="image/png" href="assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body class="home-page">
+      <header class="cedar-header">
+        <a class="skip-link" href="/cedar-tv-updates/tr/#main">İçeriğe geç</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/tr/" aria-label="Cedar ana sayfası">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/tr/#download">Cedar’ı edinin</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Menü</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Ana gezinme">
+            <a href="/cedar-tv-updates/tr/">Ana Sayfa</a>
+            <a href="/cedar-tv-updates/tr/apple/">Apple uygulamaları</a>
+            <a href="/cedar-tv-updates/tr/server/">Cedar Server</a>
+            <a href="/cedar-tv-updates/releases/">Yenilikler</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/tr/support/">Destek</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Tema
+              <select aria-label="Renk teması" data-theme-select>
+                <option value="system">Sistem</option>
+                <option value="light">Açık</option>
+                <option value="dark">Koyu</option>
+              </select>
+            </label>
+            <details class="cedar-language" data-i18n-skip>
+              <summary aria-label="Dil: Türkçe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></svg><span lang="tr" dir="ltr">Türkçe</span></summary>
+              <ul class="cedar-language-menu" translate="no">
+                <li><a href="/cedar-tv-updates/" hreflang="en" lang="en" dir="ltr" data-available>English</a></li>
+                <li><a href="/cedar-tv-updates/de/" hreflang="de" lang="de" dir="ltr" data-available data-offer="Diese Seite auf Deutsch lesen" data-dismiss="Schließen">Deutsch</a></li>
+                <li><a href="/cedar-tv-updates/es/" hreflang="es" lang="es" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (España)</a></li>
+                <li><a href="/cedar-tv-updates/es-419/" hreflang="es-419" lang="es-419" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (Latinoamérica)</a></li>
+                <li><a href="/cedar-tv-updates/fr/" hreflang="fr" lang="fr" dir="ltr" data-available data-offer="Lire cette page en français" data-dismiss="Fermer">Français</a></li>
+                <li><a href="/cedar-tv-updates/it/" hreflang="it" lang="it" dir="ltr" data-available data-offer="Leggi questa pagina in italiano" data-dismiss="Chiudi">Italiano</a></li>
+                <li><a href="/cedar-tv-updates/pt-br/" hreflang="pt-BR" lang="pt-BR" dir="ltr" data-available data-offer="Ler esta página em português" data-dismiss="Fechar">Português (Brasil)</a></li>
+                <li><a href="/cedar-tv-updates/pl/" hreflang="pl" lang="pl" dir="ltr" data-available data-offer="Przeczytaj tę stronę po polsku" data-dismiss="Zamknij">Polski</a></li>
+                <li><a href="/cedar-tv-updates/tr/" hreflang="tr" lang="tr" dir="ltr" aria-current="true" data-available data-offer="Bu sayfayı Türkçe okuyun" data-dismiss="Kapat">Türkçe</a></li>
+                <li><a href="/cedar-tv-updates/ru/" hreflang="ru" lang="ru" dir="ltr" data-available data-offer="Читать эту страницу на русском" data-dismiss="Закрыть">Русский</a></li>
+                <li><a href="/cedar-tv-updates/ar/" hreflang="ar" lang="ar" dir="rtl" data-available data-offer="اقرأ هذه الصفحة بالعربية" data-dismiss="إغلاق">العربية</a></li>
+                <li><a href="/cedar-tv-updates/ja/" hreflang="ja" lang="ja" dir="ltr" data-available data-offer="このページを日本語で読む" data-dismiss="閉じる">日本語</a></li>
+              </ul>
+            </details>
+            <a class="cedar-download" href="/cedar-tv-updates/tr/#download">Cedar’ı edinin</a>
+          </div>
+        </div>
+      </header>
+
+    <main id="main">
+      <section class="home-hero" aria-labelledby="hero-title">
+        <img class="home-hero-art" src="assets/aster-vale-hero.webp" alt="" width="1672" height="941" fetchpriority="high">
+        <div class="home-hero-inner">
+          <p class="eyebrow">Cedar her ekranda</p>
+          <div class="hero-title-row">
+            <img class="hero-icon" src="assets/cedar-app-icon.png" alt="" width="96" height="96">
+            <h1 id="hero-title"><img class="hero-wordmark" src="assets/cedar-wordmark.png" alt="Cedar" width="858" height="301"></h1>
+          </div>
+          <p class="hero-meta">
+            <span>Filmler, diziler ve canlı TV</span>
+            <span class="hero-badges"><span>Ücretsiz</span><span>Reklamsız</span><span>Hesap gerekmez</span></span>
+          </p>
+          <p class="hero-lede">Zaten kullandığınız televizyon, telefon, tablet ve bilgisayar için tek, odaklı bir medya deneyimi. Yetkili olduğunuz kaynakları getirin; Cedar filmleri, dizileri, canlı TV’yi, profilleri ve oynatmayı özenle birbirine bağlı tutsun.</p>
+          <p class="compatibility">Android TV · Google TV · Fire TV · iPhone · iPad · Apple TV · Mac</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/cedar-tv-updates/tr/#download" data-get-cedar>Cedar’ı edinin</a>
+            <a class="button button-glass" href="/cedar-tv-updates/tr/#whats-on"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Şimdi yayında</a>
+            <a class="button button-glass" href="/cedar-tv-updates/tr/#in-the-app"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM9 20h6"/></svg>Uygulamada</a>
+          </div>
+        </div>
+        <p class="hero-credit">Aster Vale · Cedar’ın demo kataloğundan</p>
+      </section>
+
+      <section class="band" id="in-the-app" aria-labelledby="in-the-app-title">
+        <div class="row-head">
+          <h2 class="row-title" id="in-the-app-title">Uygulamada</h2>
+          <p class="row-sub">Cedar’ın kendisinden, tasarlandığı her cihazdaki ekranlar. Apple cihazlarında başlıklar, görseller ve kanallar Cedar’ın kendi kurgusal demo kataloğundandır.</p>
+        </div>
+
+        <div class="device-tabs" role="tablist" aria-label="Cihaz" data-device-tabs hidden>
+          <button type="button" role="tab" id="tab-apple-tv" aria-controls="device-apple-tv" aria-selected="true" data-device="apple-tv">Apple TV</button>
+          <button type="button" role="tab" id="tab-mac" aria-controls="device-mac" aria-selected="false" data-device="mac">Mac</button>
+          <button type="button" role="tab" id="tab-ipad" aria-controls="device-ipad" aria-selected="false" data-device="ipad">iPad</button>
+          <button type="button" role="tab" id="tab-iphone" aria-controls="device-iphone" aria-selected="false" data-device="iphone">iPhone</button>
+          <button type="button" role="tab" id="tab-android-tv" aria-controls="device-android-tv" aria-selected="false" data-device="android-tv">Android TV</button>
+        </div>
+
+        <div class="device-panel" id="device-apple-tv" role="tabpanel" aria-labelledby="tab-apple-tv" data-device-panel="apple-tv">
+          <h3 class="device-name">Apple TV</h3>
+          <div class="device-stage frame-tv">
+            <figure data-shot="home"><img src="assets/screens/apple-tv-home.webp" srcset="assets/screens/apple-tv-home-960.webp 960w, assets/screens/apple-tv-home.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV’de Cedar Ana Sayfa: öne çıkan bir başlık ve bir poster sırası" width="1920" height="1080" loading="lazy"><figcaption>Ana Sayfa: üstte öne çıkan başlık, altında Dallarınız.</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/screens/apple-tv-detail.webp" srcset="assets/screens/apple-tv-detail-960.webp 960w, assets/screens/apple-tv-detail.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV’de Cedar’da bir dizi sayfası" width="1920" height="1080" loading="lazy"><figcaption>Bir başlığın sayfası: görseller, ayrıntılar, sezonlar ve bölümler.</figcaption></figure>
+            <figure data-shot="guide"><img src="assets/screens/apple-tv-guide.webp" srcset="assets/screens/apple-tv-guide-960.webp 960w, assets/screens/apple-tv-guide.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV’de Cedar canlı TV rehberi" width="1920" height="1080" loading="lazy"><figcaption>Rehber: her kanal, şu an ve sonra yayınlananlarla birlikte.</figcaption></figure>
+            <figure data-shot="search"><img src="assets/screens/apple-tv-search.webp" srcset="assets/screens/apple-tv-search-960.webp 960w, assets/screens/apple-tv-search.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Apple TV’de Cedar Arama" width="1920" height="1080" loading="lazy"><figcaption>Arama: siz yazmadan önce trend filmler ve diziler.</figcaption></figure>
+            <figure data-shot="branches"><img src="assets/screens/apple-tv-branches.webp" srcset="assets/screens/apple-tv-branches-960.webp 960w, assets/screens/apple-tv-branches.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Cedar’da Apple TV’de bir Ana Sayfa Dalını düzenleme" width="1920" height="1080" loading="lazy"><figcaption>Dallar: bir Ana Sayfa satırında neyin görüneceğini ve nasıl görüneceğini seçin.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="device-panel" id="device-mac" role="tabpanel" aria-labelledby="tab-mac" data-device-panel="mac">
+          <h3 class="device-name">Mac</h3>
+          <div class="device-stage frame-mac">
+            <figure data-shot="home"><img src="assets/screens/mac-home.webp" srcset="assets/screens/mac-home-800.webp 800w, assets/screens/mac-home.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Bir Mac penceresinde Cedar Ana Sayfa" width="1280" height="820" loading="lazy"><figcaption>Ana Sayfa: üstte öne çıkan başlık, altında Dallarınız.</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/screens/mac-detail.webp" srcset="assets/screens/mac-detail-800.webp 800w, assets/screens/mac-detail.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Mac’te Cedar’da bölüm sırası olan bir dizi sayfası" width="1280" height="820" loading="lazy"><figcaption>Bir başlığın sayfası: görseller, ayrıntılar, sezonlar ve bölümler.</figcaption></figure>
+            <figure data-shot="guide"><img src="assets/screens/mac-guide.webp" srcset="assets/screens/mac-guide-800.webp 800w, assets/screens/mac-guide.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Mac’te Cedar canlı TV rehberi" width="1280" height="820" loading="lazy"><figcaption>Rehber: her kanal, şu an ve sonra yayınlananlarla birlikte.</figcaption></figure>
+            <figure data-shot="search"><img src="assets/screens/mac-search.webp" srcset="assets/screens/mac-search-800.webp 800w, assets/screens/mac-search.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Mac’te Cedar Arama" width="1280" height="820" loading="lazy"><figcaption>Arama: siz yazmadan önce trend filmler ve diziler.</figcaption></figure>
+            <figure data-shot="branches"><img src="assets/screens/mac-branches.webp" srcset="assets/screens/mac-branches-800.webp 800w, assets/screens/mac-branches.webp 1280w" sizes="(max-width: 1040px) 88vw, 900px" alt="Cedar’da Mac’te bir Ana Sayfa Dalını düzenleme" width="1280" height="820" loading="lazy"><figcaption>Dallar: bir Ana Sayfa satırında neyin görüneceğini ve nasıl görüneceğini seçin.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="device-panel" id="device-ipad" role="tabpanel" aria-labelledby="tab-ipad" data-device-panel="ipad">
+          <h3 class="device-name">iPad</h3>
+          <div class="device-stage frame-tablet">
+            <figure data-shot="home"><img src="assets/screens/ipad-home.webp" srcset="assets/screens/ipad-home-760.webp 760w, assets/screens/ipad-home.webp 1032w" sizes="(max-width: 500px) 88vw, 440px" alt="iPad’de Cedar Ana Sayfa" width="1032" height="1376" loading="lazy"><figcaption>Ana Sayfa: üstte öne çıkan başlık, altında Dallarınız.</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/screens/ipad-detail.webp" srcset="assets/screens/ipad-detail-760.webp 760w, assets/screens/ipad-detail.webp 1032w" sizes="(max-width: 500px) 88vw, 440px" alt="iPad’de Cedar’da bir dizi sayfası" width="1032" height="1376" loading="lazy"><figcaption>Bir başlığın sayfası: görseller, ayrıntılar, sezonlar ve bölümler.</figcaption></figure>
+            <figure data-shot="guide"><img src="assets/screens/ipad-guide.webp" srcset="assets/screens/ipad-guide-760.webp 760w, assets/screens/ipad-guide.webp 1032w" sizes="(max-width: 500px) 88vw, 440px" alt="iPad’de Cedar canlı TV rehberi" width="1032" height="1376" loading="lazy"><figcaption>Rehber: her kanal, şu an ve sonra yayınlananlarla birlikte.</figcaption></figure>
+            <figure data-shot="search" class="is-landscape"><img src="assets/screens/ipad-search.webp" srcset="assets/screens/ipad-search-800.webp 800w, assets/screens/ipad-search.webp 1376w" sizes="(max-width: 730px) 88vw, 640px" alt="iPad’de yatay modda Cedar Arama" width="1376" height="1032" loading="lazy"><figcaption>Arama: siz yazmadan önce trend filmler ve diziler.</figcaption></figure>
+            <figure data-shot="branches"><img src="assets/screens/ipad-branches.webp" srcset="assets/screens/ipad-branches-760.webp 760w, assets/screens/ipad-branches.webp 1032w" sizes="(max-width: 500px) 88vw, 440px" alt="Cedar’da iPad’de bir Ana Sayfa Dalını düzenleme" width="1032" height="1376" loading="lazy"><figcaption>Dallar: bir Ana Sayfa satırında neyin görüneceğini ve nasıl görüneceğini seçin.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="device-panel" id="device-iphone" role="tabpanel" aria-labelledby="tab-iphone" data-device-panel="iphone">
+          <h3 class="device-name">iPhone</h3>
+          <div class="device-stage frame-phone">
+            <figure data-shot="home"><img src="assets/screens/iphone-home.webp" alt="iPhone’da Cedar Ana Sayfa" width="660" height="1434" loading="lazy"><figcaption>Ana Sayfa: üstte öne çıkan başlık, altında Dallarınız.</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/screens/iphone-detail.webp" alt="iPhone’da Cedar’da Sürdür düğmesi ve bölümlerle bir dizi sayfası" width="660" height="1434" loading="lazy"><figcaption>Bir başlığın sayfası: görseller, ayrıntılar, sezonlar ve bölümler.</figcaption></figure>
+            <figure data-shot="guide"><img src="assets/screens/iphone-guide.webp" alt="iPhone’da Cedar canlı TV rehberi" width="660" height="1434" loading="lazy"><figcaption>Rehber: her kanal, şu an ve sonra yayınlananlarla birlikte.</figcaption></figure>
+            <figure data-shot="search"><img src="assets/screens/iphone-search.webp" alt="iPhone’da Cedar Arama" width="660" height="1434" loading="lazy"><figcaption>Arama: siz yazmadan önce trend filmler ve diziler.</figcaption></figure>
+            <figure data-shot="branches"><img src="assets/screens/iphone-branches.webp" alt="Cedar’da iPhone’da bir Ana Sayfa Dalını düzenleme" width="660" height="1434" loading="lazy"><figcaption>Dallar: bir Ana Sayfa satırında neyin görüneceğini ve nasıl görüneceğini seçin.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="device-panel" id="device-android-tv" role="tabpanel" aria-labelledby="tab-android-tv" data-device-panel="android-tv">
+          <h3 class="device-name">Android TV</h3>
+          <div class="device-stage frame-tv">
+            <figure data-shot="home"><img src="assets/cedar-home.webp" srcset="assets/cedar-home-960.webp 960w, assets/cedar-home.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Zengin meta veriler ve medya görselleri gösteren Cedar’ın sinematik ana ekranı" width="1920" height="1080" loading="lazy"><figcaption>Android TV’de Ana Sayfa: puanlar ve ayrıntılarla görsel öncelikli sıralar.</figcaption></figure>
+            <figure data-shot="detail"><img src="assets/cedar-detail.webp" srcset="assets/cedar-detail-960.webp 960w, assets/cedar-detail.webp 1920w" sizes="(max-width: 1040px) 88vw, 920px" alt="Zengin görseller, meta veriler ve oynatma eylemleriyle Cedar film ayrıntıları" width="1920" height="1080" loading="lazy"><figcaption>Her başlık tam bir özenle sunulur: görseller, puanlar, oyuncular, sezonlar ve kaynaklar.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="shot-tabs" role="tablist" aria-label="Ekran" data-shot-tabs hidden>
+          <button type="button" role="tab" aria-selected="true" data-shot="home">Ana Sayfa</button>
+          <button type="button" role="tab" aria-selected="false" data-shot="detail">Bir başlığın sayfası</button>
+          <button type="button" role="tab" aria-selected="false" data-shot="guide">Yayın Rehberi</button>
+          <button type="button" role="tab" aria-selected="false" data-shot="search">Arama</button>
+          <button type="button" role="tab" aria-selected="false" data-shot="branches">Dallar</button>
+        </div>
+        <p class="shot-caption" aria-live="polite" data-shot-caption></p>
+      </section>
+
+      <section class="band" id="experience" aria-labelledby="experience-title">
+        <div class="row-head">
+          <h2 class="row-title" id="experience-title">Her ekran için tasarlandı</h2>
+          <p class="row-sub">Cedar tek bir ürün diline bağlı kalır, sonra her cihazın en iyi yaptığı işi yapmasına izin verir.</p>
+        </div>
+        <div class="tile-grid">
+          <article class="tile">
+            <span class="tile-icon tint-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span>
+            <h3>İndirilenler</h3>
+            <p>Desteklenen filmleri ve bölümleri sonrası için kaydedin; iPhone ve iPad’de bunları yönetmek için bir İndirme Merkezi de var.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM12 12h7v5h-7z"/></svg></span>
+            <h3>Resim içinde Resim ve AirPlay</h3>
+            <p>iPhone ve iPad’de, yayın destekliyorsa izlemeye köşede devam edin ya da başka bir ekrana gönderin.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-teal"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v12H3zM8 20h8M7 8h4M7 12h10"/></svg></span>
+            <h3>Top Shelf ve Watch Next</h3>
+            <p>Kaldığınız yerden Apple TV’nin Top Shelf bölümünden ya da desteklenen yerlerde Android TV’deki Watch Next satırından devam edin.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-red"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 16l1.5-6A2 2 0 0 1 8.4 8.5h7.2a2 2 0 0 1 1.9 1.5L19 16M4 16h16v3H4zM7.5 19v1.5M16.5 19v1.5"/></svg></span>
+            <h3>CarPlay’de Radyo</h3>
+            <p>Cedar Radio istasyonları iPhone’unuzla arabada da yanınızda.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 20a6 6 0 0 1 12 0M17 11a2.5 2.5 0 1 0 0-5M16 14.5a5 5 0 0 1 5 5.5"/></svg></span>
+            <h3>Herkese bir profil</h3>
+            <p>Evde ayrı profiller ve sizin seçtiğiniz içerik derecelendirme sınırıyla Çocuklar profilleri.</p>
+          </article>
+          <article class="tile">
+            <span class="tile-icon tint-plum"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18h10a4 4 0 0 0 .5-8A6 6 0 0 0 6 9.5 4.3 4.3 0 0 0 7 18z"/></svg></span>
+            <h3>Her Apple cihazı uyum içinde</h3>
+            <p>Profiller, favoriler, listeler ve ilerleme kendi iCloud’unuz üzerinden eşitlenir. Parolalar sıradan eşitlemenin dışında kalır.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="whats-on" aria-labelledby="whats-on-title">
+        <div class="row-head">
+          <h2 class="row-title" id="whats-on-title">Şimdi yayında</h2>
+          <p class="row-sub">Cedar’ın yaptıklarını, kendi TV rehberi gibi düzenlenmiş hâliyle görün. Hakkında okumak için bir program seçin.</p>
+        </div>
+        <div class="epg" data-epg>
+          <ol class="epg-source">
+            <li data-tint="green" data-icon="home">
+              <h3>Ana Sayfa</h3>
+              <p>Dallar ve öne çıkan alan</p>
+              <ol>
+                <li data-span="3"><h4>Dallar, sizin istediğiniz gibi</h4><p>Ana Sayfa, sizin yönettiğiniz Dallardan oluşur. Bunları ekleyin, yeniden adlandırın, yeniden sıralayın, gizleyin ya da geri getirin; poster, geniş veya öne çıkan satırlar seçin.</p></li>
+                <li data-span="2"><h4>Öne çıkan alan</h4><p>Öne çıkan alanın stilini ve ayrıntılarını, hangi puan kaynaklarını göstereceğini ve bir an sonra fragmanın başlayıp başlamayacağını seçin.</p></li>
+                <li data-span="2"><h4>Hazır Ana Sayfalar</h4><p>Cedar Creator’da özenle hazırlanmış kurulumlara ve Dal gruplarına göz atın, bir profil fotoğrafı ekleyin ve bunları Cedar’da açın.</p><a href="creator/">Cedar Creator’ı aç</a></li>
+              </ol>
+            </li>
+            <li data-tint="red" data-icon="tv">
+              <h3>Canlı TV</h3>
+              <p>Rehber, catch-up, DVR</p>
+              <ol>
+                <li data-span="2"><h4>Yayın Rehberi</h4><p>Oynatma listesi sırası, XMLTV program verileri, odaklı bir ızgara rehber ve rehber içi önizleme oynatıcı, kanallara göz atmayı hızlı tutar.</p></li>
+                <li data-span="1"><h4>Catch-up</h4><p>Yayınlanmış programları, sağlayıcınızın arşiv tuttuğu süre içinde oynatın.</p></li>
+                <li data-span="2"><h4>Multiview ve DVR</h4><p>Jellyfin ve Emby Canlı TV, Apple cihazlarında Canlı TV’ye katılır; kanal listeleri, çoklu görünüm ve Cedar DVR ile.</p><a href="apple/releases/">Apple sürüm notları</a></li>
+                <li data-span="2"><h4>Canlı’yı Özelleştir</h4><p>Canlı sayfayı iPhone’da raflar hâlinde düzenleyin; bir programın nerede yayınlandığını gösteren program sayfalarıyla.</p></li>
+              </ol>
+            </li>
+            <li data-tint="amber" data-icon="play">
+              <h3>Oynatma</h3>
+              <p>Görüntü ve ses</p>
+              <ol>
+                <li data-span="2"><h4>Dilleriniz</h4><p>Sistem dilinde ses, varsayılan olarak kapalı altyazılar ve zorunlu ve SDH parçaları dâhil tercih ettiğiniz ses ve altyazı dilleri.</p></li>
+                <li data-span="2"><h4>Girişi Atla ve Sıradaki</h4><p>Bölüm verisi olan yerlerde girişleri atlayın; bir sonraki bölümden önce isteğe bağlı Sıradaki kartı ve geri sayımla.</p></li>
+                <li data-span="3"><h4>Dolby Vision</h4><p>Desteklenen Dolby Vision Profil 7 içeriğini, oynatılırken isteğe bağlı olarak Profil 8.1’e dönüştürün.</p></li>
+              </ol>
+            </li>
+            <li data-tint="blue" data-icon="search">
+              <h3>Keşfet</h3>
+              <p>Arama ve öneriler</p>
+              <ol>
+                <li data-span="2"><h4>Ne İzlemeliyim?</h4><p>Apple cihazlarında Arama’da sıralı öneriler; bunları bir Ana Sayfa satırı olarak kaydedebilirsiniz.</p></li>
+                <li data-span="2"><h4>Top 10 Listeleri</h4><p>Top 10 Listeleri ve herkese açık MDBList listeleri, doğrudan Ana Sayfa’da.</p></li>
+                <li data-span="3"><h4>Spor Barı</h4><p>Ana Sayfa’da skorlar; her müsabakanın verilerinin izin verdiği kadar ayrıntıyla.</p></li>
+              </ol>
+            </li>
+            <li data-tint="slate" data-icon="server">
+              <h3>Kaynaklar</h3>
+              <p>Sunucular ve paylaşımlar</p>
+              <ol>
+                <li data-span="3"><h4>Plex, Emby ve Jellyfin</h4><p>Medya sunucularınızı bağlayın; filmlerine, dizilerine, sezonlarına ve bölümlerine kendi görselleriyle göz atın.</p></li>
+                <li data-span="2"><h4>WebDAV paylaşımları</h4><p>Kullanma yetkiniz olan klasörlere göz atın ve oynatın; film ve dizi satırları dosya adlarından oluşturulur.</p></li>
+                <li data-span="2"><h4>Oynatma listeleri ve rehberler</h4><p>Uzak bir M3U oynatma listesi ve XMLTV rehberi ekleyin ya da iPhone ve iPad’de yerel dosyalar seçin.</p><a href="setup/">Tarayıcıda kurulumu aç</a></li>
+              </ol>
+            </li>
+            <li data-tint="plum" data-icon="sparkle">
+              <h3>Ekstralar</h3>
+              <p>Ve gerisi</p>
+              <ol>
+                <li data-span="3"><h4>Cedar Radio</h4><p>Ülkeye ve türe göre radyo istasyonları; eşitlenmiş şarkı sözleri ve Shazam ile.</p><a href="/cedar-tv-updates/tr/radio/">Cedar Radio hakkında</a></li>
+                <li data-span="2"><h4>.cedar dosyaları</h4><p>.cedar kurulum dosyalarını paylaşın ve içe aktarın; parolası kilitli şifrelerle.</p><a href="creator/">Cedar Creator’ı aç</a></li>
+                <li data-span="2"><h4>Segmentleri İşaretle</h4><p>Apple cihazlarından giriş, özet ve jenerik zamanlarını IntroDB ve SkipDB’ye gönderin.</p></li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="band platforms" id="platforms" aria-labelledby="platforms-title">
+        <div class="row-head">
+          <p class="eyebrow">Ekranınızı seçin</p>
+          <h2 class="row-title" id="platforms-title">Tek Cedar. Her cihaza göre tasarlandı.</h2>
+          <p class="row-sub">Cedar, her cihazı aynı kalıba sokmadan net bir ürün dilini paylaşır. Her uygulama kendi ekranına, giriş yöntemine ve evinizdeki rolüne saygı duyar.</p>
+        </div>
+
+        <div class="platform-grid">
+          <article class="platform-card platform-card-primary">
+            <span class="platform-device">Android TV · Google TV · Fire TV</span>
+            <h3><a class="platform-link" href="releases/android-tv/">Android TV</a></h3>
+            <p>Sinematik göz atma, canlı rehberde gezinme ve imzalı doğrudan güncellemelerle, kumandayı ön planda tutan bir oturma odası deneyimi.</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="preview" data-platform-status="android-tv">Erken beta</span>
+              <span data-platform-version="android-tv">Sürüm 1.4.0 · Derleme 10</span>
+              <span data-platform-date="android-tv">Güncellendi: <time datetime="2026-10-21">21 Eki 2026</time></span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Sürüm notları ›</span>
+              <a class="platform-action" href="/cedar-tv-updates/tr/#download">İndir</a>
+            </span>
+          </article>
+
+          <article class="platform-card">
+            <span class="platform-device">Oturma odası</span>
+            <h3><a class="platform-link" href="apple/releases/apple-tv/">Apple TV</a></h3>
+            <p>Yerel odak, hane profilleri, tam bir canlı rehber ve Siri Remote etrafında tasarlanmış oynatma.</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="testflight" data-platform-status="apple-tv">Herkese açık beta</span>
+              <span data-platform-version="apple-tv">Sürüm 1.0.0 · Derleme 68</span>
+              <span data-platform-date="apple-tv">Güncellendi: <time datetime="2026-10-13">13 Eki 2026</time></span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Sürüm notları ›</span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="apple-tv">Beta’ya katıl</a>
+            </span>
+          </article>
+
+          <article class="platform-card">
+            <span class="platform-device">Cebinizde</span>
+            <h3><a class="platform-link" href="apple/releases/iphone/">iPhone</a></h3>
+            <p>Hızlı gezinme, indirmeler, canlı TV ve en büyük ekrandan uzakta da işe yarayan oynatma.</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="testflight" data-platform-status="iphone">Herkese açık beta</span>
+              <span data-platform-version="iphone">Sürüm 1.0.0 · Derleme 68</span>
+              <span data-platform-date="iphone">Güncellendi: <time datetime="2026-10-13">13 Eki 2026</time></span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Sürüm notları ›</span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="iphone">Beta’ya katıl</a>
+            </span>
+          </article>
+
+          <article class="platform-card">
+            <span class="platform-device">Gezinmek için geniş alan</span>
+            <h3><a class="platform-link" href="apple/releases/ipad/">iPad</a></h3>
+            <p>Geniş bir kütüphane, dokunmatik öncelikli keşif, indirmeler ve esnek bir tablet düzeninde canlı TV.</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="testflight" data-platform-status="ipad">Herkese açık beta</span>
+              <span data-platform-version="ipad">Sürüm 1.0.0 · Derleme 68</span>
+              <span data-platform-date="ipad">Güncellendi: <time datetime="2026-10-13">13 Eki 2026</time></span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Sürüm notları ›</span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="ipad">Beta’ya katıl</a>
+            </span>
+          </article>
+
+          <article class="platform-card">
+            <span class="platform-device">Masaüstünüzde</span>
+            <h3><a class="platform-link" href="apple/releases/mac/">Mac</a></h3>
+            <p>Masaüstü deneyiminde yerel dosyalar, bağlı kaynaklar, canlı TV ve odaklı oynatma.</p>
+            <span class="platform-release">
+              <span class="status-pill" data-status="testflight" data-platform-status="mac">Herkese açık beta</span>
+              <span data-platform-version="mac">Sürüm 1.0.0 · Derleme 68</span>
+              <span data-platform-date="mac">Güncellendi: <time datetime="2026-10-13">13 Eki 2026</time></span>
+            </span>
+            <span class="platform-footer">
+              <span class="platform-more" aria-hidden="true">Sürüm notları ›</span>
+              <a class="platform-action" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="mac">Beta’ya katıl</a>
+            </span>
+          </article>
+        </div>
+      </section>
+
+      <section class="band" id="personalize" aria-labelledby="personalize-title">
+        <div class="creator-band">
+          <div>
+            <p class="eyebrow">Cedar Creator</p>
+            <h2 class="row-title" id="personalize-title">Hazır Ana Sayfalar. Sizin gibi olsun.</h2>
+            <p class="row-sub">Özenle hazırlanmış kurulumlara ve Dal gruplarına göz atın, bir profil fotoğrafı ekleyin ve istediğiniz sıraya koyun. Sonra sepetinizi Cedar’da açın, bağlantısını kopyalayın ya da .cedar dosyası olarak indirin.</p>
+          </div>
+          <div class="creator-actions">
+            <a class="button button-primary" href="creator/">Kurulumlara göz at ›</a>
+            <a class="button button-secondary" href="creator/?tab=avatars">Profil fotoğrafı seç ›</a>
+            <a class="button button-secondary" href="creator/?tab=badges">Kaynak rozetlerini seç ›</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="pricing" aria-labelledby="pricing-title">
+        <div class="pricing-card">
+          <div class="pricing-copy">
+            <img class="pricing-icon" src="assets/cedar-app-icon.png" alt="" width="72" height="72">
+            <p class="eyebrow">Cedar Pro</p>
+            <h2 id="pricing-title">Cedar’ı 7 gün ücretsiz deneyin. Sonra da hayatınızın geri kalanında.</h2>
+            <p class="pricing-lede">Elinizdeki her şey, her ekranda oynatılır. Cedar Pro diye bir şey yok. Bu işin tamamı bu.</p>
+            <ul class="pricing-perks">
+              <li><span class="perk-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM9 20h6"/></svg></span><strong>Tüm kütüphaneniz</strong><span>Kullanma yetkiniz olan medya sunucuları, paylaşımlar ve oynatma listeleri; görseller ve ayrıntılarla.</span></li>
+              <li><span class="perk-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><strong>Gerçek bir rehberle canlı TV</strong><span>Odaklı bir ızgara rehber, sağlayıcınızın sunduğu yerde catch-up ve rehber içi önizleme.</span></li>
+              <li><span class="perk-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v12H3zM8 20h8"/></svg></span><strong>Her ekranda</strong><span>Android TV, Google TV, Fire TV, iPhone, iPad, Apple TV ve Mac.</span></li>
+              <li><span class="perk-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/></svg></span><strong>Reklam yok, takip yok</strong><span>Uygulamalar arası takip yok ve kaydolmanız gereken bir Cedar hesabı yok.</span></li>
+            </ul>
+          </div>
+          <div class="pricing-plans">
+            <div class="plan-list" role="group" aria-label="Planlar" data-plans>
+              <button type="button" class="plan" aria-pressed="true">
+                <span class="plan-name">Yıllık <span class="plan-save">%100 tasarruf</span></span>
+                <span class="plan-note">Ayda yalnızca 0,00 $, faturalandırma asla</span>
+                <span class="plan-price">Yılda 0 $</span>
+                <span class="plan-trial">Sonsuza dek ücretsiz</span>
+              </button>
+              <button type="button" class="plan" aria-pressed="false">
+                <span class="plan-name">Aylık</span>
+                <span class="plan-note">Aylık faturalandırılır, en geniş anlamıyla</span>
+                <span class="plan-price">Ayda 0 $</span>
+                <span class="plan-trial">Sonsuza dek ücretsiz</span>
+              </button>
+              <button type="button" class="plan" aria-pressed="false">
+                <span class="plan-name">Ömür boyu</span>
+                <span class="plan-note">Bir kez öde (lütfen ödemeyin) · Gerçekten herkes için Aile Paylaşımı</span>
+                <span class="plan-price">Bir kerelik 0 $</span>
+              </button>
+            </div>
+            <p class="pricing-fine">Fiyatlar ABD doları cinsindendir; ancak 0 $ her para birimine gayet güzel dönüşür. Hiçbir şey yenilenmez, çünkü hiçbir şey tahsil edilmedi. Ödeme yapmayarak istediğiniz zaman iptal edebilirsiniz. Cedar medya satmaz; bağladığınız hizmetlerin veya sunucuların kendi fiyatları olabilir.</p>
+            <div class="pricing-links">
+              <a class="button button-primary" href="/cedar-tv-updates/tr/#download">Cedar’ı edinin · 0 $</a>
+              <details class="restore-purchase">
+                <summary>Satın alımı geri yükleme</summary>
+                <p>Hiç satın almadınız, yani zaten geri yüklendi. İyi eğlenceler.</p>
+              </details>
+              <a class="button button-secondary" href="/cedar-tv-updates/tr/privacy/">Gizlilik Politikası</a>
+              <a class="button button-secondary" href="/cedar-tv-updates/tr/content-policy/">İçerik politikası</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band download-section" id="download" aria-labelledby="download-title">
+        <div class="download-card">
+          <div class="download-copy">
+            <p class="eyebrow">Platform kullanılabilirliği</p>
+            <h2 class="row-title" id="download-title">Cedar deneyiminizi seçin.</h2>
+            <p class="row-sub">Android TV, tamamlanmış bir sürüm değil, imzalı doğrudan indirme olarak sunulan erken bir betadır. iPhone, iPad, Apple TV ve Mac için Cedar, TestFlight’ta herkese açık betadadır.</p>
+          </div>
+
+          <div class="download-options">
+            <div class="download-option">
+              <h3>Android TV · Google TV · Fire TV</h3>
+              <div class="release-meta" aria-live="polite">
+                <span><span class="status-pill" data-status="preview" data-platform-status="android-tv">Erken beta</span></span>
+                <span>Sürüm <strong data-version>1.4.0</strong></span>
+                <span>Derleme <strong data-build>10</strong></span>
+                <span data-file-size>73,6 MB</span>
+                <span data-platform-date="android-tv">Güncellendi: <time datetime="2026-10-21">21 Eki 2026</time></span>
+              </div>
+              <div class="option-actions">
+                <a class="button button-primary" data-download-link href="https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.4.0/Cedar-TV-1.4.0.apk">Android TV için indir</a>
+                <a class="button button-secondary" href="releases/">Tüm platform sürümleri ›</a>
+              </div>
+              <details class="install-help">
+                <summary>TV’nize nasıl kurulur</summary>
+                <ol>
+                  <li>TV’nizde, Amazon Appstore veya Google Play’den ücretsiz <strong>Downloader</strong> uygulamasını yükleyin.</li>
+                  <li>Downloader’ın uygulama yüklemesine izin verin. Fire TV’de Ayarlar › Fire TV’m › Geliştirici seçenekleri › Bilinmeyen uygulamaları yükle yolunu izleyin. Geliştirici seçenekleri gizliyse Hakkında’yı açın ve cihaz adınızı yedi kez seçin. Google TV ve Android TV’de Ayarlar › Uygulamalar › Güvenlik ve kısıtlamalar › Bilinmeyen kaynaklar yolunu izleyin.</li>
+                  <li>Downloader’ı açın, <code>cedartv.github.io/cedar-tv-updates</code> yazın ve <strong>Android TV için indir</strong>’i seçin.</li>
+                  <li><strong>Yükle</strong>’yi seçin, ardından Cedar’ı açın. Sonraki güncellemeler uygulamanın içinde sunulur.</li>
+                </ol>
+                <p>Zaten yüklü mü? Kaynak eklemek ve Ana Sayfa’yı telefonunuzdan veya bilgisayarınızdan düzenlemek için <a href="setup/">Tarayıcıda kurulum</a>’u kullanın.</p>
+              </details>
+            </div>
+
+            <div class="download-option">
+              <h3>iPhone · iPad · Apple TV · Mac</h3>
+              <div class="release-meta">
+                <span><span class="status-pill" data-status="testflight" data-platform-status="iphone">Herkese açık beta</span></span>
+                <span data-platform-version="iphone">Sürüm 1.0.0 · Derleme 68</span>
+                <span data-platform-date="iphone">Güncellendi: <time datetime="2026-10-13">13 Eki 2026</time></span>
+              </div>
+              <div class="option-actions">
+                <a class="button button-primary" href="https://testflight.apple.com/join/4A7sZ4q2" data-beta-link="iphone">Apple betasına katıl ›</a>
+              </div>
+              <p class="download-hint">Önce Apple’ın ücretsiz TestFlight uygulamasını yükleyin, ardından bağlantıyı kullanmak istediğiniz cihazda açın.</p>
+            </div>
+          </div>
+        </div>
+        <p class="install-note">Android TV erken bir betadır: bazı özellikler hâlâ eksik ve hatalarla karşılaşabilirsiniz. Doğrudan Cedar tarafından dağıtılır ve her güncelleme yüklenmeden önce doğrulanır. Apple sürümleri, App Store sürümleri hazır olana kadar beta olarak etiketli kalır.</p>
+      </section>
+
+      <section class="band" id="help" aria-labelledby="help-title">
+        <div class="row-head">
+          <h2 class="row-title" id="help-title">Yardım ve geri bildirim</h2>
+          <p class="row-sub">Cedar topluluk destekli bir uygulamadır. Buradan başlayın, ardından topluluğa sorun.</p>
+        </div>
+        <div class="hub-grid">
+          <ul class="hub-list">
+            <li><a href="/cedar-tv-updates/tr/support/"><span class="hub-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.5V14M12 17h.01"/></svg></span><span class="hub-text"><strong>Destek</strong><span>Denenecek kontroller ve yardım nasıl istenir</span></span></a></li>
+            <li><a href="releases/"><span class="hub-icon tint-green"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><span class="hub-text"><strong>Yenilikler</strong><span>Her platform için sürüm notları</span></span></a></li>
+            <li><a href="setup/"><span class="hub-icon tint-teal"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H4zM9 20h6M8 10h8"/></svg></span><span class="hub-text"><strong>Tarayıcıda kurulum</strong><span>Başka bir ekrandan kaynak ekleyin ve Ana Sayfa’yı düzenleyin</span></span></a></li>
+            <li><a href="/cedar-tv-updates/tr/accessibility/"><span class="hub-icon tint-blue"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5 8l7 1.5L19 8M12 9.5V14l-3 6M12 14l3 6"/></svg></span><span class="hub-text"><strong>Erişilebilirlik</strong><span>Cedar yardımcı teknolojilerle nasıl çalışır</span></span></a></li>
+          </ul>
+          <ul class="hub-list">
+            <li><a href="/cedar-tv-updates/tr/feedback/?kind=bug"><span class="hub-icon tint-red"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 9a4 4 0 0 1 8 0v5a4 4 0 0 1-8 0zM12 9v9M4 13h4M16 13h4M5 7l3 2M19 7l-3 2M5 19l3-2M19 19l-3-2"/></svg></span><span class="hub-text"><strong>Hata bildirin</strong><span>Neyin bozulduğunu bize söyleyin</span></span></a></li>
+            <li><a href="/cedar-tv-updates/tr/feedback/?kind=feature"><span class="hub-icon tint-plum"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3z"/></svg></span><span class="hub-text"><strong>Özellik isteyin</strong><span>Cedar’ın yapabileceği bir şey önerin</span></span></a></li>
+            <li><a href="https://www.reddit.com/r/CedarApp/"><span class="hub-icon tint-amber"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8z"/></svg></span><span class="hub-text"><strong>Reddit</strong><span>r/CedarApp’te sohbete katılın</span></span></a></li>
+            <li><a href="https://discord.gg/FDjx57bjdE"><span class="hub-icon tint-indigo"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8zM9 10h.01M15 10h.01"/></svg></span><span class="hub-text"><strong>Discord</strong><span>Soru sorun ve özellik önerin</span></span></a></li>
+          </ul>
+        </div>
+        <div class="discord-card">
+          <span class="hub-icon tint-indigo"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H8zM9 10h.01M15 10h.01"/></svg></span>
+          <div>
+            <h3>Discord’da Cedar</h3>
+            <p>Yardım isteyin, hata bildirin ya da bir iyileştirme önerin. Sağlayıcı kimlik bilgilerini, özel oynatma listesi adreslerini veya düzenlenmemiş günlükleri asla paylaşmayın.</p>
+          </div>
+          <a class="button button-indigo" href="https://discord.gg/FDjx57bjdE">Sunucuya katıl</a>
+        </div>
+      </section>
+    </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/tr/" aria-label="Cedar ana sayfası">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>Sahip olduğunuz ekranlar için odaklı bir medya oynatıcı ve düzenleyici. Yalnızca kullanma yetkiniz olan kaynakları ve hizmetleri bağlayın.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Alt bilgi gezinmesi">
+          <section class="site-footer-group">
+            <h2>Ürünler</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/tr/apple/">Apple uygulamaları</a></li>
+              <li><a href="/cedar-tv-updates/tr/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/tr/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Sürüm notları</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Kaynaklar</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/tr/support/">Destek</a></li>
+              <li><a href="/cedar-tv-updates/tr/privacy/">Gizlilik</a></li>
+              <li><a href="/cedar-tv-updates/tr/accessibility/">Erişilebilirlik</a></li>
+              <li><a href="/cedar-tv-updates/tr/content-policy/">İçerik politikası</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Topluluk</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/tr/feedback/">Geri bildirim gönder</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar medya içeriği sağlamaz, barındırmaz veya satmaz.</span>
+        </p>
+      </footer>
+
+    <script src="site.js" defer></script>
+    <script src="home.js" defer></script>
+  </body>
+</html>

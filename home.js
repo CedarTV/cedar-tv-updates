@@ -111,13 +111,13 @@
       })),
     }));
 
-    const time = new Intl.DateTimeFormat(undefined, { hour: "numeric", minute: "2-digit" });
+    const time = new Intl.DateTimeFormat(window.cedarLocale, { hour: "numeric", minute: "2-digit" });
     const range = (start, end) => `${time.format(start)} – ${time.format(end)}`;
     const head = element("div", "epg-head");
     head.setAttribute("aria-live", "polite");
     const scroll = element("div", "epg-scroll");
     const grid = element("div", "epg-grid");
-    grid.setAttribute("aria-label", "What’s on");
+    grid.setAttribute("aria-label", window.cedarT("What’s on"));
     grid.style.setProperty("--slots", String(slots));
     scroll.append(grid);
     epg.append(head, scroll);
@@ -140,9 +140,9 @@
         const fill = element("i");
         fill.style.width = `${((now - programme.start) / (programme.end - programme.start)) * 100}%`;
         bar.append(fill);
-        when.append(element("span", "live-badge", "ON NOW"), element("span", "", range(programme.start, programme.end)), bar, element("span", "", `${minutesLeft(programme.end)}m left`));
+        when.append(element("span", "live-badge", window.cedarT("ON NOW")), element("span", "", range(programme.start, programme.end)), bar, element("span", "", window.cedarT("{minutes}m left", { minutes: minutesLeft(programme.end) })));
       } else {
-        when.append(element("span", "later-badge", programme.end <= now ? "EARLIER" : "LATER"), element("span", "", range(programme.start, programme.end)));
+        when.append(element("span", "later-badge", programme.end <= now ? window.cedarT("EARLIER") : window.cedarT("LATER")), element("span", "", range(programme.start, programme.end)));
       }
       body.append(when, element("p", "epg-desc", programme.description));
       if (programme.link) {
@@ -160,7 +160,7 @@
       base.setMinutes(now.getMinutes() < slotMinutes ? 0 : slotMinutes);
       start = base.getTime() - nowSlot * slotMinutes * 60000;
 
-      grid.replaceChildren(element("div", "epg-corner", "Today"));
+      grid.replaceChildren(element("div", "epg-corner", window.cedarT("Today")));
       for (let index = 0; index < slots; index += 1) {
         const label = element("div", `epg-time${index === nowSlot ? " is-now" : ""}`, time.format(new Date(start + index * slotMinutes * 60000)));
         grid.append(label);
@@ -184,7 +184,7 @@
           if (programme.end <= nowTime) button.classList.add("is-past");
           if (programme.start <= nowTime && nowTime < programme.end) {
             button.style.setProperty("--played", `${((nowTime - programme.start) / (programme.end - programme.start)) * 100}%`);
-            button.append(element("span", "left", `${minutesLeft(programme.end)}m left`));
+            button.append(element("span", "left", window.cedarT("{minutes}m left", { minutes: minutesLeft(programme.end) })));
             if (row === 1 || !focus) focus = { channel, programme };
           }
           const isSelected = selected ? selected.programme.title === programme.title : false;

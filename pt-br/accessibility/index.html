@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/cedar-tv-updates/accessibility/">
+    <script type="application/json" id="cedar-strings">{"Download for Android TV":"Baixar para Android TV","Coming soon":"Em breve","Public beta":"Beta público","Available now":"Disponível agora","Early beta":"Beta inicial","Version {version} · Build {build}":"Versão {version} · Build {build}","Updated {date}":"Atualizado em {date}","Join the {device} beta":"Participar do beta de {device}","What’s on":"No ar agora","ON NOW":"NO AR","{minutes}m left":"{minutes} min restantes","EARLIER":"ANTES","LATER":"DEPOIS","Today":"Hoje","Add a short summary (at least 3 characters).":"Adicione um resumo curto (pelo menos 3 caracteres).","Add a few more details (at least 10 characters).":"Adicione mais alguns detalhes (pelo menos 10 caracteres).","Choose which app this is about.":"Escolha sobre qual app é este relato.","The app version should look like 1.0.0 (81).":"A versão do app deve ser parecida com 1.0.0 (81).","Shorten the staff-only details to 1,000 characters.":"Reduza os detalhes exclusivos da equipe para 1.000 caracteres.","That was quick. Wait a minute, then try again.":"Foi rápido demais. Aguarde um minuto e tente de novo.","You’ve sent a lot today. Please try again tomorrow.":"Você enviou muita coisa hoje. Tente de novo amanhã.","Sending…":"Enviando…","That didn’t send. Please try again, or post it on Discord.":"Não foi enviado. Tente de novo ou publique no Discord.","Couldn’t reach the feedback service. Check your connection and try again.":"Não foi possível acessar o serviço de feedback. Verifique sua conexão e tente de novo."}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Recursos de acessibilidade, validação e informações de suporte do Cedar.">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Acessibilidade — Cedar</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/pt-br/accessibility/">
+    <link rel="alternate" hreflang="en" href="https://cedartv.github.io/cedar-tv-updates/accessibility/">
+    <link rel="alternate" hreflang="de" href="https://cedartv.github.io/cedar-tv-updates/de/accessibility/">
+    <link rel="alternate" hreflang="es" href="https://cedartv.github.io/cedar-tv-updates/es/accessibility/">
+    <link rel="alternate" hreflang="es-419" href="https://cedartv.github.io/cedar-tv-updates/es-419/accessibility/">
+    <link rel="alternate" hreflang="fr" href="https://cedartv.github.io/cedar-tv-updates/fr/accessibility/">
+    <link rel="alternate" hreflang="it" href="https://cedartv.github.io/cedar-tv-updates/it/accessibility/">
+    <link rel="alternate" hreflang="pt-BR" href="https://cedartv.github.io/cedar-tv-updates/pt-br/accessibility/">
+    <link rel="alternate" hreflang="pl" href="https://cedartv.github.io/cedar-tv-updates/pl/accessibility/">
+    <link rel="alternate" hreflang="tr" href="https://cedartv.github.io/cedar-tv-updates/tr/accessibility/">
+    <link rel="alternate" hreflang="ru" href="https://cedartv.github.io/cedar-tv-updates/ru/accessibility/">
+    <link rel="alternate" hreflang="ar" href="https://cedartv.github.io/cedar-tv-updates/ar/accessibility/">
+    <link rel="alternate" hreflang="ja" href="https://cedartv.github.io/cedar-tv-updates/ja/accessibility/">
+    <link rel="alternate" hreflang="x-default" href="https://cedartv.github.io/cedar-tv-updates/accessibility/">
+    <link rel="icon" type="image/png" href="../assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="../assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="../policy.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="cedar-header">
+        <a class="skip-link" href="/cedar-tv-updates/pt-br/accessibility/#main">Ir para o conteúdo</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/pt-br/" aria-label="Página inicial do Cedar">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/pt-br/#download">Baixar o Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Menu</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Navegação principal">
+            <a href="/cedar-tv-updates/pt-br/">Início</a>
+            <a href="/cedar-tv-updates/pt-br/apple/">Apps da Apple</a>
+            <a href="/cedar-tv-updates/pt-br/server/">Cedar Server</a>
+            <a href="/cedar-tv-updates/releases/">Novidades</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/pt-br/support/">Suporte</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Tema
+              <select aria-label="Tema de cores" data-theme-select>
+                <option value="system">Sistema</option>
+                <option value="light">Claro</option>
+                <option value="dark">Escuro</option>
+              </select>
+            </label>
+            <details class="cedar-language" data-i18n-skip>
+              <summary aria-label="Idioma: Português (Brasil)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></svg><span lang="pt-BR" dir="ltr">Português (Brasil)</span></summary>
+              <ul class="cedar-language-menu" translate="no">
+                <li><a href="/cedar-tv-updates/accessibility/" hreflang="en" lang="en" dir="ltr" data-available>English</a></li>
+                <li><a href="/cedar-tv-updates/de/accessibility/" hreflang="de" lang="de" dir="ltr" data-available data-offer="Diese Seite auf Deutsch lesen" data-dismiss="Schließen">Deutsch</a></li>
+                <li><a href="/cedar-tv-updates/es/accessibility/" hreflang="es" lang="es" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (España)</a></li>
+                <li><a href="/cedar-tv-updates/es-419/accessibility/" hreflang="es-419" lang="es-419" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (Latinoamérica)</a></li>
+                <li><a href="/cedar-tv-updates/fr/accessibility/" hreflang="fr" lang="fr" dir="ltr" data-available data-offer="Lire cette page en français" data-dismiss="Fermer">Français</a></li>
+                <li><a href="/cedar-tv-updates/it/accessibility/" hreflang="it" lang="it" dir="ltr" data-available data-offer="Leggi questa pagina in italiano" data-dismiss="Chiudi">Italiano</a></li>
+                <li><a href="/cedar-tv-updates/pt-br/accessibility/" hreflang="pt-BR" lang="pt-BR" dir="ltr" aria-current="true" data-available data-offer="Ler esta página em português" data-dismiss="Fechar">Português (Brasil)</a></li>
+                <li><a href="/cedar-tv-updates/pl/accessibility/" hreflang="pl" lang="pl" dir="ltr" data-available data-offer="Przeczytaj tę stronę po polsku" data-dismiss="Zamknij">Polski</a></li>
+                <li><a href="/cedar-tv-updates/tr/accessibility/" hreflang="tr" lang="tr" dir="ltr" data-available data-offer="Bu sayfayı Türkçe okuyun" data-dismiss="Kapat">Türkçe</a></li>
+                <li><a href="/cedar-tv-updates/ru/accessibility/" hreflang="ru" lang="ru" dir="ltr" data-available data-offer="Читать эту страницу на русском" data-dismiss="Закрыть">Русский</a></li>
+                <li><a href="/cedar-tv-updates/ar/accessibility/" hreflang="ar" lang="ar" dir="rtl" data-available data-offer="اقرأ هذه الصفحة بالعربية" data-dismiss="إغلاق">العربية</a></li>
+                <li><a href="/cedar-tv-updates/ja/accessibility/" hreflang="ja" lang="ja" dir="ltr" data-available data-offer="このページを日本語で読む" data-dismiss="閉じる">日本語</a></li>
+              </ul>
+            </details>
+            <a class="cedar-download" href="/cedar-tv-updates/pt-br/#download">Baixar o Cedar</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="document-page">
+        <header class="document-header">
+          <p class="eyebrow">Acessibilidade</p>
+          <h1>O Cedar deve funcionar do jeito que você usa seus dispositivos Apple.</h1>
+          <p>O Cedar é criado com controles de interface nativos da Apple no iPhone, iPad, Apple TV e Mac. O suporte à acessibilidade é avaliado com base em tarefas completas e comuns antes de qualquer declaração de acessibilidade na App Store ser selecionada.</p>
+        </header>
+        <div class="document-grid">
+          <section>
+            <h2>Leitores de tela e foco</h2>
+            <p>O Cedar fornece rótulos falados para controles que só têm imagem e procura manter a ordem de navegação alinhada à interface visível. A Apple TV usa o mecanismo de foco do sistema, e as telas do Mac mantêm o foco do teclado onde os controles nativos o oferecem.</p>
+          </section>
+          <section>
+            <h2>Texto e contraste</h2>
+            <p>O Cedar usa estilos de texto da Apple e cores semânticas onde a plataforma permite. A interface oferece suporte às aparências clara e escura do sistema. A validação da versão cobre texto maior, cortes, contraste e significados que dependem de cor nos fluxos comuns.</p>
+          </section>
+          <section>
+            <h2>Movimento e interação</h2>
+            <p>O Cedar verifica o ajuste Reduzir Movimento do sistema antes de efeitos de movimento opcionais e evita exigir um gesto quando um controle visível pode realizar a mesma tarefa. A validação do candidato a versão revisa os controles quanto a tamanho de alvo adequado à plataforma e foco do controle remoto.</p>
+          </section>
+          <section>
+            <h2>Informações de acessibilidade na App Store</h2>
+            <p>O Cedar só publica uma declaração de acessibilidade na App Store depois que todas as tarefas comuns daquele recurso passam na versão de lançamento correspondente. As declarações podem diferir entre plataformas porque iPhone, iPad, Apple TV e Mac usam controles e métodos de entrada diferentes.</p>
+          </section>
+          <section>
+            <h2>Relatar uma barreira de acessibilidade</h2>
+            <p>Inclua a versão do Cedar, a plataforma Apple, a tecnologia assistiva e a tarefa ou tela exata. Nunca inclua senha, token ou endereço de playlist de um provedor.</p>
+            <a class="inline-action" href="/cedar-tv-updates/pt-br/support/">Falar com o suporte do Cedar</a>
+          </section>
+          <section>
+            <h2>Validação da versão</h2>
+            <p>A lista de verificação da versão cobre o primeiro uso, a configuração de fontes, a navegação pelo Início e pela biblioteca, a busca, os controles de reprodução, os Ajustes, as informações de privacidade e o gerenciamento de vinculação de dispositivos, com as tecnologias assistivas disponíveis em cada plataforma. A validação só está completa quando essas tarefas passam nas versões finais.</p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/pt-br/" aria-label="Página inicial do Cedar">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>Um player e organizador de mídia focado, para as telas que você já tem. Conecte apenas fontes e serviços que você tem autorização para usar.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Navegação do rodapé">
+          <section class="site-footer-group">
+            <h2>Produtos</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/pt-br/apple/">Apps da Apple</a></li>
+              <li><a href="/cedar-tv-updates/pt-br/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/pt-br/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Notas de versão</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Recursos</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/pt-br/support/">Suporte</a></li>
+              <li><a href="/cedar-tv-updates/pt-br/privacy/">Privacidade</a></li>
+              <li><a href="/cedar-tv-updates/pt-br/accessibility/">Acessibilidade</a></li>
+              <li><a href="/cedar-tv-updates/pt-br/content-policy/">Política de conteúdo</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Comunidade</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/pt-br/feedback/">Enviar feedback</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>O Cedar não fornece, hospeda nem vende conteúdo de mídia.</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

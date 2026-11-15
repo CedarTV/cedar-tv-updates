@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es-419" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <base href="/cedar-tv-updates/server/">
+    <script type="application/json" id="cedar-strings">{"Download for Android TV":"Descargar para Android TV","Coming soon":"Próximamente","Public beta":"Beta pública","Available now":"Disponible ahora","Early beta":"Beta temprana","Version {version} · Build {build}":"Versión {version} · Compilación {build}","Updated {date}":"Actualizado el {date}","Join the {device} beta":"Únete a la beta de {device}","What’s on":"Qué hay ahora","ON NOW":"AHORA","{minutes}m left":"Faltan {minutes} min","EARLIER":"ANTES","LATER":"DESPUÉS","Today":"Hoy","Add a short summary (at least 3 characters).":"Agrega un resumen breve (al menos 3 caracteres).","Add a few more details (at least 10 characters).":"Agrega algunos detalles más (al menos 10 caracteres).","Choose which app this is about.":"Elige de qué app se trata.","The app version should look like 1.0.0 (81).":"La versión de la app debe verse así: 1.0.0 (81).","Shorten the staff-only details to 1,000 characters.":"Acorta los detalles solo para el personal a 1,000 caracteres.","That was quick. Wait a minute, then try again.":"Qué rápido. Espera un minuto y vuelve a intentarlo.","You’ve sent a lot today. Please try again tomorrow.":"Has enviado mucho hoy. Vuelve a intentarlo mañana.","Sending…":"Enviando…","That didn’t send. Please try again, or post it on Discord.":"No se envió. Vuelve a intentarlo o publícalo en Discord.","Couldn’t reach the feedback service. Check your connection and try again.":"No se pudo conectar con el servicio de comentarios. Revisa tu conexión y vuelve a intentarlo."}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#08090b">
+    <meta name="description" content="Cedar Server graba la TV en vivo en un NAS, una mini PC, una Raspberry Pi o un VPS, para que Cedar en iPhone, iPad y Apple TV pueda grabar sin una Mac.">
+    <meta name="robots" content="index,follow">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; img-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'">
+    <title>Graba TV en vivo sin una Mac — Cedar Server</title>
+    <link rel="canonical" href="https://cedartv.github.io/cedar-tv-updates/es-419/server/">
+    <link rel="alternate" hreflang="en" href="https://cedartv.github.io/cedar-tv-updates/server/">
+    <link rel="alternate" hreflang="de" href="https://cedartv.github.io/cedar-tv-updates/de/server/">
+    <link rel="alternate" hreflang="es" href="https://cedartv.github.io/cedar-tv-updates/es/server/">
+    <link rel="alternate" hreflang="es-419" href="https://cedartv.github.io/cedar-tv-updates/es-419/server/">
+    <link rel="alternate" hreflang="fr" href="https://cedartv.github.io/cedar-tv-updates/fr/server/">
+    <link rel="alternate" hreflang="it" href="https://cedartv.github.io/cedar-tv-updates/it/server/">
+    <link rel="alternate" hreflang="pt-BR" href="https://cedartv.github.io/cedar-tv-updates/pt-br/server/">
+    <link rel="alternate" hreflang="pl" href="https://cedartv.github.io/cedar-tv-updates/pl/server/">
+    <link rel="alternate" hreflang="tr" href="https://cedartv.github.io/cedar-tv-updates/tr/server/">
+    <link rel="alternate" hreflang="ru" href="https://cedartv.github.io/cedar-tv-updates/ru/server/">
+    <link rel="alternate" hreflang="ar" href="https://cedartv.github.io/cedar-tv-updates/ar/server/">
+    <link rel="alternate" hreflang="ja" href="https://cedartv.github.io/cedar-tv-updates/ja/server/">
+    <link rel="alternate" hreflang="x-default" href="https://cedartv.github.io/cedar-tv-updates/server/">
+    <link rel="icon" type="image/png" href="/cedar-tv-updates/assets/cedar-app-icon.png">
+    <link rel="apple-touch-icon" href="/cedar-tv-updates/assets/cedar-app-icon.png">
+    <link rel="stylesheet" href="/cedar-tv-updates/policy.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/footer.css">
+    <script src="/cedar-tv-updates/theme.js"></script>
+    <link rel="stylesheet" href="/cedar-tv-updates/site-shell.css">
+    <link rel="stylesheet" href="/cedar-tv-updates/server/server.css">
+  </head>
+  <body>
+    <div class="site-frame">
+      <header class="cedar-header">
+        <a class="skip-link" href="/cedar-tv-updates/es-419/server/#main">Saltar al contenido</a>
+        <a class="cedar-brand" href="/cedar-tv-updates/es-419/" aria-label="Inicio de Cedar">
+          <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36">
+          <span>Cedar</span>
+        </a>
+        <a class="cedar-download cedar-download-compact" href="/cedar-tv-updates/es-419/#download">Obtener Cedar</a>
+        <button class="cedar-menu-toggle" type="button" aria-expanded="false" aria-controls="cedar-menu">Menú</button>
+        <div class="cedar-menu" id="cedar-menu">
+          <nav class="cedar-nav" aria-label="Navegación principal">
+            <a href="/cedar-tv-updates/es-419/">Inicio</a>
+            <a href="/cedar-tv-updates/es-419/apple/">Apps de Apple</a>
+            <a href="/cedar-tv-updates/es-419/server/">Cedar Server</a>
+            <a href="/cedar-tv-updates/releases/">Novedades</a>
+            <a href="/cedar-tv-updates/creator/">Creator</a>
+            <a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a>
+            <a href="/cedar-tv-updates/es-419/support/">Soporte</a>
+          </nav>
+          <div class="cedar-header-actions">
+            <label class="cedar-theme">Tema
+              <select aria-label="Tema de color" data-theme-select>
+                <option value="system">Sistema</option>
+                <option value="light">Claro</option>
+                <option value="dark">Oscuro</option>
+              </select>
+            </label>
+            <details class="cedar-language" data-i18n-skip>
+              <summary aria-label="Idioma: Español (Latinoamérica)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM3.6 9h16.8M3.6 15h16.8M12 3c-2.4 2.5-3.6 5.5-3.6 9s1.2 6.5 3.6 9c2.4-2.5 3.6-5.5 3.6-9S14.4 5.5 12 3z"/></svg><span lang="es-419" dir="ltr">Español (Latinoamérica)</span></summary>
+              <ul class="cedar-language-menu" translate="no">
+                <li><a href="/cedar-tv-updates/server/" hreflang="en" lang="en" dir="ltr" data-available>English</a></li>
+                <li><a href="/cedar-tv-updates/de/server/" hreflang="de" lang="de" dir="ltr" data-available data-offer="Diese Seite auf Deutsch lesen" data-dismiss="Schließen">Deutsch</a></li>
+                <li><a href="/cedar-tv-updates/es/server/" hreflang="es" lang="es" dir="ltr" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (España)</a></li>
+                <li><a href="/cedar-tv-updates/es-419/server/" hreflang="es-419" lang="es-419" dir="ltr" aria-current="true" data-available data-offer="Leer esta página en español" data-dismiss="Cerrar">Español (Latinoamérica)</a></li>
+                <li><a href="/cedar-tv-updates/fr/server/" hreflang="fr" lang="fr" dir="ltr" data-available data-offer="Lire cette page en français" data-dismiss="Fermer">Français</a></li>
+                <li><a href="/cedar-tv-updates/it/server/" hreflang="it" lang="it" dir="ltr" data-available data-offer="Leggi questa pagina in italiano" data-dismiss="Chiudi">Italiano</a></li>
+                <li><a href="/cedar-tv-updates/pt-br/server/" hreflang="pt-BR" lang="pt-BR" dir="ltr" data-available data-offer="Ler esta página em português" data-dismiss="Fechar">Português (Brasil)</a></li>
+                <li><a href="/cedar-tv-updates/pl/server/" hreflang="pl" lang="pl" dir="ltr" data-available data-offer="Przeczytaj tę stronę po polsku" data-dismiss="Zamknij">Polski</a></li>
+                <li><a href="/cedar-tv-updates/tr/server/" hreflang="tr" lang="tr" dir="ltr" data-available data-offer="Bu sayfayı Türkçe okuyun" data-dismiss="Kapat">Türkçe</a></li>
+                <li><a href="/cedar-tv-updates/ru/server/" hreflang="ru" lang="ru" dir="ltr" data-available data-offer="Читать эту страницу на русском" data-dismiss="Закрыть">Русский</a></li>
+                <li><a href="/cedar-tv-updates/ar/server/" hreflang="ar" lang="ar" dir="rtl" data-available data-offer="اقرأ هذه الصفحة بالعربية" data-dismiss="إغلاق">العربية</a></li>
+                <li><a href="/cedar-tv-updates/ja/server/" hreflang="ja" lang="ja" dir="ltr" data-available data-offer="このページを日本語で読む" data-dismiss="閉じる">日本語</a></li>
+              </ul>
+            </details>
+            <a class="cedar-download" href="/cedar-tv-updates/es-419/#download">Obtener Cedar</a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main" class="document-page">
+        <header class="document-header">
+          <p class="eyebrow">CEDAR SERVER</p>
+          <h1>Graba TV en vivo sin una Mac.</h1>
+          <p class="apple-lede">Cedar Server es el DVR doméstico de Cedar en un contenedor Docker gratuito. Ejecútalo en un NAS, una mini PC, una Raspberry Pi o un VPS, enlaza con él Cedar en iPhone, iPad o Apple TV y programa grabaciones que siguen ocurriendo con todas las apps cerradas.</p>
+          <div class="apple-actions">
+            <a class="inline-action" href="/cedar-tv-updates/es-419/server/#install">Instalar Cedar Server</a>
+            <a class="secondary-action" href="/cedar-tv-updates/es-419/server/#need">Lo que necesitas</a>
+          </div>
+          <dl class="server-facts">
+            <div><dt>Precio</dt><dd>Gratis</dd></div>
+            <div><dt>Imagen</dt><dd><code>ghcr.io/cedartv/cedar-server</code></dd></div>
+            <div><dt>Funciona en</dt><dd>Intel, AMD o ARM de 64 bits</dd></div>
+            <div><dt>Funciona con</dt><dd>Cedar en iPhone, iPad y Apple TV, compilación 80 o posterior</dd></div>
+          </dl>
+        </header>
+
+        <section class="server-steps" aria-labelledby="how-it-works">
+          <h2 id="how-it-works">Cómo funciona</h2>
+          <ol>
+            <li>
+              <h3>Ejecuta el contenedor</h3>
+              <p>Inicia Cedar Server con Docker en una computadora que se mantenga encendida, como un NAS o una mini PC.</p>
+            </li>
+            <li>
+              <h3>Enlaza Cedar</h3>
+              <p>En Configuración › TV en vivo y DVR › DVR doméstico, escribe la dirección del servidor y el código de su registro.</p>
+            </li>
+            <li>
+              <h3>Graba</h3>
+              <p>Cedar envía tus fuentes y guías de TV en vivo. Las grabaciones, series y reglas de título y canal siguen funcionando con todas las apps de Cedar cerradas.</p>
+            </li>
+          </ol>
+        </section>
+
+        <nav class="server-toc" aria-label="En esta página">
+          <a href="/cedar-tv-updates/es-419/server/#need">Lo que necesitas</a>
+          <a href="/cedar-tv-updates/es-419/server/#install">Docker Compose</a>
+          <a href="/cedar-tv-updates/es-419/server/#synology">Synology</a>
+          <a href="/cedar-tv-updates/es-419/server/#unraid">Unraid</a>
+          <a href="/cedar-tv-updates/es-419/server/#pair">Enlaza Cedar</a>
+          <a href="/cedar-tv-updates/es-419/server/#away">Fuera de casa</a>
+          <a href="/cedar-tv-updates/es-419/server/#settings">Configuración</a>
+          <a href="/cedar-tv-updates/es-419/server/#updates">Actualizaciones y copias de seguridad</a>
+          <a href="/cedar-tv-updates/es-419/server/#privacy">Privacidad</a>
+          <a href="/cedar-tv-updates/es-419/server/#not-yet">Aún no disponible</a>
+        </nav>
+
+        <div class="document-grid server-guide">
+          <section id="need">
+            <h2>Lo que necesitas</h2>
+            <ul>
+              <li>Una computadora Linux que ejecute Docker, con un procesador Intel, AMD o ARM (64 bits). Funcionan Synology, Unraid, TrueNAS, una Raspberry Pi 4 o 5 y la mayoría de las mini PC.</li>
+              <li>Cedar en iPhone, iPad o Apple TV, compilación 80 o posterior. La app para Mac puede alojar su propio DVR doméstico, pero todavía no puede usar Cedar Server.</li>
+              <li>Una fuente M3U, Xtream o Stalker en Cedar que tengas autorización para usar. Su guía de TV permite que las reglas de series, títulos y canales graben por sí solas.</li>
+              <li>Espacio para las grabaciones: una hora en HD ocupa aproximadamente 3–6 GB.</li>
+            </ul>
+            <p>Lo mejor es una computadora en casa. Muchos proveedores bloquean las direcciones de centros de datos o limitan desde cuántos lugares se puede transmitir a la vez, así que un VPS puede no grabar.</p>
+          </section>
+
+          <section id="install">
+            <h2>Instalar con Docker Compose</h2>
+            <p class="server-aside">¿Tienes un servidor Synology o Unraid? Sigue mejor los pasos de <a href="/cedar-tv-updates/es-419/server/#synology">Synology</a> o <a href="/cedar-tv-updates/es-419/server/#unraid">Unraid</a> y luego <a href="/cedar-tv-updates/es-419/server/#pair">enlaza Cedar</a>.</p>
+            <p>Crea una carpeta para Cedar Server con las carpetas <code>config</code> y <code>recordings</code> dentro, y guarda esto como <code>docker-compose.yml</code> junto a ellas:</p>
+            <pre><code>services:
+  cedar-server:
+    image: ghcr.io/cedartv/cedar-server:1
+    container_name: cedar-server
+    restart: unless-stopped
+    ports:
+      - "8984:8984"
+    environment:
+      TZ: America/New_York
+      PUID: "1000"
+      PGID: "1000"
+    volumes:
+      - ./config:/config
+      - ./recordings:/recordings</code></pre>
+            <p>Configura <code>TZ</code> con tu zona horaria, y <code>PUID</code> y <code>PGID</code> con el usuario y el grupo propietarios de la carpeta de grabaciones (<code>id</code> muestra los tuyos). Luego inicia el servidor y observa el registro:</p>
+            <pre><code>docker compose up -d
+docker compose logs -f</code></pre>
+            <p>Después, <a href="/cedar-tv-updates/es-419/server/#pair">enlaza Cedar</a> con el código del registro.</p>
+          </section>
+
+          <section id="synology">
+            <h2>Synology</h2>
+            <ol>
+              <li>Instala Container Manager desde el Centro de paquetes.</li>
+              <li>En File Station, crea <code>docker/cedar-server</code> con las carpetas <code>config</code> y <code>recordings</code> dentro.</li>
+              <li>En Container Manager, abre Proyecto › Crear, elige esa carpeta, selecciona Crear docker-compose.yml y pega el archivo de arriba.</li>
+              <li>Configura <code>PUID</code> y <code>PGID</code> con los ID de tu usuario de DSM. El primer usuario suele ser 1026 y el grupo users, 100; <code>id</code> por SSH lo confirma.</li>
+              <li>Termina el asistente y abre la pestaña Registro del contenedor para ver el código de emparejamiento y <a href="/cedar-tv-updates/es-419/server/#pair">enlaza Cedar</a>.</li>
+            </ol>
+          </section>
+
+          <section id="unraid">
+            <h2>Unraid</h2>
+            <ol>
+              <li>Guarda <a href="/cedar-tv-updates/server/cedar-server.xml" download>cedar-server.xml</a> en <code>/boot/config/plugins/dockerMan/templates-user/</code> de la unidad flash.</li>
+              <li>En la pestaña Docker, elige Add Container y selecciona cedar-server en la lista Template.</li>
+              <li>Revisa las rutas Config y Recordings y elige Apply. La plantilla se ejecuta como nobody:users (99:100), como la mayoría de los contenedores de Unraid.</li>
+              <li>Abre el registro del contenedor para ver el código de emparejamiento y <a href="/cedar-tv-updates/es-419/server/#pair">enlaza Cedar</a>.</li>
+            </ol>
+          </section>
+
+          <section id="pair">
+            <h2>Enlaza Cedar</h2>
+            <ol>
+              <li>Busca en el registro el código de emparejamiento de seis dígitos. Aparece uno nuevo en cada inicio y cada 10 minutos hasta que se enlace un dispositivo.</li>
+              <li>En Cedar, abre Configuración › TV en vivo y DVR › DVR doméstico.</li>
+              <li>Escribe la dirección del servidor (por ejemplo <code>192.168.1.20</code>), el puerto 8984 y el código, y luego elige Enlazar con el DVR doméstico.</li>
+            </ol>
+            <figure class="server-shot">
+              <img src="/cedar-tv-updates/apple/releases/1.0.0-build-80/media/cedar-server.webp" alt="Ajustes del DVR doméstico de Cedar en iPhone, con los campos Servidor, Puerto y Código de emparejamiento y un botón Enlazar con el DVR doméstico" width="600" height="697" loading="lazy" decoding="async">
+              <figcaption>Ajustes del DVR doméstico en Cedar en iPhone.</figcaption>
+            </figure>
+            <p>Cedar envía entonces al servidor las fuentes y guías de TV en vivo de tu hogar. Elige cuáles graba en Fuentes grabables. Para enlazar otro dispositivo más adelante, reinicia el contenedor y usa el código nuevo.</p>
+            <p>Abre <code>http://&lt;dirección&gt;:8984/</code> en un navegador para ver una página de estado con la versión, el almacenamiento, las fuentes y los dispositivos enlazados. Nunca muestra el código de emparejamiento.</p>
+          </section>
+
+          <section id="away">
+            <h2>Fuera de casa</h2>
+            <p>Cedar usa el servidor a través de tu red doméstica. Para ver y programar desde otro lugar, asigna al servidor una dirección <code>https://</code> y configúrala como <code>CEDAR_REMOTE_URL</code>:</p>
+            <ul>
+              <li><strong>Tailscale</strong>: ejecuta <code>tailscale serve --bg 8984</code> en el servidor y usa el nombre <code>https://…ts.net</code> que imprime. Los dispositivos con Cedar también necesitan Tailscale.</li>
+              <li><strong>Proxy inverso</strong>: Caddy, Nginx Proxy Manager o el proxy inverso de Synology con un certificado TLS delante del puerto 8984.</li>
+            </ul>
+            <p>Cedar solo se conecta a una dirección remota por HTTPS. No redirijas el puerto 8984 en tu router.</p>
+          </section>
+
+          <section id="settings">
+            <h2>Configuración</h2>
+            <div class="server-table" role="region" aria-label="Ajustes de Cedar Server" tabindex="0">
+              <table>
+                <thead><tr><th>Ajuste</th><th>Valor predeterminado</th><th>Qué hace</th></tr></thead>
+                <tbody>
+                  <tr><td><code>TZ</code></td><td data-label="Valor predeterminado">UTC</td><td data-label="Qué hace">Tu zona horaria, para que las reglas semanales empiecen en horarios locales.</td></tr>
+                  <tr><td><code>PUID</code>, <code>PGID</code></td><td data-label="Valor predeterminado">1000</td><td data-label="Qué hace">El usuario y el grupo con los que se ejecuta el servidor. Deben poder escribir en la carpeta de grabaciones.</td></tr>
+                  <tr><td><code>CEDAR_SERVER_NAME</code></td><td data-label="Valor predeterminado">Cedar Server</td><td data-label="Qué hace">El nombre que muestra Cedar.</td></tr>
+                  <tr><td><code>CEDAR_MAX_RECORDINGS</code></td><td data-label="Valor predeterminado">2</td><td data-label="Qué hace">Cuántas grabaciones a la vez, de 1 a 8. Mantente dentro del límite de conexiones de tu proveedor.</td></tr>
+                  <tr><td><code>CEDAR_REMOTE_URL</code></td><td data-label="Valor predeterminado">Ninguno</td><td data-label="Qué hace">Una dirección <code>https://</code> para usar fuera de casa.</td></tr>
+                  <tr><td><code>CEDAR_PORT</code></td><td data-label="Valor predeterminado">8984</td><td data-label="Qué hace">El puerto dentro del contenedor.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section id="updates">
+            <h2>Actualizaciones y copias de seguridad</h2>
+            <p>Actualiza con <code>docker compose pull</code> y luego <code>docker compose up -d</code>, o con Check for Updates en Unraid. La etiqueta <code>1</code> sigue cada versión 1.x; fija una versión como <code>1.0.0</code> para actualizar solo cuando tú decidas.</p>
+            <p>Haz una copia de seguridad de la carpeta <code>config</code>. Contiene la identidad del servidor, los dispositivos enlazados, los horarios, las reglas y la guía. Las grabaciones son archivos de video en la carpeta de grabaciones; cópialos donde quieras.</p>
+          </section>
+
+          <section id="privacy">
+            <h2>Privacidad</h2>
+            <p>Cedar Server se ejecuta en tu computadora y habla solo con tus dispositivos enlazados y con tus propios proveedores. Cedar no recibe tus grabaciones, fuentes ni lo que ves.</p>
+            <p>Las direcciones de los proveedores y los inicios de sesión que envía Cedar se guardan en la carpeta <code>config</code>, legibles solo para el usuario del servidor, y nunca se escriben en el registro. Cualquiera que pueda leer esa carpeta puede leerlos, así que mantenla privada. La página de estado muestra solo cantidades, nunca nombres de fuentes, direcciones ni códigos.</p>
+          </section>
+
+          <section id="not-yet">
+            <h2>Aún no disponible</h2>
+            <ul>
+              <li>Fuentes de TV en vivo de Jellyfin y Emby. Grábalas con un DVR doméstico en una Mac.</li>
+              <li>Encontrar el servidor automáticamente y enlazar sin código a través de tu cuenta de Apple.</li>
+              <li>Cedar para Mac y Android TV como clientes de Cedar Server.</li>
+            </ul>
+            <p>¿Preguntas? Pregunta en <a href="https://discord.gg/FDjx57bjdE">Discord</a> o visita <a href="/cedar-tv-updates/es-419/support/">Soporte</a>.</p>
+          </section>
+        </div>
+      </main>
+      <footer class="site-footer">
+        <div class="site-footer-intro">
+          <a class="site-footer-brand" href="/cedar-tv-updates/es-419/" aria-label="Inicio de Cedar">
+            <img src="/cedar-tv-updates/assets/cedar-app-icon.png" alt="" width="36" height="36" aria-hidden="true">
+            <span>Cedar</span>
+          </a>
+          <p>Un reproductor y organizador multimedia enfocado para las pantallas que ya tienes. Conecta solo fuentes y servicios que tengas autorización para usar.</p>
+        </div>
+
+        <nav class="site-footer-nav" aria-label="Navegación del pie de página">
+          <section class="site-footer-group">
+            <h2>Productos</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/releases/android-tv/">Android TV</a></li>
+              <li><a href="/cedar-tv-updates/es-419/apple/">Apps de Apple</a></li>
+              <li><a href="/cedar-tv-updates/es-419/radio/">Cedar Radio</a></li>
+              <li><a href="/cedar-tv-updates/es-419/server/">Cedar Server</a></li>
+              <li><a href="/cedar-tv-updates/releases/">Notas de la versión</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Recursos</h2>
+            <ul>
+              <li><a href="/cedar-tv-updates/create-tobacco-tie/">Cedar Library</a></li>
+              <li><a href="/cedar-tv-updates/es-419/support/">Soporte</a></li>
+              <li><a href="/cedar-tv-updates/es-419/privacy/">Privacidad</a></li>
+              <li><a href="/cedar-tv-updates/es-419/accessibility/">Accesibilidad</a></li>
+              <li><a href="/cedar-tv-updates/es-419/content-policy/">Política de contenido</a></li>
+            </ul>
+          </section>
+          <section class="site-footer-group">
+            <h2>Comunidad</h2>
+            <ul>
+              <li><a href="https://discord.gg/FDjx57bjdE">Discord</a></li>
+              <li><a href="https://www.reddit.com/r/CedarApp/">Reddit</a></li>
+              <li><a href="/cedar-tv-updates/es-419/feedback/">Enviar comentarios</a></li>
+              <li><a href="https://github.com/CedarTV/cedar-tv-updates/releases">GitHub releases</a></li>
+            </ul>
+          </section>
+        </nav>
+
+        <p class="site-footer-meta">
+          <span>© 2026 Cedar</span>
+          <span>Cedar no proporciona, aloja ni vende contenido multimedia.</span>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

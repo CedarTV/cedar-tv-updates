@@ -28,7 +28,7 @@
   font-size: 1rem;
 }
 .feedback-field textarea { resize: vertical; line-height: 1.5; }
-.feedback-trap { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.feedback-trap { position: absolute; inset-inline-start: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .feedback-status { min-height: 1.4em; margin: 0; color: var(--cedar); font-weight: 600; }
 .feedback-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; }
 .feedback-actions .inline-action { margin-top: 0; border: 0; font: inherit; font-weight: 650; cursor: pointer; }
