@@ -1,12 +1,76 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled November 15, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
+Compiled November 20, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 85 · 2026-11-20
+
+November 20, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Subtitle translation — translate subtitles into the language you choose, set for each profile. Show Original Too keeps the original line above the translation.
+- Six new languages — Cedar is now in Italian, Japanese, Polish, Russian, Turkish and Spanish for Spain, alongside Latin American Spanish.
+- Release labels — posters can show Release Date, Return Date, Airing, Renewed, Series Cancelled or Binge Ready at a glance.
+- Right Now Branch — add a Home Branch with live games, favourite channels on now and reminders starting soon.
+- App icons — every app icon is free for everyone, and all eight, Film Strip included, are on Apple TV and Android TV.
+
+#### Home and Branches
+
+- Server collections — add a Jellyfin or Emby collections view as a Branch Group, with one Branch per collection.
+- Spotlight search — a quick search panel over any page. It’s the default on Mac, and Command-K opens it.
+- Sidebar and tab bar — choose the Tab Bar or Toolbar, the More tab and which parts of the sidebar appear.
+- Branch names — Branch names Cedar writes for you follow the app language.
+- Search results — search combines discovery results with your provider’s own matches, so fewer titles go missing.
+
+#### Posters and appearance
+
+- Rank Bookmark — ranked titles can show their rank as a bookmark tucked into the poster’s corner.
+- Based on labels — posters can say when a title is based on a novel, comic, manga, game, play or short story.
+- Poster colour — a reworked colour band, new Color Only and Tinted Minimal styles, and ratings in the genre line.
+- Artwork for your region — Cedar prefers artwork for your chosen country, and adds Spanish (Mexico) artwork.
+- Appearance & General — settings are regrouped into Theme, Focus, App Icon & Extras and General cards.
+- Film Strip — Film Strip Dark is retired, and anyone using it moves to Film Strip, art by armadillo.
+
+#### Playback and subtitles
+
+- AI Subtitles for streams — AI Subtitles now transcribe streams and MKV files as they play. On Mac they need macOS 26.
+- Align with Embedded — corrects subtitles that slowly drift out of time, not just a fixed delay.
+- Subtitles follow the profile — subtitle timing fixes, the sync offset and Translate belong to each profile.
+- Use This Look on All Devices — one subtitle look for the profile on all your Apple devices.
+- Playback Buffer — choose how far ahead Cedar reads a film or episode: 5 minutes, 15 minutes or as much as fits.
+- Anime Upscaling — a line-art upscaler for anime and animation up to 1080p, remembered for each title.
+- Server Order — rank your media servers so Cedar tries your preferred server first.
+- IMDb episode ratings — episodes can show IMDb ratings, with your own OMDb key, in Advanced Metadata.
+- Trakt reviews — title pages can show Trakt community reviews, without connecting Trakt.
+- Next episodes — Cedar learns more reliably when you like the next episode to start.
+- Player engine — DASH streams and HDR start sooner, Dolby Vision Profile 20 plays, audio-only MKA files have sound and PGS subtitles redraw after a seek.
+
+#### Live TV and sports
+
+- Cricket — follow international cricket, the IPL, the Big Bash League and the Sheffield Shield, with scorecards.
+- Pick a Channel — link a game, team or league to the right channel, or mark one Not This Channel.
+- List layout — show the Sports Bar as a compact list of games, league by league.
+- Club names — games match channels even when your provider uses a club’s local-language name.
+- Multiview with anything — add films, episodes and Custom Channels to Multiview, not just live channels.
+
+#### Radio
+
+- Lyric sync — lyrics highlight only when Cedar knows the song’s place. Select a line to sync them.
+- CarPlay profiles — choose who’s listening in the car and browse Live TV audio by category.
+
+#### Fixes
+
+- Home edits, downloads and PIN checks say when something goes wrong instead of failing quietly.
+- Downloaded files keep the right file extension.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-85/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-85)
 
 ### 1.0.0 · build 84 · 2026-11-15
 
@@ -1460,6 +1524,69 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 85 · 2026-11-20
+
+November 20, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Subtitle translation — translate subtitles into the language you choose, set for each profile. Show Original Too keeps the original line above the translation.
+- Six new languages — Cedar is now in Italian, Japanese, Polish, Russian, Turkish and Spanish for Spain, alongside Latin American Spanish.
+- Release labels — posters can show Release Date, Return Date, Airing, Renewed, Series Cancelled or Binge Ready at a glance.
+- Right Now Branch — add a Home Branch with live games, favourite channels on now and reminders starting soon.
+- App icons — every app icon is free for everyone, and all eight, Film Strip included, are on Apple TV and Android TV.
+
+#### Home and Branches
+
+- Server collections — add a Jellyfin or Emby collections view as a Branch Group, with one Branch per collection.
+- Spotlight search — a quick search panel over any page. It’s the default on Mac, and Command-K opens it.
+- Sidebar and tab bar — choose the Tab Bar or Toolbar, the More tab and which parts of the sidebar appear.
+- Branch names — Branch names Cedar writes for you follow the app language.
+- Search results — search combines discovery results with your provider’s own matches, so fewer titles go missing.
+
+#### Posters and appearance
+
+- Rank Bookmark — ranked titles can show their rank as a bookmark tucked into the poster’s corner.
+- Based on labels — posters can say when a title is based on a novel, comic, manga, game, play or short story.
+- Poster colour — a reworked colour band, new Color Only and Tinted Minimal styles, and ratings in the genre line.
+- Artwork for your region — Cedar prefers artwork for your chosen country, and adds Spanish (Mexico) artwork.
+- Appearance & General — settings are regrouped into Theme, Focus, App Icon & Extras and General cards.
+- Film Strip — Film Strip Dark is retired, and anyone using it moves to Film Strip, art by armadillo.
+
+#### Playback and subtitles
+
+- AI Subtitles for streams — AI Subtitles now transcribe streams and MKV files as they play. On Mac they need macOS 26.
+- Align with Embedded — corrects subtitles that slowly drift out of time, not just a fixed delay.
+- Subtitles follow the profile — subtitle timing fixes, the sync offset and Translate belong to each profile.
+- Use This Look on All Devices — one subtitle look for the profile on all your Apple devices.
+- Playback Buffer — choose how far ahead Cedar reads a film or episode: 5 minutes, 15 minutes or as much as fits.
+- Anime Upscaling — a line-art upscaler for anime and animation up to 1080p, remembered for each title.
+- Server Order — rank your media servers so Cedar tries your preferred server first.
+- IMDb episode ratings — episodes can show IMDb ratings, with your own OMDb key, in Advanced Metadata.
+- Trakt reviews — title pages can show Trakt community reviews, without connecting Trakt.
+- Next episodes — Cedar learns more reliably when you like the next episode to start.
+- Player engine — DASH streams and HDR start sooner, Dolby Vision Profile 20 plays, audio-only MKA files have sound and PGS subtitles redraw after a seek.
+
+#### Live TV and sports
+
+- Cricket — follow international cricket, the IPL, the Big Bash League and the Sheffield Shield, with scorecards.
+- Pick a Channel — link a game, team or league to the right channel, or mark one Not This Channel.
+- List layout — show the Sports Bar as a compact list of games, league by league.
+- Club names — games match channels even when your provider uses a club’s local-language name.
+- Multiview with anything — add films, episodes and Custom Channels to Multiview, not just live channels.
+
+#### Radio
+
+- Lyric sync — lyrics highlight only when Cedar knows the song’s place. Select a line to sync them.
+
+#### Fixes
+
+- Home edits, downloads and PIN checks say when something goes wrong instead of failing quietly.
+- Downloaded files keep the right file extension.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-85/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-85)
 
 ### 1.0.0 · build 84 · 2026-11-15
 
@@ -2920,6 +3047,77 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 85 · 2026-11-20
+
+November 20, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Subtitle translation — translate subtitles into the language you choose, set for each profile. Show Original Too keeps the original line above the translation.
+- Six new languages — Cedar is now in Italian, Japanese, Polish, Russian, Turkish and Spanish for Spain, alongside Latin American Spanish.
+- Release labels — posters can show Release Date, Return Date, Airing, Renewed, Series Cancelled or Binge Ready at a glance.
+- Right Now Branch — add a Home Branch with live games, favourite channels on now and reminders starting soon.
+- App icons — every app icon is free for everyone, and all eight, Film Strip included, are on Apple TV and Android TV.
+
+#### Home and Branches
+
+- Server collections — add a Jellyfin or Emby collections view as a Branch Group, with one Branch per collection.
+- Branch names — Branch names Cedar writes for you follow the app language.
+- Search results — search combines discovery results with your provider’s own matches, so fewer titles go missing.
+
+#### Posters and appearance
+
+- Rank Bookmark — ranked titles can show their rank as a bookmark tucked into the poster’s corner.
+- Based on labels — posters can say when a title is based on a novel, comic, manga, game, play or short story.
+- Poster colour — a reworked colour band, new Color Only and Tinted Minimal styles, and ratings in the genre line.
+- Artwork for your region — Cedar prefers artwork for your chosen country, and adds Spanish (Mexico) artwork.
+- Appearance & General — settings are regrouped into Theme, Focus, App Icon & Extras and General cards.
+- Film Strip — Film Strip Dark is retired, and anyone using it moves to Film Strip, art by armadillo.
+
+#### Playback and subtitles
+
+- Align with Embedded — corrects subtitles that slowly drift out of time, not just a fixed delay.
+- Subtitles follow the profile — subtitle timing fixes, the sync offset and Translate belong to each profile.
+- Use This Look on All Devices — one subtitle look for the profile on all your Apple devices.
+- Playback Buffer — choose how far ahead Cedar reads a film or episode: 5 minutes, 15 minutes or as much as fits.
+- Anime Upscaling — a line-art upscaler for anime and animation up to 1080p, remembered for each title.
+- Server Order — rank your media servers so Cedar tries your preferred server first.
+- IMDb episode ratings — episodes can show IMDb ratings, with your own OMDb key, in Advanced Metadata.
+- Trakt reviews — title pages can show Trakt community reviews, without connecting Trakt.
+- Next episodes — Cedar learns more reliably when you like the next episode to start.
+- Player engine — DASH streams and HDR start sooner, Dolby Vision Profile 20 plays, audio-only MKA files have sound and PGS subtitles redraw after a seek.
+
+#### Live TV and sports
+
+- Cricket — follow international cricket, the IPL, the Big Bash League and the Sheffield Shield, with scorecards.
+- Pick a Channel — link a game, team or league to the right channel, or mark one Not This Channel.
+- Game window — Back shrinks a playing game into a window while you read its game page.
+- List layout — show the Sports Bar as a compact list of games, league by league.
+- Sports filter bar — chips for Following, All Sports and each sport playing today sit under the page title.
+- Club names — games match channels even when your provider uses a club’s local-language name.
+- Multiview with anything — add films, episodes and Custom Channels to Multiview, not just live channels.
+
+#### Radio
+
+- Lyric sync — lyrics highlight only when Cedar knows the song’s place. Select a line to sync them.
+
+#### Settings and profiles
+
+- Screensaver — the screensaver is off by default, and its timer restarts after video.
+
+#### Fixes
+
+- Home edits, downloads and PIN checks say when something goes wrong instead of failing quietly.
+- Downloaded files keep the right file extension.
+- Unusual 4K HEVC video no longer restarts Cedar, and Dolby Vision Profile 7 and upscaling no longer freeze on older Apple TVs.
+
+#### Known issues
+
+- Subtitle translation on Apple TV and Android TV needs your own Gemini key, and never runs on Kids profiles.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-85/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-85)
+
 ### 1.0.0 · build 84 · 2026-11-15
 
 November 15, 2026 · Released to External TestFlight for Apple TV.
@@ -4275,6 +4473,68 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
+### 1.0.0 · build 85 · 2026-11-20
+
+November 20, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Subtitle translation — translate subtitles into the language you choose, set for each profile. Show Original Too keeps the original line above the translation.
+- Six new languages — Cedar is now in Italian, Japanese, Polish, Russian, Turkish and Spanish for Spain, alongside Latin American Spanish.
+- Release labels — posters can show Release Date, Return Date, Airing, Renewed, Series Cancelled or Binge Ready at a glance.
+- Right Now Branch — add a Home Branch with live games, favourite channels on now and reminders starting soon.
+- App icons — every app icon is free for everyone, and all eight, Film Strip included, are on Apple TV and Android TV.
+
+#### Home and Branches
+
+- Server collections — add a Jellyfin or Emby collections view as a Branch Group, with one Branch per collection.
+- Spotlight search — a quick search panel over any page. It’s the default on Mac, and Command-K opens it.
+- Sidebar and tab bar — choose the Tab Bar or Toolbar, the More tab and which parts of the sidebar appear.
+- Branch names — Branch names Cedar writes for you follow the app language.
+- Search results — search combines discovery results with your provider’s own matches, so fewer titles go missing.
+
+#### Posters and appearance
+
+- Rank Bookmark — ranked titles can show their rank as a bookmark tucked into the poster’s corner.
+- Based on labels — posters can say when a title is based on a novel, comic, manga, game, play or short story.
+- Poster colour — a reworked colour band, new Color Only and Tinted Minimal styles, and ratings in the genre line.
+- Artwork for your region — Cedar prefers artwork for your chosen country, and adds Spanish (Mexico) artwork.
+- Appearance & General — settings are regrouped into Theme, Focus, App Icon & Extras and General cards.
+
+#### Playback and subtitles
+
+- AI Subtitles for streams — AI Subtitles now transcribe streams and MKV files as they play. On Mac they need macOS 26.
+- Align with Embedded — corrects subtitles that slowly drift out of time, not just a fixed delay.
+- Subtitles follow the profile — subtitle timing fixes, the sync offset and Translate belong to each profile.
+- Use This Look on All Devices — one subtitle look for the profile on all your Apple devices.
+- Playback Buffer — choose how far ahead Cedar reads a film or episode: 5 minutes, 15 minutes or as much as fits.
+- Anime Upscaling — a line-art upscaler for anime and animation up to 1080p, remembered for each title.
+- Server Order — rank your media servers so Cedar tries your preferred server first.
+- IMDb episode ratings — episodes can show IMDb ratings, with your own OMDb key, in Advanced Metadata.
+- Trakt reviews — title pages can show Trakt community reviews, without connecting Trakt.
+- Next episodes — Cedar learns more reliably when you like the next episode to start.
+- Player engine — DASH streams and HDR start sooner, Dolby Vision Profile 20 plays, audio-only MKA files have sound and PGS subtitles redraw after a seek.
+
+#### Live TV and sports
+
+- Cricket — follow international cricket, the IPL, the Big Bash League and the Sheffield Shield, with scorecards.
+- Pick a Channel — link a game, team or league to the right channel, or mark one Not This Channel.
+- List layout — show the Sports Bar as a compact list of games, league by league.
+- Club names — games match channels even when your provider uses a club’s local-language name.
+- Multiview with anything — add films, episodes and Custom Channels to Multiview, not just live channels.
+
+#### Radio
+
+- Lyric sync — lyrics highlight only when Cedar knows the song’s place. Select a line to sync them.
+
+#### Fixes
+
+- Home edits, downloads and PIN checks say when something goes wrong instead of failing quietly.
+- Downloaded files keep the right file extension.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-85/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-85)
+
 ### 1.0.0 · build 84 · 2026-11-15
 
 November 15, 2026 · Released to External TestFlight for native Apple silicon Mac.
@@ -5623,6 +5883,78 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## Android TV, Google TV and Fire TV
+
+### 1.0.0 · build 85 · 2026-11-20 · early beta
+
+November 20, 2026 · Early beta for Android TV and Google TV.
+
+#### Highlights
+
+- Subtitle translation — translate subtitles into the language you choose, set for each profile. Show Original Too keeps the original line above the translation.
+- Six new languages — Cedar is now in Italian, Japanese, Polish, Russian, Turkish and Spanish for Spain, alongside Latin American Spanish.
+- Release labels — posters can show Release Date, Return Date, Airing, Renewed, Series Cancelled or Binge Ready at a glance.
+- Right Now Branch — add a Home Branch with live games, favourite channels on now and reminders starting soon.
+- App icons — every app icon is free for everyone, and all eight, Film Strip included, are on Apple TV and Android TV.
+
+#### Home and Branches
+
+- Server collections — add a Jellyfin or Emby collections view as a Branch Group, with one Branch per collection.
+- Branch names — Branch names Cedar writes for you follow the app language.
+
+#### Posters and appearance
+
+- Rank Bookmark — ranked titles can show their rank as a bookmark tucked into the poster’s corner.
+- Poster colour — a reworked colour band, new Color Only and Tinted Minimal styles, and ratings in the genre line.
+- Appearance & General — settings are regrouped into Theme, Focus, App Icon & Extras and General cards.
+- Film Strip — Film Strip Dark is retired, and anyone using it moves to Film Strip, art by armadillo.
+
+#### Playback and subtitles
+
+- Align with Embedded — corrects subtitles that slowly drift out of time, not just a fixed delay.
+- Subtitles follow the profile — subtitle timing fixes, the sync offset and Translate belong to each profile.
+- Playback Buffer — choose how far ahead Cedar reads a film or episode: 5 minutes, 15 minutes or as much as fits.
+- Server Order — rank your media servers so Cedar tries your preferred server first.
+- IMDb episode ratings — episodes can show IMDb ratings, with your own OMDb key, in Advanced Metadata.
+- Trakt reviews — title pages can show Trakt community reviews, without connecting Trakt.
+- Next episodes — Cedar learns more reliably when you like the next episode to start.
+
+#### Live TV and sports
+
+- Cricket — follow international cricket, the IPL, the Big Bash League and the Sheffield Shield, with scorecards.
+- Pick a Channel — link a game, team or league to the right channel, or mark one Not This Channel.
+- Game window — Back shrinks a playing game into a window while you read its game page.
+- List layout — show the Sports Bar as a compact list of games, league by league.
+- Sports filter bar — chips for Following, All Sports and each sport playing today sit under the page title.
+- Club names — games match channels even when your provider uses a club’s local-language name.
+- Sports Bar on Android TV — search, Hide While Live scores, More Games and tennis, golf and Formula 1 views arrive from Apple TV.
+
+#### Radio
+
+- Synced lyrics — Radio shows time-synced lyrics for the song playing, as on Apple TV.
+- Lyric sync — lyrics highlight only when Cedar knows the song’s place. Select a line to sync them.
+
+#### Settings and profiles
+
+- Source Filters — filter the source picker from its top bar, as on Apple TV.
+- Tobacco Ties — turn a Tobacco Tie’s parts on or off and change its address without reinstalling it.
+- Profile order and trailer language — reorder profiles and choose the language for trailers.
+- Rapid Mode and Simkl sign-in — Limit Rapid Mode Switching works, and Simkl signs in with a browser code.
+
+#### Fixes
+
+- A PIN check that can’t read the PIN says so instead of reporting a wrong PIN.
+- Kids profiles hide titles above the Rating Limit from Home rows, Search and Explore.
+- Search no longer shows results for a query you were still typing.
+- A saved stream link that stops working recovers instead of failing playback.
+- Imported DVR settings keep their excluded sources.
+
+#### Known issues
+
+- DTS:X and DTS Express aren’t decoded yet, and TrueHD Atmos plays as 7.1.
+- A new app icon appears after you leave Cedar.
+- Subtitle translation on Apple TV and Android TV needs your own Gemini key, and never runs on Kids profiles.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-85/) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
 
 ### 1.0.0 · build 84 · 2026-11-15 · early beta
 
