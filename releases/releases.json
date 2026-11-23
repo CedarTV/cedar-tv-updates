@@ -6,12 +6,12 @@
       "platform": "android-tv",
       "name": "New Cedar app for Android TV",
       "version": "1.0.0",
-      "build": "85",
-      "date": "2026-11-20",
+      "build": "86",
+      "date": "2026-11-23",
       "status": "preview",
-      "summary": "Subtitle translation, six new languages, the full Sports Bar with cricket and Pick a Channel, synced Radio lyrics, release labels on posters and Kids Rating Limits that hide titles.",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-85",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0-build-85/Cedar-TV-1.0.0-build-85.apk"
+      "summary": "Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Addic7ed subtitles, skip chips, Jellyfin/Emby/Plex Resume and FFmpeg 9.0.2.",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-86",
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0-build-86/Cedar-TV-1.0.0-build-86.apk"
     }
   ],
   "platforms": [
@@ -30,40 +30,40 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "85",
-      "date": "2026-11-20",
+      "build": "86",
+      "date": "2026-11-23",
       "status": "testflight",
-      "summary": "External TestFlight. Subtitle translation, six new languages, release labels on posters, a Right Now Branch, cricket and every app icon on Apple TV.",
+      "summary": "External TestFlight. Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Apple Calendar sync and Addic7ed subtitles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "85",
-      "date": "2026-11-20",
+      "build": "86",
+      "date": "2026-11-23",
       "status": "testflight",
-      "summary": "External TestFlight. Subtitle translation, six new languages, release labels on posters, a Right Now Branch, cricket and every app icon on Apple TV.",
+      "summary": "External TestFlight. Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Apple Calendar sync and Addic7ed subtitles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
       "id": "apple-tv",
       "name": "Cedar for Apple TV",
       "version": "1.0.0",
-      "build": "85",
-      "date": "2026-11-20",
+      "build": "86",
+      "date": "2026-11-23",
       "status": "testflight",
-      "summary": "External TestFlight. Subtitle translation, six new languages, release labels on posters, a Right Now Branch, cricket and every app icon on Apple TV.",
+      "summary": "External TestFlight. Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Apple Calendar sync and Addic7ed subtitles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
       "id": "mac",
       "name": "Cedar for Mac",
       "version": "1.0.0",
-      "build": "85",
-      "date": "2026-11-20",
+      "build": "86",
+      "date": "2026-11-23",
       "status": "testflight",
-      "summary": "External TestFlight. Subtitle translation, six new languages, release labels on posters, a Right Now Branch, cricket and every app icon on Apple TV.",
+      "summary": "External TestFlight. Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Apple Calendar sync and Addic7ed subtitles.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]
