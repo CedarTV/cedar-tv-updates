@@ -6,12 +6,12 @@
       "platform": "android-tv",
       "name": "New Cedar app for Android TV",
       "version": "1.0.0",
-      "build": "86",
-      "date": "2026-11-23",
+      "build": "87",
+      "date": "2026-11-25",
       "status": "preview",
-      "summary": "Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Addic7ed subtitles, skip chips, Jellyfin/Emby/Plex Resume and FFmpeg 9.0.2.",
-      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-86",
-      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0-build-86/Cedar-TV-1.0.0-build-86.apk"
+      "summary": "Quick Actions filtering, Playlist Cleaner, more list links, Branch design overlays, Restore to Continue Watching, Merge Duplicate Files and a Box Score team switcher.",
+      "notesURL": "https://cedartv.github.io/cedar-tv-updates/releases/android-tv/#version-1-0-0-build-87",
+      "downloadURL": "https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0-build-87/Cedar-TV-1.0.0-build-87.apk"
     }
   ],
   "platforms": [
@@ -30,40 +30,40 @@
       "id": "iphone",
       "name": "Cedar for iPhone",
       "version": "1.0.0",
-      "build": "86",
-      "date": "2026-11-23",
+      "build": "87",
+      "date": "2026-11-25",
       "status": "testflight",
-      "summary": "External TestFlight. Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Apple Calendar sync and Addic7ed subtitles.",
+      "summary": "External TestFlight. Quick Actions filtering, Playlist Cleaner, more list links, redesigned Radio Now Playing, Live TV in CarPlay and Merge Duplicate Files.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/iphone/"
     },
     {
       "id": "ipad",
       "name": "Cedar for iPad",
       "version": "1.0.0",
-      "build": "86",
-      "date": "2026-11-23",
+      "build": "87",
+      "date": "2026-11-25",
       "status": "testflight",
-      "summary": "External TestFlight. Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Apple Calendar sync and Addic7ed subtitles.",
+      "summary": "External TestFlight. Quick Actions filtering, Playlist Cleaner, more list links, redesigned Radio Now Playing, Live TV in CarPlay and Merge Duplicate Files.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/ipad/"
     },
     {
       "id": "apple-tv",
       "name": "Cedar for Apple TV",
       "version": "1.0.0",
-      "build": "86",
-      "date": "2026-11-23",
+      "build": "87",
+      "date": "2026-11-25",
       "status": "testflight",
-      "summary": "External TestFlight. Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Apple Calendar sync and Addic7ed subtitles.",
+      "summary": "External TestFlight. Quick Actions filtering, Playlist Cleaner, more list links, Merge Duplicate Files and Restore to Continue Watching.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/apple-tv/"
     },
     {
       "id": "mac",
       "name": "Cedar for Mac",
       "version": "1.0.0",
-      "build": "86",
-      "date": "2026-11-23",
+      "build": "87",
+      "date": "2026-11-25",
       "status": "testflight",
-      "summary": "External TestFlight. Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Apple Calendar sync and Addic7ed subtitles.",
+      "summary": "External TestFlight. Quick Actions filtering, Playlist Cleaner, more list links, redesigned Radio Now Playing, Player Size and Merge Duplicate Files.",
       "notesURL": "https://cedartv.github.io/cedar-tv-updates/apple/releases/mac/"
     }
   ]

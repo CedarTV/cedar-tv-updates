@@ -1,12 +1,62 @@
 # Cedar changelog archive — all recorded builds
 
-Compiled November 23, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
+Compiled November 25, 2026. Historical entries preserve release scope and availability notes; build 24 availability is recorded separately for each platform. Universal iOS is listed for both iPhone and iPad. Unused platform/build combinations are not invented. Skipped build numbers are not separate releases.
 
 ## September 23, 2026 roundup
 
 [Cross-platform roundup](https://cedartv.github.io/cedar-tv-updates/releases/roundup-2026-09-23.html) covers Apple build 43, internal build 42 and Android parity work in progress.
 
 ## iPhone
+
+### 1.0.0 · build 87 · 2026-11-25
+
+November 25, 2026 · Released to External TestFlight for iPhone.
+
+#### Highlights
+
+- Quick Actions filtering — choose a genre and then a decade inside a Quick Actions tile before it launches, for Random actions or every action.
+- Playlist Cleaner — hide Live TV categories you never use and tidy channel names with the new Cleaner in Live TV & DVR settings.
+- More list links — paste Trakt, Letterboxd, boxd.it, TMDB collection, IMDb chart or public MDBList links to add them as Branches.
+- Radio Now Playing — a redesigned full-screen player with large artwork and synced lyrics; swipe up on the mini player to open it.
+- Live TV in CarPlay — open Live TV channels in CarPlay, with video while parked on iOS 26.4 or later.
+
+#### Home and Branches
+
+- Movies and TV Shows pages — each page follows your Home layout until you customise it, so new profiles start with a familiar look.
+- Branch designs — Logo and Marquee designs gain overlays, and Marquee no longer rotates on its own. VHS and Spine Numbers are retired.
+- Edge-to-edge Branch hero — the hero at the top of a Branch page now runs edge to edge.
+- Simpler wide layouts — the Cinematic, Detailed and Compact wide Home layouts are retired in favour of the remaining layouts.
+- Clearer link errors — a link Cedar can’t use as a Branch now explains what went wrong and which links work.
+- Random picks never come up empty — Random Movie and Random Show fall back to popular TMDB titles when your libraries have nothing to offer.
+- Restore to Continue Watching — bring back titles you removed from Continue Watching.
+
+#### Social and artwork
+
+- Poster Stories — share a poster card as a Story on your Social page.
+- Save Artwork — save or share any image from a title’s artwork editor.
+
+#### Live TV, sports and calendar
+
+- Live TV audio when locked — Live TV audio keeps playing with the screen locked and reconnects after a dropped stream.
+- Calendar events — Apple Calendar events open the title in Cedar, show the network as the location and flag premieres and finales.
+
+#### Playback and sources
+
+- Merge Duplicate Files — identical files offered by several sources merge into one choice; on by default and can be turned off in Source Preferences.
+- Player engine — AetherEngine 7.75.0 adds GPU inverse telecine, dav1d 1.5.5 and embedded fonts for MKV ASS subtitles.
+
+#### Fixes
+
+- Random Episode no longer picks Live TV channels.
+- Tobacco Tie cached flags and runtime labels are read correctly.
+- Viewing Stats shows posters correctly again.
+- The Poster Calendar no longer leaves gaps.
+- Dolby Vision Profile 5 MP4 files and HLS streams show scrub previews.
+- Drag-to-reorder no longer crashes on iOS 27 and macOS 27.
+- The hero no longer overlaps the content below it on iPhone Duo.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-87/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-87)
 
 ### 1.0.0 · build 86 · 2026-11-23
 
@@ -1575,6 +1625,54 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## iPad
+
+### 1.0.0 · build 87 · 2026-11-25
+
+November 25, 2026 · Released to External TestFlight for iPad.
+
+#### Highlights
+
+- Quick Actions filtering — choose a genre and then a decade inside a Quick Actions tile before it launches, for Random actions or every action.
+- Playlist Cleaner — hide Live TV categories you never use and tidy channel names with the new Cleaner in Live TV & DVR settings.
+- More list links — paste Trakt, Letterboxd, boxd.it, TMDB collection, IMDb chart or public MDBList links to add them as Branches.
+- Radio Now Playing — a redesigned full-screen player with large artwork and synced lyrics; swipe up on the mini player to open it.
+
+#### Home and Branches
+
+- Movies and TV Shows pages — each page follows your Home layout until you customise it, so new profiles start with a familiar look.
+- Branch designs — Logo and Marquee designs gain overlays, and Marquee no longer rotates on its own. VHS and Spine Numbers are retired.
+- Edge-to-edge Branch hero — the hero at the top of a Branch page now runs edge to edge.
+- Simpler wide layouts — the Cinematic, Detailed and Compact wide Home layouts are retired in favour of the remaining layouts.
+- Clearer link errors — a link Cedar can’t use as a Branch now explains what went wrong and which links work.
+- Random picks never come up empty — Random Movie and Random Show fall back to popular TMDB titles when your libraries have nothing to offer.
+- Restore to Continue Watching — bring back titles you removed from Continue Watching.
+
+#### Social and artwork
+
+- Poster Stories — share a poster card as a Story on your Social page.
+- Save Artwork — save or share any image from a title’s artwork editor.
+
+#### Live TV, sports and calendar
+
+- Live TV audio when locked — Live TV audio keeps playing with the screen locked and reconnects after a dropped stream.
+- Calendar events — Apple Calendar events open the title in Cedar, show the network as the location and flag premieres and finales.
+
+#### Playback and sources
+
+- Merge Duplicate Files — identical files offered by several sources merge into one choice; on by default and can be turned off in Source Preferences.
+- Player engine — AetherEngine 7.75.0 adds GPU inverse telecine, dav1d 1.5.5 and embedded fonts for MKV ASS subtitles.
+
+#### Fixes
+
+- Random Episode no longer picks Live TV channels.
+- Tobacco Tie cached flags and runtime labels are read correctly.
+- Viewing Stats shows posters correctly again.
+- The Poster Calendar no longer leaves gaps.
+- Dolby Vision Profile 5 MP4 files and HLS streams show scrub previews.
+- Drag-to-reorder no longer crashes on iOS 27 and macOS 27.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-87/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-87)
 
 ### 1.0.0 · build 86 · 2026-11-23
 
@@ -3150,6 +3248,47 @@ This is the version 1.0.0 build 1 release candidate. It is not yet an App Store 
 
 ## Apple TV
 
+### 1.0.0 · build 87 · 2026-11-25
+
+November 25, 2026 · Released to External TestFlight for Apple TV.
+
+#### Highlights
+
+- Quick Actions filtering — choose a genre and then a decade inside a Quick Actions tile before it launches, for Random actions or every action.
+- Playlist Cleaner — hide Live TV categories you never use and tidy channel names with the new Cleaner in Live TV & DVR settings.
+- More list links — paste Trakt, Letterboxd, boxd.it, TMDB collection, IMDb chart or public MDBList links to add them as Branches.
+
+#### Home and Branches
+
+- Movies and TV Shows pages — each page follows your Home layout until you customise it, so new profiles start with a familiar look.
+- Branch designs — Logo and Marquee designs gain overlays, and Marquee no longer rotates on its own. VHS and Spine Numbers are retired.
+- Edge-to-edge Branch hero — the hero at the top of a Branch page now runs edge to edge.
+- Clearer link errors — a link Cedar can’t use as a Branch now explains what went wrong and which links work.
+- Random picks never come up empty — Random Movie and Random Show fall back to popular TMDB titles when your libraries have nothing to offer.
+- Restore to Continue Watching — bring back titles you removed from Continue Watching.
+
+#### Playback and sources
+
+- Merge Duplicate Files — identical files offered by several sources merge into one choice; on by default and can be turned off in Source Preferences.
+- Player engine — AetherEngine 7.75.0 adds GPU inverse telecine, dav1d 1.5.5 and embedded fonts for MKV ASS subtitles.
+
+#### Fixes
+
+- Random Episode no longer picks Live TV channels.
+- Tobacco Tie cached flags and runtime labels are read correctly.
+- Viewing Stats shows posters correctly again.
+- The Poster Calendar no longer leaves gaps.
+- Dolby Vision Profile 5 MP4 files and HLS streams show scrub previews.
+- Who’s Watching no longer freezes when opened from Home.
+- Trailer previews mute correctly and no longer play silent.
+
+#### Known issues
+
+- Subtitle translation on Apple TV and Android TV needs your own Gemini key, and never runs on Kids profiles.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-87/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-87)
+
 ### 1.0.0 · build 86 · 2026-11-23
 
 November 23, 2026 · Released to External TestFlight for Apple TV.
@@ -4629,6 +4768,54 @@ Apple rejected this build 1 upload during processing because required Top Shelf 
 
 ## Mac
 
+### 1.0.0 · build 87 · 2026-11-25
+
+November 25, 2026 · Released to External TestFlight for native Apple silicon Mac.
+
+#### Highlights
+
+- Quick Actions filtering — choose a genre and then a decade inside a Quick Actions tile before it launches, for Random actions or every action.
+- Playlist Cleaner — hide Live TV categories you never use and tidy channel names with the new Cleaner in Live TV & DVR settings.
+- More list links — paste Trakt, Letterboxd, boxd.it, TMDB collection, IMDb chart or public MDBList links to add them as Branches.
+- Radio Now Playing — a redesigned full-screen player with large artwork and synced lyrics; swipe up on the mini player to open it.
+
+#### Home and Branches
+
+- Movies and TV Shows pages — each page follows your Home layout until you customise it, so new profiles start with a familiar look.
+- Branch designs — Logo and Marquee designs gain overlays, and Marquee no longer rotates on its own. VHS and Spine Numbers are retired.
+- Edge-to-edge Branch hero — the hero at the top of a Branch page now runs edge to edge.
+- Simpler wide layouts — the Cinematic, Detailed and Compact wide Home layouts are retired in favour of the remaining layouts.
+- Clearer link errors — a link Cedar can’t use as a Branch now explains what went wrong and which links work.
+- Random picks never come up empty — Random Movie and Random Show fall back to popular TMDB titles when your libraries have nothing to offer.
+- Restore to Continue Watching — bring back titles you removed from Continue Watching.
+
+#### Social and artwork
+
+- Poster Stories — share a poster card as a Story on your Social page.
+- Save Artwork — save or share any image from a title’s artwork editor.
+
+#### Live TV, sports and calendar
+
+- Calendar events — Apple Calendar events open the title in Cedar, show the network as the location and flag premieres and finales.
+
+#### Playback and sources
+
+- Merge Duplicate Files — identical files offered by several sources merge into one choice; on by default and can be turned off in Source Preferences.
+- Player Size — resize the player window to Original, 2160p, 1080p or 720p from Window › Player Size or with Control-Command-0 to 3.
+- Player engine — AetherEngine 7.75.0 adds GPU inverse telecine, dav1d 1.5.5 and embedded fonts for MKV ASS subtitles.
+
+#### Fixes
+
+- Random Episode no longer picks Live TV channels.
+- Tobacco Tie cached flags and runtime labels are read correctly.
+- Viewing Stats shows posters correctly again.
+- The Poster Calendar no longer leaves gaps.
+- Dolby Vision Profile 5 MP4 files and HLS streams show scrub previews.
+- Drag-to-reorder no longer crashes on iOS 27 and macOS 27.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-87/) · [Join TestFlight](https://testflight.apple.com/join/4A7sZ4q2) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
+[Matching library source and platform relinking kits](https://github.com/CedarTV/cedar-tv-updates/releases/tag/apple-source-1.0.0-build-87)
+
 ### 1.0.0 · build 86 · 2026-11-23
 
 November 23, 2026 · Released to External TestFlight for native Apple silicon Mac.
@@ -6090,6 +6277,45 @@ Processed successfully. External TestFlight availability is not confirmed for th
 This is the version 1.0.0 build 1 release candidate. It is not yet an App Store release.
 
 ## Android TV, Google TV and Fire TV
+
+### 1.0.0 · build 87 · 2026-11-25 · preview
+
+November 25, 2026 · Early beta for Android TV and Google TV.
+
+#### Highlights
+
+- Quick Actions filtering — choose a genre and then a decade inside a Quick Actions tile before it launches, for Random actions or every action.
+- Playlist Cleaner — hide Live TV categories you never use and tidy channel names with the new Cleaner in Live TV & DVR settings.
+- More list links — paste Trakt, Letterboxd, boxd.it, TMDB collection, IMDb chart or public MDBList links to add them as Branches.
+
+#### Home and Branches
+
+- Movies and TV Shows Branches — the Movies and TV Shows pages leave out Live TV, sports, radio, recordings and Quick Actions Branches.
+- Branch designs — Logo and Marquee designs gain overlays, and Marquee no longer rotates on its own. VHS and Spine Numbers are retired.
+- Random picks never come up empty — Random Movie and Random Show fall back to popular TMDB titles when your libraries have nothing to offer.
+- Restore to Continue Watching — bring back titles you removed from Continue Watching.
+
+#### Live TV, sports and calendar
+
+- Box Score team switcher — switch teams with their logos in Box Score, with columns that fit the screen or scroll.
+
+#### Playback and sources
+
+- Merge Duplicate Files — identical files offered by several sources merge into one choice; on by default and can be turned off in Source Preferences.
+
+#### Fixes
+
+- Random Episode no longer picks Live TV channels.
+- Tobacco Tie cached flags and runtime labels are read correctly.
+- Viewing Stats shows posters correctly again.
+
+#### Known issues
+
+- DTS:X and DTS Express aren’t decoded yet, and TrueHD Atmos plays as 7.1.
+- A new app icon appears after you leave Cedar.
+- Subtitle translation on Apple TV and Android TV needs your own Gemini key, and never runs on Kids profiles.
+
+[Full release notes](https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-87/) · [Cedar Server setup](https://cedartv.github.io/cedar-tv-updates/server/)
 
 ### 1.0.0 · build 86 · 2026-11-23 · preview
 

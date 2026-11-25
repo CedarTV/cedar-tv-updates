@@ -80,66 +80,51 @@
             <p>Cedar for Android TV is an early beta. Some features from the Apple apps are still missing, and you may run into bugs. Please <a href="/cedar-tv-updates/feedback/?kind=bug">report them</a> so they can be fixed.</p>
           </aside>
           <p>The new Cedar app installs alongside the original Cedar app. Existing users of the new app, including Cedar Preview installs, can update from Settings → Software Update. The original Cedar stable release remains available below.</p>
-          <article class="release-entry" id="version-1-0-0-build-86">
+          <article class="release-entry" id="version-1-0-0-build-87">
     <header>
       <p class="eyebrow">Current build</p>
-      <h2>Cedar Android TV 1.0.0 · build 86</h2>
-      <p class="release-summary">Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Addic7ed subtitles, skip chips, Jellyfin/Emby/Plex Resume and FFmpeg 9.0.2.</p>
+      <h2>Cedar Android TV 1.0.0 · build 87</h2>
+      <p class="release-summary">Quick Actions filtering, Playlist Cleaner, more list links, Branch design overlays, Restore to Continue Watching, Merge Duplicate Files and a Box Score team switcher.</p>
       <div class="release-metadata">
               <span class="release-status release-status-preview">Early beta</span>
               <span>Version 1.0.0</span>
-              <span>Build 86</span>
-              <time datetime="2026-11-23">November 23, 2026</time>
+              <span>Build 87</span>
+              <time datetime="2026-11-25">November 25, 2026</time>
             </div>
       <div class="apple-actions">
-        <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0-build-86/Cedar-TV-1.0.0-build-86.apk">Download Cedar 1.0.0 (build 86)</a>
-        <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/android-tv-1.0.0-build-86">GitHub release notes</a>
-        <a class="secondary-action" href="/cedar-tv-updates/apple/releases/1.0.0-build-86/">Visual release notes</a>
+        <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0-build-87/Cedar-TV-1.0.0-build-87.apk">Download Cedar 1.0.0 (build 87)</a>
+        <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/android-tv-1.0.0-build-87">GitHub release notes</a>
+        <a class="secondary-action" href="/cedar-tv-updates/apple/releases/1.0.0-build-87/">Visual release notes</a>
         <a class="secondary-action" href="/cedar-tv-updates/setup/">Browser setup</a>
       </div>
     </header>
-    <div class="release-notes-body"><p>November 23, 2026 · Early beta for Android TV and Google TV.</p>
+    <div class="release-notes-body"><p>November 25, 2026 · Early beta for Android TV and Google TV.</p>
 <h3>Highlights</h3>
 <ul>
-<li>Movies and TV Shows pages — give Movies and TV Shows their own hero, Branches, layout and IPTV categories, configured per profile in Settings › Home &amp; Branches.</li>
-<li>TMDB, Letterboxd and MDBList charts — paste any public TMDB or Letterboxd list link to add it as a Branch without an account, or choose from twelve built-in MDBList charts.</li>
-<li>Sports Bar arrangement — reorder sports, pin favourite leagues to the top and hide leagues you never watch, saved with your profile on every device. Requested by dr.aaboulhosn on Discord.</li>
-<li>Live channels from Tobacco Ties — import 24/7 channels from Tobacco Ties straight into Live TV alongside your playlists, with live, upcoming and replay status badges.</li>
+<li>Quick Actions filtering — choose a genre and then a decade inside a Quick Actions tile before it launches, for Random actions or every action.</li>
+<li>Playlist Cleaner — hide Live TV categories you never use and tidy channel names with the new Cleaner in Live TV &amp; DVR settings.</li>
+<li>More list links — paste Trakt, Letterboxd, boxd.it, TMDB collection, IMDb chart or public MDBList links to add them as Branches.</li>
 </ul>
 <h3>Home and Branches</h3>
 <ul>
-<li>My Teams 7-day schedule — My Teams Home Branches now show your teams’ upcoming games for the next seven days alongside live games and today’s results.</li>
+<li>Movies and TV Shows Branches — the Movies and TV Shows pages leave out Live TV, sports, radio, recordings and Quick Actions Branches.</li>
+<li>Branch designs — Logo and Marquee designs gain overlays, and Marquee no longer rotates on its own. VHS and Spine Numbers are retired.</li>
+<li>Random picks never come up empty — Random Movie and Random Show fall back to popular TMDB titles when your libraries have nothing to offer.</li>
+<li>Restore to Continue Watching — bring back titles you removed from Continue Watching.</li>
 </ul>
-<h3>Discovery, ratings and stats</h3>
+<h3>Live TV, sports and calendar</h3>
 <ul>
-<li>Redesigned person pages — actor and creator pages feature a hero backdrop, multi-role summaries, photo galleries and cleaner filmography grouping.</li>
-<li>AniList ratings — anime titles can display AniList ratings alongside your other rating sources. Requested by RyZ3n on Discord.</li>
-<li>Viewing Stats from watch history — Viewing Stats caches past plays from connected Trakt, Simkl and MDBList accounts for fuller history and insights. Requested by RyZ3n on Discord.</li>
-<li>Bilingual and Arabic title matching — bilingual provider titles and Arabic numerals match TMDB entries more reliably without losing diacritics or subtitles.</li>
+<li>Box Score team switcher — switch teams with their logos in Box Score, with columns that fit the screen or scroll.</li>
 </ul>
-<h3>Live TV and sports</h3>
+<h3>Playback and sources</h3>
 <ul>
-<li>Missing guide labels — replace empty No Event Scheduled guide slots with colour-coded blocks titled Channel Name, Live Broadcast or Local Programming.</li>
-<li>Sports matchup artwork — Sports Bar and Sports Branch cards render full team matchup artwork matching Apple TV.</li>
-<li>M3U playlist accuracy — repeated channels across groups keep separate entries, display names come from the playlist title, and Xtream live, movie and series paths are respected.</li>
-</ul>
-<h3>Playback, subtitles and servers</h3>
-<ul>
-<li>Addic7ed TV subtitles — search TV episode subtitles from Addic7ed with no API key required, toggled under Online Subtitles.</li>
-<li>Next-episode source matching — auto-playing the next episode stays close to the resolution, HDR, release group and audio language you were already watching, and reads structured AIOStreams metadata.</li>
-<li>Skip chips and media server Resume — one-shot Intro, Recap and Preview skip chips and direct Resume and Next Up syncing from Jellyfin, Emby and Plex arrive from Apple TV.</li>
-<li>Post-play recommendations — after a film or series ends, Watchlist and catalog recommendations rotate per title instead of repeating the same four cards.</li>
-<li>Player engine and FFmpeg 9.0.2 — Apple devices update AetherEngine to 7.72.0 with hardware bwdif deinterlacing, inverse telecine and MPEG-TS Dolby Vision; Android TV updates its audio decoder to FFmpeg 9.0.2.</li>
-</ul>
-<h3>Profiles and parental controls</h3>
-<ul>
-<li>Regional parental ratings — Kids rating limits compare titles against your region’s own certification system rather than relying only on US ratings.</li>
-<li>Discord community welcome — a one-time Home prompt after installing or updating invites adult profiles to join the Cedar Discord community.</li>
+<li>Merge Duplicate Files — identical files offered by several sources merge into one choice; on by default and can be turned off in Source Preferences.</li>
 </ul>
 <h3>Fixes</h3>
 <ul>
-<li>Creating a Home Branch no longer carries over state from previously opened premade options.</li>
-<li>Short-lived dropped live streams back off cleanly instead of triggering rapid reconnect loops.</li>
+<li>Random Episode no longer picks Live TV channels.</li>
+<li>Tobacco Tie cached flags and runtime labels are read correctly.</li>
+<li>Viewing Stats shows posters correctly again.</li>
 </ul>
 <h3>Known issues</h3>
 <ul>
@@ -147,7 +132,7 @@
 <li>A new app icon appears after you leave Cedar.</li>
 <li>Subtitle translation on Apple TV and Android TV needs your own Gemini key, and never runs on Kids profiles.</li>
 </ul>
-<p><a href="https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-86/">Full release notes</a> · <a href="https://cedartv.github.io/cedar-tv-updates/server/">Cedar Server setup</a></p></div>
+<p><a href="https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-87/">Full release notes</a> · <a href="https://cedartv.github.io/cedar-tv-updates/server/">Cedar Server setup</a></p></div>
   </article>
           <div class="release-history-heading">
           <h2>Earlier builds</h2>
@@ -156,7 +141,80 @@
             <button type="button" data-release-expand="close">Collapse all</button>
           </div>
         </div>
-          <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-85">
+          <article class="release-entry release-entry-collapsed" id="version-1-0-0-build-86">
+          <details>
+            <summary>
+              <p class="eyebrow">Earlier build</p>
+              <h2>Cedar Android TV 1.0.0 · build 86</h2>
+              <p class="release-summary">Movies and TV Shows pages, public TMDB/Letterboxd links and MDBList charts, Sports Bar arrangement, Tobacco Tie live channels, Addic7ed subtitles, skip chips, Jellyfin/Emby/Plex Resume and FFmpeg 9.0.2.</p>
+              <div class="release-metadata">
+              <span class="release-status release-status-preview">Early beta</span>
+              <span>Version 1.0.0</span>
+              <span>Build 86</span>
+              <time datetime="2026-11-23">November 23, 2026</time>
+            </div>
+            </summary>
+            <div class="release-entry-actions"><div class="apple-actions">
+        <a class="inline-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/download/android-tv-1.0.0-build-86/Cedar-TV-1.0.0-build-86.apk">Download Cedar 1.0.0 (build 86)</a>
+        <a class="secondary-action" href="https://github.com/CedarTV/cedar-tv-updates/releases/tag/android-tv-1.0.0-build-86">GitHub release notes</a>
+        <a class="secondary-action" href="/cedar-tv-updates/apple/releases/1.0.0-build-86/">Visual release notes</a>
+        <a class="secondary-action" href="/cedar-tv-updates/setup/">Browser setup</a>
+      </div></div>
+            <div class="release-notes-body">
+              <p>November 23, 2026 · Early beta for Android TV and Google TV.</p>
+              <h3>Highlights</h3>
+              <ul>
+              <li>Movies and TV Shows pages — give Movies and TV Shows their own hero, Branches, layout and IPTV categories, configured per profile in Settings › Home &amp; Branches.</li>
+              <li>TMDB, Letterboxd and MDBList charts — paste any public TMDB or Letterboxd list link to add it as a Branch without an account, or choose from twelve built-in MDBList charts.</li>
+              <li>Sports Bar arrangement — reorder sports, pin favourite leagues to the top and hide leagues you never watch, saved with your profile on every device. Requested by dr.aaboulhosn on Discord.</li>
+              <li>Live channels from Tobacco Ties — import 24/7 channels from Tobacco Ties straight into Live TV alongside your playlists, with live, upcoming and replay status badges.</li>
+              </ul>
+              <h3>Home and Branches</h3>
+              <ul>
+              <li>My Teams 7-day schedule — My Teams Home Branches now show your teams’ upcoming games for the next seven days alongside live games and today’s results.</li>
+              </ul>
+              <h3>Discovery, ratings and stats</h3>
+              <ul>
+              <li>Redesigned person pages — actor and creator pages feature a hero backdrop, multi-role summaries, photo galleries and cleaner filmography grouping.</li>
+              <li>AniList ratings — anime titles can display AniList ratings alongside your other rating sources. Requested by RyZ3n on Discord.</li>
+              <li>Viewing Stats from watch history — Viewing Stats caches past plays from connected Trakt, Simkl and MDBList accounts for fuller history and insights. Requested by RyZ3n on Discord.</li>
+              <li>Bilingual and Arabic title matching — bilingual provider titles and Arabic numerals match TMDB entries more reliably without losing diacritics or subtitles.</li>
+              </ul>
+              <h3>Live TV and sports</h3>
+              <ul>
+              <li>Missing guide labels — replace empty No Event Scheduled guide slots with colour-coded blocks titled Channel Name, Live Broadcast or Local Programming.</li>
+              <li>Sports matchup artwork — Sports Bar and Sports Branch cards render full team matchup artwork matching Apple TV.</li>
+              <li>M3U playlist accuracy — repeated channels across groups keep separate entries, display names come from the playlist title, and Xtream live, movie and series paths are respected.</li>
+              </ul>
+              <h3>Playback, subtitles and servers</h3>
+              <ul>
+              <li>Addic7ed TV subtitles — search TV episode subtitles from Addic7ed with no API key required, toggled under Online Subtitles.</li>
+              <li>Next-episode source matching — auto-playing the next episode stays close to the resolution, HDR, release group and audio language you were already watching, and reads structured AIOStreams metadata.</li>
+              <li>Skip chips and media server Resume — one-shot Intro, Recap and Preview skip chips and direct Resume and Next Up syncing from Jellyfin, Emby and Plex arrive from Apple TV.</li>
+              <li>Post-play recommendations — after a film or series ends, Watchlist and catalog recommendations rotate per title instead of repeating the same four cards.</li>
+              <li>Player engine and FFmpeg 9.0.2 — Apple devices update AetherEngine to 7.72.0 with hardware bwdif deinterlacing, inverse telecine and MPEG-TS Dolby Vision; Android TV updates its audio decoder to FFmpeg 9.0.2.</li>
+              </ul>
+              <h3>Profiles and parental controls</h3>
+              <ul>
+              <li>Regional parental ratings — Kids rating limits compare titles against your region’s own certification system rather than relying only on US ratings.</li>
+              <li>Discord community welcome — a one-time Home prompt after installing or updating invites adult profiles to join the Cedar Discord community.</li>
+              </ul>
+              <h3>Fixes</h3>
+              <ul>
+              <li>Creating a Home Branch no longer carries over state from previously opened premade options.</li>
+              <li>Short-lived dropped live streams back off cleanly instead of triggering rapid reconnect loops.</li>
+              </ul>
+              <h3>Known issues</h3>
+              <ul>
+              <li>DTS:X and DTS Express aren’t decoded yet, and TrueHD Atmos plays as 7.1.</li>
+              <li>A new app icon appears after you leave Cedar.</li>
+              <li>Subtitle translation on Apple TV and Android TV needs your own Gemini key, and never runs on Kids profiles.</li>
+              </ul>
+              <p><a href="https://cedartv.github.io/cedar-tv-updates/apple/releases/1.0.0-build-86/">Full release notes</a> · <a href="https://cedartv.github.io/cedar-tv-updates/server/">Cedar Server setup</a></p>
+            </div>
+          </details>
+        </article>
+<article class="release-entry release-entry-collapsed" id="version-1-0-0-build-85">
           <details>
             <summary>
               <p class="eyebrow">Earlier build</p>
